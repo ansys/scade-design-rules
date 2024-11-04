@@ -1,0 +1,33 @@
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: monthly
+    labels:
+      - "maintenance"
+      - "dependencies"
+    assignees:
+      - "pyansys-ci-bot"
+    commit-message:
+      prefix: "build"
+    groups:
+      dependencies:
+          patterns:
+            - "ansys-sphinx-theme*"
+            - "sphinx*"
+            - "nbsphinx"
+            - "numpydoc"
+            - "sphinx"
+            - "jupyter_sphinx"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: monthly
+    labels:
+      - "maintenance"
+    groups:
+       actions:
+          patterns:
+            - "*"
