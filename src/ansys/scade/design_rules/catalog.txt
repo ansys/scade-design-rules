@@ -4,6 +4,7 @@ id_0006	annotations	ann_notes_for_named_types_or_variables
 id_0008	naming	camel_case_naming
 id_0009	annotations	comment_has_specific_headlines
 id_0012	case	default_case
+id_0015	diagrams	elements_within_area
 id_0017	case	enum_has_default_case
 id_0018	naming	enum_type_name_prefix
 id_0022	naming	forbidden_keywords
@@ -20,6 +21,7 @@ id_0051	naming	name_structure_iterator_index
 id_0052	naming	name_structure_package
 id_0053	naming	name_structure_type
 id_0078	naming	pascal_case_naming
+id_0083	diagrams	textual_diagrams
 id_0088	naming	upper_case_naming
 id_0099	annotations	ann_notes_for_basic_interface_types
 id_0102	annotations	ann_note_connected_data_for_public_interface
@@ -28,6 +30,7 @@ id_0104	configuration	check_configuration_custom1
 id_0105	case	statemachine_has_default_state
 id_0108	annotations	ann_notes_present_and_not_empty
 id_0109	naming	name_structure_enumeration_custom1
+id_0113	diagrams	page_format
 id_0120	naming	name_of_default_enum_value_shall_end_with
 id_0121	naming	sensor_names_unique_in_package
 id_0124	naming	element_names_unique_in_project
