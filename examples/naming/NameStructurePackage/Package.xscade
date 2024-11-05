@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="Package">
+			<declarations>
+				<Package name="ARINC661">
+					<declarations>
+						<Type name="MsgBool">
+							<definition>
+								<Struct>
+									<fields>
+										<Field name="emit_">
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="bool"/>
+													</type>
+												</NamedType>
+											</type>
+											<pragmas>
+												<ed:Field oid="!ed/43c/366E/73BC/61e6ef6e63b"/>
+											</pragmas>
+										</Field>
+										<Field name="value">
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="bool"/>
+													</type>
+												</NamedType>
+											</type>
+											<pragmas>
+												<ed:Field oid="!ed/43d/366E/73BC/61e6ef6e8e0"/>
+											</pragmas>
+										</Field>
+									</fields>
+								</Struct>
+							</definition>
+							<pragmas>
+								<ed:Type oid="!ed/43b/366E/73BC/61e6ef6e6a4f"/>
+							</pragmas>
+						</Type>
+						<Operator kind="function" name="SendAlways">
+							<inputs>
+								<Variable name="i">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="'T"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Variable oid="!ed/45e/366E/73BC/61e6efb820bc"/>
+									</pragmas>
+								</Variable>
+							</inputs>
+							<outputs>
+								<Variable name="o">
+									<type>
+										<Struct>
+											<fields>
+												<Field name="emit_">
+													<type>
+														<NamedType>
+															<type>
+																<TypeRef name="bool"/>
+															</type>
+														</NamedType>
+													</type>
+													<pragmas>
+														<ed:Field oid="!ed/4d6/366E/73BC/61e6f14410de"/>
+													</pragmas>
+												</Field>
+												<Field name="value">
+													<type>
+														<NamedType>
+															<type>
+																<TypeRef name="'T"/>
+															</type>
+														</NamedType>
+													</type>
+													<pragmas>
+														<ed:Field oid="!ed/4d8/366E/73BC/61e6f1447c21"/>
+													</pragmas>
+												</Field>
+											</fields>
+										</Struct>
+									</type>
+									<pragmas>
+										<ed:Variable oid="!ed/45b/366E/73BC/61e6efb82d16"/>
+									</pragmas>
+								</Variable>
+							</outputs>
+							<locals>
+								<Variable name="_L1">
+									<type>
+										<Struct>
+											<fields>
+												<Field name="emit_">
+													<type>
+														<NamedType>
+															<type>
+																<TypeRef name="bool"/>
+															</type>
+														</NamedType>
+													</type>
+													<pragmas>
+														<ed:Field oid="!ed/483/366E/73BC/61e6f03c35c2"/>
+													</pragmas>
+												</Field>
+												<Field name="value">
+													<type>
+														<NamedType>
+															<type>
+																<TypeRef name="'T"/>
+															</type>
+														</NamedType>
+													</type>
+													<pragmas>
+														<ed:Field oid="!ed/484/366E/73BC/61e6f03c6044"/>
+													</pragmas>
+												</Field>
+											</fields>
+										</Struct>
+									</type>
+									<pragmas>
+										<ed:Variable oid="!ed/466/366E/73BC/61e6f0104539"/>
+									</pragmas>
+								</Variable>
+								<Variable name="_L2">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="'T"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Variable oid="!ed/46c/366E/73BC/61e6f03013a4"/>
+									</pragmas>
+								</Variable>
+								<Variable name="_L3">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Variable oid="!ed/472/366E/73BC/61e6f0356957"/>
+									</pragmas>
+								</Variable>
+							</locals>
+							<data>
+								<!-- o = _L1; -->
+								<Equation>
+									<lefts>
+										<VariableRef name="o"/>
+									</lefts>
+									<right>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L1"/>
+											</path>
+										</IdExpression>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/460/366E/73BC/61e6efde1bc"/>
+									</pragmas>
+								</Equation>
+								<!-- _L1 = {emit_ : _L3, value : _L2}; -->
+								<Equation>
+									<lefts>
+										<VariableRef name="_L1"/>
+									</lefts>
+									<right>
+										<!-- {emit_ : _L3, value : _L2} -->
+										<DataStructOp name="2">
+											<data>
+												<LabelledExpression label="emit_">
+													<flow>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="_L3"/>
+															</path>
+														</IdExpression>
+													</flow>
+												</LabelledExpression>
+												<LabelledExpression label="value">
+													<flow>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="_L2"/>
+															</path>
+														</IdExpression>
+													</flow>
+												</LabelledExpression>
+											</data>
+										</DataStructOp>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/465/366E/73BC/61e6f010c1f"/>
+									</pragmas>
+								</Equation>
+								<!-- _L2 = i; -->
+								<Equation>
+									<lefts>
+										<VariableRef name="_L2"/>
+									</lefts>
+									<right>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="i"/>
+											</path>
+										</IdExpression>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/46b/366E/73BC/61e6f0303104"/>
+									</pragmas>
+								</Equation>
+								<!-- _L3 = true; -->
+								<Equation>
+									<lefts>
+										<VariableRef name="_L3"/>
+									</lefts>
+									<right>
+										<ConstValue value="true"/>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/471/366E/73BC/61e6f0352642"/>
+									</pragmas>
+								</Equation>
+							</data>
+							<pragmas>
+								<ed:Operator oid="!ed/456/366E/73BC/61e6efb86050" symbolFile="SendAlways.ssl" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<diagrams>
+										<NetDiagram name="SendAlways" landscape="true" format="A4 (210 297)" oid="!ed/45f/366E/73BC/61e6efcb2d0e">
+											<presentationElements>
+												<EquationGE presentable="!ed/460/366E/73BC/61e6efde1bc">
+													<position>
+														<Point x="10266" y="1535"/>
+													</position>
+													<size>
+														<Size width="318" height="503"/>
+													</size>
+												</EquationGE>
+												<EquationGE presentable="!ed/465/366E/73BC/61e6f010c1f">
+													<position>
+														<Point x="4128" y="820"/>
+													</position>
+													<size>
+														<Size width="3535" height="1948"/>
+													</size>
+												</EquationGE>
+												<EquationGE presentable="!ed/46b/366E/73BC/61e6f0303104">
+													<position>
+														<Point x="1244" y="1852"/>
+													</position>
+													<size>
+														<Size width="264" height="502"/>
+													</size>
+												</EquationGE>
+												<EquationGE kind="OBJ_LIT" presentable="!ed/471/366E/73BC/61e6f0352642">
+													<position>
+														<Point x="1296" y="1296"/>
+													</position>
+													<size>
+														<Size width="212" height="317"/>
+													</size>
+												</EquationGE>
+												<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/471/366E/73BC/61e6f0352642" dstEquation="!ed/465/366E/73BC/61e6f010c1f">
+													<positions>
+														<Point x="1508" y="1455"/>
+														<Point x="2805" y="1455"/>
+														<Point x="2805" y="1455"/>
+														<Point x="4128" y="1455"/>
+													</positions>
+												</Edge>
+												<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/46b/366E/73BC/61e6f0303104" dstEquation="!ed/465/366E/73BC/61e6f010c1f">
+													<positions>
+														<Point x="1508" y="2117"/>
+														<Point x="2805" y="2117"/>
+														<Point x="2805" y="2117"/>
+														<Point x="4128" y="2117"/>
+													</positions>
+												</Edge>
+												<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/465/366E/73BC/61e6f010c1f" dstEquation="!ed/460/366E/73BC/61e6efde1bc">
+													<positions>
+														<Point x="7673" y="1799"/>
+														<Point x="8969" y="1799"/>
+														<Point x="8969" y="1799"/>
+														<Point x="10319" y="1799"/>
+													</positions>
+												</Edge>
+											</presentationElements>
+										</NetDiagram>
+									</diagrams>
+								</ed:Operator>
+							</pragmas>
+						</Operator>
+					</declarations>
+					<pragmas>
+						<ed:Package oid="!ed/428/366E/73BC/61e6eddb253d" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/429/366E/73BC/61e6eddb6ad8" blockKind="constants"/>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/42a/366E/73BC/61e6eddb20bd" blockKind="types"/>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/42b/366E/73BC/61e6eddb4d5e" blockKind="sensors"/>
+							</diagrams>
+						</ed:Package>
+					</pragmas>
+				</Package>
+				<Package name="SendMessages">
+					<declarations>
+						<Operator kind="function" name="Equal">
+							<inputs>
+								<Variable name="a">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Variable oid="!ed/487/366E/73BC/61e6f0865c3b"/>
+									</pragmas>
+								</Variable>
+								<Variable name="b">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Variable oid="!ed/495/366E/73BC/61e6f09d7de1"/>
+									</pragmas>
+								</Variable>
+							</inputs>
+							<outputs>
+								<Variable name="msg">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="ARINC661::MsgBool"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Variable oid="!ed/496/366E/73BC/61e6f0a26840"/>
+									</pragmas>
+								</Variable>
+							</outputs>
+							<locals>
+								<Variable name="_L1">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Variable oid="!ed/4a1/366E/73BC/61e6f0ba7a37"/>
+									</pragmas>
+								</Variable>
+								<Variable name="_L2">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Variable oid="!ed/4a3/366E/73BC/61e6f0ba7cdf"/>
+									</pragmas>
+								</Variable>
+								<Variable name="_L3">
+									<type>
+										<Struct>
+											<fields>
+												<Field name="emit_">
+													<type>
+														<NamedType>
+															<type>
+																<TypeRef name="bool"/>
+															</type>
+														</NamedType>
+													</type>
+													<pragmas>
+														<ed:Field oid="!ed/4d9/366E/73BC/61e6f1441838"/>
+													</pragmas>
+												</Field>
+												<Field name="value">
+													<type>
+														<NamedType>
+															<type>
+																<TypeRef name="bool"/>
+															</type>
+														</NamedType>
+													</type>
+													<pragmas>
+														<ed:Field oid="!ed/4da/366E/73BC/61e6f144b4a"/>
+													</pragmas>
+												</Field>
+											</fields>
+										</Struct>
+									</type>
+									<pragmas>
+										<ed:Variable oid="!ed/4ab/366E/73BC/61e6f0bc3b50"/>
+									</pragmas>
+								</Variable>
+								<Variable name="_L4">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Variable oid="!ed/4b3/366E/73BC/61e6f0c1434d"/>
+									</pragmas>
+								</Variable>
+							</locals>
+							<data>
+								<!-- _L1 = a; -->
+								<Equation>
+									<lefts>
+										<VariableRef name="_L1"/>
+									</lefts>
+									<right>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="a"/>
+											</path>
+										</IdExpression>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/4a0/366E/73BC/61e6f0ba484"/>
+									</pragmas>
+								</Equation>
+								<!-- _L2 = b; -->
+								<Equation>
+									<lefts>
+										<VariableRef name="_L2"/>
+									</lefts>
+									<right>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="b"/>
+											</path>
+										</IdExpression>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/4a2/366E/73BC/61e6f0ba3c26"/>
+									</pragmas>
+								</Equation>
+								<!-- _L3 = ARINC661::SendAlways(_L4); -->
+								<Equation>
+									<lefts>
+										<VariableRef name="_L3"/>
+									</lefts>
+									<right>
+										<!-- ARINC661::SendAlways(_L4) -->
+										<CallExpression>
+											<operator>
+												<OpCall name="1">
+													<operator>
+														<OperatorRef name="ARINC661::SendAlways"/>
+													</operator>
+												</OpCall>
+											</operator>
+											<callParameters>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="_L4"/>
+													</path>
+												</IdExpression>
+											</callParameters>
+										</CallExpression>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/4a8/366E/73BC/61e6f0bc5b00"/>
+									</pragmas>
+								</Equation>
+								<!-- _L4 = _L1 = _L2; -->
+								<Equation>
+									<lefts>
+										<VariableRef name="_L4"/>
+									</lefts>
+									<right>
+										<!-- _L1 = _L2 -->
+										<BinaryOp name="1" operator="=">
+											<operands>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="_L1"/>
+													</path>
+												</IdExpression>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="_L2"/>
+													</path>
+												</IdExpression>
+											</operands>
+										</BinaryOp>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/4b2/366E/73BC/61e6f0c14148"/>
+									</pragmas>
+								</Equation>
+								<!-- msg = _L3; -->
+								<Equation>
+									<lefts>
+										<VariableRef name="msg"/>
+									</lefts>
+									<right>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L3"/>
+											</path>
+										</IdExpression>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/4b8/366E/73BC/61e6f0c35b3a"/>
+									</pragmas>
+								</Equation>
+							</data>
+							<pragmas>
+								<ed:Operator oid="!ed/485/366E/73BC/61e6f07c6eb0" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<diagrams>
+										<NetDiagram name="Equal" landscape="true" format="A4 (210 297)" oid="!ed/486/366E/73BC/61e6f07c6245">
+											<presentationElements>
+												<EquationGE presentable="!ed/4a0/366E/73BC/61e6f0ba484">
+													<position>
+														<Point x="1508" y="1058"/>
+													</position>
+													<size>
+														<Size width="265" height="503"/>
+													</size>
+												</EquationGE>
+												<EquationGE presentable="!ed/4a2/366E/73BC/61e6f0ba3c26">
+													<position>
+														<Point x="1508" y="2117"/>
+													</position>
+													<size>
+														<Size width="265" height="503"/>
+													</size>
+												</EquationGE>
+												<EquationGE presentable="!ed/4a8/366E/73BC/61e6f0bc5b00">
+													<position>
+														<Point x="6747" y="1138"/>
+													</position>
+													<size>
+														<Size width="3032" height="1418"/>
+													</size>
+												</EquationGE>
+												<EquationGE presentable="!ed/4b2/366E/73BC/61e6f0c14148">
+													<position>
+														<Point x="3757" y="1508"/>
+													</position>
+													<size>
+														<Size width="1006" height="662"/>
+													</size>
+												</EquationGE>
+												<EquationGE presentable="!ed/4b8/366E/73BC/61e6f0c35b3a">
+													<position>
+														<Point x="11748" y="1588"/>
+													</position>
+													<size>
+														<Size width="317" height="503"/>
+													</size>
+												</EquationGE>
+												<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4a0/366E/73BC/61e6f0ba484" dstEquation="!ed/4b2/366E/73BC/61e6f0c14148">
+													<positions>
+														<Point x="1773" y="1323"/>
+														<Point x="2752" y="1323"/>
+														<Point x="2752" y="1720"/>
+														<Point x="3757" y="1720"/>
+													</positions>
+												</Edge>
+												<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/4a2/366E/73BC/61e6f0ba3c26" dstEquation="!ed/4b2/366E/73BC/61e6f0c14148">
+													<positions>
+														<Point x="1773" y="2381"/>
+														<Point x="2752" y="2381"/>
+														<Point x="2752" y="1958"/>
+														<Point x="3757" y="1958"/>
+													</positions>
+												</Edge>
+												<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4b2/366E/73BC/61e6f0c14148" dstEquation="!ed/4a8/366E/73BC/61e6f0bc5b00">
+													<positions>
+														<Point x="4763" y="1852"/>
+														<Point x="5741" y="1852"/>
+														<Point x="5741" y="1852"/>
+														<Point x="6747" y="1852"/>
+													</positions>
+												</Edge>
+												<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4a8/366E/73BC/61e6f0bc5b00" dstEquation="!ed/4b8/366E/73BC/61e6f0c35b3a">
+													<positions>
+														<Point x="9790" y="1852"/>
+														<Point x="10769" y="1852"/>
+														<Point x="10769" y="1852"/>
+														<Point x="11800" y="1852"/>
+													</positions>
+												</Edge>
+											</presentationElements>
+										</NetDiagram>
+									</diagrams>
+								</ed:Operator>
+							</pragmas>
+						</Operator>
+					</declarations>
+					<pragmas>
+						<ed:Package oid="!ed/430/366E/73BC/61e6ee0e7c8e" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/431/366E/73BC/61e6ee0e261d" blockKind="constants"/>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/432/366E/73BC/61e6ee0edcb" blockKind="types"/>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/433/366E/73BC/61e6ee0e220" blockKind="sensors"/>
+							</diagrams>
+						</ed:Package>
+					</pragmas>
+				</Package>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/424/366E/73BC/61e6edd2360d" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/425/366E/73BC/61e6edd24611" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/426/366E/73BC/61e6edd21ae2" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/427/366E/73BC/61e6edd21d47" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>
