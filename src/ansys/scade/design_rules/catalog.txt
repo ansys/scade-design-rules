@@ -23,6 +23,8 @@ id_0078	naming	pascal_case_naming
 id_0088	naming	upper_case_naming
 id_0099	annotations	ann_notes_for_basic_interface_types
 id_0102	annotations	ann_note_connected_data_for_public_interface
+id_0103	configuration	check_configuration
+id_0104	configuration	check_configuration_custom1
 id_0105	case	statemachine_has_default_state
 id_0108	annotations	ann_notes_present_and_not_empty
 id_0109	naming	name_structure_enumeration_custom1
