@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Type name="EnumerationCorrectType">
+			<definition>
+				<Enum>
+					<values>
+						<Value name="EnumerationCorrectValue1">
+							<pragmas>
+								<ed:Value oid="!ed/2601/1366/4FB4/64e87b8e4d24"/>
+							</pragmas>
+						</Value>
+						<Value name="EnumerationCorrectValue2">
+							<pragmas>
+								<ed:Value oid="!ed/2618/1366/4FB4/64e87bd0d2b"/>
+							</pragmas>
+						</Value>
+					</values>
+				</Enum>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/2600/1366/4FB4/64e87b824b45"/>
+			</pragmas>
+		</Type>
+		<Type name="Enumeration">
+			<definition>
+				<Enum>
+					<values>
+						<Value name="EnumerationValue">
+							<pragmas>
+								<ed:Value oid="!ed/2609/1366/4FB4/64e87b93586a"/>
+							</pragmas>
+						</Value>
+					</values>
+				</Enum>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/2608/1366/4FB4/64e87b937005"/>
+			</pragmas>
+		</Type>
+		<Type name="EnumerationIncorrectType">
+			<definition>
+				<Enum>
+					<values>
+						<Value name="EnumerationIncorrectTypeValue1">
+							<pragmas>
+								<ed:Value oid="!ed/2611/1366/4FB4/64e87baf2985"/>
+							</pragmas>
+						</Value>
+						<Value name="Value2">
+							<pragmas>
+								<ed:Value oid="!ed/261f/1366/4FB4/64e87bfb7f68"/>
+							</pragmas>
+						</Value>
+					</values>
+				</Enum>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/2610/1366/4FB4/64e87baf2700"/>
+			</pragmas>
+		</Type>
+	</declarations>
+</File>

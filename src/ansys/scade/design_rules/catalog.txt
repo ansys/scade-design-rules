@@ -1,6 +1,13 @@
 id	category	name
 id_0008	naming	camel_case_naming
+id_0018	naming	enum_type_name_prefix
+id_0022	naming	forbidden_keywords
+id_0041	naming	name_length_of_element
+id_0043	naming	name_shall_not_start_with
+id_0044	naming	name_shall_start_with
+id_0046	naming	name_structure_constant
 id_0047	naming	name_structure_diagram
+id_0048	naming	name_structure_enumeration
 id_0049	naming	name_structure_fold_accumulator
 id_0050	naming	name_structure_iterator_continue
 id_0051	naming	name_structure_iterator_index
@@ -8,4 +15,7 @@ id_0052	naming	name_structure_package
 id_0053	naming	name_structure_type
 id_0078	naming	pascal_case_naming
 id_0088	naming	upper_case_naming
+id_0109	naming	name_structure_enumeration_custom1
+id_0120	naming	name_of_default_enum_value_shall_end_with
 id_0121	naming	sensor_names_unique_in_package
+id_0124	naming	element_names_unique_in_project

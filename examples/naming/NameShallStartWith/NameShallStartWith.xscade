@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" xmlns:vwbs_asap2="unknown_address">
+	<declarations>
+		<Constant name="ONE_c">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int32"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="1"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/ad0/6C07/AA0/55c4c39f36ac"/>
+			</pragmas>
+		</Constant>
+		<Sensor name="Sensor">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Sensor oid="!ed/ad1/6C07/AA0/55c4c3a261b0" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<comment>.</comment>
+				</ed:Sensor>
+				<vwbs_asap2:Pragma>
+					{&quot;version&quot;: 5, &quot;sensor_type&quot;: &quot;LOCAL_PARAMETER&quot;, &quot;block_name&quot;: &quot;&quot;, &quot;c_name&quot;: null, &quot;c_type&quot;: &quot;boolean&quot;, &quot;a2l_data&quot;: {&quot;&quot;: {&quot;a2l_name&quot;: &quot;_Sensor&quot;, &quot;a2l_long_identifier&quot;: &quot;Description for _Sensor&quot;, &quot;a2l_type&quot;: &quot;VALUE&quot;, &quot;a2l_address&quot;: &quot;00000000&quot;, &quot;a2l_deposit&quot;: &quot;Scalar_UBYTE&quot;, &quot;a2l_max_diff&quot;: 0.0, &quot;a2l_conversion&quot;: &quot;NO_COMPU_METHOD&quot;, &quot;a2l_lower_limit&quot;: 0, &quot;a2l_upper_limit&quot;: 1, &quot;a2l_axis_descr_attribute&quot;: null, &quot;a2l_axis_descr_input_quantity&quot;: null, &quot;a2l_axis_descr_conversion&quot;: null, &quot;a2l_axis_descr_max_axis_points&quot;: null, &quot;a2l_axis_descr_lower_limit&quot;: null, &quot;a2l_axis_descr_upper_limit&quot;: null, &quot;a2l_axis_descr_axis_pts_ref&quot;: null, &quot;a2l_matrix_dim&quot;: null, &quot;a2l_phys_unit&quot;: &quot;&quot;, &quot;a2l_symbol_link&quot;: &quot;_Sensor&quot;, &quot;init_values&quot;: &quot;FALSE&quot;}}, &quot;init_str&quot;: &quot;FALSE&quot;}
+				</vwbs_asap2:Pragma>
+			</pragmas>
+		</Sensor>
+		<Type name="Type_t">
+			<definition>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/ad2/6C07/AA0/55c4c3a56a0d" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<comment>.</comment>
+				</ed:Type>
+			</pragmas>
+		</Type>
+		<Constant name="PRE_ENUM_c">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="PRE_Enum_t"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="PRE_ENUM1_e"/>
+					</path>
+				</IdExpression>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/bb4/6C07/AA0/55c4c7114c22" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<comment>.</comment>
+				</ed:Constant>
+			</pragmas>
+		</Constant>
+		<Type name="PRE_Enum_t">
+			<definition>
+				<Enum>
+					<values>
+						<Value name="PRE_ENUM1_e">
+							<pragmas>
+								<ed:Value oid="!ed/bd6/6C07/AA0/55c4c74977ee" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<comment>.</comment>
+								</ed:Value>
+							</pragmas>
+						</Value>
+						<Value name="ENUM2_e">
+							<pragmas>
+								<ed:Value oid="!ed/af/6AA6/368/6385dfe37ca1"/>
+							</pragmas>
+						</Value>
+					</values>
+				</Enum>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/bd5/6C07/AA0/55c4c73d2807" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<comment>.</comment>
+				</ed:Type>
+			</pragmas>
+		</Type>
+	</declarations>
+</File>

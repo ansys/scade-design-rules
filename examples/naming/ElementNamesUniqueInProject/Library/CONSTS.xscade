@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="CONSTS">
+			<declarations>
+				<Constant name="Constant2_incorrect">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<ConstValue value="0"/>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/60/611A/5428/65a795082f23"/>
+						<kcg:Pragma>
+							C:name Constant2_incorrect
+						</kcg:Pragma>
+					</pragmas>
+				</Constant>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/4f/611A/5428/65a794fa2fd6" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/50/611A/5428/65a794fa1595" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/51/611A/5428/65a794fa4e94" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/52/611A/5428/65a794fa10d8" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

@@ -27,8 +27,8 @@ When strict is set, the rules verifies the names are not used for variables whic
 
 .. end_description
 
-The rule's parameter has the following syntax: ``in=<regular expression>, out=<regular expression>[, strict=<bool>]``
-(default value: ``in=acc.*In, out=acc.*Out``) with:
+The rule's parameter has the following syntax: ``--in <regular expression> --out <regular expression> --strict]``
+(default value: ``-i acc.*In -o acc.*Out``) with:
 
 * ``in``: Regular expression for the name of the accumulator inputs
 * ``out``: Regular expression for the name of the accumulator outputs

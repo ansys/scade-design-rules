@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="SensorNamesUniqueInPackage">
+			<declarations>
+				<Package name="Sub_Package">
+					<declarations>
+						<Operator kind="function" name="Operator4">
+							<inputs>
+								<Variable name="Input1">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Variable oid="!ed/79/5AF/1A7B4/65801c58118b"/>
+									</pragmas>
+								</Variable>
+							</inputs>
+							<outputs>
+								<Variable name="Output1">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Variable oid="!ed/78/5AF/1A7B4/65801c586142"/>
+									</pragmas>
+								</Variable>
+							</outputs>
+							<locals>
+								<Variable name="Sensor_Incorrect">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Variable oid="!ed/77/5AF/1A7B4/65801c58670"/>
+									</pragmas>
+								</Variable>
+								<Variable name="_L1">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Variable oid="!ed/75/5AF/1A7B4/65801c583717"/>
+									</pragmas>
+								</Variable>
+								<Variable name="_L2">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Variable oid="!ed/76/5AF/1A7B4/65801c582106"/>
+									</pragmas>
+								</Variable>
+							</locals>
+							<data>
+								<!-- _L1 = Input1; -->
+								<Equation>
+									<lefts>
+										<VariableRef name="_L1"/>
+									</lefts>
+									<right>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="Input1"/>
+											</path>
+										</IdExpression>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/70/5AF/1A7B4/65801c587496"/>
+									</pragmas>
+								</Equation>
+								<!-- Output1 = _L2; -->
+								<Equation>
+									<lefts>
+										<VariableRef name="Output1"/>
+									</lefts>
+									<right>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L2"/>
+											</path>
+										</IdExpression>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/71/5AF/1A7B4/65801c581704"/>
+									</pragmas>
+								</Equation>
+								<!-- _L2 = Sensor_Incorrect; -->
+								<Equation>
+									<lefts>
+										<VariableRef name="_L2"/>
+									</lefts>
+									<right>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="Sensor_Incorrect"/>
+											</path>
+										</IdExpression>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/72/5AF/1A7B4/65801c584f5a"/>
+									</pragmas>
+								</Equation>
+								<!-- Sensor_Incorrect = _L1; -->
+								<Equation>
+									<lefts>
+										<VariableRef name="Sensor_Incorrect"/>
+									</lefts>
+									<right>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L1"/>
+											</path>
+										</IdExpression>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/73/5AF/1A7B4/65801c5822e6"/>
+									</pragmas>
+								</Equation>
+							</data>
+							<pragmas>
+								<ed:Operator oid="!ed/6f/5AF/1A7B4/65801c584239" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<diagrams>
+										<NetDiagram name="Operator4_1" landscape="true" format="A4 (210 297)" oid="!ed/74/5AF/1A7B4/65801c586044">
+											<presentationElements>
+												<EquationGE presentable="!ed/70/5AF/1A7B4/65801c587496">
+													<position>
+														<Point x="4313" y="2778"/>
+													</position>
+													<size>
+														<Size width="264" height="503"/>
+													</size>
+												</EquationGE>
+												<EquationGE presentable="!ed/71/5AF/1A7B4/65801c581704">
+													<position>
+														<Point x="12224" y="2963"/>
+													</position>
+													<size>
+														<Size width="317" height="503"/>
+													</size>
+												</EquationGE>
+												<EquationGE presentable="!ed/72/5AF/1A7B4/65801c584f5a">
+													<position>
+														<Point x="8202" y="3493"/>
+													</position>
+													<size>
+														<Size width="265" height="502"/>
+													</size>
+												</EquationGE>
+												<EquationGE presentable="!ed/73/5AF/1A7B4/65801c5822e6">
+													<position>
+														<Point x="5821" y="1931"/>
+													</position>
+													<size>
+														<Size width="344" height="503"/>
+													</size>
+												</EquationGE>
+												<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/72/5AF/1A7B4/65801c584f5a" dstEquation="!ed/71/5AF/1A7B4/65801c581704">
+													<positions>
+														<Point x="8467" y="3757"/>
+														<Point x="10372" y="3757"/>
+														<Point x="10372" y="3228"/>
+														<Point x="12277" y="3228"/>
+													</positions>
+												</Edge>
+												<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/70/5AF/1A7B4/65801c587496" dstEquation="!ed/73/5AF/1A7B4/65801c5822e6">
+													<positions>
+														<Point x="4577" y="3043"/>
+														<Point x="5186" y="3043"/>
+														<Point x="5186" y="2196"/>
+														<Point x="5821" y="2196"/>
+													</positions>
+												</Edge>
+											</presentationElements>
+										</NetDiagram>
+									</diagrams>
+								</ed:Operator>
+							</pragmas>
+						</Operator>
+					</declarations>
+					<pragmas>
+						<ed:Package oid="!ed/5c/5AF/1A7B4/65801c53762a" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/5d/5AF/1A7B4/65801c535d81" blockKind="constants"/>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/5e/5AF/1A7B4/65801c534df4" blockKind="types"/>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/5f/5AF/1A7B4/65801c5315a3" blockKind="sensors"/>
+							</diagrams>
+						</ed:Package>
+					</pragmas>
+				</Package>
+				<Sensor name="Sensor_Correct">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Sensor oid="!ed/18/5AF/1A7B4/658019cb47d5"/>
+					</pragmas>
+				</Sensor>
+				<Sensor name="Sensor_Incorrect">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Sensor oid="!ed/1e/5AF/1A7B4/658019d21758"/>
+					</pragmas>
+				</Sensor>
+				<Operator kind="function" name="Operator1">
+					<inputs>
+						<Variable name="Sensor_Incorrect">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/21/5AF/1A7B4/658019ef6c22"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="Output1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/22/5AF/1A7B4/658019f87739"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<locals>
+						<Variable name="_L1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/24/5AF/1A7B4/658019fc4a"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<!-- _L1 = Sensor_Incorrect; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L1"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="Sensor_Incorrect"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/23/5AF/1A7B4/658019fc247d"/>
+							</pragmas>
+						</Equation>
+						<!-- Output1 = _L1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="Output1"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L1"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/29/5AF/1A7B4/658019fd5d9c"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/1f/5AF/1A7B4/658019de26b3" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Operator1_1" landscape="true" format="A4 (210 297)" oid="!ed/20/5AF/1A7B4/658019de7e1d">
+									<presentationElements>
+										<EquationGE presentable="!ed/23/5AF/1A7B4/658019fc247d">
+											<position>
+												<Point x="2037" y="1799"/>
+											</position>
+											<size>
+												<Size width="265" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/29/5AF/1A7B4/658019fd5d9c">
+											<position>
+												<Point x="5530" y="1852"/>
+											</position>
+											<size>
+												<Size width="317" height="503"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/23/5AF/1A7B4/658019fc247d" dstEquation="!ed/29/5AF/1A7B4/658019fd5d9c">
+											<positions>
+												<Point x="2302" y="2064"/>
+												<Point x="3942" y="2064"/>
+												<Point x="3942" y="2117"/>
+												<Point x="5583" y="2117"/>
+											</positions>
+										</Edge>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="function" name="Operator2">
+					<inputs>
+						<Variable name="Input1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/30/5AF/1A7B4/65801a088a"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="Sensor_Incorrect">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/31/5AF/1A7B4/65801a087de7"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<locals>
+						<Variable name="_L1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/35/5AF/1A7B4/65801a0e7409"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<!-- _L1 = Input1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L1"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="Input1"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/34/5AF/1A7B4/65801a0e24b8"/>
+							</pragmas>
+						</Equation>
+						<!-- Sensor_Incorrect = _L1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="Sensor_Incorrect"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L1"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/3a/5AF/1A7B4/65801a0f43"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/2e/5AF/1A7B4/65801a073705" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Operator2_1" landscape="true" format="A4 (210 297)" oid="!ed/2f/5AF/1A7B4/65801a073756">
+									<presentationElements>
+										<EquationGE presentable="!ed/34/5AF/1A7B4/65801a0e24b8">
+											<position>
+												<Point x="2805" y="3572"/>
+											</position>
+											<size>
+												<Size width="264" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/3a/5AF/1A7B4/65801a0f43">
+											<position>
+												<Point x="5821" y="3545"/>
+											</position>
+											<size>
+												<Size width="317" height="503"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/34/5AF/1A7B4/65801a0e24b8" dstEquation="!ed/3a/5AF/1A7B4/65801a0f43">
+											<positions>
+												<Point x="3069" y="3836"/>
+												<Point x="4471" y="3836"/>
+												<Point x="4471" y="3836"/>
+												<Point x="5874" y="3836"/>
+											</positions>
+										</Edge>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="function" name="Operator3">
+					<inputs>
+						<Variable name="Input1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/41/5AF/1A7B4/65801a19337f"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="Output1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/42/5AF/1A7B4/65801a1969c7"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<locals>
+						<Variable name="Sensor_Incorrect">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/43/5AF/1A7B4/65801a1b18d3"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/45/5AF/1A7B4/65801a1f3dcc"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/50/5AF/1A7B4/65801a22682f"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<!-- _L1 = Input1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L1"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="Input1"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/44/5AF/1A7B4/65801a1f24f0"/>
+							</pragmas>
+						</Equation>
+						<!-- Output1 = _L2; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="Output1"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L2"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/4a/5AF/1A7B4/65801a217653"/>
+							</pragmas>
+						</Equation>
+						<!-- _L2 = Sensor_Incorrect; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L2"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="Sensor_Incorrect"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/4f/5AF/1A7B4/65801a2256a9"/>
+							</pragmas>
+						</Equation>
+						<!-- Sensor_Incorrect = _L1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="Sensor_Incorrect"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L1"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/57/5AF/1A7B4/65801a2361b0"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/3f/5AF/1A7B4/65801a1749b4" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Operator3_1" landscape="true" format="A4 (210 297)" oid="!ed/40/5AF/1A7B4/65801a176501">
+									<presentationElements>
+										<EquationGE presentable="!ed/44/5AF/1A7B4/65801a1f24f0">
+											<position>
+												<Point x="4313" y="2778"/>
+											</position>
+											<size>
+												<Size width="264" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/4a/5AF/1A7B4/65801a217653">
+											<position>
+												<Point x="12224" y="2963"/>
+											</position>
+											<size>
+												<Size width="317" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/4f/5AF/1A7B4/65801a2256a9">
+											<position>
+												<Point x="8202" y="3493"/>
+											</position>
+											<size>
+												<Size width="265" height="502"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/57/5AF/1A7B4/65801a2361b0">
+											<position>
+												<Point x="5821" y="1931"/>
+											</position>
+											<size>
+												<Size width="344" height="503"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4f/5AF/1A7B4/65801a2256a9" dstEquation="!ed/4a/5AF/1A7B4/65801a217653">
+											<positions>
+												<Point x="8467" y="3757"/>
+												<Point x="10372" y="3757"/>
+												<Point x="10372" y="3228"/>
+												<Point x="12277" y="3228"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/44/5AF/1A7B4/65801a1f24f0" dstEquation="!ed/57/5AF/1A7B4/65801a2361b0">
+											<positions>
+												<Point x="4577" y="3043"/>
+												<Point x="5186" y="3043"/>
+												<Point x="5186" y="2196"/>
+												<Point x="5821" y="2196"/>
+											</positions>
+										</Edge>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/14/5AF/1A7B4/658019c6f49" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/15/5AF/1A7B4/658019c6165b" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/16/5AF/1A7B4/658019c63a94" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/17/5AF/1A7B4/658019c65ed0" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>
