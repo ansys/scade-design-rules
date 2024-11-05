@@ -21,14 +21,16 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-"""Check there is one doc per rule and vice versa."""
+"""
+Performs checks and updates the documentation from the rules.
 
-__author__ = 'Jean Henry'
+* Checks there is one documentation file per rule and vice versa.
+* Creates a default index file for new categories.
+* Creates a default documentation file for new rules.
+* Updates the documentation with the rule's properties: description, etc.
+* Updates ``./src/ansys/scade/design_rules/catalog.txt``.
+"""
 
-# import docutils.nodes
-# import docutils.parsers.rst
-# import docutils.utils
-# import docutils.frontend
 import importlib
 from pathlib import Path
 import re
@@ -40,32 +42,37 @@ environment = None
 
 
 def filter_underline(text: str, char: str) -> str:
+    """Return the underline string for a text."""
     return text + '\n' + char * len(text)
 
 
-def create_category(dir: Path, context):
-    model = 'content.rst'
+def create_category(dir: Path, context) -> None | Path:
+    """Create a new documentation category from a template."""
+    assert environment
+    model = 'category.rst'
     try:
         template = environment.get_template(model)
     except BaseException as e:
         print(e)
-        return
+        return None
     dir.mkdir(exist_ok=True)
     text = template.render(context)
-    file = dir / model
+    file = (dir / model).with_stem('index')
     with file.open('w') as f:
         f.write(text)
     print('creating', file)
     return dir
 
 
-def create_rule(file: Path, context):
+def create_rule(file: Path, context) -> None | Path:
+    """Create a new documentation file from a template."""
+    assert environment
     model = 'rule.rst'
     try:
         template = environment.get_template(model)
     except BaseException as e:
         print(e)
-        return
+        return None
     file.parent.mkdir(exist_ok=True)
     text = template.render(context)
     with file.open('w') as f:
@@ -74,21 +81,13 @@ def create_rule(file: Path, context):
     return file
 
 
-# Example from https://stackoverflow.com/questions/12883428/how-to-parse-restructuredtext-in-python
-# def parse_rst(text: str) -> docutils.nodes.document:
-#     parser = docutils.parsers.rst.Parser()
-#     settings = docutils.frontend.get_default_settings(docutils.parsers.rst.Parser)
-#     document = docutils.utils.new_document('<rst-doc>', settings=settings)
-#     parser.parse(text, document)
-#     return document
-
 rerule = re.compile(r'..\s+rule\s*::')
 reclass = re.compile(r'(\s*:class:\s*).*')
 reid = re.compile(r'(\s*:id:\s*).*')
 
 
 def update_rule(file: Path, rule) -> bool:
-    # update the fields class, id, label and description from rule
+    """Update the fields class, id, label and description from a rule."""
     ok = True
 
     # quick and dirty parser: not able to use parse_rst
@@ -199,14 +198,18 @@ def update_rule(file: Path, rule) -> bool:
     return ok
 
 
-# __init__ replacement function to store the
-# parameters as attributes
 def local_init(c, **kwargs):
+    """
+    Store the parameters as attributes.
+
+    This function replaces the rules' ``__init__`` method.
+    """
     for name, value in kwargs.items():
         setattr(c, name, value)
 
 
 def rule_instance(module: str):
+    """Create an instance of a rule."""
     module = 'ansys.scade.design_rules.' + module
     base_name = module.split('.')[-1]
 
@@ -238,6 +241,7 @@ def rule_instance(module: str):
 
 
 def update_doc(root: Path) -> int:
+    """Check and update the documentation with respect to the sources."""
     global environment
 
     exit_code = 0
@@ -248,6 +252,9 @@ def update_doc(root: Path) -> int:
         exit_code = 1
         print('apitools', 'import error')
         return exit_code
+
+    # catalog of rules: (id, category, class)
+    catalog: list[tuple[str, str, str]] = []
 
     environment = jinja2.Environment(
         loader=jinja2.FileSystemLoader(str(root / 'doc' / '_templates'))
@@ -269,7 +276,7 @@ def update_doc(root: Path) -> int:
         except KeyError:
             print('%s: no doc directory' % src.name)
             doc = None
-        if not doc or not (doc / 'content.rst').exists():
+        if not doc or not (doc / 'index.rst').exists():
             exit_code = 1
             name = src.name
             context = {
@@ -277,7 +284,9 @@ def update_doc(root: Path) -> int:
                 'title': ' '.join([_.capitalize() for _ in name.split('_')]),
             }
             doc = create_category(root / rules_dir / src.name, context)
-        rsts = {_.stem.lower(): _ for _ in doc.glob('*.rst') if _.stem.lower() != 'content'}
+        if not doc:
+            continue
+        rsts = {_.stem.lower(): _ for _ in doc.glob('*.rst') if _.stem.lower() != 'index'}
         rules = sorted([_ for _ in src.glob('*.py') if _.name != '__init__.py'])
         for rule in rules:
             name = rule.stem
@@ -303,9 +312,19 @@ def update_doc(root: Path) -> int:
                         'rule': instance,
                     }
                     create_rule(doc / rule.with_suffix('.rst').name, context)
+            # update the catalog
+            catalog.append((instance.id, src.name, rule.stem))
         for rst in sorted(rsts.keys()):
             exit_code = 1
             print('%s/%s: no rule' % (doc.name, rsts[rst].name))
+
+    # write the catalog
+    catalog.sort(key=lambda t: t[0])
+    path = root / 'src/ansys/scade/design_rules' / 'catalog.txt'
+    with path.open('w') as f:
+        f.write('id\tcategory\tname\n')
+        for id, category, name in catalog:
+            f.write(f'{id}\t{category}\t{name}\n')
 
     return exit_code
 

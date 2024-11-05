@@ -9,4 +9,4 @@ The rules are organized into the following categories:
    :hidden:
    :glob:
 
-   */content
+   */index
