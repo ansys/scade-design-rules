@@ -249,13 +249,16 @@ cython_debug/
 *.llrs
 *.reqs
 *.cfg
-models/**/*_rules_img/
-models/**/*.log
-models/**/*.htm
-models/**/KCG
-models/**/Simulation
+examples/**/*_rules_img/
+examples/**/*.log
+examples/**/*.htm
+examples/**/KCG
+examples/**/Simulation
 tests/**/KCG
 tests/**/Simulation
+tests/**/*_rules_img/
+tests/**/*.log
+tests/**/*.htm
 
 # Visual Studio Code
 .vscode/

@@ -86,16 +86,6 @@ ignore = [
     "D204",  # One blank line required after class docstring.
     # TODO undserstand whether this should be ignored or not
     # "D206",  # To ignore: conflict with the formatter
-    # temporary
-    "D100",  # Missing docstring in public module.
-    "D101",  # Missing docstring in public class.
-    "D102",  # Missing docstring in public method.
-    "D103",  # Missing docstring in public function.
-    "D104",  # Missing docstring in public package.
-    "D200",  # One-line docstring should fit on one line.
-    "D400",  # First line should end with a period.
-    "D401",  # First line of docstring should be in imperative mood.
-    "D404",  # First word of the docstring should not be "This".
 ]
 
 [tool.ruff.format]

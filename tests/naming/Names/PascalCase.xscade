@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="PascalCase">
+			<declarations>
+				<Package name="Success">
+					<declarations>
+						<Operator kind="node" name="Nominal">
+							<pragmas>
+								<ed:Operator oid="!ed/284/2581/88B8/61d5b7082b24" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<diagrams>
+										<NetDiagram name="Nominal" landscape="true" format="A4 (210 297)" oid="!ed/285/2581/88B8/61d5b708129e"/>
+									</diagrams>
+								</ed:Operator>
+							</pragmas>
+						</Operator>
+						<Operator kind="node" name="ControllerP">
+							<pragmas>
+								<ed:Operator oid="!ed/286/2581/88B8/61d5b7166790" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<diagrams>
+										<NetDiagram name="ControllerP" landscape="true" format="A4 (210 297)" oid="!ed/287/2581/88B8/61d5b7163ec8"/>
+									</diagrams>
+								</ed:Operator>
+							</pragmas>
+						</Operator>
+						<Operator kind="node" name="ControllerPI">
+							<pragmas>
+								<ed:Operator oid="!ed/288/2581/88B8/61d5b71de65" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<diagrams>
+										<NetDiagram name="ControllerPI" landscape="true" format="A4 (210 297)" oid="!ed/289/2581/88B8/61d5b71d5976"/>
+									</diagrams>
+								</ed:Operator>
+							</pragmas>
+						</Operator>
+						<Operator kind="node" name="ControllerPI1">
+							<pragmas>
+								<ed:Operator oid="!ed/290/2581/88B8/61d5b723693" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<diagrams>
+										<NetDiagram name="ControllerPI1" landscape="true" format="A4 (210 297)" oid="!ed/291/2581/88B8/61d5b7234d1e"/>
+									</diagrams>
+								</ed:Operator>
+							</pragmas>
+						</Operator>
+						<Operator kind="node" name="ControllerPIExtension">
+							<pragmas>
+								<ed:Operator oid="!ed/294/2581/88B8/61d5b7511e6f" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<diagrams>
+										<NetDiagram name="ControllerPIExtension" landscape="true" format="A4 (210 297)" oid="!ed/295/2581/88B8/61d5b7516543"/>
+									</diagrams>
+								</ed:Operator>
+							</pragmas>
+						</Operator>
+						<Operator kind="node" name="ControllerPidExtension">
+							<pragmas>
+								<ed:Operator oid="!ed/296/2581/88B8/61d5b761530d" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<diagrams>
+										<NetDiagram name="ControllerPidExtension" landscape="true" format="A4 (210 297)" oid="!ed/297/2581/88B8/61d5b761170a"/>
+									</diagrams>
+								</ed:Operator>
+							</pragmas>
+						</Operator>
+						<Operator kind="node" name="PI">
+							<pragmas>
+								<ed:Operator oid="!ed/83e/2581/88B8/61d5d1946f32" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<diagrams>
+										<NetDiagram name="PI" landscape="true" format="A4 (210 297)" oid="!ed/83f/2581/88B8/61d5d19462fd"/>
+									</diagrams>
+								</ed:Operator>
+							</pragmas>
+						</Operator>
+					</declarations>
+					<pragmas>
+						<ed:Package oid="!ed/25e/2581/88B8/61d5b3034b3d" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/25f/2581/88B8/61d5b3037062" blockKind="constants"/>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/260/2581/88B8/61d5b3036131" blockKind="types"/>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/261/2581/88B8/61d5b30331bd" blockKind="sensors"/>
+							</diagrams>
+						</ed:Package>
+					</pragmas>
+				</Package>
+				<Package name="Failure">
+					<declarations>
+						<Operator kind="node" name="My_operator">
+							<pragmas>
+								<ed:Operator oid="!ed/26c/2581/88B8/61d5b5ef488f" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<diagrams>
+										<NetDiagram name="My_operator" landscape="true" format="A4 (210 297)" oid="!ed/26d/2581/88B8/61d5b5ef414b"/>
+									</diagrams>
+								</ed:Operator>
+							</pragmas>
+						</Operator>
+						<Operator kind="node" name="My_Operator">
+							<pragmas>
+								<ed:Operator oid="!ed/274/2581/88B8/61d5b600ce4" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<diagrams>
+										<NetDiagram name="My_Operator" landscape="true" format="A4 (210 297)" oid="!ed/275/2581/88B8/61d5b6006e27"/>
+									</diagrams>
+								</ed:Operator>
+							</pragmas>
+						</Operator>
+						<Operator kind="node" name="nominal">
+							<pragmas>
+								<ed:Operator oid="!ed/276/2581/88B8/61d5b60c2997" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<diagrams>
+										<NetDiagram name="nominal" landscape="true" format="A4 (210 297)" oid="!ed/277/2581/88B8/61d5b60c75cb"/>
+									</diagrams>
+								</ed:Operator>
+							</pragmas>
+						</Operator>
+						<Operator kind="node" name="NotKeyword_">
+							<pragmas>
+								<ed:Operator oid="!ed/278/2581/88B8/61d5b62e114" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<diagrams>
+										<NetDiagram name="NotKeyword_" landscape="true" format="A4 (210 297)" oid="!ed/279/2581/88B8/61d5b62ed3d"/>
+									</diagrams>
+								</ed:Operator>
+							</pragmas>
+						</Operator>
+						<Operator kind="node" name="ControllerPID">
+							<pragmas>
+								<ed:Operator oid="!ed/27a/2581/88B8/61d5b66d25a4" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<diagrams>
+										<NetDiagram name="ControllerPID" landscape="true" format="A4 (210 297)" oid="!ed/27b/2581/88B8/61d5b66d10fd"/>
+									</diagrams>
+								</ed:Operator>
+							</pragmas>
+						</Operator>
+						<Operator kind="node" name="ControllerPIDExtension">
+							<pragmas>
+								<ed:Operator oid="!ed/27c/2581/88B8/61d5b6822fbb" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<diagrams>
+										<NetDiagram name="ControllerPIDExtension" landscape="true" format="A4 (210 297)" oid="!ed/27d/2581/88B8/61d5b68275d3"/>
+									</diagrams>
+								</ed:Operator>
+							</pragmas>
+						</Operator>
+						<Operator kind="node" name="two31Words">
+							<pragmas>
+								<ed:Operator oid="!ed/27e/2581/88B8/61d5b6a52e81" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<diagrams>
+										<NetDiagram name="two31Words" landscape="true" format="A4 (210 297)" oid="!ed/27f/2581/88B8/61d5b6a54dc9"/>
+									</diagrams>
+								</ed:Operator>
+							</pragmas>
+						</Operator>
+						<Operator kind="node" name="twoWords09">
+							<pragmas>
+								<ed:Operator oid="!ed/280/2581/88B8/61d5b6b0156a" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<diagrams>
+										<NetDiagram name="twoWords09" landscape="true" format="A4 (210 297)" oid="!ed/281/2581/88B8/61d5b6b09c7"/>
+									</diagrams>
+								</ed:Operator>
+							</pragmas>
+						</Operator>
+						<Operator kind="node" name="twoWords">
+							<pragmas>
+								<ed:Operator oid="!ed/282/2581/88B8/61d5b6b557e4" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<diagrams>
+										<NetDiagram name="twoWords" landscape="true" format="A4 (210 297)" oid="!ed/283/2581/88B8/61d5b6b5520"/>
+									</diagrams>
+								</ed:Operator>
+							</pragmas>
+						</Operator>
+						<Operator kind="node" name="PID">
+							<pragmas>
+								<ed:Operator oid="!ed/840/2581/88B8/61d5d1996048" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<diagrams>
+										<NetDiagram name="PID" landscape="true" format="A4 (210 297)" oid="!ed/841/2581/88B8/61d5d19918d5"/>
+									</diagrams>
+								</ed:Operator>
+							</pragmas>
+						</Operator>
+						<Operator kind="node" name="my_operator">
+							<pragmas>
+								<ed:Operator oid="!ed/921/2581/88B8/61d5da8f1321" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<diagrams>
+										<NetDiagram name="my_operator_1" landscape="true" format="A4 (210 297)" oid="!ed/922/2581/88B8/61d5da8f372a"/>
+									</diagrams>
+								</ed:Operator>
+							</pragmas>
+						</Operator>
+					</declarations>
+					<pragmas>
+						<ed:Package oid="!ed/23f/2581/88B8/61d5b3035f9c" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/240/2581/88B8/61d5b3036154" blockKind="constants"/>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/241/2581/88B8/61d5b3036de0" blockKind="types"/>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/242/2581/88B8/61d5b3037014" blockKind="sensors"/>
+							</diagrams>
+						</ed:Package>
+					</pragmas>
+				</Package>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/1092/B2/9D4C/61c48048387e" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/1093/B2/9D4C/61c480484d97" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/1094/B2/9D4C/61c48048520e" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/1095/B2/9D4C/61c480485f8e" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

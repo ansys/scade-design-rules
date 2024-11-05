@@ -22,6 +22,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+"""Provides a set of rules for SCADE Metrics and Rules Checker."""
+
 try:
     import importlib.metadata as importlib_metadata
 except ModuleNotFoundError:

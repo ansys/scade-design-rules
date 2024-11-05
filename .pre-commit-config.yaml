@@ -65,11 +65,11 @@ repos:
         'ansys-scade-apitools',
     ]
 
-#   # make sure there is one model per rule and optionally vice versa
-#   - id: check_models
-#     name: check_models
-#     language: system
-#     entry: python
-#     args: [./tools/check_models/check_models.py]
-#     always_run: true
-#     pass_filenames: false
+  # make sure there is one model per rule and optionally vice versa
+  - id: check_models
+    name: check_models
+    language: system
+    entry: python
+    args: [./tools/check_models/check_models.py]
+    always_run: true
+    pass_filenames: false

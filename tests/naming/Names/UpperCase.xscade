@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="UpperCase">
+			<declarations>
+				<Package name="Failure">
+					<declarations>
+						<Constant name="_CONSTANT">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<value>
+								<ConstValue value="false"/>
+							</value>
+							<pragmas>
+								<ed:Constant oid="!ed/2aa/2581/88B8/61d5bf1513d6"/>
+							</pragmas>
+						</Constant>
+						<Constant name="CONSTANT_">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<value>
+								<ConstValue value="false"/>
+							</value>
+							<pragmas>
+								<ed:Constant oid="!ed/2ab/2581/88B8/61d5bf1b34a"/>
+							</pragmas>
+						</Constant>
+						<Constant name="R2__D2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<value>
+								<ConstValue value="false"/>
+							</value>
+							<pragmas>
+								<ed:Constant oid="!ed/2ac/2581/88B8/61d5bf202525"/>
+							</pragmas>
+						</Constant>
+						<Constant name="Constant">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<value>
+								<ConstValue value="false"/>
+							</value>
+							<pragmas>
+								<ed:Constant oid="!ed/2ad/2581/88B8/61d5bf2e27a1"/>
+							</pragmas>
+						</Constant>
+						<Constant name="constanT">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<value>
+								<ConstValue value="false"/>
+							</value>
+							<pragmas>
+								<ed:Constant oid="!ed/2ae/2581/88B8/61d5bf3c7df6"/>
+							</pragmas>
+						</Constant>
+						<Constant name="const_">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<value>
+								<ConstValue value="false"/>
+							</value>
+							<pragmas>
+								<ed:Constant oid="!ed/2af/2581/88B8/61d5bf485fcb"/>
+							</pragmas>
+						</Constant>
+						<Constant name="CONST_">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<value>
+								<ConstValue value="false"/>
+							</value>
+							<pragmas>
+								<ed:Constant oid="!ed/2b0/2581/88B8/61d5bf625144"/>
+							</pragmas>
+						</Constant>
+					</declarations>
+					<pragmas>
+						<ed:Package oid="!ed/298/2581/88B8/61d5beda6677" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/299/2581/88B8/61d5beda1bba" blockKind="constants"/>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/29a/2581/88B8/61d5beda703e" blockKind="types"/>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/29b/2581/88B8/61d5beda38f6" blockKind="sensors"/>
+							</diagrams>
+						</ed:Package>
+					</pragmas>
+				</Package>
+				<Package name="Success">
+					<declarations>
+						<Constant name="CONSTANT">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<value>
+								<ConstValue value="false"/>
+							</value>
+							<pragmas>
+								<ed:Constant oid="!ed/2a8/2581/88B8/61d5beec202b"/>
+							</pragmas>
+						</Constant>
+						<Constant name="R2_D2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<value>
+								<ConstValue value="false"/>
+							</value>
+							<pragmas>
+								<ed:Constant oid="!ed/2a9/2581/88B8/61d5bef35368"/>
+							</pragmas>
+						</Constant>
+						<Constant name="A1B_2C3_D4E">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<value>
+								<ConstValue value="false"/>
+							</value>
+							<pragmas>
+								<ed:Constant oid="!ed/2b2/2581/88B8/61d5bfce1522"/>
+							</pragmas>
+						</Constant>
+						<Constant name="R2D2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<value>
+								<ConstValue value="false"/>
+							</value>
+							<pragmas>
+								<ed:Constant oid="!ed/310/2581/88B8/61d5c3a3a11"/>
+							</pragmas>
+						</Constant>
+					</declarations>
+					<pragmas>
+						<ed:Package oid="!ed/29c/2581/88B8/61d5bede6275" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/29d/2581/88B8/61d5bede17b1" blockKind="constants"/>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/29e/2581/88B8/61d5bede6cc0" blockKind="types"/>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/29f/2581/88B8/61d5bede317a" blockKind="sensors"/>
+							</diagrams>
+						</ed:Package>
+					</pragmas>
+				</Package>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/10a2/B2/9D4C/61c4806d56e6" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/10a3/B2/9D4C/61c4806d448d" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/10a4/B2/9D4C/61c4806d7fa3" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/10a5/B2/9D4C/61c4806d471" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

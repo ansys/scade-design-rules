@@ -1,1 +1,4 @@
 id	category	name
+id_0008	naming	camel_case_naming
+id_0078	naming	pascal_case_naming
+id_0088	naming	upper_case_naming

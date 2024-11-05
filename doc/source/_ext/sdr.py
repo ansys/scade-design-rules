@@ -1,3 +1,5 @@
+"""Implements the ``category``, ``rules`` and ``rule`` directives."""
+
 from docutils import nodes
 from docutils.parsers.rst import Directive
 from docutils.parsers.rst.directives import unchanged_required
@@ -6,34 +8,46 @@ from sphinx.util.docutils import SphinxDirective
 
 
 class Category(nodes.topic, nodes.Element):
+    """Category node."""
+
     pass
 
 
 def visit_category_node(self, node):
+    """Visit a node."""
     self.visit_topic(node)
 
 
 def depart_category_node(self, node):
+    """Start the visit of a node."""
     self.depart_topic(node)
 
 
 class Categories(nodes.General, nodes.Element):
+    """Categories node."""
+
     pass
 
 
 class Rule(nodes.container, nodes.Element):
+    """Category node."""
+
     pass
 
 
 def visit_rule_node(self, node):
+    """Visit a node."""
     self.visit_container(node)
 
 
 def depart_rule_node(self, node):
+    """Start the visit of a node."""
     self.depart_container(node)
 
 
 class Rules(nodes.General, nodes.Element):
+    """``rules`` directive."""
+
     def __init__(self, filter: str):
         # store the filter for the selected rules
         super().__init__('')
@@ -41,17 +55,23 @@ class Rules(nodes.General, nodes.Element):
 
 
 class CategoriesDirective(Directive):
+    """``categories`` directive."""
+
     def run(self):
+        """Return an instance."""
         return [Categories('')]
 
 
 class CategoryDirective(SphinxDirective):
+    """``category`` directive."""
+
     # this enables content in the directive
     has_content = True
 
     option_spec = {'name': unchanged_required}
 
     def run(self):
+        """Return an instance."""
         targetid = 'sdr-%d' % self.env.new_serialno('sdr')
         targetnode = nodes.target('', '', ids=[targetid])
 
@@ -81,6 +101,8 @@ class CategoryDirective(SphinxDirective):
 
 
 class RulesDirective(Directive):
+    """``rules`` directive."""
+
     has_content = False
 
     option_spec = {
@@ -88,10 +110,13 @@ class RulesDirective(Directive):
     }
 
     def run(self):
+        """Return an instance."""
         return [Rules(self.options['filter'])]
 
 
 class RuleDirective(SphinxDirective):
+    """``rule`` directive."""
+
     # this enables content in the directive
     has_content = True
 
@@ -105,6 +130,7 @@ class RuleDirective(SphinxDirective):
     }
 
     def run(self):
+        """Return an instance."""
         targetid = 'sdr-%d' % self.env.new_serialno('sdr')
         targetnode = nodes.target('', '', ids=[targetid])
 
@@ -134,6 +160,7 @@ class RuleDirective(SphinxDirective):
 
 
 def purge_categories(app, env, docname):
+    """Implement env-purge-doc for categories."""
     if not hasattr(env, 'sdr_categories'):
         return
 
@@ -141,6 +168,7 @@ def purge_categories(app, env, docname):
 
 
 def merge_categories(app, env, docnames, other):
+    """Implement env-merge-info for categories."""
     if not hasattr(env, 'sdr_categories'):
         env.sdr_categories = []
 
@@ -149,6 +177,7 @@ def merge_categories(app, env, docnames, other):
 
 
 def purge_rules(app, env, docname):
+    """Implement env-purge-doc for rules."""
     if not hasattr(env, 'sdr_rules'):
         return
 
@@ -156,6 +185,7 @@ def purge_rules(app, env, docname):
 
 
 def merge_rules(app, env, docnames, other):
+    """Implement env-merge-info for rules."""
     if not hasattr(env, 'sdr_sdr_rules'):
         env.sdr_sdr_rules = []
 
@@ -164,8 +194,11 @@ def merge_rules(app, env, docnames, other):
 
 
 def process_category_nodes(app, doctree, fromdocname):
-    # Replace all categories nodes with a list of the collected categories.
-    # Augment each category with a backlink to the original location.
+    """
+    Replace all categories nodes with a list of the collected categories.
+
+    Augment each category with a back-link to the original location.
+    """
     env = app.builder.env
 
     if not hasattr(env, 'sdr_categories'):
@@ -220,8 +253,11 @@ def process_category_nodes(app, doctree, fromdocname):
 
 
 def process_rule_nodes(app, doctree, fromdocname):
-    # Replace all categories nodes with a list of the collected categories.
-    # Augment each category with a backlink to the original location.
+    """
+    Replace all categories nodes with a list of the collected categories.
+
+    Augment each category with a back-link to the original location.
+    """
     env = app.builder.env
 
     if not hasattr(env, 'sdr_rules'):
@@ -292,6 +328,7 @@ def process_rule_nodes(app, doctree, fromdocname):
 
 
 def setup(app):
+    """Declare the nodes and directives."""
     app.add_node(Categories)
     app.add_node(
         Category,
