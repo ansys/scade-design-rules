@@ -19,7 +19,7 @@ For iterators which use an exit condition (mapw, mapwi, foldw, foldwi, mapfoldw,
 
 .. end_description
 
-The parameter allows defining an alternate name, with the following syntax: ``continue=<regular expression>`` (default value: ``continue=continue``).
+The parameter allows defining an alternate name, with the following syntax: ``-c <regular expression>`` (default value: ``-c continue``).
 
 Rationale
 ---------

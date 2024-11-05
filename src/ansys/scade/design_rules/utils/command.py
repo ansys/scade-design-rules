@@ -45,7 +45,7 @@ class ParameterParser(ArgumentParser):
 
     def error(self, message: str):
         """
-        Override ``error`` to store the messages instead of exiting.
+        Override ``error`` to store the message instead of exiting.
 
         Parameters
         ----------
@@ -53,6 +53,14 @@ class ParameterParser(ArgumentParser):
             Error message.
         """
         self.messages.append(message)
+
+    def print_help(self):
+        """Override ``print_help`` to store the message instead of raising an exception."""
+        self.messages.append(self.format_help())
+
+    def exit(self):
+        """Override ``exit`` to not exit the application."""
+        pass
 
     def parse_command(self, command: str) -> Optional[Namespace]:
         """

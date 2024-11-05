@@ -98,11 +98,19 @@ class NameStructureFoldAccumulator(Rule):
         )
         print('parameter', parameter)
         parser = ParameterParser(prog='')
+        help_in = 'Regular expression for the name of the accumulator inputs'
         parser.add_argument(
-            '-i', '--in', dest='in_', help='Regular expression for inputs', required=True
+            '-i', '--in', dest='in_', help=help_in, required=True, metavar='<regular expression>'
         )
-        parser.add_argument('-o', '--out', help='Regular expression for outputs', required=True)
-        parser.add_argument('-s', '--strict', help='Strict mode', action='store_true')
+        help_out = 'Regular expression for the name of the accumulator outputs'
+        parser.add_argument(
+            '-o', '--out', help=help_out, required=True, metavar='<regular expression>'
+        )
+        help_strict = (
+            'Optional parameter to prevent the usage of ``in``/``out`` '
+            'expressions for variables that are not accumulators'
+        )
+        parser.add_argument('-s', '--strict', help=help_strict, action='store_true')
         options = parser.parse_command(parameter)
         if not options:
             message = parser.message

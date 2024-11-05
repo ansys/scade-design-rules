@@ -19,7 +19,7 @@ For iterators which use an index (mapi, mapwi, foldi, foldwi, mapfoldi, mapfoldw
 
 .. end_description
 
-The parameter allows defining an alternate name, with the following syntax: ``index=<regular expression>`` (default value: ``index=index``).
+The parameter allows defining an alternate name, with the following syntax: ``-i <regular expression>`` (default value: ``-i index``).
 
 Rationale
 ---------

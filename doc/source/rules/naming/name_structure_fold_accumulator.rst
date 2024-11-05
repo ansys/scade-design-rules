@@ -27,12 +27,14 @@ When strict is set, the rules verifies the names are not used for variables whic
 
 .. end_description
 
-The rule's parameter has the following syntax: ``--in <regular expression> --out <regular expression> --strict]``
-(default value: ``-i acc.*In -o acc.*Out``) with:
+The rule's parameter has the following syntax: ``-i <regular expression> -o <regular expression> [-s]`` (default value: ``-i acc.*In -o acc.*Out``) with:
 
-* ``in``: Regular expression for the name of the accumulator inputs
-* ``out``: Regular expression for the name of the accumulator outputs
-* ``strict``: Optional parameter to prevent the usage of ``in``/``out`` expressions for variables which are not accumulators.
+  -i <regular expression>, --in <regular expression>
+                        Regular expression for the name of the accumulator inputs
+  -o <regular expression>, --out <regular expression>
+                        Regular expression for the name of the accumulator outputs
+  -s, --strict          Optional parameter to prevent the usage of
+                        ``in``/``out`` expressions for variables which are not accumulators
 
 Rationale
 ---------
