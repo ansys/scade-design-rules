@@ -36,6 +36,7 @@ import re
 import scade
 import scade.model.suite as suite
 
+from ansys.scade.design_rules.utils.command import ParameterParser
 from ansys.scade.design_rules.utils.modelling import IR, get_iter_role
 from ansys.scade.design_rules.utils.rule import SCK, Rule
 
@@ -57,7 +58,7 @@ class NameStructureFoldAccumulator(Rule):
             '* The input and output names of the accumulators match.\n'
             '\n'
             'The parameter allows specifying a regular expression for input and output names.\n'
-            "For example: 'in=acc(.*)In, out=acc(.*)Out'. The parenthesis identifies the common "
+            "For example: '-i acc(.*)In -o acc(.*)Out'. The parenthesis identifies the common "
             'part of both names that must match.\n'
             '\n'
             'When strict is set, the rules verifies the names are not used for variables '
@@ -65,7 +66,7 @@ class NameStructureFoldAccumulator(Rule):
         ),
         category='Naming',
         severity=Rule.REQUIRED,
-        parameter='in=acc(.*)In, out=acc(.*)Out',
+        parameter='-i acc(.*)In -o acc(.*)Out',
         **kwargs,
     ):
         super().__init__(
@@ -86,22 +87,30 @@ class NameStructureFoldAccumulator(Rule):
 
     def on_start(self, model: suite.Model, parameter: str) -> int:
         """Get the rule's parameters."""
-        assert model is not None
-
-        d = self.parse_values(parameter)
-        if d is None:
-            message = "'%s': parameter syntax error" % parameter
+        # minimal level of backward compatibility
+        parameter = (
+            parameter.replace('in=', '-i ').replace(',', ' ').replace('out=', '-o ')
+            if parameter
+            else ''
+        )
+        parameter = (
+            parameter.replace('strict=true', '-s ').replace('strict=false', '') if parameter else ''
+        )
+        print('parameter', parameter)
+        parser = ParameterParser(prog='')
+        parser.add_argument(
+            '-i', '--in', dest='in_', help='Regular expression for inputs', required=True
+        )
+        parser.add_argument('-o', '--out', help='Regular expression for outputs', required=True)
+        parser.add_argument('-s', '--strict', help='Strict mode', action='store_true')
+        options = parser.parse_command(parameter)
+        if not options:
+            message = parser.message
         else:
-            self.in_regexp: str = d.get('in', '')
-            self.out_regexp: str = d.get('out', '')
-            strict = d.get('strict')
-            self.strict = strict is not None and (strict.lower() == 'true' or strict == '1')
-            if not self.in_regexp:
-                message = "'%s': missing 'in' value" % parameter
-            elif not self.out_regexp:
-                message = "'%s': missing 'out' value" % parameter
-            else:
-                return Rule.OK
+            self.in_regexp = options.in_
+            self.out_regexp = options.out
+            self.strict = options.strict
+            return Rule.OK
 
         self.set_message(message)
         scade.output(message + '\n')

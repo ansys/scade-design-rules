@@ -85,7 +85,7 @@ def test_name_structure_iterator_continue_n_a(session: suite.Session, test_case)
 
     variable = model.get_object_from_path(path)
     assert variable is not None
-    parameter = 'continue =continue'
+    parameter = '-c continue'
     rule = NameStructureIteratorContinue()
     assert rule.on_start(model, parameter) == _OK
     assert rule.on_check(variable, parameter) == expected
@@ -97,6 +97,8 @@ def test_name_structure_iterator_continue_n_a(session: suite.Session, test_case)
         ('a, b', _ERROR),
         ('not_continue=abcd', _ERROR),
         ('continue=abcd', _OK),
+        ('--continue abcd', _OK),
+        ('-c abcd', _OK),
     ],
 )
 def test_name_structure_fold_accumulator_parameter(test_case):

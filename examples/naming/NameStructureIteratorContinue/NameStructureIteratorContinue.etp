@@ -348,7 +348,7 @@
 			<configuration>54</configuration>
 		</Prop>
 		<Prop id="93" name="@METRICS_RULES:RULES_PARAM">
-			<value>id_0050,continue=continue</value>
+			<value>id_0050,-c continue</value>
 			<configuration>54</configuration>
 		</Prop>
 		<Prop id="97" name="@GENERATOR:ROOTNODE">

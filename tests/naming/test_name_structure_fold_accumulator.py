@@ -68,7 +68,7 @@ def test_name_structure_fold_accumulator_nominal(session: suite.Session, test_ca
 
     operator = model.get_object_from_path('P::MapFoldwi/')
     assert operator is not None
-    parameter = 'in= acc.*In, out =acc.*Out'
+    parameter = 'in= acc.*In, out=acc.*Out'
     rule = NameStructureFoldAccumulator()
     variable = (operator.inputs + operator.hiddens + operator.outputs)[index]
     backup = variable.name
@@ -96,7 +96,7 @@ def test_name_structure_fold_accumulator_match(session: suite.Session, test_case
 
     operator = model.get_object_from_path('P::MapFoldwi/')
     assert operator is not None
-    parameter = 'in= %s, out =%s' % (in_, out)
+    parameter = '-i %s -o %s' % (in_, out)
     rule = NameStructureFoldAccumulator()
     variable = (operator.inputs + operator.hiddens + operator.outputs)[index]
     backup = variable.name
@@ -114,7 +114,7 @@ def test_name_structure_fold_accumulator_no_fold(session: suite.Session):
 
     operator = model.get_object_from_path('P::Operator/')
     assert operator is not None
-    parameter = 'in= acc.*In, out =acc.*Out'
+    parameter = '--in acc.*In --out acc.*Out'
     rule = NameStructureFoldAccumulator()
     assert rule.on_start(model, parameter) == _OK
     assert rule.on_check(operator.inputs[1], parameter) == _OK
@@ -126,7 +126,7 @@ def test_name_structure_fold_accumulator_strict(session: suite.Session):
 
     operator = model.get_object_from_path('P::Operator/')
     assert operator is not None
-    parameter = 'in= acc.*In, out =acc.*Out, strict = true'
+    parameter = '-i acc.*In -o acc.*Out --strict'
     rule = NameStructureFoldAccumulator()
     assert rule.on_start(model, parameter) == _OK
     assert rule.on_check(operator.inputs[1], parameter) == _FAILED
@@ -148,7 +148,7 @@ def test_name_structure_fold_accumulator_n_a(session: suite.Session, test_case):
 
     variable = model.get_object_from_path(path)
     assert variable is not None
-    parameter = 'in= acc.*In, out =acc.*Out'
+    parameter = 'in=acc.*In, out= acc.*Out'
     rule = NameStructureFoldAccumulator()
     assert rule.on_start(model, parameter) == _OK
     assert rule.on_check(variable, parameter) == expected
@@ -158,9 +158,12 @@ def test_name_structure_fold_accumulator_n_a(session: suite.Session, test_case):
     'test_case',
     [
         ('a, b', _ERROR),
-        ('not_in=abcd, out = fghi', _ERROR),
-        ('in=abcd, not_out = fghi', _ERROR),
-        ('in=abcd, out = fghi', _OK),
+        ('not_in=abcd, out=fghi', _ERROR),
+        ('in=abcd, not_out=fghi', _ERROR),
+        ('in=abcd, out=fghi', _OK),
+        ('--in abcd --out fghi --strict', _OK),
+        ('-i abcd -o fghi -s', _OK),
+        ('-i abcd -o fghi', _OK),
     ],
 )
 def test_name_structure_fold_accumulator_parameter(test_case):

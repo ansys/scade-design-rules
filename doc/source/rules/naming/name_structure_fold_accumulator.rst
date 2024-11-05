@@ -21,7 +21,7 @@ For the operators iterated with fold constructs (fold, foldi, foldw, foldwi, map
 * The input and output names of the accumulators match.
 
 The parameter allows specifying a regular expression for input and output names.
-For example: 'in=acc(.*)In, out=acc(.*)Out'. The parenthesis identifies the common part of both names that must match.
+For example: '-i acc(.*)In -o acc(.*)Out'. The parenthesis identifies the common part of both names that must match.
 
 When strict is set, the rules verifies the names are not used for variables which are not accumulators.
 

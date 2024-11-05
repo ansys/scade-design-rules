@@ -312,7 +312,7 @@
 			<configuration>54</configuration>
 		</Prop>
 		<Prop id="88" name="@METRICS_RULES:RULES_PARAM">
-			<value>id_0049,in=acc(.*)In, out=acc(.*)Out</value>
+			<value>id_0049,-i acc(.*)In -o acc(.*)Out</value>
 			<configuration>54</configuration>
 		</Prop>
 		<Prop id="89" name="@METRICS_RULES:SELECTED_RULES">

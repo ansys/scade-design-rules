@@ -36,6 +36,7 @@ import re
 import scade
 import scade.model.suite as suite
 
+from ansys.scade.design_rules.utils.command import ParameterParser
 from ansys.scade.design_rules.utils.modelling import IR, get_iter_role
 from ansys.scade.design_rules.utils.rule import SCK, Rule
 
@@ -54,7 +55,7 @@ class NameStructureIteratorContinue(Rule):
         ),
         category='Naming',
         severity=Rule.REQUIRED,
-        parameter='continue=continue',
+        parameter='-c continue',
         **kwargs,
     ):
         super().__init__(
@@ -72,17 +73,22 @@ class NameStructureIteratorContinue(Rule):
 
     def on_start(self, model: suite.Model, parameter: str) -> int:
         """Get the rule's parameters."""
-        assert model is not None
-
-        d = self.parse_values(parameter)
-        if d is None:
-            message = "'%s': parameter syntax error" % parameter
+        parameter = parameter.replace('continue=', '-c ') if parameter else ''
+        print('parameter', parameter)
+        parser = ParameterParser(prog='')
+        parser.add_argument(
+            '-c',
+            '--continue',
+            dest='continue_',
+            help='Regular expression for continue',
+            required=True,
+        )
+        options = parser.parse_command(parameter)
+        if not options:
+            message = parser.message
         else:
-            self.continue_regexp = d.get('continue')
-            if self.continue_regexp is None:
-                message = "'%s': missing 'continue' value" % parameter
-            else:
-                return Rule.OK
+            self.continue_regexp = options.continue_
+            return Rule.OK
 
         self.set_message(message)
         scade.output(message + '\n')

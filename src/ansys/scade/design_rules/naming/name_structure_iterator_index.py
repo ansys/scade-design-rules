@@ -36,6 +36,7 @@ import re
 import scade
 import scade.model.suite as suite
 
+from ansys.scade.design_rules.utils.command import ParameterParser
 from ansys.scade.design_rules.utils.modelling import IR, get_iter_role
 from ansys.scade.design_rules.utils.rule import SCK, Rule
 
@@ -55,7 +56,7 @@ class NameStructureIteratorIndex(Rule):
         ),
         category='Naming',
         severity=Rule.REQUIRED,
-        parameter='index=index',
+        parameter='-i index',
         **kwargs,
     ):
         super().__init__(
@@ -73,17 +74,16 @@ class NameStructureIteratorIndex(Rule):
 
     def on_start(self, model: suite.Model, parameter: str) -> int:
         """Get the rule's parameters."""
-        assert model is not None
-
-        d = self.parse_values(parameter)
-        if d is None:
-            message = "'%s': parameter syntax error" % parameter
+        parameter = parameter.replace('index=', '-i ') if parameter else ''
+        print('parameter', parameter)
+        parser = ParameterParser(prog='')
+        parser.add_argument('-i', '--index', help='Regular expression for index', required=True)
+        options = parser.parse_command(parameter)
+        if not options:
+            message = parser.message
         else:
-            self.index_regexp = d.get('index')
-            if self.index_regexp is None:
-                message = "'%s': missing 'index' value" % parameter
-            else:
-                return Rule.OK
+            self.index_regexp = options.index
+            return Rule.OK
 
         self.set_message(message)
         scade.output(message + '\n')

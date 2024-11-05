@@ -5,5 +5,7 @@ id_0049	naming	name_structure_fold_accumulator
 id_0050	naming	name_structure_iterator_continue
 id_0051	naming	name_structure_iterator_index
 id_0052	naming	name_structure_package
+id_0053	naming	name_structure_type
 id_0078	naming	pascal_case_naming
 id_0088	naming	upper_case_naming
+id_0121	naming	sensor_names_unique_in_package

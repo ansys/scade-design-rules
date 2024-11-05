@@ -58,7 +58,7 @@ def test_name_structure_iterator_continue_nominal(session: suite.Session, test_c
 
     operator = model.get_object_from_path('P::MapFoldwi/')
     assert operator is not None
-    parameter = 'index = index'
+    parameter = '-i index'
     rule = NameStructureIteratorIndex()
     variable = (operator.inputs + operator.hiddens + operator.outputs)[index]
     backup = variable.name
@@ -85,7 +85,7 @@ def test_name_structure_iterator_continue_n_a(session: suite.Session, test_case)
 
     variable = model.get_object_from_path(path)
     assert variable is not None
-    parameter = ' index  =  index '
+    parameter = ' --index    index '
     rule = NameStructureIteratorIndex()
     assert rule.on_start(model, parameter) == _OK
     assert rule.on_check(variable, parameter) == expected
@@ -97,6 +97,8 @@ def test_name_structure_iterator_continue_n_a(session: suite.Session, test_case)
         ('a, b', _ERROR),
         ('not_index=abcd', _ERROR),
         ('index=abcd', _OK),
+        ('--index abcd', _OK),
+        ('-i abcd', _OK),
     ],
 )
 def test_name_structure_fold_accumulator_parameter(test_case):

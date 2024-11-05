@@ -352,7 +352,7 @@
 			<value>false</value>
 		</Prop>
 		<Prop id="95" name="@METRICS_RULES:RULES_PARAM">
-			<value>id_0051,index=index</value>
+			<value>id_0051,-i index</value>
 			<configuration>54</configuration>
 		</Prop>
 		<Prop id="96" name="@METRICS_RULES:SELECTED_RULES">

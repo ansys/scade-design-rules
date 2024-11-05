@@ -349,7 +349,7 @@
 		<Prop id="91" name="@METRICS_RULES:RULES_PARAM">
 			<value>id_0050,continue=continue</value>
 			<value>id_0051,index=index</value>
-			<value>id_0049,in=acc.*In, out=acc.*Out</value>
+			<value>id_0049,-i acc.*In -o acc.*Out</value>
 			<configuration>54</configuration>
 		</Prop>
 		<Prop id="92" name="@METRICS_RULES:SELECTED_RULES">
