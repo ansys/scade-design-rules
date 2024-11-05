@@ -1,0 +1,1623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="P">
+			<declarations>
+				<Operator kind="node" name="Operator">
+					<inputs>
+						<Variable name="i1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1a/58E6/A10C/60d07d791101"/>
+							</pragmas>
+						</Variable>
+						<Variable name="i2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/28/58E6/A10C/60d07d7f72c3"/>
+							</pragmas>
+						</Variable>
+						<Variable name="i3">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/2e/58E6/A10C/60d07d8052cd"/>
+							</pragmas>
+						</Variable>
+						<Variable name="i4">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/34/58E6/A10C/60d07d812e95"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="o1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/3b/58E6/A10C/60d07d84387e"/>
+							</pragmas>
+						</Variable>
+						<Variable name="o2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/49/58E6/A10C/60d07d8951c9"/>
+							</pragmas>
+						</Variable>
+						<Variable name="o3">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/4f/58E6/A10C/60d07d8963b3"/>
+							</pragmas>
+						</Variable>
+						<Variable name="o4">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/55/58E6/A10C/60d07d89493c"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<pragmas>
+						<ed:Operator oid="!ed/18/58E6/A10C/60d07d705b2b" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Operator_1" landscape="true" format="A4 (210 297)" oid="!ed/19/58E6/A10C/60d07d701503"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="Call">
+					<locals>
+						<Variable name="_L4">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/68/58E6/A10C/60d07d9b7b86"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L3">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/67/58E6/A10C/60d07d9b323"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L2">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/66/58E6/A10C/60d07d9b4f17"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L1">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/65/58E6/A10C/60d07d9b5c1e"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L5">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1b12/4E16/11E0/670c08a2650a"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L6">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1b13/4E16/11E0/670c08a26d2f"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L7">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1b14/4E16/11E0/670c08a27641"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L8">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1b15/4E16/11E0/670c08a251fb"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L10">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1b26/4E16/11E0/670c08a42eb3"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L11">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1b27/4E16/11E0/670c08a42b5b"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L12">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1b28/4E16/11E0/670c08a47a5"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L14">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1b39/4E16/11E0/670c08a71354"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L15">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1b3a/4E16/11E0/670c08a74d60"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L16">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1b3b/4E16/11E0/670c08a7570f"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L29">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1b78/4E16/11E0/670c08b3781"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L30">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1b79/4E16/11E0/670c08b326b2"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L31">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1b7a/4E16/11E0/670c08b330c0"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L32">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1b7b/4E16/11E0/670c08b3101f"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L25">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1b73/4E16/11E0/670c08b31b5"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L21">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1b6e/4E16/11E0/670c08b3953"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L22">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1b6f/4E16/11E0/670c08b37819"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L23">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1b70/4E16/11E0/670c08b335a"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L24">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1b71/4E16/11E0/670c08b361c7"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L17">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1b69/4E16/11E0/670c08b36074"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L45">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1bb8/4E16/11E0/670c08ba7389"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L46">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1bb9/4E16/11E0/670c08ba24c"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L47">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1bba/4E16/11E0/670c08ba4d5f"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L48">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1bbb/4E16/11E0/670c08ba83"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L42">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1bb4/4E16/11E0/670c08ba14bc"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L43">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1bb5/4E16/11E0/670c08ba13d2"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L44">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1bb6/4E16/11E0/670c08ba4e33"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L37">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1bae/4E16/11E0/670c08ba2ffc"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L38">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1baf/4E16/11E0/670c08ba1764"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L39">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1bb0/4E16/11E0/670c08ba1620"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L40">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1bb1/4E16/11E0/670c08ba5803"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L34">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1baa/4E16/11E0/670c08ba6b00"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L35">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1bab/4E16/11E0/670c08ba1755"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L36">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1bac/4E16/11E0/670c08ba2a1c"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L49">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1bbf/4E16/11E0/670c09217e46"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L50">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1bc1/4E16/11E0/670c093f6360"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L51">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1bc5/4E16/11E0/670c09842d98"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L52">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1bc7/4E16/11E0/670c099543e0"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L53">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1bca/4E16/11E0/670c09c4693d"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L54">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1bcb/4E16/11E0/670c09c454a0"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L55">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1bcd/4E16/11E0/670c09d37479"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L56">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1bce/4E16/11E0/670c09d36a13"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<!-- _L1, _L2, _L3, _L4 = (map Operator <<1>>)(_null, _null, _null, _null); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L1"/>
+								<VariableRef name="_L2"/>
+								<VariableRef name="_L3"/>
+								<VariableRef name="_L4"/>
+							</lefts>
+							<right>
+								<!-- (map Operator <<1>>)(_null, _null, _null, _null) -->
+								<CallExpression>
+									<operator>
+										<IteratorOp name="1" iterator="map">
+											<operator>
+												<OpCall name="35">
+													<operator>
+														<OperatorRef name="Operator"/>
+													</operator>
+												</OpCall>
+											</operator>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+										</IteratorOp>
+									</operator>
+									<callParameters>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+									</callParameters>
+								</CallExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/64/58E6/A10C/60d07d9b37dc"/>
+							</pragmas>
+						</Equation>
+						<!-- _L5, _L6, _L7, _L8 = (mapi Operator <<1>>)(_null, _null, _null); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L5"/>
+								<VariableRef name="_L6"/>
+								<VariableRef name="_L7"/>
+								<VariableRef name="_L8"/>
+							</lefts>
+							<right>
+								<!-- (mapi Operator <<1>>)(_null, _null, _null) -->
+								<CallExpression>
+									<operator>
+										<IteratorOp name="38" iterator="mapi">
+											<operator>
+												<OpCall name="38">
+													<operator>
+														<OperatorRef name="Operator"/>
+													</operator>
+												</OpCall>
+											</operator>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+										</IteratorOp>
+									</operator>
+									<callParameters>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+									</callParameters>
+								</CallExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/1b11/4E16/11E0/670c08a27f75"/>
+							</pragmas>
+						</Equation>
+						<!-- _L49, _L10, _L11, _L12 = (mapw Operator <<1>> if _null default (_null, _null, _nu... -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L49"/>
+								<VariableRef name="_L10"/>
+								<VariableRef name="_L11"/>
+								<VariableRef name="_L12"/>
+							</lefts>
+							<right>
+								<!-- (mapw Operator <<1>> if _null default (_null, _null, _null))(_null, _null, _null,... -->
+								<CallExpression>
+									<operator>
+										<PartialIteratorOp name="5" iterator="mapw">
+											<operator>
+												<OpCall name="61">
+													<operator>
+														<OperatorRef name="Operator"/>
+													</operator>
+												</OpCall>
+											</operator>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+											<if>
+												<IdExpression>
+													<path>
+														<NullRef/>
+													</path>
+												</IdExpression>
+											</if>
+											<default>
+												<ListExpression>
+													<items>
+														<IdExpression>
+															<path>
+																<NullRef/>
+															</path>
+														</IdExpression>
+														<IdExpression>
+															<path>
+																<NullRef/>
+															</path>
+														</IdExpression>
+														<IdExpression>
+															<path>
+																<NullRef/>
+															</path>
+														</IdExpression>
+													</items>
+												</ListExpression>
+											</default>
+										</PartialIteratorOp>
+									</operator>
+									<callParameters>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+									</callParameters>
+								</CallExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/1b24/4E16/11E0/670c08a42ea2"/>
+							</pragmas>
+						</Equation>
+						<!-- _L50, _L14, _L15, _L16 = (mapwi Operator <<1>> if _null default (_null, _null, _n... -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L50"/>
+								<VariableRef name="_L14"/>
+								<VariableRef name="_L15"/>
+								<VariableRef name="_L16"/>
+							</lefts>
+							<right>
+								<!-- (mapwi Operator <<1>> if _null default (_null, _null, _null))(_null, _null, _null... -->
+								<CallExpression>
+									<operator>
+										<PartialIteratorOp name="7" iterator="mapwi">
+											<operator>
+												<OpCall name="62">
+													<operator>
+														<OperatorRef name="Operator"/>
+													</operator>
+												</OpCall>
+											</operator>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+											<if>
+												<IdExpression>
+													<path>
+														<NullRef/>
+													</path>
+												</IdExpression>
+											</if>
+											<default>
+												<ListExpression>
+													<items>
+														<IdExpression>
+															<path>
+																<NullRef/>
+															</path>
+														</IdExpression>
+														<IdExpression>
+															<path>
+																<NullRef/>
+															</path>
+														</IdExpression>
+														<IdExpression>
+															<path>
+																<NullRef/>
+															</path>
+														</IdExpression>
+													</items>
+												</ListExpression>
+											</default>
+										</PartialIteratorOp>
+									</operator>
+									<callParameters>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+									</callParameters>
+								</CallExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/1b37/4E16/11E0/670c08a75413"/>
+							</pragmas>
+						</Equation>
+						<!-- _L51, _L17 = (foldw Operator <<1>> if _null)(_null, _null, _null, _null); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L51"/>
+								<VariableRef name="_L17"/>
+							</lefts>
+							<right>
+								<!-- (foldw Operator <<1>> if _null)(_null, _null, _null, _null) -->
+								<CallExpression>
+									<operator>
+										<PartialIteratorOp name="15" iterator="foldw">
+											<operator>
+												<OpCall name="55">
+													<operator>
+														<OperatorRef name="Operator"/>
+													</operator>
+												</OpCall>
+											</operator>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+											<if>
+												<IdExpression>
+													<path>
+														<NullRef/>
+													</path>
+												</IdExpression>
+											</if>
+										</PartialIteratorOp>
+									</operator>
+									<callParameters>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+									</callParameters>
+								</CallExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/1b68/4E16/11E0/670c08b322c3"/>
+							</pragmas>
+						</Equation>
+						<!-- _L21, _L22, _L23, _L24 = (fold Operator <<1>>)(_null, _null, _null, _null); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L21"/>
+								<VariableRef name="_L22"/>
+								<VariableRef name="_L23"/>
+								<VariableRef name="_L24"/>
+							</lefts>
+							<right>
+								<!-- (fold Operator <<1>>)(_null, _null, _null, _null) -->
+								<CallExpression>
+									<operator>
+										<IteratorOp name="13" iterator="fold">
+											<operator>
+												<OpCall name="36">
+													<operator>
+														<OperatorRef name="Operator"/>
+													</operator>
+												</OpCall>
+											</operator>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+										</IteratorOp>
+									</operator>
+									<callParameters>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+									</callParameters>
+								</CallExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/1b6d/4E16/11E0/670c08b314ae"/>
+							</pragmas>
+						</Equation>
+						<!-- _L52, _L25 = (foldwi Operator <<1>> if _null)(_null, _null, _null); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L52"/>
+								<VariableRef name="_L25"/>
+							</lefts>
+							<right>
+								<!-- (foldwi Operator <<1>> if _null)(_null, _null, _null) -->
+								<CallExpression>
+									<operator>
+										<PartialIteratorOp name="11" iterator="foldwi">
+											<operator>
+												<OpCall name="56">
+													<operator>
+														<OperatorRef name="Operator"/>
+													</operator>
+												</OpCall>
+											</operator>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+											<if>
+												<IdExpression>
+													<path>
+														<NullRef/>
+													</path>
+												</IdExpression>
+											</if>
+										</PartialIteratorOp>
+									</operator>
+									<callParameters>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+									</callParameters>
+								</CallExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/1b72/4E16/11E0/670c08b3711d"/>
+							</pragmas>
+						</Equation>
+						<!-- _L29, _L30, _L31, _L32 = (foldi Operator <<1>>)(_null, _null, _null); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L29"/>
+								<VariableRef name="_L30"/>
+								<VariableRef name="_L31"/>
+								<VariableRef name="_L32"/>
+							</lefts>
+							<right>
+								<!-- (foldi Operator <<1>>)(_null, _null, _null) -->
+								<CallExpression>
+									<operator>
+										<IteratorOp name="9" iterator="foldi">
+											<operator>
+												<OpCall name="39">
+													<operator>
+														<OperatorRef name="Operator"/>
+													</operator>
+												</OpCall>
+											</operator>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+										</IteratorOp>
+									</operator>
+									<callParameters>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+									</callParameters>
+								</CallExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/1b77/4E16/11E0/670c08b321bb"/>
+							</pragmas>
+						</Equation>
+						<!-- _L53, _L54, _L34, _L35, _L36 = (mapfoldw 3 Operator <<1>> if _null default (_null... -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L53"/>
+								<VariableRef name="_L54"/>
+								<VariableRef name="_L34"/>
+								<VariableRef name="_L35"/>
+								<VariableRef name="_L36"/>
+							</lefts>
+							<right>
+								<!-- (mapfoldw 3 Operator <<1>> if _null default (_null, _null))(_null, _null, _null, ... -->
+								<CallExpression>
+									<operator>
+										<PartialIteratorOp name="23" iterator="mapfoldw" accumulatorCount="3">
+											<operator>
+												<OpCall name="65">
+													<operator>
+														<OperatorRef name="Operator"/>
+													</operator>
+												</OpCall>
+											</operator>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+											<if>
+												<IdExpression>
+													<path>
+														<NullRef/>
+													</path>
+												</IdExpression>
+											</if>
+											<default>
+												<ListExpression>
+													<items>
+														<IdExpression>
+															<path>
+																<NullRef/>
+															</path>
+														</IdExpression>
+														<IdExpression>
+															<path>
+																<NullRef/>
+															</path>
+														</IdExpression>
+													</items>
+												</ListExpression>
+											</default>
+										</PartialIteratorOp>
+									</operator>
+									<callParameters>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+									</callParameters>
+								</CallExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/1ba8/4E16/11E0/670c08ba4d6f"/>
+							</pragmas>
+						</Equation>
+						<!-- _L37, _L38, _L39, _L40 = (mapfoldi 3 Operator <<1>>)(_null, _null, _null); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L37"/>
+								<VariableRef name="_L38"/>
+								<VariableRef name="_L39"/>
+								<VariableRef name="_L40"/>
+							</lefts>
+							<right>
+								<!-- (mapfoldi 3 Operator <<1>>)(_null, _null, _null) -->
+								<CallExpression>
+									<operator>
+										<IteratorOp name="21" iterator="mapfoldi" accumulatorCount="3">
+											<operator>
+												<OpCall name="64">
+													<operator>
+														<OperatorRef name="Operator"/>
+													</operator>
+												</OpCall>
+											</operator>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+										</IteratorOp>
+									</operator>
+									<callParameters>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+									</callParameters>
+								</CallExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/1bad/4E16/11E0/670c08ba6c5f"/>
+							</pragmas>
+						</Equation>
+						<!-- _L55, _L56, _L42, _L43, _L44 = (mapfoldwi 3 Operator <<1>> if _null default (_nul... -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L55"/>
+								<VariableRef name="_L56"/>
+								<VariableRef name="_L42"/>
+								<VariableRef name="_L43"/>
+								<VariableRef name="_L44"/>
+							</lefts>
+							<right>
+								<!-- (mapfoldwi 3 Operator <<1>> if _null default (_null, _null))(_null, _null, _null) -->
+								<CallExpression>
+									<operator>
+										<PartialIteratorOp name="19" iterator="mapfoldwi" accumulatorCount="3">
+											<operator>
+												<OpCall name="66">
+													<operator>
+														<OperatorRef name="Operator"/>
+													</operator>
+												</OpCall>
+											</operator>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+											<if>
+												<IdExpression>
+													<path>
+														<NullRef/>
+													</path>
+												</IdExpression>
+											</if>
+											<default>
+												<ListExpression>
+													<items>
+														<IdExpression>
+															<path>
+																<NullRef/>
+															</path>
+														</IdExpression>
+														<IdExpression>
+															<path>
+																<NullRef/>
+															</path>
+														</IdExpression>
+													</items>
+												</ListExpression>
+											</default>
+										</PartialIteratorOp>
+									</operator>
+									<callParameters>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+									</callParameters>
+								</CallExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/1bb2/4E16/11E0/670c08ba142"/>
+							</pragmas>
+						</Equation>
+						<!-- _L45, _L46, _L47, _L48 = (mapfold 3 Operator <<1>>)(_null, _null, _null, _null); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L45"/>
+								<VariableRef name="_L46"/>
+								<VariableRef name="_L47"/>
+								<VariableRef name="_L48"/>
+							</lefts>
+							<right>
+								<!-- (mapfold 3 Operator <<1>>)(_null, _null, _null, _null) -->
+								<CallExpression>
+									<operator>
+										<IteratorOp name="17" iterator="mapfold" accumulatorCount="3">
+											<operator>
+												<OpCall name="37">
+													<operator>
+														<OperatorRef name="Operator"/>
+													</operator>
+												</OpCall>
+											</operator>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+										</IteratorOp>
+									</operator>
+									<callParameters>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+									</callParameters>
+								</CallExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/1bb7/4E16/11E0/670c08ba1f96"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/62/58E6/A10C/60d07d946127" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Call_1" landscape="true" format="A4 (210 297)" oid="!ed/63/58E6/A10C/60d07d94419f">
+									<presentationElements>
+										<EquationGE presentable="!ed/64/58E6/A10C/60d07d9b37dc">
+											<position>
+												<Point x="979" y="953"/>
+											</position>
+											<size>
+												<Size width="3561" height="3164"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/1b11/4E16/11E0/670c08a27f75">
+											<position>
+												<Point x="6324" y="953"/>
+											</position>
+											<size>
+												<Size width="3572" height="3175"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/1b24/4E16/11E0/670c08a42ea2">
+											<position>
+												<Point x="11668" y="953"/>
+											</position>
+											<size>
+												<Size width="3572" height="3175"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/1b37/4E16/11E0/670c08a75413">
+											<position>
+												<Point x="17013" y="953"/>
+											</position>
+											<size>
+												<Size width="3572" height="3175"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/1b68/4E16/11E0/670c08b322c3">
+											<position>
+												<Point x="11668" y="5239"/>
+											</position>
+											<size>
+												<Size width="3572" height="3175"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/1b6d/4E16/11E0/670c08b314ae">
+											<position>
+												<Point x="979" y="5239"/>
+											</position>
+											<size>
+												<Size width="3572" height="3175"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/1b72/4E16/11E0/670c08b3711d">
+											<position>
+												<Point x="17013" y="5239"/>
+											</position>
+											<size>
+												<Size width="3572" height="3175"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/1b77/4E16/11E0/670c08b321bb">
+											<position>
+												<Point x="6324" y="5239"/>
+											</position>
+											<size>
+												<Size width="3571" height="3175"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/1ba8/4E16/11E0/670c08ba4d6f">
+											<position>
+												<Point x="11668" y="9525"/>
+											</position>
+											<size>
+												<Size width="3572" height="3175"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/1bad/4E16/11E0/670c08ba6c5f">
+											<position>
+												<Point x="6324" y="9525"/>
+											</position>
+											<size>
+												<Size width="3571" height="3175"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/1bb2/4E16/11E0/670c08ba142">
+											<position>
+												<Point x="17013" y="9525"/>
+											</position>
+											<size>
+												<Size width="3572" height="3175"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/1bb7/4E16/11E0/670c08ba1f96">
+											<position>
+												<Point x="979" y="9525"/>
+											</position>
+											<size>
+												<Size width="3572" height="3175"/>
+											</size>
+										</EquationGE>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/14/58E6/A10C/60d07d697364" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/15/58E6/A10C/60d07d695099" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/16/58E6/A10C/60d07d69543a" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/17/58E6/A10C/60d07d6948b" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>
