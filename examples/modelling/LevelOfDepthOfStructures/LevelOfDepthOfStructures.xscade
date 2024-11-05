@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="LevelOfDepthOfStructures">
+			<declarations>
+				<Type name="Struct_L1">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="level2">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="Struct_L2"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/3e6/6AA6/368/63861125532c"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/3e5/6AA6/368/638611106c7c"/>
+					</pragmas>
+				</Type>
+				<Type name="Struct_L2">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="level3">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="Struct_L3"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/3ee/6AA6/368/638611316db2"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/3ed/6AA6/368/638611311c9f"/>
+					</pragmas>
+				</Type>
+				<Type name="Struct_L3">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="level4">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="Struct_L4"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/3f6/6AA6/368/638611321167"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/3f5/6AA6/368/638611327192"/>
+					</pragmas>
+				</Type>
+				<Type name="Struct_L4">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="level5">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="Struct_L5"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/3fe/6AA6/368/6386113b3707"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/3fd/6AA6/368/6386113b4444"/>
+					</pragmas>
+				</Type>
+				<Type name="Struct_L5">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="level6">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/42b/6AA6/368/638616e6167"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/42a/6AA6/368/638616e61ca9"/>
+					</pragmas>
+				</Type>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/3e1/6AA6/368/638610fe5a14" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/3e2/6AA6/368/638610fe7598" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/3e3/6AA6/368/638610fe65b3" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/3e4/6AA6/368/638610fe2be3" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

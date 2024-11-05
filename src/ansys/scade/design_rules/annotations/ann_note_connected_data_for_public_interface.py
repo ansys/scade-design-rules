@@ -82,7 +82,6 @@ class AnnNoteConnectedDataForPublicInterface(Rule):
             if parameter
             else ''
         )
-        print('parameter', parameter)
         self.note_type = get_note_type(model, self.connected_data)
         if not self.note_type:
             message = "'%s': unknown note type" % self.connected_data

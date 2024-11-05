@@ -96,7 +96,6 @@ class NameStructureFoldAccumulator(Rule):
         parameter = (
             parameter.replace('strict=true', '-s ').replace('strict=false', '') if parameter else ''
         )
-        print('parameter', parameter)
         parser = ParameterParser(prog='')
         help_in = 'Regular expression for the name of the accumulator inputs'
         parser.add_argument(

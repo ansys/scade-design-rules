@@ -1,0 +1,228 @@
+Notes-Types { Esterel-Technologies }  DEFINITIONS ::=
+
+BEGIN
+
+SDD_TopLevel ::=
+    SEQUENCE OF {
+    SEQUENCE {
+       annot_object OID,
+       name STRING,
+       information {
+	     Description TEXT {
+            NT_DEFAULT_VALUE "-",
+            NT_FIELD_HEIGHT 3,
+            NT_FIELD_WIDTH  60},
+         Constraints TEXT {
+            NT_DEFAULT_VALUE "-",
+            NT_FIELD_HEIGHT 3,
+            NT_FIELD_WIDTH  60},
+		 Min_Value TEXT {
+            NT_DEFAULT_VALUE "-",
+            NT_FIELD_HEIGHT 1,
+            NT_FIELD_WIDTH  20},
+         Max_Value TEXT {
+            NT_DEFAULT_VALUE "-",
+            NT_FIELD_HEIGHT 1,
+            NT_FIELD_WIDTH  20},
+		 Unit_SI TEXT {
+            NT_DEFAULT_VALUE "-",
+            NT_FIELD_HEIGHT 1,
+            NT_FIELD_WIDTH  20}
+} } }
+
+OperatorDescription ::=
+    SEQUENCE OF {
+    SEQUENCE {
+       annot_object OID,
+       name STRING,
+       information {
+	     Purpose TEXT {
+            NT_DEFAULT_VALUE "",
+            NT_FIELD_HEIGHT 5,
+            NT_FIELD_WIDTH  80},
+         Algorithm TEXT {
+            NT_DEFAULT_VALUE "",
+            NT_FIELD_HEIGHT 8,
+            NT_FIELD_WIDTH  80},
+} } }
+
+ConstantUsage ::=
+    SEQUENCE OF {
+    SEQUENCE {
+       annot_object OID,
+       name STRING,
+       information {
+	     isExternallyUsed_TrueFalse BOOLEAN {
+            NT_DEFAULT_VALUE F,
+            NT_FIELD_HEIGHT 1,
+            NT_FIELD_WIDTH  20},
+} } }
+
+
+
+-- #################################
+-- Graphical information
+-- #################################
+
+-- #################################
+-- Graphical informations
+-- #################################
+
+-- #################################
+-- Graphical informations in frame
+-- #################################
+
+
+-- #################################
+-- Graphical informations : may be displayed or not (View/Display notes.
+-- #################################
+
+
+END
+
+-- #################################
+-- End of the Definition of the Types of Notes
+-- #################################
+
+-- ######################################################################
+-- ##
+-- ##  DEFINITION OF DIFFERENT CATEGORIES OF NOTE TYPES
+-- ##
+-- ######################################################################
+
+
+Annotation-Rules { Esterel-Technologies }  DEFINITIONS ::=
+BEGIN
+
+-- #################################
+-- ## Categories associated to entities out from net views
+-- #################################
+
+    package ::= {
+    }
+
+-- #################################
+    constant ::= {
+    	{SDD_TopLevel F 0 1},
+		{ConstantUsage T 1 1}
+    }
+
+-- #################################
+    sensor ::= {
+    }
+
+-- #################################
+
+    local ::= {
+        {SDD_TopLevel F 0 1}
+    }
+
+-- #################################
+    named_type ::= {
+        {SDD_TopLevel F 0 1}
+    }
+
+-- #################################
+
+    type_element ::= {
+		{SDD_TopLevel F 0 1}
+    }
+
+-- #################################
+    output ::= {
+        {SDD_TopLevel F 0 1}
+   }
+
+-- #################################
+    input ::= {
+        {SDD_TopLevel F 0 1}
+   }
+
+-- #################################
+    hidden ::= {
+        {SDD_TopLevel F 0 1}
+    }
+
+-- #################################
+    local ::= {
+    }
+
+-- #################################
+    probe ::= {
+    }
+
+-- #################################
+    signal ::= {
+    }
+
+-- #################################
+    operator ::= {
+		{OperatorDescription F 1 1}
+    }
+
+-- #################################
+-- ## Categories associated to entities of the net views
+-- #################################
+
+-- #################################
+    assertion ::= {
+    }
+
+-- #################################
+    ref_ident ::= {
+    }
+
+-- #################################
+    literal ::= {
+    }
+
+-- #################################
+    predef_opr ::= {
+    }
+
+-- #################################
+    ref_operator ::= {
+    }
+-- #################################
+    terminator ::= {
+    }
+-- #################################
+    state_machine ::= {
+    }
+-- #################################
+    state ::= {
+    }
+-- #################################
+    transition ::= {
+    }
+-- #################################
+    activate_block ::= {
+    }
+-- #################################
+    branch ::= {
+    }
+-- #################################
+    action ::= {
+    }
+-- #################################
+    net_diagram ::= {
+    }
+-- #################################
+    text_diagram ::= {
+    }
+-- #################################
+    tree_diagram ::= {
+    }
+-- #################################
+    equation_set ::= {
+    }
+
+END
+
+
+-- #################################
+-- END OF DEFINITION OF CATEGORIES OF NOTE TYPES
+-- #################################
+
+
+-- ######################################################################

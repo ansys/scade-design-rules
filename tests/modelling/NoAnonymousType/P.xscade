@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="P">
+			<declarations>
+				<Type name="Defined">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="label1Ok">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="Struct"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/8d/2A76/CAE4/65a7adc158b"/>
+									</pragmas>
+								</Field>
+								<Field name="label2Ok">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="Array"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/a0/2A76/CAE4/65a7addf4f0a"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/77/2A76/CAE4/65a7acbf1743"/>
+					</pragmas>
+				</Type>
+				<Type name="AnonymousStruct">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="label1Nok">
+									<type>
+										<Struct>
+											<fields>
+												<Field name="a">
+													<type>
+														<NamedType>
+															<type>
+																<TypeRef name="bool"/>
+															</type>
+														</NamedType>
+													</type>
+													<pragmas>
+														<ed:Field oid="!ed/c5/2A76/CAE4/65a7aef31d4d"/>
+													</pragmas>
+												</Field>
+												<Field name="b">
+													<type>
+														<NamedType>
+															<type>
+																<TypeRef name="float64"/>
+															</type>
+														</NamedType>
+													</type>
+													<pragmas>
+														<ed:Field oid="!ed/c6/2A76/CAE4/65a7aef3d1f"/>
+													</pragmas>
+												</Field>
+											</fields>
+										</Struct>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/bc/2A76/CAE4/65a7ae8e7836"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/78/2A76/CAE4/65a7acd13b8c"/>
+					</pragmas>
+				</Type>
+				<Type name="AnonymousArray">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="label1Nok">
+									<type>
+										<Table>
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="bool"/>
+													</type>
+												</NamedType>
+											</type>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+										</Table>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/b3/2A76/CAE4/65a7ae3a1623"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/79/2A76/CAE4/65a7acd97eb2"/>
+					</pragmas>
+				</Type>
+				<Type name="Struct">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="label1Ok">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/7b/2A76/CAE4/65a7ad9e1a0b"/>
+									</pragmas>
+								</Field>
+								<Field name="label2Ok">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/84/2A76/CAE4/65a7ada54c01"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/7a/2A76/CAE4/65a7acf07632"/>
+					</pragmas>
+				</Type>
+				<Type name="Array">
+					<definition>
+						<Table>
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<size>
+								<ConstValue value="1"/>
+							</size>
+						</Table>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/97/2A76/CAE4/65a7adcc13d7"/>
+					</pragmas>
+				</Type>
+				<Operator kind="node" name="Root">
+					<inputs>
+						<Variable name="ok">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1a/2C9/5154/659d016c1e"/>
+							</pragmas>
+						</Variable>
+						<Variable name="nokStruct">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="AnonymousStruct"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/d0/2A76/CAE4/65a7b289438e"/>
+							</pragmas>
+						</Variable>
+						<Variable name="nokNull">
+							<type>
+								<NamedType>
+									<type>
+										<NullRef/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/23/2C9/5154/659d017d2d77" hidden="true"/>
+							</pragmas>
+						</Variable>
+						<Variable name="okDefined">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Defined"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/da/2A76/CAE4/65a7b2a81a5f" hidden="true"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="nokArray">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="2"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/24/2C9/5154/659d018976bd"/>
+							</pragmas>
+						</Variable>
+						<Variable name="nokTable">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="AnonymousArray"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/e4/2A76/CAE4/65a7b2ae1275"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<locals>
+						<Variable name="_L1">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="2"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/142/2C9/5154/659e56abd45"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L2">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="2"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/72/2A76/CAE4/65a7aa037ebb"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<!-- _L1 = Call(_null, _null); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L1"/>
+							</lefts>
+							<right>
+								<!-- Call(_null, _null) -->
+								<CallExpression>
+									<operator>
+										<OpCall name="1">
+											<operator>
+												<OperatorRef name="Call"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<callParameters>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+									</callParameters>
+								</CallExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/141/2C9/5154/659e56ab624e"/>
+							</pragmas>
+						</Equation>
+						<!-- _L2 = Imported(_null, _null); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L2"/>
+							</lefts>
+							<right>
+								<!-- Imported(_null, _null) -->
+								<CallExpression>
+									<operator>
+										<OpCall name="1">
+											<operator>
+												<OperatorRef name="Imported"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<callParameters>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+									</callParameters>
+								</CallExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/71/2A76/CAE4/65a7aa0348a5"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/18/2C9/5154/659cfeae20ee" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Root" landscape="true" format="A4 (210 297)" oid="!ed/19/2C9/5154/659cfeae5b6f">
+									<presentationElements>
+										<EquationGE presentable="!ed/141/2C9/5154/659e56ab624e">
+											<position>
+												<Point x="2090" y="1376"/>
+											</position>
+											<size>
+												<Size width="1773" height="1402"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/71/2A76/CAE4/65a7aa0348a5">
+											<position>
+												<Point x="2090" y="3889"/>
+											</position>
+											<size>
+												<Size width="1773" height="1403"/>
+											</size>
+										</EquationGE>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="Size">
+					<sizeParameters>
+						<SizeParameter name="N">
+							<pragmas>
+								<ed:SizeParameter oid="!ed/2f/2C9/5154/659d01a44d62"/>
+							</pragmas>
+						</SizeParameter>
+					</sizeParameters>
+					<inputs>
+						<Variable name="na">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/31/2C9/5154/659d01b82646"/>
+							</pragmas>
+						</Variable>
+						<Variable name="naNull">
+							<type>
+								<NamedType>
+									<type>
+										<NullRef/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/3a/2C9/5154/659d01c84e81" hidden="true"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="naArray">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="float32"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="N"/>
+											</path>
+										</IdExpression>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/3b/2C9/5154/659d01d31417"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<pragmas>
+						<ed:Operator oid="!ed/2d/2C9/5154/659d01995266" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Size" landscape="true" format="A4 (210 297)" oid="!ed/2e/2C9/5154/659d0199798e"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="Polymorphic">
+					<inputs>
+						<Variable name="na">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/5a/2C9/5154/659d01f3498e"/>
+							</pragmas>
+						</Variable>
+						<Variable name="naT">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="'T"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/5b/2C9/5154/659d01f3330d"/>
+							</pragmas>
+						</Variable>
+						<Variable name="naNull">
+							<type>
+								<NamedType>
+									<type>
+										<NullRef/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/59/2C9/5154/659d01f31b68" hidden="true"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<pragmas>
+						<ed:Operator oid="!ed/56/2C9/5154/659d01f33e0a" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Polymorphic" landscape="true" format="A4 (210 297)" oid="!ed/57/2C9/5154/659d01f37ceb"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="Call">
+					<inputs>
+						<Variable name="na">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/12c/2C9/5154/659e569a643b"/>
+							</pragmas>
+						</Variable>
+						<Variable name="naNull">
+							<type>
+								<NamedType>
+									<type>
+										<NullRef/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/132/2C9/5154/659e569a18ee" hidden="true"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="naArray">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="2"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/140/2C9/5154/659e569a17ec"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<pragmas>
+						<ed:Operator oid="!ed/125/2C9/5154/659e56865cba" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Call" landscape="true" format="A4 (210 297)" oid="!ed/126/2C9/5154/659e56866281"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="Lib">
+					<inputs>
+						<Variable name="ok">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/16c/2C9/5154/659e576a7ca6"/>
+							</pragmas>
+						</Variable>
+						<Variable name="nokNull">
+							<type>
+								<NamedType>
+									<type>
+										<NullRef/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/16a/2C9/5154/659e576a205c" hidden="true"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="nokArray">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="2"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/16b/2C9/5154/659e576a7b1"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<locals>
+						<Variable name="_L1">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="2"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/169/2C9/5154/659e576a46eb"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<!-- _L1 = Call(_null, _null); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L1"/>
+							</lefts>
+							<right>
+								<!-- Call(_null, _null) -->
+								<CallExpression>
+									<operator>
+										<OpCall name="1">
+											<operator>
+												<OperatorRef name="Call"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<callParameters>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+									</callParameters>
+								</CallExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/167/2C9/5154/659e576a3b85"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/166/2C9/5154/659e576a44d8" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Lib" landscape="true" format="A4 (210 297)" oid="!ed/168/2C9/5154/659e576a2d10">
+									<presentationElements>
+										<EquationGE presentable="!ed/167/2C9/5154/659e576a3b85">
+											<position>
+												<Point x="2090" y="1376"/>
+											</position>
+											<size>
+												<Size width="1773" height="1402"/>
+											</size>
+										</EquationGE>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" external="imported" name="Imported">
+					<inputs>
+						<Variable name="ok">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/182/2C9/5154/659e57ed13bd"/>
+							</pragmas>
+						</Variable>
+						<Variable name="nokNull">
+							<type>
+								<NamedType>
+									<type>
+										<NullRef/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/180/2C9/5154/659e57ed18b3" hidden="true"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="nokArray">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="2"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/181/2C9/5154/659e57ed7bcf"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<pragmas>
+						<ed:Operator oid="!ed/17e/2C9/5154/659e57ed4ff5"/>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/14/2C9/5154/659cfea56989" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/15/2C9/5154/659cfea52ee0" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/16/2C9/5154/659cfea58c1" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/17/2C9/5154/659cfea54461" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

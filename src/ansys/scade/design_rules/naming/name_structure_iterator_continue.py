@@ -74,7 +74,6 @@ class NameStructureIteratorContinue(Rule):
     def on_start(self, model: suite.Model, parameter: str) -> int:
         """Get the rule's parameters."""
         parameter = parameter.replace('continue=', '-c ') if parameter else ''
-        print('parameter', parameter)
         parser = ParameterParser(prog='')
         parser.add_argument(
             '-c',

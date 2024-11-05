@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="InitializationOfArrays">
+			<declarations>
+				<Constant name="CONST_INCORRECT1_c">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="Array_t"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<!-- [0, 0, ZERO_c, 0, 0] -->
+						<DataArrayOp>
+							<data>
+								<ConstValue value="0"/>
+								<ConstValue value="0"/>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="ZERO_c"/>
+									</path>
+								</IdExpression>
+								<ConstValue value="0"/>
+								<ConstValue value="0"/>
+							</data>
+						</DataArrayOp>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/45e/6AA6/368/638619b44703"/>
+					</pragmas>
+				</Constant>
+				<Constant name="CONST_CORRECT1_c">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="Array_t"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<!-- 0 ^ 5 -->
+						<ScalarToVectorOp>
+							<flow>
+								<ListExpression>
+									<items>
+										<ConstValue value="0"/>
+									</items>
+								</ListExpression>
+							</flow>
+							<size>
+								<ConstValue value="5"/>
+							</size>
+						</ScalarToVectorOp>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/45f/6AA6/368/638619b65b78"/>
+					</pragmas>
+				</Constant>
+				<Constant name="FIVE_c">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int16"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<ConstValue value="5"/>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/4a5/6AA6/368/63861d83117f"/>
+					</pragmas>
+				</Constant>
+				<Constant name="FIVE2_c">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int16"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="FIVE_c"/>
+							</path>
+						</IdExpression>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/4d3/6AA6/368/63861f667e7e"/>
+					</pragmas>
+				</Constant>
+				<Constant name="CONST_CORRECT2_c">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="Array_t"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<!-- [FIVE2_c, 0, 0, 0, 0] -->
+						<DataArrayOp>
+							<data>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="FIVE2_c"/>
+									</path>
+								</IdExpression>
+								<ConstValue value="0"/>
+								<ConstValue value="0"/>
+								<ConstValue value="0"/>
+								<ConstValue value="0"/>
+							</data>
+						</DataArrayOp>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/52d/6AA6/368/638622b15e57"/>
+					</pragmas>
+				</Constant>
+				<Constant name="CONST_INCORRECT2_c">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="Array_t"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<!-- [0, 0, 0, 0, 0] -->
+						<DataArrayOp>
+							<data>
+								<ConstValue value="0"/>
+								<ConstValue value="0"/>
+								<ConstValue value="0"/>
+								<ConstValue value="0"/>
+								<ConstValue value="0"/>
+							</data>
+						</DataArrayOp>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/564/6AA6/368/6386250b697e"/>
+					</pragmas>
+				</Constant>
+				<Constant name="ZERO_c">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int16"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<ConstValue value="0"/>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/572/6AA6/368/63862510314c"/>
+					</pragmas>
+				</Constant>
+				<Constant name="CONST_CORRECT3_c">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="Array_t"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<!-- [1, 0, 0, 0, 0] -->
+						<DataArrayOp>
+							<data>
+								<ConstValue value="1"/>
+								<ConstValue value="0"/>
+								<ConstValue value="0"/>
+								<ConstValue value="0"/>
+								<ConstValue value="0"/>
+							</data>
+						</DataArrayOp>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/5b1/6AA6/368/638625302ade"/>
+					</pragmas>
+				</Constant>
+				<Constant name="CONST_INCORRECT3_c">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="StructArray_t"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<!-- [{label1 : false, label2 : 0}, {label1 : false, label2 : 0}, {label1 : false, lab... -->
+						<DataArrayOp>
+							<data>
+								<!-- {label1 : false, label2 : 0} -->
+								<DataStructOp>
+									<data>
+										<LabelledExpression label="label1">
+											<flow>
+												<ConstValue value="false"/>
+											</flow>
+										</LabelledExpression>
+										<LabelledExpression label="label2">
+											<flow>
+												<ConstValue value="0"/>
+											</flow>
+										</LabelledExpression>
+									</data>
+								</DataStructOp>
+								<!-- {label1 : false, label2 : 0} -->
+								<DataStructOp>
+									<data>
+										<LabelledExpression label="label1">
+											<flow>
+												<ConstValue value="false"/>
+											</flow>
+										</LabelledExpression>
+										<LabelledExpression label="label2">
+											<flow>
+												<ConstValue value="0"/>
+											</flow>
+										</LabelledExpression>
+									</data>
+								</DataStructOp>
+								<!-- {label1 : false, label2 : 0} -->
+								<DataStructOp>
+									<data>
+										<LabelledExpression label="label1">
+											<flow>
+												<ConstValue value="false"/>
+											</flow>
+										</LabelledExpression>
+										<LabelledExpression label="label2">
+											<flow>
+												<ConstValue value="0"/>
+											</flow>
+										</LabelledExpression>
+									</data>
+								</DataStructOp>
+							</data>
+						</DataArrayOp>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/13e/5B83/490C/6387137962d6"/>
+					</pragmas>
+				</Constant>
+				<Constant name="CONST_INCORRECT4_c">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="Array_t"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<!-- [_null, _null, _null, _null, _null] -->
+						<DataArrayOp>
+							<data>
+								<IdExpression>
+									<path>
+										<NullRef/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<NullRef/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<NullRef/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<NullRef/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<NullRef/>
+									</path>
+								</IdExpression>
+							</data>
+						</DataArrayOp>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/148/5B83/490C/638719e24047"/>
+					</pragmas>
+				</Constant>
+				<Type name="Array_t">
+					<definition>
+						<Table>
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<size>
+								<ConstValue value="5"/>
+							</size>
+						</Table>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/44d/6AA6/368/638619a377eb"/>
+					</pragmas>
+				</Type>
+				<Type name="Struct_t">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="label1">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/11a/5B83/490C/6387134f2db8"/>
+									</pragmas>
+								</Field>
+								<Field name="label2">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/123/5B83/490C/6387135b5a96"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/119/5B83/490C/6387134542ad"/>
+					</pragmas>
+				</Type>
+				<Type name="StructArray_t">
+					<definition>
+						<Table>
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Struct_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<size>
+								<ConstValue value="3"/>
+							</size>
+						</Table>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/12c/5B83/490C/63871365cff"/>
+					</pragmas>
+				</Type>
+				<Operator kind="function" name="Operator1">
+					<locals>
+						<Variable name="_L1">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int16"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="3"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/47d/6AA6/368/638619e41add"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L2">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="3"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/493/6AA6/368/638619f3469d"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<!-- _L1 = [5_i16, FIVE_c, FIVE2_c]; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L1"/>
+							</lefts>
+							<right>
+								<!-- [5_i16, FIVE_c, FIVE2_c] -->
+								<DataArrayOp name="4">
+									<data>
+										<ConstValue value="5_i16"/>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="FIVE_c"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="FIVE2_c"/>
+											</path>
+										</IdExpression>
+									</data>
+								</DataArrayOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/47c/6AA6/368/638619e44217"/>
+							</pragmas>
+						</Equation>
+						<!-- _ = _L1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L1"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/48d/6AA6/368/638619f01597"/>
+							</pragmas>
+						</Equation>
+						<!-- _L2 = 5 ^ 3; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L2"/>
+							</lefts>
+							<right>
+								<!-- 5 ^ 3 -->
+								<ScalarToVectorOp name="1">
+									<flow>
+										<ListExpression>
+											<items>
+												<ConstValue value="5"/>
+											</items>
+										</ListExpression>
+									</flow>
+									<size>
+										<ConstValue value="3"/>
+									</size>
+								</ScalarToVectorOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/492/6AA6/368/638619f33314"/>
+							</pragmas>
+						</Equation>
+						<!-- _ = _L2; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L2"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/4a0/6AA6/368/638619f83ab0"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/47a/6AA6/368/638619de1f87" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Operator1_1" landscape="true" format="A4 (210 297)" oid="!ed/47b/6AA6/368/638619de1538">
+									<presentationElements>
+										<EquationGE kind="OBJ_LIT" presentable="!ed/47c/6AA6/368/638619e44217">
+											<position>
+												<Point x="3704" y="1296"/>
+											</position>
+											<size>
+												<Size width="212" height="317"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/48d/6AA6/368/638619f01597">
+											<position>
+												<Point x="5054" y="1217"/>
+											</position>
+											<size>
+												<Size width="503" height="503"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/47c/6AA6/368/638619e44217" dstEquation="!ed/48d/6AA6/368/638619f01597">
+											<positions>
+												<Point x="3916" y="1455"/>
+												<Point x="4604" y="1455"/>
+												<Point x="4604" y="1455"/>
+												<Point x="5318" y="1455"/>
+											</positions>
+										</Edge>
+										<EquationGE kind="OBJ_LIT" presentable="!ed/492/6AA6/368/638619f33314">
+											<textAreas>
+												<TextArea text="5^3" role="6"/>
+											</textAreas>
+											<position>
+												<Point x="2275" y="2328"/>
+											</position>
+											<size>
+												<Size width="212" height="318"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/4a0/6AA6/368/638619f83ab0">
+											<position>
+												<Point x="3149" y="2223"/>
+											</position>
+											<size>
+												<Size width="502" height="502"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/492/6AA6/368/638619f33314" dstEquation="!ed/4a0/6AA6/368/638619f83ab0">
+											<positions>
+												<Point x="2487" y="2487"/>
+												<Point x="2937" y="2487"/>
+												<Point x="2937" y="2487"/>
+												<Point x="3413" y="2487"/>
+											</positions>
+										</Edge>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/449/6AA6/368/6386198df45" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/44a/6AA6/368/6386198d1115" blockKind="constants" columnsSize="0, 296, 150, 403, 300"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/44b/6AA6/368/6386198d1a1d" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/44c/6AA6/368/6386198d11ca" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

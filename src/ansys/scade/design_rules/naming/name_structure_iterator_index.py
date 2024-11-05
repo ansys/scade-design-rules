@@ -75,7 +75,6 @@ class NameStructureIteratorIndex(Rule):
     def on_start(self, model: suite.Model, parameter: str) -> int:
         """Get the rule's parameters."""
         parameter = parameter.replace('index=', '-i ') if parameter else ''
-        print('parameter', parameter)
         parser = ParameterParser(prog='')
         parser.add_argument('-i', '--index', help='Regular expression for index', required=True)
         options = parser.parse_command(parameter)

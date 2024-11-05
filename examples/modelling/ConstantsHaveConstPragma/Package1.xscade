@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="Package1">
+			<declarations>
+				<Constant name="Constant_correct">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<ConstValue value="0"/>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/81/77DB/2E04/6486d680ea3"/>
+						<kcg:Pragma>
+							C:const
+						</kcg:Pragma>
+					</pragmas>
+				</Constant>
+				<Constant name="Constant_incorrect">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<ConstValue value="0"/>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/82/77DB/2E04/6486d680d9"/>
+					</pragmas>
+				</Constant>
+				<Constant name="ConstantEnum_incorrect">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="Enum_t"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="label1"/>
+							</path>
+						</IdExpression>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/b7/7789/1275C/6564694b7627"/>
+					</pragmas>
+				</Constant>
+				<Constant name="ConstantStruct">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="Struct_t"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<!-- {label1 : false} -->
+						<DataStructOp>
+							<data>
+								<LabelledExpression label="label1">
+									<flow>
+										<ConstValue value="false"/>
+									</flow>
+								</LabelledExpression>
+							</data>
+						</DataStructOp>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/d4/7789/1275C/656469744eb"/>
+					</pragmas>
+				</Constant>
+				<Constant name="ConstantArray">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="Array_t"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<!-- [false] -->
+						<DataArrayOp>
+							<data>
+								<ConstValue value="false"/>
+							</data>
+						</DataArrayOp>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/d5/7789/1275C/6564697bd0c"/>
+					</pragmas>
+				</Constant>
+				<Constant name="ConstantEnum_correct">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="Enum_t"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="label1"/>
+							</path>
+						</IdExpression>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/53/333F/1AF8C/65646b7c6b1c"/>
+						<kcg:Pragma>
+							C:const
+						</kcg:Pragma>
+					</pragmas>
+				</Constant>
+				<Type name="Enum_t">
+					<definition>
+						<Enum>
+							<values>
+								<Value name="label1">
+									<pragmas>
+										<ed:Value oid="!ed/eb14/3253/362C/651fd3343ae4"/>
+									</pragmas>
+								</Value>
+							</values>
+						</Enum>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/eb13/3253/362C/651fd32d3b37"/>
+					</pragmas>
+				</Type>
+				<Type name="Array_t">
+					<definition>
+						<Table>
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<size>
+								<ConstValue value="1"/>
+							</size>
+						</Table>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/c1/7789/1275C/6564695b644f"/>
+					</pragmas>
+				</Type>
+				<Type name="Struct_t">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="label1">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/c3/7789/1275C/6564696b4f0a"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/c2/7789/1275C/6564695f41e1"/>
+					</pragmas>
+				</Type>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/7d/77DB/2E04/6486d67d23af" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/7e/77DB/2E04/6486d67d3e14" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/7f/77DB/2E04/6486d67d3a17" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/80/77DB/2E04/6486d67d4be7" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

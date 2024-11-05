@@ -1,0 +1,22 @@
+{
+    "justifications": [
+        {
+            "rule": "id_0058",
+            "object_oid": "!ed/21d/478C/AD18/664dff211d4",
+            "object_path": "P::O/justified/",
+            "violation": "Literal found outside constant value (3)",
+            "author": "Jean Henry",
+            "text": "Justification for '3'",
+            "local_id": "3"
+        },
+        {
+            "rule": "id_0058",
+            "object_oid": "!ed/21d/478C/AD18/664dff211d4",
+            "object_path": "P::O/justified/",
+            "violation": "Literal found outside constant value (2)",
+            "author": "Jean Henry",
+            "text": "Justification for '2'",
+            "local_id": "2"
+        }
+    ]
+}

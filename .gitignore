@@ -249,6 +249,10 @@ cython_debug/
 *.llrs
 *.reqs
 *.cfg
+doc/**/*_rules_img/
+doc/**/*.htm
+doc/**/KCG
+doc/**/Simulation
 examples/**/*_rules_img/
 examples/**/*.log
 examples/**/*.htm

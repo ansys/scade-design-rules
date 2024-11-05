@@ -33,7 +33,7 @@ import ansys.scade.apitools  # noqa: F401
 
 # isort: split
 
-from scade import load_project
+import scade
 import scade.model.project.stdproject as std
 import scade.model.suite as suite
 
@@ -42,10 +42,26 @@ import scade.model.suite as suite
 # ---------------------------------------------------------------------------
 
 
-def load_session(pathname: str) -> suite.Session:
+def load_session(*paths: str, project: str = '') -> suite.Session:
+    """
+    Create an instance of Session instance and load the requested models.
+    """
     session = suite.Session()
-    session.load2(pathname)
+    for path in paths:
+        session.load2(path)
+    if project:
+        session.model.project = load_project(project)
     return session
+
+
+def load_project(path: str) -> std.Project:
+    """
+    Load a Scade project in a separate environment.
+
+    Note: Undocumented API.
+    """
+    project = scade.load_project(str(path))
+    return project
 
 
 # ---------------------------------------------------------------------------
