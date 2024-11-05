@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="Package1">
+			<declarations>
+				<Operator kind="function" name="root">
+					<inputs>
+						<Variable name="InputCorrect">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/6d3e/7355/1FE0/646f24006e5d"/>
+							</pragmas>
+						</Variable>
+						<Variable name="InputMissing">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/6d3f/7355/1FE0/646f240059e2"/>
+							</pragmas>
+						</Variable>
+						<Variable name="InputIncorrect">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/6d58/7355/1FE0/646f24e876cb"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="OutputCorrect">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/6d40/7355/1FE0/646f24011468"/>
+							</pragmas>
+						</Variable>
+						<Variable name="OutputMissing">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/6d41/7355/1FE0/646f24015004"/>
+							</pragmas>
+						</Variable>
+						<Variable name="OutputIncorrect">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/6d59/7355/1FE0/646f24e97e07"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<locals>
+						<Variable name="_L1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/6d43/7355/1FE0/646f24af463e"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/6d4e/7355/1FE0/646f24b37b8f"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L3">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/6d5b/7355/1FE0/646f24f77383"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<!-- _L1 = InputCorrect; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L1"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="InputCorrect"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/6d42/7355/1FE0/646f24af46a1"/>
+							</pragmas>
+						</Equation>
+						<!-- OutputCorrect = _L1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="OutputCorrect"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L1"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/6d48/7355/1FE0/646f24b0137c"/>
+							</pragmas>
+						</Equation>
+						<!-- _L2 = InputMissing; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L2"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="InputMissing"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/6d4d/7355/1FE0/646f24b32a0e"/>
+							</pragmas>
+						</Equation>
+						<!-- OutputMissing = _L2; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="OutputMissing"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L2"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/6d53/7355/1FE0/646f24b44b86"/>
+							</pragmas>
+						</Equation>
+						<!-- _L3 = InputIncorrect; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L3"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="InputIncorrect"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/6d5a/7355/1FE0/646f24f76e4b"/>
+							</pragmas>
+						</Equation>
+						<!-- OutputIncorrect = _L3; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="OutputIncorrect"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L3"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/6d5c/7355/1FE0/646f24f71178"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/6d3c/7355/1FE0/646f23fa1200" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="root_1" landscape="true" format="A4 (210 297)" oid="!ed/6d3d/7355/1FE0/646f23fa3915">
+									<presentationElements>
+										<EquationGE presentable="!ed/6d42/7355/1FE0/646f24af46a1">
+											<position>
+												<Point x="2355" y="1164"/>
+											</position>
+											<size>
+												<Size width="264" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/6d48/7355/1FE0/646f24b0137c">
+											<position>
+												<Point x="5159" y="1111"/>
+											</position>
+											<size>
+												<Size width="318" height="503"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/6d42/7355/1FE0/646f24af46a1" dstEquation="!ed/6d48/7355/1FE0/646f24b0137c">
+											<positions>
+												<Point x="2619" y="1429"/>
+												<Point x="3916" y="1429"/>
+												<Point x="3916" y="1376"/>
+												<Point x="5212" y="1376"/>
+											</positions>
+										</Edge>
+										<EquationGE presentable="!ed/6d4d/7355/1FE0/646f24b32a0e">
+											<position>
+												<Point x="2064" y="2408"/>
+											</position>
+											<size>
+												<Size width="264" height="502"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/6d53/7355/1FE0/646f24b44b86">
+											<position>
+												<Point x="5609" y="2355"/>
+											</position>
+											<size>
+												<Size width="318" height="503"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/6d4d/7355/1FE0/646f24b32a0e" dstEquation="!ed/6d53/7355/1FE0/646f24b44b86">
+											<positions>
+												<Point x="2328" y="2672"/>
+												<Point x="3995" y="2672"/>
+												<Point x="3995" y="2619"/>
+												<Point x="5662" y="2619"/>
+											</positions>
+										</Edge>
+										<EquationGE presentable="!ed/6d5a/7355/1FE0/646f24f76e4b">
+											<position>
+												<Point x="2011" y="3704"/>
+											</position>
+											<size>
+												<Size width="264" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/6d5c/7355/1FE0/646f24f71178">
+											<position>
+												<Point x="5556" y="3731"/>
+											</position>
+											<size>
+												<Size width="317" height="503"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/6d5a/7355/1FE0/646f24f76e4b" dstEquation="!ed/6d5c/7355/1FE0/646f24f71178">
+											<positions>
+												<Point x="2275" y="3969"/>
+												<Point x="3942" y="3969"/>
+												<Point x="3942" y="3969"/>
+												<Point x="5609" y="3969"/>
+											</positions>
+										</Edge>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/6d38/7355/1FE0/646f23f224a1" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/6d39/7355/1FE0/646f23f229d3" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/6d3a/7355/1FE0/646f23f26100" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/6d3b/7355/1FE0/646f23f2771f" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

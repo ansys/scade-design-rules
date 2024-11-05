@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="CommentHasSpecificHeadlines">
+			<declarations>
+				<Operator kind="node" name="Operator_NoComment">
+					<pragmas>
+						<ed:Operator oid="!ed/62/1F53/536C/645a00662889" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Operator_NoComment_1" landscape="true" format="A4 (210 297)" oid="!ed/63/1F53/536C/645a006653ce"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="Operator_CorrectComment1">
+					<pragmas>
+						<ed:Operator oid="!ed/64/1F53/536C/645a006e368f" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<comment>Purpose:</comment>
+							<comment>Text</comment>
+							<comment></comment>
+							<comment>Algorithm: </comment>
+							<comment>Text</comment>
+							<diagrams>
+								<NetDiagram name="Operator_CorrectComment1_1" landscape="true" format="A4 (210 297)" oid="!ed/65/1F53/536C/645a006e1e0b"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="Operator_IncorrectComment1">
+					<pragmas>
+						<ed:Operator oid="!ed/6c/1F53/536C/645a00833d82" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<comment>Wrong Comment</comment>
+							<diagrams>
+								<NetDiagram name="Operator_IncorrectComment1_1" landscape="true" format="A4 (210 297)" oid="!ed/6d/1F53/536C/645a00832408"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="Operator_IncorrectComment2">
+					<pragmas>
+						<ed:Operator oid="!ed/74/1F53/536C/645a00ac11ee" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<comment>Purpose: tert</comment>
+							<comment>Algorithm: </comment>
+							<diagrams>
+								<NetDiagram name="Operator_IncorrectComment2_1" landscape="true" format="A4 (210 297)" oid="!ed/75/1F53/536C/645a00ac63dd"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="Operator_CorrectComment2">
+					<pragmas>
+						<ed:Operator oid="!ed/7c/1F53/536C/645a4e2e6885" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<comment>Purpose: Text</comment>
+							<comment>Algorithm: Text</comment>
+							<diagrams>
+								<NetDiagram name="Operator_CorrectComment2_1" landscape="true" format="A4 (210 297)" oid="!ed/7d/1F53/536C/645a4e2e2d10"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="Operator_IncorrectComment3">
+					<pragmas>
+						<ed:Operator oid="!ed/84/1F53/536C/645a519f1092" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<comment>Purpose: </comment>
+							<comment>Algorithm: </comment>
+							<comment>asdasd </comment>
+							<diagrams>
+								<NetDiagram name="Operator_IncorrectComment3_1" landscape="true" format="A4 (210 297)" oid="!ed/85/1F53/536C/645a519f4eda"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="Operator_CorrectComment3">
+					<pragmas>
+						<ed:Operator oid="!ed/8c/1F53/536C/645a51be1326" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<comment>Purpose: Text</comment>
+							<comment></comment>
+							<comment>Algorithm:</comment>
+							<comment>Text</comment>
+							<diagrams>
+								<NetDiagram name="Operator_CorrectComment3_1" landscape="true" format="A4 (210 297)" oid="!ed/8d/1F53/536C/645a51be680b"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="Operator_CorrectComment4">
+					<pragmas>
+						<ed:Operator oid="!ed/94/1F53/536C/645a51d048b2" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<comment>Purpose:</comment>
+							<comment></comment>
+							<comment>Text</comment>
+							<comment></comment>
+							<comment>Algorithm:</comment>
+							<comment></comment>
+							<comment>Text</comment>
+							<diagrams>
+								<NetDiagram name="Operator_CorrectComment4_1" landscape="true" format="A4 (210 297)" oid="!ed/95/1F53/536C/645a51d058a8"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="Operator_IncorrectComment4">
+					<pragmas>
+						<ed:Operator oid="!ed/9c/1F53/536C/645a51ea4f94" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<comment></comment>
+							<comment>Algorithm: </comment>
+							<diagrams>
+								<NetDiagram name="Operator_IncorrectComment4_1" landscape="true" format="A4 (210 297)" oid="!ed/9d/1F53/536C/645a51ea7985"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/5e/1F53/536C/645a005c53f0" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/5f/1F53/536C/645a005c4a27" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/60/1F53/536C/645a005c7a9e" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/61/1F53/536C/645a005c2a56" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

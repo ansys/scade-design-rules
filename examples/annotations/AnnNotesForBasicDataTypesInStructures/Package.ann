@@ -1,0 +1,50 @@
+Notes-Types { Esterel-Technologies }  DEFINITIONS ::=
+BEGIN
+    SDD_TopLevel ::= SEQUENCE OF { SEQUENCE {
+    annot_object OID,
+    name STRING,
+        information {
+            Description TEXT
+            {
+            	 NT_DEFAULT_VALUE "-" ,
+            	 NT_FIELD_HEIGHT 3 ,
+            	 NT_FIELD_WIDTH 60 },
+            Constraints TEXT
+            {
+            	 NT_DEFAULT_VALUE "-" ,
+            	 NT_FIELD_HEIGHT 3 ,
+            	 NT_FIELD_WIDTH 60 },
+            Min_Value TEXT
+            {
+            	 NT_DEFAULT_VALUE "-" ,
+            	 NT_FIELD_HEIGHT 1 ,
+            	 NT_FIELD_WIDTH 20 },
+            Max_Value TEXT
+            {
+            	 NT_DEFAULT_VALUE "-" ,
+            	 NT_FIELD_HEIGHT 1 ,
+            	 NT_FIELD_WIDTH 20 },
+            Unit_SI TEXT
+            {
+            	 NT_DEFAULT_VALUE "-" ,
+            	 NT_FIELD_HEIGHT 1 ,
+            	 NT_FIELD_WIDTH 20 }
+    } } }
+
+END
+
+Notes-Values { Esterel-Technologies }  DEFINITIONS ::=
+BEGIN
+    SDD_TopLevel ::= {
+        {"!ed/19c/6AAA/2BA8/63da2a2468a9", "SDD_TopLevel","-" , "-" , "-" , "-" , "-" },
+        {"!ed/1b1/6AAA/2BA8/63da2a4372c5", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/22c/6AAA/2BA8/63da2aa52f9b", "SDD_TopLevel","-" , "-" , "-" , "-" , "-" },
+        {"!ed/22d/6AAA/2BA8/63da2ab61a37", "SDD_TopLevel_1","Description" , "-" , "-" , "-" , "-" },
+        {"!ed/269/6AAA/2BA8/63da349f454", "SDD_TopLevel_1","-" , "Constraints" , "-" , "-" , "-" },
+        {"!ed/26f/6AAA/2BA8/63da349f5b34", "SDD_TopLevel_1","-" , "-" , "0" , "-" , "-" },
+        {"!ed/275/6AAA/2BA8/63da34a3607e", "SDD_TopLevel_1","-" , "-" , "-" , "10" , "-" },
+        {"!ed/27b/6AAA/2BA8/63da34a35614", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "kg" },
+        {"!ed/240/6AAA/2BA8/63da2af02246", "SDD_TopLevel","-" , "-" , "-" , "-" , "-" },
+        {"!ed/25b/6AAA/2BA8/63da2c39697d", "SDD_TopLevel","-" , "-" , "-" , "-" , "-" }}
+END
+

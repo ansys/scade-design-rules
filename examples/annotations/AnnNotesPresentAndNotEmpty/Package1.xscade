@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="Package1">
+			<declarations>
+				<Constant name="BOTH_ANNNOTES_PRESENT_BUT_EMPTY">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<ConstValue value="0"/>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/18/7CBC/2C1C/64d9e6493231"/>
+					</pragmas>
+				</Constant>
+				<Constant name="BOTH_ANNNOTES_CORRECT">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<ConstValue value="0"/>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/28/7CBC/2C1C/64d9e68149f7"/>
+					</pragmas>
+				</Constant>
+				<Constant name="BOTH_ANNNOTES_MISSING">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<ConstValue value="0"/>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/36/7CBC/2C1C/64d9e6cb4324"/>
+					</pragmas>
+				</Constant>
+				<Operator kind="node" name="Operator_Correct">
+					<pragmas>
+						<ed:Operator oid="!ed/19/7CBC/2C1C/64d9e64f1629" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Operator_Correct_1" landscape="true" format="A4 (210 297)" oid="!ed/1a/7CBC/2C1C/64d9e64f6fc8"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/14/7CBC/2C1C/64d9e64533fa" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/15/7CBC/2C1C/64d9e6453d9e" blockKind="constants" columnsSize="0, 318, 150, 150, 300"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/16/7CBC/2C1C/64d9e6454fb9" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/17/7CBC/2C1C/64d9e6455dc6" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

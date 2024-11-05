@@ -1,0 +1,1475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="P">
+			<declarations>
+				<Type name="DoubleNok">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="float64"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/123/62F1/A49C/6713f2bb5ae6"/>
+					</pragmas>
+				</Type>
+				<Type name="SpeedNok">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="DoubleNok"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/124/62F1/A49C/6713f2bb2c3b"/>
+					</pragmas>
+				</Type>
+				<Type name="PointOk">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="x">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="float32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/126/62F1/A49C/6713f2bb21fa"/>
+									</pragmas>
+								</Field>
+								<Field name="y">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="float32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/127/62F1/A49C/6713f2bb3e90"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/125/62F1/A49C/6713f2bb15c5"/>
+					</pragmas>
+				</Type>
+				<Type name="LineOk">
+					<definition>
+						<Table>
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="PointOk"/>
+									</type>
+								</NamedType>
+							</type>
+							<size>
+								<ConstValue value="1"/>
+							</size>
+						</Table>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/128/62F1/A49C/6713f2bb121b"/>
+					</pragmas>
+				</Type>
+				<Type name="LinesOk">
+					<definition>
+						<Table>
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="LineOk"/>
+									</type>
+								</NamedType>
+							</type>
+							<size>
+								<ConstValue value="1"/>
+							</size>
+						</Table>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/129/62F1/A49C/6713f2bb14c5"/>
+					</pragmas>
+				</Type>
+				<Type name="Anonymous">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="structOk">
+									<type>
+										<Struct>
+											<fields>
+												<Field name="p">
+													<type>
+														<NamedType>
+															<type>
+																<TypeRef name="PointOk"/>
+															</type>
+														</NamedType>
+													</type>
+													<pragmas>
+														<ed:Field oid="!ed/12c/62F1/A49C/6713f2bb7bc3"/>
+													</pragmas>
+												</Field>
+											</fields>
+										</Struct>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/12b/62F1/A49C/6713f2bb189e"/>
+									</pragmas>
+								</Field>
+								<Field name="scalarNok">
+									<type>
+										<Struct>
+											<fields>
+												<Field name="x">
+													<type>
+														<NamedType>
+															<type>
+																<TypeRef name="int32"/>
+															</type>
+														</NamedType>
+													</type>
+													<pragmas>
+														<ed:Field oid="!ed/12e/62F1/A49C/6713f2bb6bae"/>
+													</pragmas>
+												</Field>
+												<Field name="c">
+													<type>
+														<NamedType>
+															<type>
+																<TypeRef name="bool"/>
+															</type>
+														</NamedType>
+													</type>
+													<pragmas>
+														<ed:Field oid="!ed/12f/62F1/A49C/6713f2bb5255"/>
+													</pragmas>
+												</Field>
+											</fields>
+										</Struct>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/12d/62F1/A49C/6713f2bb579b"/>
+									</pragmas>
+								</Field>
+								<Field name="vectNok">
+									<type>
+										<Struct>
+											<fields>
+												<Field name="v">
+													<type>
+														<Table>
+															<type>
+																<NamedType>
+																	<type>
+																		<TypeRef name="int32"/>
+																	</type>
+																</NamedType>
+															</type>
+															<size>
+																<ConstValue value="1"/>
+															</size>
+														</Table>
+													</type>
+													<pragmas>
+														<ed:Field oid="!ed/131/62F1/A49C/6713f2bb6de1"/>
+													</pragmas>
+												</Field>
+											</fields>
+										</Struct>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/130/62F1/A49C/6713f2bb28af"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/12a/62F1/A49C/6713f2bb6957"/>
+					</pragmas>
+				</Type>
+				<Type name="StructOk">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="int_">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/1d8/62F1/A49C/671409a851cb"/>
+									</pragmas>
+								</Field>
+								<Field name="bool_">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/1d9/62F1/A49C/671409a87b34"/>
+									</pragmas>
+								</Field>
+								<Field name="char_">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="char"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/1da/62F1/A49C/671409a8308d"/>
+									</pragmas>
+								</Field>
+								<Field name="float_">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="float32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/1db/62F1/A49C/671409a81271"/>
+									</pragmas>
+								</Field>
+								<Field name="double">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="DoubleOk"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/1dc/62F1/A49C/671409a862eb"/>
+									</pragmas>
+								</Field>
+								<Field name="imported_">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="ImportedOk"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/5a5/62F1/A49C/6714d4b25511"/>
+									</pragmas>
+								</Field>
+								<Field name="importedNumeric">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="ImportedNumericOk"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/63b/62F1/A49C/6714f7bc68fd"/>
+									</pragmas>
+								</Field>
+								<Field name="enum_">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="EnumOk"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/1dd/62F1/A49C/671409a85b3d"/>
+									</pragmas>
+								</Field>
+								<Field name="sized">
+									<type>
+										<SizedType constraint="signed">
+											<size>
+												<ConstValue value="64"/>
+											</size>
+										</SizedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/1de/62F1/A49C/671409a81075"/>
+									</pragmas>
+								</Field>
+								<Field name="speed">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="SpeedOk"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/1df/62F1/A49C/671409a843ee"/>
+									</pragmas>
+								</Field>
+								<Field name="point">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="PointOk"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/1e0/62F1/A49C/671409a86710"/>
+									</pragmas>
+								</Field>
+								<Field name="lines">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="LinesOk"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/1e1/62F1/A49C/671409a86033"/>
+									</pragmas>
+								</Field>
+								<Field name="vectPoints">
+									<type>
+										<Table>
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="PointOk"/>
+													</type>
+												</NamedType>
+											</type>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+										</Table>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/1e2/62F1/A49C/671409a83ba0"/>
+									</pragmas>
+								</Field>
+								<Field name="matPoints">
+									<type>
+										<Table>
+											<type>
+												<Table>
+													<type>
+														<NamedType>
+															<type>
+																<TypeRef name="PointOk"/>
+															</type>
+														</NamedType>
+													</type>
+													<size>
+														<ConstValue value="1"/>
+													</size>
+												</Table>
+											</type>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+										</Table>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/1e3/62F1/A49C/671409a8498a"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/1d7/62F1/A49C/671409a825f2"/>
+					</pragmas>
+				</Type>
+				<Type name="EnumNok">
+					<definition>
+						<Enum>
+							<values>
+								<Value name="VALUE">
+									<pragmas>
+										<ed:Value oid="!ed/1ee/62F1/A49C/671409b539ff"/>
+									</pragmas>
+								</Value>
+							</values>
+						</Enum>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/1ed/62F1/A49C/671409b51f3d"/>
+					</pragmas>
+				</Type>
+				<Type name="StructNok">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="noNote">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int16"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/206/62F1/A49C/671409c819d7"/>
+									</pragmas>
+								</Field>
+								<Field name="default_">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="uint8"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/207/62F1/A49C/671409c869e9"/>
+									</pragmas>
+								</Field>
+								<Field name="defaultDescription">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/208/62F1/A49C/671409c87542"/>
+									</pragmas>
+								</Field>
+								<Field name="noDescription">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int64"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/209/62F1/A49C/671409c861ba"/>
+									</pragmas>
+								</Field>
+								<Field name="noConstraint">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="uint8"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/20a/62F1/A49C/671409c82d37"/>
+									</pragmas>
+								</Field>
+								<Field name="noMin">
+									<type>
+										<SizedType constraint="unsigned">
+											<size>
+												<ConstValue value="16"/>
+											</size>
+										</SizedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/20b/62F1/A49C/671409c822c6"/>
+									</pragmas>
+								</Field>
+								<Field name="noMax">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="uint32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/20c/62F1/A49C/671409c859f4"/>
+									</pragmas>
+								</Field>
+								<Field name="noUnit">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="uint64"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/20d/62F1/A49C/671409c84d0b"/>
+									</pragmas>
+								</Field>
+								<Field name="anonymous">
+									<type>
+										<Struct>
+											<fields>
+												<Field name="x">
+													<type>
+														<NamedType>
+															<type>
+																<TypeRef name="int32"/>
+															</type>
+														</NamedType>
+													</type>
+													<pragmas>
+														<ed:Field oid="!ed/4d3/62F1/A49C/67141133570d"/>
+													</pragmas>
+												</Field>
+												<Field name="y">
+													<type>
+														<NamedType>
+															<type>
+																<TypeRef name="bool"/>
+															</type>
+														</NamedType>
+													</type>
+													<pragmas>
+														<ed:Field oid="!ed/4d4/62F1/A49C/671411335d0b"/>
+													</pragmas>
+												</Field>
+											</fields>
+										</Struct>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/4d2/62F1/A49C/671411337769"/>
+									</pragmas>
+								</Field>
+								<Field name="enum_">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="EnumNok"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/5af/62F1/A49C/6714d53259e0"/>
+									</pragmas>
+								</Field>
+								<Field name="imported_">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="ImportedNok"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/5c1/62F1/A49C/6714d5506a74"/>
+									</pragmas>
+								</Field>
+								<Field name="importedNumeric">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="ImportedNumericNok"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/64b/62F1/A49C/6714f7ce15dc"/>
+									</pragmas>
+								</Field>
+								<Field name="point">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="PointNok"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/5cb/62F1/A49C/6714d57a55b4"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/205/62F1/A49C/671409c878d2"/>
+					</pragmas>
+				</Type>
+				<Type name="EnumOk">
+					<definition>
+						<Enum>
+							<values>
+								<Value name="VALUE1">
+									<pragmas>
+										<ed:Value oid="!ed/252/62F1/A49C/67140bff71df"/>
+									</pragmas>
+								</Value>
+							</values>
+						</Enum>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/251/62F1/A49C/67140bff3c93"/>
+					</pragmas>
+				</Type>
+				<Type name="DoubleOk">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="float64"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/3a5/62F1/A49C/67140d5239a0"/>
+					</pragmas>
+				</Type>
+				<Type name="SpeedOk">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="DoubleOk"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/3df/62F1/A49C/67140de41686"/>
+					</pragmas>
+				</Type>
+				<Type name="PointNok">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="x">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="float32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/46c/62F1/A49C/67141084768c"/>
+									</pragmas>
+								</Field>
+								<Field name="y">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="float32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/46d/62F1/A49C/671410844e0c"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/46b/62F1/A49C/67141084f60"/>
+					</pragmas>
+				</Type>
+				<Type name="LinesNok">
+					<definition>
+						<Table>
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="LineNok"/>
+									</type>
+								</NamedType>
+							</type>
+							<size>
+								<ConstValue value="1"/>
+							</size>
+						</Table>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/485/62F1/A49C/671410d274b8"/>
+					</pragmas>
+				</Type>
+				<Type name="LineNok">
+					<definition>
+						<Table>
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="PointNok"/>
+									</type>
+								</NamedType>
+							</type>
+							<size>
+								<ConstValue value="1"/>
+							</size>
+						</Table>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/494/62F1/A49C/671410df5eb4"/>
+					</pragmas>
+				</Type>
+				<Type name="UnusedNa">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="noNote">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int16"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/4ef/62F1/A49C/6714118c66ee"/>
+									</pragmas>
+								</Field>
+								<Field name="default_">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="uint8"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/4f0/62F1/A49C/6714118c278e"/>
+									</pragmas>
+								</Field>
+								<Field name="defaultDescription">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/4f1/62F1/A49C/6714118c2742"/>
+									</pragmas>
+								</Field>
+								<Field name="noDescription">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int64"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/4f2/62F1/A49C/6714118c3ddc"/>
+									</pragmas>
+								</Field>
+								<Field name="noConstraint">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="uint8"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/4f3/62F1/A49C/6714118c699e"/>
+									</pragmas>
+								</Field>
+								<Field name="noMin">
+									<type>
+										<SizedType constraint="unsigned">
+											<size>
+												<ConstValue value="16"/>
+											</size>
+										</SizedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/4f4/62F1/A49C/6714118c4590"/>
+									</pragmas>
+								</Field>
+								<Field name="noMax">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="uint32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/4f5/62F1/A49C/6714118c4a43"/>
+									</pragmas>
+								</Field>
+								<Field name="noUnit">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="uint64"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/4f6/62F1/A49C/6714118c1001"/>
+									</pragmas>
+								</Field>
+								<Field name="anonymous">
+									<type>
+										<Struct>
+											<fields>
+												<Field name="x">
+													<type>
+														<NamedType>
+															<type>
+																<TypeRef name="int32"/>
+															</type>
+														</NamedType>
+													</type>
+													<pragmas>
+														<ed:Field oid="!ed/4f8/62F1/A49C/6714118c1e81"/>
+													</pragmas>
+												</Field>
+												<Field name="y">
+													<type>
+														<NamedType>
+															<type>
+																<TypeRef name="bool"/>
+															</type>
+														</NamedType>
+													</type>
+													<pragmas>
+														<ed:Field oid="!ed/4f9/62F1/A49C/6714118c1bd7"/>
+													</pragmas>
+												</Field>
+											</fields>
+										</Struct>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/4f7/62F1/A49C/6714118c2af5"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/4ee/62F1/A49C/6714118c4bd"/>
+					</pragmas>
+				</Type>
+				<Type external="imported" name="ImportedOk">
+					<pragmas>
+						<ed:Type oid="!ed/59e/62F1/A49C/6714d45853d7"/>
+					</pragmas>
+				</Type>
+				<Type external="imported" name="ImportedNok">
+					<pragmas>
+						<ed:Type oid="!ed/5a4/62F1/A49C/6714d47062e7"/>
+					</pragmas>
+				</Type>
+				<Type external="imported" constraint="integer" name="ImportedNumericOk">
+					<pragmas>
+						<ed:Type oid="!ed/60e/62F1/A49C/6714f745acd"/>
+					</pragmas>
+				</Type>
+				<Type external="imported" constraint="integer" name="ImportedNumericNok">
+					<pragmas>
+						<ed:Type oid="!ed/614/62F1/A49C/6714f7694b53"/>
+					</pragmas>
+				</Type>
+				<Operator kind="node" name="PublicOk">
+					<inputs>
+						<Variable name="int_">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/138/62F1/A49C/6714045d3d53"/>
+							</pragmas>
+						</Variable>
+						<Variable name="bool_">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/146/62F1/A49C/67140593df4"/>
+							</pragmas>
+						</Variable>
+						<Variable name="char_">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="char"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/154/62F1/A49C/671405a54286"/>
+							</pragmas>
+						</Variable>
+						<Variable name="float_">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/184/62F1/A49C/671405e94766"/>
+							</pragmas>
+						</Variable>
+						<Variable name="matFloats">
+							<type>
+								<Table>
+									<type>
+										<Table>
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="float64"/>
+													</type>
+												</NamedType>
+											</type>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+										</Table>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/533/62F1/A49C/671435ba3d79"/>
+							</pragmas>
+						</Variable>
+						<Variable name="enum_">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="EnumOk"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/3af/62F1/A49C/67140da0180a"/>
+							</pragmas>
+						</Variable>
+						<Variable name="imported_">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="ImportedOk"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/5e7/62F1/A49C/6714d5bf71e"/>
+							</pragmas>
+						</Variable>
+						<Variable name="importedNumeric">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="ImportedNumericOk"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/62b/62F1/A49C/6714f79c4231"/>
+							</pragmas>
+						</Variable>
+						<Variable name="double">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="DoubleOk"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/192/62F1/A49C/671405f7337c"/>
+							</pragmas>
+						</Variable>
+						<Variable name="speed">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="SpeedOk"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/162/62F1/A49C/671405c014ee"/>
+							</pragmas>
+						</Variable>
+						<Variable name="generic">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="'T"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/574/62F1/A49C/67143ac272dd"/>
+							</pragmas>
+						</Variable>
+						<Variable name="vectGeneric">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="'T"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/584/62F1/A49C/67143adb708b"/>
+							</pragmas>
+						</Variable>
+						<Variable name="structGeneric">
+							<type>
+								<Struct>
+									<fields>
+										<Field name="g">
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="'T"/>
+													</type>
+												</NamedType>
+											</type>
+											<pragmas>
+												<ed:Field oid="!ed/598/62F1/A49C/67143b04dd0"/>
+											</pragmas>
+										</Field>
+									</fields>
+								</Struct>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/58e/62F1/A49C/67143af77934"/>
+							</pragmas>
+						</Variable>
+						<Variable name="point">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="PointOk"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/20e/62F1/A49C/67140af84953" hidden="true"/>
+							</pragmas>
+						</Variable>
+						<Variable name="lines">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="LinesOk"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/218/62F1/A49C/67140b0e64f4" hidden="true"/>
+							</pragmas>
+						</Variable>
+						<Variable name="vectPoints">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="PointOk"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/222/62F1/A49C/67140b1918b7" hidden="true"/>
+							</pragmas>
+						</Variable>
+						<Variable name="matPoints">
+							<type>
+								<Table>
+									<type>
+										<Table>
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="PointOk"/>
+													</type>
+												</NamedType>
+											</type>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+										</Table>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/22c/62F1/A49C/67140b272b56" hidden="true"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="struct">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="StructOk"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/241/62F1/A49C/67140b531375"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<pragmas>
+						<ed:Operator oid="!ed/136/62F1/A49C/6713f30c7fe" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="PublicOk" landscape="true" format="A4 (210 297)" oid="!ed/137/62F1/A49C/6713f30c37d6"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" visibility="private" name="PrivateNa">
+					<inputs>
+						<Variable name="int_">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/4ff/62F1/A49C/6714128626e4"/>
+							</pragmas>
+						</Variable>
+						<Variable name="bool_">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/505/62F1/A49C/671412863bca"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<pragmas>
+						<ed:Operator oid="!ed/3fb/62F1/A49C/67140fcdb36" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="PrivateNa" landscape="true" format="A4 (210 297)" oid="!ed/3fc/62F1/A49C/67140fcd748d"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="PublicNok">
+					<inputs>
+						<Variable name="int_">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/442/62F1/A49C/671410347875"/>
+							</pragmas>
+						</Variable>
+						<Variable name="bool_">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/443/62F1/A49C/671410345d37"/>
+							</pragmas>
+						</Variable>
+						<Variable name="char_">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="char"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/444/62F1/A49C/671410341d9e"/>
+							</pragmas>
+						</Variable>
+						<Variable name="float_">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/445/62F1/A49C/671410345298"/>
+							</pragmas>
+						</Variable>
+						<Variable name="enum_">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="EnumNok"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/447/62F1/A49C/6714103471be"/>
+							</pragmas>
+						</Variable>
+						<Variable name="imported_">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="ImportedNok"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/5ff/62F1/A49C/6714d6484ebb"/>
+							</pragmas>
+						</Variable>
+						<Variable name="importedNumeric">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="ImportedNumericNok"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/61b/62F1/A49C/6714f7892c2d"/>
+							</pragmas>
+						</Variable>
+						<Variable name="double">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="DoubleNok"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/446/62F1/A49C/671410344a8b"/>
+							</pragmas>
+						</Variable>
+						<Variable name="speed">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="SpeedNok"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/448/62F1/A49C/6714103413ef"/>
+							</pragmas>
+						</Variable>
+						<Variable name="point">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="PointNok"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/43a/62F1/A49C/67141034512e" hidden="true"/>
+							</pragmas>
+						</Variable>
+						<Variable name="lines">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="LinesNok"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/43b/62F1/A49C/6714103422cd" hidden="true"/>
+							</pragmas>
+						</Variable>
+						<Variable name="vectPoints">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="PointNok"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/43c/62F1/A49C/67141034311e" hidden="true"/>
+							</pragmas>
+						</Variable>
+						<Variable name="matPoints">
+							<type>
+								<Table>
+									<type>
+										<Table>
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="PointNok"/>
+													</type>
+												</NamedType>
+											</type>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+										</Table>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/43d/62F1/A49C/6714103470ce" hidden="true"/>
+							</pragmas>
+						</Variable>
+						<Variable name="matFloats">
+							<type>
+								<Table>
+									<type>
+										<Table>
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="float32"/>
+													</type>
+												</NamedType>
+											</type>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+										</Table>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/52d/62F1/A49C/671435a65e19" hidden="true"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="anonymous">
+							<type>
+								<Struct>
+									<fields>
+										<Field name="x">
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="int32"/>
+													</type>
+												</NamedType>
+											</type>
+											<pragmas>
+												<ed:Field oid="!ed/43f/62F1/A49C/6714103452ee"/>
+											</pragmas>
+										</Field>
+										<Field name="c">
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="bool"/>
+													</type>
+												</NamedType>
+											</type>
+											<pragmas>
+												<ed:Field oid="!ed/440/62F1/A49C/6714103457b0"/>
+											</pragmas>
+										</Field>
+									</fields>
+								</Struct>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/43e/62F1/A49C/671410345547"/>
+							</pragmas>
+						</Variable>
+						<Variable name="struct">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="StructNok"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/441/62F1/A49C/671410341375"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<pragmas>
+						<ed:Operator oid="!ed/438/62F1/A49C/6714103431a8" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="PublicNok" landscape="true" format="A4 (210 297)" oid="!ed/439/62F1/A49C/671410342c4d"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/108/62F1/A49C/6713f2bb50a8" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/109/62F1/A49C/6713f2bb59c6" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/10a/62F1/A49C/6713f2bb165f" blockKind="types" columnsSize="0, 181, 150, 300"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/10b/62F1/A49C/6713f2bb2369" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

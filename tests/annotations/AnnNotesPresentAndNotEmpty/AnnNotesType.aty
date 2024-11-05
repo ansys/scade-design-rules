@@ -1,0 +1,25 @@
+Notes-Types { Esterel-Technologies }  DEFINITIONS ::=
+BEGIN
+    AnnType ::=
+        SEQUENCE OF {
+            SEQUENCE {
+                annot_object OID,
+                name STRING,
+                information {
+	            Empty STRING {NT_DEFAULT_VALUE ""},
+                    Default STRING {NT_DEFAULT_VALUE "-"},
+		    String STRING {NT_DEFAULT_VALUE "a"},
+                    Number STRING {NT_DEFAULT_VALUE "1"},
+    } } }
+END
+
+Annotation-Rules { Esterel-Technologies }  DEFINITIONS ::=
+BEGIN
+    constant ::= {
+    	{AnnType F 0 1}
+    }
+
+    operator ::= {
+	{AnnType F 0 1}
+    }
+END

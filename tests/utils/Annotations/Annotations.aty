@@ -1,0 +1,75 @@
+-- MIT License
+--
+-- Copyright (c) 2022 ANSYS, Inc. All rights reserved.
+--
+-- Permission is hereby granted, free of charge, to any person obtaining a copy
+-- of this software and associated documentation files (the "Software"), to deal
+-- in the Software without restriction, including without limitation the rights
+-- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+-- copies of the Software, and to permit persons to whom the Software is
+-- furnished to do so, subject to the following conditions:
+--
+-- The above copyright notice and this permission notice shall be included in all
+-- copies or substantial portions of the Software.
+--
+-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+-- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+-- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+-- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+-- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+-- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+-- SOFTWARE.
+
+-- --------------------------------------------------------------------------
+-- notes types
+-- --------------------------------------------------------------------------
+
+Notes-Types { Esterel-Technologies }  DEFINITIONS ::=
+
+BEGIN
+
+Note ::=
+    SEQUENCE OF {
+	SEQUENCE {
+	    annot_object OID,
+	    name STRING,
+	    information {
+		Enum ENUM {
+		    NT_ENUM_VALUES {"FIRST", "SECOND", "LAST"},
+		    NT_DEFAULT_VALUE "SECOND",
+		    NT_FIELD_WIDTH  80},
+		String STRING {
+		    NT_FIELD_HEIGHT 20}
+} } }
+
+Unused ::=
+    SEQUENCE OF {
+	SEQUENCE {
+	    annot_object OID,
+	    name STRING,
+	    information {
+		Field STRING
+} } }
+
+END
+
+-- --------------------------------------------------------------------------
+-- annotation rules
+-- --------------------------------------------------------------------------
+
+Annotation-Rules { Esterel-Technologies }  DEFINITIONS ::=
+BEGIN
+
+    operator ::= {
+	{Note T 1 1}
+    }
+
+    input ::= {
+	{Note F 0 2}
+    }
+
+    output ::= {
+	{Note F 0 1}
+    }
+
+END

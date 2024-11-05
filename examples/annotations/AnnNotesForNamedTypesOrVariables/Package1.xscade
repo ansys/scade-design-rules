@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="Package1">
+			<declarations>
+				<Type name="Integer8_t">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="int8"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/2a8/6AAA/2BA8/63da45df6c8c"/>
+					</pragmas>
+				</Type>
+				<Type name="Struct_t">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="Integer16">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int16"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/4a1b/5348/5BF0/6419973c4776"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/4a1a/5348/5BF0/6419973660c0"/>
+					</pragmas>
+				</Type>
+				<Operator kind="function" name="Operator1">
+					<inputs>
+						<Variable name="Input1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/2b3/6AAA/2BA8/63da462c3f47"/>
+							</pragmas>
+						</Variable>
+						<Variable name="Input2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Integer8_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/2c0/6AAA/2BA8/63da464a27fa"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="Output1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/2b4/6AAA/2BA8/63da462e7250"/>
+							</pragmas>
+						</Variable>
+						<Variable name="Output2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Integer8_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/2c1/6AAA/2BA8/63da464a443c"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<locals>
+						<Variable name="_L1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/2b6/6AAA/2BA8/63da46306a9b"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Integer8_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/2cc/6AAA/2BA8/63da4657384e"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<!-- _L1 = Input1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L1"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="Input1"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/2b5/6AAA/2BA8/63da463021c9"/>
+							</pragmas>
+						</Equation>
+						<!-- Output1 = _L1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="Output1"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L1"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/2bb/6AAA/2BA8/63da463151ae"/>
+							</pragmas>
+						</Equation>
+						<!-- _L2 = Input2; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L2"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="Input2"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/2cb/6AAA/2BA8/63da46572698"/>
+							</pragmas>
+						</Equation>
+						<!-- Output2 = _L2; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="Output2"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L2"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/2d1/6AAA/2BA8/63da46583434"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/2b1/6AAA/2BA8/63da46281516" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Operator1_1" landscape="true" format="A4 (210 297)" oid="!ed/2b2/6AAA/2BA8/63da46286d15">
+									<presentationElements>
+										<EquationGE presentable="!ed/2b5/6AAA/2BA8/63da463021c9">
+											<position>
+												<Point x="3043" y="2355"/>
+											</position>
+											<size>
+												<Size width="264" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/2bb/6AAA/2BA8/63da463151ae">
+											<position>
+												<Point x="5133" y="2408"/>
+											</position>
+											<size>
+												<Size width="317" height="502"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/2b5/6AAA/2BA8/63da463021c9" dstEquation="!ed/2bb/6AAA/2BA8/63da463151ae">
+											<positions>
+												<Point x="3307" y="2619"/>
+												<Point x="4233" y="2619"/>
+												<Point x="4233" y="2672"/>
+												<Point x="5186" y="2672"/>
+											</positions>
+										</Edge>
+										<EquationGE presentable="!ed/2cb/6AAA/2BA8/63da46572698">
+											<position>
+												<Point x="2752" y="3598"/>
+											</position>
+											<size>
+												<Size width="264" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/2d1/6AAA/2BA8/63da46583434">
+											<position>
+												<Point x="5106" y="3625"/>
+											</position>
+											<size>
+												<Size width="318" height="503"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/2cb/6AAA/2BA8/63da46572698" dstEquation="!ed/2d1/6AAA/2BA8/63da46583434">
+											<positions>
+												<Point x="3016" y="3863"/>
+												<Point x="4075" y="3863"/>
+												<Point x="4075" y="3863"/>
+												<Point x="5159" y="3863"/>
+											</positions>
+										</Edge>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/2a4/6AAA/2BA8/63da45bea36" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/2a5/6AAA/2BA8/63da45be60cf" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/2a6/6AAA/2BA8/63da45be719" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/2a7/6AAA/2BA8/63da45be1ced" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

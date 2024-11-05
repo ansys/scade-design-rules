@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="Package1">
+			<declarations>
+				<Type name="NamedType_t">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/57/60E0/FFC/646b7a0d42ff"/>
+					</pragmas>
+				</Type>
+				<Type name="Struct_t">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="label1">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/6a/60E0/FFC/646b7a3b7ceb"/>
+									</pragmas>
+								</Field>
+								<Field name="label2">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="NamedType_t"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/73/60E0/FFC/646b7a4658dc"/>
+									</pragmas>
+								</Field>
+								<Field name="label3">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="uint16"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/75/A76/3440/646c7df2512b"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/58/60E0/FFC/646b7a167b3b"/>
+					</pragmas>
+				</Type>
+				<Type name="Array_t">
+					<definition>
+						<Table>
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<size>
+								<ConstValue value="1"/>
+							</size>
+						</Table>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/59/60E0/FFC/646b7a1e961"/>
+					</pragmas>
+				</Type>
+				<Type name="Struct_Private_t">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="label1">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/48/A76/3440/646c7d9d1ce4"/>
+									</pragmas>
+								</Field>
+								<Field name="label2">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="NamedTypePrivate_t"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/49/A76/3440/646c7d9d7966"/>
+									</pragmas>
+								</Field>
+								<Field name="label3">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="uint16"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/4a/A76/3440/646c7d9d19d3"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/47/A76/3440/646c7d9d4bb3"/>
+					</pragmas>
+				</Type>
+				<Type name="NamedTypePrivate_t">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/50/A76/3440/646c7daa1a63"/>
+					</pragmas>
+				</Type>
+				<Type name="Array2_t">
+					<definition>
+						<Table>
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="NamedType2_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<size>
+								<ConstValue value="1"/>
+							</size>
+						</Table>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/94/A76/3440/646c7f1fc70"/>
+					</pragmas>
+				</Type>
+				<Type name="NamedType2_t">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="char"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/9a/A76/3440/646c7f262f12"/>
+					</pragmas>
+				</Type>
+				<Operator kind="function" name="Operator1">
+					<inputs>
+						<Variable name="Input_int32">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/55/60E0/FFC/646b79fe79d2"/>
+							</pragmas>
+						</Variable>
+						<Variable name="Input_int32_missing">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/a4/60E0/FFC/646b7a907dec"/>
+							</pragmas>
+						</Variable>
+						<Variable name="Input_Struct">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Struct_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/86/60E0/FFC/646b7a5e7893"/>
+							</pragmas>
+						</Variable>
+						<Variable name="Input_Array">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Array_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/ab/60E0/FFC/646b81822c39"/>
+							</pragmas>
+						</Variable>
+						<Variable name="Input_Array2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Array2_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/b2/A76/3440/646c7f343e54"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="Output_int32">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/56/60E0/FFC/646b7a006cb4"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<pragmas>
+						<ed:Operator oid="!ed/53/60E0/FFC/646b79f993c" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Operator1_1" landscape="true" format="A4 (210 297)" oid="!ed/54/60E0/FFC/646b79f96341"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="function" visibility="private" name="Operator2">
+					<inputs>
+						<Variable name="Input_int32">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/9d/60E0/FFC/646b7a7e1b4a"/>
+							</pragmas>
+						</Variable>
+						<Variable name="Input_Struct">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Struct_Private_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/9e/60E0/FFC/646b7a7e2726"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="Output_int32">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/9c/60E0/FFC/646b7a7e5496"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<pragmas>
+						<ed:Operator oid="!ed/9a/60E0/FFC/646b7a7e6ef6" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Operator2_1" landscape="true" format="A4 (210 297)" oid="!ed/9b/60E0/FFC/646b7a7e4837"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/4f/60E0/FFC/646b79ebe92" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/50/60E0/FFC/646b79eb37f0" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/51/60E0/FFC/646b79eb2a73" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/52/60E0/FFC/646b79eb3883" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

@@ -1,0 +1,28 @@
+Notes-Types { Esterel-Technologies }  DEFINITIONS ::=
+BEGIN
+    Note ::= SEQUENCE OF { SEQUENCE {
+    annot_object OID,
+    name STRING,
+        information {
+            Enum ENUM
+            {
+            	 NT_ENUM_VALUES {"FIRST", "SECOND", "LAST"},
+            	 NT_DEFAULT_VALUE "SECOND" ,
+            	 NT_FIELD_WIDTH 80 },
+            String STRING
+            {
+            	 NT_FIELD_HEIGHT 20 }
+    } } }
+
+END
+
+Notes-Values { Esterel-Technologies }  DEFINITIONS ::=
+BEGIN
+    Note ::= {
+        {"!ed/d0/2117/8DB0/6709402b6f03", "Note_1","SECOND" , "" },
+        {"!ed/d3/2117/8DB0/670940467d0", "Note_1","FIRST" , "First" },
+        {"!ed/d3/2117/8DB0/670940467d0", "Note_2","SECOND" , "Second" },
+        {"!ed/143/2117/8DB0/6709477f4d0f", "Note_1","SECOND" , "" },
+        {"!ed/144/2117/8DB0/67094794777f", "Note","SECOND" , "-" }}
+END
+

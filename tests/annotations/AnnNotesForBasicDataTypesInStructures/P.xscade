@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="P">
+			<declarations>
+				<Type name="StructNok">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="noNote">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int16"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/22/42EB/9288/671387492b85"/>
+									</pragmas>
+								</Field>
+								<Field name="default_">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="uint8"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/52/42EB/9288/67138eec7ffb"/>
+									</pragmas>
+								</Field>
+								<Field name="defaultDescription">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="Imported"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/30/42EB/9288/6713877f583f"/>
+									</pragmas>
+								</Field>
+								<Field name="noDescription">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="Enum"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/66/1AC3/BB70/6713851a6f9b"/>
+									</pragmas>
+								</Field>
+								<Field name="noConstraint">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="uint8"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/3f/42EB/9288/67138e5fe6b"/>
+									</pragmas>
+								</Field>
+								<Field name="noMin">
+									<type>
+										<SizedType constraint="unsigned">
+											<size>
+												<ConstValue value="16"/>
+											</size>
+										</SizedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/45/42EB/9288/67138e8df8d"/>
+									</pragmas>
+								</Field>
+								<Field name="noMax">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="ImportedNumeric"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/4b/42EB/9288/67138ea031be"/>
+									</pragmas>
+								</Field>
+								<Field name="noUnit">
+									<type>
+										<Table>
+											<type>
+												<Table>
+													<type>
+														<NamedType>
+															<type>
+																<TypeRef name="uint64"/>
+															</type>
+														</NamedType>
+													</type>
+													<size>
+														<ConstValue value="1"/>
+													</size>
+												</Table>
+											</type>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+										</Table>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/51/42EB/9288/67138eb26b1d"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/65/1AC3/BB70/671384c34f8f"/>
+					</pragmas>
+				</Type>
+				<Type name="StructOk">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="int_">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/21/42EB/9288/671386be591c"/>
+									</pragmas>
+								</Field>
+								<Field name="bool_">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/bf/42EB/9288/6713900d437f"/>
+									</pragmas>
+								</Field>
+								<Field name="char_">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="char"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/cd/42EB/9288/6713902057db"/>
+									</pragmas>
+								</Field>
+								<Field name="float_">
+									<type>
+										<Table>
+											<type>
+												<Table>
+													<type>
+														<NamedType>
+															<type>
+																<TypeRef name="float32"/>
+															</type>
+														</NamedType>
+													</type>
+													<size>
+														<ConstValue value="1"/>
+													</size>
+												</Table>
+											</type>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+										</Table>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/fb/42EB/9288/6713e01c3cef"/>
+									</pragmas>
+								</Field>
+								<Field name="double">
+									<type>
+										<Table>
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="Double"/>
+													</type>
+												</NamedType>
+											</type>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+										</Table>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/db/42EB/9288/6713907511e8"/>
+									</pragmas>
+								</Field>
+								<Field name="enum_">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="Enum"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/218/42EB/9288/6714087f7c52"/>
+									</pragmas>
+								</Field>
+								<Field name="imported_">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="Imported"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/2d4/42EB/9288/67150739756d"/>
+									</pragmas>
+								</Field>
+								<Field name="importedNumeric">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="ImportedNumeric"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/2ea/42EB/9288/6715076536e8"/>
+									</pragmas>
+								</Field>
+								<Field name="sized">
+									<type>
+										<SizedType constraint="signed">
+											<size>
+												<ConstValue value="64"/>
+											</size>
+										</SizedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/22d/42EB/9288/67140898317d"/>
+									</pragmas>
+								</Field>
+								<Field name="speed">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="Speed"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/e1/42EB/9288/671390766211"/>
+									</pragmas>
+								</Field>
+								<Field name="point">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="PointOk"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/110/42EB/9288/6713e06654ef"/>
+									</pragmas>
+								</Field>
+								<Field name="lines">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="Lines"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/11a/42EB/9288/6713e07c1f50"/>
+									</pragmas>
+								</Field>
+								<Field name="vectPoints">
+									<type>
+										<Table>
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="PointOk"/>
+													</type>
+												</NamedType>
+											</type>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+										</Table>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/138/42EB/9288/6713e110394a"/>
+									</pragmas>
+								</Field>
+								<Field name="matPoints">
+									<type>
+										<Table>
+											<type>
+												<Table>
+													<type>
+														<NamedType>
+															<type>
+																<TypeRef name="PointOk"/>
+															</type>
+														</NamedType>
+													</type>
+													<size>
+														<ConstValue value="1"/>
+													</size>
+												</Table>
+											</type>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+										</Table>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/14b/42EB/9288/6713e123c5"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/20/42EB/9288/671386be7bf3"/>
+					</pragmas>
+				</Type>
+				<Type name="Double">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="float64"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/93/42EB/9288/67138f4f3075"/>
+					</pragmas>
+				</Type>
+				<Type name="Speed">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="Double"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/9c/42EB/9288/67138f66781"/>
+					</pragmas>
+				</Type>
+				<Type name="PointOk">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="x">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="float32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/109/42EB/9288/6713e04acc"/>
+									</pragmas>
+								</Field>
+								<Field name="y">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="float32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/10f/42EB/9288/6713e05051e2"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/f4/42EB/9288/6713dfe52c2e"/>
+					</pragmas>
+				</Type>
+				<Type name="Line">
+					<definition>
+						<Table>
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="PointOk"/>
+									</type>
+								</NamedType>
+							</type>
+							<size>
+								<ConstValue value="1"/>
+							</size>
+						</Table>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/11b/42EB/9288/6713e08f3999"/>
+					</pragmas>
+				</Type>
+				<Type name="Lines">
+					<definition>
+						<Table>
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Line"/>
+									</type>
+								</NamedType>
+							</type>
+							<size>
+								<ConstValue value="1"/>
+							</size>
+						</Table>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/125/42EB/9288/6713e0aa17f9"/>
+					</pragmas>
+				</Type>
+				<Type name="AnonymousNok">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="structNok">
+									<type>
+										<Struct>
+											<fields>
+												<Field name="p">
+													<type>
+														<NamedType>
+															<type>
+																<TypeRef name="PointOk"/>
+															</type>
+														</NamedType>
+													</type>
+													<pragmas>
+														<ed:Field oid="!ed/1bc/42EB/9288/6713ea4e217e"/>
+													</pragmas>
+												</Field>
+											</fields>
+										</Struct>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/1bb/42EB/9288/6713ea4e4397"/>
+									</pragmas>
+								</Field>
+								<Field name="scalarNok">
+									<type>
+										<Struct>
+											<fields>
+												<Field name="x">
+													<type>
+														<NamedType>
+															<type>
+																<TypeRef name="int32"/>
+															</type>
+														</NamedType>
+													</type>
+													<pragmas>
+														<ed:Field oid="!ed/1eb/42EB/9288/6713ec2e66eb"/>
+													</pragmas>
+												</Field>
+												<Field name="c">
+													<type>
+														<NamedType>
+															<type>
+																<TypeRef name="bool"/>
+															</type>
+														</NamedType>
+													</type>
+													<pragmas>
+														<ed:Field oid="!ed/1ec/42EB/9288/6713ec2e32b"/>
+													</pragmas>
+												</Field>
+											</fields>
+										</Struct>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/1b1/42EB/9288/6713ea2012fa"/>
+									</pragmas>
+								</Field>
+								<Field name="vectNok">
+									<type>
+										<Struct>
+											<fields>
+												<Field name="v">
+													<type>
+														<Table>
+															<type>
+																<NamedType>
+																	<type>
+																		<TypeRef name="int32"/>
+																	</type>
+																</NamedType>
+															</type>
+															<size>
+																<ConstValue value="1"/>
+															</size>
+														</Table>
+													</type>
+													<pragmas>
+														<ed:Field oid="!ed/1e2/42EB/9288/6713ec2475a0"/>
+													</pragmas>
+												</Field>
+											</fields>
+										</Struct>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/1d7/42EB/9288/6713ec0e2b7c"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/1a8/42EB/9288/6713ea205170"/>
+					</pragmas>
+				</Type>
+				<Type name="Enum">
+					<definition>
+						<Enum>
+							<values>
+								<Value name="VALUE">
+									<pragmas>
+										<ed:Value oid="!ed/1ee/42EB/9288/6714067c4c7"/>
+									</pragmas>
+								</Value>
+							</values>
+						</Enum>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/1ed/42EB/9288/671406716908"/>
+					</pragmas>
+				</Type>
+				<Type external="imported" name="Imported">
+					<pragmas>
+						<ed:Type oid="!ed/24e/42EB/9288/6714f52266b2"/>
+					</pragmas>
+				</Type>
+				<Type external="imported" constraint="numeric" name="ImportedNumeric">
+					<pragmas>
+						<ed:Type oid="!ed/2e3/42EB/9288/671507563209"/>
+					</pragmas>
+				</Type>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/61/1AC3/BB70/67137d5c5419" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/62/1AC3/BB70/67137d5c6780" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/63/1AC3/BB70/67137d5ceb5" blockKind="types" columnsSize="0, 181, 150, 300"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/64/1AC3/BB70/67137d5c58cd" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>
