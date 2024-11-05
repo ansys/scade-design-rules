@@ -6,12 +6,10 @@ Ansys SCADE Design Rules
 
    getting-started/index
    disclaimer
-   contributing
-   changelog
-
-..
    rules/index
+   contributing
    design/index
+   changelog
 
 Indices and tables
 ==================

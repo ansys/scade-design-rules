@@ -47,24 +47,24 @@ repos:
   - id: trailing-whitespace
     exclude: (?x)^(.*\.tot)$
 
-# - repo: local
-#   hooks:
-#   # make sure the name of the class matches its file
-#   # make sure there is one rst per rule and vice versa + auto fix:
-#   #    * create missing rst files
-#   #    * update rst files
-#   - id: update_doc
-#     name: update_doc
-#     language: python
-#     entry: python
-#     args: [./tools/check_doc/update_doc.py]
-#     always_run: true
-#     pass_filenames: false
-#     additional_dependencies: [
-#         'jinja2',
-#         'ansys-scade-apitools',
-#     ]
-#
+- repo: local
+  hooks:
+  # make sure the name of the class matches its file
+  # make sure there is one rst per rule and vice versa + auto fix:
+  #    * create missing rst files
+  #    * update rst files
+  - id: update_doc
+    name: update_doc
+    language: python
+    entry: python
+    args: [./tools/check_doc/update_doc.py]
+    always_run: true
+    pass_filenames: false
+    additional_dependencies: [
+        'jinja2',
+        'ansys-scade-apitools',
+    ]
+
 #   # make sure there is one model per rule and optionally vice versa
 #   - id: check_models
 #     name: check_models

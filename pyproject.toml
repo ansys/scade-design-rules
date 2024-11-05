@@ -101,7 +101,7 @@ ignore = [
 [tool.ruff.format]
 quote-style = "single"
 
-[tool.ruff.isort]
+[tool.ruff.lint.isort]
 combine-as-imports = true
 force-sort-within-sections = true
 known-first-party = ["ansys", "conftest", "test_utils"]

@@ -11,6 +11,4 @@ page on the Ansys website.
 
    requirements
    user
-
-..
-   usage
+   user-guide

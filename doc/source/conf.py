@@ -53,6 +53,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx_copybutton',
     'sphinx_design',
+    'sdr',
 ]
 
 # Intersphinx mapping
