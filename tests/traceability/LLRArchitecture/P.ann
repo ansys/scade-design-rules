@@ -1,0 +1,30 @@
+Notes-Types { Esterel-Technologies }  DEFINITIONS ::=
+BEGIN
+    DesignElement ::= SEQUENCE OF { SEQUENCE {
+    annot_object OID,
+    name STRING,
+        information {
+            Nature ENUM
+            {
+            	 NT_ENUM_VALUES {"Low Level Requirement", "Architecture", "Derived Low Level Requirement"},
+            	 NT_DEFAULT_VALUE "Low Level Requirement" ,
+            	 NT_FIELD_WIDTH 20 ,
+            	 LLR_PROP "Nature" },
+            Description TEXT
+            {
+            	 NT_FIELD_HEIGHT 20 ,
+            	 NT_FIELD_WIDTH 60 }
+    } } }
+
+END
+
+Notes-Values { Esterel-Technologies }  DEFINITIONS ::=
+BEGIN
+    DesignElement ::= {
+        {"!ed/2e/501E/1F34/626a406843bb", "DesignElement_1","Low Level Requirement" , "" },
+        {"!ed/3d/501E/1F34/626a40811ed2", "DesignElement_1","Architecture" , "" },
+        {"!ed/38/501E/1F34/626a40707a22", "DesignElement_1","Architecture" , "" },
+        {"!ed/59/501E/1F34/626a40f64c2", "DesignElement_1","Architecture" , "" },
+        {"!ed/5a/501E/1F34/626a41017f53", "DesignElement_1","Low Level Requirement" , "" }}
+END
+

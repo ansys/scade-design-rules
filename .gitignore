@@ -263,6 +263,7 @@ tests/**/Simulation
 tests/**/*_rules_img/
 tests/**/*.log
 tests/**/*.htm
+tests/**/links.json
 
 # Visual Studio Code
 .vscode/

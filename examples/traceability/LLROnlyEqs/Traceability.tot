@@ -1,0 +1,64 @@
+
+[Scade/Styles/ScNetStyle2/EQS1](kind=Style; Style=ScNetStyle2; BasedOn=Equation Set)
+
+
+[Scade/Styles/ScNetStyle2/EQS1/Entity]
+
+"LineColor"="(128,0,0)" 
+"LineWidth"="2" 
+
+[Scade/Styles/ScNetStyle2/EQS2](kind=Style; Style=ScNetStyle2; BasedOn=Equation Set)
+
+
+[Scade/Styles/ScNetStyle2/EQS2/Entity]
+
+"LineColor"="(0,128,0)" 
+"LineWidth"="2" 
+
+[Scade/Styles/ScNetStyle2/EQS3](kind=Style; Style=ScNetStyle2; BasedOn=Equation Set)
+
+
+[Scade/Styles/ScNetStyle2/EQS3/Entity]
+
+"LineColor"="(128,128,0)" 
+"LineWidth"="2" 
+
+[Scade/Styles/ScNetStyle2/EQS4](kind=Style; Style=ScNetStyle2; BasedOn=Equation Set)
+
+
+[Scade/Styles/ScNetStyle2/EQS4/Entity]
+
+"LineColor"="(0,192,192)" 
+"LineWidth"="2" 
+
+[Scade/Styles/ScNetStyle2/EQS5](kind=Style; Style=ScNetStyle2; BasedOn=Equation Set)
+
+
+[Scade/Styles/ScNetStyle2/EQS5/Entity]
+
+"LineColor"="(192,0,157)" 
+"LineWidth"="2" 
+
+[Scade/Styles/ScNetStyle2/EQS6](kind=Style; Style=ScNetStyle2; BasedOn=Equation Set)
+
+
+[Scade/Styles/ScNetStyle2/EQS6/Entity]
+
+"LineColor"="(192,0,255)" 
+"LineWidth"="2" 
+
+[Scade/Styles/ScNetStyle2/EQS7](kind=Style; Style=ScNetStyle2; BasedOn=Equation Set)
+
+
+[Scade/Styles/ScNetStyle2/EQS7/Entity]
+
+"LineColor"="(0,192,75)" 
+"LineWidth"="2" 
+
+[Scade/Styles/ScNetStyle2/EQS8](kind=Style; Style=ScNetStyle2; BasedOn=Equation Set)
+
+
+[Scade/Styles/ScNetStyle2/EQS8/Entity]
+
+"LineColor"="(255,192,87)" 
+"LineWidth"="2" 

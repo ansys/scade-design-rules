@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ALMGateway:ALMGProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ALMGateway="http://www.ansys.com/scade/lifecycle/almgateway/4" name="RequirementHasLink" id="_R7eI4PlKEe2x3NUThlstug">
+  <connectors xsi:type="ALMGateway:GenericConnector" name="Jama" id="com.esterel.scade.lifecycle.almgateway.connector.jama" location="https://ansys.jamacloud.com/">
+    <documents xsi:type="ALMGateway:GenericDocument" name="High Level Requirements" id="https://ansys.jamacloud.com/rest/latest/items/512586"/>
+    <exportdocuments xsi:type="ALMGateway:GenericExportDocument" filterLocation="" filterParameters="">
+      <attributes name="proxySet"/>
+      <attributes name="proxyRelationshipType"/>
+      <attributes name="proxyRelationshipDirection"/>
+    </exportdocuments>
+    <attributes name="provider" value="https://ansys.jamacloud.com/rest/latest/projects/173|Test Project"/>
+  </connectors>
+</ALMGateway:ALMGProject>

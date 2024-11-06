@@ -22,11 +22,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from pathlib import Path
-from shutil import rmtree
-from typing import Tuple
-
-import pytest
 
 # shall modify sys.path to access SCACE APIs
 import ansys.scade.apitools  # noqa: F401
@@ -36,10 +31,6 @@ import ansys.scade.apitools  # noqa: F401
 import scade
 import scade.model.project.stdproject as std
 import scade.model.suite as suite
-
-# ---------------------------------------------------------------------------
-# utilities
-# ---------------------------------------------------------------------------
 
 
 def load_session(*paths: str, project: str = '') -> suite.Session:
@@ -62,39 +53,3 @@ def load_project(path: str) -> std.Project:
     """
     project = scade.load_project(str(path))
     return project
-
-
-# ---------------------------------------------------------------------------
-# local_tmpdir
-# ---------------------------------------------------------------------------
-
-
-@pytest.fixture(scope='session')
-def local_tmpdir() -> Path:
-    path = Path('tests') / 'tmp'
-    try:
-        rmtree(str(path))
-    except FileNotFoundError:
-        pass
-    path.mkdir()
-    return path
-
-
-# ---------------------------------------------------------------------------
-# on-the-fly models
-# ---------------------------------------------------------------------------
-
-
-@pytest.fixture(scope='session')
-def project_session(request) -> Tuple[std.Project, suite.Session]:
-    # load request.param
-    assert Path(request.param).exists()
-    project = load_project(request.param)
-    session = load_session(request.param)
-    session.model.project = project
-    return (project, session)
-
-
-# ---------------------------------------------------------------------------
-# end of file
-# ---------------------------------------------------------------------------

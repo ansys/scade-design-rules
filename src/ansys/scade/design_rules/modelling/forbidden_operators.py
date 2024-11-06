@@ -64,7 +64,7 @@ class ForbiddenOperators(Rule):
             kinds=None,
         )
 
-    def on_start(self, model: suite.Model = None, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = None) -> int:
         """Get the rule's parameters."""
         self.forbidden_operators = [_.strip() for _ in parameter.split(',')]
         return Rule.OK

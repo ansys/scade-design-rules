@@ -65,7 +65,7 @@ class SeparateFileNameOperators(Rule):
             kinds=None,
         )
 
-    def on_start(self, model: suite.Model = None, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = None) -> int:
         """Get the rule's parameters."""
         d = self.parse_values(parameter)
         if d is None:

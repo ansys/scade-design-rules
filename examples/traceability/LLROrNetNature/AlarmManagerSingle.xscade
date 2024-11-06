@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Operator kind="node" name="AlarmManagerSingle">
+			<inputs>
+				<Variable name="Sensor">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="float32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/1245b/7535/4404/64a3ee047f27"/>
+					</pragmas>
+				</Variable>
+				<Variable name="Setpoint">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="float32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/1245c/7535/4404/64a3ee044ebf"/>
+					</pragmas>
+				</Variable>
+				<Variable name="AlarmThreshold">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="float32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/12458/7535/4404/64a3ee0443c7" hidden="true"/>
+					</pragmas>
+				</Variable>
+				<Variable name="AlarmConfirmedTimer">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/12459/7535/4404/64a3ee041990" hidden="true"/>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<outputs>
+				<Variable name="AlarmConfirmed">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/1245a/7535/4404/64a3ee041ab"/>
+					</pragmas>
+				</Variable>
+			</outputs>
+			<locals>
+				<Variable name="Alarm">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/12457/7535/4404/64a3ee046935"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L17">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/12454/7535/4404/64a3ee0471ef"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L18">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="float32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/12455/7535/4404/64a3ee04834"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L19">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="float32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/12456/7535/4404/64a3ee044a27"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- _L17 = DetectRegulationError(_L18, _L19, AlarmThreshold); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L17"/>
+					</lefts>
+					<right>
+						<!-- DetectRegulationError(_L18, _L19, AlarmThreshold) -->
+						<CallExpression>
+							<operator>
+								<OpCall name="1">
+									<operator>
+										<OperatorRef name="DetectRegulationError"/>
+									</operator>
+								</OpCall>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L18"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L19"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="AlarmThreshold"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+							<pragmas>
+								<ed:CallExpression xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<references>
+										<OperatorRef path="DetectRegulationError" refOid="!ed/1247c/7535/4404/64a3ee041eb7">
+											<InputRef refOid="!ed/1248d/7535/4404/64a3ee042b"/>
+											<InputRef refOid="!ed/1248e/7535/4404/64a3ee04afc"/>
+											<InputRef refOid="!ed/1248b/7535/4404/64a3ee043e3"/>
+											<OutputRef refOid="!ed/1248c/7535/4404/64a3ee041008"/>
+										</OperatorRef>
+									</references>
+								</ed:CallExpression>
+							</pragmas>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/12448/7535/4404/64a3ee0474d0"/>
+					</pragmas>
+				</Equation>
+				<!-- Alarm = _L17; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="Alarm"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L17"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/12449/7535/4404/64a3ee044805"/>
+					</pragmas>
+				</Equation>
+				<!-- _L18 = Sensor; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L18"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="Sensor"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/1244a/7535/4404/64a3ee042898"/>
+					</pragmas>
+				</Equation>
+				<!-- _L19 = Setpoint; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L19"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="Setpoint"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/1244b/7535/4404/64a3ee04e80"/>
+					</pragmas>
+				</Equation>
+				<StateMachine name="AlarmMgt">
+					<states>
+						<State initial="true" name="AlarmDetection">
+							<unless>
+								<Transition kind="restart">
+									<target>
+										<StateRef name="AlarmDetection"/>
+									</target>
+									<condition>
+										<!--  not Alarm -->
+										<UnaryOp name="1" operator="not">
+											<operand>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="Alarm"/>
+													</path>
+												</IdExpression>
+											</operand>
+										</UnaryOp>
+									</condition>
+									<pragmas>
+										<ed:Transition oid="!ed/12451/7535/4404/64a3ee045f40"/>
+									</pragmas>
+								</Transition>
+							</unless>
+							<locals>
+								<Variable name="_L2">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Variable oid="!ed/12450/7535/4404/64a3ee046c1"/>
+									</pragmas>
+								</Variable>
+							</locals>
+							<data>
+								<!-- AlarmConfirmed = _L2; -->
+								<Equation>
+									<lefts>
+										<VariableRef name="AlarmConfirmed"/>
+									</lefts>
+									<right>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L2"/>
+											</path>
+										</IdExpression>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/1244e/7535/4404/64a3ee0452e"/>
+									</pragmas>
+								</Equation>
+								<!-- _L2 = (AlarmConfirmedTimer times Alarm) or ((false) -> (pre AlarmConfirmed)); -->
+								<Equation>
+									<lefts>
+										<VariableRef name="_L2"/>
+									</lefts>
+									<right>
+										<!-- (AlarmConfirmedTimer times Alarm) or ((false) -> (pre AlarmConfirmed)) -->
+										<NAryOp name="1" operator="or">
+											<operands>
+												<!-- (AlarmConfirmedTimer times Alarm) -->
+												<BinaryOp name="1" operator="times">
+													<operands>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="AlarmConfirmedTimer"/>
+															</path>
+														</IdExpression>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="Alarm"/>
+															</path>
+														</IdExpression>
+													</operands>
+												</BinaryOp>
+												<!-- ((false) -> (pre AlarmConfirmed)) -->
+												<InitOp name="1">
+													<value>
+														<ListExpression>
+															<items>
+																<ConstValue value="false"/>
+															</items>
+														</ListExpression>
+													</value>
+													<flow>
+														<ListExpression>
+															<items>
+																<!-- pre AlarmConfirmed -->
+																<PreOp name="1">
+																	<flow>
+																		<ListExpression>
+																			<items>
+																				<IdExpression>
+																					<path>
+																						<ConstVarRef name="AlarmConfirmed"/>
+																					</path>
+																				</IdExpression>
+																			</items>
+																		</ListExpression>
+																	</flow>
+																</PreOp>
+															</items>
+														</ListExpression>
+													</flow>
+												</InitOp>
+											</operands>
+										</NAryOp>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/1244f/7535/4404/64a3ee041ec2"/>
+									</pragmas>
+								</Equation>
+							</data>
+							<pragmas>
+								<ed:State oid="!ed/1244d/7535/4404/64a3ee0438d9"/>
+							</pragmas>
+						</State>
+					</states>
+					<pragmas>
+						<ed:StateMachine oid="!ed/1244c/7535/4404/64a3ee044356"/>
+					</pragmas>
+				</StateMachine>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/12447/7535/4404/64a3ee04273e" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<NetDiagram name="AlarmManagerSingle" landscape="true" format="A4" oid="!ed/12452/7535/4404/64a3ee04583e">
+							<presentationElements>
+								<EquationGE presentable="!ed/12448/7535/4404/64a3ee0474d0">
+									<position>
+										<Point x="3432" y="706"/>
+									</position>
+									<size>
+										<Size width="3296" height="2265"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/12449/7535/4404/64a3ee044805">
+									<position>
+										<Point x="7885" y="1588"/>
+									</position>
+									<size>
+										<Size width="344" height="502"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/1244a/7535/4404/64a3ee042898">
+									<position>
+										<Point x="2011" y="1191"/>
+									</position>
+									<size>
+										<Size width="264" height="502"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/1244b/7535/4404/64a3ee04e80">
+									<position>
+										<Point x="2011" y="1958"/>
+									</position>
+									<size>
+										<Size width="264" height="503"/>
+									</size>
+								</EquationGE>
+								<StateMachineGE presentable="!ed/1244c/7535/4404/64a3ee044356">
+									<position>
+										<Point x="926" y="3387"/>
+									</position>
+									<size>
+										<Size width="16537" height="3810"/>
+									</size>
+								</StateMachineGE>
+								<StateGE presentable="!ed/1244d/7535/4404/64a3ee0438d9">
+									<position>
+										<Point x="1244" y="3731"/>
+									</position>
+									<size>
+										<Size width="13679" height="3095"/>
+									</size>
+								</StateGE>
+								<EquationGE presentable="!ed/1244e/7535/4404/64a3ee0452e">
+									<position>
+										<Point x="11060" y="5318"/>
+									</position>
+									<size>
+										<Size width="338" height="508"/>
+									</size>
+								</EquationGE>
+								<EquationGE kind="OBJ_LIT" presentable="!ed/1244f/7535/4404/64a3ee041ec2">
+									<textAreas>
+										<TextArea text="(AlarmConfirmedTimer times Alarm) or (false -&gt; pre AlarmConfirmed)" role="6"/>
+									</textAreas>
+									<position>
+										<Point x="9922" y="5424"/>
+									</position>
+									<size>
+										<Size width="169" height="296"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/1244f/7535/4404/64a3ee041ec2" dstEquation="!ed/1244e/7535/4404/64a3ee0452e">
+									<positions>
+										<Point x="10081" y="5556"/>
+										<Point x="10610" y="5556"/>
+										<Point x="10610" y="5556"/>
+										<Point x="11113" y="5556"/>
+									</positions>
+								</Edge>
+								<TransitionGE presentable="!ed/12451/7535/4404/64a3ee045f40">
+									<textAreas>
+										<TextArea text="not Alarm" role="130"/>
+									</textAreas>
+									<positions>
+										<Point x="14923" y="4471"/>
+										<Point x="17436" y="4657"/>
+										<Point x="17277" y="5927"/>
+										<Point x="14923" y="5794"/>
+									</positions>
+									<labelSize>
+										<Size width="2064" height="318"/>
+									</labelSize>
+									<labelPos>
+										<Point x="15240" y="6138"/>
+									</labelPos>
+									<slashPos>
+										<Point x="16510" y="6138"/>
+									</slashPos>
+								</TransitionGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/12448/7535/4404/64a3ee0474d0" dstEquation="!ed/12449/7535/4404/64a3ee044805">
+									<positions>
+										<Point x="6720" y="1852"/>
+										<Point x="7303" y="1852"/>
+										<Point x="7303" y="1852"/>
+										<Point x="7885" y="1852"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/1244b/7535/4404/64a3ee04e80" dstEquation="!ed/12448/7535/4404/64a3ee0474d0">
+									<positions>
+										<Point x="2275" y="2223"/>
+										<Point x="2858" y="2223"/>
+										<Point x="2858" y="2223"/>
+										<Point x="3440" y="2223"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/1244a/7535/4404/64a3ee042898" dstEquation="!ed/12448/7535/4404/64a3ee0474d0">
+									<positions>
+										<Point x="2275" y="1455"/>
+										<Point x="2858" y="1455"/>
+										<Point x="2858" y="1455"/>
+										<Point x="3440" y="1455"/>
+									</positions>
+								</Edge>
+							</presentationElements>
+							<equationSets>
+								<EquationSet name="Regulation Error" styleName="EQS1" oid="!ed/12453/7535/4404/64a3ee04a01">
+									<presentable>!ed/12448/7535/4404/64a3ee0474d0</presentable>
+									<presentable>!ed/12449/7535/4404/64a3ee044805</presentable>
+									<presentable>!ed/1244a/7535/4404/64a3ee042898</presentable>
+									<presentable>!ed/1244b/7535/4404/64a3ee04e80</presentable>
+								</EquationSet>
+							</equationSets>
+						</NetDiagram>
+					</diagrams>
+				</ed:Operator>
+			</pragmas>
+		</Operator>
+	</declarations>
+</File>

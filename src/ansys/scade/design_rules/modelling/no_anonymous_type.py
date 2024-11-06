@@ -69,7 +69,7 @@ class NoAnonymousType(Rule):
         )
         self.roots = None
 
-    def on_start(self, model: suite.Model = None, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = None) -> int:
         """Get the rule's parameters."""
         # restore the default values
         self.roots = None

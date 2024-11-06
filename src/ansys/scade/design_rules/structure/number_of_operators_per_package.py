@@ -60,7 +60,7 @@ class NumberOfOperatorsPerPackage(Rule):
             kinds=None,
         )
 
-    def on_start(self, model: suite.Model = None, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = None) -> int:
         """Get the rule's parameters."""
         if not parameter.isdigit():
             self.set_message(

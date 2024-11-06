@@ -1,0 +1,16 @@
+
+[Scade/Styles/ScNetStyle2/EQS1](kind=Style; Style=ScNetStyle2; BasedOn=Equation Set)
+
+
+[Scade/Styles/ScNetStyle2/EQS1/Entity]
+
+"LineColor"="(0,0,255)" 
+"LineWidth"="2" 
+
+[Scade/Styles/ScNetStyle2/EQS2](kind=Style; Style=ScNetStyle2; BasedOn=Equation Set)
+
+
+[Scade/Styles/ScNetStyle2/EQS2/Entity]
+
+"LineWidth"="2" 
+"LineColor"="(128,0,0)" 

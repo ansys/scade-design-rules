@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="P">
+			<declarations>
+				<Operator kind="node" name="O">
+					<outputs>
+						<Variable name="o">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int8"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/4d/6088/4EB4/63da8fe11267"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<data>
+						<!-- o = _null; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="o"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<NullRef/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/4e/6088/4EB4/63da8fe717d0"/>
+							</pragmas>
+						</Equation>
+						<!-- o = _null; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="o"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<NullRef/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/5a/6088/4EB4/63da90044ca4"/>
+							</pragmas>
+						</Equation>
+						<!-- o = _null; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="o"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<NullRef/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/62/6088/4EB4/63da90051f0c"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/43/6088/4EB4/63da8fa66168" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Ok1" landscape="true" format="A4 (210 297)" oid="!ed/44/6088/4EB4/63da8fa62262">
+									<presentationElements>
+										<EquationGE presentable="!ed/4e/6088/4EB4/63da8fe717d0">
+											<position>
+												<Point x="609" y="609"/>
+											</position>
+											<size>
+												<Size width="317" height="503"/>
+											</size>
+										</EquationGE>
+									</presentationElements>
+								</NetDiagram>
+								<NetDiagram name="Na1" landscape="true" format="A4 (210 297)" oid="!ed/59/6088/4EB4/63da900413c">
+									<presentationElements>
+										<EquationGE presentable="!ed/5a/6088/4EB4/63da90044ca4">
+											<position>
+												<Point x="609" y="609"/>
+											</position>
+											<size>
+												<Size width="317" height="503"/>
+											</size>
+										</EquationGE>
+									</presentationElements>
+									<equationSets>
+										<EquationSet name="EquationSet1" styleName="EQS1" oid="!ed/6b/6088/4EB4/63da901abf2">
+											<presentable>!ed/5a/6088/4EB4/63da90044ca4</presentable>
+										</EquationSet>
+									</equationSets>
+								</NetDiagram>
+								<NetDiagram name="Nok1" landscape="true" format="A4 (210 297)" oid="!ed/61/6088/4EB4/63da90054c05">
+									<presentationElements>
+										<EquationGE presentable="!ed/62/6088/4EB4/63da90051f0c">
+											<position>
+												<Point x="609" y="609"/>
+											</position>
+											<size>
+												<Size width="317" height="503"/>
+											</size>
+										</EquationGE>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/3f/6088/4EB4/63da8fa073e2" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/40/6088/4EB4/63da8fa05bb6" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/41/6088/4EB4/63da8fa01e93" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/42/6088/4EB4/63da8fa06e24" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="HasLink">
+			<declarations>
+				<Constant name="Constant1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<ConstValue value="0"/>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/53/F30/4B00/63989b55306"/>
+					</pragmas>
+				</Constant>
+				<Type name="Type1">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/54/F30/4B00/63989b5a3f7c"/>
+					</pragmas>
+				</Type>
+				<Operator kind="function" name="root">
+					<inputs>
+						<Variable name="Input1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/4a/F30/4B00/639898e6787"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="Output1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/4b/F30/4B00/639898e655ad"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<locals>
+						<Variable name="_L1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/4d/F30/4B00/639898ec72ff"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<!-- _L1 = Input1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L1"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="Input1"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/4c/F30/4B00/639898ec28b5"/>
+							</pragmas>
+						</Equation>
+						<!-- Output1 = _L1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="Output1"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L1"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/4e/F30/4B00/639898ec6c7e"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/48/F30/4B00/639898cf41df" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="root_1" landscape="true" format="A4 (210 297)" oid="!ed/49/F30/4B00/639898cf1192">
+									<presentationElements>
+										<EquationGE presentable="!ed/4c/F30/4B00/639898ec28b5">
+											<position>
+												<Point x="2143" y="1640"/>
+											</position>
+											<size>
+												<Size width="265" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/4e/F30/4B00/639898ec6c7e">
+											<position>
+												<Point x="3889" y="1640"/>
+											</position>
+											<size>
+												<Size width="318" height="503"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4c/F30/4B00/639898ec28b5" dstEquation="!ed/4e/F30/4B00/639898ec6c7e">
+											<positions>
+												<Point x="2408" y="1905"/>
+												<Point x="3175" y="1905"/>
+												<Point x="3175" y="1905"/>
+												<Point x="3942" y="1905"/>
+											</positions>
+										</Edge>
+									</presentationElements>
+									<equationSets>
+										<EquationSet name="EquationSet1" oid="!ed/5d/F30/4B00/63989c201a9a"/>
+									</equationSets>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/44/F30/4B00/639898c85710" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/45/F30/4B00/639898c84c9e" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/46/F30/4B00/639898c82a49" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/47/F30/4B00/639898c82673" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>
