@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="CorrectSecondPackage">
+			<pragmas>
+				<ed:Package oid="!ed/99/2948/19208/5fc7a1f91a90" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/9a/2948/19208/5fc7a1f965f1" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/9b/2948/19208/5fc7a1f95681" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/9c/2948/19208/5fc7a1f9e2b" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

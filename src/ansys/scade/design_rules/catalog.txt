@@ -40,7 +40,9 @@ id_0060	modelling	no_operatorcalls_in_expressions
 id_0062	modelling	no_struct_table_comparisons
 id_0063	modelling	no_terminations
 id_0075	modelling	num_of_operator_calls_in_conditions
+id_0077	packages	package_filename
 id_0078	naming	pascal_case_naming
+id_0081	packages	separate_filename
 id_0083	diagrams	textual_diagrams
 id_0084	modelling	transition_actions
 id_0085	modelling	transition_kind
