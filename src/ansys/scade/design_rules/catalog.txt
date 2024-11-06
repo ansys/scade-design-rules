@@ -61,6 +61,7 @@ id_0076	project_structure	one_public_op_per_package
 id_0077	packages	package_filename
 id_0078	naming	pascal_case_naming
 id_0079	project_structure	root_package_name
+id_0080	tool	scade_version
 id_0081	packages	separate_filename
 id_0083	diagrams	textual_diagrams
 id_0084	modelling	transition_actions
@@ -81,6 +82,7 @@ id_0106	modelling	constants_have_const_pragma
 id_0108	annotations	ann_notes_present_and_not_empty
 id_0109	naming	name_structure_enumeration_custom1
 id_0113	diagrams	page_format
+id_0118	tool	checker_no_warnings_errors
 id_0119	modelling	modulo_denominator_non_zero_constant
 id_0120	naming	name_of_default_enum_value_shall_end_with
 id_0121	naming	sensor_names_unique_in_package
