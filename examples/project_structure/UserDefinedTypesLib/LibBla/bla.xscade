@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="bla">
+			<declarations>
+				<Type name="BlaType1">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="label1">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="float64"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/72f/313F/2B8C/5fd8eb673eae"/>
+									</pragmas>
+								</Field>
+								<Field name="label2">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/738/313F/2B8C/5fd8eb764c1c"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/72e/313F/2B8C/5fd8eb5e4fa7"/>
+					</pragmas>
+				</Type>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/72a/313F/2B8C/5fd8eb5a3a72" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/72b/313F/2B8C/5fd8eb5a7997" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/72c/313F/2B8C/5fd8eb5a163b" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/72d/313F/2B8C/5fd8eb5a2147" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

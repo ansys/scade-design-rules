@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="function" name="Operator2">
+	<locals>
+		<Variable name="_L1">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="Type6"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/436/313F/2B8C/5fd0d50e22e3"/>
+			</pragmas>
+		</Variable>
+	</locals>
+	<data>
+		<!-- _L1 = Constant6; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="_L1"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="Constant6"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/435/313F/2B8C/5fd0d50e5868"/>
+			</pragmas>
+		</Equation>
+		<!-- _ = _L1; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="_"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="_L1"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/43b/313F/2B8C/5fd0d513579d"/>
+			</pragmas>
+		</Equation>
+	</data>
+	<pragmas>
+		<ed:Operator oid="!ed/433/313F/2B8C/5fd0d507bc8" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+			<diagrams>
+				<NetDiagram name="Operator2_1" landscape="true" format="A4 (210 297)" oid="!ed/434/313F/2B8C/5fd0d50769c0">
+					<presentationElements>
+						<EquationGE kind="OBJ_LIT" presentable="!ed/435/313F/2B8C/5fd0d50e5868">
+							<position>
+								<Point x="7699" y="6720"/>
+							</position>
+							<size>
+								<Size width="212" height="318"/>
+							</size>
+						</EquationGE>
+						<EquationGE presentable="!ed/43b/313F/2B8C/5fd0d513579d">
+							<position>
+								<Point x="9975" y="6588"/>
+							</position>
+							<size>
+								<Size width="503" height="503"/>
+							</size>
+						</EquationGE>
+						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/435/313F/2B8C/5fd0d50e5868" dstEquation="!ed/43b/313F/2B8C/5fd0d513579d">
+							<positions>
+								<Point x="7911" y="6879"/>
+								<Point x="9075" y="6879"/>
+								<Point x="9075" y="6879"/>
+								<Point x="10239" y="6879"/>
+							</positions>
+						</Edge>
+					</presentationElements>
+				</NetDiagram>
+			</diagrams>
+			<references>
+				<ConstVarRef path="Constant6" refOid="!ed/42b/313F/2B8C/5fd0d4e4310d"/>
+			</references>
+		</ed:Operator>
+	</pragmas>
+</Operator>

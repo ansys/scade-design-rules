@@ -1,0 +1,1196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="TypesTakenFromSpecificProject">
+			<declarations>
+				<Type name="Incorrect_Type2_t">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/450/7FCF/AC/6398473b67fb"/>
+					</pragmas>
+				</Type>
+				<Operator kind="function" name="root">
+					<inputs>
+						<Variable name="InputCorrect1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Correct_Type_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/451/7FCF/AC/63984749e78"/>
+							</pragmas>
+						</Variable>
+						<Variable name="InputCorrect2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Sub1::Correct_Type2_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/eb/52C1/4644/6399a0efbac"/>
+							</pragmas>
+						</Variable>
+						<Variable name="InputCorrect3">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/4f7/7FCF/AC/639849a550b1"/>
+							</pragmas>
+						</Variable>
+						<Variable name="InputCorrect4">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Obsolete::Correct_Type3_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/452/7FCF/AC/6398474c35a6"/>
+							</pragmas>
+						</Variable>
+						<Variable name="InputIncorrect1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Incorrect_Type2_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/453/7FCF/AC/6398474c560"/>
+							</pragmas>
+						</Variable>
+						<Variable name="InputIncorrect2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Incorrect_Type3_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/507/7FCF/AC/63984cafb1" hidden="true"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="OutputCorrect1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Correct_Type_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/454/7FCF/AC/6398474c46d2"/>
+							</pragmas>
+						</Variable>
+						<Variable name="OutputCorrect2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Sub1::Correct_Type2_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/f2/52C1/4644/6399a0ef5d94"/>
+							</pragmas>
+						</Variable>
+						<Variable name="OutputCorrect3">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/4f8/7FCF/AC/639849a52270"/>
+							</pragmas>
+						</Variable>
+						<Variable name="OutputCorrect4">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Obsolete::Correct_Type3_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/455/7FCF/AC/6398474c2f4c"/>
+							</pragmas>
+						</Variable>
+						<Variable name="OutputIncorrect1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Incorrect_Type2_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/456/7FCF/AC/6398474d735e"/>
+							</pragmas>
+						</Variable>
+						<Variable name="OutputIncorrect2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Incorrect_Type3_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/50e/7FCF/AC/63984caf22d2"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<locals>
+						<Variable name="_L1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Correct_Type_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/4eb/7FCF/AC/6398497e3df7"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Obsolete::Correct_Type3_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/4ed/7FCF/AC/6398497e7d1d"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L3">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Incorrect_Type2_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/4ef/7FCF/AC/6398497e5d63"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L4">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/4fa/7FCF/AC/639849a740c2"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L5">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Incorrect_Type3_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/522/7FCF/AC/63984cc120a2"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L6">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Sub1::Correct_Type2_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/f4/52C1/4644/6399a0f37e68"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<!-- _L1 = InputCorrect1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L1"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="InputCorrect1"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/4ea/7FCF/AC/6398497e377e"/>
+							</pragmas>
+						</Equation>
+						<!-- _L2 = InputCorrect4; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L2"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="InputCorrect4"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/4ec/7FCF/AC/6398497e4fd4"/>
+							</pragmas>
+						</Equation>
+						<!-- _L3 = InputIncorrect1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L3"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="InputIncorrect1"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/4ee/7FCF/AC/6398497e5b1f"/>
+							</pragmas>
+						</Equation>
+						<!-- OutputCorrect1 = _L1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="OutputCorrect1"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L1"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/4f0/7FCF/AC/6398497e46ff"/>
+							</pragmas>
+						</Equation>
+						<!-- OutputCorrect4 = _L2; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="OutputCorrect4"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L2"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/4f1/7FCF/AC/6398497e424e"/>
+							</pragmas>
+						</Equation>
+						<!-- OutputIncorrect1 = _L3; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="OutputIncorrect1"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L3"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/4f2/7FCF/AC/6398497e43af"/>
+							</pragmas>
+						</Equation>
+						<!-- _L4 = InputCorrect3; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L4"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="InputCorrect3"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/4f9/7FCF/AC/639849a7738"/>
+							</pragmas>
+						</Equation>
+						<!-- OutputCorrect3 = _L4; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="OutputCorrect3"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L4"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/4fb/7FCF/AC/639849a76ce3"/>
+							</pragmas>
+						</Equation>
+						<!-- _L5 = InputIncorrect2; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L5"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="InputIncorrect2"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/521/7FCF/AC/63984cc14da7"/>
+							</pragmas>
+						</Equation>
+						<!-- OutputIncorrect2 = _L5; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="OutputIncorrect2"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L5"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/527/7FCF/AC/63984cc34b28"/>
+							</pragmas>
+						</Equation>
+						<!-- _L6 = InputCorrect2; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L6"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="InputCorrect2"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/f3/52C1/4644/6399a0f31d25"/>
+							</pragmas>
+						</Equation>
+						<!-- OutputCorrect2 = _L6; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="OutputCorrect2"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L6"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/f5/52C1/4644/6399a0f3a46"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/43e/7FCF/AC/639846e8d47" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="root_1" landscape="true" format="A4 (210 297)" oid="!ed/43f/7FCF/AC/639846e8c77">
+									<presentationElements>
+										<EquationGE presentable="!ed/4ea/7FCF/AC/6398497e377e">
+											<position>
+												<Point x="3043" y="1535"/>
+											</position>
+											<size>
+												<Size width="264" height="502"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/4ec/7FCF/AC/6398497e4fd4">
+											<position>
+												<Point x="2858" y="4445"/>
+											</position>
+											<size>
+												<Size width="264" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/4ee/7FCF/AC/6398497e5b1f">
+											<position>
+												<Point x="11986" y="1720"/>
+											</position>
+											<size>
+												<Size width="264" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/4f0/7FCF/AC/6398497e46ff">
+											<position>
+												<Point x="6112" y="1535"/>
+											</position>
+											<size>
+												<Size width="317" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/4f1/7FCF/AC/6398497e424e">
+											<position>
+												<Point x="5927" y="4445"/>
+											</position>
+											<size>
+												<Size width="317" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/4f2/7FCF/AC/6398497e43af">
+											<position>
+												<Point x="15055" y="1720"/>
+											</position>
+											<size>
+												<Size width="317" height="503"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4ea/7FCF/AC/6398497e377e" dstEquation="!ed/4f0/7FCF/AC/6398497e46ff">
+											<positions>
+												<Point x="3307" y="1799"/>
+												<Point x="4736" y="1799"/>
+												<Point x="4736" y="1799"/>
+												<Point x="6165" y="1799"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4ec/7FCF/AC/6398497e4fd4" dstEquation="!ed/4f1/7FCF/AC/6398497e424e">
+											<positions>
+												<Point x="3122" y="4710"/>
+												<Point x="4551" y="4710"/>
+												<Point x="4551" y="4710"/>
+												<Point x="5980" y="4710"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4ee/7FCF/AC/6398497e5b1f" dstEquation="!ed/4f2/7FCF/AC/6398497e43af">
+											<positions>
+												<Point x="12250" y="1984"/>
+												<Point x="13679" y="1984"/>
+												<Point x="13679" y="1984"/>
+												<Point x="15108" y="1984"/>
+											</positions>
+										</Edge>
+										<EquationGE presentable="!ed/4f9/7FCF/AC/639849a7738">
+											<position>
+												<Point x="2858" y="3413"/>
+											</position>
+											<size>
+												<Size width="265" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/4fb/7FCF/AC/639849a76ce3">
+											<position>
+												<Point x="6033" y="3440"/>
+											</position>
+											<size>
+												<Size width="318" height="503"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4f9/7FCF/AC/639849a7738" dstEquation="!ed/4fb/7FCF/AC/639849a76ce3">
+											<positions>
+												<Point x="3122" y="3678"/>
+												<Point x="4604" y="3678"/>
+												<Point x="4604" y="3678"/>
+												<Point x="6085" y="3678"/>
+											</positions>
+										</Edge>
+										<EquationGE presentable="!ed/521/7FCF/AC/63984cc14da7">
+											<position>
+												<Point x="11880" y="2619"/>
+											</position>
+											<size>
+												<Size width="264" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/527/7FCF/AC/63984cc34b28">
+											<position>
+												<Point x="15081" y="2646"/>
+											</position>
+											<size>
+												<Size width="318" height="503"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/521/7FCF/AC/63984cc14da7" dstEquation="!ed/527/7FCF/AC/63984cc34b28">
+											<positions>
+												<Point x="12144" y="2884"/>
+												<Point x="13626" y="2884"/>
+												<Point x="13626" y="2884"/>
+												<Point x="15134" y="2884"/>
+											</positions>
+										</Edge>
+										<EquationGE presentable="!ed/f3/52C1/4644/6399a0f31d25">
+											<position>
+												<Point x="2884" y="2487"/>
+											</position>
+											<size>
+												<Size width="265" height="502"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/f5/52C1/4644/6399a0f3a46">
+											<position>
+												<Point x="6165" y="2487"/>
+											</position>
+											<size>
+												<Size width="318" height="502"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/f3/52C1/4644/6399a0f31d25" dstEquation="!ed/f5/52C1/4644/6399a0f3a46">
+											<positions>
+												<Point x="3149" y="2752"/>
+												<Point x="4683" y="2752"/>
+												<Point x="4683" y="2752"/>
+												<Point x="6218" y="2752"/>
+											</positions>
+										</Edge>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+							<references>
+								<TypeRef path="Correct_Type_t" refOid="!ed/66/52C1/4644/63999fd71671"/>
+								<TypeRef path="Sub1::Correct_Type2_t" refOid="!ed/60/52C1/4644/63999fb51f25"/>
+								<TypeRef path="Obsolete::Correct_Type3_t" refOid="!ed/74/52C1/4644/63999ff02a05"/>
+							</references>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="function" visibility="private" name="root_private">
+					<inputs>
+						<Variable name="InputCorrect1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Correct_Type_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/393/5872/5368/6454f3ef25c5"/>
+							</pragmas>
+						</Variable>
+						<Variable name="InputCorrect2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Sub1::Correct_Type2_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/394/5872/5368/6454f3ef92f"/>
+							</pragmas>
+						</Variable>
+						<Variable name="InputCorrect3">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/395/5872/5368/6454f3ef7be2"/>
+							</pragmas>
+						</Variable>
+						<Variable name="InputCorrect4">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Obsolete::Correct_Type3_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/396/5872/5368/6454f3ef17a2"/>
+							</pragmas>
+						</Variable>
+						<Variable name="InputIncorrect1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Incorrect_Type2_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/397/5872/5368/6454f3ef48cb"/>
+							</pragmas>
+						</Variable>
+						<Variable name="InputIncorrect2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Incorrect_Type3_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/38c/5872/5368/6454f3ef28aa" hidden="true"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="OutputCorrect1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Correct_Type_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/38d/5872/5368/6454f3ef20ed"/>
+							</pragmas>
+						</Variable>
+						<Variable name="OutputCorrect2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Sub1::Correct_Type2_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/38e/5872/5368/6454f3ef478b"/>
+							</pragmas>
+						</Variable>
+						<Variable name="OutputCorrect3">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/38f/5872/5368/6454f3ef5f71"/>
+							</pragmas>
+						</Variable>
+						<Variable name="OutputCorrect4">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Obsolete::Correct_Type3_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/390/5872/5368/6454f3ef6b1"/>
+							</pragmas>
+						</Variable>
+						<Variable name="OutputIncorrect1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Incorrect_Type2_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/391/5872/5368/6454f3ef4d86"/>
+							</pragmas>
+						</Variable>
+						<Variable name="OutputIncorrect2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Incorrect_Type3_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/392/5872/5368/6454f3ef66f7"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<locals>
+						<Variable name="_L1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Correct_Type_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/386/5872/5368/6454f3ef274d"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Obsolete::Correct_Type3_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/387/5872/5368/6454f3ef280c"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L3">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Incorrect_Type2_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/388/5872/5368/6454f3ef7ab7"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L4">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/389/5872/5368/6454f3ef7774"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L5">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Incorrect_Type3_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/38a/5872/5368/6454f3ef8b4"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L6">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Sub1::Correct_Type2_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/38b/5872/5368/6454f3ef4d80"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<!-- _L1 = InputCorrect1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L1"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="InputCorrect1"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/379/5872/5368/6454f3ef1ab6"/>
+							</pragmas>
+						</Equation>
+						<!-- _L2 = InputCorrect4; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L2"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="InputCorrect4"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/37a/5872/5368/6454f3ef4132"/>
+							</pragmas>
+						</Equation>
+						<!-- _L3 = InputIncorrect1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L3"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="InputIncorrect1"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/37b/5872/5368/6454f3ef432"/>
+							</pragmas>
+						</Equation>
+						<!-- OutputCorrect1 = _L1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="OutputCorrect1"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L1"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/37c/5872/5368/6454f3eff07"/>
+							</pragmas>
+						</Equation>
+						<!-- OutputCorrect4 = _L2; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="OutputCorrect4"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L2"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/37d/5872/5368/6454f3ef4d7e"/>
+							</pragmas>
+						</Equation>
+						<!-- OutputIncorrect1 = _L3; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="OutputIncorrect1"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L3"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/37e/5872/5368/6454f3ef25eb"/>
+							</pragmas>
+						</Equation>
+						<!-- _L4 = InputCorrect3; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L4"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="InputCorrect3"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/37f/5872/5368/6454f3eff1a"/>
+							</pragmas>
+						</Equation>
+						<!-- OutputCorrect3 = _L4; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="OutputCorrect3"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L4"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/380/5872/5368/6454f3ef3257"/>
+							</pragmas>
+						</Equation>
+						<!-- _L5 = InputIncorrect2; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L5"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="InputIncorrect2"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/381/5872/5368/6454f3ef49b6"/>
+							</pragmas>
+						</Equation>
+						<!-- OutputIncorrect2 = _L5; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="OutputIncorrect2"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L5"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/382/5872/5368/6454f3ef6807"/>
+							</pragmas>
+						</Equation>
+						<!-- _L6 = InputCorrect2; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L6"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="InputCorrect2"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/383/5872/5368/6454f3ef68bc"/>
+							</pragmas>
+						</Equation>
+						<!-- OutputCorrect2 = _L6; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="OutputCorrect2"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L6"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/384/5872/5368/6454f3ef78d6"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/378/5872/5368/6454f3ef4299" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="root_private_1" landscape="true" format="A4 (210 297)" oid="!ed/385/5872/5368/6454f3ef624c">
+									<presentationElements>
+										<EquationGE presentable="!ed/379/5872/5368/6454f3ef1ab6">
+											<position>
+												<Point x="3043" y="1535"/>
+											</position>
+											<size>
+												<Size width="264" height="502"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/37a/5872/5368/6454f3ef4132">
+											<position>
+												<Point x="2858" y="4445"/>
+											</position>
+											<size>
+												<Size width="264" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/37b/5872/5368/6454f3ef432">
+											<position>
+												<Point x="11986" y="1720"/>
+											</position>
+											<size>
+												<Size width="264" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/37c/5872/5368/6454f3eff07">
+											<position>
+												<Point x="6112" y="1535"/>
+											</position>
+											<size>
+												<Size width="317" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/37d/5872/5368/6454f3ef4d7e">
+											<position>
+												<Point x="5927" y="4445"/>
+											</position>
+											<size>
+												<Size width="317" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/37e/5872/5368/6454f3ef25eb">
+											<position>
+												<Point x="15055" y="1720"/>
+											</position>
+											<size>
+												<Size width="317" height="503"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/379/5872/5368/6454f3ef1ab6" dstEquation="!ed/37c/5872/5368/6454f3eff07">
+											<positions>
+												<Point x="3307" y="1799"/>
+												<Point x="4736" y="1799"/>
+												<Point x="4736" y="1799"/>
+												<Point x="6165" y="1799"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/37a/5872/5368/6454f3ef4132" dstEquation="!ed/37d/5872/5368/6454f3ef4d7e">
+											<positions>
+												<Point x="3122" y="4710"/>
+												<Point x="4551" y="4710"/>
+												<Point x="4551" y="4710"/>
+												<Point x="5980" y="4710"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/37b/5872/5368/6454f3ef432" dstEquation="!ed/37e/5872/5368/6454f3ef25eb">
+											<positions>
+												<Point x="12250" y="1984"/>
+												<Point x="13679" y="1984"/>
+												<Point x="13679" y="1984"/>
+												<Point x="15108" y="1984"/>
+											</positions>
+										</Edge>
+										<EquationGE presentable="!ed/37f/5872/5368/6454f3eff1a">
+											<position>
+												<Point x="2858" y="3413"/>
+											</position>
+											<size>
+												<Size width="265" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/380/5872/5368/6454f3ef3257">
+											<position>
+												<Point x="6033" y="3440"/>
+											</position>
+											<size>
+												<Size width="318" height="503"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/37f/5872/5368/6454f3eff1a" dstEquation="!ed/380/5872/5368/6454f3ef3257">
+											<positions>
+												<Point x="3122" y="3678"/>
+												<Point x="4604" y="3678"/>
+												<Point x="4604" y="3678"/>
+												<Point x="6085" y="3678"/>
+											</positions>
+										</Edge>
+										<EquationGE presentable="!ed/381/5872/5368/6454f3ef49b6">
+											<position>
+												<Point x="11880" y="2619"/>
+											</position>
+											<size>
+												<Size width="264" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/382/5872/5368/6454f3ef6807">
+											<position>
+												<Point x="15081" y="2646"/>
+											</position>
+											<size>
+												<Size width="318" height="503"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/381/5872/5368/6454f3ef49b6" dstEquation="!ed/382/5872/5368/6454f3ef6807">
+											<positions>
+												<Point x="12144" y="2884"/>
+												<Point x="13626" y="2884"/>
+												<Point x="13626" y="2884"/>
+												<Point x="15134" y="2884"/>
+											</positions>
+										</Edge>
+										<EquationGE presentable="!ed/383/5872/5368/6454f3ef68bc">
+											<position>
+												<Point x="2884" y="2487"/>
+											</position>
+											<size>
+												<Size width="265" height="502"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/384/5872/5368/6454f3ef78d6">
+											<position>
+												<Point x="6165" y="2487"/>
+											</position>
+											<size>
+												<Size width="318" height="502"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/383/5872/5368/6454f3ef68bc" dstEquation="!ed/384/5872/5368/6454f3ef78d6">
+											<positions>
+												<Point x="3149" y="2752"/>
+												<Point x="4683" y="2752"/>
+												<Point x="4683" y="2752"/>
+												<Point x="6218" y="2752"/>
+											</positions>
+										</Edge>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+							<references>
+								<TypeRef path="Correct_Type_t" refOid="!ed/66/52C1/4644/63999fd71671"/>
+								<TypeRef path="Sub1::Correct_Type2_t" refOid="!ed/60/52C1/4644/63999fb51f25"/>
+								<TypeRef path="Obsolete::Correct_Type3_t" refOid="!ed/74/52C1/4644/63999ff02a05"/>
+							</references>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/43a/7FCF/AC/639846e2345b" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/43b/7FCF/AC/639846e24137" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/43c/7FCF/AC/639846e211e4" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/43d/7FCF/AC/639846e25ec9" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+		<Type name="Incorrect_Type3_t">
+			<definition>
+				<NamedType>
+					<type>
+						<TypeRef name="int32"/>
+					</type>
+				</NamedType>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/500/7FCF/AC/63984ca24cda"/>
+			</pragmas>
+		</Type>
+	</declarations>
+</File>

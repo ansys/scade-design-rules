@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Constant name="Constant1">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int8"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="0"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/49c2/5E36/1BD0/5fc766c66ea2"/>
+			</pragmas>
+		</Constant>
+	</declarations>
+</File>

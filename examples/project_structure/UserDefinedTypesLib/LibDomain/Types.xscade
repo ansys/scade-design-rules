@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="Types">
+			<declarations>
+				<Type name="DomainType1">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="label1">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/62c/313F/2B8C/5fd8cfd9b31"/>
+									</pragmas>
+								</Field>
+								<Field name="label2">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="uint32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/635/313F/2B8C/5fd8cfe21d03"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/628/313F/2B8C/5fd8cfce2d41"/>
+					</pragmas>
+				</Type>
+				<Type name="DomainType2">
+					<definition>
+						<Table>
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float32"/>
+									</type>
+								</NamedType>
+							</type>
+							<size>
+								<ConstValue value="10"/>
+							</size>
+						</Table>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/629/313F/2B8C/5fd8cfcf729e"/>
+					</pragmas>
+				</Type>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/624/313F/2B8C/5fd8cfc8334d" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/625/313F/2B8C/5fd8cfc84312" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/626/313F/2B8C/5fd8cfc84b13" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/627/313F/2B8C/5fd8cfc8692" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="Test">
+			<declarations>
+				<Type name="Type1">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/6ae/313F/2B8C/5fd8d11b303a"/>
+					</pragmas>
+				</Type>
+				<Type name="Type2">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="float32"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/6af/313F/2B8C/5fd8d11cbc3"/>
+					</pragmas>
+				</Type>
+				<Type name="Type3">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="label1">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/6c2/313F/2B8C/5fd8d1351417"/>
+									</pragmas>
+								</Field>
+								<Field name="label2">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int64"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/6db/313F/2B8C/5fd8d1563c2c"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/6b0/313F/2B8C/5fd8d11e1cef"/>
+					</pragmas>
+				</Type>
+				<Operator name="Operator1" href="Operator1.xscade"/>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/676/313F/2B8C/5fd8d0c95bbb" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/677/313F/2B8C/5fd8d0c96ba7" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/678/313F/2B8C/5fd8d0c939de" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/679/313F/2B8C/5fd8d0c91635" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>
