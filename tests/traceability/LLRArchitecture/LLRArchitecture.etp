@@ -345,7 +345,7 @@
 			<value>..\Resources\Traceability.aty</value>
 		</Prop>
 		<Prop id="99" name="@METRICS_RULES:RULES_PARAM">
-			<value>TRACE_005,path=DesignElement.Nature.Architecture</value>
+			<value>id_0035,-t DesignElement -a Nature -v Architecture</value>
 			<configuration>54</configuration>
 		</Prop>
 		<Prop id="100" name="@METRICS_RULES:SELECTED_RULES">

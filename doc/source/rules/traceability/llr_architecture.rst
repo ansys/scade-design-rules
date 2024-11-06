@@ -19,8 +19,8 @@ Architecture contributing elements can be only equation sets or textual diagrams
 .. end_description
 
 The parameter allows defining an alternate note type name, attribute or value,
-with the following syntax: ``path=<note type name>.<attribute name>.<value>``
-(default value: ``path=DesignElement.Nature.Architecture``).
+with the following syntax: ``-t <note type name> -a <attribute name> -v <value>``
+(default value: ``-t DesignElement -a Nature -v Architecture``).
 
 This rules applies to the following elements:
 

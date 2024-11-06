@@ -64,6 +64,6 @@ def test_llr_nature_nominal(session: suite.Session, test_case):
 
     assert llr is not None
     rule = LLRNatureEqs()
-    assert rule.on_start(model, 'note=DesignElement') == _OK
+    assert rule.on_start(model, '-t DesignElement') == _OK
     status = rule.on_check(llr)
     assert status == expected

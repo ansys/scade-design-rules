@@ -68,6 +68,28 @@ def test_llr_nature_nominal(session: suite.Session, test_case):
 
     assert llr is not None
     rule = LLRNature()
-    assert rule.on_start(model, 'note=DesignElement') == _OK
+    assert rule.on_start(model, '-t DesignElement') == _OK
     status = rule.on_check(llr)
+    assert status == expected
+
+
+@pytest.mark.parametrize(
+    'test_case',
+    [
+        ('-t DesignElement', _OK),
+        ('-n DesignElement', _ERROR),
+        ('--note_type DesignElement', _OK),
+        # https://docs.python.org/3/library/argparse.html#argument-abbreviations-prefix-matching
+        # ('--note DesignElement', _ERROR),
+        ('--note DesignElement', _OK),
+        ('note=DesignElement', _OK),
+        ('-t Unknown', _ERROR),
+    ],
+)
+def test_llr_nature_robustness(session: suite.Session, test_case):
+    parameter, expected = test_case
+    model = session.model
+
+    rule = LLRNature()
+    status = rule.on_start(model, parameter)
     assert status == expected

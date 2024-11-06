@@ -60,6 +60,23 @@ def test_llr_architecture_nominal(session: suite.Session, test_case):
     llr = model.get_object_from_path(path)
     assert llr is not None
     rule = LLRArchitecture()
-    assert rule.on_start(model, 'path=DesignElement.Nature.Architecture') == _OK
+    assert rule.on_start(model, '-t DesignElement -a Nature -v Architecture') == _OK
     status = rule.on_check(llr)
+    assert status == expected
+
+
+@pytest.mark.parametrize(
+    'test_case',
+    [
+        ('-t Unknown -a any -v any', _ERROR),
+        ('-t DesignElement -a Unknown -v any', _ERROR),
+        ('-t DesignElement -v any', _ERROR),
+    ],
+)
+def test_llr_architecture_robustness(session: suite.Session, test_case):
+    parameter, expected = test_case
+    model = session.model
+
+    rule = LLRArchitecture()
+    status = rule.on_start(model, parameter)
     assert status == expected

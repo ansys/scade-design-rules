@@ -312,7 +312,7 @@
 			<configuration>54</configuration>
 		</Prop>
 		<Prop id="91" name="@METRICS_RULES:RULES_PARAM">
-			<value>id_0095,note=DesignElement</value>
+			<value>id_0095,-t DesignElement</value>
 			<configuration>54</configuration>
 		</Prop>
 		<Prop id="92" name="@METRICS_RULES:SELECTED_RULES">

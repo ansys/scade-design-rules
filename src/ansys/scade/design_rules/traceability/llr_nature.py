@@ -32,13 +32,13 @@ if __name__ == '__main__':  # pragma: no cover
     sys.path.append(abspath(dirname(dirname(dirname(dirname(dirname(__file__)))))))
 
 
-import scade
 import scade.model.suite as suite
 
+from ansys.scade.design_rules.utils.annotations import AnnotationRule, get_first_note_by_type
 from ansys.scade.design_rules.utils.rule import Rule
 
 
-class LLRNature(Rule):
+class LLRNature(AnnotationRule):
     """Implements the rule interface."""
 
     def __init__(
@@ -46,13 +46,14 @@ class LLRNature(Rule):
         id='id_0036',
         label='CE must have a design annotation',
         description=(
-            "The contributing elements shall have an annotation 'DesignElement'"
-            " with a property 'Nature'"
+            "The contributing elements shall have an annotation 'DesignElement' "
+            "with a property 'Nature'.\n"
+            "Parameter: '-t': Name of the note type: e.g.: '-t DesignElement'"
         ),
         category='Traceability',
         severity=Rule.ADVISORY,
         types=None,
-        parameter='note=DesignElement',
+        parameter='-t DesignElement',
         **kwargs,
     ):
         if not types:
@@ -73,33 +74,15 @@ class LLRNature(Rule):
 
     def on_start(self, model: suite.Model, parameter: str) -> int:
         """Get the rule's parameters."""
-        assert model is not None
-
-        d = self.parse_values(parameter)
-        if d is None:
-            message = "'%s': parameter syntax error" % parameter
-        else:
-            note_type_name = d.get('note')
-            if note_type_name is None:
-                message = "'%s': missing 'note' value" % parameter
-            else:
-                for note_type in model.ann_note_types:
-                    if note_type.name == note_type_name:
-                        self.note_type = note_type
-                        return Rule.OK
-                else:
-                    message = "'%s': unknown note type" % parameter
-
-        self.set_message(message)
-        scade.output(message + '\n')
-        return Rule.ERROR
+        # backward compatibility
+        parameter = parameter.replace('note=', '-t ') if parameter else ''
+        return super().on_start(model, parameter)
 
     def on_check(self, annotable: suite.Annotable, parameter: str = None) -> int:
         """Return the evaluation status for the input object."""
-        for note in annotable.ann_notes:
-            if note.ann_note_type == self.note_type:
-                status = Rule.OK
-                break
+        note = get_first_note_by_type(annotable, self.note_type)
+        if note:
+            status = Rule.OK
         else:
             status = Rule.FAILED
             message = 'the Contributing Element shall have an annotation %s' % self.note_type.name

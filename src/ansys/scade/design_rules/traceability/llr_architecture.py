@@ -35,10 +35,15 @@ if __name__ == '__main__':  # pragma: no cover
 import scade
 import scade.model.suite as suite
 
+from ansys.scade.design_rules.utils.annotations import (
+    AnnotationRule,
+    ArgumentParser,
+    get_first_note_by_type,
+)
 from ansys.scade.design_rules.utils.rule import Rule
 
 
-class LLRArchitecture(Rule):
+class LLRArchitecture(AnnotationRule):
     """Implements the rule interface."""
 
     def __init__(
@@ -50,7 +55,7 @@ class LLRArchitecture(Rule):
         ),
         category='Traceability',
         severity=Rule.ADVISORY,
-        parameter='path=DesignElement.Nature.Architecture',
+        parameter='-t DesignElement -a Nature -v Architecture',
         **kwargs,
     ):
         super().__init__(
@@ -71,51 +76,47 @@ class LLRArchitecture(Rule):
 
     def on_start(self, model: suite.Model, parameter: str) -> int:
         """Get the rule's parameters."""
-        assert model is not None
-
-        d = self.parse_values(parameter)
-        if d is None:
-            message = "'%s': parameter syntax error" % parameter
-        else:
-            path = d.get('path')
-            elems = path.split('.') if path else []
-            if not path:
-                message = "'%s': missing 'path' value" % parameter
-            elif len(elems) != 3:
-                message = "'%s': 'path' syntax error" % path
+        status = super().on_start(model, parameter)
+        if status == Rule.OK:
+            assert self.note_type
+            assert self.options
+            self.architecture = self.options.value
+            for note_attribute in self.note_type.ann_att_definitions:
+                if note_attribute.name == self.options.attribute:
+                    self.note_attribute = note_attribute
+                    break
             else:
-                self.architecture = elems[2]
-                for note_type in model.ann_note_types:
-                    if note_type.name == elems[0]:
-                        self.note_type = note_type
-                        for note_attribute in self.note_type.ann_att_definitions:
-                            if note_attribute.name == elems[1]:
-                                self.note_attribute = note_attribute
-                                return Rule.OK
-                        else:
-                            message = "'%s': unknown note attribute" % elems[1]
-                else:
-                    message = "'%s': unknown note type" % elems[0]
+                status = Rule.ERROR
+                message = "'%s': unknown note attribute" % self.options.attribute
+                self.set_message(message)
+                scade.output(message + '\n')
 
-        self.set_message(message)
-        scade.output(message + '\n')
-        return Rule.ERROR
+        return status
+
+    def add_arguments(self, parser: ArgumentParser):
+        """Declare arguments in addition to the note type."""
+        parser.add_argument(
+            '-a', '--attribute', metavar='<attribute>', help='attribute name', required=True
+        )
+        parser.add_argument(
+            '-v', '--value', metavar='<value>', help='value for architecture', required=True
+        )
 
     def on_check(self, annotable: suite.Annotable, parameter: str = None) -> int:
         """Return the evaluation status for the input object."""
-        for note in annotable.ann_notes:
-            if note.ann_note_type == self.note_type:
-                for value in note.ann_att_values:
-                    if (
-                        value.ann_att_definition == self.note_attribute
-                        and value.to_string() == self.architecture
-                    ):
-                        message = "The %s of the Contributing Element can't be '%s'" % (
-                            self.note_attribute.name,
-                            self.architecture,
-                        )
-                        self.set_message(message)
-                        return Rule.FAILED
+        note = get_first_note_by_type(annotable, self.note_type)
+        if note:
+            for value in note.ann_att_values:
+                if (
+                    value.ann_att_definition == self.note_attribute
+                    and value.to_string() == self.architecture
+                ):
+                    message = "The %s of the Contributing Element can't be '%s'" % (
+                        self.note_attribute.name,
+                        self.architecture,
+                    )
+                    self.set_message(message)
+                    return Rule.FAILED
         return Rule.OK
 
 

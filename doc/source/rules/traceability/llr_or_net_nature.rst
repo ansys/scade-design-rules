@@ -14,12 +14,13 @@ CE or Diagram  Nature
 
 Description
 -----------
-The contributing elements shall have an annotation 'DesignElement' with a property 'Nature'
+The contributing elements shall have an annotation 'DesignElement' with a property 'Nature'.
+Parameter: '-t': Name of the note type: e.g.: '-t DesignElement'
 
 .. end_description
 
 The parameter allows defining an alternate note type name, with the following syntax:
-``note=<note type name>`` (default value: ``note=DesignElement``).
+``-t <note type name>`` (default value: ``-t DesignElement``).
 
 This rules applies to the following elements:
 
