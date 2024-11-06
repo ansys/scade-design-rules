@@ -63,6 +63,7 @@ id_0078	naming	pascal_case_naming
 id_0079	project_structure	root_package_name
 id_0080	tool	scade_version
 id_0081	packages	separate_filename
+id_0082	user_defined_operators	separate_file_name_operators
 id_0083	diagrams	textual_diagrams
 id_0084	modelling	transition_actions
 id_0085	modelling	transition_kind
