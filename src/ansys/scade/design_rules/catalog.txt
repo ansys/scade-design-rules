@@ -24,6 +24,7 @@ id_0032	project_structure	lib_projects_operators
 id_0033	project_structure	lib_projects_usage
 id_0034	readability	line_crossing
 id_0038	readability	local_name_uniqueness
+id_0039	structure	maximum_call_graph_depth
 id_0040	project_structure	model_root_package
 id_0041	naming	name_length_of_element
 id_0042	operators	no_imported_operators
@@ -47,6 +48,14 @@ id_0060	modelling	no_operatorcalls_in_expressions
 id_0061	project_structure	no_scade_library
 id_0062	modelling	no_struct_table_comparisons
 id_0063	modelling	no_terminations
+id_0065	structure	number_of_diagrams_per_element
+id_0068	structure	number_of_level_of_packages
+id_0069	structure	number_of_nested_activate_blocks
+id_0070	structure	number_of_nested_sms
+id_0071	structure	number_of_operators_per_package
+id_0072	structure	number_of_outgoing_transitions_per_state
+id_0073	structure	number_of_predef_ops_in_diagram
+id_0074	structure	number_of_user_ops_in_diagram
 id_0075	modelling	num_of_operator_calls_in_conditions
 id_0076	project_structure	one_public_op_per_package
 id_0077	packages	package_filename
