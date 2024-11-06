@@ -21,6 +21,8 @@ id_0029	modelling	initialization_of_arrays
 id_0031	modelling	level_of_depth_of_structures
 id_0032	project_structure	lib_projects_operators
 id_0033	project_structure	lib_projects_usage
+id_0034	readability	line_crossing
+id_0038	readability	local_name_uniqueness
 id_0040	project_structure	model_root_package
 id_0041	naming	name_length_of_element
 id_0042	operators	no_imported_operators
