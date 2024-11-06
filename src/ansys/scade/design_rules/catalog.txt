@@ -10,6 +10,7 @@ id_0011	modelling	constant_if_then_else
 id_0012	case	default_case
 id_0013	modelling	disadvised_operators
 id_0015	diagrams	elements_within_area
+id_0016	scade_types	enum_definition_elements_order
 id_0017	case	enum_has_default_case
 id_0018	naming	enum_type_name_prefix
 id_0022	naming	forbidden_keywords
