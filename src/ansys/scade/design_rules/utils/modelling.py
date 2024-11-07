@@ -279,6 +279,30 @@ def get_full_path_ex(object_: suite.Object) -> str:
     return object_.get_full_path()
 
 
+def get_path(scope: suite.Object, element: suite.Object) -> str:
+    """
+    Return the relative Scade path of a model element with respect to a scope.
+
+    This function provides a workaround for ``Object.get_path()`` which returns
+    a wrong path in some circumstances, for example with state machines.
+
+    Parameters
+    ----------
+    scope : suite.Object
+        Context for computing the relative path.
+    element : suite.Object
+        Input element.
+
+    Returns
+    -------
+    str
+        Relative Scade path of the element or .its absolute path if it not relative to ``scope``.
+    """
+    scope_path = scope.get_full_path()
+    element_path = element.get_full_path()
+    return element_path.lstrip(scope_path)
+
+
 def get_enum_value(enum: suite.Constant) -> int:
     """
     Get the value of the ``C:enum_val`` kcg pragma of an enumeration value.

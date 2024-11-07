@@ -376,7 +376,7 @@
 			<configuration>124</configuration>
 		</Prop>
 		<Prop id="127" name="@METRICS_RULES:RULES_PARAM">
-			<value>SCADE_R001,Coverage</value>
+			<value>id_0034,lines=yes</value>
 			<configuration>124</configuration>
 		</Prop>
 		<Prop id="129" name="@STUDIO:TOOLCONF">
@@ -429,7 +429,7 @@
 			<value>124</value>
 		</Prop>
 		<Prop id="137" name="@METRICS_RULES:SELECTED_RULES">
-			<value>RULE_103</value>
+			<value>id_0034</value>
 			<configuration>124</configuration>
 		</Prop>
 		<Prop id="138" name="@METRICS_RULES:USER_DEF_FILES">

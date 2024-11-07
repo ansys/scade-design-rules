@@ -31,11 +31,11 @@ if __name__ == '__main__':
 
     sys.path.append(abspath(dirname(dirname(dirname(dirname(dirname(__file__)))))))
 
-import pathlib
 
 import scade.model.suite as suite
 
 from ansys.scade.design_rules.utils.geometry import Line2D, Point, Rect2D
+from ansys.scade.design_rules.utils.modelling import get_path
 from ansys.scade.design_rules.utils.rule import Rule
 
 
@@ -109,15 +109,9 @@ class LineCrossing(Rule):
 
         # list of already found elements. new elements are checked against this list
         self.g_elements = []
-        # buffer for found overlapping within own diagram.
-        self.found_elements = []
-        self._project_name = ''
 
     def on_start(self, model: suite.Model, parameter: str = None) -> int:
         """Get the rule's parameters."""
-        project_path = model.project.pathname.replace('\\', '/')
-        self._project_name = str(pathlib.Path(project_path).name)
-
         d = self.parse_values(parameter)
         if d is None:
             message = "'%s': parameter syntax error" % parameter
@@ -132,15 +126,18 @@ class LineCrossing(Rule):
         self.set_message(message)
         return Rule.ERROR
 
-    def on_check(self, object: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object_: suite.Object, parameter: str = None) -> int:
         """Return the evaluation status for the input object."""
         # list of already found elements. new elements are checked against this list
         self.g_elements = []
-        # buffer for found overlapping within own diagram.
-        self.found_elements = []
+
+        # operator for reporting shorter paths
+        self.operator = object_.data_def
+        while not isinstance(self.operator, suite.Operator):
+            self.operator = self.operator.owner
 
         # first add all box elements to gElements list
-        for diagram_object in object.presentation_elements:
+        for diagram_object in object_.presentation_elements:
             if (
                 isinstance(diagram_object, suite.StateMachineGE)
                 or isinstance(diagram_object, suite.StateGE)
@@ -190,12 +187,9 @@ class LineCrossing(Rule):
                 equation = diagram_object.equation
                 element_type = None
                 name = ''
-                if equation is not None:
-                    element_type = equation.right
-                    name = element_type.to_string()
-                else:
-                    # Emission found
-                    pass
+                assert equation is not None
+                element_type = equation.right
+                name = element_type.to_string()
                 self.add_element(
                     diagram_object.position[0],
                     diagram_object.position[1],
@@ -207,8 +201,8 @@ class LineCrossing(Rule):
                 )
 
         # then check all edge elements
-        for diagram_object in object.presentation_elements:
-            if isinstance(diagram_object, suite.Edge):  # just Edge is mistaken by Geographics.Edge
+        for diagram_object in object_.presentation_elements:
+            if isinstance(diagram_object, suite.Edge):
                 start_x = 0
                 start_y = 0
                 first_point = True
@@ -218,10 +212,12 @@ class LineCrossing(Rule):
                 number_of_lines = len(diagram_object.points) - 1
                 for point in diagram_object.points:
                     if (point[0] == 0) and (point[1] == 0):
-                        # TODO: why is that so? Seems like a BUG.
-                        error_string = 'False point values for edge: Rule not tested!'
-                        if error_string not in self.found_elements:
-                            self.found_elements.append(error_string)
+                        # automatic wiring, not computed yet
+                        message = 'Automatic graphical positions not computed'
+                        local_id = diagram_object.left_var.get_oid()
+                        self.add_rule_status(
+                            diagram_object.src_equation.equation, Rule.ERROR, message, local_id
+                        )
                         break
                     if first_point:
                         start_x = point[0]
@@ -247,22 +243,7 @@ class LineCrossing(Rule):
                             start_x = point[0]
                             start_y = point[1]
 
-        if len(self.found_elements) > 0:
-            number_of_elements = len(self.found_elements)
-            sorted_element = sorted(self.found_elements)
-            finding_list = '\n'.join(sorted_element)
-
-            self.set_message(
-                'Elements overlap ('
-                + str(number_of_elements)
-                + ') in '
-                + object.name
-                + ':\n'
-                + finding_list
-            )
-            return Rule.FAILED
-
-        return Rule.OK
+        return Rule.NA
 
     def add_element(self, start_x, start_y, width, height, name_of_element, element_type, target):
         """
@@ -315,11 +296,8 @@ class LineCrossing(Rule):
         source_type = None
         destination_type = None
         not_i_source = edge.src_equation.equation
-        if isinstance(not_i_source, suite.Equation):
-            source_type = not_i_source.right
-        else:
-            # Emission
-            pass
+        assert isinstance(not_i_source, suite.Equation)
+        source_type = not_i_source.right
         not_i_destination = edge.dst_equation.equation
         if isinstance(not_i_destination, suite.Equation):
             destination_type = not_i_destination.right
@@ -370,26 +348,10 @@ class LineCrossing(Rule):
                                 g_element.height,
                             )
                         ):
-                            ref_link = (
-                                '%SC:LOCATE_PATH#'
-                                + self._project_name
-                                + '#'
-                                + edge.get_full_path()
-                                + name_of_edge
-                                + '/ '
-                                + name_of_edge
-                                + '%'
-                            )
-                            error_string = (
-                                container_name
-                                + 'Edge '
-                                + name_of_edge
-                                + ' outside box: '
-                                + ref_link
-                            )
-                            if error_string not in self.found_elements:
-                                self.found_elements.append(error_string)
-                            break
+                            eq = edge.src_equation.equation
+                            message = 'Edge %s outside boundaries' % name_of_edge
+                            local_id = '%s:box' % edge.left_var.get_oid()
+                            self.add_rule_status(eq, Rule.FAILED, message, local_id)
 
         for g_element in self.g_elements:
             # is gElement Source of Edge
@@ -440,31 +402,33 @@ class LineCrossing(Rule):
                 if line_crosses_element(
                     start_line_x, start_line_y, end_line_x, end_line_y, g_element
                 ):
-                    ref_link = (
-                        '%SC:LOCATE_PATH#'
-                        + self._project_name
-                        + '#'
-                        + edge.get_full_path()
-                        + name_of_edge
-                        + '/ '
-                        + name_of_edge
-                        + '%'
-                    )
-                    error_string = (
-                        container_name
-                        + 'Edge '
-                        + name_of_edge
-                        + ' crosses '
-                        + g_element.name_of_element
-                        + ': '
-                        + ref_link
-                    )
-                    if error_string not in self.found_elements:
-                        self.found_elements.append(error_string)
+                    eq = edge.src_equation.equation
+                    if is_edge:
+                        local_path = _get_edge_path(self.operator, g_element.target)
+                        local_id = '%s:%s' % (
+                            edge.left_var.get_oid(),
+                            g_element.target.left_var.get_oid(),
+                        )
+                    else:
+                        # bugged
+                        # local_path = self.operator.get_path(g_element.target)
+                        local_path = get_path(self.operator, g_element.target)
+                        local_id = '%s:%s' % (edge.left_var.get_oid(), g_element.target.get_oid())
+                    message = 'Edge %s crosses %s' % (name_of_edge, local_path)
+                    self.add_rule_status(eq, Rule.FAILED, message, local_id)
 
         self.g_elements.append(
             GElement(start_line_x, start_line_y, width_line, height_line, name_of_edge, None, edge)
         )
+
+
+def _get_edge_path(operator: suite.Operator, edge: suite.Edge) -> str:
+    equation = edge.src_equation.equation
+    path = get_path(operator, equation)
+    # replace the name of the first left variable with edge's variable
+    suffix = equation.lefts[0].name + '='
+    path = path.rstrip(suffix) + edge.left_var.name
+    return path
 
 
 if __name__ == '__main__':
