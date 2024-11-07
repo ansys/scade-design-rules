@@ -32,6 +32,7 @@ Performs checks and updates the documentation from the rules.
 """
 
 import importlib
+import importlib.util
 from pathlib import Path
 import re
 import sys
@@ -330,6 +331,9 @@ def update_doc(root: Path) -> int:
 
 
 if __name__ == '__main__':
+    if not importlib.util.find_spec('scade'):
+        # scade not installed on the runner, skip the check
+        sys.exit(0)
     # dir must be the root of the repository
     dir = Path(sys.argv[1]) if len(sys.argv) == 2 else Path(__file__).parent.parent.parent
     sys.path.append(str(dir / 'src'))
