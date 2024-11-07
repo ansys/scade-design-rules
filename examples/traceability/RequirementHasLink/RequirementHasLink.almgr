@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scade_req:ReqProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scade_req="http://www.ansys.com/scade/lifecycle/almgateway/scade_req/3" id="_TTBGwAaUEe67FbZeN7ScBg">
+  <documents xsi:type="scade_req:Specification" id="_TTBGwQaUEe67FbZeN7ScBg" name="High Level Requirements" identifier="https://ansys.jamacloud.com/rest/latest/items/512586">
+    <children xsi:type="scade_req:TraceableElementRef" id="_TTBGwgaUEe67FbZeN7ScBg" traceableElement="_TTBGzAaUEe67FbZeN7ScBg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_TTBGwwaUEe67FbZeN7ScBg" traceableElement="_TTBGzQaUEe67FbZeN7ScBg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_TTBGxAaUEe67FbZeN7ScBg" traceableElement="_TTBGzgaUEe67FbZeN7ScBg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_TTBGxQaUEe67FbZeN7ScBg" traceableElement="_TTBGzwaUEe67FbZeN7ScBg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_TTBGxgaUEe67FbZeN7ScBg" traceableElement="_TTBG0AaUEe67FbZeN7ScBg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_TTBGxwaUEe67FbZeN7ScBg" traceableElement="_TTBG0QaUEe67FbZeN7ScBg"/>
+  </documents>
+  <documents xsi:type="scade_req:ScadeDocument" id="_btpJsAaUEe67FbZeN7ScBg" identifier="_R7eI4PlKEe2x3NUThlstug" location="">
+    <children xsi:type="scade_req:TraceableElementRef" id="_btpJsQaUEe67FbZeN7ScBg" traceableElement="_btpJsgaUEe67FbZeN7ScBg"/>
+  </documents>
+  <traceabilityLinks id="_btpJswaUEe67FbZeN7ScBg" writable="true" source="_btpJsgaUEe67FbZeN7ScBg" target="_TTBGzAaUEe67FbZeN7ScBg"/>
+  <traceabilityLinks id="_btqX0AaUEe67FbZeN7ScBg" writable="true" source="_btpJsgaUEe67FbZeN7ScBg" target="_TTBGzQaUEe67FbZeN7ScBg"/>
+  <traceabilityLinks id="_btrl8AaUEe67FbZeN7ScBg" writable="true" source="_btpJsgaUEe67FbZeN7ScBg" target="_TTBGzgaUEe67FbZeN7ScBg"/>
+  <traceableElements id="_TTBGzAaUEe67FbZeN7ScBg" name="HLR_1 (TP-HLR-1)" identifier="https://ansys.jamacloud.com/rest/latest/items/512587" description="The system shall be A, B, and C."/>
+  <traceableElements id="_TTBGzQaUEe67FbZeN7ScBg" name="HLR_2 (TP-HLR-2)" identifier="https://ansys.jamacloud.com/rest/latest/items/512588" description="The system shall be D, E, and F."/>
+  <traceableElements id="_TTBGzgaUEe67FbZeN7ScBg" name="HLR_3 (TP-HLR-3)" identifier="https://ansys.jamacloud.com/rest/latest/items/512589" description="The system shall be G, H, and I."/>
+  <traceableElements id="_TTBGzwaUEe67FbZeN7ScBg" name="HLR_4 (TP-HLR-4)" identifier="https://ansys.jamacloud.com/rest/latest/items/957243" description="The system shall be J, K, and L."/>
+  <traceableElements id="_TTBG0AaUEe67FbZeN7ScBg" name="HLR_5 (TP-HLR-5)" identifier="https://ansys.jamacloud.com/rest/latest/items/957245" description="The system shall be M, N, and O."/>
+  <traceableElements id="_TTBG0QaUEe67FbZeN7ScBg" name="HLR_6 (TP-HLR-6)" identifier="https://ansys.jamacloud.com/rest/latest/items/957247" description="The system shall be P, Q, and R."/>
+  <traceableElements id="_btpJsgaUEe67FbZeN7ScBg" name="Package1::Constant1/" identifier="!ed/18/193/4D88/6482cfc76e5a"/>
+</scade_req:ReqProject>

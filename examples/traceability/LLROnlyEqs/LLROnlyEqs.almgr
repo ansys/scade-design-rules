@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scade_req:ReqProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scade_req="http://www.ansys.com/scade/lifecycle/almgateway/scade_req/3" id="_bUlssBptEe6dg5MAwM_e8A" name="LLROnlyEqs" identifier="D:\AnsysDev\Nobackup\Eseg\mo.ce.eu\Scade Design Rules\models\traceability\LLROnlyEqs\LLROnlyEqs.etp">
+  <documents xsi:type="scade_req:Specification" id="_bUlssRptEe6dg5MAwM_e8A" name="Requirements.docx" identifier="Requirements">
+    <children xsi:type="scade_req:TraceableElementRef" id="_bUlsshptEe6dg5MAwM_e8A" traceableElement="_bUlstRptEe6dg5MAwM_e8A"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_bUlssxptEe6dg5MAwM_e8A" traceableElement="_bUlsthptEe6dg5MAwM_e8A"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_bUlstBptEe6dg5MAwM_e8A" traceableElement="_bUlstxptEe6dg5MAwM_e8A"/>
+  </documents>
+  <documents xsi:type="scade_req:ScadeDocument" id="_wn9jsBptEe6dg5MAwM_e8A" identifier="_S05jkBptEe6dg5MAwM_e8A" location="">
+    <children xsi:type="scade_req:TraceableElementRef" id="_wn9jsRptEe6dg5MAwM_e8A" traceableElement="_wn9jshptEe6dg5MAwM_e8A"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_wn9jtBptEe6dg5MAwM_e8A" traceableElement="_wn9jtRptEe6dg5MAwM_e8A"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_wn9jtxptEe6dg5MAwM_e8A" traceableElement="_wn9juBptEe6dg5MAwM_e8A"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_wn9juhptEe6dg5MAwM_e8A" traceableElement="_wn9juxptEe6dg5MAwM_e8A"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_wn9jvRptEe6dg5MAwM_e8A" traceableElement="_wn9jvhptEe6dg5MAwM_e8A"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_wn9jwBptEe6dg5MAwM_e8A" traceableElement="_wn9jwRptEe6dg5MAwM_e8A"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_wn9jwxptEe6dg5MAwM_e8A" traceableElement="_wn9jxBptEe6dg5MAwM_e8A"/>
+  </documents>
+  <traceabilityLinks id="_wn9jsxptEe6dg5MAwM_e8A" writable="true" source="_wn9jshptEe6dg5MAwM_e8A" target="_bUlstRptEe6dg5MAwM_e8A"/>
+  <traceabilityLinks id="_wn9jthptEe6dg5MAwM_e8A" writable="true" source="_wn9jtRptEe6dg5MAwM_e8A" target="_bUlstRptEe6dg5MAwM_e8A"/>
+  <traceabilityLinks id="_wn9juRptEe6dg5MAwM_e8A" writable="true" source="_wn9juBptEe6dg5MAwM_e8A" target="_bUlstxptEe6dg5MAwM_e8A"/>
+  <traceabilityLinks id="_wn9jvBptEe6dg5MAwM_e8A" writable="true" source="_wn9juxptEe6dg5MAwM_e8A" target="_bUlsthptEe6dg5MAwM_e8A"/>
+  <traceabilityLinks id="_wn9jvxptEe6dg5MAwM_e8A" writable="true" source="_wn9jvhptEe6dg5MAwM_e8A" target="_bUlsthptEe6dg5MAwM_e8A"/>
+  <traceabilityLinks id="_wn9jwhptEe6dg5MAwM_e8A" writable="true" source="_wn9jwRptEe6dg5MAwM_e8A" target="_bUlsthptEe6dg5MAwM_e8A"/>
+  <traceabilityLinks id="_wn9jxRptEe6dg5MAwM_e8A" writable="true" source="_wn9jxBptEe6dg5MAwM_e8A" target="_bUlstRptEe6dg5MAwM_e8A"/>
+  <traceableElements id="_bUlstRptEe6dg5MAwM_e8A" name="REQ_001" identifier="REQ_001" description="The output fault shall be true when value differs from target."/>
+  <traceableElements id="_bUlsthptEe6dg5MAwM_e8A" name="REQ_002" identifier="REQ_002" description="The output alarm shall be true when fault occurs during delay consecutives cycles."/>
+  <traceableElements id="_bUlstxptEe6dg5MAwM_e8A" name="REQ_003" identifier="REQ_003" description="Once true, alarm shall be maintained until fault is false."/>
+  <traceableElements id="_wn9jshptEe6dg5MAwM_e8A" name="DetectError/DetectError/Comparison/" identifier="!ed/12525/7535/4404/64a41bce3ed4"/>
+  <traceableElements id="_wn9jtRptEe6dg5MAwM_e8A" name="AlamManager/AlarmManager/Detect Fault/" identifier="!ed/12503/7535/4404/64a41bcc2797"/>
+  <traceableElements id="_wn9juBptEe6dg5MAwM_e8A" name="AlamManager/AlarmManager/Maintain Alarm/" identifier="!ed/12504/7535/4404/64a41bccbc"/>
+  <traceableElements id="_wn9juxptEe6dg5MAwM_e8A" name="AlamManager/AlarmManager/Reset Alarm/" identifier="!ed/12505/7535/4404/64a41bcc2112"/>
+  <traceableElements id="_wn9jvhptEe6dg5MAwM_e8A" name="AlamManager/SM1:Manager:SM2:Wait:" identifier="!ed/124f6/7535/4404/64a41bcc6430"/>
+  <traceableElements id="_wn9jwRptEe6dg5MAwM_e8A" name="AlamManager/SM1:Manager:SM2:Wait:&lt;1>:" identifier="!ed/124f8/7535/4404/64a41bcc26ea"/>
+  <traceableElements id="_wn9jxBptEe6dg5MAwM_e8A" name="AlamManager/fault/" identifier="!ed/1250b/7535/4404/64a41bcc6c89"/>
+</scade_req:ReqProject>

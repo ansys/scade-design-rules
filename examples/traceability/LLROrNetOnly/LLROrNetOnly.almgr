@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scade_req:ReqProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scade_req="http://www.ansys.com/scade/lifecycle/almgateway/scade_req/3" id="_Cq6HYBpQEe6dg5MAwM_e8A" name="LLROrNetOnly" identifier="D:\AnsysDev\Nobackup\Eseg\mo.ce.eu\Scade Design Rules\models\traceability\LLROrNetOnly\LLROrNetOnly.etp">
+  <documents xsi:type="scade_req:Specification" id="_Cq6HYRpQEe6dg5MAwM_e8A" name="Requirements.docx" identifier="Requirements">
+    <children xsi:type="scade_req:TraceableElementRef" id="_Cq6HYhpQEe6dg5MAwM_e8A" traceableElement="_Cq6HZRpQEe6dg5MAwM_e8A"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_Cq6HYxpQEe6dg5MAwM_e8A" traceableElement="_Cq6HZhpQEe6dg5MAwM_e8A"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_Cq6HZBpQEe6dg5MAwM_e8A" traceableElement="_Cq6HZxpQEe6dg5MAwM_e8A"/>
+  </documents>
+  <documents xsi:type="scade_req:ScadeDocument" id="_bLRe0BpQEe6dg5MAwM_e8A" identifier="_5eOVYBpPEe6dg5MAwM_e8A" location="">
+    <children xsi:type="scade_req:TraceableElementRef" id="_bLRe0RpQEe6dg5MAwM_e8A" traceableElement="_bLRe0hpQEe6dg5MAwM_e8A"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_bLRe1BpQEe6dg5MAwM_e8A" traceableElement="_bLRe1RpQEe6dg5MAwM_e8A"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_bLRe1xpQEe6dg5MAwM_e8A" traceableElement="_bLRe2BpQEe6dg5MAwM_e8A"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_bLRe2hpQEe6dg5MAwM_e8A" traceableElement="_bLRe2xpQEe6dg5MAwM_e8A"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_bLW-YRpQEe6dg5MAwM_e8A" traceableElement="_bLW-YhpQEe6dg5MAwM_e8A"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_bLW-ZBpQEe6dg5MAwM_e8A" traceableElement="_bLW-ZRpQEe6dg5MAwM_e8A"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_bLW-ZxpQEe6dg5MAwM_e8A" traceableElement="_bLW-aBpQEe6dg5MAwM_e8A"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_bLW-ahpQEe6dg5MAwM_e8A" traceableElement="_bLW-axpQEe6dg5MAwM_e8A"/>
+  </documents>
+  <traceabilityLinks id="_bLRe0xpQEe6dg5MAwM_e8A" writable="true" source="_bLRe0hpQEe6dg5MAwM_e8A" target="_Cq6HZRpQEe6dg5MAwM_e8A"/>
+  <traceabilityLinks id="_bLRe1hpQEe6dg5MAwM_e8A" writable="true" source="_bLRe1RpQEe6dg5MAwM_e8A" target="_Cq6HZRpQEe6dg5MAwM_e8A"/>
+  <traceabilityLinks id="_bLRe2RpQEe6dg5MAwM_e8A" writable="true" source="_bLRe2BpQEe6dg5MAwM_e8A" target="_Cq6HZRpQEe6dg5MAwM_e8A"/>
+  <traceabilityLinks id="_bLRe3BpQEe6dg5MAwM_e8A" writable="true" source="_bLRe2xpQEe6dg5MAwM_e8A" target="_Cq6HZhpQEe6dg5MAwM_e8A"/>
+  <traceabilityLinks id="_bLW-YBpQEe6dg5MAwM_e8A" writable="true" source="_bLRe2xpQEe6dg5MAwM_e8A" target="_Cq6HZxpQEe6dg5MAwM_e8A"/>
+  <traceabilityLinks id="_bLW-YxpQEe6dg5MAwM_e8A" writable="true" source="_bLW-YhpQEe6dg5MAwM_e8A" target="_Cq6HZhpQEe6dg5MAwM_e8A"/>
+  <traceabilityLinks id="_bLW-ZhpQEe6dg5MAwM_e8A" writable="true" source="_bLW-ZRpQEe6dg5MAwM_e8A" target="_Cq6HZhpQEe6dg5MAwM_e8A"/>
+  <traceabilityLinks id="_bLW-aRpQEe6dg5MAwM_e8A" writable="true" source="_bLW-aBpQEe6dg5MAwM_e8A" target="_Cq6HZxpQEe6dg5MAwM_e8A"/>
+  <traceabilityLinks id="_bLW-bBpQEe6dg5MAwM_e8A" writable="true" source="_bLW-axpQEe6dg5MAwM_e8A" target="_Cq6HZxpQEe6dg5MAwM_e8A"/>
+  <traceableElements id="_Cq6HZRpQEe6dg5MAwM_e8A" name="REQ_001" identifier="REQ_001" description="The output fault shall be true when value differs from target."/>
+  <traceableElements id="_Cq6HZhpQEe6dg5MAwM_e8A" name="REQ_002" identifier="REQ_002" description="The output alarm shall be true when fault occurs during delay consecutives cycles."/>
+  <traceableElements id="_Cq6HZxpQEe6dg5MAwM_e8A" name="REQ_003" identifier="REQ_003" description="Once true, alarm shall be maintained until fault is false."/>
+  <traceableElements id="_bLRe0hpQEe6dg5MAwM_e8A" name="AlamManager/fault/" identifier="!ed/12309/7535/4404/64a3eac854a4"/>
+  <traceableElements id="_bLRe1RpQEe6dg5MAwM_e8A" name="AlamManager/AlarmManager/Detect/" identifier="!ed/12303/7535/4404/64a3eac825f6"/>
+  <traceableElements id="_bLRe2BpQEe6dg5MAwM_e8A" name="DetectError/DetectError/" identifier="!ed/12322/7535/4404/64a3eaca415d"/>
+  <traceableElements id="_bLRe2xpQEe6dg5MAwM_e8A" name="AlamManager/SM1:Manager:" identifier="!ed/122f2/7535/4404/64a3eac84c01"/>
+  <traceableElements id="_bLW-YhpQEe6dg5MAwM_e8A" name="AlamManager/SM1:Manager:SM2:Wait:" identifier="!ed/122f4/7535/4404/64a3eac844c1"/>
+  <traceableElements id="_bLW-ZRpQEe6dg5MAwM_e8A" name="AlamManager/SM1:Manager:SM2:Wait:&lt;1>:" identifier="!ed/122f8/7535/4404/64a3eac861f4"/>
+  <traceableElements id="_bLW-aBpQEe6dg5MAwM_e8A" name="AlamManager/SM1:Manager:SM2:Alarm:" identifier="!ed/122f9/7535/4404/64a3eac82fee"/>
+  <traceableElements id="_bLW-axpQEe6dg5MAwM_e8A" name="AlamManager/SM1:Manager:&lt;1>:" identifier="!ed/122fd/7535/4404/64a3eac84028"/>
+</scade_req:ReqProject>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scade_req:ReqProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scade_req="http://www.ansys.com/scade/lifecycle/almgateway/scade_req/3" id="_poHdIKJSEe2YEZvNyvvdtg" name="LLROrNetOnly" identifier="D:\AnsysDev\Nobackup\Eseg\mo.ce.eu\Scade Design Rules\tests\traceability\LLROrNetOnly\LLROrNetOnly.etp">
+  <documents xsi:type="scade_req:Specification" id="_poIrQKJSEe2YEZvNyvvdtg" name="Reqs.docx" identifier="Reqs">
+    <children xsi:type="scade_req:TraceableElementRef" id="_poIrQaJSEe2YEZvNyvvdtg" traceableElement="_poIrQ6JSEe2YEZvNyvvdtg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_poIrQqJSEe2YEZvNyvvdtg" traceableElement="_poIrRKJSEe2YEZvNyvvdtg"/>
+  </documents>
+  <documents xsi:type="scade_req:ScadeDocument" id="_-xu7MKJSEe2YEZvNyvvdtg" identifier="_nt4lEKJSEe2YEZvNyvvdtg" location="">
+    <children xsi:type="scade_req:TraceableElementRef" id="_-xu7MaJSEe2YEZvNyvvdtg" traceableElement="_-xu7MqJSEe2YEZvNyvvdtg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_-xviQKJSEe2YEZvNyvvdtg" traceableElement="_-xviQaJSEe2YEZvNyvvdtg"/>
+  </documents>
+  <traceabilityLinks id="_-xu7M6JSEe2YEZvNyvvdtg" writable="true" source="_-xu7MqJSEe2YEZvNyvvdtg" target="_poIrQ6JSEe2YEZvNyvvdtg"/>
+  <traceabilityLinks id="_-xviQqJSEe2YEZvNyvvdtg" writable="true" source="_-xviQaJSEe2YEZvNyvvdtg" target="_poIrRKJSEe2YEZvNyvvdtg"/>
+  <traceableElements id="_poIrQ6JSEe2YEZvNyvvdtg" name="TRA1_REQ_006" identifier="TRA1_REQ_006" description="An equation set shall contain at least one equation."/>
+  <traceableElements id="_poIrRKJSEe2YEZvNyvvdtg" name="TRA1_REQ_007" identifier="TRA1_REQ_007" description="Traceable elements tracing requirements shall be LLRs."/>
+  <traceableElements id="_-xu7MqJSEe2YEZvNyvvdtg" name="P::O/Nok1/" identifier="!ed/9d/2EBE/3FBC/63da9b94664e"/>
+  <traceableElements id="_-xviQaJSEe2YEZvNyvvdtg" name="P::O/Ok2/" identifier="!ed/95/2EBE/3FBC/63da9b925ff9"/>
+</scade_req:ReqProject>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scade_req:ReqProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scade_req="http://www.ansys.com/scade/lifecycle/almgateway/scade_req/3" id="_XIyfoMu9Eey6CdMAZpx6HQ" name="LLROnly" identifier="D:\AnsysDev\Nobackup\Eseg\mo.ce.eu\Scade Design Rules\tests\traceability\LLROnly\LLROnly.etp">
+  <documents xsi:type="scade_req:Specification" id="_XIztwMu9Eey6CdMAZpx6HQ" name="Reqs.docx" identifier="Reqs">
+    <children xsi:type="scade_req:TraceableElementRef" id="_XIztwcu9Eey6CdMAZpx6HQ" traceableElement="_XIztw8u9Eey6CdMAZpx6HQ"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_XIztwsu9Eey6CdMAZpx6HQ" traceableElement="_XIztxMu9Eey6CdMAZpx6HQ"/>
+  </documents>
+  <documents xsi:type="scade_req:ScadeDocument" id="_JHkzoFksEe6W79H004fnMw" identifier="_RDG60Mu9Eey6CdMAZpx6HQ" location="">
+    <children xsi:type="scade_req:TraceableElementRef" id="_JHkzoVksEe6W79H004fnMw" traceableElement="_JHkzolksEe6W79H004fnMw"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_JHlasFksEe6W79H004fnMw" traceableElement="_JHlasVksEe6W79H004fnMw"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_JHnP4FksEe6W79H004fnMw" traceableElement="_JHnP4VksEe6W79H004fnMw"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_JHoeAFksEe6W79H004fnMw" traceableElement="_JHoeAVksEe6W79H004fnMw"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_JHpFEFksEe6W79H004fnMw" traceableElement="_JHpFEVksEe6W79H004fnMw"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_JHpsIFksEe6W79H004fnMw" traceableElement="_JHpsIVksEe6W79H004fnMw"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_JHqTMFksEe6W79H004fnMw" traceableElement="_JHqTMVksEe6W79H004fnMw"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_JHq6QFksEe6W79H004fnMw" traceableElement="_JHq6QVksEe6W79H004fnMw"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_JHrhUFksEe6W79H004fnMw" traceableElement="_JHrhUVksEe6W79H004fnMw"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_JHsIYFksEe6W79H004fnMw" traceableElement="_JHsIYVksEe6W79H004fnMw"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_JHsvcFksEe6W79H004fnMw" traceableElement="_JHsvcVksEe6W79H004fnMw"/>
+  </documents>
+  <traceabilityLinks id="_JHkzo1ksEe6W79H004fnMw" writable="true" source="_JHkzolksEe6W79H004fnMw" target="_XIztw8u9Eey6CdMAZpx6HQ"/>
+  <traceabilityLinks id="_JHlaslksEe6W79H004fnMw" writable="true" source="_JHlasVksEe6W79H004fnMw" target="_XIztw8u9Eey6CdMAZpx6HQ"/>
+  <traceabilityLinks id="_JHmo0FksEe6W79H004fnMw" writable="true" source="_JHlasVksEe6W79H004fnMw" target="_XIztxMu9Eey6CdMAZpx6HQ"/>
+  <traceabilityLinks id="_JHnP4lksEe6W79H004fnMw" writable="true" source="_JHnP4VksEe6W79H004fnMw" target="_XIztw8u9Eey6CdMAZpx6HQ"/>
+  <traceabilityLinks id="_JHoeAlksEe6W79H004fnMw" writable="true" source="_JHoeAVksEe6W79H004fnMw" target="_XIztxMu9Eey6CdMAZpx6HQ"/>
+  <traceabilityLinks id="_JHpFElksEe6W79H004fnMw" writable="true" source="_JHpFEVksEe6W79H004fnMw" target="_XIztxMu9Eey6CdMAZpx6HQ"/>
+  <traceabilityLinks id="_JHpsIlksEe6W79H004fnMw" writable="true" source="_JHpsIVksEe6W79H004fnMw" target="_XIztw8u9Eey6CdMAZpx6HQ"/>
+  <traceabilityLinks id="_JHqTMlksEe6W79H004fnMw" writable="true" source="_JHqTMVksEe6W79H004fnMw" target="_XIztw8u9Eey6CdMAZpx6HQ"/>
+  <traceabilityLinks id="_JHq6QlksEe6W79H004fnMw" writable="true" source="_JHq6QVksEe6W79H004fnMw" target="_XIztxMu9Eey6CdMAZpx6HQ"/>
+  <traceabilityLinks id="_JHrhUlksEe6W79H004fnMw" writable="true" source="_JHrhUVksEe6W79H004fnMw" target="_XIztw8u9Eey6CdMAZpx6HQ"/>
+  <traceabilityLinks id="_JHsIYlksEe6W79H004fnMw" writable="true" source="_JHsIYVksEe6W79H004fnMw" target="_XIztxMu9Eey6CdMAZpx6HQ"/>
+  <traceabilityLinks id="_JHsvclksEe6W79H004fnMw" writable="true" source="_JHsvcVksEe6W79H004fnMw" target="_XIztw8u9Eey6CdMAZpx6HQ"/>
+  <traceableElements id="_XIztw8u9Eey6CdMAZpx6HQ" name="TRA1_REQ_006" identifier="TRA1_REQ_006" description="An equation set shall contain at least one equation."/>
+  <traceableElements id="_XIztxMu9Eey6CdMAZpx6HQ" name="TRA1_REQ_007" identifier="TRA1_REQ_007" description="Traceable elements tracing requirements shall be LLRs."/>
+  <traceableElements id="_JHkzolksEe6W79H004fnMw" name="P::O/" identifier="!ed/18/2B37/9FF8/627299284b7b"/>
+  <traceableElements id="_JHlasVksEe6W79H004fnMw" name="P::O/o/" identifier="!ed/23/2B37/9FF8/6272993b21a5"/>
+  <traceableElements id="_JHnP4VksEe6W79H004fnMw" name="P::O/IfBlock1:" identifier="!ed/2c/2B37/9FF8/627299654e1a"/>
+  <traceableElements id="_JHoeAVksEe6W79H004fnMw" name="P::O/IfBlock1:else:" identifier="!ed/33/2B37/9FF8/627299665cb8"/>
+  <traceableElements id="_JHpFEVksEe6W79H004fnMw" name="P::O/Graphical/EquationSet1/" identifier="!ed/3f/2B37/9FF8/62729bff10bb"/>
+  <traceableElements id="_JHpsIVksEe6W79H004fnMw" name="P::O/Textual/" identifier="!ed/45/2B37/9FF8/62729c2b27e3"/>
+  <traceableElements id="_JHqTMVksEe6W79H004fnMw" name="P::O/SM1:State3:" identifier="!ed/56/2B37/9FF8/62729c4912a8"/>
+  <traceableElements id="_JHq6QVksEe6W79H004fnMw" name="P::O/SM1:State1:&lt;2>:" identifier="!ed/68/2B37/9FF8/62729c6e54f2"/>
+  <traceableElements id="_JHrhUVksEe6W79H004fnMw" name="P::O/SM1:State1:&lt;1>:" identifier="!ed/60/2B37/9FF8/62729c5f64ed"/>
+  <traceableElements id="_JHsIYVksEe6W79H004fnMw" name="P::O/SM1:State1:&lt;1.1>:" identifier="!ed/65/2B37/9FF8/62729c6879af"/>
+  <traceableElements id="_JHsvcVksEe6W79H004fnMw" name="P::O/SM1:" identifier="!ed/40/2B37/9FF8/62729c197b6a"/>
+</scade_req:ReqProject>

@@ -245,7 +245,6 @@ cython_debug/
 *.ewo
 *.err
 *.synchro
-*.almgr
 *.llrs
 *.reqs
 *.cfg
