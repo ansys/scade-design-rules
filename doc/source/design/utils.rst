@@ -78,7 +78,7 @@ can declare a violation for an element, and provide an OID associated to a
 local one determined by the rule itself.
 This is achieved with the ``add_rule_status`` method.
 
-For example, let's consider a rule that checks that the wires don't have more
+For example, consider a rule that checks that the wires don't have more
 than 4 intermediate points. This rule can register to equations and always
 return ``Rule.NA``. It checks all the outgoing edges of the equation and
 reports each violation using ``add_rule_status`` with the equation's OID and
