@@ -30,7 +30,7 @@ One use case could be to ensure that the model can be run on an embedded target 
 
 Verification
 ------------
-This rule recursively checks types, variables, constants and expressions throughout the model for any use of ``float32`` or ``float64``, and fails if any is found.
+This rule recursively checks types, variables, constants, and expressions throughout the model for any use of ``float32`` or ``float64``, and fails if any is found.
 
 Resolution
 ----------

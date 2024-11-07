@@ -1,10 +1,10 @@
-.. index:: single: Has Link Or Part Of Equationset
+.. index:: single: Has Link Or Part Of Equation Set
 
-Has Link Or Part Of Equationset
-===============================
+Has Link Or Part Of Equation Set
+================================
 
 .. rule::
-   :filename: has_link_or_part_of_equationset.py
+   :filename: has_link_or_part_of_equation_set.py
    :class: HasLinkOrPartOfEquationSet
    :id: id_0026
    :reference: n/a
@@ -18,7 +18,7 @@ Description
 
 .. start_description
 
-This rule checks if the element(s) have traceability links via the ALM Gateway or is part of an Equation Set
+This rule checks if the elements have traceability links via the ALM Gateway or is part of an Equation Set
 
 .. end_description
 
@@ -31,7 +31,7 @@ This is a variation of rule :ref:`Has Link <RuleHasLink>`.
 
 Verification
 ------------
-This rules checks all constants, operators, diagrams and equation sets throughout the model.
+This rules checks all constants, operators, diagrams, and equation sets throughout the model.
 
 The rule fails if it finds an element with no linked requirement.
 

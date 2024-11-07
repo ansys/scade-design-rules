@@ -19,7 +19,7 @@ Description
 .. start_description
 
 Interface data types from public operators are taken from Data Type Library project/model.
-parameter: list of models separated by comma: e.g.: 'DataTypesLibs_Suite, ...'
+parameter: list of models separated by comma: e.g.: 'DataTypesLibs_Suite, etc.'
 
 .. end_description
 

@@ -18,7 +18,7 @@ Package names shall be short (at most 10 characters for example).
 
 .. end_description
 
-If the length limit is not specified, they shall be acronyms, e.g. uppercase letters/digits only, no ``'_'`` (underscore).
+If the length limit is not specified, they shall be acronyms, for example uppercase letters/digits only, no ``'_'`` (underscore).
 Otherwise, they shall comply to the Pascal case naming convention.
 
 The parameter defines the length limit with the following syntax: ``<length limit>`` (default value: ``10``).

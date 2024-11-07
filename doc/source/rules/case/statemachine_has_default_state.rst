@@ -1,7 +1,7 @@
-.. index:: single: Statemachine Has Default State
+.. index:: single: State Machine Has Default State
 
-Statemachine Has Default State
-==============================
+State Machine Has Default State
+===============================
 
 .. rule::
    :filename: statemachine_has_default_state.py

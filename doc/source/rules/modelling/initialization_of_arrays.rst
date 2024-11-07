@@ -19,7 +19,7 @@ Description
 .. start_description
 
 If all elements of an array are identical the initialization shall be done like this: value ^size
-Note: An initialization such as ' ', ' ', ' ', ... leads to more memory usage than ' ' ^n.
+Note: An initialization such as ' ', ' ', ' ', etc. leads to more memory usage than ' ' ^n.
 
 .. end_description
 
@@ -34,11 +34,22 @@ Enforcing a ``value^N`` notation ensures model file size and loading times are o
 
 Verification
 ------------
+
+.. vale off
+   avoid warning on ...
+
 This rule registers to predefined data array initialization expressions.
 It raises a violation when an array is initialized with a ``[value, value, ...]``
 notation that uses the same value for each item.
 
+.. vale on
+
+  .. vale off
+    avoid warning on ...
+
   Message: ``Use <value>^<array_length> instead of [<value>, ...]``
+
+  .. vale on
 
 Resolution
 ----------

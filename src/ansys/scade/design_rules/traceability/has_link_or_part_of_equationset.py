@@ -49,7 +49,7 @@ class HasLinkOrPartOfEquationSet(Rule):
         severity=Rule.REQUIRED,
         kinds=None,
         description=(
-            'This rule checks if the element(s) have traceability links '
+            'This rule checks if the elements have traceability links '
             'via the ALM Gateway or is part of an Equation Set'
         ),
         label='Has traceability link',

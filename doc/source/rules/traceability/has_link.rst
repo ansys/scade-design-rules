@@ -18,7 +18,7 @@ Description
 
 .. start_description
 
-This rule checks if the element(s) have traceability links via the ALM Gateway.
+This rule checks if the elements have traceability links via the ALM Gateway.
 
 .. end_description
 
@@ -31,7 +31,7 @@ This is a variation of rule :ref:`Has Link Or Part Of Equationset <RuleHasLinkOr
 
 Verification
 ------------
-This rules checks all constants, operators, diagrams and equation sets throughout the model.
+This rules checks all constants, operators, diagrams, and equation sets throughout the model.
 
 The rule fails if it finds an element with no linked requirement.
 

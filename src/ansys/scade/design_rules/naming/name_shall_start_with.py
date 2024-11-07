@@ -46,7 +46,9 @@ class NameShallStartWith(Rule):
         severity=Rule.REQUIRED,
         parameter='eq_',
         types=None,
-        description="Name shall start with 'parameter'\n" "parameter: starting string e.g. 'eq_'",
+        description=(
+            "Name shall start with 'parameter'.\nParameter: starting string, for example: 'eq_'"
+        ),
         label='Name shall start with',
     ):
         if not types:

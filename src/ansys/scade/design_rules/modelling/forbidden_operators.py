@@ -48,7 +48,7 @@ class ForbiddenOperators(Rule):
         parameter='45, 28',
         description=(
             'Specific predefined SCADE operators shall not be used: merge (45) and When (28).\n'
-            'parameter: comma separated list of operator IDs: e.g.: 45,28,...'
+            'parameter: comma separated list of operator IDs, for example.: 45,28'
         ),
         label='Forbidden Operators',
     ):

@@ -20,7 +20,7 @@ Description
 
 Overlapping of edges with edges or other elements shall be prevented.
 Element overlapping is prevented by SCADE editor.
-Setting the parameter to lines=no will no longer report edges crossing edges.
+Setting the parameter to lines=no does not report edges crossing edges.
 
 .. end_description
 

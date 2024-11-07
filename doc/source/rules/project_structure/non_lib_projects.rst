@@ -18,7 +18,7 @@ Description
 
 .. start_description
 
-This rule checks if all non-top-level operators, types and constants of Non-'Lib' projects are located in other packages nested within the root package
+This rule checks if all non-top-level operators, types, and constants of Non-'Lib' projects are located in other packages nested within the root package
 
 .. end_description
 
@@ -33,7 +33,7 @@ Verification
 ------------
 This rule skips all checks if the current project's name starts with the expected prefix for a library.
 
-For non-library projects, the rule checks all packages, types and constants in the model. It fails if:
+For non-library projects, the rule checks all packages, types, and constants in the model. It fails if:
 
 * The root package contains more than one operator.
 * The root package contains a type or constant that is unused by the root operator.

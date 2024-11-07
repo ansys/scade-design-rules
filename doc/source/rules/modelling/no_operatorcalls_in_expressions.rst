@@ -1,7 +1,7 @@
-.. index:: single: No Operatorcalls In Expressions
+.. index:: single: No Operator Calls In Expressions
 
-No Operatorcalls In Expressions
-===============================
+No Operator Calls In Expressions
+================================
 
 .. rule::
    :filename: no_operatorcalls_in_expressions.py
@@ -21,12 +21,12 @@ Description
 No operator calls within textual expressions.
 This rule does not apply for Constants and Transition/IfNode conditions.
 Exceptions on main level can be given as parameters.
-parameter: operator IDs separated by comma: e.g.: '18,...'
+parameter: operator IDs separated by comma: e.g.: '18'
 
 .. end_description
 
 The rule parameter is a comma-separated string containing predefined operators identifiers that are allowed to be called from within textual expressions.
-Available identifiers are documented in the SCADE Python API guide, under section "Access to Predefined Operators in Python". Default value is ``18`` (array projection operator).
+Available identifiers are documented in the SCADE Python API guide, under section *Access to Predefined Operators in Python*. Default value is ``18`` (array projection operator).
 
 Rationale
 ---------
@@ -42,7 +42,7 @@ and that is **not** part of the list of authorized operators.
 
 Resolution
 ----------
-Modify the offending textual expression to remove the offending call, or reimplement it as a graphical diagram.
+Modify the offending textual expression to remove the offending call, or redesign it as a graphical diagram.
 
 Customization
 -------------

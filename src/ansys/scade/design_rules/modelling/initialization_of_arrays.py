@@ -47,7 +47,7 @@ class InitializationOfArrays(Rule):
         description=(
             'If all elements of an array are identical the initialization shall be '
             'done like this: value ^size\n'
-            "Note: An initialization such as ' ', ' ', ' ', ... "
+            "Note: An initialization such as ' ', ' ', ' ', etc. "
             "leads to more memory usage than ' ' ^n."
         ),
         label='Initialization of Arrays',

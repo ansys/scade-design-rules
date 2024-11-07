@@ -24,7 +24,7 @@ This rule does not apply for Constants and not for Types
 .. end_description
 
 The rule parameter is a comma-separated string containing predefined operators to check for calls with only constant inputs.
-Available identifiers are documented in the SCADE Python API guide, under section "Access to Predefined Operators in Python".
+Available identifiers are documented in the SCADE Python API guide, under section *Access to Predefined Operators in Python*.
 Default parameter value lists all predefined operators, except the ones that are dynamic in nature (such as the ``pre`` operator).
 
 Rationale

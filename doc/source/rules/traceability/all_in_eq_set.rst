@@ -14,18 +14,18 @@ Element in Equation Set
 
 Description
 -----------
-The elements, except actions, assertions and control blocks, shall belong to at least one equation set, except following use case:
+The elements, except actions, assertions, and control blocks, shall belong to at least one equation set, except following use case:
 
 * The element is text: textual diagram, textual scope
 
 Rationale
 ---------
-This ensures the completeness of the traceability matrices once the CEs, e.g. equation sets,
-are exported through SCADE ALM Gateway. Indeed, the listed elements are not CEs and thus, must belong to an equation set.
+This ensures the completeness of the traceability matrices once the Contribution Elements (CE), for example equation sets,
+are exported through SCADE ALM Gateway. Indeed, the listed elements are not CE and thus, must belong to an equation set.
 
 Verification
 ------------
-The rule registers to the listed elements (equations, branches, states and transitions),
+The rule registers to the listed elements (equations, branches, states, and transitions),
 and raises a violation when the following conditions are satisfied:
 
 * The element has a graphical representation

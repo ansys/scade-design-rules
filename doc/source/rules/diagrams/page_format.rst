@@ -19,7 +19,7 @@ Description
 .. start_description
 
 This rule checks if the page format is set properly.
-param1: format=A3 A4 B5 ...
+param1: format=A3 A4 B5 etc.
 param2: orientation=Portrait Landscape
 e.g.: format=A3,orientation=Landscape
 

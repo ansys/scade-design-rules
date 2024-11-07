@@ -47,7 +47,7 @@ class NameStructureEnumeration(Rule):
         severity=Rule.REQUIRED,
         parameter='_e',
         description=(
-            'Enumeration shall be in capital letters and start/end with specific characters. '
+            'Enumeration shall be in capital letters and start/end with specific characters.\n'
             'In addition a three letter abbreviation of the corresponding type shall be available. '
             'COL_BLACK_e, e_COL_BLACK'
         ),

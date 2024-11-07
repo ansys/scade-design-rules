@@ -50,7 +50,7 @@ class CommentHasSpecificHeadlines(Rule):
         types=None,
         description=(
             'The comment of an object shall have specific headlines defined in parameter.\n'
-            'parameter: comma separated list of headlines: e.g.: Purpose,Algorithm,...'
+            'parameter: comma separated list of headlines, for example: Purpose, Algorithm'
         ),
     ):
         if not types:

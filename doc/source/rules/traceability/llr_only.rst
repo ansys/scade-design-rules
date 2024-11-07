@@ -10,11 +10,11 @@ Tracing Elements
    :reference: TRA_REQ_007
    :tags: scade_llr
 
-   Tracing elements must be CEs
+   Tracing elements must be Contribution Elements
 
 Description
 -----------
-The model elements tracing requirements shall be CEs.
+The model elements tracing requirements shall be Contribution Elements (CE).
 
 .. end_description
 
@@ -25,12 +25,12 @@ The model elements tracing requirements shall be CEs.
 
 Rationale
 ---------
-This ensures the consistency of the traceability matrices: The SCADE ALM Gateway exports only the elements defined as CEs.
+This ensures the consistency of the traceability matrices: The SCADE ALM Gateway exports only the elements defined as CE.
 
 Verification
 ------------
 The rule registers to the elements that can have traceability links
-and raises a violation when an element which is not CE has link(s) to high level requirements.
+and raises a violation when an element which is not CE has links to high level requirements.
 
 Message: ``the element is not a CE: it shall not trace the requirement(s) <list of requirements ids>``
 

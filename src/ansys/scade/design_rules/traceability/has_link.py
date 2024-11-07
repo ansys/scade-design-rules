@@ -47,7 +47,7 @@ class HasLink(Rule):
         severity=Rule.REQUIRED,
         kinds=None,
         description=(
-            'This rule checks if the element(s) have traceability links via the ALM Gateway.'
+            'This rule checks if the elements have traceability links via the ALM Gateway.'
         ),
         label='Has traceability link',
     ):

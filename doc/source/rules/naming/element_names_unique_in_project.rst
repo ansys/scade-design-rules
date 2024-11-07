@@ -34,7 +34,7 @@ The rule registers to constants and raises a violation when a name is used by an
 
 Resolution
 ----------
-Rename the offending constants to ensure unicity.
+Rename the offending constants to ensure uniqueness.
 
 Customization
 -------------

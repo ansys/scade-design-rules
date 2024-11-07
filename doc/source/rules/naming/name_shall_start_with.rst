@@ -19,7 +19,7 @@ Description
 .. start_description
 
 Name shall start with 'parameter'
-parameter: starting string e.g. 'eq\_'
+parameter: starting string, for example: 'eq\_'
 
 .. end_description
 

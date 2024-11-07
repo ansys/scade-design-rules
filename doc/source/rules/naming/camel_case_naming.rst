@@ -25,10 +25,14 @@ Exceptions:
 * Scade keywords shall be suffixed by a trailing underscore ``_``, for example: ``state_``, ``sensor_``, etc.
 * It is allowed to keep uppercase letters for acronyms of two words. Acronym of three letters or more shall use the pascal case convention, for example:
 
+  .. vale off
+
   * systemIO --> System, IO
   * piController --> PI, Controller
   * enginePid --> Engine, PID
   * enginePID1 --> Engine, PI, D1
+
+  .. vale on
 
 This rules applies to the following elements:
 

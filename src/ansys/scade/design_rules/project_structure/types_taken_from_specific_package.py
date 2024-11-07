@@ -50,7 +50,7 @@ class TypesTakenFromSpecificPackage(Rule):
         label='Types from specific package',
         description=(
             'Interface data types from public operators are taken from specific packages.\n'
-            "parameter: list of packages separated by comma: e.g.: 'CHM, ...'"
+            "parameter: list of packages separated by comma: e.g.: 'CHM, etc.'"
         ),
     ):
         super().__init__(

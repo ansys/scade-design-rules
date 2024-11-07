@@ -50,7 +50,7 @@ class TypesTakenFromSpecificProject(Rule):
         description=(
             'Interface data types from public operators are taken from '
             'Data Type Library project/model.\n'
-            "parameter: list of models separated by comma: e.g.: 'DataTypesLibs_Suite, ...'"
+            "parameter: list of models separated by comma: e.g.: 'DataTypesLibs_Suite, etc.'"
         ),
         label='Types from specific model/project',
     ):

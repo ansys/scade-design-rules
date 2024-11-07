@@ -50,9 +50,9 @@ class PageFormat(Rule):
         types=None,
         description=(
             'This rule checks if the page format is set properly.\n'
-            'param1: format=A3 A4 B5 ...\n'
+            'param1: format=A3 A4 B5 etc.\n'
             'param2: orientation=Portrait Landscape\n'
-            'e.g.: format=A3,orientation=Landscape'
+            'For example: format=A3,orientation=Landscape'
         ),
     ):
         if not types:

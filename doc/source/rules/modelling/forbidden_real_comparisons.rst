@@ -45,7 +45,7 @@ Verification
 The rule registers to the operator calls, and raises a violation for each call which satisfies all these conditions:
 
 1. The called operator is one of those listed in the rule's parameter
-2. One of the operands is float, e.g. ``float32`` or ``float64``.
+2. One of the operands is float, for example ``float32`` or ``float64``.
 
 Message: ``Real comparison in <expression>``
 

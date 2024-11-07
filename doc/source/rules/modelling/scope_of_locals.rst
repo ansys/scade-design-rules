@@ -27,7 +27,7 @@ In the example below, the local variable ``local`` is declared in the operator's
 
 Verification
 ------------
-The rule registers to the flows of a Scade model, e.g. local variables, and raises a violation for each flow which is not declared in the least common scope of its references.
+The rule registers to the flows of a Scade model, for example local variables, and raises a violation for each flow which is not declared in the least common scope of its references.
 
 Message: ``The local variable <variable name> shall be declared in its least common scope <scope path>``.
 

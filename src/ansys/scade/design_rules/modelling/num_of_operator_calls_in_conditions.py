@@ -65,7 +65,7 @@ class NumOfOperatorCallsInConditions(Rule):
             'Number of logical/comparison operator calls within conditions at '
             'Transitions or IfNodes.\n'
             'Number and Exceptions given as parameters: '
-            "'calls=number,exc=op1;op2;...'"
+            "'calls=number,exc=op1;op2;etc.'"
         ),
         label='Number of operator calls in conditions',
     ):

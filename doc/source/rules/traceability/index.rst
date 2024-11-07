@@ -19,7 +19,7 @@ SCADE Suite CE
 --------------
 cf. `ESEG-EN-072`_, section 3.4
 
-*TRA_REQ_001*: The CEs are:
+*TRA_REQ_001*: The Contribution Elements are:
 
 * Equation sets
 * States
@@ -35,7 +35,7 @@ Only Equation Sets
 ------------------
 cf. `ESEG-EN-072`_, section 3.5.1
 
-*TRA_REQ_001_2*: The CEs are:
+*TRA_REQ_001_2*: The Contribution Elements are:
 
 * Equation sets
 * Textual diagrams
@@ -49,7 +49,7 @@ Diagrams or Equation Sets
 -------------------------
 cf. `ESEG-EN-072`_, section 3.5.2
 
-*TRA_REQ_001_3*: The CEs are:
+*TRA_REQ_001_3*: The Contribution Elements are:
 
 * Equation sets
 * States

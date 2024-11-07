@@ -28,7 +28,7 @@ Rationale
 ---------
 This enforces compliance with a specific modeling standard by ensuring that each defined constant and type is used at least once in the model.
 
-The intent is to avoid unnecessary definitions. The rule ignores constants marked as externally-used,
+The intent is to avoid unnecessary definitions. The rule ignores constants marked as externally used,
 as they may not meant to be used directly in the model (for instance, in the case of a library).
 
 Verification

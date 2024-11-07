@@ -1,7 +1,7 @@
-.. index:: single: Number Of Nested Sms
+.. index:: single: Number Of Nested State Machines
 
-Number Of Nested Sms
-====================
+Number Of Nested State Machines
+===============================
 
 .. rule::
    :filename: number_of_nested_sms.py

@@ -24,7 +24,7 @@ An equation set shall contain only:
 Rationale
 ---------
 An equation set can contain any element displayed in a graphical diagram.
-This rule avoids having CEs, for example a state or a transition, included in another CE.
+This rule avoids having Contribution Elements (CE), for example a state or a transition, included in another CE.
 
 Verification
 ------------

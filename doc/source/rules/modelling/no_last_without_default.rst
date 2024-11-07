@@ -28,7 +28,7 @@ Rationale
 ---------
 This improves model readability by ensuring that redundant assignments are avoided.
 
-In this case, using the SCADE IDE to set "Last" to "True" on a variable or signal ensures that the previous value will be used.
+In this case, using the SCADE IDE to set "Last" to "True" on a variable or signal ensures that the previous value is used.
 There is no need to add an equation writing ``last 'variable`` into it.
 
 Verification

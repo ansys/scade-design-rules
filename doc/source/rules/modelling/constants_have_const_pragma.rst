@@ -24,7 +24,8 @@ Constants have the const pragma set.
 
 Rationale
 ---------
-This enforces compliance with a specific modeling standard by ensuring that constants make use of the "Const" pragma. This means that, in the generated C code, constants will be declared as ``const`` instead of ``#define`` macros.
+This enforces compliance with a specific modeling standard by ensuring that constants make use of the ``const`` pragma.
+This means that, in the generated C code, constants are declared as ``const`` instead of ``#define`` macros.
 
 One possible use case is to ensure style homogeneity of the KCG-generated C code with external code with which it is meant to be integrated.
 

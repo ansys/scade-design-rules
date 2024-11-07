@@ -1,7 +1,7 @@
-.. index:: single: No Bool Comparison
+.. index:: single: No Boolean Comparison
 
-No Bool Comparison
-==================
+No Boolean Comparison
+=====================
 
 .. rule::
    :filename: no_bool_comparison.py

@@ -36,7 +36,7 @@ In the example below, which replaces a character in a string, the value of ``old
 Verification
 ----------------
 
-The rule registers to the flows of a Scade model, e.g. local variables, and raises a violation for each flow which satisfies all these conditions:
+The rule registers to the flows of a Scade model, for example local variables, and raises a violation for each flow which satisfies all these conditions:
 
 1. Is a pointer
 2. Is referenced more than once in a scope
@@ -64,6 +64,6 @@ Customization
 When the identification of pointer types by a regular expression is not suitable,
 it is possible to derive a new class from ``NoPointerBranch`` and override the function ``is_type_pointer``.
 
-Either hardcode the alternative algorithm or extend the parameterization of the rule with a new field for the parameter and cache its value in the function ``on_start``.
+Either hard-code the alternative algorithm or extend the parameterization of the rule with a new field for the parameter and cache its value in the function ``on_start``.
 
 For example: ``types=<regular expression>, note=<note type name>``.

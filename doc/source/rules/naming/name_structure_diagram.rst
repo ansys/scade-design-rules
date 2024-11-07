@@ -14,7 +14,7 @@ Diagram Name
 
 Description
 -----------
-When there are several diagrams in a scope, the name of each diagram shall be characteristic of its functionality.
+When there are several diagrams in a scope, the name of each diagram shall be characteristic of its function.
 Otherwise the default name created by the editor shall be updated to the name of its scope.
 
 Rationale
@@ -29,7 +29,7 @@ The rule registers to the diagrams of a model.
 
   Message: ``<name>: The name shall be the name of its scope <scope name>``
 
-* When a diagram has siblings, it is not possible to verify the names of the diagrams are characteristic of their functionality.
+* When a diagram has siblings, it is not possible to verify the names of the diagrams are characteristic of their functions.
   However, the rule raises violations corresponding to some SCADE Editor's defaults:
 
   * The name of the diagram is the name of its scope suffixed by a number

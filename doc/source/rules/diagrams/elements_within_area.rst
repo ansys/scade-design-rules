@@ -20,7 +20,7 @@ All elements shall be within the page format (A4, A3).
 .. end_description
 
 The parameter defines the printable size with the following syntax: ``<width>, <height>``
-(default value: ``28435, 19174`` which corresponds to DINA4). The sizes are expressed in 1/100th of millimeters.
+(default value: ``28435, 19174`` which corresponds to DINA4). The sizes are expressed in hundredth of millimeters.
 
 Rationale
 ---------

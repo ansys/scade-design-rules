@@ -24,7 +24,7 @@ This rule checks that all operators have the option Separate File Name checked (
 
 Rationale
 ---------
-This ensures that multifile management properties are homogeneous across a model. When Separate File Name is checked, each operator is saved into its own individual file, facilitating teamwork across a model.
+This ensures that multi-file management properties are homogeneous across a model. When Separate File Name is checked, each operator is saved into its own individual file, facilitating teamwork across a model.
 
 Verification
 ------------

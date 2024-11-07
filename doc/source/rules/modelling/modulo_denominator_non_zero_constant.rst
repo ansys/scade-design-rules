@@ -26,9 +26,9 @@ Rationale
 ---------
 This enforces compliance with a specific modeling standard by ensuring that modulo operations are only used with non-zero, constant denominators.
 
-The intent is to enforce the use of one specific strategy to prevent runtime division-by-zero errors with modulos.
+The intent is to enforce the use of one specific strategy to prevent runtime division-by-zero errors with modulo.
 This strategy has the advantage of being statically verifiable (no need to execute the model).
-In exchange, it forbids the use of modulo operations with dynamically-computed denominators.
+In exchange, it forbids the use of modulo operations with dynamically computed denominators.
 
 Verification
 ------------

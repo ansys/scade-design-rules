@@ -50,7 +50,7 @@ class NoOperatorCallsInExpressions(Rule):
             'No operator calls within textual expressions.\n'
             'This rule does not apply for Constants and Transition/IfNode conditions.\n'
             'Exceptions on main level can be given as parameters.\n'
-            "parameter: operator IDs separated by comma: e.g.: '18,...'"
+            "parameter: operator IDs separated by comma: e.g.: '18'"
         ),
         label='No operator calls in expressions',
     ):

@@ -24,7 +24,7 @@ This rule checks that all packages have the option Separate File Name selected.
 
 Rationale
 ---------
-This ensures that multifile management settings are homogeneous across a model.
+This ensures that multi-file management settings are homogeneous across a model.
 When Separate File Name is checked, each package is saved into its own individual file, facilitating teamwork across a model.
 
 Note that root-level packages always have their own file.

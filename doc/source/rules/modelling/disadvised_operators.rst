@@ -1,7 +1,7 @@
-.. index:: single: Disadvised Operators
+.. index:: single: Not Recommended Operators
 
-Disadvised Operators
-====================
+Not Recommended Operators
+=========================
 
 .. rule::
    :filename: disadvised_operators.py
@@ -11,7 +11,7 @@ Disadvised Operators
    :kind: generic
    :tags: modelling
 
-   Disadvised Operators
+   Not Recommended Operators
 
 Description
 -----------
@@ -23,7 +23,7 @@ Specific predefined SCADE operators should not be used: reverse (46), transpose 
 .. end_description
 
 The rule parameter is a comma-separated string containing predefined operator identifiers.
-Available identifiers are documented in the SCADE Python API guide, under section "Access to Predefined Operators in Python".
+Available identifiers are documented in the SCADE Python API guide, under section *Access to Predefined Operators in Python*.
 Default parameter value is ``46, 47, 51, 52`` (Reverse, Transpose, Slice, Concatenation).
 
 Rationale

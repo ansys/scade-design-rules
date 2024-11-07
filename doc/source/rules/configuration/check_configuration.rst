@@ -34,7 +34,7 @@ This enforces the existence of a configuration in the current project,
 with the same properties and values as in a given reference project.
 
 One use case for this is working with multiple projects that must generate the same artifacts in the same way
-(e.g. generate code and cross-compile for the same embedded target).
+(for example: generate code and cross-compile for the same embedded target).
 
 Verification
 ------------

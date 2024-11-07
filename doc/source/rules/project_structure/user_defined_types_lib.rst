@@ -30,11 +30,11 @@ This enforces compliance with a specific modeling standard by ensuring that all 
 
 Verification
 ------------
-This rule checks all inputs and outputs for top-level operators (i.e. operators located directly in a root-level package).
+This rule checks all inputs and outputs for top-level operators, that are operators located directly in a root-level package.
 
 For each input/output that has a user-defined complex type, the rule checks that the type is defined in a separate library project.
 
-Finally, it checks that the library project's name starts with 'Lib' + the domain name provided as a parameter, e.g. ``LibDomainProjectName``.
+Finally, it checks that the library project's name starts with 'Lib' + the domain name provided as a parameter, for example ``LibDomainProjectName``.
 
 Resolution
 ----------

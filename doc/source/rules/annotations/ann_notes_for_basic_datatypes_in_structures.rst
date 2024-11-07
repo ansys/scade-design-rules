@@ -1,7 +1,7 @@
-.. index:: single: Ann Notes For Basic Datatypes In Structures
+.. index:: single: Ann Notes For Basic Data-types In Structures
 
-Ann Notes For Basic Datatypes In Structures
-===========================================
+Ann Notes For Basic Data-types In Structures
+============================================
 
 .. rule::
    :filename: ann_notes_for_basic_datatypes_in_structures.py
@@ -16,6 +16,11 @@ Ann Notes For Basic Datatypes In Structures
 Description
 -----------
 
+.. vale off
+
+..
+   The description must be displayed in SCADE Suite.
+
 .. start_description
 
 Sub-element of structure definitions for component I/O and TPCs that has basic datatypes shall be described with below information in its notes field
@@ -28,6 +33,8 @@ If not Booleans
 parameter: '-t': Name of the annotation note type: e.g.: '-t SDD_TopLevel'
 
 .. end_description
+
+.. vale on
 
 Rationale
 ---------

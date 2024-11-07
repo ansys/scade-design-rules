@@ -47,7 +47,7 @@ class EnumTypeNamePrefix(Rule):
         category='Naming',
         severity=Rule.REQUIRED,
         parameter='Type',
-        description='Checks if the values of a given Enum are prefixed with the Enumeration name',
+        description='Checks if the values of a given Enumeration are prefixed with its name',
         label='Enumeration literal prefix check',
     ):
         super().__init__(

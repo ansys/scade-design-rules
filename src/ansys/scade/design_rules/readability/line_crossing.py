@@ -92,7 +92,7 @@ class LineCrossing(Rule):
         description=(
             'Overlapping of edges with edges or other elements shall be prevented.\n'
             'Element overlapping is prevented by SCADE editor.\n'
-            'Setting the parameter to lines=no will no longer report edges crossing edges.'
+            'Setting the parameter to lines=no does not report edges crossing edges.'
         ),
     ):
         super().__init__(

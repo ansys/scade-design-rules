@@ -1,5 +1,5 @@
-Utils
-=====
+Utilities
+=========
 
 The ``./src/ansys/scade/design_rules/utils`` directory contains Python
 components to ease the development of rules.

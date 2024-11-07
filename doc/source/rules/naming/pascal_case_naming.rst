@@ -24,10 +24,14 @@ Exceptions:
 
 * It is allowed to keep uppercase letters for acronyms of two words. Acronym of three letters or more shall use the pascal case convention, for example:
 
+  .. vale off
+
   * systemIO --> system, IO
   * PIController --> PI, Controller
   * PidController --> Pid, Controller
   * PID1 --> PI, D1
+
+  .. vale on
 
 This rules applies to the following elements:
 

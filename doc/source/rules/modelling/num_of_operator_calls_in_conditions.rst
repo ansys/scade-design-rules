@@ -1,10 +1,10 @@
-.. index:: single: Num Of Operatorcalls In Conditions
+.. index:: single: Number Of Operator Calls In Conditions
 
-Num Of Operatorcalls In Conditions
-==================================
+Number Of Operator Calls In Conditions
+======================================
 
 .. rule::
-   :filename: num_of_operatorcalls_in_conditions.py
+   :filename: num_of_operator_calls_in_conditions.py
    :class: NumOfOperatorCallsInConditions
    :id: id_0075
    :reference: n/a
@@ -19,7 +19,7 @@ Description
 .. start_description
 
 Number of logical/comparison operator calls within conditions at Transitions or IfNodes.
-Number and Exceptions given as parameters: 'calls=number,exc=op1;op2;...'
+Number and Exceptions given as parameters: 'calls=number,exc=op1;op2;etc.'
 
 .. end_description
 

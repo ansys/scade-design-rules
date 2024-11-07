@@ -1,7 +1,7 @@
-.. index:: single: Number Of Predef Ops In Diagram
+.. index:: single: Number Of Predefined Operators In Diagram
 
-Number Of Predef Ops In Diagram
-===============================
+Number Of Predefined Operators In Diagram
+=========================================
 
 .. rule::
    :filename: number_of_predef_ops_in_diagram.py

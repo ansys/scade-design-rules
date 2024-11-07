@@ -19,11 +19,13 @@ Description
 .. start_description
 
 Specific predefined SCADE operators shall not be used: merge (45) and When (28).
-parameter: comma separated list of operator IDs: e.g.: 45,28,...
+parameter: comma separated list of operator IDs, for example.: 45,28
 
 .. end_description
 
-The rule parameter is a comma-separated string containing predefined operator identifiers. Available identifiers are documented in the SCADE Python API guide, under section "Access to Predefined Operators in Python". Default parameter value is ``45, 28`` (Merge, When).
+The rule parameter is a comma-separated string containing predefined operator identifiers.
+Available identifiers are documented in the SCADE Python API guide, under section *Access to Predefined Operators in Python*.
+Default parameter value is ``45, 28`` (Merge, When).
 
 Rationale
 ---------

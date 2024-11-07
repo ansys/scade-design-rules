@@ -18,7 +18,7 @@ Architecture contributing elements can be only equation sets or textual diagrams
 
 .. end_description
 
-The parameter allows defining an alternate note type name, attribute or value,
+The parameter allows defining an alternate note type name, attribute, or value,
 with the following syntax: ``-t <note type name> -a <attribute name> -v <value>``
 (default value: ``-t DesignElement -a Nature -v Architecture``).
 
@@ -31,13 +31,13 @@ This rules applies to the following elements:
 
 Rationale
 ---------
-The nature ``Architecture`` is not suitable for CEs such as State or Transition.
+The nature ``Architecture`` is not suitable for Contribution Elements such as State or Transition.
 
 Verification
 ------------
 The rule registers to the states and transitions, and raises a violation
-when an element has an annotation (default `DesignElement.Nature`)
-with a given value (default `Architecture`), as specified in the rule's parameter.
+when an element has an annotation attribute (default ``-t DesignElement -a Nature``)
+with a given value (default ``Architecture``), as specified in the rule's parameter.
 
 Message: ``The <attribute name> of the Contributing Element can't be '<value>'``
 

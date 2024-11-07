@@ -33,14 +33,14 @@ This rules applies to the following elements:
 Rationale
 ---------
 The note type ``DesignElement`` is expected to be designed so that the property ``Nature``
-is taken into account when exporting the SCADE CEs through SCADE ALM Gateway.
+is taken into account when exporting the SCADE Contribution Elements (CE) through SCADE ALM Gateway.
 
-* The export is easier to specify: all the CEs, regardless their nature.
+* The export is easier to specify: all the CE, regardless their nature.
 * The analysis of the traceability matrices is made easier by filtering the matrices with respect to this property.
 
 Verification
 ------------
-The rule registers to the CEs and raises a violation when a CE does not have a note of the specified type.
+The rule registers to the CE and raises a violation when a CE does not have a note of the specified type.
 
 Message: ``the Contributing Element shall have an annotation <note type name>``
 
@@ -50,7 +50,7 @@ Create the note instance.
 
 Notes:
 
-* Make sure the annotation rules are specified correctly with respect to the Scade model elements considered as CEs.
+* Make sure the annotation rules are specified correctly with respect to the Scade model elements considered as CE.
 * Use the script ``CreateDefaultNotes.tcl`` to create all the missing note instances,
   accordingly to the annotation rules of the ``aty`` file.
 

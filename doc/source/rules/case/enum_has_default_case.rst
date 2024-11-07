@@ -1,7 +1,7 @@
-.. index:: single: Enum Has Default Case
+.. index:: single: Enumeration Has Default Case
 
-Enum Has Default Case
-=====================
+Enumeration Has Default Case
+============================
 
 .. rule::
    :filename: enum_has_default_case.py

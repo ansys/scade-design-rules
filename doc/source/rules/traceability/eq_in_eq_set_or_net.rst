@@ -22,10 +22,10 @@ An equation or a branch shall belong to at least one equation set except followi
 
 Rationale
 ----------
-This ensures the completeness of the traceability matrices once the CEs are exported through SCADE ALM Gateway.
-Indeed, the equations or branches are not CEs and thus, must belong to an equation set.
+This ensures the completeness of the traceability matrices once the Contribution Elements (CE) are exported through SCADE ALM Gateway.
+Indeed, the equations or branches are not CE and thus, must belong to an equation set.
 
-The states are CEs and the ones without diagram are considered as small enough
+The states are CE and the ones without diagram are considered as small enough
 to not require their content to be part of an additional equation set.
 This is a tradeoff and does not prevent the creation of equation sets within the state when it makes sense.
 

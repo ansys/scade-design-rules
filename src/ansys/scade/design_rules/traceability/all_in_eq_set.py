@@ -45,7 +45,7 @@ class AllInEqSet(Rule):
         id='id_0093',
         label='The element belong to at least one equation set',
         description=(
-            'The elements, except actions, assertions and control blocks, shall belong '
+            'The elements, except actions, assertions, and control blocks, shall belong '
             'to at least one equation set, except following use case:\n'
             '* The element is text: textual diagram, textual scope'
         ),

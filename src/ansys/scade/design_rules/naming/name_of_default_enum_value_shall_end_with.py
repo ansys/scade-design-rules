@@ -47,9 +47,9 @@ class NameOfDefaultEnumValueShallEndWith(Rule):
         severity=Rule.REQUIRED,
         parameter='_DEFAULT',
         description=(
-            'Name of enum values with the default pragma '
+            'Name of enumeration values with the default pragma '
             "shall end with 'parameter'\n"
-            "parameter: starting string e.g. 'enumvalue_DEFAULT'"
+            "parameter: starting string, for example: 'enumvalue_DEFAULT'"
         ),
         label='Default Enum Value shall end with',
     ):

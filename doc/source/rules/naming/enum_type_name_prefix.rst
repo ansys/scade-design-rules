@@ -1,7 +1,7 @@
-.. index:: single: Enum Type Name Prefix
+.. index:: single: Enumeration Type Name Prefix
 
-Enum Type Name Prefix
-=====================
+Enumeration Type Name Prefix
+============================
 
 .. rule::
    :filename: enum_type_name_prefix.py
@@ -18,7 +18,7 @@ Description
 
 .. start_description
 
-Checks if the values of a given Enum are prefixed with the Enumeration name
+Checks if the values of a given Enumeration are prefixed with its name
 
 .. end_description
 

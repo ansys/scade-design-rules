@@ -41,7 +41,7 @@ This rule finds the target configuration in the current project and makes a seri
 #. Root node name starts with ``SoftwareComponents::ACD_Appl::``
 #. Target adaptor is set to "None" under Code Integration
 #. Under Optimizations, "Local variables as static" and "Input threshold" are unchecked
-#. User config is set to ``..\..\include\<model_name>_user_macros.h``
+#. User configuration is set to ``..\..\include\<model_name>_user_macros.h``
 #. CPU type is set to ``win64``
 #. Annotation type file ``..\..\..\..\architecture\scade_plugins\fcmsAnnotationType\MyAnnotationType_suite.aty`` is used
 #. If "Global Prefix" is set, its value also prefixes the name of the root operator
