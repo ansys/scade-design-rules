@@ -335,6 +335,7 @@ def setup(app):
         html=(visit_category_node, depart_category_node),
         latex=(visit_category_node, depart_category_node),
         text=(visit_category_node, depart_category_node),
+        pdf=(visit_category_node, depart_category_node),
     )
     app.add_node(Rules)
     app.add_node(
@@ -342,6 +343,7 @@ def setup(app):
         html=(visit_rule_node, depart_rule_node),
         latex=(visit_rule_node, depart_rule_node),
         text=(visit_rule_node, depart_rule_node),
+        pdf=(visit_rule_node, depart_rule_node),
     )
 
     app.add_directive('category', CategoryDirective)
