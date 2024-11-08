@@ -29,6 +29,16 @@ class Categories(nodes.General, nodes.Element):
     pass
 
 
+def visit_categories_node(self, node):
+    """Visit a node."""
+    self.visit_general(node)
+
+
+def depart_categories_node(self, node):
+    """Start the visit of a node."""
+    self.depart_general(node)
+
+
 class Rule(nodes.container, nodes.Element):
     """Category node."""
 
@@ -52,6 +62,16 @@ class Rules(nodes.General, nodes.Element):
         # store the filter for the selected rules
         super().__init__('')
         self.filter = filter
+
+
+def visit_rules_node(self, node):
+    """Visit a node."""
+    self.visit_general(node)
+
+
+def depart_rules_node(self, node):
+    """Start the visit of a node."""
+    self.depart_general(node)
 
 
 class CategoriesDirective(Directive):
@@ -329,21 +349,29 @@ def process_rule_nodes(app, doctree, fromdocname):
 
 def setup(app):
     """Declare the nodes and directives."""
-    app.add_node(Categories)
+    app.add_node(
+        Categories,
+        html=(visit_categories_node, depart_categories_node),
+        latex=(visit_categories_node, depart_categories_node),
+        text=(visit_categories_node, depart_categories_node),
+    )
     app.add_node(
         Category,
         html=(visit_category_node, depart_category_node),
         latex=(visit_category_node, depart_category_node),
         text=(visit_category_node, depart_category_node),
-        pdf=(visit_category_node, depart_category_node),
     )
-    app.add_node(Rules)
+    app.add_node(
+        Rules,
+        html=(visit_rules_node, depart_rules_node),
+        latex=(visit_rules_node, depart_rules_node),
+        text=(visit_rules_node, depart_rules_node),
+    )
     app.add_node(
         Rule,
         html=(visit_rule_node, depart_rule_node),
         latex=(visit_rule_node, depart_rule_node),
         text=(visit_rule_node, depart_rule_node),
-        pdf=(visit_rule_node, depart_rule_node),
     )
 
     app.add_directive('category', CategoryDirective)
