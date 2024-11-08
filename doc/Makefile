@@ -3,7 +3,7 @@
 
 # You can set these variables from the command line.
 # remove parallel builds: failure
-# SPHINXOPTS    = -j auto
+SPHINXOPTS    = -j 1
 SPHINXBUILD   = sphinx-build
 SOURCEDIR     = source
 BUILDDIR      = _build
