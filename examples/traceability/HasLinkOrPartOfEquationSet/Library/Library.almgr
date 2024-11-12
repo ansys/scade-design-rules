@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scade_req:ReqProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scade_req="http://www.ansys.com/scade/lifecycle/almgateway/scade_req/3" id="_3_ErkImdEe-9kK4g9MzVqQ" name="Library" identifier="D:\AnsysDev\Nobackup\Eseg\mo.ce.eu\ScadeDesignRules\examples\traceability\HasLinkOrPartOfEquationSet\Library\Library.etp">
+  <documents xsi:type="scade_req:Specification" id="_3_ErkYmdEe-9kK4g9MzVqQ" name="Reqs.docx" identifier="Reqs">
+    <children xsi:type="scade_req:TraceableElementRef" id="_3_ErkomdEe-9kK4g9MzVqQ" traceableElement="_3_ErlYmdEe-9kK4g9MzVqQ"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_3_Erk4mdEe-9kK4g9MzVqQ" traceableElement="_3_ErlomdEe-9kK4g9MzVqQ"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_3_ErlImdEe-9kK4g9MzVqQ" traceableElement="_3_Erl4mdEe-9kK4g9MzVqQ"/>
+  </documents>
+  <traceableElements id="_3_ErlYmdEe-9kK4g9MzVqQ" name="TRA1_REQ_001" identifier="TRA1_REQ_001" description="An equation set shall contain at least one equation."/>
+  <traceableElements id="_3_ErlomdEe-9kK4g9MzVqQ" name="TRA1_REQ_002" identifier="TRA1_REQ_002" description="Traceable elements tracing requirements shall be LLRs."/>
+  <traceableElements id="_3_Erl4mdEe-9kK4g9MzVqQ" name="TRA1_REQ_003" identifier="TRA1_REQ_003" description="Traceable elements traced in Libraries should net be listed"/>
+</scade_req:ReqProject>

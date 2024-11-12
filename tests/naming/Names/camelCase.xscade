@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="CamelCase">
+			<declarations>
+				<Package name="Success">
+					<declarations>
+						<Sensor name="nominal">
+							<type>
+								<NamedType>
+									<type>
+										<NullRef/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Sensor oid="!ed/1c2/2581/88B8/61d5ab99375b"/>
+							</pragmas>
+						</Sensor>
+						<Sensor name="twoWords">
+							<type>
+								<NamedType>
+									<type>
+										<NullRef/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Sensor oid="!ed/1c3/2581/88B8/61d5aba74969"/>
+							</pragmas>
+						</Sensor>
+						<Sensor name="parameterP">
+							<type>
+								<NamedType>
+									<type>
+										<NullRef/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Sensor oid="!ed/1c6/2581/88B8/61d5abfe732a"/>
+							</pragmas>
+						</Sensor>
+						<Sensor name="parametersPI">
+							<type>
+								<NamedType>
+									<type>
+										<NullRef/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Sensor oid="!ed/1cc/2581/88B8/61d5ac0a78ca"/>
+							</pragmas>
+						</Sensor>
+						<Sensor name="parameterPI1">
+							<type>
+								<NamedType>
+									<type>
+										<NullRef/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Sensor oid="!ed/1d2/2581/88B8/61d5ac2c4ff7"/>
+							</pragmas>
+						</Sensor>
+						<Sensor name="twoWords09">
+							<type>
+								<NamedType>
+									<type>
+										<NullRef/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Sensor oid="!ed/21b/2581/88B8/61d5ad45329c"/>
+							</pragmas>
+						</Sensor>
+						<Sensor name="two31Words">
+							<type>
+								<NamedType>
+									<type>
+										<NullRef/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Sensor oid="!ed/215/2581/88B8/61d5ad4527dd"/>
+							</pragmas>
+						</Sensor>
+						<Sensor name="parametersKPController">
+							<type>
+								<NamedType>
+									<type>
+										<NullRef/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Sensor oid="!ed/227/2581/88B8/61d5b1caba5"/>
+							</pragmas>
+						</Sensor>
+						<Sensor name="parametersPidController">
+							<type>
+								<NamedType>
+									<type>
+										<NullRef/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Sensor oid="!ed/22d/2581/88B8/61d5b22d2729"/>
+							</pragmas>
+						</Sensor>
+					</declarations>
+					<pragmas>
+						<ed:Package oid="!ed/1a0/2581/88B8/61d5ab167143" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/1a1/2581/88B8/61d5ab166f8c" blockKind="constants"/>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/1a2/2581/88B8/61d5ab161ca3" blockKind="types"/>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/1a3/2581/88B8/61d5ab162eb8" blockKind="sensors"/>
+							</diagrams>
+						</ed:Package>
+					</pragmas>
+				</Package>
+				<Package name="Failure">
+					<declarations>
+						<Sensor name="TwoWords">
+							<type>
+								<NamedType>
+									<type>
+										<NullRef/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Sensor oid="!ed/1fc/2581/88B8/61d5ac475f2a"/>
+							</pragmas>
+						</Sensor>
+						<Sensor name="parametersPID">
+							<type>
+								<NamedType>
+									<type>
+										<NullRef/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Sensor oid="!ed/1e4/2581/88B8/61d5ac4775e3"/>
+							</pragmas>
+						</Sensor>
+						<Sensor name="Nominal">
+							<type>
+								<NamedType>
+									<type>
+										<NullRef/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Sensor oid="!ed/1de/2581/88B8/61d5ac473871"/>
+							</pragmas>
+						</Sensor>
+						<Sensor name="my_Sensor">
+							<type>
+								<NamedType>
+									<type>
+										<NullRef/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Sensor oid="!ed/1fd/2581/88B8/61d5ac853d5"/>
+							</pragmas>
+						</Sensor>
+						<Sensor name="my_sensor">
+							<type>
+								<NamedType>
+									<type>
+										<NullRef/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Sensor oid="!ed/203/2581/88B8/61d5ac8c3cf6"/>
+							</pragmas>
+						</Sensor>
+						<Sensor name="Two31Words">
+							<type>
+								<NamedType>
+									<type>
+										<NullRef/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Sensor oid="!ed/209/2581/88B8/61d5accf6efd"/>
+							</pragmas>
+						</Sensor>
+						<Sensor name="TwoWords09">
+							<type>
+								<NamedType>
+									<type>
+										<NullRef/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Sensor oid="!ed/20f/2581/88B8/61d5acd974db"/>
+							</pragmas>
+						</Sensor>
+						<Sensor name="parametersPIDForController">
+							<type>
+								<NamedType>
+									<type>
+										<NullRef/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Sensor oid="!ed/221/2581/88B8/61d5b1a61b4a"/>
+							</pragmas>
+						</Sensor>
+					</declarations>
+					<pragmas>
+						<ed:Package oid="!ed/1a4/2581/88B8/61d5ab1d38df" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/1a5/2581/88B8/61d5ab1d73e5" blockKind="constants"/>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/1a6/2581/88B8/61d5ab1d2653" blockKind="types"/>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/1a7/2581/88B8/61d5ab1d54bd" blockKind="sensors"/>
+							</diagrams>
+						</ed:Package>
+					</pragmas>
+				</Package>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/109a/B2/9D4C/61c4805b74f6" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<comment>This package defines names to exercise the regular expression used for camelCase</comment>
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/109b/B2/9D4C/61c4805b491c" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/109c/B2/9D4C/61c4805b2938" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/109d/B2/9D4C/61c4805b6766" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

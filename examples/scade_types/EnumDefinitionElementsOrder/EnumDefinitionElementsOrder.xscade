@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Type name="CorrectEnumerationType">
+			<definition>
+				<Enum>
+					<values>
+						<Value name="CorrectEnumeration_a">
+							<pragmas>
+								<ed:Value oid="!ed/46/2948/19208/5fc79dbb1677"/>
+								<kcg:Pragma>
+									C:enum_val 1
+								</kcg:Pragma>
+							</pragmas>
+						</Value>
+						<Value name="CorrectEnumeration_b">
+							<pragmas>
+								<ed:Value oid="!ed/48/2948/19208/5fc79dc91269"/>
+								<kcg:Pragma>
+									C:enum_val 2
+								</kcg:Pragma>
+							</pragmas>
+						</Value>
+						<Value name="CorrectEnumeration_c">
+							<pragmas>
+								<ed:Value oid="!ed/49/2948/19208/5fc79dd1336b"/>
+								<kcg:Pragma>
+									C:enum_val 3
+								</kcg:Pragma>
+							</pragmas>
+						</Value>
+					</values>
+				</Enum>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/44/2948/19208/5fc79ccc36b6"/>
+			</pragmas>
+		</Type>
+		<Type name="CorrectEnumerationMissingPragmaType">
+			<definition>
+				<Enum>
+					<values>
+						<Value name="IncorrectEnumeration_3">
+							<pragmas>
+								<ed:Value oid="!ed/47/2948/19208/5fc79dbf5bcd"/>
+							</pragmas>
+						</Value>
+						<Value name="IncorrectEnumeration_1">
+							<pragmas>
+								<ed:Value oid="!ed/4a/2948/19208/5fc79df137d5"/>
+								<kcg:Pragma>
+									C:enum_val 1
+								</kcg:Pragma>
+							</pragmas>
+						</Value>
+						<Value name="IncorrectEnumeration_2">
+							<pragmas>
+								<ed:Value oid="!ed/4c/2948/19208/5fc79dff307a"/>
+								<kcg:Pragma>
+									C:enum_val 2
+								</kcg:Pragma>
+							</pragmas>
+						</Value>
+					</values>
+				</Enum>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/45/2948/19208/5fc79cd82a7c"/>
+			</pragmas>
+		</Type>
+		<Type name="AlphanumericEnumerationCorrectType">
+			<definition>
+				<Enum>
+					<values>
+						<Value name="AlphanumericEnumerationCorrect_3">
+							<pragmas>
+								<ed:Value oid="!ed/4e/2948/19208/5fc79e3f5746"/>
+								<kcg:Pragma>
+									C:enum_val 3
+								</kcg:Pragma>
+							</pragmas>
+						</Value>
+						<Value name="AlphanumericEnumerationCorrect_a">
+							<pragmas>
+								<ed:Value oid="!ed/4f/2948/19208/5fc79e5377bd"/>
+								<kcg:Pragma>
+									C:enum_val 101
+								</kcg:Pragma>
+							</pragmas>
+						</Value>
+						<Value name="AlphanumericEnumerationCorrect_z">
+							<pragmas>
+								<ed:Value oid="!ed/50/2948/19208/5fc79e587c04"/>
+								<kcg:Pragma>
+									C:enum_val 126
+								</kcg:Pragma>
+							</pragmas>
+						</Value>
+					</values>
+				</Enum>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/4b/2948/19208/5fc79df91273"/>
+			</pragmas>
+		</Type>
+		<Type name="IncorrectAlphaNumEnumType">
+			<definition>
+				<Enum>
+					<values>
+						<Value name="IncorrectAlphaNumEnum_a">
+							<pragmas>
+								<ed:Value oid="!ed/52/2948/19208/5fc79e68155b"/>
+								<kcg:Pragma>
+									C:enum_val 3
+								</kcg:Pragma>
+							</pragmas>
+						</Value>
+						<Value name="IncorrectAlphaNumEnum_2">
+							<pragmas>
+								<ed:Value oid="!ed/53/2948/19208/5fc79e7f7f07"/>
+								<kcg:Pragma>
+									C:enum_val 1
+								</kcg:Pragma>
+							</pragmas>
+						</Value>
+						<Value name="IncorrectAlphaNumEnum_17">
+							<pragmas>
+								<ed:Value oid="!ed/54/2948/19208/5fc79e845bc9"/>
+								<kcg:Pragma>
+									C:enum_val 2
+								</kcg:Pragma>
+							</pragmas>
+						</Value>
+					</values>
+				</Enum>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/51/2948/19208/5fc79e6434d7"/>
+			</pragmas>
+		</Type>
+	</declarations>
+</File>

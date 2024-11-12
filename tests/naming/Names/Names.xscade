@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Open>
+			<package>
+				<PackageRef name="CamelCase"/>
+			</package>
+			<pragmas>
+				<ed:Open oid="!ed/488/2581/88B8/61d5ca822083" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<references>
+						<PackageRef path="CamelCase" refOid="!ed/109a/B2/9D4C/61c4805b74f6"/>
+					</references>
+				</ed:Open>
+			</pragmas>
+		</Open>
+		<Open>
+			<package>
+				<PackageRef name="PascalCase"/>
+			</package>
+			<pragmas>
+				<ed:Open oid="!ed/489/2581/88B8/61d5ca826d64" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<references>
+						<PackageRef path="PascalCase" refOid="!ed/1092/B2/9D4C/61c48048387e"/>
+					</references>
+				</ed:Open>
+			</pragmas>
+		</Open>
+		<Open>
+			<package>
+				<PackageRef name="UpperCase"/>
+			</package>
+			<pragmas>
+				<ed:Open oid="!ed/48a/2581/88B8/61d5ca8262d8" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<references>
+						<PackageRef path="UpperCase" refOid="!ed/10a2/B2/9D4C/61c4806d56e6"/>
+					</references>
+				</ed:Open>
+			</pragmas>
+		</Open>
+		<Open>
+			<package>
+				<PackageRef name="Elements"/>
+			</package>
+			<pragmas>
+				<ed:Open oid="!ed/923/2581/88B8/61d6c816545a" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<references>
+						<PackageRef path="Elements" refOid="!ed/894/2581/88B8/61d5d2d33e2c"/>
+					</references>
+				</ed:Open>
+			</pragmas>
+		</Open>
+	</declarations>
+</File>

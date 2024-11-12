@@ -1,0 +1,59 @@
+Notes-Types { Esterel-Technologies }  DEFINITIONS ::=
+BEGIN
+    SDD_TopLevel ::= SEQUENCE OF { SEQUENCE {
+    annot_object OID,
+    name STRING,
+        information {
+            Description TEXT
+            {
+            	 NT_DEFAULT_VALUE "-" ,
+            	 NT_FIELD_HEIGHT 3 ,
+            	 NT_FIELD_WIDTH 60 },
+            Constraints TEXT
+            {
+            	 NT_DEFAULT_VALUE "-" ,
+            	 NT_FIELD_HEIGHT 3 ,
+            	 NT_FIELD_WIDTH 60 },
+            Min_Value TEXT
+            {
+            	 NT_DEFAULT_VALUE "-" ,
+            	 NT_FIELD_HEIGHT 1 ,
+            	 NT_FIELD_WIDTH 20 },
+            Max_Value TEXT
+            {
+            	 NT_DEFAULT_VALUE "-" ,
+            	 NT_FIELD_HEIGHT 1 ,
+            	 NT_FIELD_WIDTH 20 },
+            Unit_SI TEXT
+            {
+            	 NT_DEFAULT_VALUE "-" ,
+            	 NT_FIELD_HEIGHT 1 ,
+            	 NT_FIELD_WIDTH 20 }
+    } } }
+
+END
+
+Notes-Values { Esterel-Technologies }  DEFINITIONS ::=
+BEGIN
+    SDD_TopLevel ::= {
+        {"!ed/52/42EB/9288/67138eec7ffb", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/30/42EB/9288/6713877f583f", "SDD_TopLevel_1","-" , "none" , "0" , "10" , "s" },
+        {"!ed/66/1AC3/BB70/6713851a6f9b", "SDD_TopLevel_1","" , "none" , "0" , "10" , "s" },
+        {"!ed/3f/42EB/9288/67138e5fe6b", "SDD_TopLevel_1","description" , "-" , "0" , "10" , "s" },
+        {"!ed/45/42EB/9288/67138e8df8d", "SDD_TopLevel_1","description" , "none" , "-" , "10" , "s" },
+        {"!ed/4b/42EB/9288/67138ea031be", "SDD_TopLevel_1","description" , "none" , "0" , "-" , "s" },
+        {"!ed/51/42EB/9288/67138eb26b1d", "SDD_TopLevel_1","description" , "none" , "0" , "10" , "" },
+        {"!ed/21/42EB/9288/671386be591c", "SDD_TopLevel_1","description" , "none" , "0" , "10" , "s" },
+        {"!ed/bf/42EB/9288/6713900d437f", "SDD_TopLevel_1","description" , "none" , "" , "" , "" },
+        {"!ed/cd/42EB/9288/6713902057db", "SDD_TopLevel_1","description" , "none" , "" , "" , "" },
+        {"!ed/fb/42EB/9288/6713e01c3cef", "SDD_TopLevel_1","description" , "none" , "0" , "10" , "s" },
+        {"!ed/db/42EB/9288/6713907511e8", "SDD_TopLevel_1","description" , "none" , "0" , "10" , "s" },
+        {"!ed/218/42EB/9288/6714087f7c52", "SDD_TopLevel_1","description" , "none" , "" , "" , "" },
+        {"!ed/2d4/42EB/9288/67150739756d", "SDD_TopLevel_1","description" , "none" , "" , "" , "" },
+        {"!ed/2ea/42EB/9288/6715076536e8", "SDD_TopLevel_1","description" , "none" , "0" , "10" , "s" },
+        {"!ed/22d/42EB/9288/67140898317d", "SDD_TopLevel_1","description" , "none" , "0" , "10" , "s" },
+        {"!ed/e1/42EB/9288/671390766211", "SDD_TopLevel_1","description" , "none" , "0" , "10" , "s" },
+        {"!ed/109/42EB/9288/6713e04acc", "SDD_TopLevel_1","description" , "none" , "0" , "10" , "s" },
+        {"!ed/10f/42EB/9288/6713e05051e2", "SDD_TopLevel_1","description" , "none" , "0" , "10" , "s" }}
+END
+

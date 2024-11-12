@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="NameStructureType">
+			<declarations>
+				<Type name="Correct_t">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/9e0/2183/7FC/55c9d638431b" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<comment>.</comment>
+						</ed:Type>
+					</pragmas>
+				</Type>
+				<Type name="NoEnding">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/9e1/2183/7FC/55c9d63f7eb9" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<comment>.</comment>
+						</ed:Type>
+					</pragmas>
+				</Type>
+				<Type name="FalseEnding_c">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/9e2/2183/7FC/55c9d64767fa" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<comment>.</comment>
+						</ed:Type>
+					</pragmas>
+				</Type>
+				<Type name="completelyFalse">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/9e3/2183/7FC/55c9d64d4d16" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<comment>.</comment>
+						</ed:Type>
+					</pragmas>
+				</Type>
+				<Type name="nofirstcapital_t">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/a16/2183/7FC/55c9d6954a65" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<comment>.</comment>
+						</ed:Type>
+					</pragmas>
+				</Type>
+				<Operator kind="function" name="NameStructureType">
+					<inputs>
+						<Variable name="Input1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/a351/6801/1EF8/555a262751e9" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<comment>only input</comment>
+								</ed:Variable>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="Output1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/a352/6801/1EF8/555a262a38b8" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<comment>only output</comment>
+								</ed:Variable>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<locals>
+						<Variable name="_L1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/12/190/1628/55c1c32c69c"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<!-- _L1 = Input1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L1"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="Input1"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/11/190/1628/55c1c32c4033"/>
+							</pragmas>
+						</Equation>
+						<!-- Output1 = _L1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="Output1"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L1"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/17/190/1628/55c1c32d1ba8"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/a34f/6801/1EF8/555a261b1bcf" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="diagram_1" landscape="true" format="A4 (210 297)" oid="!ed/1a/A87/1904/55c1c1f96db7">
+									<comment></comment>
+									<presentationElements>
+										<EquationGE presentable="!ed/11/190/1628/55c1c32c4033">
+											<position>
+												<Point x="2910" y="2461"/>
+											</position>
+											<size>
+												<Size width="265" height="502"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/17/190/1628/55c1c32d1ba8">
+											<position>
+												<Point x="5477" y="2461"/>
+											</position>
+											<size>
+												<Size width="318" height="503"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/11/190/1628/55c1c32c4033" dstEquation="!ed/17/190/1628/55c1c32d1ba8">
+											<positions>
+												<Point x="3175" y="2725"/>
+												<Point x="4392" y="2725"/>
+												<Point x="4392" y="2725"/>
+												<Point x="5530" y="2725"/>
+											</positions>
+										</Edge>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/a34b/6801/1EF8/555a260c42c3" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/a34c/6801/1EF8/555a260cd71" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/a34d/6801/1EF8/555a260c1952" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/a34e/6801/1EF8/555a260c4ce1" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

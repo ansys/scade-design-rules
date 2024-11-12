@@ -1,0 +1,210 @@
+Notes-Types { Esterel-Technologies }  DEFINITIONS ::=
+
+BEGIN
+
+AnnType_1 ::=
+    SEQUENCE OF {
+    SEQUENCE {
+       annot_object OID,
+       name STRING,
+       information {
+	     AT1_Field1 TEXT {
+            NT_DEFAULT_VALUE "-",
+            NT_FIELD_HEIGHT 3,
+            NT_FIELD_WIDTH  60},
+         AT1_Field2 TEXT {
+            NT_DEFAULT_VALUE "-",
+            NT_FIELD_HEIGHT 3,
+            NT_FIELD_WIDTH  60},
+		 AT1_Field3 TEXT {
+            NT_DEFAULT_VALUE "-",
+            NT_FIELD_HEIGHT 1,
+            NT_FIELD_WIDTH  20},
+         AT1_Field4 TEXT {
+            NT_DEFAULT_VALUE "-",
+            NT_FIELD_HEIGHT 1,
+            NT_FIELD_WIDTH  20},
+		 AT1_Field5 TEXT {
+            NT_DEFAULT_VALUE "-",
+            NT_FIELD_HEIGHT 1,
+            NT_FIELD_WIDTH  20}
+} } }
+
+AnnType_2 ::=
+    SEQUENCE OF {
+    SEQUENCE {
+       annot_object OID,
+       name STRING,
+       information {
+	     AT2_Field1 TEXT {
+            NT_DEFAULT_VALUE "",
+            NT_FIELD_HEIGHT 5,
+            NT_FIELD_WIDTH  80},
+         AT2_Field2 TEXT {
+            NT_DEFAULT_VALUE "",
+            NT_FIELD_HEIGHT 8,
+            NT_FIELD_WIDTH  80},
+} } }
+
+
+-- #################################
+-- Graphical information
+-- #################################
+
+-- #################################
+-- Graphical informations
+-- #################################
+
+-- #################################
+-- Graphical informations in frame
+-- #################################
+
+
+-- #################################
+-- Graphical informations : may be displayed or not (View/Display notes.
+-- #################################
+
+
+END
+
+-- #################################
+-- End of the Definition of the Types of Notes
+-- #################################
+
+-- ######################################################################
+-- ##
+-- ##  DEFINITION OF DIFFERENT CATEGORIES OF NOTE TYPES
+-- ##
+-- ######################################################################
+
+
+Annotation-Rules { Esterel-Technologies }  DEFINITIONS ::=
+BEGIN
+
+-- #################################
+-- ## Categories associated to entities out from net views
+-- #################################
+
+    package ::= {
+    }
+
+-- #################################
+    constant ::= {
+    	{AnnType_1 F 0 1},
+    	{AnnType_2 F 0 1}
+    }
+
+-- #################################
+    sensor ::= {
+    }
+
+-- #################################
+
+    local ::= {
+    }
+
+-- #################################
+    named_type ::= {
+    }
+
+-- #################################
+
+    type_element ::= {
+    }
+
+-- #################################
+    output ::= {
+   }
+
+-- #################################
+    input ::= {
+   }
+
+-- #################################
+    hidden ::= {
+    }
+
+-- #################################
+    local ::= {
+    }
+
+-- #################################
+    probe ::= {
+    }
+
+-- #################################
+    signal ::= {
+    }
+
+-- #################################
+    operator ::= {
+		{AnnType_1 F 0 1},
+    	{AnnType_2 F 0 1}
+    }
+
+-- #################################
+-- ## Categories associated to entities of the net views
+-- #################################
+
+-- #################################
+    assertion ::= {
+    }
+
+-- #################################
+    ref_ident ::= {
+    }
+
+-- #################################
+    literal ::= {
+    }
+
+-- #################################
+    predef_opr ::= {
+    }
+
+-- #################################
+    ref_operator ::= {
+    }
+-- #################################
+    terminator ::= {
+    }
+-- #################################
+    state_machine ::= {
+    }
+-- #################################
+    state ::= {
+    }
+-- #################################
+    transition ::= {
+    }
+-- #################################
+    activate_block ::= {
+    }
+-- #################################
+    branch ::= {
+    }
+-- #################################
+    action ::= {
+    }
+-- #################################
+    net_diagram ::= {
+    }
+-- #################################
+    text_diagram ::= {
+    }
+-- #################################
+    tree_diagram ::= {
+    }
+-- #################################
+    equation_set ::= {
+    }
+
+END
+
+
+-- #################################
+-- END OF DEFINITION OF CATEGORIES OF NOTE TYPES
+-- #################################
+
+
+-- ######################################################################

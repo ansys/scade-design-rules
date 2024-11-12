@@ -1,0 +1,1329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="P">
+			<declarations>
+				<Operator kind="node" name="Custom">
+					<data>
+						<StateMachine name="SmOk">
+							<pragmas>
+								<ed:StateMachine oid="!ed/38ba/7300/ADC4/65958d152f8e"/>
+							</pragmas>
+						</StateMachine>
+						<StateMachine name="SmNok">
+							<pragmas>
+								<ed:StateMachine oid="!ed/38ce/7300/ADC4/659591695518"/>
+							</pragmas>
+						</StateMachine>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/38b7/7300/ADC4/65958c4c60ed" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="CustomOk" landscape="true" format="Custom (50 100)" defaultPageFormat="false" oid="!ed/38b8/7300/ADC4/65958c4c2649">
+									<presentationElements>
+										<StateMachineGE presentable="!ed/38ba/7300/ADC4/65958d152f8e">
+											<position>
+												<Point x="0" y="0"/>
+											</position>
+											<size>
+												<Size width="5239" height="4128"/>
+											</size>
+										</StateMachineGE>
+									</presentationElements>
+								</NetDiagram>
+								<NetDiagram name="CustomNok" landscape="true" format="Custom (50 100)" defaultPageFormat="false" oid="!ed/38cc/7300/ADC4/65959169231c">
+									<presentationElements>
+										<StateMachineGE presentable="!ed/38ce/7300/ADC4/659591695518">
+											<position>
+												<Point x="5424" y="0"/>
+											</position>
+											<size>
+												<Size width="5239" height="4128"/>
+											</size>
+										</StateMachineGE>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="Nok">
+					<inputs>
+						<Variable name="ok">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/3930/7300/ADC4/65966d861ea"/>
+							</pragmas>
+						</Variable>
+						<Variable name="nok">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/3949/7300/ADC4/65966d957603"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<locals>
+						<Variable name="localNok">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/399d/7300/ADC4/659670af427d"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L3">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/399f/7300/ADC4/659670ba6099"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<StateMachine name="SmNok">
+							<states>
+								<State initial="true" name="StateNok">
+									<pragmas>
+										<ed:State oid="!ed/38d3/7300/ADC4/65966c1061d3"/>
+									</pragmas>
+								</State>
+								<State name="StateOk">
+									<unless>
+										<Transition kind="restart">
+											<target>
+												<StateRef name="StateNok"/>
+											</target>
+											<condition>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="nok"/>
+													</path>
+												</IdExpression>
+											</condition>
+											<pragmas>
+												<ed:Transition oid="!ed/3916/7300/ADC4/65966cd76bcf"/>
+											</pragmas>
+										</Transition>
+									</unless>
+									<until>
+										<Transition kind="restart">
+											<target>
+												<StateRef name="StateNok"/>
+											</target>
+											<condition>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="nok"/>
+													</path>
+												</IdExpression>
+											</condition>
+											<pragmas>
+												<ed:Transition oid="!ed/3924/7300/ADC4/65966d20339c"/>
+											</pragmas>
+										</Transition>
+										<Transition>
+											<condition>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="ok"/>
+													</path>
+												</IdExpression>
+											</condition>
+											<forks>
+												<ForkBranch kind="restart">
+													<target>
+														<StateRef name="StateNok"/>
+													</target>
+													<condition>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="nok"/>
+															</path>
+														</IdExpression>
+													</condition>
+													<pragmas>
+														<ed:ForkBranch oid="!ed/392d/7300/ADC4/65966d41259c"/>
+													</pragmas>
+												</ForkBranch>
+												<ForkBranch kind="restart">
+													<target>
+														<StateRef name="StateNok"/>
+													</target>
+													<condition>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="nok"/>
+															</path>
+														</IdExpression>
+													</condition>
+													<pragmas>
+														<ed:ForkBranch oid="!ed/392e/7300/ADC4/65966d5254ea"/>
+													</pragmas>
+												</ForkBranch>
+											</forks>
+											<pragmas>
+												<ed:Transition oid="!ed/3928/7300/ADC4/65966d3311c3"/>
+											</pragmas>
+										</Transition>
+										<Synchro kind="restart">
+											<target>
+												<StateRef name="StateOk"/>
+											</target>
+											<pragmas>
+												<ed:Synchro oid="!ed/3a29/7300/ADC4/6596748a4b6c"/>
+											</pragmas>
+										</Synchro>
+									</until>
+									<pragmas>
+										<ed:State oid="!ed/38fe/7300/ADC4/65966cad3fe"/>
+									</pragmas>
+								</State>
+							</states>
+							<pragmas>
+								<ed:StateMachine oid="!ed/38d8/7300/ADC4/65966c11411d"/>
+							</pragmas>
+						</StateMachine>
+						<IfBlock name="IfBlockNok">
+							<block>
+								<IfNode>
+									<if>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="nok"/>
+											</path>
+										</IdExpression>
+									</if>
+									<then>
+										<Action>
+											<pragmas>
+												<ed:Action oid="!ed/3984/7300/ADC4/6596701f3a50"/>
+											</pragmas>
+										</Action>
+									</then>
+									<else>
+										<Action>
+											<pragmas>
+												<ed:Action oid="!ed/3985/7300/ADC4/6596701f274f"/>
+											</pragmas>
+										</Action>
+									</else>
+									<pragmas>
+										<ed:IfNode oid="!ed/3983/7300/ADC4/6596701fb15"/>
+									</pragmas>
+								</IfNode>
+							</block>
+							<pragmas>
+								<ed:IfBlock oid="!ed/397e/7300/ADC4/6596701c176f"/>
+							</pragmas>
+						</IfBlock>
+						<!-- localNok = ok; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="localNok"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="ok"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/3990/7300/ADC4/6596704a6f22"/>
+							</pragmas>
+						</Equation>
+						<!-- _ = localNok; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="localNok"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/3998/7300/ADC4/659670503942"/>
+							</pragmas>
+						</Equation>
+						<!-- _L3 = nok; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L3"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="nok"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/399e/7300/ADC4/659670ba1ba1"/>
+							</pragmas>
+						</Equation>
+						<WhenBlock name="WhenBlockNok">
+							<when>
+								<ConstValue value="true"/>
+							</when>
+							<matches>
+								<Match pattern="nok">
+									<pragmas>
+										<ed:Match oid="!ed/39ab/7300/ADC4/659671412320"/>
+										<ed:Action oid="!ed/39ac/7300/ADC4/65967141c74"/>
+									</pragmas>
+								</Match>
+								<Match pattern="true">
+									<pragmas>
+										<ed:Match oid="!ed/39ad/7300/ADC4/6596715d6475"/>
+										<ed:Action oid="!ed/39b2/7300/ADC4/6596715f7b7d"/>
+									</pragmas>
+								</Match>
+							</matches>
+							<pragmas>
+								<ed:WhenBlock oid="!ed/39a6/7300/ADC4/6596713c5222"/>
+							</pragmas>
+						</WhenBlock>
+						<!-- _ = _L3; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L3"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/39c3/7300/ADC4/659671b162e4"/>
+							</pragmas>
+						</Equation>
+						<Assertion kind="assume" name="Anok">
+							<definition>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="ok"/>
+									</path>
+								</IdExpression>
+							</definition>
+							<pragmas>
+								<ed:Assertion oid="!ed/39c8/7300/ADC4/659671d44873"/>
+							</pragmas>
+						</Assertion>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/38cf/7300/ADC4/65966c032ab5" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Nok" landscape="false" format="B5 (182 257)" defaultPageFormat="false" oid="!ed/38d0/7300/ADC4/65966c032161">
+									<presentationElements>
+										<StateMachineGE presentable="!ed/38d8/7300/ADC4/65966c11411d">
+											<position>
+												<Point x="1032" y="714"/>
+											</position>
+											<size>
+												<Size width="22119" height="6641"/>
+											</size>
+										</StateMachineGE>
+										<StateGE presentable="!ed/38d3/7300/ADC4/65966c1061d3">
+											<position>
+												<Point x="18309" y="1931"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+										<StateGE presentable="!ed/38fe/7300/ADC4/65966cad3fe">
+											<position>
+												<Point x="2355" y="2011"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+										<TransitionGE polyline="true" presentable="!ed/3916/7300/ADC4/65966cd76bcf">
+											<positions>
+												<Point x="7064" y="4630"/>
+												<Point x="10716" y="4974"/>
+												<Point x="14367" y="4868"/>
+												<Point x="18309" y="4630"/>
+											</positions>
+											<labelSize>
+												<Size width="1482" height="370"/>
+											</labelSize>
+											<labelPos>
+												<Point x="16405" y="3863"/>
+											</labelPos>
+											<slashPos>
+												<Point x="17092" y="3863"/>
+											</slashPos>
+										</TransitionGE>
+										<TransitionGE presentable="!ed/3924/7300/ADC4/65966d20339c">
+											<positions>
+												<Point x="7064" y="2778"/>
+												<Point x="9843" y="1508"/>
+												<Point x="15372" y="1508"/>
+												<Point x="18309" y="3334"/>
+											</positions>
+											<labelSize>
+												<Size width="1482" height="370"/>
+											</labelSize>
+											<labelPos>
+												<Point x="16933" y="1032"/>
+											</labelPos>
+											<slashPos>
+												<Point x="17621" y="1032"/>
+											</slashPos>
+										</TransitionGE>
+										<TransitionGE polyline="true" presentable="!ed/3928/7300/ADC4/65966d3311c3">
+											<positions>
+												<Point x="7064" y="5265"/>
+												<Point x="9075" y="5292"/>
+												<Point x="11086" y="6403"/>
+												<Point x="18362" y="6853"/>
+											</positions>
+											<labelSize>
+												<Size width="1296" height="370"/>
+											</labelSize>
+											<labelPos>
+												<Point x="14234" y="5477"/>
+											</labelPos>
+											<slashPos>
+												<Point x="14737" y="5477"/>
+											</slashPos>
+										</TransitionGE>
+										<TransitionGE polyline="true" presentable="!ed/392d/7300/ADC4/65966d41259c">
+											<positions>
+												<Point x="18362" y="6853"/>
+												<Point x="15214" y="6482"/>
+												<Point x="17357" y="5477"/>
+												<Point x="19473" y="5529"/>
+											</positions>
+											<labelSize>
+												<Size width="1482" height="953"/>
+											</labelSize>
+											<labelPos>
+												<Point x="16748" y="5503"/>
+											</labelPos>
+											<slashPos>
+												<Point x="17436" y="5503"/>
+											</slashPos>
+										</TransitionGE>
+										<TransitionGE presentable="!ed/392e/7300/ADC4/65966d5254ea">
+											<positions>
+												<Point x="18362" y="6853"/>
+												<Point x="19606" y="9128"/>
+												<Point x="22040" y="8784"/>
+												<Point x="21114" y="5529"/>
+											</positions>
+											<labelSize>
+												<Size width="1482" height="370"/>
+											</labelSize>
+											<labelPos>
+												<Point x="19579" y="7646"/>
+											</labelPos>
+											<slashPos>
+												<Point x="20267" y="7646"/>
+											</slashPos>
+										</TransitionGE>
+										<IfBlockGE presentable="!ed/397e/7300/ADC4/6596701c176f">
+											<position>
+												<Point x="1138" y="9234"/>
+											</position>
+											<size>
+												<Size width="17224" height="4048"/>
+											</size>
+										</IfBlockGE>
+										<ActionGE presentable="!ed/3984/7300/ADC4/6596701f3a50">
+											<position>
+												<Point x="2963" y="9737"/>
+											</position>
+											<size>
+												<Size width="15267" height="1429"/>
+											</size>
+										</ActionGE>
+										<ActionGE presentable="!ed/3985/7300/ADC4/6596701f274f">
+											<position>
+												<Point x="2963" y="11536"/>
+											</position>
+											<size>
+												<Size width="4710" height="1429"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/3983/7300/ADC4/6596701fb15">
+											<position>
+												<Point x="1588" y="9816"/>
+											</position>
+										</IfNodeGE>
+										<EquationGE presentable="!ed/3990/7300/ADC4/6596704a6f22">
+											<position>
+												<Point x="13229" y="14261"/>
+											</position>
+											<size>
+												<Size width="265" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE rotation="180" presentable="!ed/3998/7300/ADC4/659670503942">
+											<position>
+												<Point x="15690" y="15266"/>
+											</position>
+											<size>
+												<Size width="502" height="503"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/3990/7300/ADC4/6596704a6f22" dstEquation="!ed/3998/7300/ADC4/659670503942">
+											<positions>
+												<Point x="13494" y="14526"/>
+												<Point x="18468" y="14526"/>
+												<Point x="18468" y="15531"/>
+												<Point x="15954" y="15531"/>
+											</positions>
+										</Edge>
+										<EquationGE presentable="!ed/399e/7300/ADC4/659670ba1ba1">
+											<position>
+												<Point x="18785" y="16140"/>
+											</position>
+											<size>
+												<Size width="265" height="503"/>
+											</size>
+										</EquationGE>
+										<WhenBlockGE presentable="!ed/39a6/7300/ADC4/6596713c5222">
+											<position>
+												<Point x="4022" y="17859"/>
+											</position>
+											<size>
+												<Size width="14896" height="7779"/>
+											</size>
+											<startPos>
+												<Point x="450" y="582"/>
+											</startPos>
+										</WhenBlockGE>
+										<WhenBranchGE labelWidth="794" presentable="!ed/39ab/7300/ADC4/659671412320">
+											<position>
+												<Point x="4551" y="19473"/>
+											</position>
+										</WhenBranchGE>
+										<ActionGE presentable="!ed/39ac/7300/ADC4/65967141c74">
+											<position>
+												<Point x="5821" y="19394"/>
+											</position>
+											<size>
+												<Size width="12409" height="1429"/>
+											</size>
+										</ActionGE>
+										<WhenBranchGE labelWidth="794" presentable="!ed/39ad/7300/ADC4/6596715d6475">
+											<position>
+												<Point x="4551" y="20955"/>
+											</position>
+										</WhenBranchGE>
+										<ActionGE presentable="!ed/39b2/7300/ADC4/6596715f7b7d">
+											<position>
+												<Point x="5821" y="20876"/>
+											</position>
+											<size>
+												<Size width="4709" height="1428"/>
+											</size>
+										</ActionGE>
+										<EquationGE presentable="!ed/39c3/7300/ADC4/659671b162e4">
+											<position>
+												<Point x="20876" y="16140"/>
+											</position>
+											<size>
+												<Size width="502" height="502"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/399e/7300/ADC4/659670ba1ba1" dstEquation="!ed/39c3/7300/ADC4/659671b162e4">
+											<positions>
+												<Point x="19050" y="16404"/>
+												<Point x="20082" y="16404"/>
+												<Point x="20082" y="16404"/>
+												<Point x="21140" y="16404"/>
+											</positions>
+										</Edge>
+										<AssertionGE presentable="!ed/39c8/7300/ADC4/659671d44873">
+											<position>
+												<Point x="688" y="25770"/>
+											</position>
+											<size>
+												<Size width="0" height="0"/>
+											</size>
+										</AssertionGE>
+										<TransitionGE presentable="!ed/3a29/7300/ADC4/6596748a4b6c">
+											<positions>
+												<Point x="6244" y="5609"/>
+												<Point x="18574" y="7911"/>
+												<Point x="11827" y="7726"/>
+												<Point x="4551" y="5609"/>
+											</positions>
+											<labelSize>
+												<Size width="1482" height="370"/>
+											</labelSize>
+											<labelPos>
+												<Point x="17992" y="8466"/>
+											</labelPos>
+											<slashPos>
+												<Point x="17992" y="8466"/>
+											</slashPos>
+										</TransitionGE>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="Ok">
+					<inputs>
+						<Variable name="ok">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/3a9f/7300/ADC4/6596762a583d"/>
+							</pragmas>
+						</Variable>
+						<Variable name="nok">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/3aa0/7300/ADC4/6596762a419"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<locals>
+						<Variable name="localNok">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/3a9e/7300/ADC4/6596762a4af3"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L3">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/3a9d/7300/ADC4/6596762a709b"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<StateMachine name="SmOk">
+							<states>
+								<State initial="true" name="StateNok">
+									<pragmas>
+										<ed:State oid="!ed/3a86/7300/ADC4/6596762a6528"/>
+									</pragmas>
+								</State>
+								<State name="StateOk">
+									<unless>
+										<Transition kind="restart">
+											<target>
+												<StateRef name="StateNok"/>
+											</target>
+											<condition>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="ok"/>
+													</path>
+												</IdExpression>
+											</condition>
+											<pragmas>
+												<ed:Transition oid="!ed/3a88/7300/ADC4/6596762acb0"/>
+											</pragmas>
+										</Transition>
+									</unless>
+									<until>
+										<Transition kind="restart">
+											<target>
+												<StateRef name="StateNok"/>
+											</target>
+											<condition>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="ok"/>
+													</path>
+												</IdExpression>
+											</condition>
+											<pragmas>
+												<ed:Transition oid="!ed/3a89/7300/ADC4/6596762a5624"/>
+											</pragmas>
+										</Transition>
+										<Transition>
+											<condition>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="ok"/>
+													</path>
+												</IdExpression>
+											</condition>
+											<forks>
+												<ForkBranch kind="restart">
+													<target>
+														<StateRef name="StateNok"/>
+													</target>
+													<condition>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="ok"/>
+															</path>
+														</IdExpression>
+													</condition>
+													<pragmas>
+														<ed:ForkBranch oid="!ed/3a8b/7300/ADC4/6596762a36cf"/>
+													</pragmas>
+												</ForkBranch>
+												<ForkBranch kind="restart">
+													<target>
+														<StateRef name="StateNok"/>
+													</target>
+													<condition>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="ok"/>
+															</path>
+														</IdExpression>
+													</condition>
+													<pragmas>
+														<ed:ForkBranch oid="!ed/3a8c/7300/ADC4/6596762a59e3"/>
+													</pragmas>
+												</ForkBranch>
+											</forks>
+											<pragmas>
+												<ed:Transition oid="!ed/3a8a/7300/ADC4/6596762a55ae"/>
+											</pragmas>
+										</Transition>
+										<Synchro kind="restart">
+											<target>
+												<StateRef name="StateOk"/>
+											</target>
+											<pragmas>
+												<ed:Synchro oid="!ed/3a8d/7300/ADC4/6596762a2c31"/>
+											</pragmas>
+										</Synchro>
+									</until>
+									<pragmas>
+										<ed:State oid="!ed/3a87/7300/ADC4/6596762a1996"/>
+									</pragmas>
+								</State>
+							</states>
+							<pragmas>
+								<ed:StateMachine oid="!ed/3a85/7300/ADC4/6596762a450b"/>
+							</pragmas>
+						</StateMachine>
+						<IfBlock name="IfBlockOk">
+							<block>
+								<IfNode>
+									<if>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="ok"/>
+											</path>
+										</IdExpression>
+									</if>
+									<then>
+										<Action>
+											<pragmas>
+												<ed:Action oid="!ed/3a91/7300/ADC4/6596762a6e8b"/>
+											</pragmas>
+										</Action>
+									</then>
+									<else>
+										<Action>
+											<pragmas>
+												<ed:Action oid="!ed/3a90/7300/ADC4/6596762a4497"/>
+											</pragmas>
+										</Action>
+									</else>
+									<pragmas>
+										<ed:IfNode oid="!ed/3a8f/7300/ADC4/6596762a3da9"/>
+									</pragmas>
+								</IfNode>
+							</block>
+							<pragmas>
+								<ed:IfBlock oid="!ed/3a8e/7300/ADC4/6596762a15d6"/>
+							</pragmas>
+						</IfBlock>
+						<!-- localNok = ok; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="localNok"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="ok"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/3a92/7300/ADC4/6596762a46a2"/>
+							</pragmas>
+						</Equation>
+						<!-- _ = localNok; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="localNok"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/3a93/7300/ADC4/6596762a45f3"/>
+							</pragmas>
+						</Equation>
+						<!-- _L3 = ok; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L3"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="ok"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/3a94/7300/ADC4/6596762a54f0"/>
+							</pragmas>
+						</Equation>
+						<WhenBlock name="WhenBlockOk">
+							<when>
+								<ConstValue value="true"/>
+							</when>
+							<matches>
+								<Match pattern="ok">
+									<pragmas>
+										<ed:Match oid="!ed/3a96/7300/ADC4/6596762a976"/>
+										<ed:Action oid="!ed/3a97/7300/ADC4/6596762a474f"/>
+									</pragmas>
+								</Match>
+								<Match pattern="true">
+									<pragmas>
+										<ed:Match oid="!ed/3a98/7300/ADC4/6596762a5099"/>
+										<ed:Action oid="!ed/3a99/7300/ADC4/6596762a4c27"/>
+									</pragmas>
+								</Match>
+							</matches>
+							<pragmas>
+								<ed:WhenBlock oid="!ed/3a95/7300/ADC4/6596762a5618"/>
+							</pragmas>
+						</WhenBlock>
+						<!-- _ = _L3; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L3"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/3a9a/7300/ADC4/6596762a336e"/>
+							</pragmas>
+						</Equation>
+						<Assertion kind="assume" name="Aok">
+							<definition>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="ok"/>
+									</path>
+								</IdExpression>
+							</definition>
+							<pragmas>
+								<ed:Assertion oid="!ed/3a9b/7300/ADC4/6596762a4f37"/>
+							</pragmas>
+						</Assertion>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/3a84/7300/ADC4/6596762a2cac" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Ok" landscape="true" format="A3 (297 420)" defaultPageFormat="false" oid="!ed/3a9c/7300/ADC4/6596762a28b5">
+									<presentationElements>
+										<StateMachineGE presentable="!ed/3a85/7300/ADC4/6596762a450b">
+											<position>
+												<Point x="1032" y="714"/>
+											</position>
+											<size>
+												<Size width="22119" height="6641"/>
+											</size>
+										</StateMachineGE>
+										<StateGE presentable="!ed/3a86/7300/ADC4/6596762a6528">
+											<position>
+												<Point x="18309" y="1931"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+										<StateGE presentable="!ed/3a87/7300/ADC4/6596762a1996">
+											<position>
+												<Point x="2355" y="2011"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+										<TransitionGE polyline="true" presentable="!ed/3a88/7300/ADC4/6596762acb0">
+											<positions>
+												<Point x="7064" y="4630"/>
+												<Point x="10716" y="4974"/>
+												<Point x="14367" y="4868"/>
+												<Point x="18309" y="4630"/>
+											</positions>
+											<labelSize>
+												<Size width="1296" height="370"/>
+											</labelSize>
+											<labelPos>
+												<Point x="16589" y="3863"/>
+											</labelPos>
+											<slashPos>
+												<Point x="17092" y="3863"/>
+											</slashPos>
+										</TransitionGE>
+										<TransitionGE presentable="!ed/3a89/7300/ADC4/6596762a5624">
+											<positions>
+												<Point x="7064" y="2778"/>
+												<Point x="9843" y="1508"/>
+												<Point x="15372" y="1508"/>
+												<Point x="18309" y="3334"/>
+											</positions>
+											<labelSize>
+												<Size width="1296" height="370"/>
+											</labelSize>
+											<labelPos>
+												<Point x="17118" y="1032"/>
+											</labelPos>
+											<slashPos>
+												<Point x="17621" y="1032"/>
+											</slashPos>
+										</TransitionGE>
+										<TransitionGE polyline="true" presentable="!ed/3a8a/7300/ADC4/6596762a55ae">
+											<positions>
+												<Point x="7064" y="5265"/>
+												<Point x="9075" y="5292"/>
+												<Point x="11086" y="6403"/>
+												<Point x="18362" y="6853"/>
+											</positions>
+											<labelSize>
+												<Size width="1296" height="370"/>
+											</labelSize>
+											<labelPos>
+												<Point x="14234" y="5477"/>
+											</labelPos>
+											<slashPos>
+												<Point x="14737" y="5477"/>
+											</slashPos>
+										</TransitionGE>
+										<TransitionGE polyline="true" presentable="!ed/3a8b/7300/ADC4/6596762a36cf">
+											<positions>
+												<Point x="18362" y="6853"/>
+												<Point x="15214" y="6482"/>
+												<Point x="17357" y="5477"/>
+												<Point x="19473" y="5529"/>
+											</positions>
+											<labelSize>
+												<Size width="1296" height="953"/>
+											</labelSize>
+											<labelPos>
+												<Point x="16933" y="5503"/>
+											</labelPos>
+											<slashPos>
+												<Point x="17436" y="5503"/>
+											</slashPos>
+										</TransitionGE>
+										<TransitionGE presentable="!ed/3a8c/7300/ADC4/6596762a59e3">
+											<positions>
+												<Point x="18362" y="6853"/>
+												<Point x="19606" y="9128"/>
+												<Point x="22040" y="8784"/>
+												<Point x="21114" y="5529"/>
+											</positions>
+											<labelSize>
+												<Size width="1296" height="370"/>
+											</labelSize>
+											<labelPos>
+												<Point x="19764" y="7646"/>
+											</labelPos>
+											<slashPos>
+												<Point x="20267" y="7646"/>
+											</slashPos>
+										</TransitionGE>
+										<IfBlockGE presentable="!ed/3a8e/7300/ADC4/6596762a15d6">
+											<position>
+												<Point x="1138" y="9234"/>
+											</position>
+											<size>
+												<Size width="17224" height="4048"/>
+											</size>
+										</IfBlockGE>
+										<ActionGE presentable="!ed/3a91/7300/ADC4/6596762a6e8b">
+											<position>
+												<Point x="2963" y="9737"/>
+											</position>
+											<size>
+												<Size width="15267" height="1429"/>
+											</size>
+										</ActionGE>
+										<ActionGE presentable="!ed/3a90/7300/ADC4/6596762a4497">
+											<position>
+												<Point x="2963" y="11536"/>
+											</position>
+											<size>
+												<Size width="4710" height="1429"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/3a8f/7300/ADC4/6596762a3da9">
+											<position>
+												<Point x="1588" y="9816"/>
+											</position>
+										</IfNodeGE>
+										<EquationGE presentable="!ed/3a92/7300/ADC4/6596762a46a2">
+											<position>
+												<Point x="13229" y="14261"/>
+											</position>
+											<size>
+												<Size width="265" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE rotation="180" presentable="!ed/3a93/7300/ADC4/6596762a45f3">
+											<position>
+												<Point x="15690" y="15266"/>
+											</position>
+											<size>
+												<Size width="502" height="503"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/3a92/7300/ADC4/6596762a46a2" dstEquation="!ed/3a93/7300/ADC4/6596762a45f3">
+											<positions>
+												<Point x="13494" y="14526"/>
+												<Point x="18468" y="14526"/>
+												<Point x="18468" y="15531"/>
+												<Point x="15954" y="15531"/>
+											</positions>
+										</Edge>
+										<EquationGE presentable="!ed/3a94/7300/ADC4/6596762a54f0">
+											<position>
+												<Point x="18785" y="16140"/>
+											</position>
+											<size>
+												<Size width="265" height="503"/>
+											</size>
+										</EquationGE>
+										<WhenBlockGE presentable="!ed/3a95/7300/ADC4/6596762a5618">
+											<position>
+												<Point x="4022" y="17859"/>
+											</position>
+											<size>
+												<Size width="14896" height="7779"/>
+											</size>
+											<startPos>
+												<Point x="450" y="582"/>
+											</startPos>
+										</WhenBlockGE>
+										<WhenBranchGE labelWidth="794" presentable="!ed/3a96/7300/ADC4/6596762a976">
+											<position>
+												<Point x="4551" y="19473"/>
+											</position>
+										</WhenBranchGE>
+										<ActionGE presentable="!ed/3a97/7300/ADC4/6596762a474f">
+											<position>
+												<Point x="5821" y="19394"/>
+											</position>
+											<size>
+												<Size width="12409" height="1429"/>
+											</size>
+										</ActionGE>
+										<WhenBranchGE labelWidth="794" presentable="!ed/3a98/7300/ADC4/6596762a5099">
+											<position>
+												<Point x="4551" y="20955"/>
+											</position>
+										</WhenBranchGE>
+										<ActionGE presentable="!ed/3a99/7300/ADC4/6596762a4c27">
+											<position>
+												<Point x="5821" y="20876"/>
+											</position>
+											<size>
+												<Size width="4709" height="1428"/>
+											</size>
+										</ActionGE>
+										<EquationGE presentable="!ed/3a9a/7300/ADC4/6596762a336e">
+											<position>
+												<Point x="20876" y="16140"/>
+											</position>
+											<size>
+												<Size width="502" height="502"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/3a94/7300/ADC4/6596762a54f0" dstEquation="!ed/3a9a/7300/ADC4/6596762a336e">
+											<positions>
+												<Point x="19050" y="16404"/>
+												<Point x="20082" y="16404"/>
+												<Point x="20082" y="16404"/>
+												<Point x="21140" y="16404"/>
+											</positions>
+										</Edge>
+										<AssertionGE presentable="!ed/3a9b/7300/ADC4/6596762a4f37">
+											<position>
+												<Point x="688" y="24977"/>
+											</position>
+											<size>
+												<Size width="0" height="0"/>
+											</size>
+										</AssertionGE>
+										<TransitionGE presentable="!ed/3a8d/7300/ADC4/6596762a2c31">
+											<positions>
+												<Point x="6244" y="5609"/>
+												<Point x="18574" y="7911"/>
+												<Point x="11827" y="7726"/>
+												<Point x="4551" y="5609"/>
+											</positions>
+											<labelSize>
+												<Size width="1482" height="370"/>
+											</labelSize>
+											<labelPos>
+												<Point x="17992" y="8466"/>
+											</labelPos>
+											<slashPos>
+												<Point x="17992" y="8466"/>
+											</slashPos>
+										</TransitionGE>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="function" name="Na">
+					<inputs>
+						<Variable name="i">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/8a/2344/8688/65d719dd6450"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="o">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/93/2344/8688/65d719e2240c"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<data>
+						<!-- o = i; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="o"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="i"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/bc/2344/8688/65d71a0b5211"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/88/2344/8688/65d719d42221" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<TextDiagram name="Na" landscape="false" format="A4 (210 297)" oid="!ed/b2/2344/8688/65d71a046102">
+									<presentationElements>
+										<FlowTE presentable="!ed/bc/2344/8688/65d71a0b5211"/>
+									</presentationElements>
+								</TextDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="function" name="Robustness">
+					<inputs>
+						<Variable name="i">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/93/51C3/1E94/65d71b312933"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="o">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/99/51C3/1E94/65d71b313497"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<locals>
+						<Variable name="_L1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/a0/51C3/1E94/65d71b3751c3"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<!-- o = _L1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="o"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L1"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/9a/51C3/1E94/65d71b34234c"/>
+							</pragmas>
+						</Equation>
+						<!-- _L1 = i; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L1"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="i"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/9f/51C3/1E94/65d71b37746b"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/bd/2344/8688/65d71a675d11" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Robustness" landscape="true" format="Robustness with wrong vlaues" defaultPageFormat="false" oid="!ed/be/2344/8688/65d71a672d66">
+									<presentationElements>
+										<EquationGE presentable="!ed/9a/51C3/1E94/65d71b34234c">
+											<position>
+												<Point x="4815" y="847"/>
+											</position>
+											<size>
+												<Size width="318" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/9f/51C3/1E94/65d71b37746b">
+											<position>
+												<Point x="1323" y="847"/>
+											</position>
+											<size>
+												<Size width="265" height="502"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/9f/51C3/1E94/65d71b37746b" dstEquation="!ed/9a/51C3/1E94/65d71b34234c">
+											<positions>
+												<Point x="1588" y="1111"/>
+												<Point x="3228" y="1111"/>
+												<Point x="3228" y="1111"/>
+												<Point x="4868" y="1111"/>
+											</positions>
+										</Edge>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/38b3/7300/ADC4/65958c471007" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/38b4/7300/ADC4/65958c476f34" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/38b5/7300/ADC4/65958c4751f2" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/38b6/7300/ADC4/65958c471999" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

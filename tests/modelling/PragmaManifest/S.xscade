@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="S">
+			<declarations>
+				<Constant name="S8">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<ConstValue value="8"/>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/31a/2C98/CB98/65a91ff67b99"/>
+					</pragmas>
+				</Constant>
+				<Constant name="N7">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<!-- S8 - 1 -->
+						<BinaryOp operator="-">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="S8"/>
+									</path>
+								</IdExpression>
+								<ConstValue value="1"/>
+							</operands>
+						</BinaryOp>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/32b/2C98/CB98/65a920096ae"/>
+					</pragmas>
+				</Constant>
+				<Constant name="N8">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<!-- N7 + 1 -->
+						<NAryOp operator="+">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="N7"/>
+									</path>
+								</IdExpression>
+								<ConstValue value="1"/>
+							</operands>
+						</NAryOp>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/33c/2C98/CB98/65a9201d57a5"/>
+					</pragmas>
+				</Constant>
+				<Type name="Speed">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="float32"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/34d/2C98/CB98/65a922be40b2"/>
+					</pragmas>
+				</Type>
+				<Type name="Char">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="char"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/356/2C98/CB98/65a9259a4ff3"/>
+					</pragmas>
+				</Type>
+				<Type name="Bool">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/35f/2C98/CB98/65a925a95535"/>
+					</pragmas>
+				</Type>
+				<Type name="Bool31">
+					<definition>
+						<Table>
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<size>
+								<ConstValue value="31"/>
+							</size>
+						</Table>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/368/2C98/CB98/65a925c55164"/>
+					</pragmas>
+				</Type>
+				<Type name="Uint16">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="uint16"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/372/2C98/CB98/65a9266d2ea4"/>
+					</pragmas>
+				</Type>
+				<Type name="Int32">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/37b/2C98/CB98/65a9267d5c0f"/>
+					</pragmas>
+				</Type>
+				<Type name="Float64">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="float64"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/384/2C98/CB98/65a9268720d"/>
+					</pragmas>
+				</Type>
+				<Type name="Signed8">
+					<definition>
+						<SizedType constraint="signed">
+							<size>
+								<ConstValue value="8"/>
+							</size>
+						</SizedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/38d/2C98/CB98/65a9269d3010"/>
+					</pragmas>
+				</Type>
+				<Type name="Unsigned16">
+					<definition>
+						<SizedType constraint="unsigned">
+							<size>
+								<ConstValue value="16"/>
+							</size>
+						</SizedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/396/2C98/CB98/65a926b73ae7"/>
+					</pragmas>
+				</Type>
+				<Type name="SignedN8">
+					<definition>
+						<SizedType constraint="signed">
+							<size>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="N8"/>
+									</path>
+								</IdExpression>
+							</size>
+						</SizedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/3a8/2C98/CB98/65a926d8416a"/>
+					</pragmas>
+				</Type>
+				<Type name="SignedS8">
+					<definition>
+						<SizedType constraint="signed">
+							<size>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="S8"/>
+									</path>
+								</IdExpression>
+							</size>
+						</SizedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/3b6/2C98/CB98/65a926f1422"/>
+					</pragmas>
+				</Type>
+				<Type name="Undefined">
+					<definition>
+						<NamedType>
+							<type>
+								<NullRef/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/a6/6E78/3940/65a93bf83e23"/>
+					</pragmas>
+				</Type>
+				<Type name="Structure">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="u">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="Uint16"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/aa/6E78/3940/65a93fd86635"/>
+									</pragmas>
+								</Field>
+								<Field name="s">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="Speed"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/ea/6E78/3940/65a944763615"/>
+									</pragmas>
+								</Field>
+								<Field name="p">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="Point"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/c4/6E78/3940/65a9406941b5"/>
+									</pragmas>
+								</Field>
+								<Field name="m">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="Matrix"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/e0/6E78/3940/65a9408cdf1"/>
+									</pragmas>
+								</Field>
+								<Field name="i">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="Imported"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/16c/6E78/3940/65aa2aae82e"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/a7/6E78/3940/65a93f275d59"/>
+					</pragmas>
+				</Type>
+				<Type name="Enum">
+					<definition>
+						<Enum>
+							<values>
+								<Value name="value1">
+									<pragmas>
+										<ed:Value oid="!ed/a9/6E78/3940/65a93f381130"/>
+									</pragmas>
+								</Value>
+							</values>
+						</Enum>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/a8/6E78/3940/65a93f2c2fe4"/>
+					</pragmas>
+				</Type>
+				<Type name="Point">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="x">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="float32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/b5/6E78/3940/65a9400a2340"/>
+									</pragmas>
+								</Field>
+								<Field name="y">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="float32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/c3/6E78/3940/65a940133ded"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/b4/6E78/3940/65a93ffe6c3e"/>
+					</pragmas>
+				</Type>
+				<Type name="Matrix">
+					<definition>
+						<Table>
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Bool31"/>
+									</type>
+								</NamedType>
+							</type>
+							<size>
+								<ConstValue value="9"/>
+							</size>
+						</Table>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/ce/6E78/3940/65a940794805"/>
+					</pragmas>
+				</Type>
+				<Type external="imported" name="Imported">
+					<pragmas>
+						<ed:Type oid="!ed/16b/6E78/3940/65aa2a9b730f"/>
+					</pragmas>
+				</Type>
+				<Type name="SignedX">
+					<definition>
+						<SizedType constraint="signed">
+							<size>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="X"/>
+									</path>
+								</IdExpression>
+							</size>
+						</SizedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/18c/6E78/3940/65aa2b5032cc"/>
+					</pragmas>
+				</Type>
+				<Type name="Signed9">
+					<definition>
+						<SizedType constraint="signed">
+							<size>
+								<ConstValue value="9"/>
+							</size>
+						</SizedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/1aa/6E78/3940/65aa2b9b3087"/>
+					</pragmas>
+				</Type>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/316/2C98/CB98/65a91fdf620" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/317/2C98/CB98/65a91fdf309e" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/318/2C98/CB98/65a91fdf3bb9" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/319/2C98/CB98/65a91fdf6d8" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

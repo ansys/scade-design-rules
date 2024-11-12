@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" name="Package2">
+	<declarations>
+		<Operator name="Operator3" href="Operator3.xscade"/>
+	</declarations>
+	<pragmas>
+		<ed:Package oid="!ed/24f5f/2A58/4AEC/5fc7ace56197" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+			<diagrams>
+				<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/24f60/2A58/4AEC/5fc7ace56a" blockKind="constants"/>
+				<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/24f61/2A58/4AEC/5fc7ace57ace" blockKind="types"/>
+				<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/24f62/2A58/4AEC/5fc7ace57efb" blockKind="sensors"/>
+			</diagrams>
+		</ed:Package>
+	</pragmas>
+</Package>

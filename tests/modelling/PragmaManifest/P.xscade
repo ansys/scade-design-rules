@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="P">
+			<declarations>
+				<Type name="NoManifestNok">
+					<definition>
+						<Table>
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="char"/>
+									</type>
+								</NamedType>
+							</type>
+							<size>
+								<ConstValue value="9"/>
+							</size>
+						</Table>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/17d/2C98/CB98/65a7a1576160"/>
+					</pragmas>
+				</Type>
+				<Type name="ManifestOk">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="label7">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/13a/6E78/3940/65a94df73fdc"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/186/2C98/CB98/65a7a1661dce"/>
+						<kcg:Pragma>
+							manifest
+						</kcg:Pragma>
+					</pragmas>
+				</Type>
+				<Type name="NoManifestNa">
+					<definition>
+						<Table>
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<size>
+								<ConstValue value="31"/>
+							</size>
+						</Table>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/19d/2C98/CB98/65a7a1aa3c85"/>
+					</pragmas>
+				</Type>
+				<Type name="ManifestNa">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/1a3/2C98/CB98/65a7a1b4337a"/>
+						<kcg:Pragma>
+							manifest
+						</kcg:Pragma>
+					</pragmas>
+				</Type>
+				<Type name="StructManifest">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="label1">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/236/2C98/CB98/65a7dc954b47"/>
+									</pragmas>
+								</Field>
+								<Field name="label2">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/237/2C98/CB98/65a7dc953081"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/235/2C98/CB98/65a7dc952c7e"/>
+						<kcg:Pragma>
+							manifest
+						</kcg:Pragma>
+					</pragmas>
+				</Type>
+				<Type name="StructNoManifest">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="label3">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/240/2C98/CB98/65a7ee4827f3"/>
+									</pragmas>
+								</Field>
+								<Field name="label4">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/241/2C98/CB98/65a7ee4820ef"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/23f/2C98/CB98/65a7ee485611"/>
+					</pragmas>
+				</Type>
+				<Type name="SubManifestOk">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="label5">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="StructManifest"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/248/2C98/CB98/65a7eea87c7a"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/247/2C98/CB98/65a7ee9457ee"/>
+						<kcg:Pragma>
+							manifest
+						</kcg:Pragma>
+					</pragmas>
+				</Type>
+				<Type name="SubNoManifestNok">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="label6">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="StructNoManifest"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/25a/2C98/CB98/65a7eee88fa"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/259/2C98/CB98/65a7eee84190"/>
+						<kcg:Pragma>
+							manifest
+						</kcg:Pragma>
+					</pragmas>
+				</Type>
+				<Type name="EquivalentSubManifestOk">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="label5">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="EquivalentStructManifest"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/fc/6E78/3940/65a948f11fc1"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/fb/6E78/3940/65a948f1c3f"/>
+					</pragmas>
+				</Type>
+				<Type name="EquivalentStructManifest">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="label1">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/105/6E78/3940/65a9492544c7"/>
+									</pragmas>
+								</Field>
+								<Field name="label2">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/106/6E78/3940/65a94925423d"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/104/6E78/3940/65a949257ae9"/>
+					</pragmas>
+				</Type>
+				<Type name="EnumNa">
+					<definition>
+						<Enum>
+							<values>
+								<Value name="value1">
+									<pragmas>
+										<ed:Value oid="!ed/14c/6E78/3940/65a94e4e64df"/>
+									</pragmas>
+								</Value>
+							</values>
+						</Enum>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/14b/6E78/3940/65a94e46bf6"/>
+					</pragmas>
+				</Type>
+				<Type name="AliasOk">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="ManifestOk"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/157/6E78/3940/65a94fbba59"/>
+					</pragmas>
+				</Type>
+				<Operator kind="node" name="Root">
+					<inputs>
+						<Variable name="manifestOk">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="ManifestOk"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/7c/2C98/CB98/65a7a11f6c52"/>
+							</pragmas>
+						</Variable>
+						<Variable name="enumNa">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="EnumNa"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/14d/6E78/3940/65a94ef97007"/>
+							</pragmas>
+						</Variable>
+						<Variable name="equivalentNoManifestOk">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="EquivalentSubManifestOk"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/130/6E78/3940/65a94d435a62" hidden="true"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="noManifestNok">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="NoManifestNok"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/7b/2C98/CB98/65a7a11fb4a"/>
+							</pragmas>
+						</Variable>
+						<Variable name="subManifestOk">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="SubManifestOk"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/276/2C98/CB98/65a7f1af2d9d"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<locals>
+						<Variable name="_L2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="StructNoManifest"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/2e8/2C98/CB98/65a7f29e4a"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<!-- _L2 = Call(_null, _null); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L2"/>
+							</lefts>
+							<right>
+								<!-- Call(_null, _null) -->
+								<CallExpression>
+									<operator>
+										<OpCall name="1">
+											<operator>
+												<OperatorRef name="Call"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<callParameters>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+									</callParameters>
+								</CallExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/77/2C98/CB98/65a7a11f458b"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/76/2C98/CB98/65a7a11f6c85" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Root" landscape="true" format="A4 (210 297)" oid="!ed/78/2C98/CB98/65a7a11f25b">
+									<presentationElements>
+										<EquationGE presentable="!ed/77/2C98/CB98/65a7a11f458b">
+											<position>
+												<Point x="2090" y="1376"/>
+											</position>
+											<size>
+												<Size width="1773" height="1402"/>
+											</size>
+										</EquationGE>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="Size">
+					<sizeParameters>
+						<SizeParameter name="N">
+							<pragmas>
+								<ed:SizeParameter oid="!ed/7f/2C98/CB98/65a7a11f49fe"/>
+							</pragmas>
+						</SizeParameter>
+					</sizeParameters>
+					<inputs>
+						<Variable name="manifestOk">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="ManifestOk"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/299/2C98/CB98/65a7f22218d5"/>
+							</pragmas>
+						</Variable>
+						<Variable name="na">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="N"/>
+											</path>
+										</IdExpression>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/82/2C98/CB98/65a7a11f3332"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="noManifestNa">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="NoManifestNa"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/2a0/2C98/CB98/65a7f22238c3"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<pragmas>
+						<ed:Operator oid="!ed/7d/2C98/CB98/65a7a11f112d" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Size" landscape="true" format="A4 (210 297)" oid="!ed/7e/2C98/CB98/65a7a11f6e36"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="Polymorphic">
+					<inputs>
+						<Variable name="noManifestNa">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="NoManifestNa"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/301/2C98/CB98/65a7f6806e78"/>
+							</pragmas>
+						</Variable>
+						<Variable name="na">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="'T"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/87/2C98/CB98/65a7a11f552c" hidden="true"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="manifestOk">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="ManifestOk"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/2fa/2C98/CB98/65a7f6805bf7"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<pragmas>
+						<ed:Operator oid="!ed/83/2C98/CB98/65a7a11f439c" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Polymorphic" landscape="true" format="A4 (210 297)" oid="!ed/84/2C98/CB98/65a7a11f169b"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="Call">
+					<inputs>
+						<Variable name="manifestNa">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="ManifestNa"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/8c/2C98/CB98/65a7a11f68b8"/>
+							</pragmas>
+						</Variable>
+						<Variable name="noManifestNa">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="NoManifestNa"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/8a/2C98/CB98/65a7a11f6bc4" hidden="true"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="structNoManifest">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="StructNoManifest"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/2e5/2C98/CB98/65a7f2994df4"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<pragmas>
+						<ed:Operator oid="!ed/88/2C98/CB98/65a7a11f2392" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Call" landscape="true" format="A4 (210 297)" oid="!ed/89/2C98/CB98/65a7a11f2a80"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="Lib">
+					<inputs>
+						<Variable name="subNoManifestNok">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="SubNoManifestNok"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/2ae/2C98/CB98/65a7f2357c7"/>
+							</pragmas>
+						</Variable>
+						<Variable name="manifestOk">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="ManifestOk"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/2a7/2C98/CB98/65a7f2356a70" hidden="true"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="noManifestNok">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="NoManifestNok"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/2b5/2C98/CB98/65a7f2353bcc"/>
+							</pragmas>
+						</Variable>
+						<Variable name="subManifestOk">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="SubManifestOk"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/2bc/2C98/CB98/65a7f23518ec"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<locals>
+						<Variable name="_L2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="StructNoManifest"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/2e7/2C98/CB98/65a7f29e7cf0"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<!-- _L2 = Call(_null, _null); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L2"/>
+							</lefts>
+							<right>
+								<!-- Call(_null, _null) -->
+								<CallExpression>
+									<operator>
+										<OpCall name="1">
+											<operator>
+												<OperatorRef name="Call"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<callParameters>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+									</callParameters>
+								</CallExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/8e/2C98/CB98/65a7a11f589c"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/8d/2C98/CB98/65a7a11f2d03" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Lib" landscape="true" format="A4 (210 297)" oid="!ed/8f/2C98/CB98/65a7a11f7e17">
+									<presentationElements>
+										<EquationGE presentable="!ed/8e/2C98/CB98/65a7a11f589c">
+											<position>
+												<Point x="2090" y="1376"/>
+											</position>
+											<size>
+												<Size width="1773" height="1402"/>
+											</size>
+										</EquationGE>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" external="imported" name="Imported">
+					<inputs>
+						<Variable name="noManifestNok">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="NoManifestNok"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/2d1/2C98/CB98/65a7f24116b8"/>
+							</pragmas>
+						</Variable>
+						<Variable name="aliasOk">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="AliasOk"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/161/6E78/3940/65a94fcc6d6e" hidden="true"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="subManifestOk">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="SubManifestOk"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/2d8/2C98/CB98/65a7f24178e"/>
+							</pragmas>
+						</Variable>
+						<Variable name="manifestOk">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="ManifestOk"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/2c3/2C98/CB98/65a7f2417dcf"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<pragmas>
+						<ed:Operator oid="!ed/94/2C98/CB98/65a7a11f3ca0"/>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/72/2C98/CB98/65a7a11f5734" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/73/2C98/CB98/65a7a11f5c69" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/74/2C98/CB98/65a7a11f34be" blockKind="types" columnsSize="0, 205, 150, 300"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/75/2C98/CB98/65a7a11f1a14" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

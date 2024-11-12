@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="Package">
+			<declarations>
+				<Type name="Enum1_t">
+					<definition>
+						<Enum>
+							<values>
+								<Value name="value">
+									<pragmas>
+										<ed:Value oid="!ed/6f/6375/1B98C/6569f65b1c28"/>
+									</pragmas>
+								</Value>
+								<Value name="value_DEFAULT">
+									<pragmas>
+										<ed:Value oid="!ed/70/6375/1B98C/6569f65e4317"/>
+										<kcg:Pragma>
+											default
+										</kcg:Pragma>
+									</pragmas>
+								</Value>
+							</values>
+						</Enum>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/6e/6375/1B98C/6569f654427"/>
+					</pragmas>
+				</Type>
+				<Type name="Enum2_t">
+					<definition>
+						<Enum>
+							<values>
+								<Value name="value2">
+									<pragmas>
+										<ed:Value oid="!ed/79/6375/1B98C/6569f660113e"/>
+									</pragmas>
+								</Value>
+								<Value name="value3_wrong">
+									<pragmas>
+										<ed:Value oid="!ed/7a/6375/1B98C/6569f660433f"/>
+										<kcg:Pragma>
+											default
+										</kcg:Pragma>
+									</pragmas>
+								</Value>
+							</values>
+						</Enum>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/78/6375/1B98C/6569f6606adf"/>
+					</pragmas>
+				</Type>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/6a/6375/1B98C/6569f64946a5" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/6b/6375/1B98C/6569f64930a3" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/6c/6375/1B98C/6569f6497386" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/6d/6375/1B98C/6569f64941fd" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

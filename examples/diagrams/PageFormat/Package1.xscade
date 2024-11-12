@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="Package1">
+			<declarations>
+				<Operator kind="function" name="Operator1">
+					<pragmas>
+						<ed:Operator oid="!ed/9bf4/56CC/9C8/652fa04366c7" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="diag_correct" landscape="true" format="A4 (210 297)" oid="!ed/9bf5/56CC/9C8/652fa0432c3c"/>
+								<NetDiagram name="diag_incorrect_format" landscape="true" format="A3 (297 420)" defaultPageFormat="false" oid="!ed/9bfb/56CC/9C8/652fa0613510"/>
+								<NetDiagram name="diag_incorrect_orientation" landscape="false" format="A4 (210 297)" defaultPageFormat="false" oid="!ed/9c01/56CC/9C8/652fa06a513b"/>
+								<NetDiagram name="diag_incorrect_format_and_orientation" landscape="false" format="A3 (297 420)" defaultPageFormat="false" oid="!ed/9c07/56CC/9C8/652fa072212e"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/9bf0/56CC/9C8/652fa03b2c27" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/9bf1/56CC/9C8/652fa03b11a7" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/9bf2/56CC/9C8/652fa03b6ae2" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/9bf3/56CC/9C8/652fa03b1fac" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

@@ -1,0 +1,54 @@
+Notes-Types { Esterel-Technologies }  DEFINITIONS ::=
+
+BEGIN
+
+SDD_TopLevel ::=
+    SEQUENCE OF {
+    SEQUENCE {
+       annot_object OID,
+       name STRING,
+       information {
+        Description TEXT {
+            NT_DEFAULT_VALUE "-",
+            NT_FIELD_HEIGHT 3,
+            NT_FIELD_WIDTH  60},
+        Constraints TEXT {
+            NT_DEFAULT_VALUE "-",
+            NT_FIELD_HEIGHT 3,
+            NT_FIELD_WIDTH  60},
+        Min_Value TEXT {
+            NT_DEFAULT_VALUE "-",
+            NT_FIELD_HEIGHT 1,
+            NT_FIELD_WIDTH  20},
+        Max_Value TEXT {
+            NT_DEFAULT_VALUE "-",
+            NT_FIELD_HEIGHT 1,
+            NT_FIELD_WIDTH  20},
+        Unit_SI TEXT {
+            NT_DEFAULT_VALUE "-",
+            NT_FIELD_HEIGHT 1,
+            NT_FIELD_WIDTH  20}
+} } }
+
+END
+
+Annotation-Rules { Esterel-Technologies }  DEFINITIONS ::=
+BEGIN
+
+    named_type ::= {
+        {SDD_TopLevel T 0 1}
+    }
+
+    output ::= {
+        {SDD_TopLevel T 0 1}
+   }
+
+    input ::= {
+        {SDD_TopLevel T 0 1}
+   }
+
+    hidden ::= {
+        {SDD_TopLevel T 0 1}
+    }
+
+END

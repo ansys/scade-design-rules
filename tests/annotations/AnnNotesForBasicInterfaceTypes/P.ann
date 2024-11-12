@@ -1,0 +1,109 @@
+Notes-Types { Esterel-Technologies }  DEFINITIONS ::=
+BEGIN
+    SDD_TopLevel ::= SEQUENCE OF { SEQUENCE {
+    annot_object OID,
+    name STRING,
+        information {
+            Description TEXT
+            {
+            	 NT_DEFAULT_VALUE "-" ,
+            	 NT_FIELD_HEIGHT 3 ,
+            	 NT_FIELD_WIDTH 60 },
+            Constraints TEXT
+            {
+            	 NT_DEFAULT_VALUE "-" ,
+            	 NT_FIELD_HEIGHT 3 ,
+            	 NT_FIELD_WIDTH 60 },
+            Min_Value TEXT
+            {
+            	 NT_DEFAULT_VALUE "-" ,
+            	 NT_FIELD_HEIGHT 1 ,
+            	 NT_FIELD_WIDTH 20 },
+            Max_Value TEXT
+            {
+            	 NT_DEFAULT_VALUE "-" ,
+            	 NT_FIELD_HEIGHT 1 ,
+            	 NT_FIELD_WIDTH 20 },
+            Unit_SI TEXT
+            {
+            	 NT_DEFAULT_VALUE "-" ,
+            	 NT_FIELD_HEIGHT 1 ,
+            	 NT_FIELD_WIDTH 20 }
+    } } }
+
+END
+
+Notes-Values { Esterel-Technologies }  DEFINITIONS ::=
+BEGIN
+    SDD_TopLevel ::= {
+        {"!ed/123/62F1/A49C/6713f2bb5ae6", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/126/62F1/A49C/6713f2bb21fa", "SDD_TopLevel_1","description" , "none" , "0" , "10" , "s" },
+        {"!ed/127/62F1/A49C/6713f2bb3e90", "SDD_TopLevel_1","description" , "none" , "0" , "10" , "s" },
+        {"!ed/1d8/62F1/A49C/671409a851cb", "SDD_TopLevel_1","description" , "none" , "0" , "10" , "s" },
+        {"!ed/1d9/62F1/A49C/671409a87b34", "SDD_TopLevel_1","description" , "none" , "" , "" , "" },
+        {"!ed/1da/62F1/A49C/671409a8308d", "SDD_TopLevel_1","description" , "none" , "" , "" , "" },
+        {"!ed/1db/62F1/A49C/671409a81271", "SDD_TopLevel_1","description" , "none" , "0" , "10" , "s" },
+        {"!ed/1dc/62F1/A49C/671409a862eb", "SDD_TopLevel_1","description" , "none" , "0" , "10" , "s" },
+        {"!ed/1dd/62F1/A49C/671409a85b3d", "SDD_TopLevel_1","description" , "none" , "" , "" , "" },
+        {"!ed/1de/62F1/A49C/671409a81075", "SDD_TopLevel_1","description" , "none" , "0" , "10" , "s" },
+        {"!ed/1df/62F1/A49C/671409a843ee", "SDD_TopLevel_1","description" , "none" , "0" , "10" , "s" },
+        {"!ed/207/62F1/A49C/671409c869e9", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/208/62F1/A49C/671409c87542", "SDD_TopLevel_1","-" , "none" , "0" , "10" , "s" },
+        {"!ed/209/62F1/A49C/671409c861ba", "SDD_TopLevel_1","" , "none" , "0" , "10" , "s" },
+        {"!ed/20a/62F1/A49C/671409c82d37", "SDD_TopLevel_1","description" , "-" , "0" , "10" , "s" },
+        {"!ed/20b/62F1/A49C/671409c822c6", "SDD_TopLevel_1","description" , "none" , "-" , "10" , "s" },
+        {"!ed/20c/62F1/A49C/671409c859f4", "SDD_TopLevel_1","description" , "none" , "0" , "-" , "s" },
+        {"!ed/20d/62F1/A49C/671409c84d0b", "SDD_TopLevel_1","description" , "none" , "0" , "10" , "" },
+        {"!ed/251/62F1/A49C/67140bff3c93", "SDD_TopLevel_1","description" , "none" , "n/a" , "n/a" , "n/a" },
+        {"!ed/3a5/62F1/A49C/67140d5239a0", "SDD_TopLevel_1","description" , "none" , "-9" , "31" , "°C" },
+        {"!ed/46c/62F1/A49C/67141084768c", "SDD_TopLevel_1","" , "none" , "0" , "10" , "s" },
+        {"!ed/46d/62F1/A49C/671410844e0c", "SDD_TopLevel_1","description" , "" , "0" , "10" , "s" },
+        {"!ed/4f0/62F1/A49C/6714118c278e", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/4f1/62F1/A49C/6714118c2742", "SDD_TopLevel_1","-" , "none" , "0" , "10" , "s" },
+        {"!ed/4f2/62F1/A49C/6714118c3ddc", "SDD_TopLevel_1","" , "none" , "0" , "10" , "s" },
+        {"!ed/4f3/62F1/A49C/6714118c699e", "SDD_TopLevel_1","description" , "-" , "0" , "10" , "s" },
+        {"!ed/4f4/62F1/A49C/6714118c4590", "SDD_TopLevel_1","description" , "none" , "-" , "10" , "s" },
+        {"!ed/4f5/62F1/A49C/6714118c4a43", "SDD_TopLevel_1","description" , "none" , "0" , "-" , "s" },
+        {"!ed/4f6/62F1/A49C/6714118c1001", "SDD_TopLevel_1","description" , "none" , "0" , "10" , "" },
+        {"!ed/59e/62F1/A49C/6714d45853d7", "SDD_TopLevel_1","description" , "none" , "" , "" , "" },
+        {"!ed/5a4/62F1/A49C/6714d47062e7", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/60e/62F1/A49C/6714f745acd", "SDD_TopLevel_1","description" , "none" , "-9" , "31" , "°C" },
+        {"!ed/614/62F1/A49C/6714f7694b53", "SDD_TopLevel_1","description" , "none" , "-9" , "-" , "-" },
+        {"!ed/20e/62F1/A49C/67140af84953", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/218/62F1/A49C/67140b0e64f4", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/222/62F1/A49C/67140b1918b7", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/22c/62F1/A49C/67140b272b56", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/241/62F1/A49C/67140b531375", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/138/62F1/A49C/6714045d3d53", "SDD_TopLevel_1","description" , "none" , "-9" , "31" , "°C" },
+        {"!ed/146/62F1/A49C/67140593df4", "SDD_TopLevel_1","description" , "none" , "" , "" , "" },
+        {"!ed/154/62F1/A49C/671405a54286", "SDD_TopLevel_1","description" , "none" , "" , "" , "" },
+        {"!ed/184/62F1/A49C/671405e94766", "SDD_TopLevel_1","description" , "none" , "-9" , "31" , "°C" },
+        {"!ed/533/62F1/A49C/671435ba3d79", "SDD_TopLevel_1","description" , "none" , "-9" , "31" , "°C" },
+        {"!ed/3af/62F1/A49C/67140da0180a", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/5e7/62F1/A49C/6714d5bf71e", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/62b/62F1/A49C/6714f79c4231", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/192/62F1/A49C/671405f7337c", "SDD_TopLevel_1","" , "" , "" , "" , "" },
+        {"!ed/162/62F1/A49C/671405c014ee", "SDD_TopLevel_1","" , "" , "" , "" , "" },
+        {"!ed/574/62F1/A49C/67143ac272dd", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/584/62F1/A49C/67143adb708b", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/58e/62F1/A49C/67143af77934", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/4ff/62F1/A49C/6714128626e4", "SDD_TopLevel_1","" , "" , "" , "" , "" },
+        {"!ed/505/62F1/A49C/671412863bca", "SDD_TopLevel_1","" , "" , "" , "" , "" },
+        {"!ed/43a/62F1/A49C/67141034512e", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/43b/62F1/A49C/6714103422cd", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/43c/62F1/A49C/67141034311e", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/43d/62F1/A49C/6714103470ce", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/52d/62F1/A49C/671435a65e19", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/43e/62F1/A49C/671410345547", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/441/62F1/A49C/671410341375", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/442/62F1/A49C/671410347875", "SDD_TopLevel_1","" , "" , "" , "" , "" },
+        {"!ed/443/62F1/A49C/671410345d37", "SDD_TopLevel_1","" , "" , "" , "" , "" },
+        {"!ed/444/62F1/A49C/671410341d9e", "SDD_TopLevel_1","" , "" , "" , "" , "" },
+        {"!ed/445/62F1/A49C/671410345298", "SDD_TopLevel_1","" , "" , "" , "" , "" },
+        {"!ed/447/62F1/A49C/6714103471be", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/5ff/62F1/A49C/6714d6484ebb", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/61b/62F1/A49C/6714f7892c2d", "SDD_TopLevel_1","-" , "-" , "-" , "-" , "-" },
+        {"!ed/446/62F1/A49C/671410344a8b", "SDD_TopLevel_1","" , "none" , "" , "" , "" },
+        {"!ed/448/62F1/A49C/6714103413ef", "SDD_TopLevel_1","" , "" , "" , "" , "" }}
+END
+

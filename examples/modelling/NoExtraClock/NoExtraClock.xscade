@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="NoExtraClock">
+			<declarations>
+				<Operator kind="function" name="NoExtraClock">
+					<inputs>
+						<Variable name="Input2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/97/71EB/1488/5b1a49153e2e"/>
+							</pragmas>
+						</Variable>
+						<Variable clock="true" name="Clock">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/95/71EB/1488/5b1a491560a1"/>
+							</pragmas>
+						</Variable>
+						<Variable name="Input1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/92/71EB/1488/5b1a49155fb"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="Output1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/93/71EB/1488/5b1a491532f1"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<locals>
+						<Variable name="clockedInput2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<when>
+								<!--  not Clock -->
+								<ClockNotExpression>
+									<variable>
+										<VariableRef name="Clock"/>
+									</variable>
+								</ClockNotExpression>
+							</when>
+							<pragmas>
+								<ed:Variable oid="!ed/96/71EB/1488/5b1a491552bd"/>
+							</pragmas>
+						</Variable>
+						<Variable name="clockedInput1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<when>
+								<ClockExpression>
+									<variable>
+										<VariableRef name="Clock"/>
+									</variable>
+								</ClockExpression>
+							</when>
+							<pragmas>
+								<ed:Variable oid="!ed/94/71EB/1488/5b1a49154ec2"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L11">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/9d/71EB/1488/5b1a49155c7e"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L10">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/9b/71EB/1488/5b1a491569a7"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L9">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/99/71EB/1488/5b1a491533c7"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<!-- _L9 = Input2; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L9"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="Input2"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/98/71EB/1488/5b1a49154bc1"/>
+							</pragmas>
+						</Equation>
+						<!-- _L10 = Input1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L10"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="Input1"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/9a/71EB/1488/5b1a4915826"/>
+							</pragmas>
+						</Equation>
+						<!-- _L11 = merge(Clock; clockedInput1; clockedInput2); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L11"/>
+							</lefts>
+							<right>
+								<!-- merge(Clock; clockedInput1; clockedInput2) -->
+								<MergeOp name="1">
+									<clock>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="Clock"/>
+											</path>
+										</IdExpression>
+									</clock>
+									<flows>
+										<ListExpression>
+											<items>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="clockedInput1"/>
+													</path>
+												</IdExpression>
+											</items>
+										</ListExpression>
+										<ListExpression>
+											<items>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="clockedInput2"/>
+													</path>
+												</IdExpression>
+											</items>
+										</ListExpression>
+									</flows>
+								</MergeOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/9c/71EB/1488/5b1a49155d78"/>
+							</pragmas>
+						</Equation>
+						<!-- clockedInput2 = _L9 when  not Clock; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="clockedInput2"/>
+							</lefts>
+							<right>
+								<!-- _L9 when  not Clock -->
+								<WhenOp name="1">
+									<flow>
+										<ListExpression>
+											<items>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="_L9"/>
+													</path>
+												</IdExpression>
+											</items>
+										</ListExpression>
+									</flow>
+									<when>
+										<!--  not Clock -->
+										<ClockNotExpression>
+											<variable>
+												<VariableRef name="Clock"/>
+											</variable>
+										</ClockNotExpression>
+									</when>
+								</WhenOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/9e/71EB/1488/5b1a491525ae"/>
+							</pragmas>
+						</Equation>
+						<!-- Output1 = _L11; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="Output1"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L11"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/a0/71EB/1488/5b1a4915433a"/>
+							</pragmas>
+						</Equation>
+						<!-- clockedInput1 = _L10 when Clock; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="clockedInput1"/>
+							</lefts>
+							<right>
+								<!-- _L10 when Clock -->
+								<WhenOp name="2">
+									<flow>
+										<ListExpression>
+											<items>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="_L10"/>
+													</path>
+												</IdExpression>
+											</items>
+										</ListExpression>
+									</flow>
+									<when>
+										<ClockExpression>
+											<variable>
+												<VariableRef name="Clock"/>
+											</variable>
+										</ClockExpression>
+									</when>
+								</WhenOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/a1/71EB/1488/5b1a4915169b"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/a34f/6801/1EF8/555a261b1bcf" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="diagram_NoExtraClock_1" landscape="true" format="A4 (210 297)" oid="!ed/1a/A87/1904/55c1c1f96db7">
+									<comment>Trace: Link</comment>
+									<presentationElements>
+										<EquationGE kind="OBJ_INPUT" presentable="!ed/98/71EB/1488/5b1a49154bc1">
+											<position>
+												<Point x="3254" y="5636"/>
+											</position>
+											<size>
+												<Size width="265" height="502"/>
+											</size>
+										</EquationGE>
+										<EquationGE kind="OBJ_INPUT" presentable="!ed/9a/71EB/1488/5b1a4915826">
+											<position>
+												<Point x="3360" y="2381"/>
+											</position>
+											<size>
+												<Size width="265" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/9c/71EB/1488/5b1a49155d78">
+											<position>
+												<Point x="7408" y="3784"/>
+											</position>
+											<size>
+												<Size width="821" height="820"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/9e/71EB/1488/5b1a491525ae">
+											<position>
+												<Point x="4471" y="5398"/>
+											</position>
+											<size>
+												<Size width="1006" height="1005"/>
+											</size>
+										</EquationGE>
+										<EquationGE kind="OBJ_OUTPUT" presentable="!ed/a0/71EB/1488/5b1a4915433a">
+											<position>
+												<Point x="9075" y="3916"/>
+											</position>
+											<size>
+												<Size width="318" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/a1/71EB/1488/5b1a4915169b">
+											<position>
+												<Point x="4551" y="2143"/>
+											</position>
+											<size>
+												<Size width="1005" height="1006"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/98/71EB/1488/5b1a49154bc1" dstEquation="!ed/9e/71EB/1488/5b1a491525ae">
+											<positions>
+												<Point x="3519" y="5900"/>
+												<Point x="3995" y="5900"/>
+												<Point x="3995" y="5900"/>
+												<Point x="4471" y="5900"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/9a/71EB/1488/5b1a4915826" dstEquation="!ed/a1/71EB/1488/5b1a4915169b">
+											<positions>
+												<Point x="3625" y="2646"/>
+												<Point x="4075" y="2646"/>
+												<Point x="4075" y="2646"/>
+												<Point x="4551" y="2646"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/9c/71EB/1488/5b1a49155d78" dstEquation="!ed/a0/71EB/1488/5b1a4915433a">
+											<positions>
+												<Point x="8229" y="4207"/>
+												<Point x="8678" y="4207"/>
+												<Point x="8678" y="4207"/>
+												<Point x="9128" y="4207"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="3" srcEquation="!ed/9e/71EB/1488/5b1a491525ae" dstEquation="!ed/9c/71EB/1488/5b1a49155d78">
+											<positions>
+												<Point x="5477" y="5900"/>
+												<Point x="6429" y="5900"/>
+												<Point x="6429" y="4339"/>
+												<Point x="7408" y="4339"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/a1/71EB/1488/5b1a4915169b" dstEquation="!ed/9c/71EB/1488/5b1a49155d78">
+											<positions>
+												<Point x="5556" y="2646"/>
+												<Point x="6482" y="2646"/>
+												<Point x="6482" y="4048"/>
+												<Point x="7408" y="4048"/>
+											</positions>
+										</Edge>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/a34b/6801/1EF8/555a260c42c3" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="true" format="A4 (210 297)" oid="!ed/a34c/6801/1EF8/555a260cd71" blockKind="constants"/>
+						<TreeDiagram landscape="true" format="A4 (210 297)" oid="!ed/a34d/6801/1EF8/555a260c1952" blockKind="types"/>
+						<TreeDiagram landscape="true" format="A4 (210 297)" oid="!ed/a34e/6801/1EF8/555a260c4ce1" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+		<Constant name="ONE_c">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int32"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="1"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/1b3/2B74/994/55c322a44229" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<comment>Unit: tbd</comment>
+					<comment>Range: tbd</comment>
+					<comment>Resolution: tbd</comment>
+					<comment>Comment: pattern present</comment>
+				</ed:Constant>
+			</pragmas>
+		</Constant>
+	</declarations>
+</File>

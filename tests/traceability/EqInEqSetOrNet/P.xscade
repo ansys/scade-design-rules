@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="P">
+			<declarations>
+				<Operator kind="node" name="Operator">
+					<outputs>
+						<Variable name="ok1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int8"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/29b/737B/78E8/63da84942ffc"/>
+							</pragmas>
+						</Variable>
+						<Variable name="ok2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int8"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/2bc/737B/78E8/63da85153aea"/>
+							</pragmas>
+						</Variable>
+						<Variable name="ok3">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int8"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/2ed/737B/78E8/63da858a730a"/>
+							</pragmas>
+						</Variable>
+						<Variable name="nok1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int8"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/29c/737B/78E8/63da84a52410"/>
+							</pragmas>
+						</Variable>
+						<Variable name="nok2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int8"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/2d0/737B/78E8/63da855b1c39"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<data>
+						<!-- ok1 = _null; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="ok1"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<NullRef/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/2a7/737B/78E8/63da84b75c99"/>
+							</pragmas>
+						</Equation>
+						<!-- nok1 = _null; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="nok1"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<NullRef/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/2a8/737B/78E8/63da84b745c0"/>
+							</pragmas>
+						</Equation>
+						<!-- ok2 = _null; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="ok2"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<NullRef/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/2be/737B/78E8/63da852b6f6a"/>
+							</pragmas>
+						</Equation>
+						<StateMachine name="SM1">
+							<states>
+								<State initial="true" name="State1">
+									<data>
+										<!-- ok3 = _null; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="ok3"/>
+											</lefts>
+											<right>
+												<IdExpression>
+													<path>
+														<NullRef/>
+													</path>
+												</IdExpression>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/2f4/737B/78E8/63da859062ff"/>
+											</pragmas>
+										</Equation>
+									</data>
+									<pragmas>
+										<ed:State oid="!ed/2e1/737B/78E8/63da85806683"/>
+									</pragmas>
+								</State>
+							</states>
+							<pragmas>
+								<ed:StateMachine oid="!ed/2da/737B/78E8/63da8576fd8"/>
+							</pragmas>
+						</StateMachine>
+						<!-- nok2 = _null; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="nok2"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<NullRef/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/33a/737B/78E8/63da85b3740f"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/299/737B/78E8/63da84878bc" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Regular" landscape="true" format="A4 (210 297)" oid="!ed/29a/737B/78E8/63da84873cb0">
+									<presentationElements>
+										<EquationGE presentable="!ed/2a7/737B/78E8/63da84b75c99">
+											<position>
+												<Point x="953" y="635"/>
+											</position>
+											<size>
+												<Size width="317" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/2a8/737B/78E8/63da84b745c0">
+											<position>
+												<Point x="953" y="1667"/>
+											</position>
+											<size>
+												<Size width="317" height="503"/>
+											</size>
+										</EquationGE>
+									</presentationElements>
+									<equationSets>
+										<EquationSet name="EquationSet1" styleName="EQS1" oid="!ed/2b6/737B/78E8/63da84cb74ff">
+											<presentable>!ed/2a7/737B/78E8/63da84b75c99</presentable>
+										</EquationSet>
+									</equationSets>
+								</NetDiagram>
+								<NetDiagram name="Simplified" landscape="true" format="A4 (210 297)" oid="!ed/2bd/737B/78E8/63da85206fc3">
+									<presentationElements>
+										<EquationGE presentable="!ed/2be/737B/78E8/63da852b6f6a">
+											<position>
+												<Point x="661" y="688"/>
+											</position>
+											<size>
+												<Size width="317" height="503"/>
+											</size>
+										</EquationGE>
+									</presentationElements>
+								</NetDiagram>
+								<NetDiagram name="ThisIsTheLaw" landscape="true" format="A4 (210 297)" oid="!ed/2d1/737B/78E8/63da856621e7">
+									<presentationElements>
+										<StateMachineGE presentable="!ed/2da/737B/78E8/63da8576fd8">
+											<position>
+												<Point x="582" y="1852"/>
+											</position>
+											<size>
+												<Size width="4392" height="2963"/>
+											</size>
+										</StateMachineGE>
+										<StateGE presentable="!ed/2e1/737B/78E8/63da85806683">
+											<position>
+												<Point x="873" y="2223"/>
+											</position>
+											<size>
+												<Size width="3810" height="2222"/>
+											</size>
+										</StateGE>
+										<EquationGE presentable="!ed/2f4/737B/78E8/63da859062ff">
+											<position>
+												<Point x="2355" y="3360"/>
+											</position>
+											<size>
+												<Size width="317" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/33a/737B/78E8/63da85b3740f">
+											<position>
+												<Point x="2355" y="529"/>
+											</position>
+											<size>
+												<Size width="317" height="503"/>
+											</size>
+										</EquationGE>
+									</presentationElements>
+									<equationSets>
+										<EquationSet name="EquationSet1" styleName="EQS1" oid="!ed/349/737B/78E8/63da85d56d23">
+											<presentable>!ed/2f4/737B/78E8/63da859062ff</presentable>
+										</EquationSet>
+									</equationSets>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/295/737B/78E8/63da847e3237" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/296/737B/78E8/63da847e6bc2" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/297/737B/78E8/63da847e8fd" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/298/737B/78E8/63da847e2c29" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

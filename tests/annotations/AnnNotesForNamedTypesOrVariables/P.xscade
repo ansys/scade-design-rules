@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="P">
+			<declarations>
+				<Type name="Point">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="x">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="float32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/695/42EB/9288/671533d05540"/>
+									</pragmas>
+								</Field>
+								<Field name="y">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="float32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/696/42EB/9288/671533d02460"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/694/42EB/9288/671533d02656"/>
+					</pragmas>
+				</Type>
+				<Type external="imported" name="ImportedOk">
+					<pragmas>
+						<ed:Type oid="!ed/68c/42EB/9288/671533d0da"/>
+					</pragmas>
+				</Type>
+				<Type external="imported" constraint="integer" name="ImportedNumericOk">
+					<pragmas>
+						<ed:Type oid="!ed/686/42EB/9288/671533d07f82"/>
+					</pragmas>
+				</Type>
+				<Type external="imported" constraint="integer" name="ImportedNumericNok">
+					<pragmas>
+						<ed:Type oid="!ed/680/42EB/9288/671533d05"/>
+					</pragmas>
+				</Type>
+				<Type name="EnumOk">
+					<definition>
+						<Enum>
+							<values>
+								<Value name="VALUE1">
+									<pragmas>
+										<ed:Value oid="!ed/674/42EB/9288/671533d06cde"/>
+									</pragmas>
+								</Value>
+							</values>
+						</Enum>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/673/42EB/9288/671533d06a29"/>
+					</pragmas>
+				</Type>
+				<Type name="EnumNok">
+					<definition>
+						<Enum>
+							<values>
+								<Value name="VALUE">
+									<pragmas>
+										<ed:Value oid="!ed/66c/42EB/9288/671533d02d12"/>
+									</pragmas>
+								</Value>
+							</values>
+						</Enum>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/66b/42EB/9288/671533d07de"/>
+					</pragmas>
+				</Type>
+				<Type name="DoubleOk">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="float64"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/664/42EB/9288/671533d0176d"/>
+					</pragmas>
+				</Type>
+				<Type name="DoubleNok">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="float64"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/65e/42EB/9288/671533d03126"/>
+					</pragmas>
+				</Type>
+				<Type name="SpeedNok">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="DoubleOk"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/6ac/42EB/9288/6715360168de"/>
+					</pragmas>
+				</Type>
+				<Type name="SpeedOk">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="DoubleOk"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/73a/62F1/A49C/671546111718"/>
+					</pragmas>
+				</Type>
+				<Operator kind="node" name="O">
+					<inputs>
+						<Variable name="doubleOk">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="DoubleNok"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/74a/62F1/A49C/6715465c2633"/>
+							</pragmas>
+						</Variable>
+						<Variable name="doubleNok">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="DoubleOk"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/6b3/42EB/9288/671536554136"/>
+							</pragmas>
+						</Variable>
+						<Variable name="speedOk">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="SpeedOk"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/77f/62F1/A49C/671546f649e4"/>
+							</pragmas>
+						</Variable>
+						<Variable name="speedNok">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="SpeedOk"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/76f/62F1/A49C/671546de3809"/>
+							</pragmas>
+						</Variable>
+						<Variable name="predefOk">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/75a/62F1/A49C/6715468c5044"/>
+							</pragmas>
+						</Variable>
+						<Variable name="predefNok">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/768/62F1/A49C/671546a22a93"/>
+							</pragmas>
+						</Variable>
+						<Variable name="pointOk">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Point"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/780/62F1/A49C/6715472a271" hidden="true"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="matDoubleNok">
+							<type>
+								<Table>
+									<type>
+										<Table>
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="DoubleOk"/>
+													</type>
+												</NamedType>
+											</type>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+										</Table>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/790/62F1/A49C/6715585f5072"/>
+							</pragmas>
+						</Variable>
+						<Variable name="matDoubleOk">
+							<type>
+								<Table>
+									<type>
+										<Table>
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="DoubleOk"/>
+													</type>
+												</NamedType>
+											</type>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+										</Table>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/7b1/62F1/A49C/671558803053"/>
+							</pragmas>
+						</Variable>
+						<Variable name="matUintOk">
+							<type>
+								<Table>
+									<type>
+										<Table>
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="uint8"/>
+													</type>
+												</NamedType>
+											</type>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+										</Table>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/7c8/62F1/A49C/67155892572f"/>
+							</pragmas>
+						</Variable>
+						<Variable name="matUintNok">
+							<type>
+								<Table>
+									<type>
+										<Table>
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="uint8"/>
+													</type>
+												</NamedType>
+											</type>
+											<size>
+												<ConstValue value="1"/>
+											</size>
+										</Table>
+									</type>
+									<size>
+										<ConstValue value="1"/>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/7e6/62F1/A49C/671558c01e1d"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<pragmas>
+						<ed:Operator oid="!ed/697/42EB/9288/6715340b1619" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="O" landscape="true" format="A4 (210 297)" oid="!ed/698/42EB/9288/6715340bb92"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/613/42EB/9288/6715334b45d3" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/614/42EB/9288/6715334b7539" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/615/42EB/9288/6715334b5cb7" blockKind="types" columnsSize="0, 194, 150, 300"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/616/42EB/9288/6715334b29a2" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

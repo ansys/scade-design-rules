@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="Sibling">
+			<declarations>
+				<Operator kind="function" name="ToPosition">
+					<inputs>
+						<Variable name="x">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/25/295B/BB80/61e71fb56f61"/>
+							</pragmas>
+						</Variable>
+						<Variable name="y">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/2e/295B/BB80/61e71fba786f"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="position">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="External::Position"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/37/295B/BB80/61e71fbe2679"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<locals>
+						<Variable name="_L1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/47/295B/BB80/61e71fd16d30"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/49/295B/BB80/61e71fd12ad7"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L3">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="External::Position"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/4f/295B/BB80/61e71fd61549"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<!-- position = _L3; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="position"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L3"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/41/295B/BB80/61e71fcd1e40"/>
+							</pragmas>
+						</Equation>
+						<!-- _L1 = x; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L1"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="x"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/46/295B/BB80/61e71fd178a2"/>
+							</pragmas>
+						</Equation>
+						<!-- _L2 = y; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L2"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="y"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/48/295B/BB80/61e71fd16db1"/>
+							</pragmas>
+						</Equation>
+						<!-- _L3 = (make External::Position)(_L1, _L2); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L3"/>
+							</lefts>
+							<right>
+								<!-- (make External::Position)(_L1, _L2) -->
+								<CallExpression>
+									<operator>
+										<MakeOp>
+											<type>
+												<TypeRef name="External::Position"/>
+											</type>
+										</MakeOp>
+									</operator>
+									<callParameters>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L1"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L2"/>
+											</path>
+										</IdExpression>
+									</callParameters>
+								</CallExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/4e/295B/BB80/61e71fd641e2"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/23/295B/BB80/61e71fae40f2" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
+							<diagrams>
+								<NetDiagram name="ToPosition" landscape="true" format="A4 (210 297)" oid="!ed/24/295B/BB80/61e71fae34f4">
+									<presentationElements>
+										<EquationGE presentable="!ed/41/295B/BB80/61e71fcd1e40">
+											<position>
+												<Point x="7382" y="1085"/>
+											</position>
+											<size>
+												<Size width="318" height="502"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/46/295B/BB80/61e71fd178a2">
+											<position>
+												<Point x="1244" y="582"/>
+											</position>
+											<size>
+												<Size width="265" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/48/295B/BB80/61e71fd16db1">
+											<position>
+												<Point x="1244" y="1614"/>
+											</position>
+											<size>
+												<Size width="265" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/4e/295B/BB80/61e71fd641e2">
+											<position>
+												<Point x="3810" y="714"/>
+											</position>
+											<size>
+												<Size width="1270" height="1270"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4e/295B/BB80/61e71fd641e2" dstEquation="!ed/41/295B/BB80/61e71fcd1e40">
+											<positions>
+												<Point x="5080" y="1349"/>
+												<Point x="6244" y="1349"/>
+												<Point x="6244" y="1349"/>
+												<Point x="7435" y="1349"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/46/295B/BB80/61e71fd178a2" dstEquation="!ed/4e/295B/BB80/61e71fd641e2">
+											<positions>
+												<Point x="1508" y="847"/>
+												<Point x="2646" y="847"/>
+												<Point x="2646" y="1138"/>
+												<Point x="3810" y="1138"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/48/295B/BB80/61e71fd16db1" dstEquation="!ed/4e/295B/BB80/61e71fd641e2">
+											<positions>
+												<Point x="1508" y="1879"/>
+												<Point x="2646" y="1879"/>
+												<Point x="2646" y="1561"/>
+												<Point x="3810" y="1561"/>
+											</positions>
+										</Edge>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/14/295B/BB80/61e71f8a655f" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/15/295B/BB80/61e71f8a30c9" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/16/295B/BB80/61e71f8a677a" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/17/295B/BB80/61e71f8a6cc8" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

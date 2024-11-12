@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="Ok3">
+			<declarations>
+				<Operator kind="node" name="O">
+					<data>
+						<StateMachine name="SM1">
+							<states>
+								<State initial="true" name="State1">
+									<data>
+										<IfBlock name="IfBlock1">
+											<block>
+												<IfNode>
+													<if>
+														<ConstValue value="true"/>
+													</if>
+													<then>
+														<Action>
+															<pragmas>
+																<ed:Action oid="!ed/4e/6EA2/8C60/65ae3128883" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+																	<diagrams>
+																		<NetDiagram name="AcA" landscape="true" format="A4 (210 297)" oid="!ed/50/6EA2/8C60/65ae312f94b"/>
+																		<TextDiagram name="AcB" landscape="false" format="A4 (210 297)" oid="!ed/b7/6EA2/8C60/65ae31826d05"/>
+																		<TextDiagram name="AcC" landscape="false" format="A4 (210 297)" oid="!ed/b8/6EA2/8C60/65ae31894050"/>
+																	</diagrams>
+																</ed:Action>
+															</pragmas>
+														</Action>
+													</then>
+													<else>
+														<Action>
+															<pragmas>
+																<ed:Action oid="!ed/4f/6EA2/8C60/65ae3128c54"/>
+															</pragmas>
+														</Action>
+													</else>
+													<pragmas>
+														<ed:IfNode oid="!ed/4d/6EA2/8C60/65ae31282214"/>
+													</pragmas>
+												</IfNode>
+											</block>
+											<pragmas>
+												<ed:IfBlock oid="!ed/48/6EA2/8C60/65ae312726af"/>
+											</pragmas>
+										</IfBlock>
+									</data>
+									<pragmas>
+										<ed:State oid="!ed/39/6EA2/8C60/65ae30e93252" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+											<diagrams>
+												<NetDiagram name="StA" landscape="true" format="A4 (210 297)" oid="!ed/3f/6EA2/8C60/65ae30f81faa">
+													<presentationElements>
+														<IfBlockGE presentable="!ed/48/6EA2/8C60/65ae312726af">
+															<position>
+																<Point x="2037" y="1773"/>
+															</position>
+															<size>
+																<Size width="6800" height="8361"/>
+															</size>
+														</IfBlockGE>
+														<ActionGE display="split" presentable="!ed/4e/6EA2/8C60/65ae3128883">
+															<position>
+																<Point x="3863" y="2276"/>
+															</position>
+															<size>
+																<Size width="4710" height="3598"/>
+															</size>
+														</ActionGE>
+														<ActionGE presentable="!ed/4f/6EA2/8C60/65ae3128c54">
+															<position>
+																<Point x="3863" y="6139"/>
+															</position>
+															<size>
+																<Size width="4710" height="3598"/>
+															</size>
+														</ActionGE>
+														<IfNodeGE labelWidth="794" presentable="!ed/4d/6EA2/8C60/65ae31282214">
+															<position>
+																<Point x="2487" y="2355"/>
+															</position>
+														</IfNodeGE>
+													</presentationElements>
+												</NetDiagram>
+												<NetDiagram name="StB" landscape="true" format="A4 (210 297)" oid="!ed/46/6EA2/8C60/65ae311884e"/>
+											</diagrams>
+										</ed:State>
+									</pragmas>
+								</State>
+							</states>
+							<pragmas>
+								<ed:StateMachine oid="!ed/33/6EA2/8C60/65ae30de77c2"/>
+							</pragmas>
+						</StateMachine>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/18/6EA2/8C60/65ae30a03524" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="OpA" landscape="true" format="A4 (210 297)" oid="!ed/19/6EA2/8C60/65ae30a01c4a">
+									<presentationElements>
+										<StateMachineGE presentable="!ed/33/6EA2/8C60/65ae30de77c2">
+											<position>
+												<Point x="1535" y="794"/>
+											</position>
+											<size>
+												<Size width="18600" height="9392"/>
+											</size>
+										</StateMachineGE>
+										<StateGE display="split" presentable="!ed/39/6EA2/8C60/65ae30e93252">
+											<position>
+												<Point x="2646" y="1693"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+									</presentationElements>
+								</NetDiagram>
+								<NetDiagram name="OpC" landscape="true" format="A4 (210 297)" oid="!ed/25/6EA2/8C60/65ae30c47cef"/>
+								<TextDiagram name="OpB" landscape="false" format="A4 (210 297)" oid="!ed/b9/6EA2/8C60/65ae32236987"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/14/6EA2/8C60/65ae307761f0" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/15/6EA2/8C60/65ae3077498b" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/16/6EA2/8C60/65ae30774c7e" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/17/6EA2/8C60/65ae30775fcc" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

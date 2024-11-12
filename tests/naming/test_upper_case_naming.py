@@ -1,0 +1,100 @@
+# -*- coding: utf-8 -*-
+
+# Copyright (C) 2021 - 2024 ANSYS, Inc. and/or its affiliates.
+# SPDX-License-Identifier: MIT
+#
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+
+import pytest
+import scade.model.suite as suite
+
+from ansys.scade.design_rules.naming.upper_case_naming import UpperCaseNaming
+from ansys.scade.design_rules.utils.rule import Rule
+from tests.conftest import load_session
+from tests.naming.utils import NamedVisitor
+
+# shorter names
+_OK = Rule.OK
+_FAILED = Rule.FAILED
+_ERROR = Rule.ERROR
+_NA = Rule.NA
+
+
+@pytest.fixture(scope='session')
+def session() -> suite.Session:
+    # unique model for these tests
+    session = load_session('tests/naming/Names/Names.etp')
+    return session
+
+
+@pytest.mark.parametrize(
+    'test_case',
+    [
+        # variables
+        ('UpperCase::Failure::', _FAILED),
+        ('UpperCase::Success::', _OK),
+    ],
+)
+def test_upper_case_naming_names(session: suite.Session, test_case):
+    path, expected = test_case
+    model = session.model
+
+    package = model.get_object_from_path(path)
+    assert isinstance(package, suite.Package)
+    error = False
+    for constant in package.constants:
+        rule = UpperCaseNaming()
+        status = rule.on_check(constant)
+        if status != expected:
+            print('rule fails for', constant.get_full_path())
+            error = True
+    assert not error
+
+
+@pytest.mark.parametrize(
+    'test_case',
+    [
+        # variables
+        ('Elements::Failure::', _FAILED),
+        ('Elements::Success::', _OK),
+    ],
+)
+def test_upper_case_naming_elements(session: suite.Session, test_case):
+    # make sure all the named model elements are valid or not, depending
+    # the owning package
+    path, expected = test_case
+    model = session.model
+
+    package = model.get_object_from_path(path)
+    assert isinstance(package, suite.Package)
+    visitor = NamedVisitor('test_upper_case_naming_elements', UpperCaseNaming, expected)
+    visitor.visit(package)
+    assert not visitor.error
+
+
+def test_upper_case_naming_robustness(session: suite.Session):
+    # use the rule with an object that does not have a name
+    model = session.model
+
+    equation = model.get_object_from_path('Elements::Failure::operator/_L1=')
+    rule = UpperCaseNaming(types=[suite.Equation])
+    status = rule.on_check(equation)
+    assert status == _NA

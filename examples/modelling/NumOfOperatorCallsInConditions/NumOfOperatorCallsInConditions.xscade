@@ -1,0 +1,1248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" xmlns:asammcd2mc="unknown_address">
+	<declarations>
+		<Package name="NumOfOperatorCallsInConditions">
+			<declarations>
+				<Type name="Struct_t">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="value">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/9f1/7FCF/AC/63987d917dbd"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/9f0/7FCF/AC/63987d857322"/>
+					</pragmas>
+				</Type>
+				<Operator kind="node" name="root">
+					<inputs>
+						<Variable name="Input1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<last>
+								<ConstValue value="false"/>
+							</last>
+							<pragmas>
+								<ed:Variable oid="!ed/7e7/7FCF/AC/63986a8d97f"/>
+							</pragmas>
+						</Variable>
+						<Variable name="Input2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/7f5/7FCF/AC/63986a9a2fb7"/>
+							</pragmas>
+						</Variable>
+						<Variable name="Input3">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/7fb/7FCF/AC/63986a9b1dc8"/>
+							</pragmas>
+						</Variable>
+						<Variable name="Input4">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/801/7FCF/AC/63986a9b2772"/>
+							</pragmas>
+						</Variable>
+						<Variable name="Input5">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/807/7FCF/AC/63986a9c59e4"/>
+							</pragmas>
+						</Variable>
+						<Variable name="Input6">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/87e/7FCF/AC/63986e896844"/>
+							</pragmas>
+						</Variable>
+						<Variable name="InputInt1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<last>
+								<ConstValue value="0_i32"/>
+							</last>
+							<pragmas>
+								<ed:Variable oid="!ed/9c0/7FCF/AC/63987d003cc1"/>
+							</pragmas>
+						</Variable>
+						<Variable name="InputStruct">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Struct_t"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/a0e/7FCF/AC/63987da86bb1"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<locals>
+						<Variable name="_L1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/863/7FCF/AC/63986b05393a"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<StateMachine name="SM1">
+							<states>
+								<State initial="true" name="State1">
+									<unless>
+										<Transition kind="restart">
+											<target>
+												<StateRef name="State2"/>
+											</target>
+											<condition>
+												<!-- Input1 and Input2 and Input3 and (Input4 or Input5) -->
+												<NAryOp name="23" operator="and">
+													<operands>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="Input1"/>
+															</path>
+														</IdExpression>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="Input2"/>
+															</path>
+														</IdExpression>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="Input3"/>
+															</path>
+														</IdExpression>
+														<!-- (Input4 or Input5) -->
+														<NAryOp name="14" operator="or">
+															<operands>
+																<IdExpression>
+																	<path>
+																		<ConstVarRef name="Input4"/>
+																	</path>
+																</IdExpression>
+																<IdExpression>
+																	<path>
+																		<ConstVarRef name="Input5"/>
+																	</path>
+																</IdExpression>
+															</operands>
+														</NAryOp>
+													</operands>
+												</NAryOp>
+											</condition>
+											<pragmas>
+												<ed:Transition oid="!ed/819/7FCF/AC/63986aac3356"/>
+											</pragmas>
+										</Transition>
+										<Transition kind="restart">
+											<target>
+												<StateRef name="State2"/>
+											</target>
+											<condition>
+												<!--  not ( not Input1) and  not Input2 -->
+												<NAryOp name="29" operator="and">
+													<operands>
+														<!--  not ( not Input1) -->
+														<UnaryOp name="23" operator="not">
+															<operand>
+																<!-- ( not Input1) -->
+																<UnaryOp name="24" operator="not">
+																	<operand>
+																		<IdExpression>
+																			<path>
+																				<ConstVarRef name="Input1"/>
+																			</path>
+																		</IdExpression>
+																	</operand>
+																</UnaryOp>
+															</operand>
+														</UnaryOp>
+														<!--  not Input2 -->
+														<UnaryOp name="25" operator="not">
+															<operand>
+																<IdExpression>
+																	<path>
+																		<ConstVarRef name="Input2"/>
+																	</path>
+																</IdExpression>
+															</operand>
+														</UnaryOp>
+													</operands>
+												</NAryOp>
+											</condition>
+											<pragmas>
+												<ed:Transition oid="!ed/9a7/7FCF/AC/63987cbb2161"/>
+											</pragmas>
+										</Transition>
+									</unless>
+									<pragmas>
+										<ed:State oid="!ed/80d/7FCF/AC/63986aa720f5"/>
+									</pragmas>
+								</State>
+								<State name="State2">
+									<unless>
+										<Transition kind="restart">
+											<target>
+												<StateRef name="State1"/>
+											</target>
+											<condition>
+												<!-- Input1 and Input2 and Input3 and (Input4 or  not Input5) -->
+												<NAryOp name="16" operator="and">
+													<operands>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="Input1"/>
+															</path>
+														</IdExpression>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="Input2"/>
+															</path>
+														</IdExpression>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="Input3"/>
+															</path>
+														</IdExpression>
+														<!-- (Input4 or  not Input5) -->
+														<NAryOp name="7" operator="or">
+															<operands>
+																<IdExpression>
+																	<path>
+																		<ConstVarRef name="Input4"/>
+																	</path>
+																</IdExpression>
+																<!--  not Input5 -->
+																<UnaryOp name="2" operator="not">
+																	<operand>
+																		<IdExpression>
+																			<path>
+																				<ConstVarRef name="Input5"/>
+																			</path>
+																		</IdExpression>
+																	</operand>
+																</UnaryOp>
+															</operands>
+														</NAryOp>
+													</operands>
+												</NAryOp>
+											</condition>
+											<pragmas>
+												<ed:Transition oid="!ed/835/7FCF/AC/63986ad03a70"/>
+											</pragmas>
+										</Transition>
+										<Transition kind="restart">
+											<target>
+												<StateRef name="State1"/>
+											</target>
+											<condition>
+												<!-- Input1 and Input2 and Input3 and (Input4 or Input5 or Input6) -->
+												<NAryOp name="22" operator="and">
+													<operands>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="Input1"/>
+															</path>
+														</IdExpression>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="Input2"/>
+															</path>
+														</IdExpression>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="Input3"/>
+															</path>
+														</IdExpression>
+														<!-- (Input4 or Input5 or Input6) -->
+														<NAryOp name="13" operator="or">
+															<operands>
+																<IdExpression>
+																	<path>
+																		<ConstVarRef name="Input4"/>
+																	</path>
+																</IdExpression>
+																<IdExpression>
+																	<path>
+																		<ConstVarRef name="Input5"/>
+																	</path>
+																</IdExpression>
+																<IdExpression>
+																	<path>
+																		<ConstVarRef name="Input6"/>
+																	</path>
+																</IdExpression>
+															</operands>
+														</NAryOp>
+													</operands>
+												</NAryOp>
+											</condition>
+											<pragmas>
+												<ed:Transition oid="!ed/963/7FCF/AC/6398773d3398"/>
+											</pragmas>
+										</Transition>
+										<Transition kind="restart">
+											<target>
+												<StateRef name="State1"/>
+											</target>
+											<condition>
+												<!--  not ( not Input1) and  not ( not Input2) -->
+												<NAryOp name="27" operator="and">
+													<operands>
+														<!--  not ( not Input1) -->
+														<UnaryOp name="15" operator="not">
+															<operand>
+																<!-- ( not Input1) -->
+																<UnaryOp name="16" operator="not">
+																	<operand>
+																		<IdExpression>
+																			<path>
+																				<ConstVarRef name="Input1"/>
+																			</path>
+																		</IdExpression>
+																	</operand>
+																</UnaryOp>
+															</operand>
+														</UnaryOp>
+														<!--  not ( not Input2) -->
+														<UnaryOp name="17" operator="not">
+															<operand>
+																<!-- ( not Input2) -->
+																<UnaryOp name="18" operator="not">
+																	<operand>
+																		<IdExpression>
+																			<path>
+																				<ConstVarRef name="Input2"/>
+																			</path>
+																		</IdExpression>
+																	</operand>
+																</UnaryOp>
+															</operand>
+														</UnaryOp>
+													</operands>
+												</NAryOp>
+											</condition>
+											<pragmas>
+												<ed:Transition oid="!ed/982/7FCF/AC/6398779f6e6c"/>
+											</pragmas>
+										</Transition>
+									</unless>
+									<pragmas>
+										<ed:State oid="!ed/812/7FCF/AC/63986aa9710"/>
+									</pragmas>
+								</State>
+							</states>
+							<pragmas>
+								<ed:StateMachine oid="!ed/808/7FCF/AC/63986aa2757a"/>
+							</pragmas>
+						</StateMachine>
+						<!-- _L1 = Input1 and Input2 and Input3 and (Input4 or Input5 or  not Input6); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L1"/>
+							</lefts>
+							<right>
+								<!-- Input1 and Input2 and Input3 and (Input4 or Input5 or  not Input6) -->
+								<NAryOp name="15" operator="and">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="Input1"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="Input2"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="Input3"/>
+											</path>
+										</IdExpression>
+										<!-- (Input4 or Input5 or  not Input6) -->
+										<NAryOp name="6" operator="or">
+											<operands>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="Input4"/>
+													</path>
+												</IdExpression>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="Input5"/>
+													</path>
+												</IdExpression>
+												<!--  not Input6 -->
+												<UnaryOp name="1" operator="not">
+													<operand>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="Input6"/>
+															</path>
+														</IdExpression>
+													</operand>
+												</UnaryOp>
+											</operands>
+										</NAryOp>
+									</operands>
+								</NAryOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/862/7FCF/AC/63986b051a3c"/>
+							</pragmas>
+						</Equation>
+						<!-- _ = _L1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L1"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/873/7FCF/AC/63986b096be"/>
+							</pragmas>
+						</Equation>
+						<IfBlock name="IfBlock2">
+							<block>
+								<IfNode>
+									<if>
+										<!-- Input1 and Input2 and Input3 and (Input4 or Input5 or Input6) -->
+										<NAryOp name="19" operator="and">
+											<operands>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="Input1"/>
+													</path>
+												</IdExpression>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="Input2"/>
+													</path>
+												</IdExpression>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="Input3"/>
+													</path>
+												</IdExpression>
+												<!-- (Input4 or Input5 or Input6) -->
+												<NAryOp name="10" operator="or">
+													<operands>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="Input4"/>
+															</path>
+														</IdExpression>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="Input5"/>
+															</path>
+														</IdExpression>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="Input6"/>
+															</path>
+														</IdExpression>
+													</operands>
+												</NAryOp>
+											</operands>
+										</NAryOp>
+									</if>
+									<then>
+										<Action>
+											<pragmas>
+												<ed:Action oid="!ed/920/7FCF/AC/639876c2567"/>
+											</pragmas>
+										</Action>
+									</then>
+									<else>
+										<IfNode>
+											<if>
+												<!-- Input1 and Input2 and Input3 and (Input4 or Input5) -->
+												<NAryOp name="20" operator="and">
+													<operands>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="Input1"/>
+															</path>
+														</IdExpression>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="Input2"/>
+															</path>
+														</IdExpression>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="Input3"/>
+															</path>
+														</IdExpression>
+														<!-- (Input4 or Input5) -->
+														<NAryOp name="11" operator="or">
+															<operands>
+																<IdExpression>
+																	<path>
+																		<ConstVarRef name="Input4"/>
+																	</path>
+																</IdExpression>
+																<IdExpression>
+																	<path>
+																		<ConstVarRef name="Input5"/>
+																	</path>
+																</IdExpression>
+															</operands>
+														</NAryOp>
+													</operands>
+												</NAryOp>
+											</if>
+											<then>
+												<Action>
+													<pragmas>
+														<ed:Action oid="!ed/91f/7FCF/AC/639876c25f63"/>
+													</pragmas>
+												</Action>
+											</then>
+											<else>
+												<IfNode>
+													<if>
+														<!-- InputInt1 > 0 and InputInt1 < 10 or Input1 -->
+														<NAryOp name="15" operator="or">
+															<operands>
+																<!-- InputInt1 > 0 and InputInt1 < 10 -->
+																<NAryOp name="31" operator="and">
+																	<operands>
+																		<!-- InputInt1 > 0 -->
+																		<BinaryOp name="2" operator="&gt;">
+																			<operands>
+																				<IdExpression>
+																					<path>
+																						<ConstVarRef name="InputInt1"/>
+																					</path>
+																				</IdExpression>
+																				<ConstValue value="0"/>
+																			</operands>
+																		</BinaryOp>
+																		<!-- InputInt1 < 10 -->
+																		<BinaryOp name="2" operator="&lt;">
+																			<operands>
+																				<IdExpression>
+																					<path>
+																						<ConstVarRef name="InputInt1"/>
+																					</path>
+																				</IdExpression>
+																				<ConstValue value="10"/>
+																			</operands>
+																		</BinaryOp>
+																	</operands>
+																</NAryOp>
+																<IdExpression>
+																	<path>
+																		<ConstVarRef name="Input1"/>
+																	</path>
+																</IdExpression>
+															</operands>
+														</NAryOp>
+													</if>
+													<then>
+														<Action>
+															<pragmas>
+																<ed:Action oid="!ed/91e/7FCF/AC/639876c26bbb"/>
+															</pragmas>
+														</Action>
+													</then>
+													<else>
+														<IfNode>
+															<if>
+																<!-- InputInt1 > 0 and InputInt1 < 10 or Input1 and Input3 -->
+																<NAryOp name="17" operator="or">
+																	<operands>
+																		<!-- InputInt1 > 0 and InputInt1 < 10 -->
+																		<NAryOp name="33" operator="and">
+																			<operands>
+																				<!-- InputInt1 > 0 -->
+																				<BinaryOp name="4" operator="&gt;">
+																					<operands>
+																						<IdExpression>
+																							<path>
+																								<ConstVarRef name="InputInt1"/>
+																							</path>
+																						</IdExpression>
+																						<ConstValue value="0"/>
+																					</operands>
+																				</BinaryOp>
+																				<!-- InputInt1 < 10 -->
+																				<BinaryOp name="4" operator="&lt;">
+																					<operands>
+																						<IdExpression>
+																							<path>
+																								<ConstVarRef name="InputInt1"/>
+																							</path>
+																						</IdExpression>
+																						<ConstValue value="10"/>
+																					</operands>
+																				</BinaryOp>
+																			</operands>
+																		</NAryOp>
+																		<!-- Input1 and Input3 -->
+																		<NAryOp name="34" operator="and">
+																			<operands>
+																				<IdExpression>
+																					<path>
+																						<ConstVarRef name="Input1"/>
+																					</path>
+																				</IdExpression>
+																				<IdExpression>
+																					<path>
+																						<ConstVarRef name="Input3"/>
+																					</path>
+																				</IdExpression>
+																			</operands>
+																		</NAryOp>
+																	</operands>
+																</NAryOp>
+															</if>
+															<then>
+																<Action>
+																	<pragmas>
+																		<ed:Action oid="!ed/9bf/7FCF/AC/63987cf71729"/>
+																	</pragmas>
+																</Action>
+															</then>
+															<else>
+																<IfNode>
+																	<if>
+																		<!--  last 'InputInt1 > 0 and InputStruct.value < 10 or Input1 -->
+																		<NAryOp name="20" operator="or">
+																			<operands>
+																				<!--  last 'InputInt1 > 0 and InputStruct.value < 10 -->
+																				<NAryOp name="39" operator="and">
+																					<operands>
+																						<!--  last 'InputInt1 > 0 -->
+																						<BinaryOp name="13" operator="&gt;">
+																							<operands>
+																								<Last>
+																									<variable>
+																										<ConstVarRef name="InputInt1"/>
+																									</variable>
+																								</Last>
+																								<ConstValue value="0"/>
+																							</operands>
+																						</BinaryOp>
+																						<!-- InputStruct.value < 10 -->
+																						<BinaryOp name="7" operator="&lt;">
+																							<operands>
+																								<!-- InputStruct.value -->
+																								<PrjOp name="9">
+																									<flow>
+																										<IdExpression>
+																											<path>
+																												<ConstVarRef name="InputStruct"/>
+																											</path>
+																										</IdExpression>
+																									</flow>
+																									<with>
+																										<Label name="value"/>
+																									</with>
+																								</PrjOp>
+																								<ConstValue value="10"/>
+																							</operands>
+																						</BinaryOp>
+																					</operands>
+																				</NAryOp>
+																				<IdExpression>
+																					<path>
+																						<ConstVarRef name="Input1"/>
+																					</path>
+																				</IdExpression>
+																			</operands>
+																		</NAryOp>
+																	</if>
+																	<then>
+																		<Action>
+																			<pragmas>
+																				<ed:Action oid="!ed/9df/7FCF/AC/63987d5f49ca"/>
+																			</pragmas>
+																		</Action>
+																	</then>
+																	<else>
+																		<IfNode>
+																			<if>
+																				<!-- if Input1 then (true) else (false) -->
+																				<IfThenElseOp name="1">
+																					<if>
+																						<IdExpression>
+																							<path>
+																								<ConstVarRef name="Input1"/>
+																							</path>
+																						</IdExpression>
+																					</if>
+																					<then>
+																						<ListExpression>
+																							<items>
+																								<ConstValue value="true"/>
+																							</items>
+																						</ListExpression>
+																					</then>
+																					<else>
+																						<ListExpression>
+																							<items>
+																								<ConstValue value="false"/>
+																							</items>
+																						</ListExpression>
+																					</else>
+																				</IfThenElseOp>
+																			</if>
+																			<then>
+																				<Action>
+																					<pragmas>
+																						<ed:Action oid="!ed/a00/7FCF/AC/63987da22ce5"/>
+																					</pragmas>
+																				</Action>
+																			</then>
+																			<else>
+																				<IfNode>
+																					<if>
+																						<!--  last 'InputInt1 + InputStruct.value * 10 > InputInt1 * 12 -->
+																						<BinaryOp name="11" operator="&gt;">
+																							<operands>
+																								<!--  last 'InputInt1 + InputStruct.value * 10 -->
+																								<NAryOp name="6" operator="+">
+																									<operands>
+																										<Last>
+																											<variable>
+																												<ConstVarRef name="InputInt1"/>
+																											</variable>
+																										</Last>
+																										<!-- InputStruct.value * 10 -->
+																										<NAryOp name="10" operator="*">
+																											<operands>
+																												<!-- InputStruct.value -->
+																												<PrjOp name="7">
+																													<flow>
+																														<IdExpression>
+																															<path>
+																																<ConstVarRef name="InputStruct"/>
+																															</path>
+																														</IdExpression>
+																													</flow>
+																													<with>
+																														<Label name="value"/>
+																													</with>
+																												</PrjOp>
+																												<ConstValue value="10"/>
+																											</operands>
+																										</NAryOp>
+																									</operands>
+																								</NAryOp>
+																								<!-- InputInt1 * 12 -->
+																								<NAryOp name="11" operator="*">
+																									<operands>
+																										<IdExpression>
+																											<path>
+																												<ConstVarRef name="InputInt1"/>
+																											</path>
+																										</IdExpression>
+																										<ConstValue value="12"/>
+																									</operands>
+																								</NAryOp>
+																							</operands>
+																						</BinaryOp>
+																					</if>
+																					<then>
+																						<Action>
+																							<pragmas>
+																								<ed:Action oid="!ed/a34/7FCF/AC/63987fea6d59"/>
+																							</pragmas>
+																						</Action>
+																					</then>
+																					<else>
+																						<IfNode>
+																							<if>
+																								<!-- InputInt1 + InputStruct.value * 10 > InputInt1 * 12 and Input2 -->
+																								<NAryOp name="38" operator="and">
+																									<operands>
+																										<!-- InputInt1 + InputStruct.value * 10 > InputInt1 * 12 -->
+																										<BinaryOp name="12" operator="&gt;">
+																											<operands>
+																												<!-- InputInt1 + InputStruct.value * 10 -->
+																												<NAryOp name="7" operator="+">
+																													<operands>
+																														<IdExpression>
+																															<path>
+																																<ConstVarRef name="InputInt1"/>
+																															</path>
+																														</IdExpression>
+																														<!-- InputStruct.value * 10 -->
+																														<NAryOp name="12" operator="*">
+																															<operands>
+																																<!-- InputStruct.value -->
+																																<PrjOp name="8">
+																																	<flow>
+																																		<IdExpression>
+																																			<path>
+																																				<ConstVarRef name="InputStruct"/>
+																																			</path>
+																																		</IdExpression>
+																																	</flow>
+																																	<with>
+																																		<Label name="value"/>
+																																	</with>
+																																</PrjOp>
+																																<ConstValue value="10"/>
+																															</operands>
+																														</NAryOp>
+																													</operands>
+																												</NAryOp>
+																												<!-- InputInt1 * 12 -->
+																												<NAryOp name="13" operator="*">
+																													<operands>
+																														<IdExpression>
+																															<path>
+																																<ConstVarRef name="InputInt1"/>
+																															</path>
+																														</IdExpression>
+																														<ConstValue value="12"/>
+																													</operands>
+																												</NAryOp>
+																											</operands>
+																										</BinaryOp>
+																										<IdExpression>
+																											<path>
+																												<ConstVarRef name="Input2"/>
+																											</path>
+																										</IdExpression>
+																									</operands>
+																								</NAryOp>
+																							</if>
+																							<then>
+																								<Action>
+																									<pragmas>
+																										<ed:Action oid="!ed/a43/7FCF/AC/63988118506c"/>
+																									</pragmas>
+																								</Action>
+																							</then>
+																							<else>
+																								<Action>
+																									<pragmas>
+																										<ed:Action oid="!ed/a68/7FCF/AC/639881621f0e"/>
+																									</pragmas>
+																								</Action>
+																							</else>
+																							<pragmas>
+																								<ed:IfNode oid="!ed/a63/7FCF/AC/63988161e3f"/>
+																							</pragmas>
+																						</IfNode>
+																					</else>
+																					<pragmas>
+																						<ed:IfNode oid="!ed/a3e/7FCF/AC/639881167741"/>
+																					</pragmas>
+																				</IfNode>
+																			</else>
+																			<pragmas>
+																				<ed:IfNode oid="!ed/a2f/7FCF/AC/63987fe9692a"/>
+																			</pragmas>
+																		</IfNode>
+																	</else>
+																	<pragmas>
+																		<ed:IfNode oid="!ed/9fb/7FCF/AC/63987da1d0c"/>
+																	</pragmas>
+																</IfNode>
+															</else>
+															<pragmas>
+																<ed:IfNode oid="!ed/9da/7FCF/AC/63987d5e7353"/>
+															</pragmas>
+														</IfNode>
+													</else>
+													<pragmas>
+														<ed:IfNode oid="!ed/9ba/7FCF/AC/63987cf67bd3"/>
+													</pragmas>
+												</IfNode>
+											</else>
+											<pragmas>
+												<ed:IfNode oid="!ed/91d/7FCF/AC/639876c23811"/>
+											</pragmas>
+										</IfNode>
+									</else>
+									<pragmas>
+										<ed:IfNode oid="!ed/91c/7FCF/AC/639876c24ef3"/>
+									</pragmas>
+								</IfNode>
+							</block>
+							<pragmas>
+								<ed:IfBlock oid="!ed/91b/7FCF/AC/639876c2337f"/>
+							</pragmas>
+						</IfBlock>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/7e5/7FCF/AC/63986a8b46a8" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="root_1" landscape="true" format="A4 (210 297)" oid="!ed/7e6/7FCF/AC/63986a8b4315">
+									<presentationElements>
+										<StateMachineGE presentable="!ed/808/7FCF/AC/63986aa2757a">
+											<position>
+												<Point x="979" y="2963"/>
+											</position>
+											<size>
+												<Size width="26326" height="14235"/>
+											</size>
+										</StateMachineGE>
+										<StateGE presentable="!ed/80d/7FCF/AC/63986aa720f5">
+											<position>
+												<Point x="3545" y="3889"/>
+											</position>
+											<size>
+												<Size width="22093" height="1667"/>
+											</size>
+										</StateGE>
+										<StateGE presentable="!ed/812/7FCF/AC/63986aa9710">
+											<position>
+												<Point x="3545" y="14843"/>
+											</position>
+											<size>
+												<Size width="22093" height="1614"/>
+											</size>
+										</StateGE>
+										<TransitionGE presentable="!ed/819/7FCF/AC/63986aac3356">
+											<positions>
+												<Point x="9366" y="5556"/>
+												<Point x="9366" y="6085"/>
+												<Point x="9313" y="14261"/>
+												<Point x="9366" y="14843"/>
+											</positions>
+											<labelSize>
+												<Size width="6587" height="635"/>
+											</labelSize>
+											<labelPos>
+												<Point x="5663" y="6616"/>
+											</labelPos>
+											<slashPos>
+												<Point x="11457" y="6616"/>
+											</slashPos>
+										</TransitionGE>
+										<TransitionGE presentable="!ed/835/7FCF/AC/63986ad03a70">
+											<textAreas>
+												<TextArea text="Input1 and Input2 and Input3 and (Input4 or not Input5)" role="130"/>
+											</textAreas>
+											<positions>
+												<Point x="22278" y="14843"/>
+												<Point x="22278" y="14314"/>
+												<Point x="22119" y="6138"/>
+												<Point x="22146" y="5556"/>
+											</positions>
+											<labelSize>
+												<Size width="7012" height="318"/>
+											</labelSize>
+											<labelPos>
+												<Point x="18678" y="12171"/>
+											</labelPos>
+											<slashPos>
+												<Point x="24896" y="12171"/>
+											</slashPos>
+										</TransitionGE>
+										<EquationGE kind="OBJ_LIT" presentable="!ed/862/7FCF/AC/63986b051a3c">
+											<textAreas>
+												<TextArea text="Input1 and Input2 and Input3 and (Input4 or Input5 or not Input6)" role="6"/>
+											</textAreas>
+											<position>
+												<Point x="9657" y="1482"/>
+											</position>
+											<size>
+												<Size width="212" height="318"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/873/7FCF/AC/63986b096be">
+											<position>
+												<Point x="10742" y="1376"/>
+											</position>
+											<size>
+												<Size width="503" height="502"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/862/7FCF/AC/63986b051a3c" dstEquation="!ed/873/7FCF/AC/63986b096be">
+											<positions>
+												<Point x="9869" y="1640"/>
+												<Point x="10425" y="1640"/>
+												<Point x="10425" y="1640"/>
+												<Point x="11007" y="1640"/>
+											</positions>
+										</Edge>
+										<TransitionGE presentable="!ed/963/7FCF/AC/6398773d3398">
+											<positions>
+												<Point x="15214" y="14843"/>
+												<Point x="15134" y="10451"/>
+												<Point x="14975" y="7990"/>
+												<Point x="14975" y="5556"/>
+											</positions>
+											<labelSize>
+												<Size width="7646" height="635"/>
+											</labelSize>
+											<labelPos>
+												<Point x="11721" y="13229"/>
+											</labelPos>
+											<slashPos>
+												<Point x="18573" y="13229"/>
+											</slashPos>
+										</TransitionGE>
+										<TransitionGE presentable="!ed/982/7FCF/AC/6398779f6e6c">
+											<textAreas>
+												<TextArea text="not not Input1 and not not Input2" role="130"/>
+											</textAreas>
+											<positions>
+												<Point x="16325" y="14843"/>
+												<Point x="16325" y="11748"/>
+												<Point x="16325" y="8652"/>
+												<Point x="16325" y="5556"/>
+											</positions>
+											<labelSize>
+												<Size width="4578" height="7303"/>
+											</labelSize>
+											<labelPos>
+												<Point x="16007" y="10478"/>
+											</labelPos>
+											<slashPos>
+												<Point x="19791" y="10478"/>
+											</slashPos>
+										</TransitionGE>
+										<TransitionGE presentable="!ed/9a7/7FCF/AC/63987cbb2161">
+											<textAreas>
+												<TextArea text="not not Input1 and not Input2" role="130"/>
+											</textAreas>
+											<positions>
+												<Point x="10742" y="5556"/>
+												<Point x="10663" y="10028"/>
+												<Point x="10636" y="10821"/>
+												<Point x="10504" y="14843"/>
+											</positions>
+											<labelSize>
+												<Size width="4154" height="635"/>
+											</labelSize>
+											<labelPos>
+												<Point x="8863" y="9022"/>
+											</labelPos>
+											<slashPos>
+												<Point x="12223" y="9022"/>
+											</slashPos>
+										</TransitionGE>
+									</presentationElements>
+								</NetDiagram>
+								<NetDiagram name="root_2" landscape="true" format="A4 (210 297)" oid="!ed/915/7FCF/AC/639876c23b77">
+									<presentationElements>
+										<IfBlockGE presentable="!ed/91b/7FCF/AC/639876c2337f">
+											<position>
+												<Point x="14393" y="2778"/>
+											</position>
+											<size>
+												<Size width="10451" height="13891"/>
+											</size>
+										</IfBlockGE>
+										<ActionGE presentable="!ed/920/7FCF/AC/639876c2567">
+											<position>
+												<Point x="16219" y="3281"/>
+											</position>
+											<size>
+												<Size width="4710" height="688"/>
+											</size>
+										</ActionGE>
+										<ActionGE presentable="!ed/91f/7FCF/AC/639876c25f63">
+											<position>
+												<Point x="16219" y="4392"/>
+											</position>
+											<size>
+												<Size width="4710" height="688"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="6694" presentable="!ed/91c/7FCF/AC/639876c24ef3">
+											<position>
+												<Point x="14843" y="3360"/>
+											</position>
+										</IfNodeGE>
+										<IfNodeGE labelWidth="5636" presentable="!ed/91d/7FCF/AC/639876c23811">
+											<position>
+												<Point x="14843" y="4471"/>
+											</position>
+										</IfNodeGE>
+										<ActionGE presentable="!ed/91e/7FCF/AC/639876c26bbb">
+											<position>
+												<Point x="16219" y="5503"/>
+											</position>
+											<size>
+												<Size width="4710" height="688"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="4710" presentable="!ed/9ba/7FCF/AC/63987cf67bd3">
+											<position>
+												<Point x="14843" y="5583"/>
+											</position>
+										</IfNodeGE>
+										<ActionGE presentable="!ed/9bf/7FCF/AC/63987cf71729">
+											<position>
+												<Point x="16219" y="6615"/>
+											</position>
+											<size>
+												<Size width="4710" height="687"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="5953" presentable="!ed/9da/7FCF/AC/63987d5e7353">
+											<position>
+												<Point x="14843" y="6694"/>
+											</position>
+										</IfNodeGE>
+										<ActionGE presentable="!ed/9df/7FCF/AC/63987d5f49ca">
+											<position>
+												<Point x="16245" y="7726"/>
+											</position>
+											<size>
+												<Size width="4710" height="688"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="6165" presentable="!ed/9fb/7FCF/AC/63987da1d0c">
+											<textAreas>
+												<TextArea text="last 'InputInt1 &gt; 0 and InputStruct.value &lt; 10 or Input1" role="181"/>
+											</textAreas>
+											<position>
+												<Point x="14843" y="7805"/>
+											</position>
+										</IfNodeGE>
+										<ActionGE presentable="!ed/a00/7FCF/AC/63987da22ce5">
+											<position>
+												<Point x="16219" y="8837"/>
+											</position>
+											<size>
+												<Size width="4710" height="688"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="3307" presentable="!ed/a2f/7FCF/AC/63987fe9692a">
+											<textAreas>
+												<TextArea text="if Input1 then true else false" role="181"/>
+											</textAreas>
+											<position>
+												<Point x="14843" y="8916"/>
+											</position>
+										</IfNodeGE>
+										<ActionGE presentable="!ed/a34/7FCF/AC/63987fea6d59">
+											<position>
+												<Point x="16219" y="9922"/>
+											</position>
+											<size>
+												<Size width="4710" height="688"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="6191" presentable="!ed/a3e/7FCF/AC/639881167741">
+											<textAreas>
+												<TextArea text="last 'InputInt1 + InputStruct.value * 10 &gt; InputInt1 * 12" role="181"/>
+											</textAreas>
+											<position>
+												<Point x="14843" y="10001"/>
+											</position>
+										</IfNodeGE>
+										<ActionGE presentable="!ed/a43/7FCF/AC/63988118506c">
+											<position>
+												<Point x="16219" y="11060"/>
+											</position>
+											<size>
+												<Size width="4710" height="688"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="7064" presentable="!ed/a63/7FCF/AC/63988161e3f">
+											<textAreas>
+												<TextArea text="(InputInt1 + InputStruct.value * 10 &gt; InputInt1 * 12) and Input2" role="181"/>
+											</textAreas>
+											<position>
+												<Point x="14843" y="11139"/>
+											</position>
+										</IfNodeGE>
+										<ActionGE presentable="!ed/a68/7FCF/AC/639881621f0e">
+											<position>
+												<Point x="16219" y="12091"/>
+											</position>
+											<size>
+												<Size width="4710" height="688"/>
+											</size>
+										</ActionGE>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/7e1/7FCF/AC/63986a7d4933" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/7e2/7FCF/AC/63986a7d728" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/7e3/7FCF/AC/63986a7d53ed" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/7e4/7FCF/AC/63986a7d7962" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+				<asammcd2mc:Pragma>
+					CalibrationVector:&#xA;CalibVect=0
+				</asammcd2mc:Pragma>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

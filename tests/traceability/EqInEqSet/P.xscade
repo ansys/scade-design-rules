@@ -1,0 +1,2297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="P">
+			<declarations>
+				<Type name="Enum">
+					<definition>
+						<Enum>
+							<values>
+								<Value name="a">
+									<pragmas>
+										<ed:Value oid="!ed/292/51EF/DD1C/626814964fb6"/>
+									</pragmas>
+								</Value>
+								<Value name="b">
+									<pragmas>
+										<ed:Value oid="!ed/293/51EF/DD1C/6268149d14cb"/>
+									</pragmas>
+								</Value>
+								<Value name="c">
+									<pragmas>
+										<ed:Value oid="!ed/294/51EF/DD1C/6268149f7a3b"/>
+									</pragmas>
+								</Value>
+							</values>
+						</Enum>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/291/51EF/DD1C/6268148755a8"/>
+					</pragmas>
+				</Type>
+				<Operator kind="node" name="Equations">
+					<outputs>
+						<Variable name="textualOutput">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/33/51EF/DD1C/62680c44422c"/>
+							</pragmas>
+						</Variable>
+						<Variable name="forked">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/9c/51EF/DD1C/62680d9d2533"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<signals>
+						<Signal name="signal">
+							<pragmas>
+								<ed:Signal oid="!ed/8d/51EF/DD1C/62680d743a3a"/>
+							</pragmas>
+						</Signal>
+					</signals>
+					<locals>
+						<Variable name="ok1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/31/51EF/DD1C/62680c08277e"/>
+							</pragmas>
+						</Variable>
+						<Variable name="ok2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/cd/51EF/DD1C/62680e5f2f0f"/>
+							</pragmas>
+						</Variable>
+						<Variable name="nok1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/d1/51EF/DD1C/62680e6c7e99"/>
+							</pragmas>
+						</Variable>
+						<Variable name="ok3">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/d9/51EF/DD1C/62680e8e1c30"/>
+							</pragmas>
+						</Variable>
+						<Variable name="ok4">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/150/51EF/DD1C/62680ff02645"/>
+							</pragmas>
+						</Variable>
+						<Variable name="ok5">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/16e/51EF/DD1C/626810da783b"/>
+							</pragmas>
+						</Variable>
+						<Variable name="nok2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/181/51EF/DD1C/6268114d613e"/>
+							</pragmas>
+						</Variable>
+						<Variable name="nok3">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1a1/51EF/DD1C/626811c05f6e"/>
+							</pragmas>
+						</Variable>
+						<Variable name="ok6">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/1bb/51EF/DD1C/626812072aef"/>
+							</pragmas>
+						</Variable>
+						<Variable name="ok8">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/22f/51EF/DD1C/626813ad7de6"/>
+							</pragmas>
+						</Variable>
+						<Variable name="ok7">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/229/51EF/DD1C/626813ad6915"/>
+							</pragmas>
+						</Variable>
+						<Variable name="nok4">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/223/51EF/DD1C/626813add41"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<!-- ok1 = ok2 and nok1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="ok1"/>
+							</lefts>
+							<right>
+								<!-- ok2 and nok1 -->
+								<NAryOp name="1" operator="and">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="ok2"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="nok1"/>
+											</path>
+										</IdExpression>
+									</operands>
+								</NAryOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/28/51EF/DD1C/62680beec58"/>
+							</pragmas>
+						</Equation>
+						<!-- textualOutput = false; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="textualOutput"/>
+							</lefts>
+							<right>
+								<ConstValue value="false"/>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/46/51EF/DD1C/62680c707373"/>
+							</pragmas>
+						</Equation>
+						<StateMachine name="SM1">
+							<states>
+								<State initial="true" name="Embedded">
+									<unless>
+										<Transition>
+											<condition>
+												<ConstValue value="true"/>
+											</condition>
+											<effect>
+												<Action>
+													<data>
+														<!--  emit 'signal; -->
+														<Emission>
+															<signals>
+																<SignalRef name="signal"/>
+															</signals>
+															<pragmas>
+																<ed:Emission oid="!ed/97/51EF/DD1C/62680d7e135e"/>
+															</pragmas>
+														</Emission>
+													</data>
+													<pragmas>
+														<ed:Action oid="!ed/7f/51EF/DD1C/62680d6051ec"/>
+													</pragmas>
+												</Action>
+											</effect>
+											<forks>
+												<ForkBranch kind="restart">
+													<target>
+														<StateRef name="Hidden"/>
+													</target>
+													<condition>
+														<ConstValue value="true"/>
+													</condition>
+													<effect>
+														<Action>
+															<data>
+																<!-- forked = true; -->
+																<Equation>
+																	<lefts>
+																		<VariableRef name="forked"/>
+																	</lefts>
+																	<right>
+																		<ConstValue value="true"/>
+																	</right>
+																	<pragmas>
+																		<ed:Equation oid="!ed/b2/51EF/DD1C/62680db921c2"/>
+																	</pragmas>
+																</Equation>
+															</data>
+															<pragmas>
+																<ed:Action oid="!ed/a8/51EF/DD1C/62680db94aba"/>
+															</pragmas>
+														</Action>
+													</effect>
+													<pragmas>
+														<ed:ForkBranch oid="!ed/76/51EF/DD1C/62680d392708"/>
+													</pragmas>
+												</ForkBranch>
+											</forks>
+											<pragmas>
+												<ed:Transition oid="!ed/65/51EF/DD1C/62680cb349e1"/>
+											</pragmas>
+										</Transition>
+									</unless>
+									<locals>
+										<Variable name="inEqSet">
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="bool"/>
+													</type>
+												</NamedType>
+											</type>
+											<pragmas>
+												<ed:Variable oid="!ed/f2/51EF/DD1C/62680eb28e3"/>
+											</pragmas>
+										</Variable>
+									</locals>
+									<data>
+										<!-- ok3 = _null; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="ok3"/>
+											</lefts>
+											<right>
+												<IdExpression>
+													<path>
+														<NullRef/>
+													</path>
+												</IdExpression>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/ed/51EF/DD1C/62680e9616a0"/>
+											</pragmas>
+										</Equation>
+										<!-- inEqSet = _null; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="inEqSet"/>
+											</lefts>
+											<right>
+												<IdExpression>
+													<path>
+														<NullRef/>
+													</path>
+												</IdExpression>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/f3/51EF/DD1C/62680eb22267"/>
+											</pragmas>
+										</Equation>
+									</data>
+									<pragmas>
+										<ed:State oid="!ed/4d/51EF/DD1C/62680c9074e7"/>
+									</pragmas>
+								</State>
+								<State name="Hidden">
+									<locals>
+										<Variable name="textualLocal1">
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="int8"/>
+													</type>
+												</NamedType>
+											</type>
+											<pragmas>
+												<ed:Variable oid="!ed/11b/51EF/DD1C/62680f653068"/>
+											</pragmas>
+										</Variable>
+										<Variable name="localNok1">
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="int8"/>
+													</type>
+												</NamedType>
+											</type>
+											<pragmas>
+												<ed:Variable oid="!ed/129/51EF/DD1C/62680f8343bc"/>
+											</pragmas>
+										</Variable>
+										<Variable name="localOk1">
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="int8"/>
+													</type>
+												</NamedType>
+											</type>
+											<pragmas>
+												<ed:Variable oid="!ed/131/51EF/DD1C/62680f9b75f2"/>
+											</pragmas>
+										</Variable>
+									</locals>
+									<data>
+										<!-- textualLocal1 = 0; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="textualLocal1"/>
+											</lefts>
+											<right>
+												<ConstValue value="0"/>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/125/51EF/DD1C/62680f7522dd"/>
+											</pragmas>
+										</Equation>
+										<!-- localNok1 = _null; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="localNok1"/>
+											</lefts>
+											<right>
+												<IdExpression>
+													<path>
+														<NullRef/>
+													</path>
+												</IdExpression>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/12a/51EF/DD1C/62680f837d2e"/>
+											</pragmas>
+										</Equation>
+										<!-- localOk1 = _null; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="localOk1"/>
+											</lefts>
+											<right>
+												<IdExpression>
+													<path>
+														<NullRef/>
+													</path>
+												</IdExpression>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/132/51EF/DD1C/62680f9b2e5a"/>
+											</pragmas>
+										</Equation>
+									</data>
+									<pragmas>
+										<ed:State oid="!ed/54/51EF/DD1C/62680c987de0" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+											<diagrams>
+												<NetDiagram name="Graphical" landscape="true" format="A4 (210 297)" oid="!ed/119/51EF/DD1C/62680f331d1f">
+													<presentationElements>
+														<EquationGE presentable="!ed/12a/51EF/DD1C/62680f837d2e">
+															<position>
+																<Point x="2170" y="794"/>
+															</position>
+															<size>
+																<Size width="344" height="502"/>
+															</size>
+														</EquationGE>
+														<EquationGE presentable="!ed/132/51EF/DD1C/62680f9b2e5a">
+															<position>
+																<Point x="2170" y="2699"/>
+															</position>
+															<size>
+																<Size width="344" height="502"/>
+															</size>
+														</EquationGE>
+													</presentationElements>
+													<equationSets>
+														<EquationSet name="EquationSet1" styleName="EQS1" oid="!ed/137/51EF/DD1C/62680fac240c">
+															<presentable>!ed/132/51EF/DD1C/62680f9b2e5a</presentable>
+														</EquationSet>
+													</equationSets>
+												</NetDiagram>
+												<TextDiagram name="Textual" landscape="false" format="A4 (210 297)" oid="!ed/11a/51EF/DD1C/62680f4b1cfa">
+													<presentationElements>
+														<FlowTE presentable="!ed/125/51EF/DD1C/62680f7522dd"/>
+													</presentationElements>
+												</TextDiagram>
+											</diagrams>
+										</ed:State>
+									</pragmas>
+								</State>
+								<State name="Textual">
+									<data>
+										<!-- ok4 = false; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="ok4"/>
+											</lefts>
+											<right>
+												<ConstValue value="false"/>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/14a/51EF/DD1C/62680fec5654"/>
+											</pragmas>
+										</Equation>
+									</data>
+									<pragmas>
+										<ed:State oid="!ed/139/51EF/DD1C/62680fbd140"/>
+									</pragmas>
+								</State>
+							</states>
+							<pragmas>
+								<ed:StateMachine oid="!ed/48/51EF/DD1C/62680c875425"/>
+							</pragmas>
+						</StateMachine>
+						<!-- ok2 = _null or _null; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="ok2"/>
+							</lefts>
+							<right>
+								<!-- _null or _null -->
+								<NAryOp name="1" operator="or">
+									<operands>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+									</operands>
+								</NAryOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/bf/51EF/DD1C/62680e36a1b"/>
+							</pragmas>
+						</Equation>
+						<!-- nok1 = _null xor _null; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="nok1"/>
+							</lefts>
+							<right>
+								<!-- _null xor _null -->
+								<NAryOp name="1" operator="xor">
+									<operands>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<NullRef/>
+											</path>
+										</IdExpression>
+									</operands>
+								</NAryOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/c5/51EF/DD1C/62680e3862a1"/>
+							</pragmas>
+						</Equation>
+						<IfBlock name="IfBlock1">
+							<block>
+								<IfNode>
+									<if>
+										<ConstValue value="true"/>
+									</if>
+									<then>
+										<Action>
+											<data>
+												<!-- ok5 = _null; -->
+												<Equation>
+													<lefts>
+														<VariableRef name="ok5"/>
+													</lefts>
+													<right>
+														<IdExpression>
+															<path>
+																<NullRef/>
+															</path>
+														</IdExpression>
+													</right>
+													<pragmas>
+														<ed:Equation oid="!ed/177/51EF/DD1C/626810e26606"/>
+													</pragmas>
+												</Equation>
+												<!-- nok3 = _null; -->
+												<Equation>
+													<lefts>
+														<VariableRef name="nok3"/>
+													</lefts>
+													<right>
+														<IdExpression>
+															<path>
+																<NullRef/>
+															</path>
+														</IdExpression>
+													</right>
+													<pragmas>
+														<ed:Equation oid="!ed/184/51EF/DD1C/6268115013b3"/>
+													</pragmas>
+												</Equation>
+											</data>
+											<pragmas>
+												<ed:Action oid="!ed/166/51EF/DD1C/626810cc3ef"/>
+											</pragmas>
+										</Action>
+									</then>
+									<else>
+										<IfNode>
+											<if>
+												<ConstValue value="true"/>
+											</if>
+											<then>
+												<Action>
+													<data>
+														<!-- ok6 = true; -->
+														<Equation>
+															<lefts>
+																<VariableRef name="ok6"/>
+															</lefts>
+															<right>
+																<ConstValue value="true"/>
+															</right>
+															<pragmas>
+																<ed:Equation oid="!ed/1c5/51EF/DD1C/6268121473b3"/>
+															</pragmas>
+														</Equation>
+													</data>
+													<pragmas>
+														<ed:Action oid="!ed/1b3/51EF/DD1C/626811e915f1"/>
+													</pragmas>
+												</Action>
+											</then>
+											<else>
+												<Action>
+													<locals>
+														<Variable name="textualLocal2">
+															<type>
+																<NamedType>
+																	<type>
+																		<TypeRef name="int8"/>
+																	</type>
+																</NamedType>
+															</type>
+															<pragmas>
+																<ed:Variable oid="!ed/1eb/51EF/DD1C/626812e0c7b"/>
+															</pragmas>
+														</Variable>
+														<Variable name="localOk2">
+															<type>
+																<NamedType>
+																	<type>
+																		<TypeRef name="int8"/>
+																	</type>
+																</NamedType>
+															</type>
+															<pragmas>
+																<ed:Variable oid="!ed/1e5/51EF/DD1C/626812e05711"/>
+															</pragmas>
+														</Variable>
+														<Variable name="localNok2">
+															<type>
+																<NamedType>
+																	<type>
+																		<TypeRef name="int8"/>
+																	</type>
+																</NamedType>
+															</type>
+															<pragmas>
+																<ed:Variable oid="!ed/1df/51EF/DD1C/626812e01067"/>
+															</pragmas>
+														</Variable>
+													</locals>
+													<data>
+														<!-- localOk2 = _null; -->
+														<Equation>
+															<lefts>
+																<VariableRef name="localOk2"/>
+															</lefts>
+															<right>
+																<IdExpression>
+																	<path>
+																		<NullRef/>
+																	</path>
+																</IdExpression>
+															</right>
+															<pragmas>
+																<ed:Equation oid="!ed/1f4/51EF/DD1C/626812ef14d9"/>
+															</pragmas>
+														</Equation>
+														<!-- localNok2 = _null; -->
+														<Equation>
+															<lefts>
+																<VariableRef name="localNok2"/>
+															</lefts>
+															<right>
+																<IdExpression>
+																	<path>
+																		<NullRef/>
+																	</path>
+																</IdExpression>
+															</right>
+															<pragmas>
+																<ed:Equation oid="!ed/1f5/51EF/DD1C/626812ef3144"/>
+															</pragmas>
+														</Equation>
+														<!-- textualLocal2 = 0; -->
+														<Equation>
+															<lefts>
+																<VariableRef name="textualLocal2"/>
+															</lefts>
+															<right>
+																<ConstValue value="0"/>
+															</right>
+															<pragmas>
+																<ed:Equation oid="!ed/200/51EF/DD1C/6268131e365e"/>
+															</pragmas>
+														</Equation>
+													</data>
+													<pragmas>
+														<ed:Action oid="!ed/167/51EF/DD1C/626810cc41ef" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+															<diagrams>
+																<NetDiagram name="Graphical" landscape="true" format="A4 (210 297)" oid="!ed/1c9/51EF/DD1C/626812a73cda">
+																	<presentationElements>
+																		<EquationGE presentable="!ed/1f4/51EF/DD1C/626812ef14d9">
+																			<position>
+																				<Point x="2090" y="2566"/>
+																			</position>
+																			<size>
+																				<Size width="344" height="503"/>
+																			</size>
+																		</EquationGE>
+																		<EquationGE presentable="!ed/1f5/51EF/DD1C/626812ef3144">
+																			<position>
+																				<Point x="2090" y="661"/>
+																			</position>
+																			<size>
+																				<Size width="344" height="503"/>
+																			</size>
+																		</EquationGE>
+																	</presentationElements>
+																	<equationSets>
+																		<EquationSet name="EquationSet1" styleName="EQS1" oid="!ed/201/51EF/DD1C/6268132318cc">
+																			<presentable>!ed/1f4/51EF/DD1C/626812ef14d9</presentable>
+																		</EquationSet>
+																	</equationSets>
+																</NetDiagram>
+																<TextDiagram name="Textual" landscape="false" format="A4 (210 297)" oid="!ed/1f6/51EF/DD1C/6268130c336d">
+																	<presentationElements>
+																		<FlowTE presentable="!ed/200/51EF/DD1C/6268131e365e"/>
+																	</presentationElements>
+																	<textArea>
+																		<TextArea text="textualLocal2=0;"/>
+																	</textArea>
+																</TextDiagram>
+															</diagrams>
+														</ed:Action>
+													</pragmas>
+												</Action>
+											</else>
+											<pragmas>
+												<ed:IfNode oid="!ed/1ae/51EF/DD1C/626811e71baf"/>
+											</pragmas>
+										</IfNode>
+									</else>
+									<pragmas>
+										<ed:IfNode oid="!ed/165/51EF/DD1C/626810cc360e"/>
+									</pragmas>
+								</IfNode>
+							</block>
+							<pragmas>
+								<ed:IfBlock oid="!ed/15f/51EF/DD1C/626810ca1adf"/>
+							</pragmas>
+						</IfBlock>
+						<!-- nok2 = ok1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="nok2"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="ok1"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/195/51EF/DD1C/626811a021ab"/>
+							</pragmas>
+						</Equation>
+						<WhenBlock name="WhenBlock1">
+							<when>
+								<ConstValue value="true"/>
+							</when>
+							<matches>
+								<Match pattern="a">
+									<data>
+										<!-- ok7 = _null; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="ok7"/>
+											</lefts>
+											<right>
+												<IdExpression>
+													<path>
+														<NullRef/>
+													</path>
+												</IdExpression>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/239/51EF/DD1C/626813bb34b4"/>
+											</pragmas>
+										</Equation>
+										<!-- nok4 = _null; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="nok4"/>
+											</lefts>
+											<right>
+												<IdExpression>
+													<path>
+														<NullRef/>
+													</path>
+												</IdExpression>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/23a/51EF/DD1C/626813bbb97"/>
+											</pragmas>
+										</Equation>
+									</data>
+									<pragmas>
+										<ed:Match oid="!ed/207/51EF/DD1C/626813583d19"/>
+										<ed:Action oid="!ed/208/51EF/DD1C/626813587855"/>
+									</pragmas>
+								</Match>
+								<Match pattern="b">
+									<data>
+										<!-- ok8 = false; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="ok8"/>
+											</lefts>
+											<right>
+												<ConstValue value="false"/>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/25b/51EF/DD1C/626813e95069"/>
+											</pragmas>
+										</Equation>
+									</data>
+									<pragmas>
+										<ed:Match oid="!ed/211/51EF/DD1C/626813772bda"/>
+										<ed:Action oid="!ed/216/51EF/DD1C/626813791f46"/>
+									</pragmas>
+								</Match>
+								<Match pattern="c">
+									<locals>
+										<Variable name="textualLocal3">
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="int8"/>
+													</type>
+												</NamedType>
+											</type>
+											<pragmas>
+												<ed:Variable oid="!ed/2a7/51EF/DD1C/626814c567b6"/>
+											</pragmas>
+										</Variable>
+										<Variable name="localOk3">
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="int8"/>
+													</type>
+												</NamedType>
+											</type>
+											<pragmas>
+												<ed:Variable oid="!ed/2a1/51EF/DD1C/626814c54ea8"/>
+											</pragmas>
+										</Variable>
+										<Variable name="localNok3">
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="int8"/>
+													</type>
+												</NamedType>
+											</type>
+											<pragmas>
+												<ed:Variable oid="!ed/29b/51EF/DD1C/626814c56f97"/>
+											</pragmas>
+										</Variable>
+									</locals>
+									<data>
+										<!-- textualLocal3 = 1; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="textualLocal3"/>
+											</lefts>
+											<right>
+												<ConstValue value="1"/>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/2b1/51EF/DD1C/626814d93aa0"/>
+											</pragmas>
+										</Equation>
+										<!-- localNok3 = _null; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="localNok3"/>
+											</lefts>
+											<right>
+												<IdExpression>
+													<path>
+														<NullRef/>
+													</path>
+												</IdExpression>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/2b9/51EF/DD1C/626814f11507"/>
+											</pragmas>
+										</Equation>
+										<!-- localOk3 = _null; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="localOk3"/>
+											</lefts>
+											<right>
+												<IdExpression>
+													<path>
+														<NullRef/>
+													</path>
+												</IdExpression>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/2ba/51EF/DD1C/626814f1238e"/>
+											</pragmas>
+										</Equation>
+									</data>
+									<pragmas>
+										<ed:Match oid="!ed/218/51EF/DD1C/626813855087"/>
+										<ed:Action oid="!ed/21d/51EF/DD1C/6268138678fc" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+											<diagrams>
+												<NetDiagram name="Graphical" landscape="true" format="A4 (210 297)" oid="!ed/25d/51EF/DD1C/626813f8178">
+													<presentationElements>
+														<EquationGE presentable="!ed/2b9/51EF/DD1C/626814f11507">
+															<position>
+																<Point x="1429" y="741"/>
+															</position>
+															<size>
+																<Size width="344" height="503"/>
+															</size>
+														</EquationGE>
+														<EquationGE presentable="!ed/2ba/51EF/DD1C/626814f1238e">
+															<position>
+																<Point x="1429" y="1773"/>
+															</position>
+															<size>
+																<Size width="344" height="502"/>
+															</size>
+														</EquationGE>
+													</presentationElements>
+													<equationSets>
+														<EquationSet name="EquationSet1" styleName="EQS1" oid="!ed/2bf/51EF/DD1C/626814f97c6d">
+															<presentable>!ed/2ba/51EF/DD1C/626814f1238e</presentable>
+														</EquationSet>
+													</equationSets>
+												</NetDiagram>
+												<TextDiagram name="Textual" landscape="false" format="A4 (210 297)" oid="!ed/295/51EF/DD1C/626814b793">
+													<presentationElements>
+														<FlowTE presentable="!ed/2b1/51EF/DD1C/626814d93aa0"/>
+													</presentationElements>
+													<textArea>
+														<TextArea text="textualLocal3=1;"/>
+													</textArea>
+												</TextDiagram>
+											</diagrams>
+										</ed:Action>
+									</pragmas>
+								</Match>
+							</matches>
+							<pragmas>
+								<ed:WhenBlock oid="!ed/202/51EF/DD1C/626813567c77"/>
+							</pragmas>
+						</WhenBlock>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/18/51EF/DD1C/62680b8e7510" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Graphical" landscape="true" format="A4 (210 297)" oid="!ed/19/51EF/DD1C/62680b8e6a76">
+									<presentationElements>
+										<EquationGE presentable="!ed/28/51EF/DD1C/62680beec58">
+											<position>
+												<Point x="4948" y="1270"/>
+											</position>
+											<size>
+												<Size width="1005" height="662"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/28/51EF/DD1C/62680beec58" dstEquation="!ed/195/51EF/DD1C/626811a021ab">
+											<positions>
+												<Point x="5953" y="1614"/>
+												<Point x="7091" y="1614"/>
+												<Point x="7091" y="1614"/>
+												<Point x="8229" y="1614"/>
+											</positions>
+										</Edge>
+										<StateMachineGE presentable="!ed/48/51EF/DD1C/62680c875425">
+											<position>
+												<Point x="741" y="3043"/>
+											</position>
+											<size>
+												<Size width="15610" height="4842"/>
+											</size>
+										</StateMachineGE>
+										<StateGE presentable="!ed/4d/51EF/DD1C/62680c9074e7">
+											<position>
+												<Point x="1005" y="3307"/>
+											</position>
+											<size>
+												<Size width="4710" height="1905"/>
+											</size>
+										</StateGE>
+										<StateGE display="split" presentable="!ed/54/51EF/DD1C/62680c987de0">
+											<position>
+												<Point x="11298" y="3307"/>
+											</position>
+											<size>
+												<Size width="4709" height="1905"/>
+											</size>
+										</StateGE>
+										<TransitionGE presentable="!ed/65/51EF/DD1C/62680cb349e1">
+											<positions>
+												<Point x="5715" y="3942"/>
+												<Point x="6165" y="4048"/>
+												<Point x="7408" y="4286"/>
+												<Point x="8546" y="4630"/>
+											</positions>
+											<labelSize>
+												<Size width="2858" height="318"/>
+											</labelSize>
+											<labelPos>
+												<Point x="6349" y="3599"/>
+											</labelPos>
+											<slashPos>
+												<Point x="6932" y="3598"/>
+											</slashPos>
+										</TransitionGE>
+										<TransitionGE presentable="!ed/76/51EF/DD1C/62680d392708">
+											<textAreas>
+												<TextArea text="forked=true;" role="122"/>
+											</textAreas>
+											<positions>
+												<Point x="8546" y="4630"/>
+												<Point x="9710" y="5345"/>
+												<Point x="10266" y="5001"/>
+												<Point x="11298" y="4313"/>
+											</positions>
+											<labelSize>
+												<Size width="2858" height="635"/>
+											</labelSize>
+											<labelPos>
+												<Point x="8123" y="5714"/>
+											</labelPos>
+											<slashPos>
+												<Point x="8969" y="5715"/>
+											</slashPos>
+										</TransitionGE>
+										<EquationGE presentable="!ed/bf/51EF/DD1C/62680e36a1b">
+											<position>
+												<Point x="767" y="688"/>
+											</position>
+											<size>
+												<Size width="1006" height="662"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/c5/51EF/DD1C/62680e3862a1">
+											<position>
+												<Point x="767" y="1852"/>
+											</position>
+											<size>
+												<Size width="1006" height="662"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/bf/51EF/DD1C/62680e36a1b" dstEquation="!ed/28/51EF/DD1C/62680beec58">
+											<positions>
+												<Point x="1773" y="1032"/>
+												<Point x="3360" y="1032"/>
+												<Point x="3360" y="1482"/>
+												<Point x="4948" y="1482"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/c5/51EF/DD1C/62680e3862a1" dstEquation="!ed/28/51EF/DD1C/62680beec58">
+											<positions>
+												<Point x="1773" y="2196"/>
+												<Point x="3360" y="2196"/>
+												<Point x="3360" y="1720"/>
+												<Point x="4948" y="1720"/>
+											</positions>
+										</Edge>
+										<EquationGE presentable="!ed/ed/51EF/DD1C/62680e9616a0">
+											<position>
+												<Point x="1958" y="4260"/>
+											</position>
+											<size>
+												<Size width="344" height="502"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/f3/51EF/DD1C/62680eb22267">
+											<position>
+												<Point x="3704" y="4260"/>
+											</position>
+											<size>
+												<Size width="344" height="502"/>
+											</size>
+										</EquationGE>
+										<StateGE display="embeddedTextual" presentable="!ed/139/51EF/DD1C/62680fbd140">
+											<textAreas>
+												<TextArea text="ok4=false;"/>
+											</textAreas>
+											<position>
+												<Point x="1005" y="5768"/>
+											</position>
+											<size>
+												<Size width="4710" height="1905"/>
+											</size>
+										</StateGE>
+										<IfBlockGE presentable="!ed/15f/51EF/DD1C/626810ca1adf">
+											<position>
+												<Point x="847" y="8573"/>
+											</position>
+											<size>
+												<Size width="6905" height="6509"/>
+											</size>
+										</IfBlockGE>
+										<ActionGE presentable="!ed/166/51EF/DD1C/626810cc3ef">
+											<position>
+												<Point x="2672" y="9075"/>
+											</position>
+											<size>
+												<Size width="4710" height="1534"/>
+											</size>
+										</ActionGE>
+										<ActionGE display="split" presentable="!ed/167/51EF/DD1C/626810cc41ef">
+											<position>
+												<Point x="2672" y="13150"/>
+											</position>
+											<size>
+												<Size width="4710" height="1535"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/165/51EF/DD1C/626810cc360e">
+											<position>
+												<Point x="1296" y="9155"/>
+											</position>
+										</IfNodeGE>
+										<EquationGE presentable="!ed/177/51EF/DD1C/626810e26606">
+											<position>
+												<Point x="3387" y="9631"/>
+											</position>
+											<size>
+												<Size width="344" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/184/51EF/DD1C/6268115013b3">
+											<position>
+												<Point x="5689" y="9631"/>
+											</position>
+											<size>
+												<Size width="344" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/195/51EF/DD1C/626811a021ab">
+											<position>
+												<Point x="8229" y="1349"/>
+											</position>
+											<size>
+												<Size width="344" height="502"/>
+											</size>
+										</EquationGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/1ae/51EF/DD1C/626811e71baf">
+											<position>
+												<Point x="1296" y="11165"/>
+											</position>
+										</IfNodeGE>
+										<ActionGE display="embeddedTextual" presentable="!ed/1b3/51EF/DD1C/626811e915f1">
+											<textAreas>
+												<TextArea text="ok6=true;"/>
+											</textAreas>
+											<position>
+												<Point x="2672" y="11086"/>
+											</position>
+											<size>
+												<Size width="4709" height="1534"/>
+											</size>
+										</ActionGE>
+										<WhenBlockGE presentable="!ed/202/51EF/DD1C/626813567c77">
+											<position>
+												<Point x="9446" y="8573"/>
+											</position>
+											<size>
+												<Size width="6905" height="7037"/>
+											</size>
+											<startPos>
+												<Point x="450" y="582"/>
+											</startPos>
+										</WhenBlockGE>
+										<WhenBranchGE labelWidth="794" presentable="!ed/207/51EF/DD1C/626813583d19">
+											<position>
+												<Point x="9975" y="10186"/>
+											</position>
+										</WhenBranchGE>
+										<ActionGE presentable="!ed/208/51EF/DD1C/626813587855">
+											<position>
+												<Point x="11245" y="10107"/>
+											</position>
+											<size>
+												<Size width="4709" height="1535"/>
+											</size>
+										</ActionGE>
+										<WhenBranchGE labelWidth="794" presentable="!ed/211/51EF/DD1C/626813772bda">
+											<position>
+												<Point x="9975" y="12039"/>
+											</position>
+										</WhenBranchGE>
+										<ActionGE display="embeddedTextual" presentable="!ed/216/51EF/DD1C/626813791f46">
+											<textAreas>
+												<TextArea text="ok8=false;"/>
+											</textAreas>
+											<position>
+												<Point x="11245" y="11959"/>
+											</position>
+											<size>
+												<Size width="4709" height="1534"/>
+											</size>
+										</ActionGE>
+										<WhenBranchGE labelWidth="794" presentable="!ed/218/51EF/DD1C/626813855087">
+											<position>
+												<Point x="9975" y="13891"/>
+											</position>
+										</WhenBranchGE>
+										<ActionGE display="split" presentable="!ed/21d/51EF/DD1C/6268138678fc">
+											<position>
+												<Point x="11245" y="13811"/>
+											</position>
+											<size>
+												<Size width="4709" height="1534"/>
+											</size>
+										</ActionGE>
+										<EquationGE presentable="!ed/239/51EF/DD1C/626813bb34b4">
+											<position>
+												<Point x="12091" y="10636"/>
+											</position>
+											<size>
+												<Size width="344" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/23a/51EF/DD1C/626813bbb97">
+											<position>
+												<Point x="14393" y="10636"/>
+											</position>
+											<size>
+												<Size width="344" height="503"/>
+											</size>
+										</EquationGE>
+									</presentationElements>
+									<equationSets>
+										<EquationSet name="EquationSet1" styleName="EQS1" oid="!ed/32/51EF/DD1C/62680c19505b">
+											<presentable>!ed/28/51EF/DD1C/62680beec58</presentable>
+											<presentable>!ed/bf/51EF/DD1C/62680e36a1b</presentable>
+											<presentable>!ed/177/51EF/DD1C/626810e26606</presentable>
+											<presentable>!ed/239/51EF/DD1C/626813bb34b4</presentable>
+										</EquationSet>
+										<EquationSet name="EquationSet2" styleName="EQS2" oid="!ed/d2/51EF/DD1C/62680e714111">
+											<presentable>!ed/bf/51EF/DD1C/62680e36a1b</presentable>
+										</EquationSet>
+										<EquationSet name="EquationSet3" styleName="EQS3" oid="!ed/101/51EF/DD1C/62680ebf4fd8">
+											<presentable>!ed/f3/51EF/DD1C/62680eb22267</presentable>
+										</EquationSet>
+										<EquationSet name="EquationSet4" styleName="EQS4" oid="!ed/76b/1D0B/A290/63d8f4bf4095">
+											<presentable>!ed/165/51EF/DD1C/626810cc360e</presentable>
+											<presentable>!ed/1ae/51EF/DD1C/626811e71baf</presentable>
+											<presentable>!ed/207/51EF/DD1C/626813583d19</presentable>
+											<presentable>!ed/211/51EF/DD1C/626813772bda</presentable>
+											<presentable>!ed/218/51EF/DD1C/626813855087</presentable>
+										</EquationSet>
+									</equationSets>
+								</NetDiagram>
+								<TextDiagram name="Textual" landscape="false" format="A4 (210 297)" oid="!ed/3c/51EF/DD1C/62680c51367d">
+									<presentationElements>
+										<FlowTE presentable="!ed/46/51EF/DD1C/62680c707373"/>
+									</presentationElements>
+								</TextDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="BranchesOk">
+					<inputs>
+						<Variable name="i">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Enum"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/3bf/1D0B/A290/63d8eb37603f"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="o">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int8"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/5b8/1D0B/A290/63d8ede8784a"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<data>
+						<IfBlock name="IfBlock1">
+							<block>
+								<IfNode>
+									<if>
+										<ConstValue value="true"/>
+									</if>
+									<then>
+										<IfNode>
+											<if>
+												<ConstValue value="true"/>
+											</if>
+											<then>
+												<Action>
+													<pragmas>
+														<ed:Action oid="!ed/3aa/1D0B/A290/63d8ea817c8e"/>
+													</pragmas>
+												</Action>
+											</then>
+											<else>
+												<Action>
+													<pragmas>
+														<ed:Action oid="!ed/3b1/1D0B/A290/63d8ea891095"/>
+													</pragmas>
+												</Action>
+											</else>
+											<pragmas>
+												<ed:IfNode oid="!ed/3ac/1D0B/A290/63d8ea8820ad"/>
+											</pragmas>
+										</IfNode>
+									</then>
+									<else>
+										<IfNode>
+											<if>
+												<ConstValue value="true"/>
+											</if>
+											<then>
+												<Action>
+													<pragmas>
+														<ed:Action oid="!ed/3b7/1D0B/A290/63d8ea8f1bc5"/>
+													</pragmas>
+												</Action>
+											</then>
+											<else>
+												<IfNode>
+													<if>
+														<ConstValue value="true"/>
+													</if>
+													<then>
+														<Action>
+															<pragmas>
+																<ed:Action oid="!ed/3ab/1D0B/A290/63d8ea811e52"/>
+															</pragmas>
+														</Action>
+													</then>
+													<else>
+														<Action>
+															<pragmas>
+																<ed:Action oid="!ed/3bd/1D0B/A290/63d8eaf15ea3"/>
+															</pragmas>
+														</Action>
+													</else>
+													<pragmas>
+														<ed:IfNode oid="!ed/3b8/1D0B/A290/63d8eaf022da"/>
+													</pragmas>
+												</IfNode>
+											</else>
+											<pragmas>
+												<ed:IfNode oid="!ed/3b2/1D0B/A290/63d8ea8e4f96"/>
+											</pragmas>
+										</IfNode>
+									</else>
+									<pragmas>
+										<ed:IfNode oid="!ed/3a9/1D0B/A290/63d8ea811d69"/>
+									</pragmas>
+								</IfNode>
+							</block>
+							<pragmas>
+								<ed:IfBlock oid="!ed/3a4/1D0B/A290/63d8ea806f00"/>
+							</pragmas>
+						</IfBlock>
+						<WhenBlock name="WhenBlock1">
+							<when>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="i"/>
+									</path>
+								</IdExpression>
+							</when>
+							<matches>
+								<Match pattern="a">
+									<pragmas>
+										<ed:Match oid="!ed/3cf/1D0B/A290/63d8eb432e9d"/>
+										<ed:Action oid="!ed/3d0/1D0B/A290/63d8eb434fb7"/>
+									</pragmas>
+								</Match>
+								<Match pattern="b">
+									<pragmas>
+										<ed:Match oid="!ed/3eb/1D0B/A290/63d8eb5f192c"/>
+										<ed:Action oid="!ed/3f1/1D0B/A290/63d8eb604b0c"/>
+									</pragmas>
+								</Match>
+								<Match pattern="c">
+									<pragmas>
+										<ed:Match oid="!ed/3f2/1D0B/A290/63d8eb623620"/>
+										<ed:Action oid="!ed/3f8/1D0B/A290/63d8eb6372ab"/>
+									</pragmas>
+								</Match>
+							</matches>
+							<pragmas>
+								<ed:WhenBlock oid="!ed/3c9/1D0B/A290/63d8eb4249a9"/>
+							</pragmas>
+						</WhenBlock>
+						<IfBlock name="IfBlock2">
+							<block>
+								<IfNode>
+									<if>
+										<ConstValue value="true"/>
+									</if>
+									<then>
+										<IfNode>
+											<if>
+												<ConstValue value="true"/>
+											</if>
+											<then>
+												<Action>
+													<pragmas>
+														<ed:Action oid="!ed/676/1D0B/A290/63d8f15e21e9"/>
+													</pragmas>
+												</Action>
+											</then>
+											<else>
+												<Action>
+													<pragmas>
+														<ed:Action oid="!ed/677/1D0B/A290/63d8f15e65ce"/>
+													</pragmas>
+												</Action>
+											</else>
+											<pragmas>
+												<ed:IfNode oid="!ed/678/1D0B/A290/63d8f15e5eff"/>
+											</pragmas>
+										</IfNode>
+									</then>
+									<else>
+										<IfNode>
+											<if>
+												<ConstValue value="true"/>
+											</if>
+											<then>
+												<Action>
+													<pragmas>
+														<ed:Action oid="!ed/679/1D0B/A290/63d8f15e3efa"/>
+													</pragmas>
+												</Action>
+											</then>
+											<else>
+												<IfNode>
+													<if>
+														<ConstValue value="true"/>
+													</if>
+													<then>
+														<Action>
+															<pragmas>
+																<ed:Action oid="!ed/67a/1D0B/A290/63d8f15e2dd1"/>
+															</pragmas>
+														</Action>
+													</then>
+													<else>
+														<Action>
+															<pragmas>
+																<ed:Action oid="!ed/67b/1D0B/A290/63d8f15e20a7"/>
+															</pragmas>
+														</Action>
+													</else>
+													<pragmas>
+														<ed:IfNode oid="!ed/67c/1D0B/A290/63d8f15e705"/>
+													</pragmas>
+												</IfNode>
+											</else>
+											<pragmas>
+												<ed:IfNode oid="!ed/67d/1D0B/A290/63d8f15e607a"/>
+											</pragmas>
+										</IfNode>
+									</else>
+									<pragmas>
+										<ed:IfNode oid="!ed/67e/1D0B/A290/63d8f15e12df"/>
+									</pragmas>
+								</IfNode>
+							</block>
+							<pragmas>
+								<ed:IfBlock oid="!ed/67f/1D0B/A290/63d8f15e5211"/>
+							</pragmas>
+						</IfBlock>
+						<WhenBlock name="WhenBlock2">
+							<when>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="i"/>
+									</path>
+								</IdExpression>
+							</when>
+							<matches>
+								<Match pattern="a">
+									<pragmas>
+										<ed:Match oid="!ed/681/1D0B/A290/63d8f15e5d6b"/>
+										<ed:Action oid="!ed/682/1D0B/A290/63d8f15eb14"/>
+									</pragmas>
+								</Match>
+								<Match pattern="b">
+									<pragmas>
+										<ed:Match oid="!ed/683/1D0B/A290/63d8f15e7d9e"/>
+										<ed:Action oid="!ed/684/1D0B/A290/63d8f15e3664"/>
+									</pragmas>
+								</Match>
+								<Match pattern="c">
+									<pragmas>
+										<ed:Match oid="!ed/685/1D0B/A290/63d8f15e1214"/>
+										<ed:Action oid="!ed/686/1D0B/A290/63d8f15e768"/>
+									</pragmas>
+								</Match>
+							</matches>
+							<pragmas>
+								<ed:WhenBlock oid="!ed/680/1D0B/A290/63d8f15e1949"/>
+							</pragmas>
+						</WhenBlock>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/3a1/1D0B/A290/63d8ea333d63" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Graphical" landscape="true" format="A4 (210 297)" oid="!ed/3a2/1D0B/A290/63d8ea33620a">
+									<presentationElements>
+										<IfBlockGE presentable="!ed/3a4/1D0B/A290/63d8ea806f00">
+											<position>
+												<Point x="661" y="609"/>
+											</position>
+											<size>
+												<Size width="10530" height="8519"/>
+											</size>
+										</IfBlockGE>
+										<ActionGE presentable="!ed/3aa/1D0B/A290/63d8ea817c8e">
+											<position>
+												<Point x="6006" y="1085"/>
+											</position>
+											<size>
+												<Size width="4709" height="1006"/>
+											</size>
+										</ActionGE>
+										<ActionGE presentable="!ed/3ab/1D0B/A290/63d8ea811e52">
+											<position>
+												<Point x="2487" y="6006"/>
+											</position>
+											<size>
+												<Size width="4709" height="1006"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/3a9/1D0B/A290/63d8ea811d69">
+											<position>
+												<Point x="1111" y="1164"/>
+											</position>
+										</IfNodeGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/3ac/1D0B/A290/63d8ea8820ad">
+											<position>
+												<Point x="3360" y="1164"/>
+											</position>
+										</IfNodeGE>
+										<ActionGE presentable="!ed/3b1/1D0B/A290/63d8ea891095">
+											<position>
+												<Point x="6006" y="2725"/>
+											</position>
+											<size>
+												<Size width="4710" height="1006"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/3b2/1D0B/A290/63d8ea8e4f96">
+											<position>
+												<Point x="1111" y="4445"/>
+											</position>
+										</IfNodeGE>
+										<ActionGE presentable="!ed/3b7/1D0B/A290/63d8ea8f1bc5">
+											<position>
+												<Point x="2487" y="4366"/>
+											</position>
+											<size>
+												<Size width="4710" height="1006"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/3b8/1D0B/A290/63d8eaf022da">
+											<position>
+												<Point x="1111" y="6085"/>
+											</position>
+										</IfNodeGE>
+										<ActionGE presentable="!ed/3bd/1D0B/A290/63d8eaf15ea3">
+											<position>
+												<Point x="2487" y="7646"/>
+											</position>
+											<size>
+												<Size width="4709" height="1006"/>
+											</size>
+										</ActionGE>
+										<WhenBlockGE labelWidth="212" presentable="!ed/3c9/1D0B/A290/63d8eb4249a9">
+											<position>
+												<Point x="11853" y="609"/>
+											</position>
+											<size>
+												<Size width="6799" height="6270"/>
+											</size>
+											<startPos>
+												<Point x="450" y="582"/>
+											</startPos>
+										</WhenBlockGE>
+										<WhenBranchGE labelWidth="794" presentable="!ed/3cf/1D0B/A290/63d8eb432e9d">
+											<position>
+												<Point x="12383" y="2223"/>
+											</position>
+										</WhenBranchGE>
+										<ActionGE presentable="!ed/3d0/1D0B/A290/63d8eb434fb7">
+											<position>
+												<Point x="13653" y="2143"/>
+											</position>
+											<size>
+												<Size width="4709" height="1191"/>
+											</size>
+										</ActionGE>
+										<WhenBranchGE labelWidth="794" presentable="!ed/3eb/1D0B/A290/63d8eb5f192c">
+											<position>
+												<Point x="12383" y="3784"/>
+											</position>
+										</WhenBranchGE>
+										<ActionGE presentable="!ed/3f1/1D0B/A290/63d8eb604b0c">
+											<position>
+												<Point x="13653" y="3704"/>
+											</position>
+											<size>
+												<Size width="4709" height="1191"/>
+											</size>
+										</ActionGE>
+										<WhenBranchGE labelWidth="794" presentable="!ed/3f2/1D0B/A290/63d8eb623620">
+											<position>
+												<Point x="12383" y="5345"/>
+											</position>
+										</WhenBranchGE>
+										<ActionGE presentable="!ed/3f8/1D0B/A290/63d8eb6372ab">
+											<position>
+												<Point x="13653" y="5265"/>
+											</position>
+											<size>
+												<Size width="4709" height="1190"/>
+											</size>
+										</ActionGE>
+									</presentationElements>
+									<equationSets>
+										<EquationSet name="Branches" styleName="EQS1" oid="!ed/429/1D0B/A290/63d8ebc53c61">
+											<presentable>!ed/3a9/1D0B/A290/63d8ea811d69</presentable>
+											<presentable>!ed/3ac/1D0B/A290/63d8ea8820ad</presentable>
+											<presentable>!ed/3b2/1D0B/A290/63d8ea8e4f96</presentable>
+											<presentable>!ed/3b8/1D0B/A290/63d8eaf022da</presentable>
+											<presentable>!ed/3cf/1D0B/A290/63d8eb432e9d</presentable>
+											<presentable>!ed/3eb/1D0B/A290/63d8eb5f192c</presentable>
+											<presentable>!ed/3f2/1D0B/A290/63d8eb623620</presentable>
+										</EquationSet>
+									</equationSets>
+								</NetDiagram>
+								<TextDiagram name="Textual" landscape="false" format="A4 (210 297)" oid="!ed/3a3/1D0B/A290/63d8ea643187">
+									<presentationElements>
+										<FlowTE presentable="!ed/67f/1D0B/A290/63d8f15e5211"/>
+										<FlowTE presentable="!ed/680/1D0B/A290/63d8f15e1949"/>
+									</presentationElements>
+									<textArea>
+										<TextArea text="activate IfBlock2&#xA;
+   if true then &#xA;
+      if true then &#xA;
+      else &#xA;
+   else &#xA;
+      if true then &#xA;
+      else &#xA;
+         if true then &#xA;
+         else &#xA;
+&#xA;
+returns .. ;&#xA;
+&#xA;
+activate WhenBlock2&#xA;
+    when i match &#xA;
+      | a : &#xA;
+      | b : &#xA;
+      | c : &#xA;
+returns .. ;"/>
+									</textArea>
+								</TextDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="BranchesStateOk">
+					<inputs>
+						<Variable name="i">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Enum"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/49c/1D0B/A290/63d8ec5f4c09"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<data>
+						<StateMachine name="SM1">
+							<states>
+								<State initial="true" name="State1">
+									<data>
+										<IfBlock name="IfBlock1">
+											<block>
+												<IfNode>
+													<if>
+														<ConstValue value="true"/>
+													</if>
+													<then>
+														<IfNode>
+															<if>
+																<ConstValue value="true"/>
+															</if>
+															<then>
+																<Action>
+																	<pragmas>
+																		<ed:Action oid="!ed/512/1D0B/A290/63d8ecc66040"/>
+																	</pragmas>
+																</Action>
+															</then>
+															<else>
+																<Action>
+																	<pragmas>
+																		<ed:Action oid="!ed/511/1D0B/A290/63d8ecc6d74"/>
+																	</pragmas>
+																</Action>
+															</else>
+															<pragmas>
+																<ed:IfNode oid="!ed/510/1D0B/A290/63d8ecc63dc2"/>
+															</pragmas>
+														</IfNode>
+													</then>
+													<else>
+														<IfNode>
+															<if>
+																<ConstValue value="true"/>
+															</if>
+															<then>
+																<Action>
+																	<pragmas>
+																		<ed:Action oid="!ed/50f/1D0B/A290/63d8ecc61a6d"/>
+																	</pragmas>
+																</Action>
+															</then>
+															<else>
+																<IfNode>
+																	<if>
+																		<ConstValue value="true"/>
+																	</if>
+																	<then>
+																		<Action>
+																			<pragmas>
+																				<ed:Action oid="!ed/50e/1D0B/A290/63d8ecc65dc2"/>
+																			</pragmas>
+																		</Action>
+																	</then>
+																	<else>
+																		<Action>
+																			<pragmas>
+																				<ed:Action oid="!ed/50d/1D0B/A290/63d8ecc62b87"/>
+																			</pragmas>
+																		</Action>
+																	</else>
+																	<pragmas>
+																		<ed:IfNode oid="!ed/50c/1D0B/A290/63d8ecc62511"/>
+																	</pragmas>
+																</IfNode>
+															</else>
+															<pragmas>
+																<ed:IfNode oid="!ed/50b/1D0B/A290/63d8ecc67e84"/>
+															</pragmas>
+														</IfNode>
+													</else>
+													<pragmas>
+														<ed:IfNode oid="!ed/50a/1D0B/A290/63d8ecc63e6a"/>
+													</pragmas>
+												</IfNode>
+											</block>
+											<pragmas>
+												<ed:IfBlock oid="!ed/509/1D0B/A290/63d8ecc6680d"/>
+											</pragmas>
+										</IfBlock>
+										<WhenBlock name="WhenBlock1">
+											<when>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="i"/>
+													</path>
+												</IdExpression>
+											</when>
+											<matches>
+												<Match pattern="a">
+													<pragmas>
+														<ed:Match oid="!ed/503/1D0B/A290/63d8ecc696f"/>
+														<ed:Action oid="!ed/504/1D0B/A290/63d8ecc614d6"/>
+													</pragmas>
+												</Match>
+												<Match pattern="b">
+													<pragmas>
+														<ed:Match oid="!ed/505/1D0B/A290/63d8ecc6742c"/>
+														<ed:Action oid="!ed/506/1D0B/A290/63d8ecc65f7b"/>
+													</pragmas>
+												</Match>
+												<Match pattern="c">
+													<pragmas>
+														<ed:Match oid="!ed/507/1D0B/A290/63d8ecc617ce"/>
+														<ed:Action oid="!ed/508/1D0B/A290/63d8ecc67d82"/>
+													</pragmas>
+												</Match>
+											</matches>
+											<pragmas>
+												<ed:WhenBlock oid="!ed/502/1D0B/A290/63d8ecc63638"/>
+											</pragmas>
+										</WhenBlock>
+									</data>
+									<pragmas>
+										<ed:State oid="!ed/4a6/1D0B/A290/63d8eca76d40"/>
+									</pragmas>
+								</State>
+							</states>
+							<pragmas>
+								<ed:StateMachine oid="!ed/49f/1D0B/A290/63d8ec8e781a"/>
+							</pragmas>
+						</StateMachine>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/487/1D0B/A290/63d8ec5f1889" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Graphical" landscape="true" format="A4 (210 297)" oid="!ed/499/1D0B/A290/63d8ec5f1fc9">
+									<presentationElements>
+										<StateMachineGE presentable="!ed/49f/1D0B/A290/63d8ec8e781a">
+											<position>
+												<Point x="397" y="450"/>
+											</position>
+											<size>
+												<Size width="19341" height="10398"/>
+											</size>
+										</StateMachineGE>
+										<StateGE presentable="!ed/4a6/1D0B/A290/63d8eca76d40">
+											<position>
+												<Point x="635" y="714"/>
+											</position>
+											<size>
+												<Size width="18838" height="9843"/>
+											</size>
+										</StateGE>
+										<IfBlockGE presentable="!ed/509/1D0B/A290/63d8ecc6680d">
+											<position>
+												<Point x="1032" y="1614"/>
+											</position>
+											<size>
+												<Size width="10530" height="8520"/>
+											</size>
+										</IfBlockGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/50a/1D0B/A290/63d8ecc63e6a">
+											<position>
+												<Point x="1482" y="2170"/>
+											</position>
+										</IfNodeGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/510/1D0B/A290/63d8ecc63dc2">
+											<position>
+												<Point x="3731" y="2170"/>
+											</position>
+										</IfNodeGE>
+										<ActionGE presentable="!ed/512/1D0B/A290/63d8ecc66040">
+											<position>
+												<Point x="6376" y="2090"/>
+											</position>
+											<size>
+												<Size width="4709" height="1006"/>
+											</size>
+										</ActionGE>
+										<ActionGE presentable="!ed/511/1D0B/A290/63d8ecc6d74">
+											<position>
+												<Point x="6376" y="3731"/>
+											</position>
+											<size>
+												<Size width="4709" height="1006"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/50b/1D0B/A290/63d8ecc67e84">
+											<position>
+												<Point x="1482" y="5450"/>
+											</position>
+										</IfNodeGE>
+										<ActionGE presentable="!ed/50f/1D0B/A290/63d8ecc61a6d">
+											<position>
+												<Point x="2858" y="5371"/>
+											</position>
+											<size>
+												<Size width="4710" height="1006"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/50c/1D0B/A290/63d8ecc62511">
+											<position>
+												<Point x="1482" y="7091"/>
+											</position>
+										</IfNodeGE>
+										<ActionGE presentable="!ed/50e/1D0B/A290/63d8ecc65dc2">
+											<position>
+												<Point x="2858" y="7011"/>
+											</position>
+											<size>
+												<Size width="4709" height="1006"/>
+											</size>
+										</ActionGE>
+										<ActionGE presentable="!ed/50d/1D0B/A290/63d8ecc62b87">
+											<position>
+												<Point x="2858" y="8652"/>
+											</position>
+											<size>
+												<Size width="4709" height="1006"/>
+											</size>
+										</ActionGE>
+										<WhenBlockGE labelWidth="212" presentable="!ed/502/1D0B/A290/63d8ecc63638">
+											<position>
+												<Point x="12224" y="1614"/>
+											</position>
+											<size>
+												<Size width="6800" height="6271"/>
+											</size>
+											<startPos>
+												<Point x="450" y="582"/>
+											</startPos>
+										</WhenBlockGE>
+										<WhenBranchGE labelWidth="794" presentable="!ed/503/1D0B/A290/63d8ecc696f">
+											<position>
+												<Point x="12753" y="3228"/>
+											</position>
+										</WhenBranchGE>
+										<ActionGE presentable="!ed/504/1D0B/A290/63d8ecc614d6">
+											<position>
+												<Point x="14023" y="3149"/>
+											</position>
+											<size>
+												<Size width="4709" height="1191"/>
+											</size>
+										</ActionGE>
+										<WhenBranchGE labelWidth="794" presentable="!ed/505/1D0B/A290/63d8ecc6742c">
+											<position>
+												<Point x="12753" y="4789"/>
+											</position>
+										</WhenBranchGE>
+										<ActionGE presentable="!ed/506/1D0B/A290/63d8ecc65f7b">
+											<position>
+												<Point x="14023" y="4710"/>
+											</position>
+											<size>
+												<Size width="4709" height="1191"/>
+											</size>
+										</ActionGE>
+										<WhenBranchGE labelWidth="794" presentable="!ed/507/1D0B/A290/63d8ecc617ce">
+											<position>
+												<Point x="12753" y="6350"/>
+											</position>
+										</WhenBranchGE>
+										<ActionGE presentable="!ed/508/1D0B/A290/63d8ecc67d82">
+											<position>
+												<Point x="14023" y="6271"/>
+											</position>
+											<size>
+												<Size width="4709" height="1190"/>
+											</size>
+										</ActionGE>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="BranchesNok">
+					<inputs>
+						<Variable name="i">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Enum"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/767/1D0B/A290/63d8f17d106a"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="o">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int8"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/766/1D0B/A290/63d8f17d5cb0"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<data>
+						<IfBlock name="IfBlock1">
+							<block>
+								<IfNode>
+									<if>
+										<ConstValue value="true"/>
+									</if>
+									<then>
+										<IfNode>
+											<if>
+												<ConstValue value="true"/>
+											</if>
+											<then>
+												<Action>
+													<pragmas>
+														<ed:Action oid="!ed/74a/1D0B/A290/63d8f17d6206"/>
+													</pragmas>
+												</Action>
+											</then>
+											<else>
+												<Action>
+													<pragmas>
+														<ed:Action oid="!ed/749/1D0B/A290/63d8f17d5be8"/>
+													</pragmas>
+												</Action>
+											</else>
+											<pragmas>
+												<ed:IfNode oid="!ed/748/1D0B/A290/63d8f17d6c48"/>
+											</pragmas>
+										</IfNode>
+									</then>
+									<else>
+										<IfNode>
+											<if>
+												<ConstValue value="true"/>
+											</if>
+											<then>
+												<Action>
+													<pragmas>
+														<ed:Action oid="!ed/747/1D0B/A290/63d8f17d753f"/>
+													</pragmas>
+												</Action>
+											</then>
+											<else>
+												<IfNode>
+													<if>
+														<ConstValue value="true"/>
+													</if>
+													<then>
+														<Action>
+															<pragmas>
+																<ed:Action oid="!ed/746/1D0B/A290/63d8f17d11f"/>
+															</pragmas>
+														</Action>
+													</then>
+													<else>
+														<Action>
+															<pragmas>
+																<ed:Action oid="!ed/745/1D0B/A290/63d8f17d495a"/>
+															</pragmas>
+														</Action>
+													</else>
+													<pragmas>
+														<ed:IfNode oid="!ed/744/1D0B/A290/63d8f17d3cd5"/>
+													</pragmas>
+												</IfNode>
+											</else>
+											<pragmas>
+												<ed:IfNode oid="!ed/743/1D0B/A290/63d8f17d1205"/>
+											</pragmas>
+										</IfNode>
+									</else>
+									<pragmas>
+										<ed:IfNode oid="!ed/742/1D0B/A290/63d8f17d1f84"/>
+									</pragmas>
+								</IfNode>
+							</block>
+							<pragmas>
+								<ed:IfBlock oid="!ed/741/1D0B/A290/63d8f17d27de"/>
+							</pragmas>
+						</IfBlock>
+						<WhenBlock name="WhenBlock1">
+							<when>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="i"/>
+									</path>
+								</IdExpression>
+							</when>
+							<matches>
+								<Match pattern="a">
+									<pragmas>
+										<ed:Match oid="!ed/74c/1D0B/A290/63d8f17de2c"/>
+										<ed:Action oid="!ed/74d/1D0B/A290/63d8f17d5ff0"/>
+									</pragmas>
+								</Match>
+								<Match pattern="b">
+									<pragmas>
+										<ed:Match oid="!ed/74e/1D0B/A290/63d8f17d1809"/>
+										<ed:Action oid="!ed/74f/1D0B/A290/63d8f17d3102"/>
+									</pragmas>
+								</Match>
+								<Match pattern="c">
+									<pragmas>
+										<ed:Match oid="!ed/750/1D0B/A290/63d8f17d5f7"/>
+										<ed:Action oid="!ed/751/1D0B/A290/63d8f17d3c67"/>
+									</pragmas>
+								</Match>
+							</matches>
+							<pragmas>
+								<ed:WhenBlock oid="!ed/74b/1D0B/A290/63d8f17d171e"/>
+							</pragmas>
+						</WhenBlock>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/740/1D0B/A290/63d8f17d2d32" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Graphical" landscape="true" format="A4 (210 297)" oid="!ed/763/1D0B/A290/63d8f17d4857">
+									<presentationElements>
+										<IfBlockGE presentable="!ed/741/1D0B/A290/63d8f17d27de">
+											<position>
+												<Point x="661" y="609"/>
+											</position>
+											<size>
+												<Size width="10530" height="8519"/>
+											</size>
+										</IfBlockGE>
+										<ActionGE presentable="!ed/74a/1D0B/A290/63d8f17d6206">
+											<position>
+												<Point x="6006" y="1085"/>
+											</position>
+											<size>
+												<Size width="4709" height="1006"/>
+											</size>
+										</ActionGE>
+										<ActionGE presentable="!ed/746/1D0B/A290/63d8f17d11f">
+											<position>
+												<Point x="2487" y="6006"/>
+											</position>
+											<size>
+												<Size width="4709" height="1006"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/742/1D0B/A290/63d8f17d1f84">
+											<position>
+												<Point x="1111" y="1164"/>
+											</position>
+										</IfNodeGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/748/1D0B/A290/63d8f17d6c48">
+											<position>
+												<Point x="3360" y="1164"/>
+											</position>
+										</IfNodeGE>
+										<ActionGE presentable="!ed/749/1D0B/A290/63d8f17d5be8">
+											<position>
+												<Point x="6006" y="2725"/>
+											</position>
+											<size>
+												<Size width="4710" height="1006"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/743/1D0B/A290/63d8f17d1205">
+											<position>
+												<Point x="1111" y="4445"/>
+											</position>
+										</IfNodeGE>
+										<ActionGE presentable="!ed/747/1D0B/A290/63d8f17d753f">
+											<position>
+												<Point x="2487" y="4366"/>
+											</position>
+											<size>
+												<Size width="4710" height="1006"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/744/1D0B/A290/63d8f17d3cd5">
+											<position>
+												<Point x="1111" y="6085"/>
+											</position>
+										</IfNodeGE>
+										<ActionGE presentable="!ed/745/1D0B/A290/63d8f17d495a">
+											<position>
+												<Point x="2487" y="7646"/>
+											</position>
+											<size>
+												<Size width="4709" height="1006"/>
+											</size>
+										</ActionGE>
+										<WhenBlockGE labelWidth="212" presentable="!ed/74b/1D0B/A290/63d8f17d171e">
+											<position>
+												<Point x="11853" y="609"/>
+											</position>
+											<size>
+												<Size width="6799" height="6270"/>
+											</size>
+											<startPos>
+												<Point x="450" y="582"/>
+											</startPos>
+										</WhenBlockGE>
+										<WhenBranchGE labelWidth="794" presentable="!ed/74c/1D0B/A290/63d8f17de2c">
+											<position>
+												<Point x="12383" y="2223"/>
+											</position>
+										</WhenBranchGE>
+										<ActionGE presentable="!ed/74d/1D0B/A290/63d8f17d5ff0">
+											<position>
+												<Point x="13653" y="2143"/>
+											</position>
+											<size>
+												<Size width="4709" height="1191"/>
+											</size>
+										</ActionGE>
+										<WhenBranchGE labelWidth="794" presentable="!ed/74e/1D0B/A290/63d8f17d1809">
+											<position>
+												<Point x="12383" y="3784"/>
+											</position>
+										</WhenBranchGE>
+										<ActionGE presentable="!ed/74f/1D0B/A290/63d8f17d3102">
+											<position>
+												<Point x="13653" y="3704"/>
+											</position>
+											<size>
+												<Size width="4709" height="1191"/>
+											</size>
+										</ActionGE>
+										<WhenBranchGE labelWidth="794" presentable="!ed/750/1D0B/A290/63d8f17d5f7">
+											<position>
+												<Point x="12383" y="5345"/>
+											</position>
+										</WhenBranchGE>
+										<ActionGE presentable="!ed/751/1D0B/A290/63d8f17d3c67">
+											<position>
+												<Point x="13653" y="5265"/>
+											</position>
+											<size>
+												<Size width="4709" height="1190"/>
+											</size>
+										</ActionGE>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/14/51EF/DD1C/62680b505ab2" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/15/51EF/DD1C/62680b506c4a" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/16/51EF/DD1C/62680b50939" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/17/51EF/DD1C/62680b5056b7" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="function" name="Operator1">
+	<locals>
+		<Variable name="_L1">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="Type1"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/441/313F/2B8C/5fd0d51d42a9"/>
+			</pragmas>
+		</Variable>
+		<Variable name="_L2">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="Type2"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/443/313F/2B8C/5fd0d51d3daa"/>
+			</pragmas>
+		</Variable>
+	</locals>
+	<data>
+		<!-- _L1 = Constant1; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="_L1"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="Constant1"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/440/313F/2B8C/5fd0d51d589d"/>
+			</pragmas>
+		</Equation>
+		<!-- _L2 = Constant2; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="_L2"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="Constant2"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/442/313F/2B8C/5fd0d51d1414"/>
+			</pragmas>
+		</Equation>
+		<!-- _ = _L1; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="_"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="_L1"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/449/313F/2B8C/5fd0d5217b52"/>
+			</pragmas>
+		</Equation>
+		<!-- _ = _L2; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="_"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="_L2"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/44f/313F/2B8C/5fd0d52e43b4"/>
+			</pragmas>
+		</Equation>
+	</data>
+	<pragmas>
+		<ed:Operator oid="!ed/415/313F/2B8C/5fd0d4b24ff6" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+			<diagrams>
+				<NetDiagram name="Operator1_1" landscape="true" format="A4 (210 297)" oid="!ed/416/313F/2B8C/5fd0d4b267f1">
+					<presentationElements>
+						<EquationGE kind="OBJ_LIT" presentable="!ed/440/313F/2B8C/5fd0d51d589d">
+							<position>
+								<Point x="6112" y="3307"/>
+							</position>
+							<size>
+								<Size width="212" height="318"/>
+							</size>
+						</EquationGE>
+						<EquationGE kind="OBJ_LIT" presentable="!ed/442/313F/2B8C/5fd0d51d1414">
+							<position>
+								<Point x="6112" y="4260"/>
+							</position>
+							<size>
+								<Size width="212" height="317"/>
+							</size>
+						</EquationGE>
+						<EquationGE presentable="!ed/449/313F/2B8C/5fd0d5217b52">
+							<position>
+								<Point x="8440" y="3096"/>
+							</position>
+							<size>
+								<Size width="503" height="502"/>
+							</size>
+						</EquationGE>
+						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/440/313F/2B8C/5fd0d51d589d" dstEquation="!ed/449/313F/2B8C/5fd0d5217b52">
+							<positions>
+								<Point x="6324" y="3466"/>
+								<Point x="7514" y="3466"/>
+								<Point x="7514" y="3360"/>
+								<Point x="8705" y="3360"/>
+							</positions>
+						</Edge>
+						<EquationGE presentable="!ed/44f/313F/2B8C/5fd0d52e43b4">
+							<position>
+								<Point x="8493" y="4233"/>
+							</position>
+							<size>
+								<Size width="503" height="503"/>
+							</size>
+						</EquationGE>
+						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/442/313F/2B8C/5fd0d51d1414" dstEquation="!ed/44f/313F/2B8C/5fd0d52e43b4">
+							<positions>
+								<Point x="6324" y="4419"/>
+								<Point x="7541" y="4419"/>
+								<Point x="7541" y="4498"/>
+								<Point x="8758" y="4498"/>
+							</positions>
+						</Edge>
+					</presentationElements>
+				</NetDiagram>
+			</diagrams>
+			<references>
+				<ConstVarRef path="Constant1" refOid="!ed/419/313F/2B8C/5fd0d4c16ad3"/>
+				<ConstVarRef path="Constant2" refOid="!ed/41a/313F/2B8C/5fd0d4c218f6"/>
+			</references>
+		</ed:Operator>
+	</pragmas>
+</Operator>

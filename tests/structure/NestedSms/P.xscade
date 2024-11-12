@@ -1,0 +1,1418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="P">
+			<declarations>
+				<Operator kind="node" name="SmET">
+					<data>
+						<StateMachine name="SM1">
+							<states>
+								<State initial="true" name="State1">
+									<data>
+										<IfBlock name="IB1">
+											<block>
+												<IfNode>
+													<if>
+														<ConstValue value="true"/>
+													</if>
+													<then>
+														<IfNode>
+															<if>
+																<ConstValue value="true"/>
+															</if>
+															<then>
+																<Action>
+																	<pragmas>
+																		<ed:Action oid="!ed/367/6EA2/8C60/65ae91db66fa"/>
+																	</pragmas>
+																</Action>
+															</then>
+															<else>
+																<Action>
+																	<pragmas>
+																		<ed:Action oid="!ed/35e/6EA2/8C60/65ae91db1517"/>
+																	</pragmas>
+																</Action>
+															</else>
+															<pragmas>
+																<ed:IfNode oid="!ed/35d/6EA2/8C60/65ae91db2cde"/>
+															</pragmas>
+														</IfNode>
+													</then>
+													<else>
+														<IfNode>
+															<if>
+																<ConstValue value="true"/>
+															</if>
+															<then>
+																<Action>
+																	<data>
+																		<StateMachine name="SM2">
+																			<states>
+																				<State initial="true" name="State2">
+																					<data>
+																						<WhenBlock name="WB1">
+																							<when>
+																								<ConstValue value="true"/>
+																							</when>
+																							<matches>
+																								<Match pattern="true">
+																									<data>
+																										<StateMachine name="SM3">
+																											<states>
+																												<State initial="true" name="State3">
+																													<pragmas>
+																														<ed:State oid="!ed/38d/6EA2/8C60/65ae91ea7fed"/>
+																													</pragmas>
+																												</State>
+																											</states>
+																											<pragmas>
+																												<ed:StateMachine oid="!ed/38c/6EA2/8C60/65ae91ea6449"/>
+																											</pragmas>
+																										</StateMachine>
+																									</data>
+																									<pragmas>
+																										<ed:Match oid="!ed/38a/6EA2/8C60/65ae91ea3d3c"/>
+																										<ed:Action oid="!ed/38b/6EA2/8C60/65ae91ea4651"/>
+																									</pragmas>
+																								</Match>
+																							</matches>
+																							<pragmas>
+																								<ed:WhenBlock oid="!ed/389/6EA2/8C60/65ae91ea4ef5"/>
+																							</pragmas>
+																						</WhenBlock>
+																					</data>
+																					<pragmas>
+																						<ed:State oid="!ed/388/6EA2/8C60/65ae91ea6e68" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+																							<diagrams>
+																								<NetDiagram name="State2" landscape="true" format="A4 (210 297)" oid="!ed/38e/6EA2/8C60/65ae91ea28ca">
+																									<presentationElements>
+																										<WhenBlockGE presentable="!ed/389/6EA2/8C60/65ae91ea4ef5">
+																											<position>
+																												<Point x="1111" y="820"/>
+																											</position>
+																											<size>
+																												<Size width="8467" height="7144"/>
+																											</size>
+																											<startPos>
+																												<Point x="450" y="582"/>
+																											</startPos>
+																										</WhenBlockGE>
+																										<WhenBranchGE labelWidth="794" presentable="!ed/38a/6EA2/8C60/65ae91ea3d3c">
+																											<position>
+																												<Point x="1640" y="2434"/>
+																											</position>
+																										</WhenBranchGE>
+																										<ActionGE presentable="!ed/38b/6EA2/8C60/65ae91ea4651">
+																											<position>
+																												<Point x="2910" y="2355"/>
+																											</position>
+																											<size>
+																												<Size width="5874" height="4974"/>
+																											</size>
+																										</ActionGE>
+																										<StateMachineGE presentable="!ed/38c/6EA2/8C60/65ae91ea6449">
+																											<position>
+																												<Point x="3228" y="2778"/>
+																											</position>
+																											<size>
+																												<Size width="5239" height="4128"/>
+																											</size>
+																										</StateMachineGE>
+																										<StateGE presentable="!ed/38d/6EA2/8C60/65ae91ea7fed">
+																											<position>
+																												<Point x="3493" y="3043"/>
+																											</position>
+																											<size>
+																												<Size width="4710" height="3598"/>
+																											</size>
+																										</StateGE>
+																									</presentationElements>
+																								</NetDiagram>
+																							</diagrams>
+																						</ed:State>
+																					</pragmas>
+																				</State>
+																			</states>
+																			<pragmas>
+																				<ed:StateMachine oid="!ed/387/6EA2/8C60/65ae91ea12de"/>
+																			</pragmas>
+																		</StateMachine>
+																	</data>
+																	<pragmas>
+																		<ed:Action oid="!ed/35c/6EA2/8C60/65ae91db5200"/>
+																	</pragmas>
+																</Action>
+															</then>
+															<else>
+																<Action>
+																	<data>
+																		<StateMachine name="SM4">
+																			<states>
+																				<State initial="true" name="State4">
+																					<data>
+																						<WhenBlock name="WB1">
+																							<when>
+																								<ConstValue value="true"/>
+																							</when>
+																							<matches>
+																								<Match pattern="true">
+																									<pragmas>
+																										<ed:Match oid="!ed/66a/6EA2/8C60/65ae9dfc475b"/>
+																										<ed:Action oid="!ed/66b/6EA2/8C60/65ae9dfcf6a"/>
+																									</pragmas>
+																								</Match>
+																							</matches>
+																							<pragmas>
+																								<ed:WhenBlock oid="!ed/669/6EA2/8C60/65ae9dfc5ec8"/>
+																							</pragmas>
+																						</WhenBlock>
+																					</data>
+																					<pragmas>
+																						<ed:State oid="!ed/668/6EA2/8C60/65ae9dfcca7" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+																							<diagrams>
+																								<NetDiagram name="State4" landscape="true" format="A4 (210 297)" oid="!ed/66c/6EA2/8C60/65ae9dfc15d4">
+																									<presentationElements>
+																										<WhenBlockGE presentable="!ed/669/6EA2/8C60/65ae9dfc5ec8">
+																											<position>
+																												<Point x="1111" y="820"/>
+																											</position>
+																											<size>
+																												<Size width="8467" height="7144"/>
+																											</size>
+																											<startPos>
+																												<Point x="450" y="582"/>
+																											</startPos>
+																										</WhenBlockGE>
+																										<WhenBranchGE labelWidth="794" presentable="!ed/66a/6EA2/8C60/65ae9dfc475b">
+																											<position>
+																												<Point x="1640" y="2434"/>
+																											</position>
+																										</WhenBranchGE>
+																										<ActionGE presentable="!ed/66b/6EA2/8C60/65ae9dfcf6a">
+																											<position>
+																												<Point x="2910" y="2355"/>
+																											</position>
+																											<size>
+																												<Size width="5874" height="4974"/>
+																											</size>
+																										</ActionGE>
+																									</presentationElements>
+																								</NetDiagram>
+																							</diagrams>
+																						</ed:State>
+																					</pragmas>
+																				</State>
+																			</states>
+																			<pragmas>
+																				<ed:StateMachine oid="!ed/667/6EA2/8C60/65ae9dfc7d33"/>
+																			</pragmas>
+																		</StateMachine>
+																	</data>
+																	<pragmas>
+																		<ed:Action oid="!ed/35b/6EA2/8C60/65ae91db7047"/>
+																	</pragmas>
+																</Action>
+															</else>
+															<pragmas>
+																<ed:IfNode oid="!ed/35a/6EA2/8C60/65ae91db638e"/>
+															</pragmas>
+														</IfNode>
+													</else>
+													<pragmas>
+														<ed:IfNode oid="!ed/359/6EA2/8C60/65ae91db39f"/>
+													</pragmas>
+												</IfNode>
+											</block>
+											<pragmas>
+												<ed:IfBlock oid="!ed/358/6EA2/8C60/65ae91db644e"/>
+											</pragmas>
+										</IfBlock>
+									</data>
+									<pragmas>
+										<ed:State oid="!ed/357/6EA2/8C60/65ae91db2b2f"/>
+									</pragmas>
+								</State>
+							</states>
+							<pragmas>
+								<ed:StateMachine oid="!ed/356/6EA2/8C60/65ae91db5839"/>
+							</pragmas>
+						</StateMachine>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/355/6EA2/8C60/65ae91db3846" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="SmET" landscape="true" format="A4 (210 297)" oid="!ed/368/6EA2/8C60/65ae91db3288">
+									<presentationElements>
+										<StateMachineGE presentable="!ed/356/6EA2/8C60/65ae91db5839">
+											<position>
+												<Point x="1111" y="820"/>
+											</position>
+											<size>
+												<Size width="24051" height="16272"/>
+											</size>
+										</StateMachineGE>
+										<StateGE presentable="!ed/357/6EA2/8C60/65ae91db2b2f">
+											<position>
+												<Point x="2249" y="1826"/>
+											</position>
+											<size>
+												<Size width="21801" height="14235"/>
+											</size>
+										</StateGE>
+										<IfBlockGE presentable="!ed/358/6EA2/8C60/65ae91db644e">
+											<position>
+												<Point x="2619" y="2619"/>
+											</position>
+											<size>
+												<Size width="20981" height="13044"/>
+											</size>
+										</IfBlockGE>
+										<ActionGE presentable="!ed/367/6EA2/8C60/65ae91db66fa">
+											<position>
+												<Point x="14288" y="3122"/>
+											</position>
+											<size>
+												<Size width="7356" height="4603"/>
+											</size>
+										</ActionGE>
+										<ActionGE presentable="!ed/35b/6EA2/8C60/65ae91db7047">
+											<position>
+												<Point x="4445" y="10583"/>
+											</position>
+											<size>
+												<Size width="7355" height="4604"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/359/6EA2/8C60/65ae91db39f">
+											<position>
+												<Point x="3069" y="3201"/>
+											</position>
+										</IfNodeGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/35d/6EA2/8C60/65ae91db2cde">
+											<position>
+												<Point x="12197" y="3201"/>
+											</position>
+										</IfNodeGE>
+										<ActionGE presentable="!ed/35e/6EA2/8C60/65ae91db1517">
+											<position>
+												<Point x="14288" y="9843"/>
+											</position>
+											<size>
+												<Size width="7356" height="4604"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/35a/6EA2/8C60/65ae91db638e">
+											<position>
+												<Point x="3069" y="5477"/>
+											</position>
+										</IfNodeGE>
+										<ActionGE presentable="!ed/35c/6EA2/8C60/65ae91db5200">
+											<position>
+												<Point x="4445" y="5398"/>
+											</position>
+											<size>
+												<Size width="7355" height="4604"/>
+											</size>
+										</ActionGE>
+										<StateMachineGE presentable="!ed/387/6EA2/8C60/65ae91ea12de">
+											<position>
+												<Point x="4789" y="5689"/>
+											</position>
+											<size>
+												<Size width="6668" height="4128"/>
+											</size>
+										</StateMachineGE>
+										<StateGE display="split" presentable="!ed/388/6EA2/8C60/65ae91ea6e68">
+											<position>
+												<Point x="5768" y="5953"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+										<StateMachineGE presentable="!ed/667/6EA2/8C60/65ae9dfc7d33">
+											<position>
+												<Point x="4789" y="10821"/>
+											</position>
+											<size>
+												<Size width="6668" height="4128"/>
+											</size>
+										</StateMachineGE>
+										<StateGE display="split" presentable="!ed/668/6EA2/8C60/65ae9dfcca7">
+											<position>
+												<Point x="5768" y="11086"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="SmEE">
+					<data>
+						<StateMachine name="SM1">
+							<states>
+								<State initial="true" name="State1">
+									<data>
+										<IfBlock name="IB1">
+											<block>
+												<IfNode>
+													<if>
+														<ConstValue value="true"/>
+													</if>
+													<then>
+														<IfNode>
+															<if>
+																<ConstValue value="true"/>
+															</if>
+															<then>
+																<Action>
+																	<data>
+																		<StateMachine name="SM4">
+																			<states>
+																				<State initial="true" name="State4">
+																					<data>
+																						<WhenBlock name="WB1">
+																							<when>
+																								<ConstValue value="true"/>
+																							</when>
+																							<matches>
+																								<Match pattern="true">
+																									<pragmas>
+																										<ed:Match oid="!ed/626/6EA2/8C60/65ae9c9e602b"/>
+																										<ed:Action oid="!ed/627/6EA2/8C60/65ae9c9e187d"/>
+																									</pragmas>
+																								</Match>
+																							</matches>
+																							<pragmas>
+																								<ed:WhenBlock oid="!ed/625/6EA2/8C60/65ae9c9eb58"/>
+																							</pragmas>
+																						</WhenBlock>
+																					</data>
+																					<pragmas>
+																						<ed:State oid="!ed/624/6EA2/8C60/65ae9c9e19da" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+																							<diagrams>
+																								<NetDiagram name="State4" landscape="true" format="A4 (210 297)" oid="!ed/62a/6EA2/8C60/65ae9c9e46fa">
+																									<presentationElements>
+																										<WhenBlockGE presentable="!ed/625/6EA2/8C60/65ae9c9eb58">
+																											<position>
+																												<Point x="1111" y="820"/>
+																											</position>
+																											<size>
+																												<Size width="8467" height="7144"/>
+																											</size>
+																											<startPos>
+																												<Point x="450" y="582"/>
+																											</startPos>
+																										</WhenBlockGE>
+																										<WhenBranchGE labelWidth="794" presentable="!ed/626/6EA2/8C60/65ae9c9e602b">
+																											<position>
+																												<Point x="1640" y="2434"/>
+																											</position>
+																										</WhenBranchGE>
+																										<ActionGE presentable="!ed/627/6EA2/8C60/65ae9c9e187d">
+																											<position>
+																												<Point x="2910" y="2355"/>
+																											</position>
+																											<size>
+																												<Size width="5874" height="4974"/>
+																											</size>
+																										</ActionGE>
+																									</presentationElements>
+																								</NetDiagram>
+																							</diagrams>
+																						</ed:State>
+																					</pragmas>
+																				</State>
+																			</states>
+																			<pragmas>
+																				<ed:StateMachine oid="!ed/623/6EA2/8C60/65ae9c9e191d"/>
+																			</pragmas>
+																		</StateMachine>
+																	</data>
+																	<pragmas>
+																		<ed:Action oid="!ed/3eb/6EA2/8C60/65ae92027f1"/>
+																	</pragmas>
+																</Action>
+															</then>
+															<else>
+																<Action>
+																	<pragmas>
+																		<ed:Action oid="!ed/3ea/6EA2/8C60/65ae92021980"/>
+																	</pragmas>
+																</Action>
+															</else>
+															<pragmas>
+																<ed:IfNode oid="!ed/3e9/6EA2/8C60/65ae92027a5a"/>
+															</pragmas>
+														</IfNode>
+													</then>
+													<else>
+														<IfNode>
+															<if>
+																<ConstValue value="true"/>
+															</if>
+															<then>
+																<Action>
+																	<pragmas>
+																		<ed:Action oid="!ed/3e0/6EA2/8C60/65ae920222fc"/>
+																	</pragmas>
+																</Action>
+															</then>
+															<else>
+																<Action>
+																	<data>
+																		<StateMachine name="SM2">
+																			<states>
+																				<State initial="true" name="State2">
+																					<data>
+																						<WhenBlock name="WB1">
+																							<when>
+																								<ConstValue value="true"/>
+																							</when>
+																							<matches>
+																								<Match pattern="true">
+																									<data>
+																										<StateMachine name="SM3">
+																											<states>
+																												<State initial="true" name="State3">
+																													<pragmas>
+																														<ed:State oid="!ed/4b8/6EA2/8C60/65ae95186f1a"/>
+																													</pragmas>
+																												</State>
+																											</states>
+																											<pragmas>
+																												<ed:StateMachine oid="!ed/4b7/6EA2/8C60/65ae95183a7d"/>
+																											</pragmas>
+																										</StateMachine>
+																									</data>
+																									<pragmas>
+																										<ed:Match oid="!ed/4b5/6EA2/8C60/65ae951858f3"/>
+																										<ed:Action oid="!ed/4b6/6EA2/8C60/65ae95186890"/>
+																									</pragmas>
+																								</Match>
+																							</matches>
+																							<pragmas>
+																								<ed:WhenBlock oid="!ed/4b4/6EA2/8C60/65ae951824a2"/>
+																							</pragmas>
+																						</WhenBlock>
+																					</data>
+																					<pragmas>
+																						<ed:State oid="!ed/4b3/6EA2/8C60/65ae9518638f" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+																							<diagrams>
+																								<NetDiagram name="State2" landscape="true" format="A4 (210 297)" oid="!ed/4b9/6EA2/8C60/65ae9518c02">
+																									<presentationElements>
+																										<WhenBlockGE presentable="!ed/4b4/6EA2/8C60/65ae951824a2">
+																											<position>
+																												<Point x="1111" y="820"/>
+																											</position>
+																											<size>
+																												<Size width="8467" height="7144"/>
+																											</size>
+																											<startPos>
+																												<Point x="450" y="582"/>
+																											</startPos>
+																										</WhenBlockGE>
+																										<WhenBranchGE labelWidth="794" presentable="!ed/4b5/6EA2/8C60/65ae951858f3">
+																											<position>
+																												<Point x="1640" y="2434"/>
+																											</position>
+																										</WhenBranchGE>
+																										<ActionGE presentable="!ed/4b6/6EA2/8C60/65ae95186890">
+																											<position>
+																												<Point x="2910" y="2355"/>
+																											</position>
+																											<size>
+																												<Size width="5874" height="4974"/>
+																											</size>
+																										</ActionGE>
+																										<StateMachineGE presentable="!ed/4b7/6EA2/8C60/65ae95183a7d">
+																											<position>
+																												<Point x="3228" y="2778"/>
+																											</position>
+																											<size>
+																												<Size width="5239" height="4128"/>
+																											</size>
+																										</StateMachineGE>
+																										<StateGE presentable="!ed/4b8/6EA2/8C60/65ae95186f1a">
+																											<position>
+																												<Point x="3493" y="3043"/>
+																											</position>
+																											<size>
+																												<Size width="4710" height="3598"/>
+																											</size>
+																										</StateGE>
+																									</presentationElements>
+																								</NetDiagram>
+																							</diagrams>
+																						</ed:State>
+																					</pragmas>
+																				</State>
+																			</states>
+																			<pragmas>
+																				<ed:StateMachine oid="!ed/4b2/6EA2/8C60/65ae95183dc3"/>
+																			</pragmas>
+																		</StateMachine>
+																	</data>
+																	<pragmas>
+																		<ed:Action oid="!ed/3df/6EA2/8C60/65ae920230e2"/>
+																	</pragmas>
+																</Action>
+															</else>
+															<pragmas>
+																<ed:IfNode oid="!ed/3de/6EA2/8C60/65ae92025c55"/>
+															</pragmas>
+														</IfNode>
+													</else>
+													<pragmas>
+														<ed:IfNode oid="!ed/3dd/6EA2/8C60/65ae92025a9b"/>
+													</pragmas>
+												</IfNode>
+											</block>
+											<pragmas>
+												<ed:IfBlock oid="!ed/3dc/6EA2/8C60/65ae920275a2"/>
+											</pragmas>
+										</IfBlock>
+									</data>
+									<pragmas>
+										<ed:State oid="!ed/3db/6EA2/8C60/65ae92021e50"/>
+									</pragmas>
+								</State>
+							</states>
+							<pragmas>
+								<ed:StateMachine oid="!ed/3da/6EA2/8C60/65ae920260d6"/>
+							</pragmas>
+						</StateMachine>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/3d9/6EA2/8C60/65ae92025df9" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="SmEE" landscape="true" format="A4 (210 297)" oid="!ed/3ec/6EA2/8C60/65ae920246e4">
+									<presentationElements>
+										<StateMachineGE presentable="!ed/3da/6EA2/8C60/65ae920260d6">
+											<position>
+												<Point x="1111" y="820"/>
+											</position>
+											<size>
+												<Size width="24051" height="16272"/>
+											</size>
+										</StateMachineGE>
+										<StateGE presentable="!ed/3db/6EA2/8C60/65ae92021e50">
+											<position>
+												<Point x="2223" y="1826"/>
+											</position>
+											<size>
+												<Size width="21801" height="14235"/>
+											</size>
+										</StateGE>
+										<IfBlockGE presentable="!ed/3dc/6EA2/8C60/65ae920275a2">
+											<position>
+												<Point x="2593" y="2619"/>
+											</position>
+											<size>
+												<Size width="20981" height="13044"/>
+											</size>
+										</IfBlockGE>
+										<ActionGE presentable="!ed/3eb/6EA2/8C60/65ae92027f1">
+											<position>
+												<Point x="14261" y="3122"/>
+											</position>
+											<size>
+												<Size width="7356" height="4603"/>
+											</size>
+										</ActionGE>
+										<ActionGE presentable="!ed/3df/6EA2/8C60/65ae920230e2">
+											<position>
+												<Point x="4419" y="10583"/>
+											</position>
+											<size>
+												<Size width="7355" height="4604"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/3dd/6EA2/8C60/65ae92025a9b">
+											<position>
+												<Point x="3043" y="3201"/>
+											</position>
+										</IfNodeGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/3e9/6EA2/8C60/65ae92027a5a">
+											<position>
+												<Point x="12171" y="3201"/>
+											</position>
+										</IfNodeGE>
+										<ActionGE presentable="!ed/3ea/6EA2/8C60/65ae92021980">
+											<position>
+												<Point x="14261" y="9843"/>
+											</position>
+											<size>
+												<Size width="7356" height="4604"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/3de/6EA2/8C60/65ae92025c55">
+											<position>
+												<Point x="3043" y="5477"/>
+											</position>
+										</IfNodeGE>
+										<ActionGE presentable="!ed/3e0/6EA2/8C60/65ae920222fc">
+											<position>
+												<Point x="4419" y="5398"/>
+											</position>
+											<size>
+												<Size width="7355" height="4604"/>
+											</size>
+										</ActionGE>
+										<StateMachineGE presentable="!ed/4b2/6EA2/8C60/65ae95183dc3">
+											<position>
+												<Point x="4763" y="10821"/>
+											</position>
+											<size>
+												<Size width="6668" height="4128"/>
+											</size>
+										</StateMachineGE>
+										<StateGE display="split" presentable="!ed/4b3/6EA2/8C60/65ae9518638f">
+											<position>
+												<Point x="5741" y="11086"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+										<StateMachineGE presentable="!ed/623/6EA2/8C60/65ae9c9e191d">
+											<position>
+												<Point x="14605" y="3360"/>
+											</position>
+											<size>
+												<Size width="6668" height="4128"/>
+											</size>
+										</StateMachineGE>
+										<StateGE display="split" presentable="!ed/624/6EA2/8C60/65ae9c9e19da">
+											<position>
+												<Point x="15584" y="3625"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="SmTT">
+					<data>
+						<StateMachine name="SM1">
+							<states>
+								<State initial="true" name="State1">
+									<data>
+										<IfBlock name="IB1">
+											<block>
+												<IfNode>
+													<if>
+														<ConstValue value="true"/>
+													</if>
+													<then>
+														<IfNode>
+															<if>
+																<ConstValue value="true"/>
+															</if>
+															<then>
+																<Action>
+																	<data>
+																		<StateMachine name="SM2">
+																			<states>
+																				<State initial="true" name="State2">
+																					<data>
+																						<WhenBlock name="WB1">
+																							<when>
+																								<ConstValue value="true"/>
+																							</when>
+																							<matches>
+																								<Match pattern="true">
+																									<data>
+																										<StateMachine name="SM3">
+																											<states>
+																												<State initial="true" name="State3">
+																													<pragmas>
+																														<ed:State oid="!ed/53c/6EA2/8C60/65ae9582751a"/>
+																													</pragmas>
+																												</State>
+																											</states>
+																											<pragmas>
+																												<ed:StateMachine oid="!ed/53b/6EA2/8C60/65ae95826dc0"/>
+																											</pragmas>
+																										</StateMachine>
+																									</data>
+																									<pragmas>
+																										<ed:Match oid="!ed/539/6EA2/8C60/65ae95824adf"/>
+																										<ed:Action oid="!ed/53a/6EA2/8C60/65ae95821e38"/>
+																									</pragmas>
+																								</Match>
+																							</matches>
+																							<pragmas>
+																								<ed:WhenBlock oid="!ed/538/6EA2/8C60/65ae95821572"/>
+																							</pragmas>
+																						</WhenBlock>
+																					</data>
+																					<pragmas>
+																						<ed:State oid="!ed/537/6EA2/8C60/65ae95824f86" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+																							<diagrams>
+																								<NetDiagram name="State2" landscape="true" format="A4 (210 297)" oid="!ed/53d/6EA2/8C60/65ae9582452a">
+																									<presentationElements>
+																										<WhenBlockGE presentable="!ed/538/6EA2/8C60/65ae95821572">
+																											<position>
+																												<Point x="1111" y="820"/>
+																											</position>
+																											<size>
+																												<Size width="8467" height="7144"/>
+																											</size>
+																											<startPos>
+																												<Point x="450" y="582"/>
+																											</startPos>
+																										</WhenBlockGE>
+																										<WhenBranchGE labelWidth="794" presentable="!ed/539/6EA2/8C60/65ae95824adf">
+																											<position>
+																												<Point x="1640" y="2434"/>
+																											</position>
+																										</WhenBranchGE>
+																										<ActionGE presentable="!ed/53a/6EA2/8C60/65ae95821e38">
+																											<position>
+																												<Point x="2910" y="2355"/>
+																											</position>
+																											<size>
+																												<Size width="5874" height="4974"/>
+																											</size>
+																										</ActionGE>
+																										<StateMachineGE presentable="!ed/53b/6EA2/8C60/65ae95826dc0">
+																											<position>
+																												<Point x="3228" y="2778"/>
+																											</position>
+																											<size>
+																												<Size width="5239" height="4128"/>
+																											</size>
+																										</StateMachineGE>
+																										<StateGE presentable="!ed/53c/6EA2/8C60/65ae9582751a">
+																											<position>
+																												<Point x="3493" y="3043"/>
+																											</position>
+																											<size>
+																												<Size width="4710" height="3598"/>
+																											</size>
+																										</StateGE>
+																									</presentationElements>
+																								</NetDiagram>
+																							</diagrams>
+																						</ed:State>
+																					</pragmas>
+																				</State>
+																			</states>
+																			<pragmas>
+																				<ed:StateMachine oid="!ed/536/6EA2/8C60/65ae958260dc"/>
+																			</pragmas>
+																		</StateMachine>
+																	</data>
+																	<pragmas>
+																		<ed:Action oid="!ed/511/6EA2/8C60/65ae956161dd"/>
+																	</pragmas>
+																</Action>
+															</then>
+															<else>
+																<Action>
+																	<pragmas>
+																		<ed:Action oid="!ed/510/6EA2/8C60/65ae95612fd1"/>
+																	</pragmas>
+																</Action>
+															</else>
+															<pragmas>
+																<ed:IfNode oid="!ed/50f/6EA2/8C60/65ae956166f2"/>
+															</pragmas>
+														</IfNode>
+													</then>
+													<else>
+														<IfNode>
+															<if>
+																<ConstValue value="true"/>
+															</if>
+															<then>
+																<Action>
+																	<data>
+																		<StateMachine name="SM4">
+																			<states>
+																				<State initial="true" name="State4">
+																					<data>
+																						<WhenBlock name="WB1">
+																							<when>
+																								<ConstValue value="true"/>
+																							</when>
+																							<matches>
+																								<Match pattern="true">
+																									<pragmas>
+																										<ed:Match oid="!ed/68e/6EA2/8C60/65ae9e0b3968"/>
+																										<ed:Action oid="!ed/68f/6EA2/8C60/65ae9e0b3b8"/>
+																									</pragmas>
+																								</Match>
+																							</matches>
+																							<pragmas>
+																								<ed:WhenBlock oid="!ed/68d/6EA2/8C60/65ae9e0b330d"/>
+																							</pragmas>
+																						</WhenBlock>
+																					</data>
+																					<pragmas>
+																						<ed:State oid="!ed/68c/6EA2/8C60/65ae9e0b2f3f" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+																							<diagrams>
+																								<NetDiagram name="State4" landscape="true" format="A4 (210 297)" oid="!ed/690/6EA2/8C60/65ae9e0b1494">
+																									<presentationElements>
+																										<WhenBlockGE presentable="!ed/68d/6EA2/8C60/65ae9e0b330d">
+																											<position>
+																												<Point x="1111" y="820"/>
+																											</position>
+																											<size>
+																												<Size width="8467" height="7144"/>
+																											</size>
+																											<startPos>
+																												<Point x="450" y="582"/>
+																											</startPos>
+																										</WhenBlockGE>
+																										<WhenBranchGE labelWidth="794" presentable="!ed/68e/6EA2/8C60/65ae9e0b3968">
+																											<position>
+																												<Point x="1640" y="2434"/>
+																											</position>
+																										</WhenBranchGE>
+																										<ActionGE presentable="!ed/68f/6EA2/8C60/65ae9e0b3b8">
+																											<position>
+																												<Point x="2910" y="2355"/>
+																											</position>
+																											<size>
+																												<Size width="5874" height="4974"/>
+																											</size>
+																										</ActionGE>
+																									</presentationElements>
+																								</NetDiagram>
+																							</diagrams>
+																						</ed:State>
+																					</pragmas>
+																				</State>
+																			</states>
+																			<pragmas>
+																				<ed:StateMachine oid="!ed/68b/6EA2/8C60/65ae9e0b7ca9"/>
+																			</pragmas>
+																		</StateMachine>
+																	</data>
+																	<pragmas>
+																		<ed:Action oid="!ed/50e/6EA2/8C60/65ae956160fc"/>
+																	</pragmas>
+																</Action>
+															</then>
+															<else>
+																<Action>
+																	<pragmas>
+																		<ed:Action oid="!ed/505/6EA2/8C60/65ae95615139"/>
+																	</pragmas>
+																</Action>
+															</else>
+															<pragmas>
+																<ed:IfNode oid="!ed/504/6EA2/8C60/65ae95614674"/>
+															</pragmas>
+														</IfNode>
+													</else>
+													<pragmas>
+														<ed:IfNode oid="!ed/503/6EA2/8C60/65ae95611611"/>
+													</pragmas>
+												</IfNode>
+											</block>
+											<pragmas>
+												<ed:IfBlock oid="!ed/502/6EA2/8C60/65ae9561346a"/>
+											</pragmas>
+										</IfBlock>
+									</data>
+									<pragmas>
+										<ed:State oid="!ed/501/6EA2/8C60/65ae95616698"/>
+									</pragmas>
+								</State>
+							</states>
+							<pragmas>
+								<ed:StateMachine oid="!ed/500/6EA2/8C60/65ae956170d5"/>
+							</pragmas>
+						</StateMachine>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/4ff/6EA2/8C60/65ae9561685" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="SmTT" landscape="true" format="A4 (210 297)" oid="!ed/512/6EA2/8C60/65ae9561ef1">
+									<presentationElements>
+										<StateMachineGE presentable="!ed/500/6EA2/8C60/65ae956170d5">
+											<position>
+												<Point x="1111" y="820"/>
+											</position>
+											<size>
+												<Size width="24051" height="16272"/>
+											</size>
+										</StateMachineGE>
+										<StateGE presentable="!ed/501/6EA2/8C60/65ae95616698">
+											<position>
+												<Point x="2249" y="1826"/>
+											</position>
+											<size>
+												<Size width="21801" height="14235"/>
+											</size>
+										</StateGE>
+										<IfBlockGE presentable="!ed/502/6EA2/8C60/65ae9561346a">
+											<position>
+												<Point x="2619" y="2619"/>
+											</position>
+											<size>
+												<Size width="20981" height="13044"/>
+											</size>
+										</IfBlockGE>
+										<ActionGE presentable="!ed/511/6EA2/8C60/65ae956161dd">
+											<position>
+												<Point x="14288" y="3122"/>
+											</position>
+											<size>
+												<Size width="7356" height="4603"/>
+											</size>
+										</ActionGE>
+										<ActionGE presentable="!ed/505/6EA2/8C60/65ae95615139">
+											<position>
+												<Point x="4445" y="10583"/>
+											</position>
+											<size>
+												<Size width="7355" height="4604"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/503/6EA2/8C60/65ae95611611">
+											<position>
+												<Point x="3069" y="3201"/>
+											</position>
+										</IfNodeGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/50f/6EA2/8C60/65ae956166f2">
+											<position>
+												<Point x="12197" y="3201"/>
+											</position>
+										</IfNodeGE>
+										<ActionGE presentable="!ed/510/6EA2/8C60/65ae95612fd1">
+											<position>
+												<Point x="14288" y="9843"/>
+											</position>
+											<size>
+												<Size width="7356" height="4604"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/504/6EA2/8C60/65ae95614674">
+											<position>
+												<Point x="3069" y="5477"/>
+											</position>
+										</IfNodeGE>
+										<ActionGE presentable="!ed/50e/6EA2/8C60/65ae956160fc">
+											<position>
+												<Point x="4445" y="5398"/>
+											</position>
+											<size>
+												<Size width="7355" height="4604"/>
+											</size>
+										</ActionGE>
+										<StateMachineGE presentable="!ed/536/6EA2/8C60/65ae958260dc">
+											<position>
+												<Point x="14631" y="3360"/>
+											</position>
+											<size>
+												<Size width="6668" height="4128"/>
+											</size>
+										</StateMachineGE>
+										<StateGE display="split" presentable="!ed/537/6EA2/8C60/65ae95824f86">
+											<position>
+												<Point x="15610" y="3625"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+										<StateMachineGE presentable="!ed/68b/6EA2/8C60/65ae9e0b7ca9">
+											<position>
+												<Point x="4789" y="5636"/>
+											</position>
+											<size>
+												<Size width="6668" height="4128"/>
+											</size>
+										</StateMachineGE>
+										<StateGE display="split" presentable="!ed/68c/6EA2/8C60/65ae9e0b2f3f">
+											<position>
+												<Point x="5768" y="5900"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="SmTE">
+					<data>
+						<StateMachine name="SM1">
+							<states>
+								<State initial="true" name="State1">
+									<data>
+										<IfBlock name="IB1">
+											<block>
+												<IfNode>
+													<if>
+														<ConstValue value="true"/>
+													</if>
+													<then>
+														<IfNode>
+															<if>
+																<ConstValue value="true"/>
+															</if>
+															<then>
+																<Action>
+																	<data>
+																		<StateMachine name="SM4">
+																			<states>
+																				<State initial="true" name="State4">
+																					<data>
+																						<WhenBlock name="WB1">
+																							<when>
+																								<ConstValue value="true"/>
+																							</when>
+																							<matches>
+																								<Match pattern="true">
+																									<pragmas>
+																										<ed:Match oid="!ed/6b7/6EA2/8C60/65ae9e1c4e98"/>
+																										<ed:Action oid="!ed/6b8/6EA2/8C60/65ae9e1c4958"/>
+																									</pragmas>
+																								</Match>
+																							</matches>
+																							<pragmas>
+																								<ed:WhenBlock oid="!ed/6b6/6EA2/8C60/65ae9e1c5ee0"/>
+																							</pragmas>
+																						</WhenBlock>
+																					</data>
+																					<pragmas>
+																						<ed:State oid="!ed/6b5/6EA2/8C60/65ae9e1ce4" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+																							<diagrams>
+																								<NetDiagram name="State4" landscape="true" format="A4 (210 297)" oid="!ed/6b9/6EA2/8C60/65ae9e1c68e">
+																									<presentationElements>
+																										<WhenBlockGE presentable="!ed/6b6/6EA2/8C60/65ae9e1c5ee0">
+																											<position>
+																												<Point x="1111" y="820"/>
+																											</position>
+																											<size>
+																												<Size width="8467" height="7144"/>
+																											</size>
+																											<startPos>
+																												<Point x="450" y="582"/>
+																											</startPos>
+																										</WhenBlockGE>
+																										<WhenBranchGE labelWidth="794" presentable="!ed/6b7/6EA2/8C60/65ae9e1c4e98">
+																											<position>
+																												<Point x="1640" y="2434"/>
+																											</position>
+																										</WhenBranchGE>
+																										<ActionGE presentable="!ed/6b8/6EA2/8C60/65ae9e1c4958">
+																											<position>
+																												<Point x="2910" y="2355"/>
+																											</position>
+																											<size>
+																												<Size width="5874" height="4974"/>
+																											</size>
+																										</ActionGE>
+																									</presentationElements>
+																								</NetDiagram>
+																							</diagrams>
+																						</ed:State>
+																					</pragmas>
+																				</State>
+																			</states>
+																			<pragmas>
+																				<ed:StateMachine oid="!ed/6b4/6EA2/8C60/65ae9e1c48a9"/>
+																			</pragmas>
+																		</StateMachine>
+																	</data>
+																	<pragmas>
+																		<ed:Action oid="!ed/58a/6EA2/8C60/65ae958e13fe"/>
+																	</pragmas>
+																</Action>
+															</then>
+															<else>
+																<Action>
+																	<data>
+																		<StateMachine name="SM2">
+																			<states>
+																				<State initial="true" name="State2">
+																					<data>
+																						<WhenBlock name="WB1">
+																							<when>
+																								<ConstValue value="true"/>
+																							</when>
+																							<matches>
+																								<Match pattern="true">
+																									<data>
+																										<StateMachine name="SM3">
+																											<states>
+																												<State initial="true" name="State3">
+																													<pragmas>
+																														<ed:State oid="!ed/5e7/6EA2/8C60/65ae9656425d"/>
+																													</pragmas>
+																												</State>
+																											</states>
+																											<pragmas>
+																												<ed:StateMachine oid="!ed/5e6/6EA2/8C60/65ae96563cf1"/>
+																											</pragmas>
+																										</StateMachine>
+																									</data>
+																									<pragmas>
+																										<ed:Match oid="!ed/5e4/6EA2/8C60/65ae96561904"/>
+																										<ed:Action oid="!ed/5e5/6EA2/8C60/65ae96563eab"/>
+																									</pragmas>
+																								</Match>
+																							</matches>
+																							<pragmas>
+																								<ed:WhenBlock oid="!ed/5e3/6EA2/8C60/65ae96561abd"/>
+																							</pragmas>
+																						</WhenBlock>
+																					</data>
+																					<pragmas>
+																						<ed:State oid="!ed/5e2/6EA2/8C60/65ae96566581" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+																							<diagrams>
+																								<NetDiagram name="State2" landscape="true" format="A4 (210 297)" oid="!ed/5e8/6EA2/8C60/65ae965678a">
+																									<presentationElements>
+																										<WhenBlockGE presentable="!ed/5e3/6EA2/8C60/65ae96561abd">
+																											<position>
+																												<Point x="1111" y="820"/>
+																											</position>
+																											<size>
+																												<Size width="8467" height="7144"/>
+																											</size>
+																											<startPos>
+																												<Point x="450" y="582"/>
+																											</startPos>
+																										</WhenBlockGE>
+																										<WhenBranchGE labelWidth="794" presentable="!ed/5e4/6EA2/8C60/65ae96561904">
+																											<position>
+																												<Point x="1640" y="2434"/>
+																											</position>
+																										</WhenBranchGE>
+																										<ActionGE presentable="!ed/5e5/6EA2/8C60/65ae96563eab">
+																											<position>
+																												<Point x="2910" y="2355"/>
+																											</position>
+																											<size>
+																												<Size width="5874" height="4974"/>
+																											</size>
+																										</ActionGE>
+																										<StateMachineGE presentable="!ed/5e6/6EA2/8C60/65ae96563cf1">
+																											<position>
+																												<Point x="3228" y="2778"/>
+																											</position>
+																											<size>
+																												<Size width="5239" height="4128"/>
+																											</size>
+																										</StateMachineGE>
+																										<StateGE presentable="!ed/5e7/6EA2/8C60/65ae9656425d">
+																											<position>
+																												<Point x="3493" y="3043"/>
+																											</position>
+																											<size>
+																												<Size width="4710" height="3598"/>
+																											</size>
+																										</StateGE>
+																									</presentationElements>
+																								</NetDiagram>
+																							</diagrams>
+																						</ed:State>
+																					</pragmas>
+																				</State>
+																			</states>
+																			<pragmas>
+																				<ed:StateMachine oid="!ed/5e1/6EA2/8C60/65ae965622ab"/>
+																			</pragmas>
+																		</StateMachine>
+																	</data>
+																	<pragmas>
+																		<ed:Action oid="!ed/589/6EA2/8C60/65ae958e275d"/>
+																	</pragmas>
+																</Action>
+															</else>
+															<pragmas>
+																<ed:IfNode oid="!ed/588/6EA2/8C60/65ae958e74c8"/>
+															</pragmas>
+														</IfNode>
+													</then>
+													<else>
+														<IfNode>
+															<if>
+																<ConstValue value="true"/>
+															</if>
+															<then>
+																<Action>
+																	<pragmas>
+																		<ed:Action oid="!ed/587/6EA2/8C60/65ae958e3ec6"/>
+																	</pragmas>
+																</Action>
+															</then>
+															<else>
+																<Action>
+																	<pragmas>
+																		<ed:Action oid="!ed/586/6EA2/8C60/65ae958e74c"/>
+																	</pragmas>
+																</Action>
+															</else>
+															<pragmas>
+																<ed:IfNode oid="!ed/585/6EA2/8C60/65ae958e7635"/>
+															</pragmas>
+														</IfNode>
+													</else>
+													<pragmas>
+														<ed:IfNode oid="!ed/584/6EA2/8C60/65ae958e1e29"/>
+													</pragmas>
+												</IfNode>
+											</block>
+											<pragmas>
+												<ed:IfBlock oid="!ed/583/6EA2/8C60/65ae958e68a0"/>
+											</pragmas>
+										</IfBlock>
+									</data>
+									<pragmas>
+										<ed:State oid="!ed/582/6EA2/8C60/65ae958ee2"/>
+									</pragmas>
+								</State>
+							</states>
+							<pragmas>
+								<ed:StateMachine oid="!ed/581/6EA2/8C60/65ae958e4279"/>
+							</pragmas>
+						</StateMachine>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/580/6EA2/8C60/65ae958e1e56" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="SmTE" landscape="true" format="A4 (210 297)" oid="!ed/593/6EA2/8C60/65ae958e112a">
+									<presentationElements>
+										<StateMachineGE presentable="!ed/581/6EA2/8C60/65ae958e4279">
+											<position>
+												<Point x="1111" y="820"/>
+											</position>
+											<size>
+												<Size width="24051" height="16272"/>
+											</size>
+										</StateMachineGE>
+										<StateGE presentable="!ed/582/6EA2/8C60/65ae958ee2">
+											<position>
+												<Point x="2223" y="1826"/>
+											</position>
+											<size>
+												<Size width="21801" height="14235"/>
+											</size>
+										</StateGE>
+										<IfBlockGE presentable="!ed/583/6EA2/8C60/65ae958e68a0">
+											<position>
+												<Point x="2593" y="2619"/>
+											</position>
+											<size>
+												<Size width="20981" height="13044"/>
+											</size>
+										</IfBlockGE>
+										<ActionGE presentable="!ed/58a/6EA2/8C60/65ae958e13fe">
+											<position>
+												<Point x="14261" y="3122"/>
+											</position>
+											<size>
+												<Size width="7356" height="4603"/>
+											</size>
+										</ActionGE>
+										<ActionGE presentable="!ed/586/6EA2/8C60/65ae958e74c">
+											<position>
+												<Point x="4419" y="10583"/>
+											</position>
+											<size>
+												<Size width="7355" height="4604"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/584/6EA2/8C60/65ae958e1e29">
+											<position>
+												<Point x="3043" y="3201"/>
+											</position>
+										</IfNodeGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/588/6EA2/8C60/65ae958e74c8">
+											<position>
+												<Point x="12171" y="3201"/>
+											</position>
+										</IfNodeGE>
+										<ActionGE presentable="!ed/589/6EA2/8C60/65ae958e275d">
+											<position>
+												<Point x="14261" y="9843"/>
+											</position>
+											<size>
+												<Size width="7356" height="4604"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/585/6EA2/8C60/65ae958e7635">
+											<position>
+												<Point x="3043" y="5477"/>
+											</position>
+										</IfNodeGE>
+										<ActionGE presentable="!ed/587/6EA2/8C60/65ae958e3ec6">
+											<position>
+												<Point x="4419" y="5398"/>
+											</position>
+											<size>
+												<Size width="7355" height="4604"/>
+											</size>
+										</ActionGE>
+										<StateMachineGE presentable="!ed/5e1/6EA2/8C60/65ae965622ab">
+											<position>
+												<Point x="14605" y="10081"/>
+											</position>
+											<size>
+												<Size width="6668" height="4128"/>
+											</size>
+										</StateMachineGE>
+										<StateGE display="split" presentable="!ed/5e2/6EA2/8C60/65ae96566581">
+											<position>
+												<Point x="15584" y="10345"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+										<StateMachineGE presentable="!ed/6b4/6EA2/8C60/65ae9e1c48a9">
+											<position>
+												<Point x="14605" y="3360"/>
+											</position>
+											<size>
+												<Size width="6668" height="4128"/>
+											</size>
+										</StateMachineGE>
+										<StateGE display="split" presentable="!ed/6b5/6EA2/8C60/65ae9e1ce4">
+											<position>
+												<Point x="15584" y="3625"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/21b/6EA2/8C60/65ae73053f9a" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/21c/6EA2/8C60/65ae730518f5" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/21d/6EA2/8C60/65ae730522e3" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/21e/6EA2/8C60/65ae7305554d" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

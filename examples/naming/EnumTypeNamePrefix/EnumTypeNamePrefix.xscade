@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Type name="CorrectEnumType">
+			<definition>
+				<Enum>
+					<values>
+						<Value name="CorrectEnumValue">
+							<pragmas>
+								<ed:Value oid="!ed/18/3CA3/2B74/5fc66ce52eab"/>
+							</pragmas>
+						</Value>
+						<Value name="CorrectEnum_Value2">
+							<pragmas>
+								<ed:Value oid="!ed/19/3CA3/2B74/5fc673304425"/>
+							</pragmas>
+						</Value>
+						<Value name="InCorrectEnumValue">
+							<pragmas>
+								<ed:Value oid="!ed/1a/3CA3/2B74/5fc761345a68"/>
+							</pragmas>
+						</Value>
+						<Value name="CorrectEnumType_Value">
+							<pragmas>
+								<ed:Value oid="!ed/1c/3CA3/2B74/5fc779ca6acf"/>
+							</pragmas>
+						</Value>
+					</values>
+				</Enum>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/14/3CA3/2B74/5fc638be5c18"/>
+			</pragmas>
+		</Type>
+	</declarations>
+</File>

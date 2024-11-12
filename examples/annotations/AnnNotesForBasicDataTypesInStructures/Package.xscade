@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="Package">
+			<declarations>
+				<Type name="Struct1_t">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="integer8">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int8"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/1b1/6AAA/2BA8/63da2a4372c5"/>
+									</pragmas>
+								</Field>
+								<Field name="integer16">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int16"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/1ab/6AAA/2BA8/63da2a3d1e5e"/>
+									</pragmas>
+								</Field>
+								<Field name="integer32">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/19d/6AAA/2BA8/63da2a2f6952"/>
+									</pragmas>
+								</Field>
+								<Field name="integer64">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int64"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/1b7/6AAA/2BA8/63da2a4763ff"/>
+									</pragmas>
+								</Field>
+								<Field name="floating32">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="float32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/1d0/6AAA/2BA8/63da2a667ac"/>
+									</pragmas>
+								</Field>
+								<Field name="floating64">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="float64"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/1de/6AAA/2BA8/63da2a726f98"/>
+									</pragmas>
+								</Field>
+								<Field name="unsigned8">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="uint8"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/1e7/6AAA/2BA8/63da2a7a10b2"/>
+									</pragmas>
+								</Field>
+								<Field name="unsigned16">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="uint16"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/1f5/6AAA/2BA8/63da2a821128"/>
+									</pragmas>
+								</Field>
+								<Field name="unsigned32">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="uint32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/1fb/6AAA/2BA8/63da2a826c4f"/>
+									</pragmas>
+								</Field>
+								<Field name="unsigned64">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="uint64"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/201/6AAA/2BA8/63da2a8343a5"/>
+									</pragmas>
+								</Field>
+								<Field name="Boolean">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/21a/6AAA/2BA8/63da2a926dfc"/>
+									</pragmas>
+								</Field>
+								<Field name="Character">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="char"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/223/6AAA/2BA8/63da2a9a6be9"/>
+									</pragmas>
+								</Field>
+								<Field name="Structure">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="Struct2_t"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/236/6AAA/2BA8/63da2ae5d05"/>
+									</pragmas>
+								</Field>
+								<Field name="Array">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="Array_t"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/251/6AAA/2BA8/63da2afe1907"/>
+									</pragmas>
+								</Field>
+								<Field name="NamedType">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="Integer_t"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/27d/6AAA/2BA8/63da40f939f4"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/19c/6AAA/2BA8/63da2a2468a9"/>
+					</pragmas>
+				</Type>
+				<Type name="Struct2_t">
+					<definition>
+						<Struct>
+							<fields>
+								<Field name="label1">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/22d/6AAA/2BA8/63da2ab61a37"/>
+									</pragmas>
+								</Field>
+								<Field name="label2">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/269/6AAA/2BA8/63da349f454"/>
+									</pragmas>
+								</Field>
+								<Field name="label3">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/26f/6AAA/2BA8/63da349f5b34"/>
+									</pragmas>
+								</Field>
+								<Field name="label4">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/275/6AAA/2BA8/63da34a3607e"/>
+									</pragmas>
+								</Field>
+								<Field name="label5">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="int32"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Field oid="!ed/27b/6AAA/2BA8/63da34a35614"/>
+									</pragmas>
+								</Field>
+							</fields>
+						</Struct>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/22c/6AAA/2BA8/63da2aa52f9b"/>
+					</pragmas>
+				</Type>
+				<Type name="Array_t">
+					<definition>
+						<Table>
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="uint32"/>
+									</type>
+								</NamedType>
+							</type>
+							<size>
+								<ConstValue value="10"/>
+							</size>
+						</Table>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/240/6AAA/2BA8/63da2af02246"/>
+					</pragmas>
+				</Type>
+				<Type name="Integer_t">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="int8"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/25b/6AAA/2BA8/63da2c39697d"/>
+					</pragmas>
+				</Type>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/198/6AAA/2BA8/63da297b24cb" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/199/6AAA/2BA8/63da297b70dd" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/19a/6AAA/2BA8/63da297b5fc7" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/19b/6AAA/2BA8/63da297b7f98" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

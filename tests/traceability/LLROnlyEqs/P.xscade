@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="P">
+			<declarations>
+				<Operator kind="node" name="O">
+					<inputs>
+						<Variable name="i">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/74b/4468/55B0/63dcde7d22c7"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="o">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/74a/4468/55B0/63dcde7d7da6"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<data>
+						<IfBlock name="IfBlock1">
+							<block>
+								<IfNode>
+									<if>
+										<ConstValue value="true"/>
+									</if>
+									<then>
+										<Action>
+											<locals>
+												<Variable name="_L1">
+													<type>
+														<NamedType>
+															<type>
+																<TypeRef name="bool"/>
+															</type>
+														</NamedType>
+													</type>
+													<pragmas>
+														<ed:Variable oid="!ed/73e/4468/55B0/63dcde7d61dd"/>
+													</pragmas>
+												</Variable>
+											</locals>
+											<data>
+												<!-- _L1 = i; -->
+												<Equation>
+													<lefts>
+														<VariableRef name="_L1"/>
+													</lefts>
+													<right>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="i"/>
+															</path>
+														</IdExpression>
+													</right>
+													<pragmas>
+														<ed:Equation oid="!ed/73c/4468/55B0/63dcde7d4d3c"/>
+													</pragmas>
+												</Equation>
+												<!-- o = _L1; -->
+												<Equation>
+													<lefts>
+														<VariableRef name="o"/>
+													</lefts>
+													<right>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="_L1"/>
+															</path>
+														</IdExpression>
+													</right>
+													<pragmas>
+														<ed:Equation oid="!ed/73d/4468/55B0/63dcde7d1352"/>
+													</pragmas>
+												</Equation>
+											</data>
+											<pragmas>
+												<ed:Action oid="!ed/73b/4468/55B0/63dcde7d431"/>
+											</pragmas>
+										</Action>
+									</then>
+									<else>
+										<Action>
+											<pragmas>
+												<ed:Action oid="!ed/73a/4468/55B0/63dcde7d30fd"/>
+											</pragmas>
+										</Action>
+									</else>
+									<pragmas>
+										<ed:IfNode oid="!ed/739/4468/55B0/63dcde7d5f23"/>
+									</pragmas>
+								</IfNode>
+							</block>
+							<pragmas>
+								<ed:IfBlock oid="!ed/738/4468/55B0/63dcde7d72fc"/>
+							</pragmas>
+						</IfBlock>
+						<StateMachine name="SM1">
+							<states>
+								<State initial="true" name="State1">
+									<until>
+										<Transition>
+											<condition>
+												<ConstValue value="true"/>
+											</condition>
+											<forks>
+												<ForkBranch kind="restart">
+													<target>
+														<StateRef name="State3"/>
+													</target>
+													<condition>
+														<ConstValue value="true"/>
+													</condition>
+													<pragmas>
+														<ed:ForkBranch oid="!ed/742/4468/55B0/63dcde7d3ee2"/>
+													</pragmas>
+												</ForkBranch>
+												<ForkBranch kind="restart">
+													<target>
+														<StateRef name="State2"/>
+													</target>
+													<condition>
+														<ConstValue value="true"/>
+													</condition>
+													<pragmas>
+														<ed:ForkBranch oid="!ed/743/4468/55B0/63dcde7d1600"/>
+													</pragmas>
+												</ForkBranch>
+											</forks>
+											<pragmas>
+												<ed:Transition oid="!ed/741/4468/55B0/63dcde7d5748"/>
+											</pragmas>
+										</Transition>
+										<Transition kind="restart">
+											<target>
+												<StateRef name="State2"/>
+											</target>
+											<condition>
+												<ConstValue value="true"/>
+											</condition>
+											<pragmas>
+												<ed:Transition oid="!ed/744/4468/55B0/63dcde7d9d4"/>
+											</pragmas>
+										</Transition>
+									</until>
+									<pragmas>
+										<ed:State oid="!ed/740/4468/55B0/63dcde7d4f9f"/>
+									</pragmas>
+								</State>
+								<State name="State2">
+									<pragmas>
+										<ed:State oid="!ed/745/4468/55B0/63dcde7d1a04"/>
+									</pragmas>
+								</State>
+								<State name="State3">
+									<pragmas>
+										<ed:State oid="!ed/746/4468/55B0/63dcde7d60e0"/>
+									</pragmas>
+								</State>
+							</states>
+							<pragmas>
+								<ed:StateMachine oid="!ed/73f/4468/55B0/63dcde7d4686"/>
+							</pragmas>
+						</StateMachine>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/737/4468/55B0/63dcde7d5077" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Graphical" landscape="true" format="A4 (210 297)" oid="!ed/747/4468/55B0/63dcde7d36b7">
+									<presentationElements>
+										<IfBlockGE presentable="!ed/738/4468/55B0/63dcde7d72fc">
+											<position>
+												<Point x="873" y="767"/>
+											</position>
+											<size>
+												<Size width="6800" height="8361"/>
+											</size>
+										</IfBlockGE>
+										<ActionGE presentable="!ed/73b/4468/55B0/63dcde7d431">
+											<position>
+												<Point x="2699" y="1270"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</ActionGE>
+										<ActionGE presentable="!ed/73a/4468/55B0/63dcde7d30fd">
+											<position>
+												<Point x="2699" y="5133"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</ActionGE>
+										<IfNodeGE labelWidth="794" presentable="!ed/739/4468/55B0/63dcde7d5f23">
+											<position>
+												<Point x="1323" y="1349"/>
+											</position>
+										</IfNodeGE>
+										<EquationGE presentable="!ed/73c/4468/55B0/63dcde7d4d3c">
+											<position>
+												<Point x="3360" y="2117"/>
+											</position>
+											<size>
+												<Size width="265" height="502"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/73d/4468/55B0/63dcde7d1352">
+											<position>
+												<Point x="6218" y="2117"/>
+											</position>
+											<size>
+												<Size width="317" height="503"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/73c/4468/55B0/63dcde7d4d3c" dstEquation="!ed/73d/4468/55B0/63dcde7d1352">
+											<positions>
+												<Point x="3625" y="2381"/>
+												<Point x="4630" y="2381"/>
+												<Point x="4630" y="2381"/>
+												<Point x="6271" y="2381"/>
+											</positions>
+										</Edge>
+										<StateMachineGE presentable="!ed/73f/4468/55B0/63dcde7d4686">
+											<position>
+												<Point x="8440" y="847"/>
+											</position>
+											<size>
+												<Size width="9552" height="8281"/>
+											</size>
+										</StateMachineGE>
+										<StateGE presentable="!ed/740/4468/55B0/63dcde7d4f9f">
+											<position>
+												<Point x="8784" y="1455"/>
+											</position>
+											<size>
+												<Size width="2329" height="1297"/>
+											</size>
+										</StateGE>
+										<StateGE presentable="!ed/745/4468/55B0/63dcde7d1a04">
+											<position>
+												<Point x="11800" y="5900"/>
+											</position>
+											<size>
+												<Size width="2328" height="1296"/>
+											</size>
+										</StateGE>
+										<StateGE presentable="!ed/746/4468/55B0/63dcde7d60e0">
+											<position>
+												<Point x="14843" y="3307"/>
+											</position>
+											<size>
+												<Size width="2328" height="1296"/>
+											</size>
+										</StateGE>
+										<TransitionGE presentable="!ed/741/4468/55B0/63dcde7d5748">
+											<positions>
+												<Point x="11113" y="2037"/>
+												<Point x="11774" y="2355"/>
+												<Point x="12409" y="2646"/>
+												<Point x="13070" y="2963"/>
+											</positions>
+											<labelSize>
+												<Size width="1376" height="370"/>
+											</labelSize>
+											<labelPos>
+												<Point x="13335" y="1667"/>
+											</labelPos>
+											<slashPos>
+												<Point x="13917" y="1667"/>
+											</slashPos>
+										</TransitionGE>
+										<TransitionGE presentable="!ed/742/4468/55B0/63dcde7d3ee2">
+											<positions>
+												<Point x="13070" y="2963"/>
+												<Point x="13653" y="3228"/>
+												<Point x="14261" y="3519"/>
+												<Point x="14843" y="3810"/>
+											</positions>
+											<labelSize>
+												<Size width="1058" height="370"/>
+											</labelSize>
+											<labelPos>
+												<Point x="12912" y="3387"/>
+											</labelPos>
+											<slashPos>
+												<Point x="13176" y="3387"/>
+											</slashPos>
+										</TransitionGE>
+										<TransitionGE presentable="!ed/743/4468/55B0/63dcde7d1600">
+											<positions>
+												<Point x="13070" y="2963"/>
+												<Point x="12991" y="3942"/>
+												<Point x="12912" y="4921"/>
+												<Point x="12806" y="5900"/>
+											</positions>
+											<labelSize>
+												<Size width="1376" height="370"/>
+											</labelSize>
+											<labelPos>
+												<Point x="11430" y="3625"/>
+											</labelPos>
+											<slashPos>
+												<Point x="12012" y="3625"/>
+											</slashPos>
+										</TransitionGE>
+										<TransitionGE presentable="!ed/744/4468/55B0/63dcde7d9d4">
+											<positions>
+												<Point x="9287" y="2752"/>
+												<Point x="10107" y="3995"/>
+												<Point x="10927" y="5239"/>
+												<Point x="11800" y="6535"/>
+											</positions>
+											<labelSize>
+												<Size width="1376" height="370"/>
+											</labelSize>
+											<labelPos>
+												<Point x="7911" y="2514"/>
+											</labelPos>
+											<slashPos>
+												<Point x="8493" y="2514"/>
+											</slashPos>
+										</TransitionGE>
+									</presentationElements>
+									<equationSets>
+										<EquationSet name="EquationSet1" styleName="EQS1" oid="!ed/748/4468/55B0/63dcde7d43e1">
+											<presentable>!ed/73d/4468/55B0/63dcde7d1352</presentable>
+											<presentable>!ed/73c/4468/55B0/63dcde7d4d3c</presentable>
+										</EquationSet>
+									</equationSets>
+								</NetDiagram>
+								<TextDiagram name="Textual" landscape="false" format="A4 (210 297)" oid="!ed/749/4468/55B0/63dcde7d685"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/733/4468/55B0/63dcde7d5226" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/734/4468/55B0/63dcde7d7a1e" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/735/4468/55B0/63dcde7d45e7" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/736/4468/55B0/63dcde7d25eb" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

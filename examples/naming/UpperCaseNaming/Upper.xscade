@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="Upper">
+			<declarations>
+				<Constant name="ITEMS_COUNT">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<ConstValue value="8"/>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/268/366E/73BC/61e6e8d36aa2"/>
+					</pragmas>
+				</Constant>
+				<Constant name="Reference">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="Vector"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<!-- [9, 12, 31, 32, 46, 65, 81, 82] -->
+						<DataArrayOp>
+							<data>
+								<ConstValue value="9"/>
+								<ConstValue value="12"/>
+								<ConstValue value="31"/>
+								<ConstValue value="32"/>
+								<ConstValue value="46"/>
+								<ConstValue value="65"/>
+								<ConstValue value="81"/>
+								<ConstValue value="82"/>
+							</data>
+						</DataArrayOp>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/2b3/366E/73BC/61e6e97d6091"/>
+					</pragmas>
+				</Constant>
+				<Type name="VStatus">
+					<definition>
+						<Table>
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<size>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="ITEMS_COUNT"/>
+									</path>
+								</IdExpression>
+							</size>
+						</Table>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/25f/366E/73BC/61e6e8b444a1"/>
+					</pragmas>
+				</Type>
+				<Type name="Vector">
+					<definition>
+						<Table>
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<size>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="ITEMS_COUNT"/>
+									</path>
+								</IdExpression>
+							</size>
+						</Table>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/296/366E/73BC/61e6e92c14da"/>
+					</pragmas>
+				</Type>
+				<Operator kind="function" name="TestVector">
+					<sizeParameters>
+						<SizeParameter name="SIZE">
+							<pragmas>
+								<ed:SizeParameter oid="!ed/319/366E/73BC/61e6ea2a1e92"/>
+							</pragmas>
+						</SizeParameter>
+					</sizeParameters>
+					<inputs>
+						<Variable name="value">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="'INT_TYPE"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="SIZE"/>
+											</path>
+										</IdExpression>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/2a1/366E/73BC/61e6e95d40"/>
+							</pragmas>
+						</Variable>
+						<Variable name="reference">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="'INT_TYPE"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="SIZE"/>
+											</path>
+										</IdExpression>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/342/366E/73BC/61e6ea8c3e8e"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="status">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="SIZE"/>
+											</path>
+										</IdExpression>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/30f/366E/73BC/61e6e9e84404"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<locals>
+						<Variable name="_L1">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="'INT_TYPE"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="SIZE"/>
+											</path>
+										</IdExpression>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/344/366E/73BC/61e6ea9749cc"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L2">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="'INT_TYPE"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="SIZE"/>
+											</path>
+										</IdExpression>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/346/366E/73BC/61e6ea9783e"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L3">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="SIZE"/>
+											</path>
+										</IdExpression>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/350/366E/73BC/61e6ea9e26c7"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<!-- _L1 = value; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L1"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="value"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/343/366E/73BC/61e6ea9757cd"/>
+							</pragmas>
+						</Equation>
+						<!-- _L2 = reference; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L2"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="reference"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/345/366E/73BC/61e6ea97523b"/>
+							</pragmas>
+						</Equation>
+						<!-- status = _L3; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="status"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L3"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/347/366E/73BC/61e6ea9739e4"/>
+							</pragmas>
+						</Equation>
+						<!-- _L3 = (map $=$ <<SIZE>>)(_L1, _L2); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L3"/>
+							</lefts>
+							<right>
+								<!-- (map $=$ <<SIZE>>)(_L1, _L2) -->
+								<CallExpression>
+									<operator>
+										<IteratorOp name="1" iterator="map">
+											<operator>
+												<OpCall name="1">
+													<operator>
+														<OperatorRef name="$=$"/>
+													</operator>
+												</OpCall>
+											</operator>
+											<size>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="SIZE"/>
+													</path>
+												</IdExpression>
+											</size>
+										</IteratorOp>
+									</operator>
+									<callParameters>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L1"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L2"/>
+											</path>
+										</IdExpression>
+									</callParameters>
+								</CallExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/34f/366E/73BC/61e6ea9e50d5"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/29f/366E/73BC/61e6e9405c67" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="TestVector" landscape="true" format="A4 (210 297)" oid="!ed/2a0/366E/73BC/61e6e940408a">
+									<presentationElements>
+										<EquationGE presentable="!ed/343/366E/73BC/61e6ea9757cd">
+											<position>
+												<Point x="1826" y="1270"/>
+											</position>
+											<size>
+												<Size width="265" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/345/366E/73BC/61e6ea97523b">
+											<position>
+												<Point x="1826" y="2037"/>
+											</position>
+											<size>
+												<Size width="265" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/347/366E/73BC/61e6ea9739e4">
+											<position>
+												<Point x="8387" y="1667"/>
+											</position>
+											<size>
+												<Size width="318" height="502"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/34f/366E/73BC/61e6ea9e50d5">
+											<position>
+												<Point x="3493" y="767"/>
+											</position>
+											<size>
+												<Size width="3508" height="2317"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/34f/366E/73BC/61e6ea9e50d5" dstEquation="!ed/347/366E/73BC/61e6ea9739e4">
+											<positions>
+												<Point x="6985" y="1931"/>
+												<Point x="7091" y="1931"/>
+												<Point x="7091" y="1931"/>
+												<Point x="8440" y="1931"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/345/366E/73BC/61e6ea97523b" dstEquation="!ed/34f/366E/73BC/61e6ea9e50d5">
+											<positions>
+												<Point x="2090" y="2302"/>
+												<Point x="2778" y="2302"/>
+												<Point x="2778" y="2302"/>
+												<Point x="3493" y="2302"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/343/366E/73BC/61e6ea9757cd" dstEquation="!ed/34f/366E/73BC/61e6ea9e50d5">
+											<positions>
+												<Point x="2090" y="1535"/>
+												<Point x="2778" y="1535"/>
+												<Point x="2778" y="1535"/>
+												<Point x="3493" y="1535"/>
+											</positions>
+										</Edge>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="function" name="Harness">
+					<inputs>
+						<Variable name="value">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Vector"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/38c/366E/73BC/61e6eaf53805"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="status">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="VStatus"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/38b/366E/73BC/61e6eaf5631a"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<locals>
+						<Variable name="_L4">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Vector"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/3a1/366E/73BC/61e6eb2458a5"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L5">
+							<type>
+								<Table>
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<size>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="ITEMS_COUNT"/>
+											</path>
+										</IdExpression>
+									</size>
+								</Table>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/3ac/366E/73BC/61e6eb277c04"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L6">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="Vector"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/3ba/366E/73BC/61e6eb4e5e26"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<!-- _L4 = value; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L4"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="value"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/3a0/366E/73BC/61e6eb241671"/>
+							</pragmas>
+						</Equation>
+						<!-- status = _L5; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="status"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L5"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/3a6/366E/73BC/61e6eb25486"/>
+							</pragmas>
+						</Equation>
+						<!-- _L5 = (TestVector<<ITEMS_COUNT>>)(_L4, _L6); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L5"/>
+							</lefts>
+							<right>
+								<!-- (TestVector<<ITEMS_COUNT>>)(_L4, _L6) -->
+								<CallExpression>
+									<operator>
+										<OpCall name="1">
+											<operator>
+												<OperatorRef name="TestVector"/>
+											</operator>
+											<instanceParameters>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="ITEMS_COUNT"/>
+													</path>
+												</IdExpression>
+											</instanceParameters>
+										</OpCall>
+									</operator>
+									<callParameters>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L4"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L6"/>
+											</path>
+										</IdExpression>
+									</callParameters>
+								</CallExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/3ab/366E/73BC/61e6eb271a7b"/>
+							</pragmas>
+						</Equation>
+						<!-- _L6 = Reference; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L6"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="Reference"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/3b9/366E/73BC/61e6eb4e1b50"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/381/366E/73BC/61e6eaf54b8f" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Harness" landscape="true" format="A4 (210 297)" oid="!ed/386/366E/73BC/61e6eaf550ec">
+									<presentationElements>
+										<EquationGE presentable="!ed/3a0/366E/73BC/61e6eb241671">
+											<position>
+												<Point x="1508" y="1614"/>
+											</position>
+											<size>
+												<Size width="265" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/3a6/366E/73BC/61e6eb25486">
+											<position>
+												<Point x="13653" y="2064"/>
+											</position>
+											<size>
+												<Size width="317" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="!ed/3ab/366E/73BC/61e6eb271a7b">
+											<position>
+												<Point x="5477" y="979"/>
+											</position>
+											<size>
+												<Size width="5096" height="2714"/>
+											</size>
+										</EquationGE>
+										<EquationGE kind="OBJ_LIT" presentable="!ed/3b9/366E/73BC/61e6eb4e1b50">
+											<position>
+												<Point x="2011" y="2619"/>
+											</position>
+											<size>
+												<Size width="211" height="317"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/3a0/366E/73BC/61e6eb241671" dstEquation="!ed/3ab/366E/73BC/61e6eb271a7b">
+											<positions>
+												<Point x="1773" y="1879"/>
+												<Point x="3625" y="1879"/>
+												<Point x="3625" y="1879"/>
+												<Point x="5477" y="1879"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/3b9/366E/73BC/61e6eb4e1b50" dstEquation="!ed/3ab/366E/73BC/61e6eb271a7b">
+											<positions>
+												<Point x="2223" y="2778"/>
+												<Point x="3836" y="2778"/>
+												<Point x="3836" y="2805"/>
+												<Point x="5477" y="2805"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/3ab/366E/73BC/61e6eb271a7b" dstEquation="!ed/3a6/366E/73BC/61e6eb25486">
+											<positions>
+												<Point x="10583" y="2355"/>
+												<Point x="12118" y="2355"/>
+												<Point x="12118" y="2328"/>
+												<Point x="13705" y="2328"/>
+											</positions>
+										</Edge>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/259/366E/73BC/61e6e87745ac" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/25a/366E/73BC/61e6e8777a9c" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/25b/366E/73BC/61e6e87736f6" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/25c/366E/73BC/61e6e8773013" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

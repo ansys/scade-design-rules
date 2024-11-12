@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="Package1">
+			<declarations>
+				<Operator kind="node" name="Operator1">
+					<data>
+						<StateMachine name="SM_incorrect">
+							<states>
+								<State initial="true" name="State1">
+									<unless>
+										<Transition kind="restart">
+											<target>
+												<StateRef name="State2"/>
+											</target>
+											<condition>
+												<ConstValue value="true"/>
+											</condition>
+											<pragmas>
+												<ed:Transition oid="!ed/4d/77DB/2E04/6486d0c43a03"/>
+											</pragmas>
+										</Transition>
+									</unless>
+									<pragmas>
+										<ed:State oid="!ed/42/77DB/2E04/6486d0bf6799"/>
+									</pragmas>
+								</State>
+								<State name="State2">
+									<pragmas>
+										<ed:State oid="!ed/47/77DB/2E04/6486d0c13885"/>
+									</pragmas>
+								</State>
+							</states>
+							<pragmas>
+								<ed:StateMachine oid="!ed/3d/77DB/2E04/6486d0b95ce5"/>
+							</pragmas>
+						</StateMachine>
+						<StateMachine name="SM_correct">
+							<states>
+								<State initial="true" name="State1">
+									<unless>
+										<Transition kind="restart">
+											<target>
+												<StateRef name="State2"/>
+											</target>
+											<condition>
+												<ConstValue value="true"/>
+											</condition>
+											<pragmas>
+												<ed:Transition oid="!ed/60/77DB/2E04/6486d0c815a7"/>
+											</pragmas>
+										</Transition>
+									</unless>
+									<pragmas>
+										<ed:State oid="!ed/5f/77DB/2E04/6486d0c81ca5"/>
+									</pragmas>
+								</State>
+								<State name="State2">
+									<pragmas>
+										<ed:State oid="!ed/61/77DB/2E04/6486d0c87e0"/>
+										<kcg:Pragma>
+											default
+										</kcg:Pragma>
+									</pragmas>
+								</State>
+							</states>
+							<pragmas>
+								<ed:StateMachine oid="!ed/5e/77DB/2E04/6486d0c8f0b"/>
+							</pragmas>
+						</StateMachine>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/3a/77DB/2E04/6486d0b12636" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Operator1_1" landscape="true" format="A4 (210 297)" oid="!ed/3b/77DB/2E04/6486d0b12fa7">
+									<presentationElements>
+										<StateMachineGE presentable="!ed/3d/77DB/2E04/6486d0b95ce5">
+											<position>
+												<Point x="2275" y="1164"/>
+											</position>
+											<size>
+												<Size width="21114" height="4683"/>
+											</size>
+										</StateMachineGE>
+										<StateGE presentable="!ed/42/77DB/2E04/6486d0bf6799">
+											<position>
+												<Point x="4868" y="1720"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+										<StateGE presentable="!ed/47/77DB/2E04/6486d0c13885">
+											<position>
+												<Point x="15266" y="1746"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+										<TransitionGE presentable="!ed/4d/77DB/2E04/6486d0c43a03">
+											<positions>
+												<Point x="9578" y="3228"/>
+												<Point x="11456" y="3228"/>
+												<Point x="13335" y="3228"/>
+												<Point x="15266" y="3254"/>
+											</positions>
+											<labelSize>
+												<Size width="1376" height="370"/>
+											</labelSize>
+											<labelPos>
+												<Point x="11906" y="2858"/>
+											</labelPos>
+											<slashPos>
+												<Point x="12488" y="2858"/>
+											</slashPos>
+										</TransitionGE>
+										<StateMachineGE presentable="!ed/5e/77DB/2E04/6486d0c8f0b">
+											<position>
+												<Point x="2408" y="6641"/>
+											</position>
+											<size>
+												<Size width="21114" height="4683"/>
+											</size>
+										</StateMachineGE>
+										<StateGE presentable="!ed/5f/77DB/2E04/6486d0c81ca5">
+											<position>
+												<Point x="5001" y="7197"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+										<StateGE presentable="!ed/61/77DB/2E04/6486d0c87e0">
+											<position>
+												<Point x="15399" y="7223"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+										<TransitionGE presentable="!ed/60/77DB/2E04/6486d0c815a7">
+											<positions>
+												<Point x="9710" y="8705"/>
+												<Point x="11589" y="8705"/>
+												<Point x="13467" y="8705"/>
+												<Point x="15399" y="8731"/>
+											</positions>
+											<labelSize>
+												<Size width="1376" height="370"/>
+											</labelSize>
+											<labelPos>
+												<Point x="12038" y="8335"/>
+											</labelPos>
+											<slashPos>
+												<Point x="12620" y="8335"/>
+											</slashPos>
+										</TransitionGE>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/36/77DB/2E04/6486d0ac44f3" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/37/77DB/2E04/6486d0ac26e9" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/38/77DB/2E04/6486d0ac147b" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/39/77DB/2E04/6486d0acdd8" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

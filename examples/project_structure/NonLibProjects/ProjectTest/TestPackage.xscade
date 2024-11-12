@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="TestPackage">
+			<declarations>
+				<Package name="SubPackage" href="SubPackage.xscade"/>
+				<Package name="SubPackage2" href="SubPackage2.xscade"/>
+				<Constant name="Constant1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="Type1"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<ConstValue value="0"/>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/419/313F/2B8C/5fd0d4c16ad3"/>
+					</pragmas>
+				</Constant>
+				<Constant name="Constant2">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="Type2"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<ConstValue value="0"/>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/41a/313F/2B8C/5fd0d4c218f6"/>
+					</pragmas>
+				</Constant>
+				<Constant name="Constant6">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="Type6"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<ConstValue value="0"/>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/42b/313F/2B8C/5fd0d4e4310d"/>
+					</pragmas>
+				</Constant>
+				<Type name="Type1">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="int8"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/417/313F/2B8C/5fd0d4b8aba"/>
+					</pragmas>
+				</Type>
+				<Type name="Type2">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="int8"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/418/313F/2B8C/5fd0d4be2062"/>
+					</pragmas>
+				</Type>
+				<Type name="Type6">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="int8"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/42c/313F/2B8C/5fd0d4e81b39"/>
+					</pragmas>
+				</Type>
+				<Type name="Type7">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="int8"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/4c7/313F/2B8C/5fd0e9ef5b8c"/>
+					</pragmas>
+				</Type>
+				<Operator name="Operator1" href="Operator1.xscade"/>
+				<Operator name="Operator5" href="Operator51.xscade"/>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/411/313F/2B8C/5fd0d4a86be7" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/412/313F/2B8C/5fd0d4a817b8" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/413/313F/2B8C/5fd0d4a8605b" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/414/313F/2B8C/5fd0d4a82160" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

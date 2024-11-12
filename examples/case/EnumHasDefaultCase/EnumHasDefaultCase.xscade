@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Type name="Enum_Incorrect2_t">
+			<definition>
+				<Enum>
+					<values>
+						<Value name="value1">
+							<pragmas>
+								<ed:Value oid="!ed/6f7/7FCF/AC/6398625017a0"/>
+							</pragmas>
+						</Value>
+						<Value name="value2">
+							<pragmas>
+								<ed:Value oid="!ed/6f8/7FCF/AC/639862506dd6"/>
+							</pragmas>
+						</Value>
+						<Value name="value3">
+							<pragmas>
+								<ed:Value oid="!ed/6f9/7FCF/AC/639862501981"/>
+							</pragmas>
+						</Value>
+					</values>
+				</Enum>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/6f6/7FCF/AC/639862506ee7"/>
+			</pragmas>
+		</Type>
+		<Type name="Enum_Correct2_t">
+			<definition>
+				<Enum>
+					<values>
+						<Value name="value4">
+							<pragmas>
+								<ed:Value oid="!ed/6eb/7FCF/AC/63986250a75"/>
+							</pragmas>
+						</Value>
+						<Value name="value5">
+							<pragmas>
+								<ed:Value oid="!ed/6ec/7FCF/AC/6398625091d"/>
+							</pragmas>
+						</Value>
+						<Value name="value6">
+							<pragmas>
+								<ed:Value oid="!ed/6ed/7FCF/AC/63986250999"/>
+								<kcg:Pragma>
+									default
+								</kcg:Pragma>
+							</pragmas>
+						</Value>
+					</values>
+				</Enum>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/6ea/7FCF/AC/639862501003"/>
+			</pragmas>
+		</Type>
+		<Package name="EnumHasDefaultCase">
+			<declarations>
+				<Type name="Enum_Incorrect1_t">
+					<definition>
+						<Enum>
+							<values>
+								<Value name="value1">
+									<pragmas>
+										<ed:Value oid="!ed/6d3/7FCF/AC/639862242cf5"/>
+									</pragmas>
+								</Value>
+								<Value name="value2">
+									<pragmas>
+										<ed:Value oid="!ed/6d4/7FCF/AC/6398622c6d5a"/>
+									</pragmas>
+								</Value>
+								<Value name="value3">
+									<pragmas>
+										<ed:Value oid="!ed/6d5/7FCF/AC/6398622f302f"/>
+									</pragmas>
+								</Value>
+							</values>
+						</Enum>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/6d2/7FCF/AC/63986217297c"/>
+					</pragmas>
+				</Type>
+				<Type name="Enum_Correct1_t">
+					<definition>
+						<Enum>
+							<values>
+								<Value name="value4">
+									<pragmas>
+										<ed:Value oid="!ed/6df/7FCF/AC/6398623215c5"/>
+									</pragmas>
+								</Value>
+								<Value name="value5">
+									<pragmas>
+										<ed:Value oid="!ed/6e0/7FCF/AC/639862324eea"/>
+									</pragmas>
+								</Value>
+								<Value name="value6">
+									<pragmas>
+										<ed:Value oid="!ed/6e1/7FCF/AC/639862323242"/>
+										<kcg:Pragma>
+											default
+										</kcg:Pragma>
+									</pragmas>
+								</Value>
+							</values>
+						</Enum>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/6de/7FCF/AC/639862324abe"/>
+					</pragmas>
+				</Type>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/6ce/7FCF/AC/639862106673" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/6cf/7FCF/AC/639862106a81" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/6d0/7FCF/AC/639862103424" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/6d1/7FCF/AC/639862104744" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>
