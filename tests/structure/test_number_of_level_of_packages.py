@@ -78,6 +78,7 @@ def test_number_of_level_of_packages_robustness(session: suite.Session, path, pa
     'path, param, expected',
     [
         ('Package1::', '11', _OK),
+        ('Package1::', '9', _OK),
         ('Package1::', '8', _FAILED),
     ],
 )
