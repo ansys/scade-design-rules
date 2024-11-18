@@ -24,7 +24,7 @@
 
 """Implements the NumberOfLevelOfPackages rule."""
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     from os.path import abspath, dirname
     import sys
@@ -84,6 +84,6 @@ class NumberOfLevelOfPackages(Rule):
         return level + 1
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     NumberOfLevelOfPackages()
