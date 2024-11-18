@@ -91,18 +91,18 @@
 								<ed:Equation oid="!ed/1ae/226/61C/6734c74922d7"/>
 							</pragmas>
 						</Equation>
-						<!-- _L3 = Libs::Op2_8(_L2); -->
+						<!-- _L3 = Libs::Op2(_L2); -->
 						<Equation>
 							<lefts>
 								<VariableRef name="_L3"/>
 							</lefts>
 							<right>
-								<!-- Libs::Op2_8(_L2) -->
+								<!-- Libs::Op2(_L2) -->
 								<CallExpression>
 									<operator>
 										<OpCall name="1">
 											<operator>
-												<OperatorRef name="Libs::Op2_8"/>
+												<OperatorRef name="Libs::Op2"/>
 											</operator>
 										</OpCall>
 									</operator>
@@ -116,7 +116,7 @@
 									<pragmas>
 										<ed:CallExpression xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 											<references>
-												<OperatorRef path="Libs::Op2_8" refOid="!ed/2a/226/61C/673476f0b7c">
+												<OperatorRef path="Libs::Op2" refOid="!ed/2a/226/61C/673476f0b7c">
 													<InputRef refOid="!ed/2d/226/61C/673476f04801"/>
 													<OutputRef refOid="!ed/2c/226/61C/673476f04506"/>
 												</OperatorRef>
@@ -269,18 +269,18 @@
 								<ed:Equation oid="!ed/537/226/61C/6736250e597a"/>
 							</pragmas>
 						</Equation>
-						<!-- _L4 = Libs::Op0_8(_L2); -->
+						<!-- _L4 = Libs::Op0(_L2); -->
 						<Equation>
 							<lefts>
 								<VariableRef name="_L4"/>
 							</lefts>
 							<right>
-								<!-- Libs::Op0_8(_L2) -->
+								<!-- Libs::Op0(_L2) -->
 								<CallExpression>
 									<operator>
 										<OpCall name="1">
 											<operator>
-												<OperatorRef name="Libs::Op0_8"/>
+												<OperatorRef name="Libs::Op0"/>
 											</operator>
 										</OpCall>
 									</operator>
@@ -294,7 +294,7 @@
 									<pragmas>
 										<ed:CallExpression xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 											<references>
-												<OperatorRef path="Libs::Op0_8" refOid="!ed/4a7/226/61C/6734cc2b25a0">
+												<OperatorRef path="Libs::Op0" refOid="!ed/4a7/226/61C/6734cc2b25a0">
 													<InputRef refOid="!ed/4e6/226/61C/6734cc3962ef"/>
 													<OutputRef refOid="!ed/4e7/226/61C/6734cc39319a"/>
 												</OperatorRef>

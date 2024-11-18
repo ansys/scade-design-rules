@@ -59,18 +59,18 @@
 						</Variable>
 					</locals>
 					<data>
-						<!-- _L7 = Libs::OpRestart1_8(_L8); -->
+						<!-- _L7 = Libs::OpRestart1(_L8); -->
 						<Equation>
 							<lefts>
 								<VariableRef name="_L7"/>
 							</lefts>
 							<right>
-								<!-- Libs::OpRestart1_8(_L8) -->
+								<!-- Libs::OpRestart1(_L8) -->
 								<CallExpression>
 									<operator>
 										<OpCall name="1">
 											<operator>
-												<OperatorRef name="Libs::OpRestart1_8"/>
+												<OperatorRef name="Libs::OpRestart1"/>
 											</operator>
 										</OpCall>
 									</operator>
@@ -84,7 +84,7 @@
 									<pragmas>
 										<ed:CallExpression xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 											<references>
-												<OperatorRef path="Libs::OpRestart1_8" refOid="!ed/1d6/226/61C/6734c7846fb5">
+												<OperatorRef path="Libs::OpRestart1" refOid="!ed/1d6/226/61C/6734c7846fb5">
 													<InputRef refOid="!ed/1e2/226/61C/6734c7901db5"/>
 													<OutputRef refOid="!ed/1e3/226/61C/6734c7906bf9"/>
 												</OperatorRef>
@@ -293,20 +293,20 @@
 								<ed:Equation oid="!ed/1a5/226/61C/6734c7401062"/>
 							</pragmas>
 						</Equation>
-						<!-- _L3 = (activate Libs::Op1_8 every _L1 initial default (false))(_L2); -->
+						<!-- _L3 = (activate Libs::Op1 every _L1 initial default (false))(_L2); -->
 						<Equation>
 							<lefts>
 								<VariableRef name="_L3"/>
 							</lefts>
 							<right>
-								<!-- (activate Libs::Op1_8 every _L1 initial default (false))(_L2) -->
+								<!-- (activate Libs::Op1 every _L1 initial default (false))(_L2) -->
 								<CallExpression>
 									<operator>
 										<ActivateOp name="2">
 											<operator>
 												<OpCall name="1">
 													<operator>
-														<OperatorRef name="Libs::Op1_8"/>
+														<OperatorRef name="Libs::Op1"/>
 													</operator>
 												</OpCall>
 											</operator>
@@ -336,7 +336,7 @@
 									<pragmas>
 										<ed:CallExpression xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 											<references>
-												<OperatorRef path="Libs::Op1_8" refOid="!ed/f0/226/61C/6734aeea3d8c">
+												<OperatorRef path="Libs::Op1" refOid="!ed/f0/226/61C/6734aeea3d8c">
 													<InputRef refOid="!ed/f8/226/61C/6734aef4434e"/>
 													<OutputRef refOid="!ed/f9/226/61C/6734aef4165"/>
 												</OperatorRef>
@@ -497,18 +497,18 @@
 												</Variable>
 											</locals>
 											<data>
-												<!-- _L2 = Libs::Op5_8(_L3); -->
+												<!-- _L2 = Libs::Op5(_L3); -->
 												<Equation>
 													<lefts>
 														<VariableRef name="_L2"/>
 													</lefts>
 													<right>
-														<!-- Libs::Op5_8(_L3) -->
+														<!-- Libs::Op5(_L3) -->
 														<CallExpression>
 															<operator>
 																<OpCall name="1">
 																	<operator>
-																		<OperatorRef name="Libs::Op5_8"/>
+																		<OperatorRef name="Libs::Op5"/>
 																	</operator>
 																</OpCall>
 															</operator>
@@ -522,7 +522,7 @@
 															<pragmas>
 																<ed:CallExpression xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 																	<references>
-																		<OperatorRef path="Libs::Op5_8" refOid="!ed/79/226/61C/6734861673ad">
+																		<OperatorRef path="Libs::Op5" refOid="!ed/79/226/61C/6734861673ad">
 																			<InputRef refOid="!ed/7c/226/61C/673486161aed"/>
 																			<OutputRef refOid="!ed/7b/226/61C/673486165173"/>
 																		</OperatorRef>
@@ -602,18 +602,18 @@
 												</Variable>
 											</locals>
 											<data>
-												<!-- _L1 = Libs::OpRestart1_8(_L2); -->
+												<!-- _L1 = Libs::OpRestart1(_L2); -->
 												<Equation>
 													<lefts>
 														<VariableRef name="_L1"/>
 													</lefts>
 													<right>
-														<!-- Libs::OpRestart1_8(_L2) -->
+														<!-- Libs::OpRestart1(_L2) -->
 														<CallExpression>
 															<operator>
 																<OpCall name="1">
 																	<operator>
-																		<OperatorRef name="Libs::OpRestart1_8"/>
+																		<OperatorRef name="Libs::OpRestart1"/>
 																	</operator>
 																</OpCall>
 															</operator>
@@ -627,7 +627,7 @@
 															<pragmas>
 																<ed:CallExpression xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 																	<references>
-																		<OperatorRef path="Libs::OpRestart1_8" refOid="!ed/1d6/226/61C/6734c7846fb5">
+																		<OperatorRef path="Libs::OpRestart1" refOid="!ed/1d6/226/61C/6734c7846fb5">
 																			<InputRef refOid="!ed/1e2/226/61C/6734c7901db5"/>
 																			<OutputRef refOid="!ed/1e3/226/61C/6734c7906bf9"/>
 																		</OperatorRef>
@@ -880,18 +880,18 @@
 								<ed:Equation oid="!ed/2e1/226/61C/6734c9a75a99"/>
 							</pragmas>
 						</Equation>
-						<!-- L1 = Libs::Op1_8(L2); -->
+						<!-- L1 = Libs::Op1(L2); -->
 						<Equation>
 							<lefts>
 								<VariableRef name="L1"/>
 							</lefts>
 							<right>
-								<!-- Libs::Op1_8(L2) -->
+								<!-- Libs::Op1(L2) -->
 								<CallExpression>
 									<operator>
 										<OpCall name="1">
 											<operator>
-												<OperatorRef name="Libs::Op1_8"/>
+												<OperatorRef name="Libs::Op1"/>
 											</operator>
 										</OpCall>
 									</operator>
@@ -905,7 +905,7 @@
 									<pragmas>
 										<ed:CallExpression xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 											<references>
-												<OperatorRef path="Libs::Op1_8" refOid="!ed/f0/226/61C/6734aeea3d8c">
+												<OperatorRef path="Libs::Op1" refOid="!ed/f0/226/61C/6734aeea3d8c">
 													<InputRef refOid="!ed/f8/226/61C/6734aef4434e"/>
 													<OutputRef refOid="!ed/f9/226/61C/6734aef4165"/>
 												</OperatorRef>
@@ -988,12 +988,12 @@
 												<StateRef name="State2"/>
 											</target>
 											<condition>
-												<!-- Libs::Op1_8(Input1) -->
+												<!-- Libs::Op1(Input1) -->
 												<CallExpression>
 													<operator>
 														<OpCall name="2">
 															<operator>
-																<OperatorRef name="Libs::Op1_8"/>
+																<OperatorRef name="Libs::Op1"/>
 															</operator>
 														</OpCall>
 													</operator>
@@ -1007,7 +1007,7 @@
 													<pragmas>
 														<ed:CallExpression xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 															<references>
-																<OperatorRef path="Libs::Op1_8" refOid="!ed/f0/226/61C/6734aeea3d8c">
+																<OperatorRef path="Libs::Op1" refOid="!ed/f0/226/61C/6734aeea3d8c">
 																	<InputRef refOid="!ed/f8/226/61C/6734aef4434e"/>
 																	<OutputRef refOid="!ed/f9/226/61C/6734aef4165"/>
 																</OperatorRef>
@@ -1076,12 +1076,12 @@
 												<StateRef name="State1"/>
 											</target>
 											<condition>
-												<!-- Libs::Op2_8(Input1) -->
+												<!-- Libs::Op2(Input1) -->
 												<CallExpression>
 													<operator>
 														<OpCall name="1">
 															<operator>
-																<OperatorRef name="Libs::Op2_8"/>
+																<OperatorRef name="Libs::Op2"/>
 															</operator>
 														</OpCall>
 													</operator>
@@ -1095,7 +1095,7 @@
 													<pragmas>
 														<ed:CallExpression xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 															<references>
-																<OperatorRef path="Libs::Op2_8" refOid="!ed/2a/226/61C/673476f0b7c">
+																<OperatorRef path="Libs::Op2" refOid="!ed/2a/226/61C/673476f0b7c">
 																	<InputRef refOid="!ed/2d/226/61C/673476f04801"/>
 																	<OutputRef refOid="!ed/2c/226/61C/673476f04506"/>
 																</OperatorRef>
@@ -1340,18 +1340,18 @@
 								<ed:Equation oid="!ed/489/226/61C/6734cb702b6e"/>
 							</pragmas>
 						</Equation>
-						<!-- _L2 = Libs::Op1_8(Input1); -->
+						<!-- _L2 = Libs::Op1(Input1); -->
 						<Equation>
 							<lefts>
 								<VariableRef name="_L2"/>
 							</lefts>
 							<right>
-								<!-- Libs::Op1_8(Input1) -->
+								<!-- Libs::Op1(Input1) -->
 								<CallExpression>
 									<operator>
 										<OpCall name="1">
 											<operator>
-												<OperatorRef name="Libs::Op1_8"/>
+												<OperatorRef name="Libs::Op1"/>
 											</operator>
 										</OpCall>
 									</operator>
@@ -1365,7 +1365,7 @@
 									<pragmas>
 										<ed:CallExpression xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 											<references>
-												<OperatorRef path="Libs::Op1_8" refOid="!ed/f0/226/61C/6734aeea3d8c">
+												<OperatorRef path="Libs::Op1" refOid="!ed/f0/226/61C/6734aeea3d8c">
 													<InputRef refOid="!ed/f8/226/61C/6734aef4434e"/>
 													<OutputRef refOid="!ed/f9/226/61C/6734aef4165"/>
 												</OperatorRef>
@@ -1494,18 +1494,18 @@
 						</Variable>
 					</locals>
 					<data>
-						<!-- _L1 = Libs::Op0_8(_L3); -->
+						<!-- _L1 = Libs::Op0(_L3); -->
 						<Equation>
 							<lefts>
 								<VariableRef name="_L1"/>
 							</lefts>
 							<right>
-								<!-- Libs::Op0_8(_L3) -->
+								<!-- Libs::Op0(_L3) -->
 								<CallExpression>
 									<operator>
 										<OpCall name="1">
 											<operator>
-												<OperatorRef name="Libs::Op0_8"/>
+												<OperatorRef name="Libs::Op0"/>
 											</operator>
 										</OpCall>
 									</operator>
@@ -1519,7 +1519,7 @@
 									<pragmas>
 										<ed:CallExpression xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 											<references>
-												<OperatorRef path="Libs::Op0_8" refOid="!ed/4a7/226/61C/6734cc2b25a0">
+												<OperatorRef path="Libs::Op0" refOid="!ed/4a7/226/61C/6734cc2b25a0">
 													<InputRef refOid="!ed/4e6/226/61C/6734cc3962ef"/>
 													<OutputRef refOid="!ed/4e7/226/61C/6734cc39319a"/>
 												</OperatorRef>
@@ -1532,18 +1532,18 @@
 								<ed:Equation oid="!ed/4ef/226/61C/6734cc4d35ad"/>
 							</pragmas>
 						</Equation>
-						<!-- _L2 = Libs::Op1_8(_L3); -->
+						<!-- _L2 = Libs::Op1(_L3); -->
 						<Equation>
 							<lefts>
 								<VariableRef name="_L2"/>
 							</lefts>
 							<right>
-								<!-- Libs::Op1_8(_L3) -->
+								<!-- Libs::Op1(_L3) -->
 								<CallExpression>
 									<operator>
 										<OpCall name="1">
 											<operator>
-												<OperatorRef name="Libs::Op1_8"/>
+												<OperatorRef name="Libs::Op1"/>
 											</operator>
 										</OpCall>
 									</operator>
@@ -1557,7 +1557,7 @@
 									<pragmas>
 										<ed:CallExpression xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 											<references>
-												<OperatorRef path="Libs::Op1_8" refOid="!ed/f0/226/61C/6734aeea3d8c">
+												<OperatorRef path="Libs::Op1" refOid="!ed/f0/226/61C/6734aeea3d8c">
 													<InputRef refOid="!ed/f8/226/61C/6734aef4434e"/>
 													<OutputRef refOid="!ed/f9/226/61C/6734aef4165"/>
 												</OperatorRef>
@@ -1808,18 +1808,18 @@
 								<ed:Equation oid="!ed/56b/226/61C/6736264c21dd"/>
 							</pragmas>
 						</Equation>
-						<!-- _L4 = Libs::Op0_8(_L2); -->
+						<!-- _L4 = Libs::Op0(_L2); -->
 						<Equation>
 							<lefts>
 								<VariableRef name="_L4"/>
 							</lefts>
 							<right>
-								<!-- Libs::Op0_8(_L2) -->
+								<!-- Libs::Op0(_L2) -->
 								<CallExpression>
 									<operator>
 										<OpCall name="1">
 											<operator>
-												<OperatorRef name="Libs::Op0_8"/>
+												<OperatorRef name="Libs::Op0"/>
 											</operator>
 										</OpCall>
 									</operator>
@@ -1833,7 +1833,7 @@
 									<pragmas>
 										<ed:CallExpression xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 											<references>
-												<OperatorRef path="Libs::Op0_8" refOid="!ed/4a7/226/61C/6734cc2b25a0">
+												<OperatorRef path="Libs::Op0" refOid="!ed/4a7/226/61C/6734cc2b25a0">
 													<InputRef refOid="!ed/4e6/226/61C/6734cc3962ef"/>
 													<OutputRef refOid="!ed/4e7/226/61C/6734cc39319a"/>
 												</OperatorRef>

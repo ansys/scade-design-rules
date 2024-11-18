@@ -3,7 +3,7 @@
 	<declarations>
 		<Package visibility="private" name="Libs">
 			<declarations>
-				<Operator kind="function" name="Op3_8">
+				<Operator kind="function" name="Op3">
 					<inputs>
 						<Variable name="Input1">
 							<type>
@@ -91,18 +91,18 @@
 								<ed:Equation oid="!ed/65/226/61C/67348539831"/>
 							</pragmas>
 						</Equation>
-						<!-- _L3 = Op4_8(_L2); -->
+						<!-- _L3 = Op4(_L2); -->
 						<Equation>
 							<lefts>
 								<VariableRef name="_L3"/>
 							</lefts>
 							<right>
-								<!-- Op4_8(_L2) -->
+								<!-- Op4(_L2) -->
 								<CallExpression>
 									<operator>
 										<OpCall name="1">
 											<operator>
-												<OperatorRef name="Op4_8"/>
+												<OperatorRef name="Op4"/>
 											</operator>
 										</OpCall>
 									</operator>
@@ -123,7 +123,7 @@
 					<pragmas>
 						<ed:Operator oid="!ed/1e/226/61C/673476df4ce4" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 							<diagrams>
-								<NetDiagram name="Op3_8" landscape="true" format="A4 (210 297)" oid="!ed/1f/226/61C/673476df1c48">
+								<NetDiagram name="Op3" landscape="true" format="A4 (210 297)" oid="!ed/1f/226/61C/673476df1c48">
 									<presentationElements>
 										<EquationGE presentable="!ed/5f/226/61C/6734852f77c5">
 											<position>
@@ -171,7 +171,7 @@
 						</ed:Operator>
 					</pragmas>
 				</Operator>
-				<Operator kind="function" name="Op2_8">
+				<Operator kind="function" name="Op2">
 					<inputs>
 						<Variable name="Input1">
 							<type>
@@ -259,18 +259,18 @@
 								<ed:Equation oid="!ed/6c/226/61C/67348546740e"/>
 							</pragmas>
 						</Equation>
-						<!-- _L3 = Op3_8(_L2); -->
+						<!-- _L3 = Op3(_L2); -->
 						<Equation>
 							<lefts>
 								<VariableRef name="_L3"/>
 							</lefts>
 							<right>
-								<!-- Op3_8(_L2) -->
+								<!-- Op3(_L2) -->
 								<CallExpression>
 									<operator>
 										<OpCall name="1">
 											<operator>
-												<OperatorRef name="Op3_8"/>
+												<OperatorRef name="Op3"/>
 											</operator>
 										</OpCall>
 									</operator>
@@ -291,7 +291,7 @@
 					<pragmas>
 						<ed:Operator oid="!ed/2a/226/61C/673476f0b7c" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 							<diagrams>
-								<NetDiagram name="Op2_8" landscape="true" format="A4 (210 297)" oid="!ed/2b/226/61C/673476f05526">
+								<NetDiagram name="Op2" landscape="true" format="A4 (210 297)" oid="!ed/2b/226/61C/673476f05526">
 									<presentationElements>
 										<EquationGE presentable="!ed/6a/226/61C/6734854679eb">
 											<position>
@@ -339,7 +339,7 @@
 						</ed:Operator>
 					</pragmas>
 				</Operator>
-				<Operator kind="function" name="Op4_8">
+				<Operator kind="function" name="Op4">
 					<inputs>
 						<Variable name="Input1">
 							<type>
@@ -395,18 +395,18 @@
 						</Variable>
 					</locals>
 					<data>
-						<!-- _L1 = Op5_8(_L2); -->
+						<!-- _L1 = Op5(_L2); -->
 						<Equation>
 							<lefts>
 								<VariableRef name="_L1"/>
 							</lefts>
 							<right>
-								<!-- Op5_8(_L2) -->
+								<!-- Op5(_L2) -->
 								<CallExpression>
 									<operator>
 										<OpCall name="1">
 											<operator>
-												<OperatorRef name="Op5_8"/>
+												<OperatorRef name="Op5"/>
 											</operator>
 										</OpCall>
 									</operator>
@@ -459,7 +459,7 @@
 					<pragmas>
 						<ed:Operator oid="!ed/3c/226/61C/673477025420" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 							<diagrams>
-								<NetDiagram name="Op4_8" landscape="true" format="A4 (210 297)" oid="!ed/3d/226/61C/673477027b4a">
+								<NetDiagram name="Op4" landscape="true" format="A4 (210 297)" oid="!ed/3d/226/61C/673477027b4a">
 									<presentationElements>
 										<EquationGE presentable="!ed/a1/226/61C/673486575136">
 											<position>
@@ -507,7 +507,7 @@
 						</ed:Operator>
 					</pragmas>
 				</Operator>
-				<Operator kind="function" name="Op5_8">
+				<Operator kind="function" name="Op5">
 					<inputs>
 						<Variable name="Input1">
 							<type>
@@ -563,18 +563,18 @@
 						</Variable>
 					</locals>
 					<data>
-						<!-- _L1 = Op6_8(_L2); -->
+						<!-- _L1 = Op6(_L2); -->
 						<Equation>
 							<lefts>
 								<VariableRef name="_L1"/>
 							</lefts>
 							<right>
-								<!-- Op6_8(_L2) -->
+								<!-- Op6(_L2) -->
 								<CallExpression>
 									<operator>
 										<OpCall name="1">
 											<operator>
-												<OperatorRef name="Op6_8"/>
+												<OperatorRef name="Op6"/>
 											</operator>
 										</OpCall>
 									</operator>
@@ -627,7 +627,7 @@
 					<pragmas>
 						<ed:Operator oid="!ed/79/226/61C/6734861673ad" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 							<diagrams>
-								<NetDiagram name="Op5_8" landscape="true" format="A4 (210 297)" oid="!ed/7a/226/61C/67348616681e">
+								<NetDiagram name="Op5" landscape="true" format="A4 (210 297)" oid="!ed/7a/226/61C/67348616681e">
 									<presentationElements>
 										<EquationGE presentable="!ed/a7/226/61C/6734865a7490">
 											<position>
@@ -675,7 +675,7 @@
 						</ed:Operator>
 					</pragmas>
 				</Operator>
-				<Operator kind="function" name="Op6_8">
+				<Operator kind="function" name="Op6">
 					<inputs>
 						<Variable name="Input1">
 							<type>
@@ -731,18 +731,18 @@
 						</Variable>
 					</locals>
 					<data>
-						<!-- _L1 = Op7_8(_L2); -->
+						<!-- _L1 = Op7(_L2); -->
 						<Equation>
 							<lefts>
 								<VariableRef name="_L1"/>
 							</lefts>
 							<right>
-								<!-- Op7_8(_L2) -->
+								<!-- Op7(_L2) -->
 								<CallExpression>
 									<operator>
 										<OpCall name="1">
 											<operator>
-												<OperatorRef name="Op7_8"/>
+												<OperatorRef name="Op7"/>
 											</operator>
 										</OpCall>
 									</operator>
@@ -795,7 +795,7 @@
 					<pragmas>
 						<ed:Operator oid="!ed/85/226/61C/6734861d2a9a" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 							<diagrams>
-								<NetDiagram name="Op6_8" landscape="true" format="A4 (210 297)" oid="!ed/86/226/61C/6734861d688f">
+								<NetDiagram name="Op6" landscape="true" format="A4 (210 297)" oid="!ed/86/226/61C/6734861d688f">
 									<presentationElements>
 										<EquationGE presentable="!ed/ad/226/61C/6734865d32fe">
 											<position>
@@ -843,7 +843,7 @@
 						</ed:Operator>
 					</pragmas>
 				</Operator>
-				<Operator kind="function" name="Op7_8">
+				<Operator kind="function" name="Op7">
 					<inputs>
 						<Variable name="Input1">
 							<type>
@@ -899,18 +899,18 @@
 						</Variable>
 					</locals>
 					<data>
-						<!-- _L1 = Op8_8(_L2); -->
+						<!-- _L1 = Op8(_L2); -->
 						<Equation>
 							<lefts>
 								<VariableRef name="_L1"/>
 							</lefts>
 							<right>
-								<!-- Op8_8(_L2) -->
+								<!-- Op8(_L2) -->
 								<CallExpression>
 									<operator>
 										<OpCall name="1">
 											<operator>
-												<OperatorRef name="Op8_8"/>
+												<OperatorRef name="Op8"/>
 											</operator>
 										</OpCall>
 									</operator>
@@ -963,7 +963,7 @@
 					<pragmas>
 						<ed:Operator oid="!ed/91/226/61C/67348622208c" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 							<diagrams>
-								<NetDiagram name="Op7_8" landscape="true" format="A4 (210 297)" oid="!ed/92/226/61C/67348622558f">
+								<NetDiagram name="Op7" landscape="true" format="A4 (210 297)" oid="!ed/92/226/61C/67348622558f">
 									<presentationElements>
 										<EquationGE presentable="!ed/b3/226/61C/673486605157">
 											<position>
@@ -1011,7 +1011,7 @@
 						</ed:Operator>
 					</pragmas>
 				</Operator>
-				<Operator kind="function" name="Op8_8">
+				<Operator kind="function" name="Op8">
 					<inputs>
 						<Variable name="Input1">
 							<type>
@@ -1091,7 +1091,7 @@
 					<pragmas>
 						<ed:Operator oid="!ed/9d/226/61C/6734862a3322" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 							<diagrams>
-								<NetDiagram name="Op8_8" landscape="true" format="A4 (210 297)" oid="!ed/9e/226/61C/6734862a28a7">
+								<NetDiagram name="Op8" landscape="true" format="A4 (210 297)" oid="!ed/9e/226/61C/6734862a28a7">
 									<presentationElements>
 										<EquationGE presentable="!ed/16e/226/61C/6734afd14e02">
 											<position>
@@ -1123,7 +1123,7 @@
 						</ed:Operator>
 					</pragmas>
 				</Operator>
-				<Operator kind="function" name="Op1_8">
+				<Operator kind="function" name="Op1">
 					<inputs>
 						<Variable name="Input1">
 							<type>
@@ -1179,18 +1179,18 @@
 						</Variable>
 					</locals>
 					<data>
-						<!-- _L1 = Op2_8(_L2); -->
+						<!-- _L1 = Op2(_L2); -->
 						<Equation>
 							<lefts>
 								<VariableRef name="_L1"/>
 							</lefts>
 							<right>
-								<!-- Op2_8(_L2) -->
+								<!-- Op2(_L2) -->
 								<CallExpression>
 									<operator>
 										<OpCall name="1">
 											<operator>
-												<OperatorRef name="Op2_8"/>
+												<OperatorRef name="Op2"/>
 											</operator>
 										</OpCall>
 									</operator>
@@ -1243,7 +1243,7 @@
 					<pragmas>
 						<ed:Operator oid="!ed/f0/226/61C/6734aeea3d8c" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 							<diagrams>
-								<NetDiagram name="Op1_8" landscape="true" format="A4 (210 297)" oid="!ed/f1/226/61C/6734aeea54bc">
+								<NetDiagram name="Op1" landscape="true" format="A4 (210 297)" oid="!ed/f1/226/61C/6734aeea54bc">
 									<presentationElements>
 										<EquationGE presentable="!ed/f2/226/61C/6734aef255d3">
 											<position>
@@ -1291,7 +1291,7 @@
 						</ed:Operator>
 					</pragmas>
 				</Operator>
-				<Operator kind="node" name="OpRestart1_8">
+				<Operator kind="node" name="OpRestart1">
 					<inputs>
 						<Variable name="Input1">
 							<type>
@@ -1359,20 +1359,20 @@
 						</Variable>
 					</locals>
 					<data>
-						<!-- _L1 = (restart Op2_8 every _L3)(_L2); -->
+						<!-- _L1 = (restart Op2 every _L3)(_L2); -->
 						<Equation>
 							<lefts>
 								<VariableRef name="_L1"/>
 							</lefts>
 							<right>
-								<!-- (restart Op2_8 every _L3)(_L2) -->
+								<!-- (restart Op2 every _L3)(_L2) -->
 								<CallExpression>
 									<operator>
 										<RestartOp name="1">
 											<operator>
 												<OpCall name="1">
 													<operator>
-														<OperatorRef name="Op2_8"/>
+														<OperatorRef name="Op2"/>
 													</operator>
 												</OpCall>
 											</operator>
@@ -1446,7 +1446,7 @@
 					<pragmas>
 						<ed:Operator oid="!ed/1d6/226/61C/6734c7846fb5" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 							<diagrams>
-								<NetDiagram name="OpRestart1_8" landscape="true" format="A4 (210 297)" oid="!ed/1d7/226/61C/6734c784685d">
+								<NetDiagram name="OpRestart1" landscape="true" format="A4 (210 297)" oid="!ed/1d7/226/61C/6734c784685d">
 									<presentationElements>
 										<EquationGE presentable="!ed/1e4/226/61C/6734c7907da7">
 											<position>
@@ -1509,7 +1509,7 @@
 						</ed:Operator>
 					</pragmas>
 				</Operator>
-				<Operator kind="function" name="Op0_8">
+				<Operator kind="function" name="Op0">
 					<inputs>
 						<Variable name="Input1">
 							<type>
@@ -1565,18 +1565,18 @@
 						</Variable>
 					</locals>
 					<data>
-						<!-- _L1 = Op1_8(_L2); -->
+						<!-- _L1 = Op1(_L2); -->
 						<Equation>
 							<lefts>
 								<VariableRef name="_L1"/>
 							</lefts>
 							<right>
-								<!-- Op1_8(_L2) -->
+								<!-- Op1(_L2) -->
 								<CallExpression>
 									<operator>
 										<OpCall name="1">
 											<operator>
-												<OperatorRef name="Op1_8"/>
+												<OperatorRef name="Op1"/>
 											</operator>
 										</OpCall>
 									</operator>
@@ -1629,7 +1629,7 @@
 					<pragmas>
 						<ed:Operator oid="!ed/4a7/226/61C/6734cc2b25a0" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 							<diagrams>
-								<NetDiagram name="Op0_8" landscape="true" format="A4 (210 297)" oid="!ed/4a8/226/61C/6734cc2b1cec">
+								<NetDiagram name="Op0" landscape="true" format="A4 (210 297)" oid="!ed/4a8/226/61C/6734cc2b1cec">
 									<presentationElements>
 										<EquationGE presentable="!ed/4e0/226/61C/6734cc371064">
 											<position>
