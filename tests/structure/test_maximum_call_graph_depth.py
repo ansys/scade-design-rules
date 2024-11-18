@@ -47,6 +47,7 @@ def session():
 
 class TestMaximumCallGraphDepth(MaximumCallGraphDepth):
     __test__ = False
+
     def __init__(self, parameter=None, **kwargs):
         self.parameter = parameter
         super().__init__(id='', parameter=self.parameter, **kwargs)
@@ -65,6 +66,7 @@ class TestMaximumCallGraphDepth(MaximumCallGraphDepth):
     [
         # default parameters
         ('Success::NominalPass/', 'depth=8,visibility=Public', _OK),
+        ('Success::NominalPass/', 'depth=6,visibility=Public', _FAILED),
         ('Failure::NominalFailed/', 'depth=8,visibility=Public', _FAILED),
         ('Success::NominalPrivate/', 'depth=8,visibility=Public', _NA),
         ('Success::NominalPrivate/', 'depth=8,visibility=Private', _FAILED),
@@ -85,3 +87,22 @@ def test_max_call_graph_depth_nominal(session: suite.Session, path, param, expec
     status = rule.on_check(op)
     assert status == expected
 
+
+@pytest.mark.parametrize(
+    'path, param, expected_start, expected_status',
+    [
+        # default parameters
+        ('Success::NominalPass/', 'depth=-1999,visibility=Private', _ERROR, _ERROR),
+        ('Success::NominalPrivate/', 'depth=8', _ERROR, _ERROR),
+        ('Success::NominalPrivate/', 'visibility=Private', _ERROR, _ERROR),
+        ('Success::NominalPrivate/', 'depth=8,visibility=Public1', _OK, _FAILED),
+    ],
+)
+def test_max_call_graph_depth_robustness(session: suite.Session, path, param, expected_start, expected_status):
+    model = session.model
+    op = model.get_object_from_path(path)
+    rule = TestMaximumCallGraphDepth(parameter=param)
+    assert rule.on_start(op) == expected_start
+    if expected_start == _OK:
+        status = rule.on_check(op)
+        assert status == expected_status
