@@ -91,7 +91,7 @@ def test_max_call_graph_depth_nominal(session: suite.Session, path, param, expec
 @pytest.mark.parametrize(
     'path, param, expected_start, expected_status',
     [
-        # default parameters
+        ('Success::NominalPass/', '', _ERROR, _ERROR),
         ('Success::NominalPass/', 'depth=-1999,visibility=Private', _ERROR, _ERROR),
         ('Success::NominalPrivate/', 'depth=8', _ERROR, _ERROR),
         ('Success::NominalPrivate/', 'visibility=Private', _ERROR, _ERROR),
