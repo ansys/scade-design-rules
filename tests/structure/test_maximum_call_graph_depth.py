@@ -67,6 +67,7 @@ class TestMaximumCallGraphDepth(MaximumCallGraphDepth):
         ('Success::NominalPass/', 'depth=8,visibility=Public', _OK),
         ('Failure::NominalFailed/', 'depth=8,visibility=Public', _FAILED),
         ('Success::NominalPrivate/', 'depth=8,visibility=Public', _NA),
+        ('Success::NominalPrivate/', 'depth=8,visibility=Private', _FAILED),
         ('Failure::BooleanActivate/', 'depth=8,visibility=Public', _FAILED),
         ('Failure::IfBlock/', 'depth=8,visibility=Public', _FAILED),
         ('Failure::MultipleFailures/', 'depth=8,visibility=Public', _FAILED),
