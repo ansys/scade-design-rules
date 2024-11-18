@@ -691,7 +691,7 @@
 					<pragmas>
 						<ed:Operator oid="!ed/26b/226/61C/6734c87939cd" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 							<diagrams>
-								<NetDiagram name="IfBlock_1" landscape="true" format="A4 (210 297)" oid="!ed/26c/226/61C/6734c879790f">
+								<NetDiagram name="IfBlock" landscape="true" format="A4 (210 297)" oid="!ed/26c/226/61C/6734c879790f">
 									<presentationElements>
 										<IfBlockGE presentable="!ed/272/226/61C/6734c89e4f29">
 											<position>
@@ -1382,7 +1382,7 @@
 					<pragmas>
 						<ed:Operator oid="!ed/483/226/61C/6734cb627691" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 							<diagrams>
-								<NetDiagram name="TextualExpression_1" landscape="true" format="A4 (210 297)" oid="!ed/484/226/61C/6734cb6275a6">
+								<NetDiagram name="TextualExpression" landscape="true" format="A4 (210 297)" oid="!ed/484/226/61C/6734cb6275a6">
 									<presentationElements>
 										<EquationGE presentable="!ed/489/226/61C/6734cb702b6e">
 											<position>
@@ -1632,7 +1632,7 @@
 					<pragmas>
 						<ed:Operator oid="!ed/4a5/226/61C/6734cbb1671" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 							<diagrams>
-								<NetDiagram name="MultipleFailures_1" landscape="true" format="A4 (210 297)" oid="!ed/4a6/226/61C/6734cbb1f17">
+								<NetDiagram name="MultipleFailures" landscape="true" format="A4 (210 297)" oid="!ed/4a6/226/61C/6734cbb1f17">
 									<presentationElements>
 										<EquationGE presentable="!ed/4ef/226/61C/6734cc4d35ad">
 											<position>
