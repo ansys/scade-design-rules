@@ -30,3 +30,4 @@ mapfold
 mapfoldi
 mapfoldw
 mapfoldwi
+ci
