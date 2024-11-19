@@ -24,7 +24,7 @@
 
 """Implements the MaximumCallGraphDepth rule."""
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     from os.path import abspath, dirname
     import sys
@@ -116,6 +116,6 @@ class MaximumCallGraphDepth(Rule):
         return [operator.name] + max_sub_call_graph
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     MaximumCallGraphDepth()
