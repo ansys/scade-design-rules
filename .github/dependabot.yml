@@ -14,12 +14,8 @@ updates:
     groups:
       dependencies:
           patterns:
-            - "ansys-sphinx-theme*"
-            - "sphinx*"
-            - "nbsphinx"
-            - "numpydoc"
-            - "sphinx"
-            - "jupyter_sphinx"
+            # group all dependencies to minimize repository management
+            - "*"
 
   - package-ecosystem: "github-actions"
     directory: "/"
