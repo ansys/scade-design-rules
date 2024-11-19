@@ -98,7 +98,9 @@ def test_max_call_graph_depth_nominal(session: suite.Session, path, param, expec
         ('Success::NominalPrivate/', 'depth=8,visibility=Public1', _OK, _FAILED),
     ],
 )
-def test_max_call_graph_depth_robustness(session: suite.Session, path, param, expected_start, expected_status):
+def test_max_call_graph_depth_robustness(
+    session: suite.Session, path, param, expected_start, expected_status
+):
     model = session.model
     op = model.get_object_from_path(path)
     rule = TestMaximumCallGraphDepth(parameter=param)
