@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="136" defaultConfiguration="23">
+<Project id="1" oid_count="144" defaultConfiguration="23">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -307,6 +307,51 @@
 			<value>54</value>
 			<value>57</value>
 			<value>65</value>
+		</Prop>
+		<Prop id="137" name="@STUDIO:TOOLCONF">
+			<value>DiffAnalyzer</value>
+			<value>14</value>
+			<value>23</value>
+			<value>34</value>
+			<value>39</value>
+			<value>44</value>
+			<value>54</value>
+			<value>57</value>
+			<value>65</value>
+		</Prop>
+		<Prop id="138" name="@STUDIO:TOOLCONF">
+			<value>Synchronization</value>
+			<value>14</value>
+			<value>23</value>
+			<value>34</value>
+			<value>39</value>
+			<value>44</value>
+			<value>54</value>
+			<value>57</value>
+			<value>65</value>
+		</Prop>
+		<Prop id="139" name="@STUDIO:TOOLCONF">
+			<value>Import/Export</value>
+			<value>14</value>
+			<value>23</value>
+			<value>34</value>
+			<value>39</value>
+			<value>44</value>
+			<value>54</value>
+			<value>57</value>
+			<value>65</value>
+		</Prop>
+		<Prop id="142" name="@METRICS_RULES:SELECTED_ROOTS">
+			<value>NumberOfLevelOfPackages</value>
+			<configuration>54</configuration>
+		</Prop>
+		<Prop id="143" name="@METRICS_RULES:RULES_PARAM">
+			<value>id_0068,10</value>
+			<configuration>54</configuration>
+		</Prop>
+		<Prop id="144" name="@METRICS_RULES:SELECTED_RULES">
+			<value>id_0068</value>
+			<configuration>54</configuration>
 		</Prop>
 	</props>
 	<roots>
