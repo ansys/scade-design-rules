@@ -305,8 +305,9 @@ def update_doc(root: Path) -> int:
                 print('%s/%s: no rst file' % (doc.name, rule.name))
                 # create a default rst file from the template
                 if instance:
+                    tokens = name.split('_')
                     context = {
-                        'title': ' '.join([_.capitalize() for _ in name.split('_')]),
+                        'title': ' '.join([tokens[0].capitalize()] + tokens[1:]),
                         'file': rule.name,
                         'class': type(instance).__name__,
                         'category': doc.stem,
@@ -331,7 +332,9 @@ def update_doc(root: Path) -> int:
 
 
 if __name__ == '__main__':
-    if not importlib.util.find_spec('scade'):
+    try:
+        from ansys.scade.apitools import declare_project  # noqa: F401
+    except ModuleNotFoundError:
         # scade not installed on the runner, skip the check
         sys.exit(0)
     # dir must be the root of the repository
