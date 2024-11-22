@@ -18,8 +18,8 @@ Description
 
 .. start_description
 
-Name shall start with 'parameter'
-parameter: starting string, for example: 'eq\_'
+Name shall start with 'parameter'.
+Parameter: starting string, for example: 'eq\_'
 
 .. end_description
 

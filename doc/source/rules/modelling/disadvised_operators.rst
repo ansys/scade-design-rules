@@ -11,7 +11,7 @@ Not recommended operators
    :kind: generic
    :tags: modelling
 
-   Not Recommended Operators
+   Not recommended operators
 
 Description
 -----------

@@ -21,7 +21,7 @@ Description
 This rule checks if the page format is set properly.
 param1: format=A3 A4 B5 etc.
 param2: orientation=Portrait Landscape
-e.g.: format=A3,orientation=Landscape
+For example: format=A3,orientation=Landscape
 
 .. end_description
 

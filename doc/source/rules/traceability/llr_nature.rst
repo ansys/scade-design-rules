@@ -10,7 +10,7 @@ CE nature
    :reference: TRA_REQ_002
    :tags: scade_llr
 
-   Contributing elements must have a design annotation
+   CE must have a design annotation
 
 Description
 -----------

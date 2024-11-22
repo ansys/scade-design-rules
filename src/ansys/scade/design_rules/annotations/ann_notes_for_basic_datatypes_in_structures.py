@@ -58,8 +58,8 @@ class AnnNotesForBasicDataTypesInStructures(AnnotationRule):
         description=(
             'Sub-element of structure definitions for component I/O and TPCs that has basic '
             'datatypes shall be described with below information in its notes field\n'
-            '* Description:\n* Constraints:\n'
-            'If not Booleans\n* Min_Value:\n* Max_Value:\n* Unit(SI):\n'
+            '* Description:\n* Constraints:\n\n'
+            'If not Booleans\n* Min_Value:\n* Max_Value:\n* Unit(SI):\n\n'
             "parameter: '-t': Name of the annotation note type: e.g.: '-t SDD_TopLevel'"
         ),
         label='AnnotationNotes for basic data types in structures',

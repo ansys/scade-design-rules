@@ -10,7 +10,7 @@ CE nature equation set
    :reference: TRA_REQ_002
    :tags: only_eqs
 
-   Contributing elements must have a design annotation
+   CE must have a design annotation
 
 Description
 -----------

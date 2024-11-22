@@ -10,7 +10,7 @@ Architecture CE
    :reference: TRA_REQ_003, TRA_REQ_003_3
    :tags: scade_llr llr_or_net
 
-   'Architecture' contributing elements
+   'Architecture' CE
 
 Description
 -----------

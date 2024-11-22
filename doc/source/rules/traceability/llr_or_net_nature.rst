@@ -10,11 +10,11 @@ CE or diagram nature
    :reference: TRA_REQ_002
    :tags: llr_or_net
 
-   Contributing elements must have a design annotation
+   CE must have a design annotation
 
 Description
 -----------
-The contributing elements shall have an annotation 'DesignElement' with a property 'Nature'.
+The Contributing Elements (CE) shall have an annotation 'DesignElement' with a property 'Nature'.
 Parameter: '-t': Name of the note type: e.g.: '-t DesignElement'
 
 .. end_description
