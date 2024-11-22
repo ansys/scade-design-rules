@@ -1,4 +1,4 @@
-.. index:: single: Number Of Nested Activate Blocks
+.. index:: single: Number of nested activate blocks
 
 Number of nested activate blocks
 ================================

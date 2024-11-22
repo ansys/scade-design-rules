@@ -1,4 +1,4 @@
-.. index:: single: Number Of Outgoing Transitions Per State
+.. index:: single: Number of outgoing transitions per state
 
 Number of outgoing transitions per state
 ========================================

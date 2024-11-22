@@ -1,4 +1,4 @@
-.. index:: single: Name Shall Not Start With
+.. index:: single: Name shall not start with
 
 Name shall not start with
 =========================

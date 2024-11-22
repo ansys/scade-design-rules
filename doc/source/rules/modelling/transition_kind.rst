@@ -1,4 +1,4 @@
-.. index:: single: Transition Kind
+.. index:: single: Transition kind
 
 Transition kind
 ===============

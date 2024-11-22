@@ -1,4 +1,4 @@
-.. index:: single: CE Nature
+.. index:: single: CE nature
 
 CE nature
 =========

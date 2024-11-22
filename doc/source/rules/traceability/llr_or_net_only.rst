@@ -1,4 +1,4 @@
-.. index:: single: Tracing Elements Diagram
+.. index:: single: Tracing elements or diagrams
 
 Tracing elements or diagrams
 ============================

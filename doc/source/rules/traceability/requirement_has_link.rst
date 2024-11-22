@@ -1,4 +1,4 @@
-.. index:: single: Requirement Has Link
+.. index:: single: Requirement has link
 
 Requirement has link
 ====================

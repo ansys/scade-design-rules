@@ -1,4 +1,4 @@
-.. index:: single: Name Structure Enumeration
+.. index:: single: Enumeration name structure
 
 Enumeration name structure
 ==========================

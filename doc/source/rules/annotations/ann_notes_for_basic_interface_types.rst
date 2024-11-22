@@ -1,4 +1,4 @@
-.. index:: single: Ann Notes For Basic Interface Types
+.. index:: single: Ann notes for basic interface types
 
 Ann notes for basic interface types
 ===================================

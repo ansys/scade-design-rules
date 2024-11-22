@@ -1,4 +1,4 @@
-.. index:: single: State Machine Has Default State
+.. index:: single: State machine has default state
 
 State machine has default state
 ===============================

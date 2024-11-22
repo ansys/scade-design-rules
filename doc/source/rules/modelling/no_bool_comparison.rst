@@ -1,4 +1,4 @@
-.. index:: single: No Boolean Comparison
+.. index:: single: No boolean comparison
 
 No boolean comparison
 =====================

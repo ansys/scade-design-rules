@@ -1,4 +1,4 @@
-.. index:: single: Page Format
+.. index:: single: Page format
 
 Page format
 ===========

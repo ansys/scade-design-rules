@@ -1,4 +1,4 @@
-.. index:: single: Name Length Of Element
+.. index:: single: Element name length
 
 Element name length
 ===================

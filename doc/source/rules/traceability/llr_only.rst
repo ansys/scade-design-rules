@@ -1,4 +1,4 @@
-.. index:: single: Tracing Elements
+.. index:: single: Tracing elements
 
 Tracing elements
 ================

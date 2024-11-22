@@ -1,4 +1,4 @@
-.. index:: single: Root Package Name
+.. index:: single: Root package name
 
 Root package name
 =================

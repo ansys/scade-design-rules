@@ -1,4 +1,4 @@
-.. index:: single: Number Of Operator Calls In Conditions
+.. index:: single: Number of operator calls in conditions
 
 Number of operator calls in conditions
 ======================================

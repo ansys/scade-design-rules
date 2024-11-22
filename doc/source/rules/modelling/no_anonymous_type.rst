@@ -1,4 +1,4 @@
-.. index:: single: No Anonymous Type
+.. index:: single: No anonymous type
 
 No anonymous type
 =================

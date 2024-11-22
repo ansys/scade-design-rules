@@ -1,4 +1,4 @@
-.. index:: single: Transition Actions
+.. index:: single: Transition actions
 
 Transition actions
 ==================

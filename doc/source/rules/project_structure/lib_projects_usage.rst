@@ -1,4 +1,4 @@
-.. index:: single: Lib Projects Usage
+.. index:: single: Lib projects usage
 
 Lib projects usage
 ==================

@@ -1,4 +1,4 @@
-.. index:: single: Equation Set Not Empty
+.. index:: single: Equation set not empty
 
 Equation set not empty
 ======================

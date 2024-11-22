@@ -1,4 +1,4 @@
-.. index:: single: Elements Within Area
+.. index:: single: Elements within area
 
 Elements within area
 ====================

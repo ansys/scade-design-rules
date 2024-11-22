@@ -1,4 +1,4 @@
-.. index:: single: Iterator Exit Condition
+.. index:: single: Iterator exit condition
 
 Iterator exit condition
 =======================

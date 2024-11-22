@@ -1,4 +1,4 @@
-.. index:: single: One Public Op Per Package
+.. index:: single: One public operator per package
 
 One public operator per package
 ===============================

@@ -1,4 +1,4 @@
-.. index:: single: Number Of User Ops In Diagram
+.. index:: single: Number of user ops in diagram
 
 Number of user ops in diagram
 =============================

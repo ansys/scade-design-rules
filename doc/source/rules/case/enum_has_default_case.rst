@@ -1,4 +1,4 @@
-.. index:: single: Enumeration Has Default Case
+.. index:: single: Enumeration has default case
 
 Enumeration has default case
 ============================

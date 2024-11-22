@@ -1,4 +1,4 @@
-.. index:: single: Accumulator Inputs/Outputs
+.. index:: single: Accumulator inputs/outputs
 
 Accumulator inputs/outputs
 ==========================

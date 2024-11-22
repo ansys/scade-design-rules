@@ -1,4 +1,4 @@
-.. index:: single: No Extra Clock
+.. index:: single: No extra clock
 
 No extra clock
 ==============

@@ -1,4 +1,4 @@
-.. index:: single: All Private Operators Are Used
+.. index:: single: All private operators are used
 
 All private operators are used
 ==============================

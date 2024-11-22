@@ -1,4 +1,4 @@
-.. index:: single: Enumeration Type Name Prefix
+.. index:: single: Enumeration type name prefix
 
 Enumeration type name prefix
 ============================

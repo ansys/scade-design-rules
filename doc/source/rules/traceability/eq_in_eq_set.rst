@@ -1,4 +1,4 @@
-.. index:: single: Equation in Equation Set
+.. index:: single: Equation in equation set
 
 Equation in equation set
 ========================

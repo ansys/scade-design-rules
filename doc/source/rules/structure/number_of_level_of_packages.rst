@@ -1,4 +1,4 @@
-.. index:: single: Number Of Level Of Packages
+.. index:: single: Number of level of packages
 
 Number of level of packages
 ===========================

@@ -1,4 +1,4 @@
-.. index:: single: Has Link Or Part Of Equation Set
+.. index:: single: Has link or part of equation set
 
 Has link or part of equation set
 ================================

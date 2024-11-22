@@ -1,4 +1,4 @@
-.. index:: single: User Defined Types Lib
+.. index:: single: User defined types lib
 
 User defined types lib
 ======================

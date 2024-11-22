@@ -1,4 +1,4 @@
-.. index:: single: Non Lib Projects
+.. index:: single: Non lib projects
 
 Non lib projects
 ================

@@ -1,4 +1,4 @@
-.. index:: single: Constant If Then Else
+.. index:: single: No constant if..then..else
 
 No constant if..then..else
 ==========================

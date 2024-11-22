@@ -1,4 +1,4 @@
-.. index:: single: Scope Of Locals
+.. index:: single: Local variable scope
 
 Local variable scope
 ====================

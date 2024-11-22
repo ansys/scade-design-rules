@@ -1,4 +1,4 @@
-.. index:: single: Model Root Package
+.. index:: single: Model root package
 
 Model root package
 ==================

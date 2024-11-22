@@ -1,4 +1,4 @@
-.. index:: single: No Imported Operators
+.. index:: single: No imported operators
 
 No imported operators
 =====================

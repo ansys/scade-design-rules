@@ -1,4 +1,4 @@
-.. index:: single: Tracing Elements are Equation Sets
+.. index:: single: Tracing elements are equation sets
 
 Tracing elements are equation sets
 ==================================

@@ -1,4 +1,4 @@
-.. index:: single: Name Structure Constant
+.. index:: single: Constant name structure
 
 Constant name structure
 =======================

@@ -1,4 +1,4 @@
-.. index:: single: Package Filename
+.. index:: single: Package filename
 
 Package filename
 ================

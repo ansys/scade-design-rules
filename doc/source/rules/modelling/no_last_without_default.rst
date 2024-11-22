@@ -1,4 +1,4 @@
-.. index:: single: No Last Without Default
+.. index:: single: No last without default
 
 No last without default
 =======================

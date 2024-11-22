@@ -1,4 +1,4 @@
-.. index:: single: Pragma Manifest
+.. index:: single: Pragma manifest
 
 Pragma manifest
 ===============

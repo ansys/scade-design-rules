@@ -1,4 +1,4 @@
-.. index:: single: Initialization Of Arrays
+.. index:: single: Initialization of arrays
 
 Initialization of arrays
 ========================

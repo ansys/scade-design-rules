@@ -1,4 +1,4 @@
-.. index:: single: Iterator Index
+.. index:: single: Iterator index
 
 Iterator index
 ==============

@@ -1,4 +1,4 @@
-.. index:: single: Pascal Case Name
+.. index:: single: Pascal case name
 
 Pascal case name
 ================

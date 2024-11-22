@@ -1,4 +1,4 @@
-.. index:: single: Ann Notes For Named Types Or Variables
+.. index:: single: Ann notes for named types or variables
 
 Ann notes for named types or variables
 ======================================

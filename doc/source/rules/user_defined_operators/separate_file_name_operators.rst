@@ -1,4 +1,4 @@
-.. index:: single: Separate File Name Operators
+.. index:: single: Separate filename operators
 
 Separate filename operators
 ===========================

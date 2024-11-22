@@ -1,4 +1,4 @@
-.. index:: single: Lib Projects Operators
+.. index:: single: No top-level operator in lib projects
 
 No top-level operator in lib projects
 =====================================

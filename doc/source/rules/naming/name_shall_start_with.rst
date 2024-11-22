@@ -1,4 +1,4 @@
-.. index:: single: Name Shall Start With
+.. index:: single: Name shall start with
 
 Name shall start with
 =====================

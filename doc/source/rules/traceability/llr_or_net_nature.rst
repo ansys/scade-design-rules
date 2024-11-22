@@ -1,4 +1,4 @@
-.. index:: single: CE or Diagram Nature
+.. index:: single: CE or diagram nature
 
 CE or diagram nature
 ====================

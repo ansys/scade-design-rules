@@ -1,4 +1,4 @@
-.. index:: single: CE Nature Equation Set
+.. index:: single: CE nature equation set
 
 CE nature equation set
 ======================

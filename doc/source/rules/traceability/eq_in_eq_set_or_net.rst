@@ -1,4 +1,4 @@
-.. index:: single: Equation in Equation Set or Diagram
+.. index:: single: Equation in equation set or diagram
 
 Equation in equation set or diagram
 ===================================

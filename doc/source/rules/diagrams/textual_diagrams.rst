@@ -1,4 +1,4 @@
-.. index:: single: Textual Diagrams
+.. index:: single: No textual diagrams
 
 No textual diagrams
 ===================

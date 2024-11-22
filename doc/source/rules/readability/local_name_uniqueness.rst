@@ -1,4 +1,4 @@
-.. index:: single: Local Name Uniqueness
+.. index:: single: Local name uniqueness
 
 Local name uniqueness
 =====================

@@ -1,4 +1,4 @@
-.. index:: single: Camel Case Name
+.. index:: single: Camel case name
 
 Camel case name
 ===============

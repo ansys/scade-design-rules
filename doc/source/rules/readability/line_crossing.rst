@@ -1,4 +1,4 @@
-.. index:: single: Line Crossing
+.. index:: single: No line crossing
 
 No line crossing
 ================

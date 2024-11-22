@@ -1,4 +1,4 @@
-.. index:: single: Types Not Taken From Specific Package
+.. index:: single: Types not taken from specific package
 
 Types not taken from specific package
 =====================================

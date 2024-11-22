@@ -1,4 +1,4 @@
-.. index:: single: Types Taken From Specific Project
+.. index:: single: Types taken from specific project
 
 Types taken from specific project
 =================================

@@ -1,4 +1,4 @@
-.. index:: single: Identical For Producer Consumer
+.. index:: single: Identical for producer consumer
 
 Identical for producer consumer
 ===============================

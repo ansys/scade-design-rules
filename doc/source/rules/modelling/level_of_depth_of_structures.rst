@@ -1,4 +1,4 @@
-.. index:: single: Level Of Depth Of Structures
+.. index:: single: Structure depth level
 
 Structure depth level
 =====================

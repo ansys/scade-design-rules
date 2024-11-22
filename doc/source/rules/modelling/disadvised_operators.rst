@@ -1,4 +1,4 @@
-.. index:: single: Not Recommended Operators
+.. index:: single: Not recommended operators
 
 Not recommended operators
 =========================

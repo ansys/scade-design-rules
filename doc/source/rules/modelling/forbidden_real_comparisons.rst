@@ -1,4 +1,4 @@
-.. index:: single: Forbidden Real Comparisons
+.. index:: single: Forbidden real comparisons
 
 Forbidden real comparisons
 ==========================

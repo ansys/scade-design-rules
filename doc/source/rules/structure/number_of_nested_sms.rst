@@ -1,4 +1,4 @@
-.. index:: single: Number Of Nested State Machines
+.. index:: single: Number of nested state machines
 
 Number of nested state machines
 ===============================

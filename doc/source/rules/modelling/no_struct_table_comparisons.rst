@@ -1,4 +1,4 @@
-.. index:: single: No Struct Table Comparisons
+.. index:: single: No struct table comparisons
 
 No struct table comparisons
 ===========================

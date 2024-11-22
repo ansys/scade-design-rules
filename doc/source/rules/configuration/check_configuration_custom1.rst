@@ -1,4 +1,4 @@
-.. index:: single: Check Configuration Custom1
+.. index:: single: Check configuration custom1
 
 Check configuration custom1
 ===========================

@@ -1,4 +1,4 @@
-.. index:: single: Ann Notes Present And Not Empty
+.. index:: single: Ann notes present and not empty
 
 Ann notes present and not empty
 ===============================

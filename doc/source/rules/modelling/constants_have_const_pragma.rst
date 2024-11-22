@@ -1,4 +1,4 @@
-.. index:: single: Constants Have Const Pragma
+.. index:: single: Constants have const pragma
 
 Constants have const pragma
 ===========================

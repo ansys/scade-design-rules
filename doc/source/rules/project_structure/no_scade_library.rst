@@ -1,4 +1,4 @@
-.. index:: single: No Scade Library
+.. index:: single: No SCADE library
 
 No SCADE library
 ================

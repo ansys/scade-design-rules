@@ -1,4 +1,4 @@
-.. index:: single: Upper Case Name
+.. index:: single: Upper case name
 
 Upper case name
 ===============

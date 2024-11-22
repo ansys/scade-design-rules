@@ -1,4 +1,4 @@
-.. index:: single: Enumeration Definition Elements Order
+.. index:: single: Enumeration definition element order
 
 Enumeration definition element order
 ====================================

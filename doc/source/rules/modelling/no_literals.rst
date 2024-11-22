@@ -1,4 +1,4 @@
-.. index:: single: No Literals
+.. index:: single: No literals
 
 No literals
 ===========

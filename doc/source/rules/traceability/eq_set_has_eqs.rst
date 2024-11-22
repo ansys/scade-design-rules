@@ -1,4 +1,4 @@
-.. index:: single: Equation Set Content
+.. index:: single: Equation set content
 
 Equation set content
 ====================

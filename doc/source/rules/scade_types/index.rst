@@ -1,4 +1,4 @@
-.. index:: single: Scade Types
+.. index:: single: Scade types
 
 Scade types
 ===========

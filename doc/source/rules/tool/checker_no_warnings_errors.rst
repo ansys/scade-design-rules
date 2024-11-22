@@ -1,4 +1,4 @@
-.. index:: single: Checker No Warnings Errors
+.. index:: single: No checker warnings or errors
 
 No checker warnings or errors
 =============================

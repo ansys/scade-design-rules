@@ -1,4 +1,4 @@
-.. index:: single: No Terminations
+.. index:: single: No terminations
 
 No terminations
 ===============

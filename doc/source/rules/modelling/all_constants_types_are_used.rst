@@ -1,4 +1,4 @@
-.. index:: single: All Constants Types Are Used
+.. index:: single: All constants types are used
 
 All constants types are used
 ============================

@@ -1,4 +1,4 @@
-.. index:: single: Name Structure Type
+.. index:: single: Type name structure
 
 Type name structure
 ===================

@@ -1,4 +1,4 @@
-.. index:: single: All Elements In One Equation Set
+.. index:: single: All elements in one equation set
 
 All elements in one equation set
 ================================

@@ -1,4 +1,4 @@
-.. index:: single: User Defined Operators
+.. index:: single: User defined operators
 
 User defined operators
 ======================

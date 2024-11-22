@@ -1,4 +1,4 @@
-.. index:: single: Scade Version
+.. index:: single: SCADE version
 
 SCADE version
 =============

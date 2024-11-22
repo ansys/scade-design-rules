@@ -1,4 +1,4 @@
-.. index:: single: Comment Has Specific Headlines
+.. index:: single: Comment has specific headlines
 
 Comment has specific headlines
 ==============================

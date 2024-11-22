@@ -1,4 +1,4 @@
-.. index:: single: Project Structure
+.. index:: single: Project structure
 
 Project structure
 =================

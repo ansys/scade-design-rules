@@ -1,4 +1,4 @@
-.. index:: single: Element in Equation Set
+.. index:: single: Element in equation set
 
 Element in equation set
 =======================

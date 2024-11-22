@@ -1,4 +1,4 @@
-.. index:: single: Forbidden Keywords
+.. index:: single: Forbidden keywords
 
 Forbidden keywords
 ==================

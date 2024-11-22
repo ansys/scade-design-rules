@@ -1,4 +1,4 @@
-.. index:: single: No Operator Calls In Expressions
+.. index:: single: No operator calls in expressions
 
 No operator calls in expressions
 ================================

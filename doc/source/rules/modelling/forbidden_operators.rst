@@ -1,4 +1,4 @@
-.. index:: single: Forbidden Operators
+.. index:: single: Forbidden operators
 
 Forbidden operators
 ===================
