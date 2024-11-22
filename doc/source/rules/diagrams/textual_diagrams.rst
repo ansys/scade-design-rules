@@ -1,7 +1,7 @@
 .. index:: single: Textual Diagrams
 
-Textual diagrams
-================
+No textual diagrams
+===================
 
 .. rule::
    :filename: textual_diagrams.py

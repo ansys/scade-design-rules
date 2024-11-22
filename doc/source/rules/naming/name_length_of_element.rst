@@ -1,7 +1,7 @@
 .. index:: single: Name Length Of Element
 
-Name length of element
-======================
+Element name length
+===================
 
 .. rule::
    :filename: name_length_of_element.py

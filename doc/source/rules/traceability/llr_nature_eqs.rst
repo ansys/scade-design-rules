@@ -1,7 +1,7 @@
 .. index:: single: CE Nature Equation Set
 
-CE nature equation set
-======================
+Contributing element nature equation set
+========================================
 
 .. rule::
    :filename: llr_nature_eqs.py
@@ -10,7 +10,7 @@ CE nature equation set
    :reference: TRA_REQ_002
    :tags: only_eqs
 
-   CE must have a design annotation
+   Contributing elements must have a design annotation
 
 Description
 -----------

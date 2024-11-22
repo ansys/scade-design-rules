@@ -1,7 +1,7 @@
 .. index:: single: Checker No Warnings Errors
 
-Checker no warnings errors
-==========================
+No checker warnings or errors
+=============================
 
 .. rule::
    :filename: checker_no_warnings_errors.py

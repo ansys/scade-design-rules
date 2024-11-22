@@ -1,6 +1,6 @@
 .. index:: single: Name Structure Enumeration Custom1
 
-Name structure enumeration custom1
+Enumeration name structure custom1
 ==================================
 
 .. rule::

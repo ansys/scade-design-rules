@@ -1,7 +1,7 @@
 .. index:: single: CE Nature
 
-CE nature
-==========
+Contributing element nature
+===========================
 
 .. rule::
    :filename: llr_nature.py
@@ -10,7 +10,7 @@ CE nature
    :reference: TRA_REQ_002
    :tags: scade_llr
 
-   CE must have a design annotation
+   Contributing elements must have a design annotation
 
 Description
 -----------

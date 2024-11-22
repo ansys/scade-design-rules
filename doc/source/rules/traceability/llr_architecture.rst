@@ -1,7 +1,7 @@
 .. index:: single: Architecture CE
 
-Architecture CE
-===============
+Architecture contributing element
+=================================
 
 .. rule::
    :filename: llr_architecture.py
@@ -10,7 +10,7 @@ Architecture CE
    :reference: TRA_REQ_003, TRA_REQ_003_3
    :tags: scade_llr llr_or_net
 
-   'Architecture' CE
+   'Architecture' contributing elements
 
 Description
 -----------

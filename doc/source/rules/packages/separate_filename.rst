@@ -1,7 +1,7 @@
 .. index:: single: Separate Filename
 
-Separate filename
-=================
+Separate file name
+==================
 
 .. rule::
    :filename: separate_filename.py

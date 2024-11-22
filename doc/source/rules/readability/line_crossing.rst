@@ -1,7 +1,7 @@
 .. index:: single: Line Crossing
 
-Line crossing
-=============
+No line crossing
+================
 
 .. rule::
    :filename: line_crossing.py

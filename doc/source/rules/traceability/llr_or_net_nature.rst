@@ -1,7 +1,7 @@
 .. index:: single: CE or Diagram Nature
 
-CE or diagram  nature
-=====================
+Contributing element or diagram  nature
+=======================================
 
 .. rule::
    :filename: llr_or_net_nature.py
@@ -10,7 +10,7 @@ CE or diagram  nature
    :reference: TRA_REQ_002
    :tags: llr_or_net
 
-   CE must have a design annotation
+   Contributing elements must have a design annotation
 
 Description
 -----------

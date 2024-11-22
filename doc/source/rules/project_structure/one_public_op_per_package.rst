@@ -1,7 +1,7 @@
 .. index:: single: One Public Op Per Package
 
-One public op per package
-=========================
+One public operator per package
+===============================
 
 .. rule::
    :filename: one_public_op_per_package.py

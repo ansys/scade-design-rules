@@ -1,7 +1,7 @@
 .. index:: single: Scope Of Locals
 
-Scope of locals
-===============
+Local variable scope
+====================
 
 .. rule::
    :filename: scope_of_locals.py

@@ -1,7 +1,7 @@
 .. index:: single: Enumeration Definition Elements Order
 
-Enumeration definition elements order
-=====================================
+Enumeration definition element order
+====================================
 
 .. rule::
    :filename: enum_definition_elements_order.py

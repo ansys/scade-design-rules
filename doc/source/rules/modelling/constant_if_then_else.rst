@@ -1,7 +1,7 @@
 .. index:: single: Constant If Then Else
 
-Constant if then else
-=====================
+No constant if..then..else
+==========================
 
 .. rule::
    :filename: constant_if_then_else.py

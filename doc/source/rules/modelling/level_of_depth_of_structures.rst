@@ -1,7 +1,7 @@
 .. index:: single: Level Of Depth Of Structures
 
-Level of depth of structures
-============================
+Structure depth level
+=====================
 
 .. rule::
    :filename: level_of_depth_of_structures.py

@@ -1,7 +1,7 @@
 .. index:: single: Package Filename
 
-Package filename
-================
+Package file name
+=================
 
 .. rule::
    :filename: package_filename.py
