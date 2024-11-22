@@ -1,7 +1,7 @@
 .. index:: single: Separate File Name Operators
 
-Separate file name operators
-============================
+Separate filename operators
+===========================
 
 .. rule::
    :filename: separate_file_name_operators.py
