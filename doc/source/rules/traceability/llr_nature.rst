@@ -59,8 +59,6 @@ The default value of the rule's parameters ``types`` or ``kinds`` can be overrid
 Refer to the documentation of the instantiation of a rule for details.
 
 .. seealso::
-   * `ESEG-EN-072 SCADE Traceability`_
+   * `ESEG-EN-072 SCADE Traceability`
    * :ref:`traceability`
    * Instantiation of a rule
-
-.. _`ESEG-EN-072 SCADE Traceability`: https://ansys.sharepoint.com/:w:/r/sites/SBUExpertise/Documents/Forms/Engineering%20Notes.aspx?id=%2Fsites%2FSBUExpertise%2FDocuments%2FESEG%2DEN%2D072%20SCADE%20Traceability%2Epdf&parent=%2Fsites%2FSBUExpertise%2FDocuments
