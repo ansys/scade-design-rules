@@ -1,6 +1,6 @@
 .. index:: single: User Defined Operators
 
-User Defined Operators
+User defined operators
 ======================
 
 .. category::

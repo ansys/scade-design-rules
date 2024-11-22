@@ -1,6 +1,6 @@
 .. index:: single: Equation Set Content
 
-Equation Set Content
+Equation set content
 ====================
 
 .. rule::

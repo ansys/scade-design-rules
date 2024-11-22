@@ -1,6 +1,6 @@
 .. index:: single: Page Format
 
-Page Format
+Page format
 ===========
 
 .. rule::

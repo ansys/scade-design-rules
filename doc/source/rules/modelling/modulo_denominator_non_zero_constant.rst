@@ -1,6 +1,6 @@
 .. index:: single: Modulo Denominator Non Zero Constant
 
-Modulo Denominator Non Zero Constant
+Modulo denominator non zero constant
 ====================================
 
 .. rule::

@@ -1,6 +1,6 @@
 .. index:: single: Check Configuration
 
-Check Configuration
+Check configuration
 ===================
 
 .. rule::

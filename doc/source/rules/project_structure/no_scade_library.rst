@@ -1,6 +1,6 @@
 .. index:: single: No Scade Library
 
-No Scade Library
+No SCADE library
 ================
 
 .. rule::

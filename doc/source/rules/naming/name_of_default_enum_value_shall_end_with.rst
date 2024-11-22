@@ -1,6 +1,6 @@
 .. index:: single: Name Of Default Enumeration Value Shall End With
 
-Name Of Default Enumeration Value Shall End With
+Name of default enumeration value shall end with
 ================================================
 
 .. rule::

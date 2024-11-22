@@ -1,6 +1,6 @@
 .. index:: single: Project Structure
 
-Project Structure
+Project structure
 =================
 
 .. category::

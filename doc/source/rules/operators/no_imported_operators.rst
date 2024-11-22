@@ -1,6 +1,6 @@
 .. index:: single: No Imported Operators
 
-No Imported Operators
+No imported operators
 =====================
 
 .. rule::

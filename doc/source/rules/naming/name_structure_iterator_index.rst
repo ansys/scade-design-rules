@@ -1,6 +1,6 @@
 .. index:: single: Iterator Index
 
-Iterator Index
+Iterator index
 ==============
 
 .. rule::

@@ -1,6 +1,6 @@
 .. index:: single: Number Of Nested State Machines
 
-Number Of Nested State Machines
+Number of nested state machines
 ===============================
 
 .. rule::

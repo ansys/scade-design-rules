@@ -1,6 +1,6 @@
 .. index:: single: Number Of User Ops In Diagram
 
-Number Of User Ops In Diagram
+Number of user ops in diagram
 =============================
 
 .. rule::

@@ -1,6 +1,6 @@
 .. index:: single: Name Structure Constant
 
-Name Structure Constant
+Name structure constant
 =======================
 
 .. rule::

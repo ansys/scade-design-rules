@@ -1,6 +1,6 @@
 .. index:: single: Constant If Then Else
 
-Constant If Then Else
+Constant if then else
 =====================
 
 .. rule::

@@ -1,6 +1,6 @@
 .. index:: single: Sensor Names Unique In Package
 
-Sensor Names Unique In Package
+Sensor names unique in package
 ==============================
 
 .. rule::

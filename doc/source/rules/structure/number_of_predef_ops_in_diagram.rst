@@ -1,6 +1,6 @@
 .. index:: single: Number Of Predefined Operators In Diagram
 
-Number Of Predefined Operators In Diagram
+Number of predefined operators in diagram
 =========================================
 
 .. rule::

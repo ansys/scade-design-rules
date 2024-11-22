@@ -1,6 +1,6 @@
 .. index:: single: Name Length Of Element
 
-Name Length Of Element
+Name length of element
 ======================
 
 .. rule::

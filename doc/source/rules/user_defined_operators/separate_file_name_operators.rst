@@ -1,6 +1,6 @@
 .. index:: single: Separate File Name Operators
 
-Separate File Name Operators
+Separate file name operators
 ============================
 
 .. rule::

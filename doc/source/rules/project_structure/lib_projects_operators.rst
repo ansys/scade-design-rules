@@ -1,6 +1,6 @@
 .. index:: single: Lib Projects Operators
 
-Lib Projects Operators
+Lib projects operators
 ======================
 
 .. rule::

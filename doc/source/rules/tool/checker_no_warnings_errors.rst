@@ -1,6 +1,6 @@
 .. index:: single: Checker No Warnings Errors
 
-Checker No Warnings Errors
+Checker no warnings errors
 ==========================
 
 .. rule::

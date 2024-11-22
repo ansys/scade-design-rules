@@ -1,6 +1,6 @@
 .. index:: single: Number Of Operator Calls In Conditions
 
-Number Of Operator Calls In Conditions
+Number of operator calls in conditions
 ======================================
 
 .. rule::

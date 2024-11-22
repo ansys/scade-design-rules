@@ -1,6 +1,6 @@
 .. index:: single: Tracing Elements Diagram
 
-Tracing Elements Diagram
+Tracing elements diagram
 ========================
 
 .. rule::

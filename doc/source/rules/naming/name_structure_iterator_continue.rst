@@ -1,6 +1,6 @@
 .. index:: single: Iterator Exit Condition
 
-Iterator Exit Condition
+Iterator exit condition
 =======================
 
 .. rule::

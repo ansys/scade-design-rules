@@ -1,6 +1,6 @@
 .. index:: single: Transition Kind
 
-Transition Kind
+Transition kind
 ===============
 
 .. rule::

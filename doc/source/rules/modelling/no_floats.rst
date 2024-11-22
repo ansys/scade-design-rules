@@ -1,6 +1,6 @@
 .. index:: single: No Floats
 
-No Floats
+No floats
 =========
 
 .. rule::

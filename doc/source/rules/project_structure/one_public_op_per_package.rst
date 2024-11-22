@@ -1,6 +1,6 @@
 .. index:: single: One Public Op Per Package
 
-One Public Op Per Package
+One public op per package
 =========================
 
 .. rule::

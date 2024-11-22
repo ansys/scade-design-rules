@@ -1,6 +1,6 @@
 .. index:: single: Scade Version
 
-Scade Version
+SCADE version
 =============
 
 .. rule::

@@ -1,6 +1,6 @@
 .. index:: single: Lib Projects Usage
 
-Lib Projects Usage
+Lib projects usage
 ==================
 
 .. rule::

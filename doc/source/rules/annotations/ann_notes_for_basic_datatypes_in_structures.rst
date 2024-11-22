@@ -1,6 +1,6 @@
 .. index:: single: Ann Notes For Basic Data-types In Structures
 
-Ann Notes For Basic Data-types In Structures
+Ann notes for basic data-types in structures
 ============================================
 
 .. rule::

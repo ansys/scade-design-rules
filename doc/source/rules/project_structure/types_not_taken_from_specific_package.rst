@@ -1,6 +1,6 @@
 .. index:: single: Types Not Taken From Specific Package
 
-Types Not Taken From Specific Package
+Types not taken from specific package
 =====================================
 
 .. rule::

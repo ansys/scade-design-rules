@@ -1,6 +1,6 @@
 .. index:: single: Non Lib Projects
 
-Non Lib Projects
+Non lib projects
 ================
 
 .. rule::

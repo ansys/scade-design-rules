@@ -1,6 +1,6 @@
 .. index:: single: Number Of Operators Per Package
 
-Number Of Operators Per Package
+Number of operators per package
 ===============================
 
 .. rule::

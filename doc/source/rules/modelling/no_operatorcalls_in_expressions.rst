@@ -1,6 +1,6 @@
 .. index:: single: No Operator Calls In Expressions
 
-No Operator Calls In Expressions
+No operator calls in expressions
 ================================
 
 .. rule::

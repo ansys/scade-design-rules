@@ -1,6 +1,6 @@
 .. index:: single: Scope Of Locals
 
-Scope Of Locals
+Scope of locals
 ===============
 
 .. rule::

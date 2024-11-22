@@ -1,6 +1,6 @@
 .. index:: single: Elements Within Area
 
-Elements Within Area
+Elements within area
 ====================
 
 .. rule::

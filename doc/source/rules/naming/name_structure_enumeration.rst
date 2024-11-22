@@ -1,6 +1,6 @@
 .. index:: single: Name Structure Enumeration
 
-Name Structure Enumeration
+Name structure enumeration
 ==========================
 
 .. rule::

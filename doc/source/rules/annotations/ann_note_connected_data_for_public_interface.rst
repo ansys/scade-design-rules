@@ -1,6 +1,6 @@
 .. index:: single: Ann Note Connected Data For Public Interface
 
-Ann Note Connected Data For Public Interface
+Ann note connected data for public interface
 ============================================
 
 .. rule::

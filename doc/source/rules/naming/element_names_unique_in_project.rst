@@ -1,6 +1,6 @@
 .. index:: single: Element Names Unique In Project
 
-Element Names Unique In Project
+Element names unique in project
 ===============================
 
 .. rule::

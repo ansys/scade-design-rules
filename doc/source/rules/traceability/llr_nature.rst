@@ -1,6 +1,6 @@
 .. index:: single: CE Nature
 
-CE Nature
+CE nature
 ==========
 
 .. rule::

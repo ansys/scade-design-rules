@@ -1,6 +1,6 @@
 .. index:: single: Equation in Equation Set or Diagram
 
-Equation in Equation Set or Diagram
+Equation in equation set or diagram
 ===================================
 
 .. rule::

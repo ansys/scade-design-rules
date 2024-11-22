@@ -1,6 +1,6 @@
 .. index:: single: Tracing Elements are Equation Sets
 
-Tracing Elements are Equation Sets
+Tracing elements are equation sets
 ==================================
 
 .. rule::

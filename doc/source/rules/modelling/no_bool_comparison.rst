@@ -1,6 +1,6 @@
 .. index:: single: No Boolean Comparison
 
-No Boolean Comparison
+No boolean comparison
 =====================
 
 .. rule::

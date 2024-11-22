@@ -1,6 +1,6 @@
 .. index:: single: Has Link Or Part Of Equation Set
 
-Has Link Or Part Of Equation Set
+Has link or part of equation set
 ================================
 
 .. rule::

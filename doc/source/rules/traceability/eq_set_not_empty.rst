@@ -1,6 +1,6 @@
 .. index:: single: Equation Set Not Empty
 
-Equation Set Not Empty
+Equation set not empty
 ======================
 
 .. rule::

@@ -1,6 +1,6 @@
 .. index:: single: User Defined Types Lib
 
-User Defined Types Lib
+User defined types lib
 ======================
 
 .. rule::

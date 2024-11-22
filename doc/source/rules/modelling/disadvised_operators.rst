@@ -1,6 +1,6 @@
 .. index:: single: Not Recommended Operators
 
-Not Recommended Operators
+Not recommended operators
 =========================
 
 .. rule::

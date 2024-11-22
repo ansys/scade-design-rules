@@ -1,6 +1,6 @@
 .. index:: single: Number Of Level Of Packages
 
-Number Of Level Of Packages
+Number of level of packages
 ===========================
 
 .. rule::

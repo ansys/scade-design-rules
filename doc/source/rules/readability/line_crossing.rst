@@ -1,6 +1,6 @@
 .. index:: single: Line Crossing
 
-Line Crossing
+Line crossing
 =============
 
 .. rule::

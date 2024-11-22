@@ -1,6 +1,6 @@
 .. index:: single: Element in Equation Set
 
-Element in Equation Set
+Element in equation set
 =======================
 
 .. rule::

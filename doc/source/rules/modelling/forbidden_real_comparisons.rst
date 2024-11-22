@@ -1,6 +1,6 @@
 .. index:: single: Forbidden Real Comparisons
 
-Forbidden Real Comparisons
+Forbidden real comparisons
 ==========================
 
 .. rule::

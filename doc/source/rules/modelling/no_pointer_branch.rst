@@ -3,7 +3,7 @@
 
 .. index:: single: No Pointer Branch
 
-No Pointer Branch
+No pointer branch
 =================
 
 .. rule::

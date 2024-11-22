@@ -1,6 +1,6 @@
 .. index:: single: Root Package Name
 
-Root Package Name
+Root package name
 =================
 
 .. rule::

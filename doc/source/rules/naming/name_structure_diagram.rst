@@ -1,6 +1,6 @@
 .. index:: single: Diagram Name
 
-Diagram Name
+Diagram name
 ===============
 
 .. rule::

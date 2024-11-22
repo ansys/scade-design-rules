@@ -1,6 +1,6 @@
 .. index:: single: Forbidden Operators
 
-Forbidden Operators
+Forbidden operators
 ===================
 
 .. rule::

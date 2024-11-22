@@ -1,6 +1,6 @@
 .. index:: single: Name Shall Start With
 
-Name Shall Start With
+Name shall start with
 =====================
 
 .. rule::

@@ -1,6 +1,6 @@
 .. index:: single: CE Nature Equation Set
 
-CE Nature Equation Set
+CE nature equation set
 ======================
 
 .. rule::

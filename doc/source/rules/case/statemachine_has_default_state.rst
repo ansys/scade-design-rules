@@ -1,6 +1,6 @@
 .. index:: single: State Machine Has Default State
 
-State Machine Has Default State
+State machine has default state
 ===============================
 
 .. rule::

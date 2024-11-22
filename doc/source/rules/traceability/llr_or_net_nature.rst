@@ -1,6 +1,6 @@
 .. index:: single: CE or Diagram Nature
 
-CE or Diagram  Nature
+CE or diagram  nature
 =====================
 
 .. rule::

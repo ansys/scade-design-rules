@@ -1,6 +1,6 @@
 .. index:: single: Default Case
 
-Default Case
+Default case
 ============
 
 .. rule::

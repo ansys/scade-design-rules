@@ -1,6 +1,6 @@
 .. index:: single: Ann Notes For Named Types Or Variables
 
-Ann Notes For Named Types Or Variables
+Ann notes for named types or variables
 ======================================
 
 .. rule::

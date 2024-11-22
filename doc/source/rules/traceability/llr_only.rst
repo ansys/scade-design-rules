@@ -1,6 +1,6 @@
 .. index:: single: Tracing Elements
 
-Tracing Elements
+Tracing elements
 ================
 
 .. rule::

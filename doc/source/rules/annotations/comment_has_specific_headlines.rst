@@ -1,6 +1,6 @@
 .. index:: single: Comment Has Specific Headlines
 
-Comment Has Specific Headlines
+Comment has specific headlines
 ==============================
 
 .. rule::

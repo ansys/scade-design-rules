@@ -1,6 +1,6 @@
 .. index:: single: Enumeration Has Default Case
 
-Enumeration Has Default Case
+Enumeration has default case
 ============================
 
 .. rule::

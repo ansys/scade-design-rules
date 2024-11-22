@@ -1,6 +1,6 @@
 .. index:: single: Has Link
 
-Has Link
+Has link
 ========
 
 .. rule::

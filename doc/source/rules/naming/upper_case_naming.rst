@@ -1,6 +1,6 @@
 .. index:: single: Upper Case Name
 
-Upper Case Name
+Upper case name
 ===============
 
 .. rule::

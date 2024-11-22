@@ -1,6 +1,6 @@
 .. index:: single: Package Filename
 
-Package Filename
+Package filename
 ================
 
 .. rule::

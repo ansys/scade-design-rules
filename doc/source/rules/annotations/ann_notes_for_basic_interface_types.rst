@@ -1,6 +1,6 @@
 .. index:: single: Ann Notes For Basic Interface Types
 
-Ann Notes For Basic Interface Types
+Ann notes for basic interface types
 ===================================
 
 .. rule::

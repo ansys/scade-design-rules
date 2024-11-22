@@ -1,6 +1,6 @@
 .. index:: single: Level Of Depth Of Structures
 
-Level Of Depth Of Structures
+Level of depth of structures
 ============================
 
 .. rule::

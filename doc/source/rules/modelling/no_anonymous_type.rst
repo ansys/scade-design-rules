@@ -1,6 +1,6 @@
 .. index:: single: No Anonymous Type
 
-No Anonymous Type
+No anonymous type
 =================
 
 .. rule::

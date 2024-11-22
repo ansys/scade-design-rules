@@ -1,6 +1,6 @@
 .. index:: single: Ann Notes Present And Not Empty
 
-Ann Notes Present And Not Empty
+Ann notes present and not empty
 ===============================
 
 .. rule::

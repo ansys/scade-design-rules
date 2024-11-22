@@ -1,6 +1,6 @@
 .. index:: single: Textual Diagrams
 
-Textual Diagrams
+Textual diagrams
 ================
 
 .. rule::

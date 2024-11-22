@@ -1,6 +1,6 @@
 .. index:: single: Enumeration Definition Elements Order
 
-Enumeration Definition Elements Order
+Enumeration definition elements order
 =====================================
 
 .. rule::
