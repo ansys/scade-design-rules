@@ -1,7 +1,7 @@
 .. index:: single: Architecture CE
 
-Architecture contributing element
-=================================
+Architecture CE
+===============
 
 .. rule::
    :filename: llr_architecture.py
@@ -14,7 +14,7 @@ Architecture contributing element
 
 Description
 -----------
-Architecture contributing elements can be only equation sets or textual diagrams.
+Architecture Contributing Elements (CE) can be only equation sets or textual diagrams.
 
 .. end_description
 
@@ -31,7 +31,7 @@ This rules applies to the following elements:
 
 Rationale
 ---------
-The nature ``Architecture`` is not suitable for Contribution Elements such as State or Transition.
+The nature ``Architecture`` is not suitable for Contributing Elements such as State or Transition.
 
 Verification
 ------------

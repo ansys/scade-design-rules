@@ -10,11 +10,11 @@ Tracing elements
    :reference: TRA_REQ_007
    :tags: scade_llr
 
-   Tracing elements must be Contribution Elements
+   Tracing elements must be Contributing Elements
 
 Description
 -----------
-The model elements tracing requirements shall be Contribution Elements (CE).
+The model elements tracing requirements shall be Contributing Elements (CE).
 
 .. end_description
 

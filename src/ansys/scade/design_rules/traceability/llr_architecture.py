@@ -51,7 +51,7 @@ class LLRArchitecture(AnnotationRule):
         id='id_0035',
         label="'Architecture' CE",
         description=(
-            'Architecture contributing elements can be only equation sets or textual diagrams.'
+            'Architecture Contributing Elements (CE) can be only equation sets or textual diagrams.'
         ),
         category='Traceability',
         severity=Rule.ADVISORY,
