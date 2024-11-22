@@ -332,9 +332,9 @@ def update_doc(root: Path) -> int:
 
 
 if __name__ == '__main__':
-    try:
-        from ansys.scade.apitools import declare_project  # noqa: F401
-    except ModuleNotFoundError:
+    from ansys.scade.apitools import declare_project
+
+    if declare_project is None:
         # scade not installed on the runner, skip the check
         sys.exit(0)
     # dir must be the root of the repository
