@@ -10,16 +10,16 @@ Traceability
    Set of rules related to the traceability of Scade models.
 
 This section gathers the rules related to the traceability.
-Most of them are documented in `ESEG-EN-072 SCADE Traceability`_.
+Most of them are documented in *ESEG-EN-072 SCADE Traceability*.
 Although each rule can be used separately, it is advised to consider
 one of the consistent subsets described in the engineering note,
 which are reminded hereafter.
 
-SCADE Suite CE
---------------
-cf. `ESEG-EN-072`_, section 3.4
+SCADE Suite Contributing Elements (CE)
+--------------------------------------
+cf. ``ESEG-EN-072``, section 3.4
 
-*TRA_REQ_001*: The Contribution Elements are:
+*TRA_REQ_001*: The Contributing Elements are:
 
 * Equation sets
 * States
@@ -33,9 +33,9 @@ cf. `ESEG-EN-072`_, section 3.4
 
 Only Equation Sets
 ------------------
-cf. `ESEG-EN-072`_, section 3.5.1
+cf. ``ESEG-EN-072``, section 3.5.1
 
-*TRA_REQ_001_2*: The Contribution Elements are:
+*TRA_REQ_001_2*: The Contributing Elements are:
 
 * Equation sets
 * Textual diagrams
@@ -47,9 +47,9 @@ cf. `ESEG-EN-072`_, section 3.5.1
 
 Diagrams or Equation Sets
 -------------------------
-cf. `ESEG-EN-072`_, section 3.5.2
+cf. ``ESEG-EN-072``, section 3.5.2
 
-*TRA_REQ_001_3*: The Contribution Elements are:
+*TRA_REQ_001_3*: The Contributing Elements are:
 
 * Equation sets
 * States
@@ -68,6 +68,3 @@ cf. `ESEG-EN-072`_, section 3.5.2
    :glob:
 
    *
-
-.. _ESEG-EN-072 SCADE Traceability: https://ansys.sharepoint.com/:w:/r/sites/SBUExpertise/Documents/Forms/Engineering%20Notes.aspx?id=%2Fsites%2FSBUExpertise%2FDocuments%2FESEG%2DEN%2D072%20SCADE%20Traceability%2Epdf&parent=%2Fsites%2FSBUExpertise%2FDocuments
-.. _ESEG-EN-072: https://ansys.sharepoint.com/:w:/r/sites/SBUExpertise/Documents/Forms/Engineering%20Notes.aspx?id=%2Fsites%2FSBUExpertise%2FDocuments%2FESEG%2DEN%2D072%20SCADE%20Traceability%2Epdf&parent=%2Fsites%2FSBUExpertise%2FDocuments
