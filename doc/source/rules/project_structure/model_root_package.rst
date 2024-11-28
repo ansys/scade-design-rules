@@ -1,6 +1,6 @@
-.. index:: single: Model Root Package
+.. index:: single: Model root package
 
-Model Root Package
+Model root package
 ==================
 
 .. rule::

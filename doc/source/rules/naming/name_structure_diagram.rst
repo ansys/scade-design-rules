@@ -1,7 +1,7 @@
-.. index:: single: Diagram Name
+.. index:: single: Diagram name
 
-Diagram Name
-===============
+Diagram name
+============
 
 .. rule::
    :filename: name_structure_diagram.py

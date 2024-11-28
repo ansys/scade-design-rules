@@ -1,6 +1,6 @@
-.. index:: single: Separate Filename
+.. index:: single: Separate filename
 
-Separate Filename
+Separate filename
 =================
 
 .. rule::

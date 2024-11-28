@@ -1,6 +1,6 @@
-.. index:: single: Camel Case Name
+.. index:: single: Camel case name
 
-Camel Case Name
+Camel case name
 ===============
 
 .. rule::

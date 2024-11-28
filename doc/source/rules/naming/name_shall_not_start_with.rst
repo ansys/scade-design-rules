@@ -1,6 +1,6 @@
-.. index:: single: Name Shall Not Start With
+.. index:: single: Name shall not start with
 
-Name Shall Not Start With
+Name shall not start with
 =========================
 
 .. rule::

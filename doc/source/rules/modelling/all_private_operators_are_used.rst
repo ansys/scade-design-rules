@@ -1,6 +1,6 @@
-.. index:: single: All Private Operators Are Used
+.. index:: single: All private operators are used
 
-All Private Operators Are Used
+All private operators are used
 ==============================
 
 .. rule::

@@ -1,6 +1,6 @@
-.. index:: single: Pascal Case Name
+.. index:: single: Pascal case name
 
-Pascal Case Name
+Pascal case name
 ================
 
 .. rule::

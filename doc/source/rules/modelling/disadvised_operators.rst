@@ -1,6 +1,6 @@
-.. index:: single: Not Recommended Operators
+.. index:: single: Not recommended operators
 
-Not Recommended Operators
+Not recommended operators
 =========================
 
 .. rule::
@@ -11,7 +11,7 @@ Not Recommended Operators
    :kind: generic
    :tags: modelling
 
-   Not Recommended Operators
+   Not recommended operators
 
 Description
 -----------

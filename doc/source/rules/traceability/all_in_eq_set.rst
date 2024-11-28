@@ -1,6 +1,6 @@
-.. index:: single: Element in Equation Set
+.. index:: single: Element in equation set
 
-Element in Equation Set
+Element in equation set
 =======================
 
 .. rule::
@@ -20,7 +20,7 @@ The elements, except actions, assertions, and control blocks, shall belong to at
 
 Rationale
 ---------
-This ensures the completeness of the traceability matrices once the Contribution Elements (CE), for example equation sets,
+This ensures the completeness of the traceability matrices once the Contributing Elements (CE), for example equation sets,
 are exported through SCADE ALM Gateway. Indeed, the listed elements are not CE and thus, must belong to an equation set.
 
 Verification

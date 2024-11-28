@@ -1,6 +1,6 @@
-.. index:: single: Number Of Nested Activate Blocks
+.. index:: single: Number of nested activate blocks
 
-Number Of Nested Activate Blocks
+Number of nested activate blocks
 ================================
 
 .. rule::

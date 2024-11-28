@@ -1,6 +1,6 @@
-.. index:: single: Enumeration Type Name Prefix
+.. index:: single: Enumeration type name prefix
 
-Enumeration Type Name Prefix
+Enumeration type name prefix
 ============================
 
 .. rule::

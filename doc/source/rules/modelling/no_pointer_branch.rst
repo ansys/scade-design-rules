@@ -1,9 +1,6 @@
-..
-   index:: pair: No Pointer Branch; Rule
+.. index:: single: No pointer branch
 
-.. index:: single: No Pointer Branch
-
-No Pointer Branch
+No pointer branch
 =================
 
 .. rule::

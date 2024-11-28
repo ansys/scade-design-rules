@@ -46,7 +46,7 @@ class LLRNature(AnnotationRule):
         id='id_0036',
         label='CE must have a design annotation',
         description=(
-            "The contributing elements shall have an annotation 'DesignElement' "
+            "The Contributing Elements (CE) shall have an annotation 'DesignElement' "
             "with a property 'Nature'.\n"
             "Parameter: '-t': Name of the note type: e.g.: '-t DesignElement'"
         ),

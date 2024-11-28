@@ -1,6 +1,6 @@
-.. index:: single: No Terminations
+.. index:: single: No terminations
 
-No Terminations
+No terminations
 ===============
 
 .. rule::

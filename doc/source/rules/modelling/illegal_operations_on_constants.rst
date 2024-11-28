@@ -1,6 +1,6 @@
-.. index:: single: Illegal Operations On Constants
+.. index:: single: Illegal operations on constants
 
-Illegal Operations On Constants
+Illegal operations on constants
 ===============================
 
 .. rule::

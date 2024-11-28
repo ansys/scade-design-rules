@@ -1,6 +1,6 @@
-.. index:: single: Local Name Uniqueness
+.. index:: single: Local name uniqueness
 
-Local Name Uniqueness
+Local name uniqueness
 =====================
 
 .. rule::

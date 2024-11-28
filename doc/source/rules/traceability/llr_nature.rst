@@ -1,7 +1,7 @@
-.. index:: single: CE Nature
+.. index:: single: CE nature
 
-CE Nature
-==========
+CE nature
+=========
 
 .. rule::
    :filename: llr_nature.py
@@ -14,7 +14,7 @@ CE Nature
 
 Description
 -----------
-The contributing elements shall have an annotation 'DesignElement' with a property 'Nature'.
+The Contributing Elements (CE) shall have an annotation 'DesignElement' with a property 'Nature'.
 Parameter: '-t': Name of the note type: e.g.: '-t DesignElement'
 
 .. end_description
@@ -32,7 +32,7 @@ This rules applies to the following elements:
 Rationale
 ---------
 The note type ``DesignElement`` is expected to be designed so that the property ``Nature``
-is taken into account when exporting the SCADE Contribution Elements (CE) through SCADE ALM Gateway.
+is taken into account when exporting the SCADE Contributing Elements (CE) through SCADE ALM Gateway.
 
 * The export is easier to specify: all the CE, regardless their nature.
 * The analysis of the traceability matrices is made easier by filtering the matrices with respect to this property.
@@ -59,8 +59,6 @@ The default value of the rule's parameters ``types`` or ``kinds`` can be overrid
 Refer to the documentation of the instantiation of a rule for details.
 
 .. seealso::
-   * `ESEG-EN-072 SCADE Traceability`_
+   * `ESEG-EN-072 SCADE Traceability`
    * :ref:`traceability`
    * Instantiation of a rule
-
-.. _`ESEG-EN-072 SCADE Traceability`: https://ansys.sharepoint.com/:w:/r/sites/SBUExpertise/Documents/Forms/Engineering%20Notes.aspx?id=%2Fsites%2FSBUExpertise%2FDocuments%2FESEG%2DEN%2D072%20SCADE%20Traceability%2Epdf&parent=%2Fsites%2FSBUExpertise%2FDocuments

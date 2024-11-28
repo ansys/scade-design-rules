@@ -1,7 +1,7 @@
-.. index:: single: Lib Projects Operators
+.. index:: single: No top-level operator in lib projects
 
-Lib Projects Operators
-======================
+No top-level operator in lib projects
+=====================================
 
 .. rule::
    :filename: lib_projects_operators.py

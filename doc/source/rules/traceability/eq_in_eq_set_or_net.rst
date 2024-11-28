@@ -1,6 +1,6 @@
-.. index:: single: Equation in Equation Set or Diagram
+.. index:: single: Equation in equation set or diagram
 
-Equation in Equation Set or Diagram
+Equation in equation set or diagram
 ===================================
 
 .. rule::
@@ -22,7 +22,7 @@ An equation or a branch shall belong to at least one equation set except followi
 
 Rationale
 ----------
-This ensures the completeness of the traceability matrices once the Contribution Elements (CE) are exported through SCADE ALM Gateway.
+This ensures the completeness of the traceability matrices once the Contributing Elements (CE) are exported through SCADE ALM Gateway.
 Indeed, the equations or branches are not CE and thus, must belong to an equation set.
 
 The states are CE and the ones without diagram are considered as small enough

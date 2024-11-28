@@ -1,6 +1,6 @@
-.. index:: single: Comment Has Specific Headlines
+.. index:: single: Comment has specific headlines
 
-Comment Has Specific Headlines
+Comment has specific headlines
 ==============================
 
 .. rule::
@@ -19,7 +19,7 @@ Description
 .. start_description
 
 The comment of an object shall have specific headlines defined in parameter.
-parameter: comma separated list of headlines, for example: Purpose,Algorithm
+parameter: comma separated list of headlines, for example: Purpose, Algorithm
 
 .. end_description
 

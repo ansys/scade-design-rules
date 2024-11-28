@@ -1,6 +1,6 @@
-.. index:: single: Initialization Of Arrays
+.. index:: single: Initialization of arrays
 
-Initialization Of Arrays
+Initialization of arrays
 ========================
 
 .. rule::

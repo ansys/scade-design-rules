@@ -1,6 +1,6 @@
-.. index:: single: Name Structure Type
+.. index:: single: Type name structure
 
-Name Structure Type
+Type name structure
 ===================
 
 .. rule::

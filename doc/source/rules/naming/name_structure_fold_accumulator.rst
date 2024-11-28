@@ -1,6 +1,6 @@
-.. index:: single: Accumulator Inputs/Outputs
+.. index:: single: Accumulator inputs/outputs
 
-Accumulator Inputs/Outputs
+Accumulator inputs/outputs
 ==========================
 
 .. rule::

@@ -50,7 +50,7 @@ class DisadvisedOperators(Rule):
             'Specific predefined SCADE operators should not be used: '
             'reverse (46), transpose (47), slice (51), Concatenation (52)'
         ),
-        label='Disadvised Operators',
+        label='Not recommended operators',
     ):
         super().__init__(
             id=id,

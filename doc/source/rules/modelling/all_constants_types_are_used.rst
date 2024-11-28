@@ -1,6 +1,6 @@
-.. index:: single: All Constants Types Are Used
+.. index:: single: All constants types are used
 
-All Constants Types Are Used
+All constants types are used
 ============================
 
 .. rule::

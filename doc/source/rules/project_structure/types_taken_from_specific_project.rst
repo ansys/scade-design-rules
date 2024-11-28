@@ -1,6 +1,6 @@
-.. index:: single: Types Taken From Specific Project
+.. index:: single: Types taken from specific project
 
-Types Taken From Specific Project
+Types taken from specific project
 =================================
 
 .. rule::

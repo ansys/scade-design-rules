@@ -1,6 +1,6 @@
-.. index:: single: Requirement Has Link
+.. index:: single: Requirement has link
 
-Requirement Has Link
+Requirement has link
 ====================
 
 .. rule::

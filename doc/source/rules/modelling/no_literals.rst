@@ -1,6 +1,6 @@
-.. index:: single: No Literals
+.. index:: single: No literals
 
-No Literals
+No literals
 ===========
 
 .. rule::

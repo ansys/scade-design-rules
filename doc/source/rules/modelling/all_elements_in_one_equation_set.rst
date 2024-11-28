@@ -1,6 +1,6 @@
-.. index:: single: All Elements In One Equation Set
+.. index:: single: All elements in one equation set
 
-All Elements In One Equation Set
+All elements in one equation set
 ================================
 
 .. rule::

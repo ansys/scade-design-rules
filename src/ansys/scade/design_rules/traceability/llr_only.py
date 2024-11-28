@@ -44,8 +44,8 @@ class LLROnly(Rule):
     def __init__(
         self,
         id='id_0037',
-        label='Tracing elements must be Contribution Elements',
-        description='The model elements tracing requirements shall be Contribution Elements (CE).',
+        label='Tracing elements must be Contributing Elements',
+        description='The model elements tracing requirements shall be Contributing Elements (CE).',
         category='Traceability',
         severity=Rule.ADVISORY,
         **kwargs,

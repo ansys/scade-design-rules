@@ -1,6 +1,6 @@
-.. index:: single: Tracing Elements are Equation Sets
+.. index:: single: Tracing elements are equation sets
 
-Tracing Elements are Equation Sets
+Tracing elements are equation sets
 ==================================
 
 .. rule::
@@ -10,11 +10,11 @@ Tracing Elements are Equation Sets
    :reference: TRA_REQ_007
    :tags: only_eqs
 
-   Tracing elements must be Contribution Elements
+   Tracing elements must be Contributing Elements
 
 Description
 -----------
-The model elements tracing requirements shall be Contribution Elements (CE).
+The model elements tracing requirements shall be Contributing Elements (CE).
 
 .. end_description
 

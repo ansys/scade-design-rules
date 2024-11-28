@@ -1,6 +1,6 @@
-.. index:: single: Maximum Call Graph Depth
+.. index:: single: Maximum call graph depth
 
-Maximum Call Graph Depth
+Maximum call graph depth
 ========================
 
 .. rule::

@@ -1,6 +1,6 @@
-.. index:: single: Name Structure Enumeration
+.. index:: single: Enumeration name structure
 
-Name Structure Enumeration
+Enumeration name structure
 ==========================
 
 .. rule::
@@ -18,7 +18,8 @@ Description
 
 .. start_description
 
-Enumeration shall be in capital letters and start/end with specific characters. In addition a three letter abbreviation of the corresponding type shall be available. COL_BLACK_e, e_COL_BLACK
+Enumeration shall be in capital letters and start/end with specific characters.
+In addition a three letter abbreviation of the corresponding type shall be available. COL_BLACK_e, e_COL_BLACK
 
 .. end_description
 

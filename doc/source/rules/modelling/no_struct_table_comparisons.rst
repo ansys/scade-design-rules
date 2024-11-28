@@ -1,6 +1,6 @@
-.. index:: single: No Struct Table Comparisons
+.. index:: single: No struct table comparisons
 
-No Struct Table Comparisons
+No struct table comparisons
 ===========================
 
 .. rule::

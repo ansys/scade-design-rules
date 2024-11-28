@@ -1,6 +1,6 @@
-.. index:: single: No Extra Clock
+.. index:: single: No extra clock
 
-No Extra Clock
+No extra clock
 ==============
 
 .. rule::

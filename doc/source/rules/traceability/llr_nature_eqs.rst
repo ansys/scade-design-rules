@@ -1,6 +1,6 @@
-.. index:: single: CE Nature Equation Set
+.. index:: single: CE nature equation set
 
-CE Nature Equation Set
+CE nature equation set
 ======================
 
 .. rule::
@@ -14,7 +14,7 @@ CE Nature Equation Set
 
 Description
 -----------
-The contributing elements shall have an annotation 'DesignElement' with a property 'Nature'.
+The Contributing Elements (CE) shall have an annotation 'DesignElement' with a property 'Nature'.
 Parameter: '-t': Name of the note type: e.g.: '-t DesignElement'
 
 .. end_description
@@ -30,7 +30,7 @@ This rules applies to the following elements:
 Rationale
 ---------
 The note type ``DesignElement`` is expected to be designed so that the property ``Nature``
-is taken into account when exporting the SCADE Contribution Elements (CE) through SCADE ALM Gateway.
+is taken into account when exporting the SCADE Contributing Elements (CE) through SCADE ALM Gateway.
 
 * The export is easier to specify: all the CE, regardless their nature.
 * The analysis of the traceability matrices is made easier by filtering the matrices with respect to this property.

@@ -1,6 +1,6 @@
-.. index:: single: Scade Types
+.. index:: single: Scade types
 
-Scade Types
+Scade types
 ===========
 
 .. category::

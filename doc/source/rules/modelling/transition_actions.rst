@@ -1,6 +1,6 @@
-.. index:: single: Transition Actions
+.. index:: single: Transition actions
 
-Transition Actions
+Transition actions
 ==================
 
 .. rule::

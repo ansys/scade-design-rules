@@ -1,6 +1,6 @@
-.. index:: single: Types Taken From Specific Package
+.. index:: single: Types taken from specific package
 
-Types Taken From Specific Package
+Types taken from specific package
 =================================
 
 .. rule::

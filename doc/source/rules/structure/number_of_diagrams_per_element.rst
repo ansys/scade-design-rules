@@ -1,6 +1,6 @@
-.. index:: single: Number Of Diagrams Per Element
+.. index:: single: Number of diagrams per element
 
-Number Of Diagrams Per Element
+Number of diagrams per element
 ==============================
 
 .. rule::

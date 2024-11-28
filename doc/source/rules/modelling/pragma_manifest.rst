@@ -1,6 +1,6 @@
-.. index:: single: Pragma Manifest
+.. index:: single: Pragma manifest
 
-Pragma Manifest
+Pragma manifest
 ===============
 
 .. rule::

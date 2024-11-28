@@ -1,6 +1,6 @@
-.. index:: single: No Last Without Default
+.. index:: single: No last without default
 
-No Last Without Default
+No last without default
 =======================
 
 .. rule::

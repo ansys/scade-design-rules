@@ -1,7 +1,7 @@
-.. index:: single: Tracing Elements Diagram
+.. index:: single: Tracing elements or diagrams
 
-Tracing Elements Diagram
-========================
+Tracing elements or diagrams
+============================
 
 .. rule::
    :filename: llr_or_net_only.py
@@ -10,11 +10,11 @@ Tracing Elements Diagram
    :reference: TRA_REQ_007
    :tags: llr_or_net
 
-   Tracing elements must be Contribution Elements
+   Tracing elements must be Contributing Elements
 
 Description
 -----------
-The model elements tracing requirements shall be Contribution Elements (CE).
+The model elements tracing requirements shall be Contributing Elements (CE).
 
 .. end_description
 

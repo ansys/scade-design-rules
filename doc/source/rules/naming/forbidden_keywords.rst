@@ -1,6 +1,6 @@
-.. index:: single: Forbidden Keywords
+.. index:: single: Forbidden keywords
 
-Forbidden Keywords
+Forbidden keywords
 ==================
 
 .. rule::

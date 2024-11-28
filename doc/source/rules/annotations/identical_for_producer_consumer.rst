@@ -1,6 +1,6 @@
-.. index:: single: Identical For Producer Consumer
+.. index:: single: Identical for producer consumer
 
-Identical For Producer Consumer
+Identical for producer consumer
 ===============================
 
 .. rule::
