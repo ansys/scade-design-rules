@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="95" defaultConfiguration="23">
+<Project id="1" oid_count="125" defaultConfiguration="23">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -187,8 +187,7 @@
 			<configuration>44</configuration>
 		</Prop>
 		<Prop id="55" name="@METRICS_RULES:USER_DEF_FILES">
-			<value>$(SCADE)/scripts/MetricRule/DefaultMetrics.py</value>
-			<value>$(SCADE)/scripts/MetricRule/DefaultRules.py</value>
+			<value>..\..\..\src\ansys\scade\design_rules\readability\line_crossing.py</value>
 		</Prop>
 		<Prop id="56" name="@STUDIO:TOOLCONF">
 			<value>Metrics and Rules Checker</value>
@@ -341,13 +340,27 @@
 			<value>57</value>
 			<value>65</value>
 		</Prop>
+		<Prop id="96" name="@METRICS_RULES:SELECTED_ROOTS">
+			<value>LineCrossing</value>
+			<configuration>54</configuration>
+		</Prop>
+		<Prop id="97" name="@METRICS_RULES:RULES_PARAM">
+			<value>id_0034,lines=yes</value>
+			<configuration>54</configuration>
+		</Prop>
+		<Prop id="98" name="@METRICS_RULES:SELECTED_RULES">
+			<value>id_0034</value>
+			<configuration>54</configuration>
+		</Prop>
 	</props>
 	<roots>
 		<Folder id="3" extensions="vsp;etp" name="SCADE Libraries"/>
 		<Folder id="12" extensions="xscade;scade" name="Model Files">
 			<elements>
 				<Folder id="13" extensions="xscade;scade" name="Separate Files"/>
-				<FileRef id="93" persistAs="Nominal.xscade"/>
+				<FileRef id="105" persistAs="Failure.xscade"/>
+				<FileRef id="118" persistAs="LineCrossing.xscade"/>
+				<FileRef id="125" persistAs="Success.xscade"/>
 			</elements>
 		</Folder>
 	</roots>

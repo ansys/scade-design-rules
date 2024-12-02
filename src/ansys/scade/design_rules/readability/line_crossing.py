@@ -24,7 +24,7 @@
 
 """Implements the LineCrossing rule."""
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     from os.path import abspath, dirname
     import sys
@@ -431,6 +431,6 @@ def _get_edge_path(operator: suite.Operator, edge: suite.Edge) -> str:
     return path
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     LineCrossing()
