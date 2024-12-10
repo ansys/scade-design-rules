@@ -94,21 +94,50 @@ def get_failed_ids(rule: LineCrossing, object_: suite.Object) -> Set[str]:
             _NA,
         ),
         (
-            'Sucess::CrossingNoLines/CrossingNoLines',
-            'Success::CrossingNoLines/_L1=',
+            'Failure::CrossingTransition/CrossingTransition',
+            'Failure::CrossingTransition/_L1=',
             'lines=no',
             _NA,
         ),
-        ('Sucess::Nominal/Nominal', 'Success::Nominal/_L1=', 'lines=no', _NA),
+        (
+            'Failure::CrossingState/CrossingState',
+            'Failure::CrossingState/_L1=',
+            'lines=no',
+            _NA,
+        ),
+        ('Success::Nominal/Nominal', None, 'lines=no', _NA),
+        (
+            'Success::CrossingNoLines/CrossingNoLines',
+            None,
+            'lines=no',
+            _NA,
+        ),
+        ('Failure::MultiLines/MultiLines', None, 'lines=no', _NA),
     ],
 )
 def test_line_crossing_nominal(session: suite.Session, path, equation_path, param, expected):
     model = session.model
 
     object_ = get_equation_set_or_diagram_from_path(model, path)
-    equation = model.get_object_from_path(equation_path)
+
     rule = LineCrossing()
     assert rule.on_start(object_, parameter=param) == _OK
     status = rule.on_check(object_, parameter=param)
     assert status == expected
-    get_failed_ids(rule, equation)
+    if equation_path is not None:
+        equation = model.get_object_from_path(equation_path)
+        get_failed_ids(rule, equation)
+
+
+@pytest.mark.parametrize(
+    'path, equation_path, param, expected',
+    [
+        ('Success::Nominal/Nominal', None, 'rzvze=jhviykh', _NA),
+    ],
+)
+def test_line_crossing_robustness(session: suite.Session, path, equation_path, param, expected):
+    model = session.model
+
+    object_ = get_equation_set_or_diagram_from_path(model, path)
+    rule = LineCrossing(object_)
+    assert rule.on_start(model, parameter=param) == _ERROR
