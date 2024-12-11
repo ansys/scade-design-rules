@@ -50,72 +50,67 @@ def get_failed_ids(rule: LineCrossing, object_: suite.Object) -> Set[str]:
     #  2. are NOK
     # and return the set of identifiers
     violations = set()
-    for (o, id), (status, _) in rule.violations.items():
-        assert status == _FAILED
-        assert o == object_
-        violations.add(id)
+    if object_ is None:
+        assert len(rule.violations.items()) == 0
+    else:
+        for (o, id), (status, _) in rule.violations.items():
+            assert status == _FAILED
+            assert o == object_
+            violations.add(id)
     return violations
 
 
 @pytest.mark.parametrize(
-    'path, equation_path, param, expected',
+    'path, equation_path, param',
     [
-        ('Failure::CrossingEdges/CrossingEdges', 'Failure::CrossingEdges/_L1=', 'lines=yes', _NA),
+        ('Failure::CrossingEdges/CrossingEdges', 'Failure::CrossingEdges/_L1=', 'lines=yes'),
         (
             'Failure::CrossingActivate/CrossingActivate',
             'Failure::CrossingActivate/_L3=',
             'lines=yes',
-            _NA,
         ),
         (
             'Failure::CrossingPredef/CrossingPredef',
             'Failure::CrossingPredef/_L2=',
             'lines=yes',
-            _NA,
         ),
-        ('Failure::CrossingVar/CrossingVar', 'Failure::CrossingVar/_L1=', 'lines=yes', _NA),
-        ('Failure::MultiLines/MultiLines', 'Failure::MultiLines/_L14=', 'lines=yes', _NA),
+        ('Failure::CrossingVar/CrossingVar', 'Failure::CrossingVar/_L1=', 'lines=yes'),
+        ('Failure::MultiLines/MultiLines', 'Failure::MultiLines/_L14=', 'lines=yes'),
         (
             'Failure::CrossingNoPoint/CrossingNoPoint',
             'Failure::CrossingNoPoint/_L2=',
             'lines=yes',
-            _NA,
         ),
         (
             'Failure::CrossingAction/CrossingAction',
             'Failure::CrossingAction/IfBlock1:else:_L3=',
             'lines=yes',
-            _NA,
         ),
         (
             'Failure::CrossingWhen/CrossingWhen',
             'Failure::CrossingWhen/WhenBlock1:true:_L2=',
             'lines=yes',
-            _NA,
         ),
         (
             'Failure::CrossingTransition/CrossingTransition',
             'Failure::CrossingTransition/_L1=',
             'lines=no',
-            _NA,
         ),
         (
             'Failure::CrossingState/CrossingState',
             'Failure::CrossingState/_L1=',
             'lines=no',
-            _NA,
         ),
-        ('Success::Nominal/Nominal', None, 'lines=no', _NA),
+        ('Success::Nominal/Nominal', None, 'lines=no'),
         (
             'Success::CrossingNoLines/CrossingNoLines',
             None,
             'lines=no',
-            _NA,
         ),
-        ('Failure::MultiLines/MultiLines', None, 'lines=no', _NA),
+        ('Failure::MultiLines/MultiLines', None, 'lines=no'),
     ],
 )
-def test_line_crossing_nominal(session: suite.Session, path, equation_path, param, expected):
+def test_line_crossing_nominal(session: suite.Session, path, equation_path, param):
     model = session.model
 
     object_ = get_equation_set_or_diagram_from_path(model, path)
@@ -123,19 +118,21 @@ def test_line_crossing_nominal(session: suite.Session, path, equation_path, para
     rule = LineCrossing()
     assert rule.on_start(object_, parameter=param) == _OK
     status = rule.on_check(object_, parameter=param)
-    assert status == expected
+    assert status == _NA
     if equation_path is not None:
         equation = model.get_object_from_path(equation_path)
-        get_failed_ids(rule, equation)
+    else:
+        equation = None
+    get_failed_ids(rule, equation)
 
 
 @pytest.mark.parametrize(
-    'path, equation_path, param, expected',
+    'path, equation_path, param',
     [
-        ('Success::Nominal/Nominal', None, 'rzvze=jhviykh', _NA),
+        ('Success::Nominal/Nominal', None, 'rzvze=jhviykh'),
     ],
 )
-def test_line_crossing_robustness(session: suite.Session, path, equation_path, param, expected):
+def test_line_crossing_robustness(session: suite.Session, path, equation_path, param):
     model = session.model
 
     object_ = get_equation_set_or_diagram_from_path(model, path)
