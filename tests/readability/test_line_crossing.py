@@ -101,6 +101,11 @@ def get_failed_ids(rule: LineCrossing, object_: suite.Object) -> Set[str]:
             'Failure::CrossingState/_L1=',
             'lines=no',
         ),
+        (
+            'Failure::CrossingMultiCross/CrossingMultiCross',
+            'Failure::CrossingMultiCross/_L2=',
+            'lines=yes',
+        ),
         ('Success::Nominal/Nominal', None, 'lines=no'),
         (
             'Success::CrossingNoLines/CrossingNoLines',
