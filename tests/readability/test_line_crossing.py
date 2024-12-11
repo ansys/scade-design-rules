@@ -44,78 +44,104 @@ def session():
     return load_session(pathname)
 
 
-def get_failed_ids(rule: LineCrossing, object_: suite.Object) -> Set[str]:
+def get_failed_ids(
+    rule: LineCrossing, objects: Set[tuple[suite.Equation, Set[tuple[suite.Object, suite.Object]]]]
+):
     # make sure the violations:
     #  1. refer to object_
     #  2. are NOK
     # and return the set of identifiers
-    violations = set()
-    if object_ is None:
-        assert len(rule.violations.items()) == 0
+    if objects is None:
+        assert not rule.violations
     else:
-        for (o, id), (status, _) in rule.violations.items():
-            assert status == _FAILED
-            assert o == object_
-            violations.add(id)
-    return violations
+        violations = {(o, id_) for o, id_ in rule.violations.keys()}
+        statuses = {status for status, _ in rule.violations.values()}
+
+        expected = {
+            (eq, loc[0].get_oid() + ':' + loc[1].get_oid() if loc[1] else loc[0].get_oid() + ':box')
+            for eq, loc in objects
+        }
+        assert expected == violations
+        assert statuses == {_FAILED}
 
 
 @pytest.mark.parametrize(
-    'path, equation_path, param',
+    'path, equations_and_ids, param',
     [
-        ('Failure::CrossingEdges/CrossingEdges', 'Failure::CrossingEdges/_L1=', 'lines=yes'),
         (
             'Failure::CrossingActivate/CrossingActivate',
-            'Failure::CrossingActivate/_L3=',
+            {
+                (
+                    'Failure::CrossingActivate/_L3=',
+                    ('Failure::CrossingActivate/_L3', 'Failure::CrossingActivate/_L1='),
+                )
+            },
             'lines=yes',
         ),
         (
             'Failure::CrossingPredef/CrossingPredef',
-            'Failure::CrossingPredef/_L2=',
+            {
+                (
+                    'Failure::CrossingPredef/_L2=',
+                    ('Failure::CrossingPredef/_L2', 'Failure::CrossingPredef/_L2='),
+                )
+            },
             'lines=yes',
         ),
-        ('Failure::CrossingVar/CrossingVar', 'Failure::CrossingVar/_L1=', 'lines=yes'),
-        ('Failure::MultiLines/MultiLines', 'Failure::MultiLines/_L14=', 'lines=yes'),
         (
-            'Failure::CrossingNoPoint/CrossingNoPoint',
-            'Failure::CrossingNoPoint/_L2=',
+            'Failure::CrossingVar/CrossingVar',
+            {
+                (
+                    'Failure::CrossingVar/_L1=',
+                    ('Failure::CrossingVar/_L1', 'Failure::CrossingVar/_L3='),
+                )
+            },
             'lines=yes',
         ),
         (
             'Failure::CrossingAction/CrossingAction',
-            'Failure::CrossingAction/IfBlock1:else:_L3=',
+            {
+                (
+                    'Failure::CrossingAction/IfBlock1:else:_L3=',
+                    ('Failure::CrossingAction/IfBlock1:else:_L3', None),
+                )
+            },
             'lines=yes',
         ),
         (
             'Failure::CrossingWhen/CrossingWhen',
-            'Failure::CrossingWhen/WhenBlock1:true:_L2=',
+            {
+                (
+                    'Failure::CrossingWhen/WhenBlock1:true:_L2=',
+                    ('Failure::CrossingWhen/WhenBlock1:true:_L2', None),
+                )
+            },
             'lines=yes',
         ),
         (
             'Failure::CrossingTransition/CrossingTransition',
-            'Failure::CrossingTransition/_L1=',
+            {
+                (
+                    'Failure::CrossingTransition/_L1=',
+                    ('Failure::CrossingTransition/_L1', 'Failure::CrossingTransition/SM1'),
+                )
+            },
             'lines=no',
         ),
         (
             'Failure::CrossingState/CrossingState',
-            'Failure::CrossingState/_L1=',
+            {
+                (
+                    'Failure::CrossingState/SM1:State1:_L2=',
+                    ('Failure::CrossingState/SM1:State1:_L2', None),
+                )
+            },
             'lines=no',
-        ),
-        (
-            'Failure::CrossingMultiCross/CrossingMultiCross',
-            'Failure::CrossingMultiCross/_L2=',
-            'lines=yes',
         ),
         ('Success::Nominal/Nominal', None, 'lines=no'),
-        (
-            'Success::CrossingNoLines/CrossingNoLines',
-            None,
-            'lines=no',
-        ),
-        ('Failure::MultiLines/MultiLines', None, 'lines=no'),
     ],
 )
-def test_line_crossing_nominal(session: suite.Session, path, equation_path, param):
+def test_line_crossing_nominal(session: suite.Session, path, equations_and_ids, param):
     model = session.model
 
     object_ = get_equation_set_or_diagram_from_path(model, path)
@@ -124,11 +150,111 @@ def test_line_crossing_nominal(session: suite.Session, path, equation_path, para
     assert rule.on_start(object_, parameter=param) == _OK
     status = rule.on_check(object_, parameter=param)
     assert status == _NA
-    if equation_path is not None:
-        equation = model.get_object_from_path(equation_path)
+
+    def get_expected_objects(elem):
+        if elem[1]:
+            return model.get_object_from_path(elem[0]), model.get_object_from_path(elem[1])
+        else:
+            return model.get_object_from_path(elem[0]), None
+
+    if equations_and_ids:
+        equations_and_ids = {
+            (model.get_object_from_path(elem[0]), get_expected_objects(elem[1])) if elem else None
+            for elem in equations_and_ids
+        }
+    get_failed_ids(rule, equations_and_ids)
+
+
+@pytest.mark.parametrize('line_param', [True, False])
+@pytest.mark.parametrize(
+    'path, equations_and_ids',
+    [
+        (
+            'LineLineCrossing::CrossingReCross/CrossingReCross',
+            {
+                (
+                    'LineLineCrossing::CrossingReCross/_L2=',
+                    (
+                        'LineLineCrossing::CrossingReCross/_L2',
+                        'LineLineCrossing::CrossingReCross/_L1',
+                    ),
+                )
+            },
+        ),
+        # ('LineLineCrossing::CrossingIn/CrossingIn', {('LineLineCrossing::CrossingIn/_L1=',
+        # ('LineLineCrossing::CrossingIn/_L1', 'LineLineCrossing::CrossingIn/_L1'))}, 'lines=yes'),
+        (
+            'LineLineCrossing::CrossingOut/CrossingOut',
+            {
+                (
+                    'LineLineCrossing::CrossingOut/_L14=',
+                    ('LineLineCrossing::CrossingOut/_L15', 'LineLineCrossing::CrossingOut/_L14'),
+                )
+            },
+        ),
+        (
+            'LineLineCrossing::CrossingEdges/CrossingEdges',
+            {
+                (
+                    'LineLineCrossing::CrossingEdges/_L1=',
+                    ('LineLineCrossing::CrossingEdges/_L1', 'LineLineCrossing::CrossingEdges/_L2'),
+                )
+            },
+        ),
+        (
+            'LineLineCrossing::CrossingMultiples/CrossingMultiples',
+            {
+                (
+                    'LineLineCrossing::CrossingMultiples/_L4=',
+                    (
+                        'LineLineCrossing::CrossingMultiples/_L4',
+                        'LineLineCrossing::CrossingMultiples/_L2',
+                    ),
+                ),
+                (
+                    'LineLineCrossing::CrossingMultiples/_L4=',
+                    (
+                        'LineLineCrossing::CrossingMultiples/_L4',
+                        'LineLineCrossing::CrossingMultiples/_L3',
+                    ),
+                ),
+                (
+                    'LineLineCrossing::CrossingMultiples/_L1=',
+                    (
+                        'LineLineCrossing::CrossingMultiples/_L1',
+                        'LineLineCrossing::CrossingMultiples/_L4',
+                    ),
+                ),
+            },
+        ),
+    ],
+)
+def test_line_crossing_line(session: suite.Session, line_param, path, equations_and_ids):
+    model = session.model
+
+    object_ = get_equation_set_or_diagram_from_path(model, path)
+    if line_param:
+        param = 'lines=yes'
     else:
-        equation = None
-    get_failed_ids(rule, equation)
+        param = 'lines=no'
+        equations_and_ids = None
+    rule = LineCrossing()
+    assert rule.on_start(object_, parameter=param) == _OK
+    status = rule.on_check(object_, parameter=param)
+    assert status == _NA
+
+    def get_expected_objects(elem):
+        if elem[1]:
+            return model.get_object_from_path(elem[0]), model.get_object_from_path(elem[1])
+        else:
+            return model.get_object_from_path(elem[0]), None
+
+    if equations_and_ids:
+        equations_and_ids = {
+            (model.get_object_from_path(elem[0]), get_expected_objects(elem[1])) if elem else None
+            for elem in equations_and_ids
+        }
+    get_failed_ids(rule, equations_and_ids)
 
 
 @pytest.mark.parametrize(
