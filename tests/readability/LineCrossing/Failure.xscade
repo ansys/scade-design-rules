@@ -1114,7 +1114,7 @@
 										</EquationGE>
 										<EquationGE rotation="270" presentable="!ed/208/61B7/AE40/6747478a2d45">
 											<position>
-												<Point x="10202" y="6604"/>
+												<Point x="13907" y="6075"/>
 											</position>
 											<size>
 												<Size width="508" height="508"/>
@@ -1127,7 +1127,13 @@
 												<Point x="9567" y="4466"/>
 												<Point x="10456" y="4466"/>
 												<Point x="10456" y="4551"/>
-												<Point x="10456" y="6858"/>
+												<Point x="10456" y="5884"/>
+												<Point x="12086" y="5884"/>
+												<Point x="12086" y="4360"/>
+												<Point x="12827" y="4360"/>
+												<Point x="12827" y="5884"/>
+												<Point x="14161" y="5884"/>
+												<Point x="14161" y="6329"/>
 											</positions>
 										</Edge>
 									</presentationElements>
