@@ -44,14 +44,10 @@ def session():
     return load_session(pathname)
 
 
-def get_failed_ids(
+def check_expected(
     rule: LineCrossing, objects: Set[tuple[suite.Equation, Set[tuple[suite.Object, suite.Object]]]]
 ):
-    # make sure the violations:
-    #  1. refer to object_
-    #  2. are NOK
-    # and return the set of identifiers
-    if objects is None:
+    if not objects:
         assert not rule.violations
     else:
         violations = {(o, id_) for o, id_ in rule.violations.keys()}
@@ -66,7 +62,7 @@ def get_failed_ids(
 
 
 @pytest.mark.parametrize(
-    'path, equations_and_ids, param',
+    'path, expected, param',
     [
         (
             'Failure::CrossingActivate/CrossingActivate',
@@ -141,9 +137,9 @@ def get_failed_ids(
         ('Success::Nominal/Nominal', None, 'lines=no'),
     ],
 )
-def test_line_crossing_nominal(session: suite.Session, path, equations_and_ids, param):
+def test_line_crossing_nominal(session: suite.Session, path, expected, param):
     model = session.model
-
+    equations_and_ids = None
     object_ = get_equation_set_or_diagram_from_path(model, path)
 
     rule = LineCrossing()
@@ -157,17 +153,17 @@ def test_line_crossing_nominal(session: suite.Session, path, equations_and_ids, 
         else:
             return model.get_object_from_path(elem[0]), None
 
-    if equations_and_ids:
+    if expected:
         equations_and_ids = {
             (model.get_object_from_path(elem[0]), get_expected_objects(elem[1])) if elem else None
-            for elem in equations_and_ids
+            for elem in expected
         }
-    get_failed_ids(rule, equations_and_ids)
+    check_expected(rule, equations_and_ids)
 
 
 @pytest.mark.parametrize('line_param', [True, False])
 @pytest.mark.parametrize(
-    'path, equations_and_ids',
+    'path, expected',
     [
         (
             'LineLineCrossing::CrossingReCross/CrossingReCross',
@@ -181,6 +177,9 @@ def test_line_crossing_nominal(session: suite.Session, path, equations_and_ids, 
                 )
             },
         ),
+        # Disabled test, Rule does not detect an Edge crossing itself.
+        # It is not really considered a failure but rather than an uncovered case because the
+        # implementation would be difficult
         # ('LineLineCrossing::CrossingIn/CrossingIn', {('LineLineCrossing::CrossingIn/_L1=',
         # ('LineLineCrossing::CrossingIn/_L1', 'LineLineCrossing::CrossingIn/_L1'))}, 'lines=yes'),
         (
@@ -229,15 +228,16 @@ def test_line_crossing_nominal(session: suite.Session, path, equations_and_ids, 
         ),
     ],
 )
-def test_line_crossing_line(session: suite.Session, line_param, path, equations_and_ids):
+def test_line_crossing_line(session: suite.Session, line_param, path, expected):
     model = session.model
 
     object_ = get_equation_set_or_diagram_from_path(model, path)
+    equations_and_ids = None
     if line_param:
         param = 'lines=yes'
     else:
         param = 'lines=no'
-        equations_and_ids = None
+
     rule = LineCrossing()
     assert rule.on_start(object_, parameter=param) == _OK
     status = rule.on_check(object_, parameter=param)
@@ -249,12 +249,12 @@ def test_line_crossing_line(session: suite.Session, line_param, path, equations_
         else:
             return model.get_object_from_path(elem[0]), None
 
-    if equations_and_ids:
+    if expected and line_param:
         equations_and_ids = {
             (model.get_object_from_path(elem[0]), get_expected_objects(elem[1])) if elem else None
-            for elem in equations_and_ids
+            for elem in expected
         }
-    get_failed_ids(rule, equations_and_ids)
+    check_expected(rule, equations_and_ids)
 
 
 @pytest.mark.parametrize(
