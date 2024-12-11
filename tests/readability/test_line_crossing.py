@@ -139,7 +139,7 @@ def check_expected(
 )
 def test_line_crossing_nominal(session: suite.Session, path, expected, param):
     model = session.model
-    equations_and_ids = None
+    equations_and_ids = set()
     object_ = get_equation_set_or_diagram_from_path(model, path)
 
     rule = LineCrossing()
@@ -232,7 +232,7 @@ def test_line_crossing_line(session: suite.Session, line_param, path, expected):
     model = session.model
 
     object_ = get_equation_set_or_diagram_from_path(model, path)
-    equations_and_ids = None
+    equations_and_ids = set()
     if line_param:
         param = 'lines=yes'
     else:
@@ -260,7 +260,7 @@ def test_line_crossing_line(session: suite.Session, line_param, path, expected):
 @pytest.mark.parametrize(
     'path, equation_path, param',
     [
-        ('Success::Nominal/Nominal', None, 'rzvze=jhviykh'),
+        ('Success::Nominal/Nominal', set(), 'rzvze=jhviykh'),
     ],
 )
 def test_line_crossing_robustness(session: suite.Session, path, equation_path, param):
