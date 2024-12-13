@@ -99,7 +99,7 @@ def check_expected(
             {
                 (
                     'Failure::CrossingAction/IfBlock1:else:_L3=',
-                    ('Failure::CrossingAction/IfBlock1:else:_L3', None),
+                    ('Failure::CrossingAction/IfBlock1:else:_L3'),
                 )
             },
             'lines=yes',
@@ -109,7 +109,7 @@ def check_expected(
             {
                 (
                     'Failure::CrossingWhen/WhenBlock1:true:_L2=',
-                    ('Failure::CrossingWhen/WhenBlock1:true:_L2', None),
+                    ('Failure::CrossingWhen/WhenBlock1:true:_L2'),
                 )
             },
             'lines=yes',
@@ -129,7 +129,7 @@ def check_expected(
             {
                 (
                     'Failure::CrossingState/SM1:State1:_L2=',
-                    ('Failure::CrossingState/SM1:State1:_L2', None),
+                    ('Failure::CrossingState/SM1:State1:_L2'),
                 )
             },
             'lines=no',
@@ -146,16 +146,14 @@ def test_line_crossing_nominal(session: suite.Session, path, expected, param):
     status = rule.on_check(object_, parameter=param)
     assert status == _NA
 
-    def get_expected_objects(elem):
-        if elem[1]:
-            return model.get_object_from_path(elem[0]), model.get_object_from_path(elem[1])
-        else:
-            return model.get_object_from_path(elem[0]), None
-
     equations_and_ids = {
-        (model.get_object_from_path(elem[0]), get_expected_objects(elem[1])) if elem else {}
-        for elem in expected
+        (
+            model.get_object_from_path(equation),
+            {model.get_object_from_path(crossing_object) for crossing_object in crossing_objects},
+        )
+        for equation, crossing_objects in expected
     }
+
     check_expected(rule, equations_and_ids)
 
 
@@ -228,29 +226,23 @@ def test_line_crossing_nominal(session: suite.Session, path, expected, param):
 )
 def test_line_crossing_line(session: suite.Session, line_param, path, expected):
     model = session.model
-    object_ = get_equation_set_or_diagram_from_path(model, path)
-    equations_and_ids = set()
     if line_param:
         param = 'lines=yes'
     else:
         param = 'lines=no'
-
+    object_ = get_equation_set_or_diagram_from_path(model, path)
     rule = LineCrossing()
     assert rule.on_start(object_, parameter=param) == _OK
     status = rule.on_check(object_, parameter=param)
     assert status == _NA
 
-    def get_expected_objects(elem):
-        if elem[1]:
-            return model.get_object_from_path(elem[0]), model.get_object_from_path(elem[1])
-        else:
-            return model.get_object_from_path(elem[0]), None
-
-    if expected and line_param:
-        equations_and_ids = {
-            (model.get_object_from_path(elem[0]), get_expected_objects(elem[1]))
-            for elem in expected
-        }
+    equations_and_ids = {
+        (
+            model.get_object_from_path(equation),
+            {model.get_object_from_path(crossing_object) for crossing_object in crossing_objects},
+        )
+        for equation, crossing_objects in expected
+    }
     check_expected(rule, equations_and_ids)
 
 
