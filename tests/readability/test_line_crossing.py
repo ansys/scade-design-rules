@@ -258,12 +258,10 @@ def test_line_crossing_line(session: suite.Session, line_param, path, expected):
 
 
 @pytest.mark.parametrize(
-    'path, equation_path, param',
-    [
-        ('Success::Nominal/Nominal', set(), 'rzvze=jhviykh'),
-    ],
+    'path, param',
+    [('Success::Nominal/Nominal', 'dadza=yes'), ('Success::Nominal/Nominal', 'lines=ezefezf')],
 )
-def test_line_crossing_robustness(session: suite.Session, path, equation_path, param):
+def test_line_crossing_robustness(session: suite.Session, path, param):
     model = session.model
 
     object_ = get_equation_set_or_diagram_from_path(model, path)
