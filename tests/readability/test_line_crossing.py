@@ -53,11 +53,16 @@ def check_expected(
         violations = {(o, id_) for o, id_ in rule.violations.keys()}
         statuses = {status for status, _ in rule.violations.values()}
 
-        expected = {
-            (eq, loc[0].get_oid() + ':' + loc[1].get_oid() if loc[1] else loc[0].get_oid() + ':box')
-            for eq, loc in objects
-        }
-        assert expected == violations
+        expected = set()
+        for eq, locs in objects:
+            local_vars = [loc for loc in locs]
+            crossing_message = ''
+            if len(local_vars) == 1:
+                crossing_message = local_vars[0].get_oid() + ':box'
+            elif len(local_vars) > 1:
+                crossing_message = local_vars[0].get_oid() + ':' + local_vars[1].get_oid()
+            expected.add((eq, crossing_message))
+        assert violations == expected
         assert statuses == {_FAILED}
 
 
@@ -99,7 +104,7 @@ def check_expected(
             {
                 (
                     'Failure::CrossingAction/IfBlock1:else:_L3=',
-                    ('Failure::CrossingAction/IfBlock1:else:_L3'),
+                    ('Failure::CrossingAction/IfBlock1:else:_L3',),
                 )
             },
             'lines=yes',
@@ -109,7 +114,7 @@ def check_expected(
             {
                 (
                     'Failure::CrossingWhen/WhenBlock1:true:_L2=',
-                    ('Failure::CrossingWhen/WhenBlock1:true:_L2'),
+                    ('Failure::CrossingWhen/WhenBlock1:true:_L2',),
                 )
             },
             'lines=yes',
@@ -129,18 +134,17 @@ def check_expected(
             {
                 (
                     'Failure::CrossingState/SM1:State1:_L2=',
-                    ('Failure::CrossingState/SM1:State1:_L2'),
+                    ('Failure::CrossingState/SM1:State1:_L2',),
                 )
             },
             'lines=no',
         ),
-        ('Success::Nominal/Nominal', {}, 'lines=no'),
+        ('Success::Nominal/Nominal', set(), 'lines=no'),
     ],
 )
 def test_line_crossing_nominal(session: suite.Session, path, expected, param):
     model = session.model
     object_ = get_equation_set_or_diagram_from_path(model, path)
-
     rule = LineCrossing()
     assert rule.on_start(object_, parameter=param) == _OK
     status = rule.on_check(object_, parameter=param)
@@ -149,7 +153,7 @@ def test_line_crossing_nominal(session: suite.Session, path, expected, param):
     equations_and_ids = {
         (
             model.get_object_from_path(equation),
-            {model.get_object_from_path(crossing_object) for crossing_object in crossing_objects},
+            (model.get_object_from_path(crossing_object) for crossing_object in crossing_objects),
         )
         for equation, crossing_objects in expected
     }
@@ -230,6 +234,7 @@ def test_line_crossing_line(session: suite.Session, line_param, path, expected):
         param = 'lines=yes'
     else:
         param = 'lines=no'
+        expected = set()
     object_ = get_equation_set_or_diagram_from_path(model, path)
     rule = LineCrossing()
     assert rule.on_start(object_, parameter=param) == _OK
@@ -239,7 +244,7 @@ def test_line_crossing_line(session: suite.Session, line_param, path, expected):
     equations_and_ids = {
         (
             model.get_object_from_path(equation),
-            {model.get_object_from_path(crossing_object) for crossing_object in crossing_objects},
+            (model.get_object_from_path(crossing_object) for crossing_object in crossing_objects),
         )
         for equation, crossing_objects in expected
     }
