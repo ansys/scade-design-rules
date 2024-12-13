@@ -134,12 +134,11 @@ def check_expected(
             },
             'lines=no',
         ),
-        ('Success::Nominal/Nominal', None, 'lines=no'),
+        ('Success::Nominal/Nominal', {}, 'lines=no'),
     ],
 )
 def test_line_crossing_nominal(session: suite.Session, path, expected, param):
     model = session.model
-    equations_and_ids = set()
     object_ = get_equation_set_or_diagram_from_path(model, path)
 
     rule = LineCrossing()
@@ -153,11 +152,10 @@ def test_line_crossing_nominal(session: suite.Session, path, expected, param):
         else:
             return model.get_object_from_path(elem[0]), None
 
-    if expected:
-        equations_and_ids = {
-            (model.get_object_from_path(elem[0]), get_expected_objects(elem[1])) if elem else None
-            for elem in expected
-        }
+    equations_and_ids = {
+        (model.get_object_from_path(elem[0]), get_expected_objects(elem[1])) if elem else {}
+        for elem in expected
+    }
     check_expected(rule, equations_and_ids)
 
 
@@ -230,7 +228,6 @@ def test_line_crossing_nominal(session: suite.Session, path, expected, param):
 )
 def test_line_crossing_line(session: suite.Session, line_param, path, expected):
     model = session.model
-
     object_ = get_equation_set_or_diagram_from_path(model, path)
     equations_and_ids = set()
     if line_param:
@@ -251,19 +248,18 @@ def test_line_crossing_line(session: suite.Session, line_param, path, expected):
 
     if expected and line_param:
         equations_and_ids = {
-            (model.get_object_from_path(elem[0]), get_expected_objects(elem[1])) if elem else None
+            (model.get_object_from_path(elem[0]), get_expected_objects(elem[1]))
             for elem in expected
         }
     check_expected(rule, equations_and_ids)
 
 
 @pytest.mark.parametrize(
-    'path, param',
-    [('Success::Nominal/Nominal', 'wrong=yes'), ('Success::Nominal/Nominal', 'lines=unknown')],
+    'param,expected',
+    [('wrong=yes', _ERROR), ('lines=unknown', _OK)],
 )
-def test_line_crossing_robustness(session: suite.Session, path, param):
+def test_line_crossing_robustness(session: suite.Session, param, expected):
     model = session.model
 
-    object_ = get_equation_set_or_diagram_from_path(model, path)
-    rule = LineCrossing(object_)
-    assert rule.on_start(model, parameter=param) == _ERROR
+    rule = LineCrossing()
+    assert rule.on_start(model, parameter=param) == expected
