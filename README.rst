@@ -28,7 +28,7 @@ Ansys SCADE Design Rules
    :target: https://github.com/astral-sh/ruff
    :alt: Ruff
 
-.. |doc| image:: https://img.shields.io/badge/docs-design-rules-green.svg?style=flat
+.. |doc| image:: https://img.shields.io/badge/docs-design--rules-green.svg?style=flat
    :target: https://design-rules.scade.docs.pyansys.com
    :alt: Doc
 

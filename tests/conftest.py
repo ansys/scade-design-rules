@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (C) 2021 - 2024 ANSYS, Inc. and/or its affiliates.
+# Copyright (C) 2021 - 2025 ANSYS, Inc. and/or its affiliates.
 # SPDX-License-Identifier: MIT
 #
 #
@@ -23,6 +23,9 @@
 # SOFTWARE.
 
 
+from pathlib import Path
+import sys
+
 # shall modify sys.path to access SCACE APIs
 import ansys.scade.apitools  # noqa: F401
 
@@ -31,6 +34,8 @@ import ansys.scade.apitools  # noqa: F401
 import scade
 import scade.model.project.stdproject as std
 import scade.model.suite as suite
+
+sys.path.append(str(Path(__file__).parent.parent))
 
 
 def load_session(*paths: str, project: str = '') -> suite.Session:
