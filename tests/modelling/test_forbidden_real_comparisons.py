@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (C) 2021 - 2024 ANSYS, Inc. and/or its affiliates.
+# Copyright (C) 2021 - 2025 ANSYS, Inc. and/or its affiliates.
 # SPDX-License-Identifier: MIT
 #
 #
@@ -27,7 +27,7 @@ import scade.model.suite as suite
 
 from ansys.scade.design_rules.modelling.forbidden_real_comparisons import ForbiddenRealComparisons
 from ansys.scade.design_rules.utils.rule import Rule
-from tests.conftest import load_session
+from conftest import load_session
 
 # shorter names
 _OK = Rule.OK
