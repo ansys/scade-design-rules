@@ -1,24 +1,24 @@
-.. index:: single: Number of predefined operators in diagram
+.. index:: single: Maximum predefined operators in diagram
 
-Number of predefined operators in diagram
-=========================================
+Maximum predefined operators in diagram
+========================================
 
 .. rule::
-   :filename: number_of_predef_ops_in_diagram.py
-   :class: NumberOfPredefOpsInDiagram
+   :filename: maximum_predef_ops_in_diagram.py
+   :class: MaximumPredefOpsInDiagram
    :id: id_0073
    :reference: n/a
    :kind: generic
    :tags: structure
 
-   Number of predefined operators in diagram
+   Maximum predefined operators in diagram
 
 Description
 -----------
 
 .. start_description
 
-Number of graphical primitive operator instances within a diagram. This metric also includes textual equations.
+Maximum graphical primitive operator instances within a diagram. This metric also includes textual equations.
 Parameter: maximum value: e.g.: '15'
 
 .. end_description

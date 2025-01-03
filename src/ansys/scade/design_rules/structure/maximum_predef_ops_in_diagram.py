@@ -22,7 +22,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-"""Implements the NumberOfPredefOpsInDiagram rule."""
+"""Implements the MaximumPredefOpsInDiagram rule."""
 
 if __name__ == '__main__':
     # rule instantiated outside of a package
@@ -36,7 +36,7 @@ import scade.model.suite as suite
 from ansys.scade.design_rules.utils.rule import Rule
 
 
-class NumberOfPredefOpsInDiagram(Rule):
+class MaximumPredefOpsInDiagram(Rule):
     """Implements the rule interface."""
 
     def __init__(
@@ -45,9 +45,9 @@ class NumberOfPredefOpsInDiagram(Rule):
         category='Structuring',
         severity=Rule.REQUIRED,
         parameter='15',
-        label='Number of predefined operators in diagram',
+        label='Maximum predefined operators in diagram',
         description=(
-            'Number of graphical primitive operator instances within a diagram. '
+            'Maximum graphical primitive operator instances within a diagram. '
             'This metric also includes textual equations.\n'
             "Parameter: maximum value: e.g.: '15'"
         ),
@@ -105,4 +105,4 @@ class NumberOfPredefOpsInDiagram(Rule):
 
 if __name__ == '__main__':
     # rule instantiated outside of a package
-    NumberOfPredefOpsInDiagram()
+    MaximumPredefOpsInDiagram()

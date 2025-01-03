@@ -187,7 +187,7 @@
 			<configuration>44</configuration>
 		</Prop>
 		<Prop id="55" name="@METRICS_RULES:USER_DEF_FILES">
-			<value>..\..\..\src\ansys\scade\design_rules\structure\number_of_predef_ops_in_diagram.py</value>
+			<value>..\..\..\src\ansys\scade\design_rules\structure\maximum_predef_ops_in_diagram.py</value>
 		</Prop>
 		<Prop id="56" name="@STUDIO:TOOLCONF">
 			<value>Metrics and Rules Checker</value>
@@ -261,10 +261,10 @@
 			<configuration>65</configuration>
 		</Prop>
 		<Prop id="73" name="@SCADE:DEFAULTFILE">
-			<value>NumberOfPredefOpsInDiagram.xscade</value>
+			<value>MaximumPredefOpsInDiagram.xscade</value>
 		</Prop>
 		<Prop id="74" name="@SCADE:SEMFILE">
-			<value>NumberOfPredefOpsInDiagram.err</value>
+			<value>MaximumPredefOpsInDiagram.err</value>
 		</Prop>
 		<Prop id="75" name="@SCADE:NOTEFILE">
 			<value>$(SCADE)/lib/DefaultAty.aty</value>
@@ -344,7 +344,7 @@
 			<value>false</value>
 		</Prop>
 		<Prop id="93" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>NumberOfPredefOpsInDiagram</value>
+			<value>MaximumPredefOpsInDiagram</value>
 			<configuration>54</configuration>
 		</Prop>
 		<Prop id="94" name="@METRICS_RULES:RULES_PARAM">
@@ -361,7 +361,7 @@
 		<Folder id="12" extensions="xscade;scade" name="Model Files">
 			<elements>
 				<Folder id="13" extensions="xscade;scade" name="Separate Files"/>
-				<FileRef id="92" persistAs="NumberOfPredefOpsInDiagram.xscade"/>
+				<FileRef id="92" persistAs="MaximumPredefOpsInDiagram.xscade"/>
 			</elements>
 		</Folder>
 	</roots>

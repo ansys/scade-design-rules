@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
 	<declarations>
-		<Package name="NumberOfPredefOpsInDiagram">
+		<Package name="MaximumPredefOpsInDiagram">
 			<declarations>
-				<Operator kind="function" name="NumberOfPredefOpsInDiagram">
+				<Operator kind="function" name="MaximumPredefOpsInDiagram">
 					<inputs>
 						<Variable name="Input1">
 							<type>
@@ -1202,7 +1202,7 @@
 					<pragmas>
 						<ed:Operator oid="!ed/1b0/395F/6D8/6388895c7655" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 							<diagrams>
-								<NetDiagram name="NumberOfPredefOpsInDiagram_correct" landscape="true" format="A4 (210 297)" oid="!ed/1b1/395F/6D8/6388895c51a6">
+								<NetDiagram name="MaximumPredefOpsInDiagram_correct" landscape="true" format="A4 (210 297)" oid="!ed/1b1/395F/6D8/6388895c51a6">
 									<presentationElements>
 										<EquationGE presentable="!ed/1b4/395F/6D8/638889653634">
 											<position>
@@ -1488,7 +1488,7 @@
 										</Edge>
 									</presentationElements>
 								</NetDiagram>
-								<NetDiagram name="NumberOfPredefOpsInDiagram_incorrect" landscape="true" format="A4 (210 297)" oid="!ed/244/395F/6D8/63888a973be5">
+								<NetDiagram name="MaximumPredefOpsInDiagram_incorrect" landscape="true" format="A4 (210 297)" oid="!ed/244/395F/6D8/63888a973be5">
 									<presentationElements>
 										<EquationGE presentable="!ed/245/395F/6D8/63888a9759c1">
 											<position>

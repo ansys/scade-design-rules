@@ -25,6 +25,6 @@ workspace ::= {
 {"1", "2"}
 }
 project_ref ::= {
-{"2", "NumberOfPredefOpsInDiagram.etp", "1"}
+{"2", "MaximumPredefOpsInDiagram.etp", "1"}
 }
 END
