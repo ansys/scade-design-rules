@@ -261,10 +261,10 @@
 			<configuration>65</configuration>
 		</Prop>
 		<Prop id="73" name="@SCADE:DEFAULTFILE">
-			<value>NumberOfDiagrams.xscade</value>
+			<value>MaximumDiagrams.xscade</value>
 		</Prop>
 		<Prop id="74" name="@SCADE:SEMFILE">
-			<value>NumberOfDiagrams.err</value>
+			<value>MaximumDiagrams.err</value>
 		</Prop>
 		<Prop id="75" name="@SCADE:NOTEFILE">
 			<value>$(SCADE)/lib/DefaultAty.aty</value>
@@ -341,7 +341,7 @@
 			<value>65</value>
 		</Prop>
 		<Prop id="94" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>NumberOfDiagrams</value>
+			<value>MaximumDiagrams</value>
 			<configuration>54</configuration>
 		</Prop>
 		<Prop id="95" name="@METRICS_RULES:RULES_PARAM">

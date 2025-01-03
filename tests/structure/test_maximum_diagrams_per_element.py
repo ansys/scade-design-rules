@@ -41,8 +41,8 @@ _NA = Rule.NA
 
 @pytest.fixture(scope='session')
 def session():
-    """Unique instance of the test model NumberOfDiagrams."""
-    pathname = 'tests/structure/NumberOfDiagrams/NumberOfDiagrams.etp'
+    """Unique instance of the test model MaximumDiagrams."""
+    pathname = 'tests/structure/MaximumDiagrams/MaximumDiagrams.etp'
     return load_session(pathname)
 
 

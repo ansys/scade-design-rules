@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
 	<declarations>
-		<Package name="NumberOfDiagramsPerAction">
+		<Package name="MaximumDiagramsPerAction">
 			<declarations>
-				<Operator kind="function" name="NumberOfDiagramsPerAction">
+				<Operator kind="function" name="MaximumDiagramsPerAction">
 					<inputs>
 						<Variable name="Input1">
 							<type>
