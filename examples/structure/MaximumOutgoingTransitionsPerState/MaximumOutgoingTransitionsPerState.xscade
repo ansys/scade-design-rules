@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
 	<declarations>
-		<Package name="NumberOfOutgoingTransitionsPerState">
+		<Package name="MaximumOutgoingTransitionsPerState">
 			<declarations>
-				<Operator kind="node" name="NumberOfOutgoingTransitionsPerState">
+				<Operator kind="node" name="MaximumOutgoingTransitionsPerState">
 					<data>
 						<StateMachine name="SM1">
 							<states>
@@ -213,7 +213,7 @@
 					<pragmas>
 						<ed:Operator oid="!ed/70e/395F/6D8/6388bdd73a2b" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 							<diagrams>
-								<NetDiagram name="NumberOfOutgoingTransitionsPerState_1" landscape="true" format="A4 (210 297)" oid="!ed/70f/395F/6D8/6388bdd76047">
+								<NetDiagram name="MaximumOutgoingTransitionsPerState" landscape="true" format="A4 (210 297)" oid="!ed/70f/395F/6D8/6388bdd76047">
 									<presentationElements>
 										<StateMachineGE presentable="!ed/710/395F/6D8/6388bde36198">
 											<position>

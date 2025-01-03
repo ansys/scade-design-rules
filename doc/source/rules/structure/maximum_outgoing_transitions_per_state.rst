@@ -1,24 +1,24 @@
-.. index:: single: Number of outgoing transitions per state
+.. index:: single: Maximum outgoing transitions per state
 
-Number of outgoing transitions per state
-========================================
+Maximum outgoing transitions per state
+======================================
 
 .. rule::
-   :filename: number_of_outgoing_transitions_per_state.py
-   :class: NumberOfOutgoingTransitionsPerState
+   :filename: maximum_outgoing_transitions_per_state.py
+   :class: MaximumOutgoingTransitionsPerState
    :id: id_0072
    :reference: n/a
    :kind: generic
    :tags: structure
 
-   Number of outgoing transitions per state
+   Maximum outgoing transitions per state
 
 Description
 -----------
 
 .. start_description
 
-Number of outgoing transitions per state.
+Maximum outgoing transitions per state.
 Parameter: maximum value: e.g.: '7'
 
 .. end_description

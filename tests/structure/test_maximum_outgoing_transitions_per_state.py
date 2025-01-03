@@ -26,8 +26,8 @@
 import pytest
 import scade.model.suite as suite
 
-from ansys.scade.design_rules.structure.number_of_outgoing_transitions_per_state import (
-    NumberOfOutgoingTransitionsPerState,
+from ansys.scade.design_rules.structure.maximum_outgoing_transitions_per_state import (
+    MaximumOutgoingTransitionsPerState,
 )
 from ansys.scade.design_rules.utils.rule import Rule
 from tests.conftest import load_session
@@ -47,7 +47,7 @@ def session():
 
 
 # instantiation alias
-class TestNumberOfOutgoingTransitionsPerState(NumberOfOutgoingTransitionsPerState):
+class TestMaximumOutgoingTransitionsPerState(MaximumOutgoingTransitionsPerState):
     __test__ = False
 
     def __init__(self, parameter=None, **kwargs):
@@ -71,22 +71,22 @@ class TestNumberOfOutgoingTransitionsPerState(NumberOfOutgoingTransitionsPerStat
         ('P::O5/SM1:Nok:', '5', _FAILED),
     ],
 )
-def test_number_of_outgoing_transitions_per_state_nominal(
+def test_maximum_outgoing_transitions_per_state_nominal(
     session: suite.Session, path, param, expected
 ):
     model = session.model
 
     state = model.get_object_from_path(path)
     assert state
-    rule = TestNumberOfOutgoingTransitionsPerState(parameter=param)
+    rule = TestMaximumOutgoingTransitionsPerState(parameter=param)
     assert rule.on_start(model) == _OK
     status = rule.on_check(state)
     assert status == expected
 
 
-def test_number_of_outgoing_transitions_per_state_robustness(session: suite.Session):
+def test_maximum_outgoing_transitions_per_state_robustness(session: suite.Session):
     model = session.model
 
     # parameter without value
-    rule = TestNumberOfOutgoingTransitionsPerState(parameter='-5')
+    rule = TestMaximumOutgoingTransitionsPerState(parameter='-5')
     assert rule.on_start(model) == _ERROR

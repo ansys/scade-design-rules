@@ -22,7 +22,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-"""Implements the NumberOfOutgoingTransitionsPerState rule."""
+"""Implements the MaximumOutgoingTransitionsPerState rule."""
 
 if __name__ == '__main__':
     # rule instantiated outside of a package
@@ -49,7 +49,7 @@ class _CountOutgoings(Visit):
             super().visit_transition(transition, *args)
 
 
-class NumberOfOutgoingTransitionsPerState(Rule):
+class MaximumOutgoingTransitionsPerState(Rule):
     """Implements the rule interface."""
 
     def __init__(
@@ -58,9 +58,9 @@ class NumberOfOutgoingTransitionsPerState(Rule):
         category='Structuring',
         severity=Rule.REQUIRED,
         parameter='7',
-        label='Number of outgoing transitions per state',
+        label='Maximum outgoing transitions per state',
         description=(
-            "Number of outgoing transitions per state.\nParameter: maximum value: e.g.: '7'"
+            "Maximum outgoing transitions per state.\nParameter: maximum value: e.g.: '7'"
         ),
     ):
         super().__init__(
@@ -103,4 +103,4 @@ class NumberOfOutgoingTransitionsPerState(Rule):
 
 if __name__ == '__main__':
     # rule instantiated outside of a package
-    NumberOfOutgoingTransitionsPerState()
+    MaximumOutgoingTransitionsPerState()
