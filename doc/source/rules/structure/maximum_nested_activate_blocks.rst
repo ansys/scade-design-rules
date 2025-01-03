@@ -1,24 +1,24 @@
-.. index:: single: Number of nested activate blocks
+.. index:: single: Maximum nested activate blocks
 
-Number of nested activate blocks
-================================
+Maximum nested activate blocks
+==============================
 
 .. rule::
-   :filename: number_of_nested_activate_blocks.py
-   :class: NumberOfNestedActivateBlocks
+   :filename: maximum_nested_activate_blocks.py
+   :class: MaximumNestedActivateBlocks
    :id: id_0069
    :reference: n/a
    :kind: generic
    :tags: structure
 
-   Number of nested Activate Blocks
+   Maximum nested Activate Blocks
 
 Description
 -----------
 
 .. start_description
 
-Number of hierarchical levels of conditional blocks ('If Block', 'When Block').
+Maximum hierarchical levels of conditional blocks ('If Block', 'When Block').
 Parameter: maximum value: e.g.: '7'
 
 .. end_description

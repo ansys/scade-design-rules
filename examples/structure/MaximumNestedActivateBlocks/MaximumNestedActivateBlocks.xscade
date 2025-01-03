@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
 	<declarations>
-		<Package name="NumberOfNestedActivateBlocks">
+		<Package name="MaximumNestedActivateBlocks">
 			<declarations>
 				<Type name="Enum_t">
 					<definition>
@@ -19,7 +19,7 @@
 						<ed:Type oid="!ed/538/395F/6D8/6388b016bf2"/>
 					</pragmas>
 				</Type>
-				<Operator kind="node" name="NumberOfNestedActivateBlocks">
+				<Operator kind="node" name="MaximumNestedActivateBlocks">
 					<inputs>
 						<Variable name="enumeration">
 							<type>
@@ -1554,7 +1554,7 @@
 					<pragmas>
 						<ed:Operator oid="!ed/46f/395F/6D8/638899ea4dff" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 							<diagrams>
-								<NetDiagram name="NumberOfNestedActivateBlocks" landscape="true" format="A4 (210 297)" oid="!ed/470/395F/6D8/638899ea41db">
+								<NetDiagram name="MaximumNestedActivateBlocks" landscape="true" format="A4 (210 297)" oid="!ed/470/395F/6D8/638899ea41db">
 									<presentationElements>
 										<IfBlockGE presentable="!ed/471/395F/6D8/638899ef6c33">
 											<position>

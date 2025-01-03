@@ -22,7 +22,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-"""Implements the NumberOfNestedActivateBlocks rule."""
+"""Implements the MaximumNestedActivateBlocks rule."""
 
 if __name__ == '__main__':
     # rule instantiated outside of a package
@@ -36,7 +36,7 @@ import scade.model.suite as suite
 from ansys.scade.design_rules.utils.rule import Rule
 
 
-class NumberOfNestedActivateBlocks(Rule):
+class MaximumNestedActivateBlocks(Rule):
     """Implements the rule interface."""
 
     def __init__(
@@ -45,9 +45,9 @@ class NumberOfNestedActivateBlocks(Rule):
         category='Structuring',
         severity=Rule.REQUIRED,
         parameter='7',
-        label='Number of nested Activate Blocks',
+        label='Maximum nested Activate Blocks',
         description=(
-            'Number of hierarchical levels of conditional blocks '
+            'Maximum hierarchical levels of conditional blocks '
             "('If Block', 'When Block').\n"
             "Parameter: maximum value: e.g.: '7'"
         ),
@@ -126,4 +126,4 @@ class NumberOfNestedActivateBlocks(Rule):
 
 if __name__ == '__main__':
     # rule instantiated outside of a package
-    NumberOfNestedActivateBlocks()
+    MaximumNestedActivateBlocks()
