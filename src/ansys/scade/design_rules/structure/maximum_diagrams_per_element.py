@@ -22,7 +22,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-"""Implements the NumberOfDiagramsPerElement rule."""
+"""Implements the MaximumDiagramsPerElement rule."""
 
 if __name__ == '__main__':
     # rule instantiated outside of a package
@@ -36,7 +36,7 @@ import scade.model.suite as suite
 from ansys.scade.design_rules.utils.rule import Rule
 
 
-class NumberOfDiagramsPerElement(Rule):
+class MaximumDiagramsPerElement(Rule):
     """Implements the rule interface."""
 
     def __init__(
@@ -45,10 +45,10 @@ class NumberOfDiagramsPerElement(Rule):
         category='Structuring',
         severity=Rule.REQUIRED,
         parameter='7',
-        label='Number of diagrams per element',
+        label='Maximum diagrams per element',
         types=None,
         description=(
-            'Number of diagrams defining an operator, a state, or an action.\n'
+            'Maximum diagrams defining an operator, a state, or an action.\n'
             "Parameter: maximum value: e.g.: '7'"
         ),
     ):
@@ -97,4 +97,4 @@ class NumberOfDiagramsPerElement(Rule):
 
 if __name__ == '__main__':
     # rule instantiated outside of a package
-    NumberOfDiagramsPerElement()
+    MaximumDiagramsPerElement()

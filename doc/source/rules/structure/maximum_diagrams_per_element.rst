@@ -1,24 +1,24 @@
-.. index:: single: Number of diagrams per element
+.. index:: single: Maximum diagrams per element
 
-Number of diagrams per element
-==============================
+Maximum diagrams per element
+============================
 
 .. rule::
-   :filename: number_of_diagrams_per_element.py
-   :class: NumberOfDiagramsPerElement
+   :filename: maximum_diagrams_per_element.py
+   :class: MaximumDiagramsPerElement
    :id: id_0065
    :reference: n/a
    :kind: generic
    :tags: structure
 
-   Number of diagrams per element
+   Maximum diagrams per element
 
 Description
 -----------
 
 .. start_description
 
-Number of diagrams defining an operator, a state, or an action.
+Maximum diagrams defining an operator, a state, or an action.
 Parameter: maximum value: e.g.: '7'
 
 .. end_description

@@ -26,8 +26,8 @@
 import pytest
 import scade.model.suite as suite
 
-from ansys.scade.design_rules.structure.number_of_diagrams_per_element import (
-    NumberOfDiagramsPerElement,
+from ansys.scade.design_rules.structure.maximum_diagrams_per_element import (
+    MaximumDiagramsPerElement,
 )
 from ansys.scade.design_rules.utils.rule import Rule
 from tests.conftest import load_session
@@ -47,7 +47,7 @@ def session():
 
 
 # instantiation alias
-class TestNumberOfDiagramsPerElement(NumberOfDiagramsPerElement):
+class TestMaximumDiagramsPerElement(MaximumDiagramsPerElement):
     __test__ = False
 
     def __init__(self, parameter=None, **kwargs):
@@ -77,22 +77,22 @@ class TestNumberOfDiagramsPerElement(NumberOfDiagramsPerElement):
         ('Nok3::O/SM1:State1:IfBlock1:else:', '3', _FAILED),
     ],
 )
-def test_number_of_diagrams_per_element_nominal(session: suite.Session, path, param, expected):
+def test_maximum_diagrams_per_element_nominal(session: suite.Session, path, param, expected):
     model = session.model
 
     data_def = model.get_object_from_path(path)
     if isinstance(data_def, suite.IfAction):
         data_def = data_def.action
     assert data_def
-    rule = TestNumberOfDiagramsPerElement(parameter=param)
+    rule = TestMaximumDiagramsPerElement(parameter=param)
     assert rule.on_start(model) == _OK
     status = rule.on_check(data_def)
     assert status == expected
 
 
-def test_number_of_diagrams_per_element_robustness(session: suite.Session):
+def test_maximum_diagrams_per_element_robustness(session: suite.Session):
     model = session.model
 
     # parameter without value
-    rule = TestNumberOfDiagramsPerElement(parameter='-5')
+    rule = TestMaximumDiagramsPerElement(parameter='-5')
     assert rule.on_start(model) == _ERROR

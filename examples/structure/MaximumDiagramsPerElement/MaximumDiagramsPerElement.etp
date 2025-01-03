@@ -247,10 +247,10 @@
 			<value>71</value>
 		</Prop>
 		<Prop id="82" name="@SCADE:DEFAULTFILE">
-			<value>NumberOfDiagramsPerElement.xscade</value>
+			<value>MaximumDiagramsPerElement.xscade</value>
 		</Prop>
 		<Prop id="83" name="@SCADE:SEMFILE">
-			<value>NumberOfDiagramsPerElement.err</value>
+			<value>MaximumDiagramsPerElement.err</value>
 		</Prop>
 		<Prop id="84" name="@SCADE:NOTEFILE">
 			<value></value>
@@ -343,7 +343,7 @@
 			<configuration>41</configuration>
 		</Prop>
 		<Prop id="112" name="@GENERATOR:ROOTNODE">
-			<value>NumberOfDiagramsPerElement::NumberOfDiagramsPerElement</value>
+			<value>MaximumDiagramsPerElement::MaximumDiagramsPerElement</value>
 			<configuration>41</configuration>
 		</Prop>
 		<Prop id="122" name="@STUDIO:TOOLCONF">
@@ -360,11 +360,11 @@
 			<value>127</value>
 		</Prop>
 		<Prop id="123" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>NumberOfDiagramsPerElement</value>
+			<value>MaximumDiagramsPerElement</value>
 			<configuration>13</configuration>
 		</Prop>
 		<Prop id="124" name="@METRICS_RULES:USER_DEF_FILES">
-			<value>..\..\..\src\ansys\scade\design_rules\structure\number_of_diagrams_per_element.py</value>
+			<value>..\..\..\src\ansys\scade\design_rules\structure\maximum_diagrams_per_element.py</value>
 		</Prop>
 		<Prop id="125" name="@METRICS_RULES:RULES_PARAM">
 			<value>id_0065,7</value>
@@ -375,7 +375,7 @@
 			<configuration>127</configuration>
 		</Prop>
 		<Prop id="130" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>NumberOfDiagramsPerElement</value>
+			<value>MaximumDiagramsPerElement</value>
 			<configuration>127</configuration>
 		</Prop>
 		<Prop id="131" name="@GENERATOR:ENABLE_EXTENSIONS">
@@ -428,9 +428,9 @@
 		<Folder id="11" extensions="xscade;scade" name="Model Files">
 			<elements>
 				<Folder id="12" extensions="xscade;scade" name="Separate Files"/>
-				<FileRef id="140" persistAs="NumberOfDiagramsPerAction.xscade"/>
-				<FileRef id="141" persistAs="NumberOfDiagramsPerOperator.xscade"/>
-				<FileRef id="143" persistAs="NumberOfDiagramsPerState.xscade"/>
+				<FileRef id="140" persistAs="MaximumDiagramsPerAction.xscade"/>
+				<FileRef id="141" persistAs="MaximumDiagramsPerOperator.xscade"/>
+				<FileRef id="143" persistAs="MaximumDiagramsPerState.xscade"/>
 			</elements>
 		</Folder>
 		<Folder id="119" extensions="etp" name="Submodels"/>

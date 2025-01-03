@@ -56,7 +56,7 @@ id_0060	modelling	no_operatorcalls_in_expressions
 id_0061	project_structure	no_scade_library
 id_0062	modelling	no_struct_table_comparisons
 id_0063	modelling	no_terminations
-id_0065	structure	number_of_diagrams_per_element
+id_0065	structure	maximum_diagrams_per_element
 id_0068	structure	number_of_level_of_packages
 id_0069	structure	number_of_nested_activate_blocks
 id_0070	structure	number_of_nested_sms
