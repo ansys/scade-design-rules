@@ -22,7 +22,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-"""Implements the NumberOfUserOpsInDiagram rule."""
+"""Implements the MaximumUserOpsInDiagram rule."""
 
 if __name__ == '__main__':
     # rule instantiated outside of a package
@@ -36,7 +36,7 @@ import scade.model.suite as suite
 from ansys.scade.design_rules.utils.rule import Rule
 
 
-class NumberOfUserOpsInDiagram(Rule):
+class MaximumUserOpsInDiagram(Rule):
     """Implements the rule interface."""
 
     def __init__(
@@ -45,9 +45,9 @@ class NumberOfUserOpsInDiagram(Rule):
         category='Structuring',
         severity=Rule.REQUIRED,
         parameter='7',
-        label='Number of user operators in diagram',
+        label='Maximum user operators in diagram',
         description=(
-            'Number of graphical user-operator instances within a single diagram.\n'
+            'Maximum graphical user-operator instances within a single diagram.\n'
             "Parameter: maximum value: e.g.: '7'"
         ),
     ):
@@ -100,4 +100,4 @@ class NumberOfUserOpsInDiagram(Rule):
 
 if __name__ == '__main__':
     # rule instantiated outside of a package
-    NumberOfUserOpsInDiagram()
+    MaximumUserOpsInDiagram()

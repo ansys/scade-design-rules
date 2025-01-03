@@ -1,24 +1,24 @@
-.. index:: single: Number of user ops in diagram
+.. index:: single: Maximum user operators in diagram
 
-Number of user ops in diagram
-=============================
+Maximum user operators in diagram
+=================================
 
 .. rule::
-   :filename: number_of_user_ops_in_diagram.py
-   :class: NumberOfUserOpsInDiagram
+   :filename: maximum_user_ops_in_diagram.py
+   :class: MaximumUserOpsInDiagram
    :id: id_0074
    :reference: n/a
    :kind: generic
    :tags: structure
 
-   Number of user operators in diagram
+   Maximum user operators in diagram
 
 Description
 -----------
 
 .. start_description
 
-Number of graphical user-operator instances within a single diagram.
+Maximum graphical user-operator instances within a single diagram.
 Parameter: maximum value: e.g.: '7'
 
 .. end_description

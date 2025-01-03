@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
 	<declarations>
-		<Package name="NumberOfUserOpsInDiagram">
+		<Package name="MaximumUserOpsInDiagram">
 			<declarations>
-				<Operator kind="function" name="NumberOfUserOpsInDiagram">
+				<Operator kind="function" name="MaximumUserOpsInDiagram">
 					<inputs>
 						<Variable name="Input1">
 							<type>
@@ -772,7 +772,7 @@
 					<pragmas>
 						<ed:Operator oid="!ed/74/395F/6D8/638883bb709e" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 							<diagrams>
-								<NetDiagram name="NumberOfUserOpsInDiagram_correct" landscape="true" format="A4 (210 297)" oid="!ed/75/395F/6D8/638883bb7494">
+								<NetDiagram name="MaximumUserOpsInDiagram_correct" landscape="true" format="A4 (210 297)" oid="!ed/75/395F/6D8/638883bb7494">
 									<presentationElements>
 										<EquationGE presentable="!ed/78/395F/6D8/638883c723df">
 											<position>
@@ -928,7 +928,7 @@
 										</Edge>
 									</presentationElements>
 								</NetDiagram>
-								<NetDiagram name="NumberOfUserOpsInDiagram_incorrect" landscape="true" format="A4 (210 297)" oid="!ed/8a/395F/6D8/638883ce17e1">
+								<NetDiagram name="MaximumUserOpsInDiagram_incorrect" landscape="true" format="A4 (210 297)" oid="!ed/8a/395F/6D8/638883ce17e1">
 									<presentationElements>
 										<EquationGE presentable="!ed/170/395F/6D8/638884721772">
 											<position>

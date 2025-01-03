@@ -26,8 +26,8 @@
 import pytest
 import scade.model.suite as suite
 
-from ansys.scade.design_rules.structure.number_of_user_ops_in_diagram import (
-    NumberOfUserOpsInDiagram,
+from ansys.scade.design_rules.structure.maximum_user_ops_in_diagram import (
+    MaximumUserOpsInDiagram,
 )
 from ansys.scade.design_rules.utils.rule import Rule
 from tests.conftest import load_session
@@ -47,7 +47,7 @@ def session():
 
 
 # instantiation alias
-class TestNumberOfUserOpsInDiagram(NumberOfUserOpsInDiagram):
+class TestMaximumUserOpsInDiagram(MaximumUserOpsInDiagram):
     __test__ = False
 
     def __init__(self, parameter=None, **kwargs):
@@ -72,20 +72,20 @@ class TestNumberOfUserOpsInDiagram(NumberOfUserOpsInDiagram):
         ('P::User/', '6', _OK),
     ],
 )
-def test_number_of_user_ops_in_diagram_nominal(session: suite.Session, path, param, expected):
+def test_maximum_user_ops_in_diagram_nominal(session: suite.Session, path, param, expected):
     model = session.model
 
     operator = model.get_object_from_path(path)
     assert operator and len(operator.diagrams) == 1
-    rule = TestNumberOfUserOpsInDiagram(parameter=param)
+    rule = TestMaximumUserOpsInDiagram(parameter=param)
     assert rule.on_start(model) == _OK
     status = rule.on_check(operator.diagrams[0])
     assert status == expected
 
 
-def test_number_of_user_ops_in_diagram_robustness(session: suite.Session):
+def test_maximum_user_ops_in_diagram_robustness(session: suite.Session):
     model = session.model
 
     # parameter without value
-    rule = TestNumberOfUserOpsInDiagram(parameter='-5')
+    rule = TestMaximumUserOpsInDiagram(parameter='-5')
     assert rule.on_start(model) == _ERROR
