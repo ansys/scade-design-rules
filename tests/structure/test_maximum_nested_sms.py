@@ -26,7 +26,7 @@
 import pytest
 import scade.model.suite as suite
 
-from ansys.scade.design_rules.structure.number_of_nested_sms import NumberOfNestedSMs
+from ansys.scade.design_rules.structure.maximum_nested_sms import MaximumNestedSMs
 from ansys.scade.design_rules.utils.rule import Rule
 from tests.conftest import load_session
 
@@ -45,7 +45,7 @@ def session():
 
 
 # instantiation alias
-class TestNumberOfNestedSMs(NumberOfNestedSMs):
+class TestMaximumNestedSMs(MaximumNestedSMs):
     __test__ = False
 
     def __init__(self, parameter=None, **kwargs):
@@ -86,20 +86,20 @@ class TestNumberOfNestedSMs(NumberOfNestedSMs):
         ('P::SmTT/SM1:', '3', _OK),
     ],
 )
-def test_number_of_nested_sms_nominal(session: suite.Session, path, param, expected):
+def test_maximum_nested_sms_nominal(session: suite.Session, path, param, expected):
     model = session.model
 
     sm = model.get_object_from_path(path)
     assert sm
-    rule = TestNumberOfNestedSMs(parameter=param)
+    rule = TestMaximumNestedSMs(parameter=param)
     assert rule.on_start(model) == _OK
     status = rule.on_check(sm)
     assert status == expected
 
 
-def test_number_of_nested_sms_robustness(session: suite.Session):
+def test_maximum_nested_sms_robustness(session: suite.Session):
     model = session.model
 
     # parameter without value
-    rule = TestNumberOfNestedSMs(parameter='-5')
+    rule = TestMaximumNestedSMs(parameter='-5')
     assert rule.on_start(model) == _ERROR

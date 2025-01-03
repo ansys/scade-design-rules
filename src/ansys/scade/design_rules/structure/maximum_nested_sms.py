@@ -22,7 +22,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-"""Implements the NumberOfNestedSMs rule."""
+"""Implements the MaximumNestedSMs rule."""
 
 if __name__ == '__main__':
     # rule instantiated outside of a package
@@ -36,7 +36,7 @@ import scade.model.suite as suite
 from ansys.scade.design_rules.utils.rule import Rule
 
 
-class NumberOfNestedSMs(Rule):
+class MaximumNestedSMs(Rule):
     """Implements the rule interface."""
 
     def __init__(
@@ -45,9 +45,9 @@ class NumberOfNestedSMs(Rule):
         category='Structuring',
         severity=Rule.REQUIRED,
         parameter='5',
-        label='Number of nested SMs',
+        label='Maximum nested SMs',
         description=(
-            'Number of hierarchical levels of nested state machines.\n'
+            'Maximum hierarchical levels of nested state machines.\n'
             "Parameter: maximum value: e.g.: '5'"
         ),
     ):
@@ -120,4 +120,4 @@ class NumberOfNestedSMs(Rule):
 
 if __name__ == '__main__':
     # rule instantiated outside of a package
-    NumberOfNestedSMs()
+    MaximumNestedSMs()

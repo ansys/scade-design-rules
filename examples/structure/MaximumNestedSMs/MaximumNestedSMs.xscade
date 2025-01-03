@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
 	<declarations>
-		<Package name="NumberOfNestedSMs">
+		<Package name="MaximumNestedSMs">
 			<declarations>
-				<Operator kind="node" name="NumberOfNestedSMs">
+				<Operator kind="node" name="MaximumNestedSMs">
 					<data>
 						<StateMachine name="SM1a">
 							<states>
@@ -204,7 +204,7 @@
 					<pragmas>
 						<ed:Operator oid="!ed/38f/395F/6D8/63888dd62024" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 							<diagrams>
-								<NetDiagram name="NumberOfNestedSMs_1" landscape="true" format="A4 (210 297)" oid="!ed/390/395F/6D8/63888dd61685">
+								<NetDiagram name="MaximumNestedSMs_1" landscape="true" format="A4 (210 297)" oid="!ed/390/395F/6D8/63888dd61685">
 									<presentationElements>
 										<StateMachineGE presentable="!ed/3a1/395F/6D8/63888df34392">
 											<position>
@@ -304,7 +304,7 @@
 										</StateGE>
 									</presentationElements>
 								</NetDiagram>
-								<NetDiagram name="NumberOfNestedSMs_2" landscape="true" format="A4 (210 297)" oid="!ed/222/7FCF/AC/639843bd2e6a">
+								<NetDiagram name="MaximumNestedSMs_2" landscape="true" format="A4 (210 297)" oid="!ed/222/7FCF/AC/639843bd2e6a">
 									<presentationElements>
 										<StateMachineGE presentable="!ed/223/7FCF/AC/639843bd6ec4">
 											<position>

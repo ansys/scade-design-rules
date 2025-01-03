@@ -1,24 +1,24 @@
-.. index:: single: Number of nested state machines
+.. index:: single: Maximum nested state machines
 
-Number of nested state machines
-===============================
+Maximum nested state machines
+=============================
 
 .. rule::
-   :filename: number_of_nested_sms.py
-   :class: NumberOfNestedSMs
+   :filename: maximum_nested_sms.py
+   :class: MaximumNestedSMs
    :id: id_0070
    :reference: n/a
    :kind: generic
    :tags: structure
 
-   Number of nested SMs
+   Maximum nested SMs
 
 Description
 -----------
 
 .. start_description
 
-Number of hierarchical levels of nested state machines.
+Maximum hierarchical levels of nested state machines.
 Parameter: maximum value: e.g.: '5'
 
 .. end_description
