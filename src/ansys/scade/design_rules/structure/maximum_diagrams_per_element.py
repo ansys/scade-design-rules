@@ -24,7 +24,7 @@
 
 """Implements the MaximumDiagramsPerElement rule."""
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     from os.path import abspath, dirname
     import sys
@@ -51,6 +51,7 @@ class MaximumDiagramsPerElement(Rule):
             'Maximum diagrams defining an operator, a state, or an action.\n'
             "Parameter: maximum value: e.g.: '7'"
         ),
+        metric_id: str = 'id_0126',
     ):
         if not types:
             types = [suite.DataDef]
@@ -64,7 +65,9 @@ class MaximumDiagramsPerElement(Rule):
             label=label,
             types=types,
             kinds=None,
+            metric_ids=[metric_id],
         )
+        self.metric_id = metric_id
 
     def on_start(self, model: suite.Model, parameter: str = None) -> int:
         """Get the rule's parameters."""
@@ -77,24 +80,16 @@ class MaximumDiagramsPerElement(Rule):
 
     def on_check(self, object_: suite.Object, parameter: str = None) -> int:
         """Return the evaluation status for the input object."""
-        diagrams = object_.diagrams
+        count = self.get_metric_result(object_, self.metric_id)
 
-        if len(diagrams) > int(parameter):
+        if count > int(parameter):
             name = type(object_).__name__
-            self.set_message(
-                'Too many diagrams per '
-                + name
-                + ' ( '
-                + str(len(diagrams))
-                + ' > '
-                + parameter
-                + ' )'
-            )
+            self.set_message(f'Too many diagrams per {name} ( {count} > {parameter} )')
             return Rule.FAILED
 
         return Rule.OK
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     MaximumDiagramsPerElement()

@@ -26,8 +26,8 @@
 import pytest
 import scade.model.suite as suite
 
-from ansys.scade.design_rules.metrics.number_of_outgoing_transitions_per_state import (
-    NumberOfOutgoingTransitionsPerState,
+from ansys.scade.design_rules.metrics.number_of_diagrams_per_element import (
+    NumberOfDiagramsPerElement,
 )
 from ansys.scade.design_rules.utils.rule import Metric
 from tests.conftest import load_session
@@ -40,8 +40,8 @@ _NA = Metric.NA
 
 @pytest.fixture(scope='session')
 def session():
-    """Unique instance of the NumberOfOutgoingTransitionsPerState test model."""
-    model = 'NumberOfOutgoingTransitionsPerState'
+    """Unique instance of the NumberOfDiagramsPerElement test model."""
+    model = 'NumberOfDiagramsPerElement'
     pathname = f'tests/metrics/{model}/{model}.etp'
     return load_session(pathname)
 
@@ -49,19 +49,25 @@ def session():
 @pytest.mark.parametrize(
     'path, expected',
     [
-        ('P::O/SM1:Five:', 5),
-        ('P::O/SM1:Five:SM2:One:', 1),
-        ('P::O/SM1:Five:SM2:Zero:', 0),
-        ('P::O/SM1:Six:', 6),
+        ('P::O4/', 4),
+        ('P::O4/SM1:Embedded0:', 0),
+        ('P::O4/SM1:Text0:', 0),
+        ('P::O4/SM1:State4:', 4),
+        ('P::O4/SM1:State4:IfBlock1:then:', 4),
+        ('P::O4/SM1:State4:IfBlock1:then:WhenBlock1:false:', 0),
+        ('P::O4/SM1:State4:IfBlock1:then:WhenBlock1:true:', 1),
+        ('P::O4/SM1:State4:IfBlock1:else:', 0),
     ],
 )
-def test_number_of_outgoing_transitions_per_state_nominal(session: suite.Session, path, expected):
+def test_number_of_diagrams_per_element_nominal(session: suite.Session, path, expected):
     model = session.model
 
-    state = model.get_object_from_path(path)
-    assert state
-    metric = NumberOfOutgoingTransitionsPerState()
-    status = metric.on_compute(state)
+    data_def = model.get_object_from_path(path)
+    if isinstance(data_def, suite.IfAction) or isinstance(data_def, suite.WhenBranch):
+        data_def = data_def.action
+    assert data_def
+    metric = NumberOfDiagramsPerElement()
+    status = metric.on_compute(data_def)
     assert status == _OK
     result = metric.result
     assert result == expected

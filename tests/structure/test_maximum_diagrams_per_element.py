@@ -26,6 +26,9 @@
 import pytest
 import scade.model.suite as suite
 
+from ansys.scade.design_rules.metrics.number_of_diagrams_per_element import (
+    NumberOfDiagramsPerElement,
+)
 from ansys.scade.design_rules.structure.maximum_diagrams_per_element import (
     MaximumDiagramsPerElement,
 )
@@ -41,7 +44,7 @@ _NA = Rule.NA
 
 @pytest.fixture(scope='session')
 def session():
-    """Unique instance of the test model MaximumDiagrams."""
+    """Unique instance of the MaximumDiagrams test model."""
     pathname = 'tests/structure/MaximumDiagrams/MaximumDiagrams.etp'
     return load_session(pathname)
 
@@ -53,6 +56,8 @@ class TestMaximumDiagramsPerElement(MaximumDiagramsPerElement):
     def __init__(self, parameter=None, **kwargs):
         self.parameter = parameter
         super().__init__(id='', parameter=self.parameter, **kwargs)
+        metric = NumberOfDiagramsPerElement()
+        self.stub_metrics({metric.id: metric})
 
     def on_start(self, model=None, parameter=None):
         parameter = parameter if parameter else self.parameter

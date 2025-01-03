@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (C) 2024 - 2025 ANSYS, Inc. and/or its affiliates.
+# Copyright (C) 2021 - 2025 ANSYS, Inc. and/or its affiliates.
 # SPDX-License-Identifier: MIT
 #
 #
@@ -22,7 +22,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-"""Implements the NumberOfOutgoingTransitionsPerState metric."""
+"""Implements the NumberOfDiagramsPerElement metric."""
 
 if __name__ == '__main__':  # pragma: no cover
     # metric instantiated outside of a package
@@ -32,52 +32,35 @@ if __name__ == '__main__':  # pragma: no cover
     sys.path.append(abspath(dirname(dirname(dirname(dirname(dirname(__file__)))))))
 
 import scade.model.suite as suite
-from scade.model.suite.visitors import Visit
 
 from ansys.scade.design_rules.utils.metric import Metric
 
 
-class _CountOutgoings(Visit):
-    def __init__(self):
-        self.count = 0
-
-    def visit_transition(self, transition: suite.Transition, *args):
-        if transition.target:
-            # leaf, nothing to visit anymore
-            self.count += 1
-        else:
-            super().visit_transition(transition, *args)
-
-
-class NumberOfOutgoingTransitionsPerState(Metric):
+class NumberOfDiagramsPerElement(Metric):
     """Implements the metric interface."""
 
     def __init__(
         self,
-        id='id_0125',
+        id='id_0126',
         category='Counters',
-        label='Number of outgoing transitions per state',
-        description='Number of outgoing transitions per state.',
+        label='Number of diagrams per element',
+        description='Number of diagrams defining an operator, a state, or an action.',
     ):
         super().__init__(
             id=id,
-            label=label,
             category=category,
             description=description,
-            types=[suite.State],
+            label=label,
+            types=[suite.DataDef],
             kinds=None,
         )
 
-    def on_compute(self, state: suite.State) -> int:
+    def on_compute(self, object_: suite.Object) -> int:
         """Compute the metric for the input object."""
-        visitor = _CountOutgoings()
-        for transition in state.outgoings:
-            visitor.visit(transition)
-        self.set_result_metric(visitor.count)
-
+        self.set_result_metric(len(object_.diagrams))
         return Metric.OK
 
 
 if __name__ == '__main__':  # pragma: no cover
     # metric instantiated outside of a package
-    NumberOfOutgoingTransitionsPerState()
+    NumberOfDiagramsPerElement()

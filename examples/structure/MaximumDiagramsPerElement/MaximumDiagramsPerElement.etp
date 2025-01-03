@@ -365,6 +365,7 @@
 		</Prop>
 		<Prop id="124" name="@METRICS_RULES:USER_DEF_FILES">
 			<value>..\..\..\src\ansys\scade\design_rules\structure\maximum_diagrams_per_element.py</value>
+			<value>..\..\..\src\ansys\scade\design_rules\metrics\number_of_diagrams_per_element.py</value>
 		</Prop>
 		<Prop id="125" name="@METRICS_RULES:RULES_PARAM">
 			<value>id_0065,7</value>

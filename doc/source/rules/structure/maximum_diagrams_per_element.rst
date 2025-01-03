@@ -30,7 +30,7 @@ This enforces compliance with a specific modeling standard by placing an upper b
 Verification
 ------------
 This rule checks all operators, state machines, state machine actions/states, and variables in the model.
-It counts the number of graphical diagrams associated to each element.
+It retrieves the :ref:`Number of diagrams per element <MetricNumberOfDiagramsPerElement>` metric associated to each element.
 
 The rule fails if the limit exceeds the authorized maximum.
 
@@ -40,4 +40,15 @@ Modify the offending element to reduce its number of diagrams, as detailed in th
 
 Customization
 -------------
-TODO
+This rule depends on the :ref:`Number of diagrams per element <MetricNumberOfDiagramsPerElement>`
+metric, that must be included in the package. If you customize the ID of this metric, you must
+provide it when instantiating the rule.
+
+For example::
+
+   from ansys.scade.design_rules.metrics.number_of_diagrams_per_element import NumberOfDiagramsPerElement
+   from ansys.scade.design_rules.structure.maximum_diagrams_per_element import MaximumDiagramsPerElement
+
+   # Instantiation with custom ids
+   NumberOfDiagramsPerElement(id='COUNT_DIAGRAMS')
+   MaximumDiagramsPerElement(id='MAX_DIAGRAMS', metric_id='COUNT_DIAGRAMS')
