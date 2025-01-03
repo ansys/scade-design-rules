@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="P">
+			<declarations>
+				<Operator kind="node" name="O">
+					<data>
+						<StateMachine name="SM1">
+							<states>
+								<State initial="true" name="_2">
+									<unless>
+										<Transition kind="restart">
+											<target>
+												<StateRef name="_2"/>
+											</target>
+											<condition>
+												<ConstValue value="true"/>
+											</condition>
+											<pragmas>
+												<ed:Transition oid="!ed/9ea/27B0/685C/6777ed171960"/>
+											</pragmas>
+										</Transition>
+										<Transition kind="restart">
+											<target>
+												<StateRef name="_3"/>
+											</target>
+											<condition>
+												<ConstValue value="true"/>
+											</condition>
+											<pragmas>
+												<ed:Transition oid="!ed/9f6/27B0/685C/6777ed5fec"/>
+											</pragmas>
+										</Transition>
+									</unless>
+									<pragmas>
+										<ed:State oid="!ed/9cd/27B0/685C/6777ed0237a5"/>
+									</pragmas>
+								</State>
+								<State name="_3">
+									<unless>
+										<Transition>
+											<condition>
+												<ConstValue value="true"/>
+											</condition>
+											<forks>
+												<ForkBranch kind="restart">
+													<target>
+														<StateRef name="_1"/>
+													</target>
+													<condition>
+														<ConstValue value="true"/>
+													</condition>
+													<pragmas>
+														<ed:ForkBranch oid="!ed/a07/27B0/685C/6777ed856af1"/>
+													</pragmas>
+												</ForkBranch>
+												<ForkBranch kind="restart">
+													<target>
+														<StateRef name="_0"/>
+													</target>
+													<condition>
+														<ConstValue value="true"/>
+													</condition>
+													<pragmas>
+														<ed:ForkBranch oid="!ed/a08/27B0/685C/6777ed8f76bf"/>
+													</pragmas>
+												</ForkBranch>
+											</forks>
+											<pragmas>
+												<ed:Transition oid="!ed/a02/27B0/685C/6777ed7b24b2"/>
+											</pragmas>
+										</Transition>
+										<Transition kind="restart">
+											<target>
+												<StateRef name="_0"/>
+											</target>
+											<condition>
+												<ConstValue value="true"/>
+											</condition>
+											<pragmas>
+												<ed:Transition oid="!ed/a15/27B0/685C/6777edb4656a"/>
+											</pragmas>
+										</Transition>
+									</unless>
+									<pragmas>
+										<ed:State oid="!ed/9d7/27B0/685C/6777ed0e4e36"/>
+									</pragmas>
+								</State>
+								<State name="_1">
+									<unless>
+										<Transition kind="restart">
+											<target>
+												<StateRef name="_2"/>
+											</target>
+											<condition>
+												<ConstValue value="true"/>
+											</condition>
+											<pragmas>
+												<ed:Transition oid="!ed/a22/27B0/685C/6777ede76c63"/>
+											</pragmas>
+										</Transition>
+									</unless>
+									<pragmas>
+										<ed:State oid="!ed/9d8/27B0/685C/6777ed102811"/>
+									</pragmas>
+								</State>
+								<State name="_0">
+									<pragmas>
+										<ed:State oid="!ed/9dd/27B0/685C/6777ed1151f8"/>
+									</pragmas>
+								</State>
+							</states>
+							<pragmas>
+								<ed:StateMachine oid="!ed/9c8/27B0/685C/6777ecfc6b9b"/>
+							</pragmas>
+						</StateMachine>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/9c6/27B0/685C/6777ecf79f9" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="O_1" landscape="true" format="A4 (210 297)" oid="!ed/9c7/27B0/685C/6777ecf76ac5">
+									<presentationElements>
+										<StateMachineGE presentable="!ed/9c8/27B0/685C/6777ecfc6b9b">
+											<position>
+												<Point x="397" y="370"/>
+											</position>
+											<size>
+												<Size width="22728" height="13203"/>
+											</size>
+										</StateMachineGE>
+										<StateGE presentable="!ed/9cd/27B0/685C/6777ed0237a5">
+											<position>
+												<Point x="741" y="1455"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+										<StateGE presentable="!ed/9d7/27B0/685C/6777ed0e4e36">
+											<position>
+												<Point x="11456" y="1455"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+										<StateGE presentable="!ed/9d8/27B0/685C/6777ed102811">
+											<position>
+												<Point x="6429" y="9525"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+										<StateGE presentable="!ed/9dd/27B0/685C/6777ed1151f8">
+											<position>
+												<Point x="18045" y="9631"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+										<TransitionGE presentable="!ed/9ea/27B0/685C/6777ed171960">
+											<positions>
+												<Point x="2990" y="1455"/>
+												<Point x="2990" y="423"/>
+												<Point x="4710" y="450"/>
+												<Point x="4710" y="1455"/>
+											</positions>
+											<labelSize>
+												<Size width="1376" height="370"/>
+											</labelSize>
+											<labelPos>
+												<Point x="1905" y="820"/>
+											</labelPos>
+											<slashPos>
+												<Point x="2487" y="820"/>
+											</slashPos>
+										</TransitionGE>
+										<TransitionGE polyline="true" presentable="!ed/9f6/27B0/685C/6777ed5fec">
+											<positions>
+												<Point x="5450" y="3334"/>
+												<Point x="7435" y="3334"/>
+												<Point x="9419" y="3334"/>
+												<Point x="11456" y="3334"/>
+											</positions>
+											<labelSize>
+												<Size width="1376" height="370"/>
+											</labelSize>
+											<labelPos>
+												<Point x="7567" y="2698"/>
+											</labelPos>
+											<slashPos>
+												<Point x="8149" y="2698"/>
+											</slashPos>
+										</TransitionGE>
+										<TransitionGE polyline="true" presentable="!ed/a02/27B0/685C/6777ed7b24b2">
+											<positions>
+												<Point x="13573" y="5053"/>
+												<Point x="12144" y="6535"/>
+												<Point x="12488" y="6112"/>
+												<Point x="11827" y="6879"/>
+											</positions>
+											<labelSize>
+												<Size width="1376" height="370"/>
+											</labelSize>
+											<labelPos>
+												<Point x="11219" y="5688"/>
+											</labelPos>
+											<slashPos>
+												<Point x="11801" y="5688"/>
+											</slashPos>
+										</TransitionGE>
+										<TransitionGE polyline="true" presentable="!ed/a07/27B0/685C/6777ed856af1">
+											<positions>
+												<Point x="11827" y="6879"/>
+												<Point x="10451" y="8281"/>
+												<Point x="10716" y="8017"/>
+												<Point x="9287" y="9525"/>
+											</positions>
+											<labelSize>
+												<Size width="1296" height="953"/>
+											</labelSize>
+											<labelPos>
+												<Point x="9234" y="7778"/>
+											</labelPos>
+											<slashPos>
+												<Point x="9737" y="7778"/>
+											</slashPos>
+										</TransitionGE>
+										<TransitionGE polyline="true" presentable="!ed/a08/27B0/685C/6777ed8f76bf">
+											<positions>
+												<Point x="12039" y="7011"/>
+												<Point x="13679" y="8414"/>
+												<Point x="15849" y="9604"/>
+												<Point x="18045" y="11589"/>
+											</positions>
+											<labelSize>
+												<Size width="1376" height="370"/>
+											</labelSize>
+											<labelPos>
+												<Point x="14764" y="8255"/>
+											</labelPos>
+											<slashPos>
+												<Point x="15346" y="8255"/>
+											</slashPos>
+										</TransitionGE>
+										<TransitionGE polyline="true" presentable="!ed/a15/27B0/685C/6777edb4656a">
+											<positions>
+												<Point x="14552" y="5053"/>
+												<Point x="16431" y="6562"/>
+												<Point x="18309" y="8096"/>
+												<Point x="20214" y="9631"/>
+											</positions>
+											<labelSize>
+												<Size width="1376" height="370"/>
+											</labelSize>
+											<labelPos>
+												<Point x="17885" y="6456"/>
+											</labelPos>
+											<slashPos>
+												<Point x="18468" y="6456"/>
+											</slashPos>
+										</TransitionGE>
+										<TransitionGE polyline="true" presentable="!ed/a22/27B0/685C/6777ede76c63">
+											<positions>
+												<Point x="8520" y="9525"/>
+												<Point x="6720" y="8043"/>
+												<Point x="4921" y="6535"/>
+												<Point x="3122" y="5053"/>
+											</positions>
+											<labelSize>
+												<Size width="1376" height="370"/>
+											</labelSize>
+											<labelPos>
+												<Point x="5742" y="6403"/>
+											</labelPos>
+											<slashPos>
+												<Point x="6324" y="6403"/>
+											</slashPos>
+										</TransitionGE>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/9c2/27B0/685C/6777ecf4a4c" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/9c3/27B0/685C/6777ecf46b2a" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/9c4/27B0/685C/6777ecf46751" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/9c5/27B0/685C/6777ecf4210c" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

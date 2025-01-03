@@ -24,7 +24,7 @@
 
 """Implements the MaximumOutgoingTransitionsPerState rule."""
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     from os.path import abspath, dirname
     import sys
@@ -32,21 +32,8 @@ if __name__ == '__main__':
     sys.path.append(abspath(dirname(dirname(dirname(dirname(dirname(__file__)))))))
 
 import scade.model.suite as suite
-from scade.model.suite.visitors import Visit
 
 from ansys.scade.design_rules.utils.rule import Rule
-
-
-class _CountOutgoings(Visit):
-    def __init__(self):
-        self.count = 0
-
-    def visit_transition(self, transition: suite.Transition, *args):
-        if transition.target:
-            # leaf, nothing to visit anymore
-            self.count += 1
-        else:
-            super().visit_transition(transition, *args)
 
 
 class MaximumOutgoingTransitionsPerState(Rule):
@@ -62,6 +49,7 @@ class MaximumOutgoingTransitionsPerState(Rule):
         description=(
             "Maximum outgoing transitions per state.\nParameter: maximum value: e.g.: '7'"
         ),
+        metric_id: str = 'id_0125',
     ):
         super().__init__(
             id=id,
@@ -73,7 +61,9 @@ class MaximumOutgoingTransitionsPerState(Rule):
             label=label,
             types=[suite.State],
             kinds=None,
+            metric_ids=[metric_id],
         )
+        self.metric_id = metric_id
 
     def on_start(self, model: suite.Model, parameter: str = None) -> int:
         """Get the rule's parameters."""
@@ -87,10 +77,7 @@ class MaximumOutgoingTransitionsPerState(Rule):
 
     def on_check(self, object_: suite.Object, parameter: str = None) -> int:
         """Return the evaluation status for the input object."""
-        visitor = _CountOutgoings()
-        for transition in object_.outgoings:
-            visitor.visit(transition)
-        count = visitor.count
+        count = self.get_metric_result(object_, self.metric_id)
 
         if count > int(parameter):
             self.set_message(
@@ -101,6 +88,6 @@ class MaximumOutgoingTransitionsPerState(Rule):
         return Rule.OK
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     MaximumOutgoingTransitionsPerState()

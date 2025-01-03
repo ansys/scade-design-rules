@@ -187,7 +187,6 @@
 			<configuration>44</configuration>
 		</Prop>
 		<Prop id="55" name="@METRICS_RULES:USER_DEF_FILES">
-			<value>..\..\..\src\ansys\scade\design_rules\structure\maximum_outgoing_transitions_per_state.py</value>
 			<value>..\..\..\src\ansys\scade\design_rules\metrics\number_of_outgoing_transitions_per_state.py</value>
 		</Prop>
 		<Prop id="56" name="@STUDIO:TOOLCONF">
@@ -262,10 +261,10 @@
 			<configuration>65</configuration>
 		</Prop>
 		<Prop id="73" name="@SCADE:DEFAULTFILE">
-			<value>OutgoingTransitions.xscade</value>
+			<value>NumberOfOutgoingTransitionsPerState.xscade</value>
 		</Prop>
 		<Prop id="74" name="@SCADE:SEMFILE">
-			<value>OutgoingTransitions.err</value>
+			<value>NumberOfOutgoingTransitionsPerState.err</value>
 		</Prop>
 		<Prop id="75" name="@SCADE:NOTEFILE">
 			<value>$(SCADE)/lib/DefaultAty.aty</value>
@@ -309,15 +308,11 @@
 			<value>65</value>
 		</Prop>
 		<Prop id="87" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>OutgoingTransitions</value>
+			<value>NumberOfOutgoingTransitionsPerState</value>
 			<configuration>54</configuration>
 		</Prop>
-		<Prop id="88" name="@METRICS_RULES:RULES_PARAM">
-			<value>id_0072,5</value>
-			<configuration>54</configuration>
-		</Prop>
-		<Prop id="89" name="@METRICS_RULES:SELECTED_RULES">
-			<value>id_0072</value>
+		<Prop id="89" name="@METRICS_RULES:SELECTED_METRICS">
+			<value>id_0125</value>
 			<configuration>54</configuration>
 		</Prop>
 	</props>

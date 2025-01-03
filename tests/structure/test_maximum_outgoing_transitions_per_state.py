@@ -26,6 +26,9 @@
 import pytest
 import scade.model.suite as suite
 
+from ansys.scade.design_rules.metrics.number_of_outgoing_transitions_per_state import (
+    NumberOfOutgoingTransitionsPerState,
+)
 from ansys.scade.design_rules.structure.maximum_outgoing_transitions_per_state import (
     MaximumOutgoingTransitionsPerState,
 )
@@ -53,6 +56,8 @@ class TestMaximumOutgoingTransitionsPerState(MaximumOutgoingTransitionsPerState)
     def __init__(self, parameter=None, **kwargs):
         self.parameter = parameter
         super().__init__(id='', parameter=self.parameter, **kwargs)
+        metric = NumberOfOutgoingTransitionsPerState()
+        self.stub_metrics({metric.id: metric})
 
     def on_start(self, model=None, parameter=None):
         parameter = parameter if parameter else self.parameter
@@ -68,6 +73,8 @@ class TestMaximumOutgoingTransitionsPerState(MaximumOutgoingTransitionsPerState)
     [
         # default parameters
         ('P::O5/SM1:Ok:', '5', _OK),
+        ('P::O5/SM1:Ok:SM2:State3:', '5', _OK),
+        ('P::O5/SM1:Ok:SM2:State4:', '5', _OK),
         ('P::O5/SM1:Nok:', '5', _FAILED),
     ],
 )
