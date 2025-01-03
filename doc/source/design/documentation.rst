@@ -3,6 +3,10 @@ Documentation
 
 Design
 ------
+
+Rule
+~~~~
+
 Each rule must have an associated documentation file with the following sections:
 
 * Description: Description of the checks performed by the rule.
@@ -18,16 +22,33 @@ Each rule must have an associated documentation file with the following sections
 
 The documentation file also contains metadata for queries or building tables.
 
-The examples are located in the directory ``./doc/source/rules``.
+The files are located in the ``./doc/source/rules`` directory.
 The structure of this directory must match the structure of ``./src/ansys/scade/design_rules``.
 
-Each directory containing rules' documentation must have a ``content.rst`` file which
+Each directory containing rules' documentation must have a ``index.rst`` file that
 provides a general overview and a table listing all the contained rules.
+
+Metric
+~~~~~~
+
+Each metric must have an associated documentation file with the following sections:
+
+* Description: Description of the metric.
+* Computation: How the computation is performed.
+* Customization: How to customize the metric, when applicable.
+
+The documentation file also contains metadata for queries or building tables.
+
+The files are located in the directory ``./doc/source/metrics``.
+The structure of this directory must match the structure of ``./src/ansys/scade/design_rules/metrics``.
+
+The directory containing metrics' documentation must have a ``index.rst`` file that
+provides a general overview and a table listing all the contained metrics.
 
 Tools
 -----
 
-The ``pre-commit`` hook ``update_doc`` ensures each rule is documented and consistent.
+The ``pre-commit`` hook ``update_doc`` ensures each metric or rule is documented and consistent.
 It is based on naming rules.
 
 When a rule has no associated documentation, the hook creates a new file
@@ -46,4 +67,4 @@ The part of the updated description is delimited by:
 
 Any additional description text outside those limits is preserved when updating the documentation.
 
-This tool also creates a default ``content.rst`` file when it does not exist.
+This tool also creates a default ``index.rst`` file when it does not exist.

@@ -2,16 +2,18 @@ Utilities
 =========
 
 The ``./src/ansys/scade/design_rules/utils`` directory contains Python
-components to ease the development of rules.
+components to ease the development of metrics and rules.
 
-The most important one is the ``Rule`` class which must be derived
-by all the rules defined in the repository.
+The most important ones are the ``Metric`` and ``Rule`` classes which must
+be derived by all the metrics and rules defined in the repository.
 
-The first objective of this class is to provide a stub for the
-top-level ``class scade.tool.suite.rules.Rule`` when unit testing
-or debugging the rules outside the context of *SCADE Metrics and Rules Checker*.
+The first objective of these classes is to provide a stub for the
+top-level ``class scade.tool.suite.rules.Metric`` and ``class scade.tool.suite.rules.Rule``
+when unit testing or debugging the rules outside the context of *SCADE Metrics and Rules Checker*.
 
 The following sections describe the interface of the ``Rule`` class and its services.
+
+The class ``Metric`` has a similar but simpler design.
 
 Stubs
 -----

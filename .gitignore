@@ -274,3 +274,4 @@ tests/**/links.json
 TestResults/
 *.sln
 *.pyproj
+*_metrics.xml

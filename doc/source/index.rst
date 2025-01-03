@@ -6,6 +6,7 @@ Ansys SCADE Design Rules
 
    getting-started/index
    disclaimer
+   metrics/index
    rules/index
    contributing
    design/index
