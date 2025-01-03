@@ -247,10 +247,10 @@
 			<value>71</value>
 		</Prop>
 		<Prop id="82" name="@SCADE:DEFAULTFILE">
-			<value>NumberOfOperatorsPerPackage.xscade</value>
+			<value>MaximumOperatorsPerPackage.xscade</value>
 		</Prop>
 		<Prop id="83" name="@SCADE:SEMFILE">
-			<value>NumberOfOperatorsPerPackage.err</value>
+			<value>MaximumOperatorsPerPackage.err</value>
 		</Prop>
 		<Prop id="84" name="@SCADE:NOTEFILE">
 			<value></value>
@@ -343,28 +343,19 @@
 			<configuration>41</configuration>
 		</Prop>
 		<Prop id="112" name="@GENERATOR:ROOTNODE">
-			<value>NumberOfOperatorsPerPackage::NumberOfOperatorsPerPackage</value>
+			<value>MaximumOperatorsPerPackage::MaximumOperatorsPerPackage</value>
 			<configuration>41</configuration>
 		</Prop>
 		<Prop id="432" name="@STUDIO:TOOLCONF">
 			<value>Metrics and Rules Checker</value>
-			<value>13</value>
-			<value>21</value>
-			<value>31</value>
-			<value>36</value>
-			<value>41</value>
-			<value>52</value>
-			<value>60</value>
-			<value>63</value>
-			<value>71</value>
 			<value>437</value>
 		</Prop>
 		<Prop id="433" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>NumberOfOperatorsPerPackage</value>
+			<value>MaximumOperatorsPerPackage</value>
 			<configuration>13</configuration>
 		</Prop>
 		<Prop id="434" name="@METRICS_RULES:USER_DEF_FILES">
-			<value>..\..\..\src\ansys\scade\design_rules\structure\number_of_operators_per_package.py</value>
+			<value>..\..\..\src\ansys\scade\design_rules\structure\maximum_operators_per_package.py</value>
 		</Prop>
 		<Prop id="435" name="@METRICS_RULES:RULES_PARAM">
 			<value>SCADE_R001,Coverage</value>
@@ -376,7 +367,7 @@
 			<configuration>437</configuration>
 		</Prop>
 		<Prop id="440" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>NumberOfOperatorsPerPackage</value>
+			<value>MaximumOperatorsPerPackage</value>
 			<configuration>437</configuration>
 		</Prop>
 		<Prop id="441" name="@GENERATOR:ENABLE_EXTENSIONS">
@@ -404,7 +395,7 @@
 			<configuration>437</configuration>
 		</Prop>
 		<Prop id="447" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>NumberOfOperatorsPerPackage</value>
+			<value>MaximumOperatorsPerPackage</value>
 			<configuration>21</configuration>
 		</Prop>
 		<Prop id="448" name="@METRICS_RULES:RULES_PARAM">
@@ -425,7 +416,7 @@
 		<Folder id="11" extensions="xscade;scade" name="Model Files">
 			<elements>
 				<Folder id="12" extensions="xscade;scade" name="Separate Files"/>
-				<FileRef id="104" persistAs="NumberOfOperatorsPerPackage.xscade"/>
+				<FileRef id="104" persistAs="MaximumOperatorsPerPackage.xscade"/>
 				<FileRef id="153" persistAs="TooManyOps.xscade"/>
 			</elements>
 		</Folder>

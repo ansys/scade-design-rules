@@ -22,7 +22,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-"""Implements the NumberOfOperatorsPerPackage rule."""
+"""Implements the MaximumOperatorsPerPackage rule."""
 
 if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
@@ -36,7 +36,7 @@ import scade.model.suite as suite
 from ansys.scade.design_rules.utils.rule import Rule
 
 
-class NumberOfOperatorsPerPackage(Rule):
+class MaximumOperatorsPerPackage(Rule):
     """Implements the rule interface."""
 
     def __init__(
@@ -45,8 +45,8 @@ class NumberOfOperatorsPerPackage(Rule):
         category='Structuring',
         severity=Rule.REQUIRED,
         parameter='10',
-        description='Number of operators per package.',
-        label='Number of operators per package',
+        description='Maximum operators per package.',
+        label='Maximum operators per package',
     ):
         super().__init__(
             id=id,
@@ -85,4 +85,4 @@ class NumberOfOperatorsPerPackage(Rule):
 
 if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
-    NumberOfOperatorsPerPackage()
+    MaximumOperatorsPerPackage()

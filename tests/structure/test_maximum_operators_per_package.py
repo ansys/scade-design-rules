@@ -25,8 +25,8 @@
 import pytest
 import scade.model.suite as suite
 
-from ansys.scade.design_rules.structure.number_of_operators_per_package import (
-    NumberOfOperatorsPerPackage,
+from ansys.scade.design_rules.structure.maximum_operators_per_package import (
+    MaximumOperatorsPerPackage,
 )
 from ansys.scade.design_rules.utils.rule import Rule
 from tests.conftest import load_session
@@ -41,11 +41,11 @@ _NA = Rule.NA
 @pytest.fixture(scope='session')
 def session():
     """Unique instance of the test model MaximumCallGraphDepth."""
-    pathname = 'tests/structure/NumberOfOperatorsPerPackage/NumberOfOperatorsPerPackage.etp'
+    pathname = 'tests/structure/MaximumOperatorsPerPackage/MaximumOperatorsPerPackage.etp'
     return load_session(pathname)
 
 
-class TestNumberOfOperatorsPerPackage(NumberOfOperatorsPerPackage):
+class TestMaximumOperatorsPerPackage(MaximumOperatorsPerPackage):
     __test__ = False
 
     def __init__(self, parameter=None, **kwargs):
@@ -70,7 +70,7 @@ class TestNumberOfOperatorsPerPackage(NumberOfOperatorsPerPackage):
 def test_max_call_graph_depth_robustness(session: suite.Session, path, param, expected):
     model = session.model
     op = model.get_object_from_path(path)
-    rule = TestNumberOfOperatorsPerPackage(parameter=param)
+    rule = TestMaximumOperatorsPerPackage(parameter=param)
     assert rule.on_start(op) == expected
 
 
@@ -87,7 +87,7 @@ def test_max_call_graph_depth_robustness(session: suite.Session, path, param, ex
 def test_max_call_graph_depth_nominal(session: suite.Session, path, param, expected):
     model = session.model
     op = model.get_object_from_path(path)
-    rule = TestNumberOfOperatorsPerPackage(parameter=param)
+    rule = TestMaximumOperatorsPerPackage(parameter=param)
     assert rule.on_start(op) == _OK
     status = rule.on_check(op)
     assert status == expected

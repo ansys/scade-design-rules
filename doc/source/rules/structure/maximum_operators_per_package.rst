@@ -1,24 +1,24 @@
-.. index:: single: Number of operators per package
+.. index:: single: Maximum operators per package
 
-Number of operators per package
-===============================
+Maximum operators per package
+=============================
 
 .. rule::
-   :filename: number_of_operators_per_package.py
-   :class: NumberOfOperatorsPerPackage
+   :filename: maximum_operators_per_package.py
+   :class: MaximumOperatorsPerPackage
    :id: id_0071
    :reference: n/a
    :kind: generic
    :tags: structure
 
-   Number of operators per package
+   Maximum operators per package
 
 Description
 -----------
 
 .. start_description
 
-Number of operators per package.
+Maximum operators per package.
 
 .. end_description
 
