@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="144" defaultConfiguration="23">
+<Project id="1" oid_count="145" defaultConfiguration="23">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -187,8 +187,7 @@
 			<configuration>44</configuration>
 		</Prop>
 		<Prop id="55" name="@METRICS_RULES:USER_DEF_FILES">
-			<value>$(SCADE)/scripts/MetricRule/DefaultMetrics.py</value>
-			<value>$(SCADE)/scripts/MetricRule/DefaultRules.py</value>
+			<value>..\..\..\src\ansys\scade\design_rules\structure\maximum_level_of_packages.py</value>
 		</Prop>
 		<Prop id="56" name="@STUDIO:TOOLCONF">
 			<value>Metrics and Rules Checker</value>
@@ -262,10 +261,10 @@
 			<configuration>65</configuration>
 		</Prop>
 		<Prop id="73" name="@SCADE:DEFAULTFILE">
-			<value>NumberOfLevelOfPackages.xscade</value>
+			<value>MaximumLevelOfPackages.xscade</value>
 		</Prop>
 		<Prop id="74" name="@SCADE:SEMFILE">
-			<value>NumberOfLevelOfPackages.err</value>
+			<value>MaximumLevelOfPackages.err</value>
 		</Prop>
 		<Prop id="75" name="@SCADE:NOTEFILE">
 			<value>$(SCADE)/lib/DefaultAty.aty</value>
@@ -342,14 +341,14 @@
 			<value>65</value>
 		</Prop>
 		<Prop id="142" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>NumberOfLevelOfPackages</value>
+			<value>MaximumLevelOfPackages</value>
 			<configuration>54</configuration>
 		</Prop>
 		<Prop id="143" name="@METRICS_RULES:RULES_PARAM">
-			<value>id_0068,10</value>
+			<value>id_0068,2</value>
 			<configuration>54</configuration>
 		</Prop>
-		<Prop id="144" name="@METRICS_RULES:SELECTED_RULES">
+		<Prop id="145" name="@METRICS_RULES:SELECTED_RULES">
 			<value>id_0068</value>
 			<configuration>54</configuration>
 		</Prop>

@@ -25,8 +25,8 @@
 import pytest
 import scade.model.suite as suite
 
-from ansys.scade.design_rules.structure.number_of_level_of_packages import (
-    NumberOfLevelOfPackages,
+from ansys.scade.design_rules.structure.maximum_level_of_packages import (
+    MaximumLevelOfPackages,
 )
 from ansys.scade.design_rules.utils.rule import Rule
 from tests.conftest import load_session
@@ -40,12 +40,12 @@ _NA = Rule.NA
 
 @pytest.fixture(scope='session')
 def session():
-    """Unique instance of the test model MaximumCallGraphDepth."""
-    pathname = 'tests/structure/NumberOfLevelOfPackages/NumberOfLevelOfPackages.etp'
+    """Unique instance of the test model MaximumLevelOfPackages."""
+    pathname = 'tests/structure/MaximumLevelOfPackages/MaximumLevelOfPackages.etp'
     return load_session(pathname)
 
 
-class TestNumberOfLevelOfPackages(NumberOfLevelOfPackages):
+class TestMaximumLevelOfPackages(MaximumLevelOfPackages):
     __test__ = False
 
     def __init__(self, parameter=None, **kwargs):
@@ -67,10 +67,10 @@ class TestNumberOfLevelOfPackages(NumberOfLevelOfPackages):
         ('Package::/', '', _ERROR),
     ],
 )
-def test_number_of_level_of_packages_robustness(session: suite.Session, path, param, expected):
+def test_maximum_level_of_packages_robustness(session: suite.Session, path, param, expected):
     model = session.model
     op = model.get_object_from_path(path)
-    rule = TestNumberOfLevelOfPackages(parameter=param)
+    rule = TestMaximumLevelOfPackages(parameter=param)
     assert rule.on_start(op) == expected
 
 
@@ -82,10 +82,10 @@ def test_number_of_level_of_packages_robustness(session: suite.Session, path, pa
         ('Package1::', '8', _FAILED),
     ],
 )
-def test_number_of_level_of_packages_nominal(session: suite.Session, path, param, expected):
+def test_maximum_level_of_packages_nominal(session: suite.Session, path, param, expected):
     model = session.model
     op = model.get_object_from_path(path)
-    rule = TestNumberOfLevelOfPackages(parameter=param)
+    rule = TestMaximumLevelOfPackages(parameter=param)
     assert rule.on_start(op) == _OK
     status = rule.on_check(op)
     assert status == expected

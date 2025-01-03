@@ -247,10 +247,10 @@
 			<value>71</value>
 		</Prop>
 		<Prop id="82" name="@SCADE:DEFAULTFILE">
-			<value>NumberOfLevelOfPackages.xscade</value>
+			<value>MaximumLevelOfPackages.xscade</value>
 		</Prop>
 		<Prop id="83" name="@SCADE:SEMFILE">
-			<value>NumberOfLevelOfPackages.err</value>
+			<value>MaximumLevelOfPackages.err</value>
 		</Prop>
 		<Prop id="84" name="@SCADE:NOTEFILE">
 			<value></value>
@@ -343,7 +343,7 @@
 			<configuration>41</configuration>
 		</Prop>
 		<Prop id="112" name="@GENERATOR:ROOTNODE">
-			<value>NumberOfLevelOfPackages::NumberOfLevelOfPackages</value>
+			<value>MaximumLevelOfPackages::MaximumLevelOfPackages</value>
 			<configuration>41</configuration>
 		</Prop>
 		<Prop id="126" name="@STUDIO:TOOLCONF">
@@ -360,11 +360,11 @@
 			<value>131</value>
 		</Prop>
 		<Prop id="127" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>NumberOfLevelOfPackages</value>
+			<value>MaximumLevelOfPackages</value>
 			<configuration>13</configuration>
 		</Prop>
 		<Prop id="128" name="@METRICS_RULES:USER_DEF_FILES">
-			<value>..\..\..\src\ansys\scade\design_rules\structure\number_of_level_of_packages.py</value>
+			<value>..\..\..\src\ansys\scade\design_rules\structure\maximum_level_of_packages.py</value>
 		</Prop>
 		<Prop id="129" name="@METRICS_RULES:RULES_PARAM">
 			<value>id_0068,2</value>
@@ -376,7 +376,7 @@
 			<configuration>131</configuration>
 		</Prop>
 		<Prop id="134" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>NumberOfLevelOfPackages</value>
+			<value>MaximumLevelOfPackages</value>
 			<configuration>131</configuration>
 		</Prop>
 		<Prop id="135" name="@GENERATOR:ENABLE_EXTENSIONS">
@@ -433,7 +433,7 @@
 						</FileRef>
 					</elements>
 				</Folder>
-				<FileRef id="104" persistAs="NumberOfLevelOfPackages.xscade"/>
+				<FileRef id="104" persistAs="MaximumLevelOfPackages.xscade"/>
 			</elements>
 		</Folder>
 		<Folder id="119" extensions="etp" name="Submodels"/>

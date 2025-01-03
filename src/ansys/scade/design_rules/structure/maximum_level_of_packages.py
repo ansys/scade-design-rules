@@ -22,7 +22,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-"""Implements the NumberOfLevelOfPackages rule."""
+"""Implements the MaximumLevelOfPackages rule."""
 
 if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
@@ -36,7 +36,7 @@ import scade.model.suite as suite
 from ansys.scade.design_rules.utils.rule import SCK, Rule
 
 
-class NumberOfLevelOfPackages(Rule):
+class MaximumLevelOfPackages(Rule):
     """Implements the rule interface."""
 
     def __init__(
@@ -45,8 +45,8 @@ class NumberOfLevelOfPackages(Rule):
         category='Structuring',
         severity=Rule.REQUIRED,
         parameter='2',
-        description='Number of level per packages.',
-        label='Number of level per packages',
+        description='Maximum level per packages.',
+        label='Maximum level per packages',
     ):
         super().__init__(
             id=id,
@@ -86,4 +86,4 @@ class NumberOfLevelOfPackages(Rule):
 
 if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
-    NumberOfLevelOfPackages()
+    MaximumLevelOfPackages()

@@ -1,24 +1,24 @@
-.. index:: single: Number of level of packages
+.. index:: single: Maximum level of packages
 
-Number of level of packages
-===========================
+Maximum level of packages
+=========================
 
 .. rule::
-   :filename: number_of_level_of_packages.py
-   :class: NumberOfLevelOfPackages
+   :filename: maximum_level_of_packages.py
+   :class: MaximumLevelOfPackages
    :id: id_0068
    :reference: n/a
    :kind: generic
    :tags: structure
 
-   Number of level per packages
+   Maximum level per packages
 
 Description
 -----------
 
 .. start_description
 
-Number of level per packages.
+Maximum level per packages.
 
 .. end_description
 
