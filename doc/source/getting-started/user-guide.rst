@@ -34,6 +34,8 @@ This script can be saved anywhere on your file system.
 
 .. literalinclude :: resources/naming_default.py
 
+.. _ug_customization:
+
 Customization
 -------------
 The rules have default properties that can be overridden at instantiation.
@@ -52,6 +54,13 @@ Refer to the *Customization* section of their documentation for details.
 For example:
 
 .. literalinclude :: resources/naming_custom.py
+
+Rules that depend on metrics provide an additional property, usually ``metric_id``,
+to specify an alternate metric.
+
+For example:
+
+.. literalinclude :: resources/metric_custom.py
 
 Registration
 ------------

@@ -42,13 +42,6 @@ Customization
 -------------
 This rule depends on the :ref:`Number of outgoing transitions per state <MetricNumberOfOutgoingTransitionsPerState>`
 metric, that must be included in the package. If you customize the ID of this metric, you must
-provide it when instantiating the rule.
+provide it when instantiating the rule, using the parameter ``metric_id``.
 
-For example::
-
-   from ansys.scade.design_rules.metrics.number_of_outgoing_transitions_per_state import NumberOfOutgoingTransitionsPerState
-   from ansys.scade.design_rules.structure.maximum_outgoing_transitions_per_state import MaximumOutgoingTransitionsPerState
-
-   # Instantiation with custom ids
-   NumberOfOutgoingTransitionsPerState(id='COUNT_OUT_TRANS')
-   MaximumOutgoingTransitionsPerState(id='MAX_OUT_TRANS', metric_id='COUNT_OUT_TRANS')
+Cf. :ref:`ug_customization` for an example.

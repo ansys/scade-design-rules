@@ -42,13 +42,6 @@ Customization
 -------------
 This rule depends on the :ref:`Number of diagrams per element <MetricNumberOfDiagramsPerElement>`
 metric, that must be included in the package. If you customize the ID of this metric, you must
-provide it when instantiating the rule.
+provide it when instantiating the rule, using the parameter ``metric_id``.
 
-For example::
-
-   from ansys.scade.design_rules.metrics.number_of_diagrams_per_element import NumberOfDiagramsPerElement
-   from ansys.scade.design_rules.structure.maximum_diagrams_per_element import MaximumDiagramsPerElement
-
-   # Instantiation with custom ids
-   NumberOfDiagramsPerElement(id='COUNT_DIAGRAMS')
-   MaximumDiagramsPerElement(id='MAX_DIAGRAMS', metric_id='COUNT_DIAGRAMS')
+Cf. :ref:`ug_customization` for an example.
