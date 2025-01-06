@@ -7,7 +7,7 @@ Maximum user operators in diagram
    :filename: maximum_user_ops_in_diagram.py
    :class: MaximumUserOpsInDiagram
    :id: id_0074
-   :reference: n/a
+   :reference: SDR-30-2
    :kind: generic
    :tags: structure
 

@@ -7,7 +7,7 @@ Maximum outgoing transitions per state
    :filename: maximum_outgoing_transitions_per_state.py
    :class: MaximumOutgoingTransitionsPerState
    :id: id_0072
-   :reference: n/a
+   :reference: SDR-30-6
    :kind: generic
    :tags: structure
 

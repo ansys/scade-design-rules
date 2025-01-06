@@ -7,7 +7,7 @@ Maximum nested activate blocks
    :filename: maximum_nested_activate_blocks.py
    :class: MaximumNestedActivateBlocks
    :id: id_0069
-   :reference: n/a
+   :reference: SDR-30-5
    :kind: generic
    :tags: structure
 

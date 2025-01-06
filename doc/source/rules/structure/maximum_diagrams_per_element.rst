@@ -7,7 +7,7 @@ Maximum diagrams per element
    :filename: maximum_diagrams_per_element.py
    :class: MaximumDiagramsPerElement
    :id: id_0065
-   :reference: n/a
+   :reference: SDR-30-1
    :kind: generic
    :tags: structure
 

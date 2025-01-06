@@ -7,7 +7,7 @@ Maximum nested state machines
    :filename: maximum_nested_sms.py
    :class: MaximumNestedSMs
    :id: id_0070
-   :reference: n/a
+   :reference: SDR-30-4
    :kind: generic
    :tags: structure
 

@@ -7,7 +7,7 @@ Maximum predefined operators in diagram
    :filename: maximum_predef_ops_in_diagram.py
    :class: MaximumPredefOpsInDiagram
    :id: id_0073
-   :reference: n/a
+   :reference: SDR-30-3
    :kind: generic
    :tags: structure
 
