@@ -32,10 +32,7 @@ This enforces compliance with a specific modeling standard by placing an upper b
 Verification
 ------------
 This rule checks all Activate Blocks (If Blocks or When Blocks) throughout the model.
-For each, it uses a recursive depth-first algorithm to determine the maximum number of nested conditional blocks.
-
-The rule traverses nested state machines to look for enclosed conditional blocks.
-A conditional block with no nested sub-block has a depth of ``1``.
+It retrieves the :ref:`Number of nested activate blocks <MetricNumberOfNestedActivateBlocks>` metric associated to each block.
 
 The rule fails if the maximum number of nested activate blocks exceeds the authorized value.
 
@@ -45,4 +42,8 @@ Consider refactoring the offending chain of nested activate blocks to reduce its
 
 Customization
 -------------
-N/A.
+This rule depends on the :ref:`Number of nested activate blocks <MetricNumberOfNestedActivateBlocks>`
+metric, that must be included in the package. If you customize the ID of this metric, you must
+provide it when instantiating the rule, using the parameter ``metric_id``.
+
+Cf. :ref:`ug_customization` for an example.

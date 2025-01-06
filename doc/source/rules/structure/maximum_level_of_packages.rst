@@ -30,10 +30,8 @@ This enforces compliance with a specific modeling standard by placing an upper b
 
 Verification
 ------------
-This rule recursively checks, for each package in the model, the depth of nested sub-packages.
+It retrieves the :ref:`Level of packages <MetricLevelOfPackages>` metric associated to each package.
 It fails if a chain of nested packages exceeds the maximum authorized depth.
-
-Note: a package with no sub-package has depth ``1``.
 
 Resolution
 ----------

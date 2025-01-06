@@ -24,7 +24,10 @@ Number of package levels.
 
 Computation
 -----------
-This metric computes the maximum depth of the package hierarchy.
+This metric computes for a package the depth of nested sub-packages.
+
+Note: a package with no sub-package has depth ``1``.
+
 
 Customization
 -------------

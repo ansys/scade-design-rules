@@ -51,6 +51,7 @@ class MaximumNestedActivateBlocks(Rule):
             "('If Block', 'When Block').\n"
             "Parameter: maximum value: e.g.: '7'"
         ),
+        metric_id: str = 'id_0128',
     ):
         super().__init__(
             id=id,
@@ -62,7 +63,9 @@ class MaximumNestedActivateBlocks(Rule):
             label=label,
             types=[suite.ActivateBlock],
             kinds=None,
+            metric_ids=[metric_id],
         )
+        self.metric_id = metric_id
 
     def on_start(self, model: suite.Model, parameter: str = None) -> int:
         """Get the rule's parameters."""
@@ -75,53 +78,12 @@ class MaximumNestedActivateBlocks(Rule):
 
     def on_check(self, object_: suite.Object, parameter: str = None) -> int:
         """Return the evaluation status for the input object."""
-        violated = False
-        self.nested_activate_blocks = 0
-        self._check_activate_block(object_, 1)
-
-        if self.nested_activate_blocks > int(parameter):
-            violated = True
-
-        if violated:
-            self.set_message(
-                'Too many nested activate blocks ('
-                + str(self.nested_activate_blocks)
-                + ' > '
-                + parameter
-                + ')'
-            )
+        count = self.get_metric_result(object_, self.metric_id)
+        if count > int(parameter):
+            self.set_message(f'Too many nested activate blocks ({count} > {parameter})')
             return Rule.FAILED
 
         return Rule.OK
-
-    def _check_sm(self, state_machine: suite.StateMachine, level: int):
-        for state in state_machine.states:
-            self._check_action_or_state(state, level)
-
-    def _check_activate_block(self, activate_block: suite.ActivateBlock, level: int):
-        if level > self.nested_activate_blocks:
-            self.nested_activate_blocks = level
-
-        if isinstance(activate_block, suite.IfBlock):
-            self._check_if_branch(activate_block.if_node, level)
-        else:
-            # assert isinstance(activate_block, WhenBlock):
-            for when_branch in activate_block.when_branches:
-                self._check_action_or_state(when_branch.action, level)
-
-    def _check_if_branch(self, if_branch: suite.IfBranch, level: int):
-        if isinstance(if_branch, suite.IfNode):
-            self._check_if_branch(if_branch.then, level)
-            self._check_if_branch(if_branch._else, level)
-        else:
-            # assert isinstance(if_branch, suite.IfAction):
-            self._check_action_or_state(if_branch.action, level)
-
-    def _check_action_or_state(self, datadef: suite.DataDef, level: int):
-        for activate_block in datadef.activate_blocks:
-            self._check_activate_block(activate_block, level + 1)
-        for state_machine in datadef.state_machines:
-            self._check_sm(state_machine, level)
 
 
 if __name__ == '__main__':
