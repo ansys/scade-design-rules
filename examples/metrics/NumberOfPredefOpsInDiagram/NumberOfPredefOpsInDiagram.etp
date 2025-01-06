@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="100" defaultConfiguration="23">
+<Project id="1" oid_count="88" defaultConfiguration="23">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -187,7 +187,6 @@
 			<configuration>44</configuration>
 		</Prop>
 		<Prop id="55" name="@METRICS_RULES:USER_DEF_FILES">
-			<value>..\..\..\src\ansys\scade\design_rules\structure\maximum_predef_ops_in_diagram.py</value>
 			<value>..\..\..\src\ansys\scade\design_rules\metrics\number_of_predef_ops_in_diagram.py</value>
 		</Prop>
 		<Prop id="56" name="@STUDIO:TOOLCONF">
@@ -261,6 +260,12 @@
 			<value>true</value>
 			<configuration>65</configuration>
 		</Prop>
+		<Prop id="73" name="@SCADE:DEFAULTFILE">
+			<value>NumberOfPredefOpsInDiagram.xscade</value>
+		</Prop>
+		<Prop id="74" name="@SCADE:SEMFILE">
+			<value>NumberOfPredefOpsInDiagram.err</value>
+		</Prop>
 		<Prop id="75" name="@SCADE:NOTEFILE">
 			<value>$(SCADE)/lib/DefaultAty.aty</value>
 		</Prop>
@@ -302,55 +307,12 @@
 			<value>57</value>
 			<value>65</value>
 		</Prop>
-		<Prop id="86" name="@STUDIO:TOOLCONF">
-			<value>DiffAnalyzer</value>
-			<value>14</value>
-			<value>23</value>
-			<value>34</value>
-			<value>39</value>
-			<value>44</value>
-			<value>54</value>
-			<value>57</value>
-			<value>65</value>
-		</Prop>
-		<Prop id="87" name="@STUDIO:TOOLCONF">
-			<value>Synchronization</value>
-			<value>14</value>
-			<value>23</value>
-			<value>34</value>
-			<value>39</value>
-			<value>44</value>
-			<value>54</value>
-			<value>57</value>
-			<value>65</value>
-		</Prop>
-		<Prop id="88" name="@STUDIO:TOOLCONF">
-			<value>Import/Export</value>
-			<value>14</value>
-			<value>23</value>
-			<value>34</value>
-			<value>39</value>
-			<value>44</value>
-			<value>54</value>
-			<value>57</value>
-			<value>65</value>
-		</Prop>
-		<Prop id="91" name="@METRICS_RULES:RULES_PARAM">
-			<value>id_0073,6</value>
+		<Prop id="87" name="@METRICS_RULES:SELECTED_ROOTS">
+			<value>NumberOfPredefOpsInDiagram</value>
 			<configuration>54</configuration>
 		</Prop>
-		<Prop id="92" name="@METRICS_RULES:SELECTED_RULES">
-			<value>id_0073</value>
-			<configuration>54</configuration>
-		</Prop>
-		<Prop id="97" name="@SCADE:DEFAULTFILE">
-			<value>PredefOps.xscade</value>
-		</Prop>
-		<Prop id="98" name="@SCADE:SEMFILE">
-			<value>PredefOps.err</value>
-		</Prop>
-		<Prop id="100" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>PredefOps</value>
+		<Prop id="88" name="@METRICS_RULES:SELECTED_METRICS">
+			<value>id_0131</value>
 			<configuration>54</configuration>
 		</Prop>
 	</props>
@@ -359,7 +321,7 @@
 		<Folder id="12" extensions="xscade;scade" name="Model Files">
 			<elements>
 				<Folder id="13" extensions="xscade;scade" name="Separate Files"/>
-				<FileRef id="89" persistAs="P.xscade"/>
+				<FileRef id="86" persistAs="P.xscade"/>
 			</elements>
 		</Folder>
 	</roots>

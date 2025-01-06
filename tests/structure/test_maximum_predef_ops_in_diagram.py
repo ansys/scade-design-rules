@@ -26,6 +26,9 @@
 import pytest
 import scade.model.suite as suite
 
+from ansys.scade.design_rules.metrics.number_of_predef_ops_in_diagram import (
+    NumberOfPredefOpsInDiagram,
+)
 from ansys.scade.design_rules.structure.maximum_predef_ops_in_diagram import (
     MaximumPredefOpsInDiagram,
 )
@@ -53,6 +56,8 @@ class TestMaximumPredefOpsInDiagram(MaximumPredefOpsInDiagram):
     def __init__(self, parameter=None, **kwargs):
         self.parameter = parameter
         super().__init__(id='', parameter=self.parameter, **kwargs)
+        metric = NumberOfPredefOpsInDiagram()
+        self.stub_metrics({metric.id: metric})
 
     def on_start(self, model=None, parameter=None):
         parameter = parameter if parameter else self.parameter

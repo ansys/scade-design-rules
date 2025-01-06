@@ -51,6 +51,7 @@ class MaximumPredefOpsInDiagram(Rule):
             'This metric also includes textual equations.\n'
             "Parameter: maximum value: e.g.: '15'"
         ),
+        metric_id: str = 'id_0131',
     ):
         super().__init__(
             id=id,
@@ -62,7 +63,9 @@ class MaximumPredefOpsInDiagram(Rule):
             default_param=parameter,
             types=[suite.NetDiagram],
             kinds=None,
+            metric_ids=[metric_id],
         )
+        self.metric_id = metric_id
 
     def on_start(self, model: suite.Model, parameter: str = None) -> int:
         """Get the rule's parameters."""
@@ -75,29 +78,9 @@ class MaximumPredefOpsInDiagram(Rule):
 
     def on_check(self, object_: suite.Object, parameter: str = None) -> int:
         """Return the evaluation status for the input object."""
-        violated = False
-        predef_ops = 0
-
-        for present_element in object_.presentation_elements:
-            if isinstance(present_element, suite.EquationGE):
-                equation = present_element.equation
-                right = equation.right
-                # consider graphical instances of predefined operators or textual equations
-                if isinstance(right, suite.ExprCall):
-                    if not right.operator or present_element.kind == 'OBJ_LIT':
-                        predef_ops += 1
-
-        if predef_ops > int(parameter):
-            violated = True
-
-        if violated:
-            self.set_message(
-                'Too many predefined operators in diagram ('
-                + str(predef_ops)
-                + ' > '
-                + parameter
-                + ')'
-            )
+        count = self.get_metric_result(object_, self.metric_id)
+        if count > int(parameter):
+            self.set_message(f'Too many predefined operators in diagram ({count} > {parameter})')
             return Rule.FAILED
 
         return Rule.OK

@@ -32,9 +32,9 @@ on the number of predefined operators that may be instantiated in a diagram.
 
 Verification
 ------------
-This rule checks all graphical diagrams in the model. For each one, it counts the number of predefined operator instances.
-
-The rule fails if the number of predefined operator calls exceeds the authorized maximum.
+This rule checks all graphical diagrams in the model.
+It retrieves the :ref:`Number of predef ops in diagram <MetricNumberOfPredefOpsInDiagram>` metric associated to each diagram,
+and fails if the count exceeds the authorized maximum.
 
 Resolution
 ----------
@@ -42,4 +42,8 @@ Modify the diagram to reduce the number of predefined operator instances.
 
 Customization
 -------------
-N/A.
+This rule depends on the :ref:`Number of predef ops in diagram <MetricNumberOfPredefOpsInDiagram>`
+metric, that must be included in the package. If you customize the ID of this metric, you must
+provide it when instantiating the rule, using the parameter ``metric_id``.
+
+Cf. :ref:`ug_customization` for an example.
