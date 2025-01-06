@@ -80,9 +80,7 @@ class MaximumOutgoingTransitionsPerState(Rule):
         count = self.get_metric_result(object_, self.metric_id)
 
         if count > int(parameter):
-            self.set_message(
-                'Too many outgoing transitions per state (' + str(count) + ' > ' + parameter + ')'
-            )
+            self.set_message(f'Too many outgoing transitions per state ({count} > {parameter})')
             return Rule.FAILED
 
         return Rule.OK

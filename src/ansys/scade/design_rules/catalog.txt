@@ -107,3 +107,4 @@ id_0123	modelling	pragma_manifest
 id_0124	naming	element_names_unique_in_project
 id_0125	metrics	number_of_outgoing_transitions_per_state
 id_0126	metrics	number_of_diagrams_per_element
+id_0127	metrics	level_of_packages

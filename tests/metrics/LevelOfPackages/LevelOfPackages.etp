@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="145" defaultConfiguration="23">
+<Project id="1" oid_count="94" defaultConfiguration="23">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -187,7 +187,6 @@
 			<configuration>44</configuration>
 		</Prop>
 		<Prop id="55" name="@METRICS_RULES:USER_DEF_FILES">
-			<value>..\..\..\src\ansys\scade\design_rules\structure\maximum_level_of_packages.py</value>
 			<value>..\..\..\src\ansys\scade\design_rules\metrics\level_of_packages.py</value>
 		</Prop>
 		<Prop id="56" name="@STUDIO:TOOLCONF">
@@ -261,12 +260,6 @@
 			<value>true</value>
 			<configuration>65</configuration>
 		</Prop>
-		<Prop id="73" name="@SCADE:DEFAULTFILE">
-			<value>MaximumLevelOfPackages.xscade</value>
-		</Prop>
-		<Prop id="74" name="@SCADE:SEMFILE">
-			<value>MaximumLevelOfPackages.err</value>
-		</Prop>
 		<Prop id="75" name="@SCADE:NOTEFILE">
 			<value>$(SCADE)/lib/DefaultAty.aty</value>
 		</Prop>
@@ -308,50 +301,19 @@
 			<value>57</value>
 			<value>65</value>
 		</Prop>
-		<Prop id="137" name="@STUDIO:TOOLCONF">
-			<value>DiffAnalyzer</value>
-			<value>14</value>
-			<value>23</value>
-			<value>34</value>
-			<value>39</value>
-			<value>44</value>
-			<value>54</value>
-			<value>57</value>
-			<value>65</value>
-		</Prop>
-		<Prop id="138" name="@STUDIO:TOOLCONF">
-			<value>Synchronization</value>
-			<value>14</value>
-			<value>23</value>
-			<value>34</value>
-			<value>39</value>
-			<value>44</value>
-			<value>54</value>
-			<value>57</value>
-			<value>65</value>
-		</Prop>
-		<Prop id="139" name="@STUDIO:TOOLCONF">
-			<value>Import/Export</value>
-			<value>14</value>
-			<value>23</value>
-			<value>34</value>
-			<value>39</value>
-			<value>44</value>
-			<value>54</value>
-			<value>57</value>
-			<value>65</value>
-		</Prop>
-		<Prop id="142" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>MaximumLevelOfPackages</value>
+		<Prop id="90" name="@METRICS_RULES:SELECTED_ROOTS">
+			<value>LevelOfPackages</value>
 			<configuration>54</configuration>
 		</Prop>
-		<Prop id="143" name="@METRICS_RULES:RULES_PARAM">
-			<value>id_0068,2</value>
+		<Prop id="92" name="@METRICS_RULES:SELECTED_METRICS">
+			<value>id_0127</value>
 			<configuration>54</configuration>
 		</Prop>
-		<Prop id="145" name="@METRICS_RULES:SELECTED_RULES">
-			<value>id_0068</value>
-			<configuration>54</configuration>
+		<Prop id="93" name="@SCADE:DEFAULTFILE">
+			<value>LevelOfPackages.xscade</value>
+		</Prop>
+		<Prop id="94" name="@SCADE:SEMFILE">
+			<value>LevelOfPackages.err</value>
 		</Prop>
 	</props>
 	<roots>
@@ -359,7 +321,9 @@
 		<Folder id="12" extensions="xscade;scade" name="Model Files">
 			<elements>
 				<Folder id="13" extensions="xscade;scade" name="Separate Files"/>
-				<FileRef id="87" persistAs="Package1.xscade"/>
+				<FileRef id="86" persistAs="P1.xscade"/>
+				<FileRef id="87" persistAs="P2.xscade"/>
+				<FileRef id="88" persistAs="P3.xscade"/>
 			</elements>
 		</Folder>
 	</roots>

@@ -84,7 +84,7 @@ class MaximumDiagramsPerElement(Rule):
 
         if count > int(parameter):
             name = type(object_).__name__
-            self.set_message(f'Too many diagrams per {name} ( {count} > {parameter} )')
+            self.set_message(f'Too many diagrams per {name} ({count} > {parameter})')
             return Rule.FAILED
 
         return Rule.OK

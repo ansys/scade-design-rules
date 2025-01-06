@@ -41,4 +41,8 @@ Modify the offending packages to reduce maximum depth, as detailed in the rule f
 
 Customization
 -------------
-N/A.
+This rule depends on the :ref:`Level of packages <MetricLevelOfPackages>`
+metric, that must be included in the package. If you customize the ID of this metric, you must
+provide it when instantiating the rule, using the parameter ``metric_id``.
+
+Cf. :ref:`ug_customization` for an example.

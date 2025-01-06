@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (C) 2021 - 2025 ANSYS, Inc. and/or its affiliates.
+# Copyright (C) 2024 - 2025 ANSYS, Inc. and/or its affiliates.
 # SPDX-License-Identifier: MIT
 #
 #
@@ -22,10 +22,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-"""Implements the MaximumLevelOfPackages rule."""
+"""Implements the LevelOfPackages metric."""
 
 if __name__ == '__main__':  # pragma: no cover
-    # rule instantiated outside of a package
+    # metric instantiated outside of a package
     from os.path import abspath, dirname
     import sys
 
@@ -33,56 +33,40 @@ if __name__ == '__main__':  # pragma: no cover
 
 import scade.model.suite as suite
 
-from ansys.scade.design_rules.utils.rule import SCK, Rule
+from ansys.scade.design_rules.utils.metric import SCK, Metric
 
 
-class MaximumLevelOfPackages(Rule):
-    """Implements the rule interface."""
+class LevelOfPackages(Metric):
+    """Implements the metric interface."""
 
     def __init__(
         self,
-        id='id_0068',
-        category='Structuring',
-        severity=Rule.REQUIRED,
-        parameter='2',
-        description='Maximum level per packages.',
-        label='Maximum level per packages',
-        metric_id: str = 'id_0127',
+        id='id_0127',
+        category='Counters',
+        label='Number of package levels',
+        description='Number of package levels.',
     ):
         super().__init__(
             id=id,
-            category=category,
-            severity=severity,
-            has_parameter=True,
-            default_param=parameter,
-            description=description,
             label=label,
+            category=category,
+            description=description,
             types=None,
             kinds=[SCK.PACKAGE],
-            metric_ids=[metric_id],
         )
-        self.metric_id = metric_id
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
-        """Get the rule's parameters."""
-        if not parameter.isdecimal():
-            self.set_message(
-                'Parameter for rule is not an integer or lower than zero: ' + parameter
-            )
-            return Rule.ERROR
+    def on_compute_ex(self, package: suite.Package) -> int:
+        """Compute the metric for the input object."""
+        result = self._max_level(package)
+        self.set_result_metric(result)
 
-        return Rule.OK
+        return Metric.OK
 
-    def on_check_ex(self, object_: suite.Object, parameter: str = None) -> int:
-        """Return the evaluation status for the input object."""
-        max_level = self.get_metric_result(object_, self.metric_id)
-        if max_level > int(parameter):
-            self.set_message(f'Too many level of packages ({max_level} > {parameter})')
-            return Rule.FAILED
-
-        return Rule.OK
+    def _max_level(self, package: suite.Package) -> int:
+        level = max((self._max_level(_) for _ in package.packages)) if package.packages else 0
+        return level + 1
 
 
 if __name__ == '__main__':  # pragma: no cover
-    # rule instantiated outside of a package
-    MaximumLevelOfPackages()
+    # metric instantiated outside of a package
+    LevelOfPackages()

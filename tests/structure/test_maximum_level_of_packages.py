@@ -25,6 +25,7 @@
 import pytest
 import scade.model.suite as suite
 
+from ansys.scade.design_rules.metrics.level_of_packages import LevelOfPackages
 from ansys.scade.design_rules.structure.maximum_level_of_packages import (
     MaximumLevelOfPackages,
 )
@@ -51,6 +52,8 @@ class TestMaximumLevelOfPackages(MaximumLevelOfPackages):
     def __init__(self, parameter=None, **kwargs):
         self.parameter = parameter
         super().__init__(id='', parameter=self.parameter, **kwargs)
+        metric = LevelOfPackages()
+        self.stub_metrics({metric.id: metric})
 
     def on_start(self, model=None, parameter=None):
         parameter = parameter if parameter else self.parameter

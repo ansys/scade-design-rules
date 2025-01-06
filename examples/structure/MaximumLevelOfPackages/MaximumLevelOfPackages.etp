@@ -365,6 +365,7 @@
 		</Prop>
 		<Prop id="128" name="@METRICS_RULES:USER_DEF_FILES">
 			<value>..\..\..\src\ansys\scade\design_rules\structure\maximum_level_of_packages.py</value>
+			<value>..\..\..\src\ansys\scade\design_rules\metrics\level_of_packages.py</value>
 		</Prop>
 		<Prop id="129" name="@METRICS_RULES:RULES_PARAM">
 			<value>id_0068,2</value>
