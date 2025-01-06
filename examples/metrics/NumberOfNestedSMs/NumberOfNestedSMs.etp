@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="92" defaultConfiguration="23">
+<Project id="1" oid_count="90" defaultConfiguration="23">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -187,7 +187,6 @@
 			<configuration>44</configuration>
 		</Prop>
 		<Prop id="55" name="@METRICS_RULES:USER_DEF_FILES">
-			<value>..\..\..\src\ansys\scade\design_rules\structure\maximum_nested_sms.py</value>
 			<value>..\..\..\src\ansys\scade\design_rules\metrics\number_of_nested_sms.py</value>
 		</Prop>
 		<Prop id="56" name="@STUDIO:TOOLCONF">
@@ -261,6 +260,12 @@
 			<value>true</value>
 			<configuration>65</configuration>
 		</Prop>
+		<Prop id="73" name="@SCADE:DEFAULTFILE">
+			<value>NumberOfNestedSMs.xscade</value>
+		</Prop>
+		<Prop id="74" name="@SCADE:SEMFILE">
+			<value>NumberOfNestedSMs.err</value>
+		</Prop>
 		<Prop id="75" name="@SCADE:NOTEFILE">
 			<value>$(SCADE)/lib/DefaultAty.aty</value>
 		</Prop>
@@ -302,34 +307,21 @@
 			<value>57</value>
 			<value>65</value>
 		</Prop>
-		<Prop id="87" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>NestedSms</value>
+		<Prop id="88" name="@METRICS_RULES:SELECTED_ROOTS">
+			<value>NumberOfNestedSMs</value>
 			<configuration>54</configuration>
 		</Prop>
-		<Prop id="88" name="@METRICS_RULES:RULES_PARAM">
-			<value>id_0070,2</value>
+		<Prop id="90" name="@METRICS_RULES:SELECTED_METRICS">
+			<value>id_0129</value>
 			<configuration>54</configuration>
-		</Prop>
-		<Prop id="89" name="@METRICS_RULES:SELECTED_RULES">
-			<value>id_0070</value>
-			<configuration>54</configuration>
-		</Prop>
-		<Prop id="91" name="@SCADE:DEFAULTFILE">
-			<value>NestedSms.xscade</value>
-		</Prop>
-		<Prop id="92" name="@SCADE:SEMFILE">
-			<value>NestedSms.err</value>
 		</Prop>
 	</props>
 	<roots>
-		<Folder id="3" extensions="vsp;etp" name="Scripts">
-			<elements>
-				<FileRef id="90" persistAs="list_sms.py"/>
-			</elements>
-		</Folder>
+		<Folder id="3" extensions="vsp;etp" name="SCADE Libraries"/>
 		<Folder id="12" extensions="xscade;scade" name="Model Files">
 			<elements>
-				<FileRef id="86" persistAs="P.xscade"/>
+				<Folder id="13" extensions="xscade;scade" name="Separate Files"/>
+				<FileRef id="87" persistAs="P.xscade"/>
 			</elements>
 		</Folder>
 	</roots>

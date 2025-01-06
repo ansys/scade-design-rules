@@ -22,7 +22,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-"""Implements the LevelOfPackages metric."""
+"""Implements the NumberOfNestedSMs metric."""
 
 if __name__ == '__main__':  # pragma: no cover
     # metric instantiated outside of a package
@@ -33,40 +33,65 @@ if __name__ == '__main__':  # pragma: no cover
 
 import scade.model.suite as suite
 
-from ansys.scade.design_rules.utils.metric import SCK, Metric
+from ansys.scade.design_rules.utils.metric import Metric
 
 
-class LevelOfPackages(Metric):
+class NumberOfNestedSMs(Metric):
     """Implements the metric interface."""
 
     def __init__(
         self,
-        id='id_0127',
+        id='id_0129',
         category='Counters',
-        label='Number of nested packages',
-        description='Number of nested packages.',
+        label='Number of nested state machines',
+        description='Number of nested state machines.',
     ):
         super().__init__(
             id=id,
             label=label,
             category=category,
             description=description,
-            types=None,
-            kinds=[SCK.PACKAGE],
+            types=[suite.StateMachine],
+            kinds=None,
         )
 
-    def on_compute_ex(self, package: suite.Package) -> int:
+    def on_compute_ex(self, object_: suite.Object) -> int:
         """Compute the metric for the input object."""
-        result = self._max_level(package)
-        self.set_result_metric(result)
+        self.nested_sms = 0
+        self._check_sm(object_, 1)
+        self.set_result_metric(self.nested_sms)
 
         return Metric.OK
 
-    def _max_level(self, package: suite.Package) -> int:
-        level = max((self._max_level(_) for _ in package.packages)) if package.packages else 0
-        return level + 1
+    def _check_sm(self, state_machine: suite.StateMachine, level: int):
+        if level > self.nested_sms:
+            self.nested_sms = level
+        for state in state_machine.states:
+            self._check_action_or_state(state, level)
+
+    def _check_activate_block(self, activate_block: suite.ActivateBlock, level: int):
+        if isinstance(activate_block, suite.IfBlock):
+            self._check_if_branch(activate_block.if_node, level)
+        else:
+            # assert isinstance(activate_block, suite.WhenBlock):
+            for when_branch in activate_block.when_branches:
+                self._check_action_or_state(when_branch.action, level)
+
+    def _check_if_branch(self, if_branch: suite.IfBranch, level: int):
+        if isinstance(if_branch, suite.IfNode):
+            self._check_if_branch(if_branch.then, level)
+            self._check_if_branch(if_branch._else, level)
+        else:
+            # assert isinstance(if_branch, suite.IfAction):
+            self._check_action_or_state(if_branch.action, level)
+
+    def _check_action_or_state(self, datadef: suite.DataDef, level: int):
+        for activate_block in datadef.activate_blocks:
+            self._check_activate_block(activate_block, level)
+        for state_machine in datadef.state_machines:
+            self._check_sm(state_machine, level + 1)
 
 
 if __name__ == '__main__':  # pragma: no cover
     # metric instantiated outside of a package
-    LevelOfPackages()
+    NumberOfNestedSMs()

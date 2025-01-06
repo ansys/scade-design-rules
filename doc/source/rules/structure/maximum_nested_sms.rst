@@ -31,11 +31,8 @@ This enforces compliance with a specific modeling standard by placing an upper b
 
 Verification
 ------------
-This rule checks all state machines throughout the model. For each one,
-it uses a recursive depth-first algorithm to count the maximum number of nested state machines.
-
-The rule traverses nested conditional blocks to look for enclosed state machines.
-A state machine with no child state machine has a depth of ``1``.
+This rule checks all state machines throughout the model.
+It retrieves the :ref:`Number of nested state machines <MetricNumberOfNestedSMs>` metric associated to each state machine.
 
 The rule fails if the maximum number of nested state machines exceeds the authorized value.
 
@@ -45,4 +42,8 @@ Consider refactoring the offending state machine to reduce the number of nested 
 
 Customization
 -------------
-N/A.
+This rule depends on the :ref:`Number of nested state machines <MetricNumberOfNestedSMs>`
+metric, that must be included in the package. If you customize the ID of this metric, you must
+provide it when instantiating the rule, using the parameter ``metric_id``.
+
+Cf. :ref:`ug_customization` for an example.

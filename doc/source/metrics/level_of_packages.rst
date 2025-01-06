@@ -11,14 +11,14 @@ Level of packages
    :kind: specific
    :tags: metrics
 
-   Number of package levels
+   Number of nested packages
 
 Description
 -----------
 
 .. start_description
 
-Number of package levels.
+Number of nested packages.
 
 .. end_description
 

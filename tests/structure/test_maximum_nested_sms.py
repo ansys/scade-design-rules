@@ -26,6 +26,7 @@
 import pytest
 import scade.model.suite as suite
 
+from ansys.scade.design_rules.metrics.number_of_nested_sms import NumberOfNestedSMs
 from ansys.scade.design_rules.structure.maximum_nested_sms import MaximumNestedSMs
 from ansys.scade.design_rules.utils.rule import Rule
 from tests.conftest import load_session
@@ -51,6 +52,8 @@ class TestMaximumNestedSMs(MaximumNestedSMs):
     def __init__(self, parameter=None, **kwargs):
         self.parameter = parameter
         super().__init__(id='', parameter=self.parameter, **kwargs)
+        metric = NumberOfNestedSMs()
+        self.stub_metrics({metric.id: metric})
 
     def on_start(self, model=None, parameter=None):
         parameter = parameter if parameter else self.parameter
