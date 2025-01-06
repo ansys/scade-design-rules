@@ -30,7 +30,8 @@ This enforces compliance with a specific modeling standard by placing an upper b
 
 Verification
 ------------
-This rule checks each package in the model. For each one, it counts the number of operators
+This rule checks each package in the model.
+It retrieves the :ref:`Number of operators per package <MetricNumberOfOperatorsPerPackage>` metric associated to each package,
 and fails if the count exceeds the authorized maximum.
 
 Resolution
@@ -39,4 +40,8 @@ Modify the offending package to reduce its number of operators.
 
 Customization
 -------------
-N/A.
+This rule depends on the :ref:`Number of operators per package <MetricNumberOfOperatorsPerPackage>`
+metric, that must be included in the package. If you customize the ID of this metric, you must
+provide it when instantiating the rule, using the parameter ``metric_id``.
+
+Cf. :ref:`ug_customization` for an example.

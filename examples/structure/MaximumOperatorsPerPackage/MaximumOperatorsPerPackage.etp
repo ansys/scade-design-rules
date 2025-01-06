@@ -356,6 +356,7 @@
 		</Prop>
 		<Prop id="434" name="@METRICS_RULES:USER_DEF_FILES">
 			<value>..\..\..\src\ansys\scade\design_rules\structure\maximum_operators_per_package.py</value>
+			<value>..\..\..\src\ansys\scade\design_rules\metrics\number_of_operators_per_package.py</value>
 		</Prop>
 		<Prop id="435" name="@METRICS_RULES:RULES_PARAM">
 			<value>SCADE_R001,Coverage</value>

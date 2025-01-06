@@ -25,6 +25,9 @@
 import pytest
 import scade.model.suite as suite
 
+from ansys.scade.design_rules.metrics.number_of_operators_per_package import (
+    NumberOfOperatorsPerPackage,
+)
 from ansys.scade.design_rules.structure.maximum_operators_per_package import (
     MaximumOperatorsPerPackage,
 )
@@ -51,6 +54,8 @@ class TestMaximumOperatorsPerPackage(MaximumOperatorsPerPackage):
     def __init__(self, parameter=None, **kwargs):
         self.parameter = parameter
         super().__init__(id='', parameter=self.parameter, **kwargs)
+        metric = NumberOfOperatorsPerPackage()
+        self.stub_metrics({metric.id: metric})
 
     def on_start(self, model=None, parameter=None):
         parameter = parameter if parameter else self.parameter

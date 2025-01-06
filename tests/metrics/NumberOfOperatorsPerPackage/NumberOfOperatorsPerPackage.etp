@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="138" defaultConfiguration="23">
+<Project id="1" oid_count="94" defaultConfiguration="23">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -187,7 +187,6 @@
 			<configuration>44</configuration>
 		</Prop>
 		<Prop id="55" name="@METRICS_RULES:USER_DEF_FILES">
-			<value>..\..\..\src\ansys\scade\design_rules\structure\maximum_operators_per_package.py</value>
 			<value>..\..\..\src\ansys\scade\design_rules\metrics\number_of_operators_per_package.py</value>
 		</Prop>
 		<Prop id="56" name="@STUDIO:TOOLCONF">
@@ -262,10 +261,10 @@
 			<configuration>65</configuration>
 		</Prop>
 		<Prop id="73" name="@SCADE:DEFAULTFILE">
-			<value>MaximumOperatorsPerPackage.xscade</value>
+			<value>NumberOfOperatorsPerPackage.xscade</value>
 		</Prop>
 		<Prop id="74" name="@SCADE:SEMFILE">
-			<value>MaximumOperatorsPerPackage.err</value>
+			<value>NumberOfOperatorsPerPackage.err</value>
 		</Prop>
 		<Prop id="75" name="@SCADE:NOTEFILE">
 			<value>$(SCADE)/lib/DefaultAty.aty</value>
@@ -298,6 +297,17 @@
 			<value>&lt;reference&gt;</value>
 		</Prop>
 		<Prop id="85" name="@STUDIO:TOOLCONF">
+			<value>Test Tool</value>
+			<value>14</value>
+			<value>23</value>
+			<value>34</value>
+			<value>39</value>
+			<value>44</value>
+			<value>54</value>
+			<value>57</value>
+			<value>65</value>
+		</Prop>
+		<Prop id="86" name="@STUDIO:TOOLCONF">
 			<value>Timing and Stack Analysis Tools</value>
 			<value>14</value>
 			<value>23</value>
@@ -308,16 +318,12 @@
 			<value>57</value>
 			<value>65</value>
 		</Prop>
-		<Prop id="129" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>MaximumOperatorsPerPackage</value>
+		<Prop id="92" name="@METRICS_RULES:SELECTED_ROOTS">
+			<value>NumberOfOperatorsPerPackage</value>
 			<configuration>54</configuration>
 		</Prop>
-		<Prop id="130" name="@METRICS_RULES:RULES_PARAM">
-			<value>id_0071,9</value>
-			<configuration>54</configuration>
-		</Prop>
-		<Prop id="131" name="@METRICS_RULES:SELECTED_RULES">
-			<value>id_0071</value>
+		<Prop id="94" name="@METRICS_RULES:SELECTED_METRICS">
+			<value>id_0130</value>
 			<configuration>54</configuration>
 		</Prop>
 	</props>
@@ -326,7 +332,10 @@
 		<Folder id="12" extensions="xscade;scade" name="Model Files">
 			<elements>
 				<Folder id="13" extensions="xscade;scade" name="Separate Files"/>
-				<FileRef id="136" persistAs="Package.xscade"/>
+				<FileRef id="88" persistAs="Root1.xscade"/>
+				<FileRef id="89" persistAs="Root2.xscade"/>
+				<FileRef id="90" persistAs="Empty.xscade"/>
+				<FileRef id="91" persistAs="NotEmpty.xscade"/>
 			</elements>
 		</Folder>
 	</roots>

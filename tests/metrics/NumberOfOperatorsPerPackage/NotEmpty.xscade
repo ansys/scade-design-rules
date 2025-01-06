@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="NotEmpty">
+			<declarations>
+				<Operator kind="node" name="Operator1">
+					<pragmas>
+						<ed:Operator oid="!ed/abfa/6E1F/4C8C/677bf9913238" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Operator1_1" landscape="true" format="A4 (210 297)" oid="!ed/abfb/6E1F/4C8C/677bf9912f4"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/abf6/6E1F/4C8C/677bf98a72b7" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/abf7/6E1F/4C8C/677bf98ad4e" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/abf8/6E1F/4C8C/677bf98a5a35" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/abf9/6E1F/4C8C/677bf98a79eb" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

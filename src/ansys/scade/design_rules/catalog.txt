@@ -110,3 +110,4 @@ id_0126	metrics	number_of_diagrams_per_element
 id_0127	metrics	level_of_packages
 id_0128	metrics	number_of_nested_activate_blocks
 id_0129	metrics	number_of_nested_sms
+id_0130	metrics	number_of_operators_per_package
