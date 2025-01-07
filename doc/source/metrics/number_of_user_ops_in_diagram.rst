@@ -1,7 +1,7 @@
-.. index:: single: Number of user ops in diagram
+.. index:: single: Number of user operators in diagram
 
-Number of user ops in diagram
-=============================
+Number of user operators in diagram
+===================================
 
 .. metric::
    :filename: number_of_user_ops_in_diagram.py
