@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="P">
+			<declarations>
+				<Operator kind="node" name="Operator2">
+					<outputs>
+						<Variable name="o1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/b06/27B0/685C/6778176ac56"/>
+							</pragmas>
+						</Variable>
+						<Variable name="o2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<default>
+								<ConstValue value="0"/>
+							</default>
+							<pragmas>
+								<ed:Variable oid="!ed/b4f/27B0/685C/677817cf7e95"/>
+							</pragmas>
+						</Variable>
+						<Variable name="o3">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="int32"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/b55/27B0/685C/677817cf54a8"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<data>
+						<StateMachine name="SM1">
+							<states>
+								<State initial="true" name="HiddenGraphical2">
+									<unless>
+										<Transition kind="restart">
+											<target>
+												<StateRef name="Textual0"/>
+											</target>
+											<condition>
+												<ConstValue value="true"/>
+											</condition>
+											<pragmas>
+												<ed:Transition oid="!ed/afb/27B0/685C/6778173f41f2"/>
+											</pragmas>
+										</Transition>
+									</unless>
+									<locals>
+										<Variable name="_L1">
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="int32"/>
+													</type>
+												</NamedType>
+											</type>
+											<pragmas>
+												<ed:Variable oid="!ed/b85/27B0/685C/677818032de4"/>
+											</pragmas>
+										</Variable>
+									</locals>
+									<data>
+										<!-- o1 = _L1; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="o1"/>
+											</lefts>
+											<right>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="_L1"/>
+													</path>
+												</IdExpression>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/b7d/27B0/685C/677817fc780a"/>
+											</pragmas>
+										</Equation>
+										<!-- _L1 = 2; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="_L1"/>
+											</lefts>
+											<right>
+												<ConstValue value="2"/>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/b84/27B0/685C/6778180338f0"/>
+											</pragmas>
+										</Equation>
+										<!-- o2 = 0; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="o2"/>
+											</lefts>
+											<right>
+												<ConstValue value="0"/>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/b9c/27B0/685C/6778182313f7"/>
+											</pragmas>
+										</Equation>
+									</data>
+									<pragmas>
+										<ed:State oid="!ed/a9f/27B0/685C/6778168a5cf5" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+											<diagrams>
+												<NetDiagram name="HiddenGraphical2_1" landscape="true" format="A4 (210 297)" oid="!ed/b7c/27B0/685C/677817f4207f">
+													<presentationElements>
+														<EquationGE presentable="!ed/b7d/27B0/685C/677817fc780a">
+															<position>
+																<Point x="2858" y="926"/>
+															</position>
+															<size>
+																<Size width="317" height="503"/>
+															</size>
+														</EquationGE>
+														<EquationGE kind="OBJ_LIT" presentable="!ed/b84/27B0/685C/6778180338f0">
+															<position>
+																<Point x="979" y="1032"/>
+															</position>
+															<size>
+																<Size width="212" height="317"/>
+															</size>
+														</EquationGE>
+														<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/b84/27B0/685C/6778180338f0" dstEquation="!ed/b7d/27B0/685C/677817fc780a">
+															<positions>
+																<Point x="1191" y="1191"/>
+																<Point x="2037" y="1191"/>
+																<Point x="2037" y="1191"/>
+																<Point x="2910" y="1191"/>
+															</positions>
+														</Edge>
+													</presentationElements>
+												</NetDiagram>
+												<TextDiagram name="HiddenGraphical2_2" landscape="false" format="A4 (210 297)" oid="!ed/b92/27B0/685C/677818162ead">
+													<presentationElements>
+														<FlowTE presentable="!ed/b9c/27B0/685C/6778182313f7"/>
+													</presentationElements>
+													<textArea>
+														<TextArea text="o2=0;"/>
+													</textArea>
+												</TextDiagram>
+											</diagrams>
+										</ed:State>
+									</pragmas>
+								</State>
+								<State name="Textual0">
+									<unless>
+										<Transition kind="restart">
+											<target>
+												<StateRef name="Graphical0"/>
+											</target>
+											<condition>
+												<ConstValue value="true"/>
+											</condition>
+											<pragmas>
+												<ed:Transition oid="!ed/b03/27B0/685C/677817492711"/>
+											</pragmas>
+										</Transition>
+									</unless>
+									<data>
+										<!-- o1 = 0; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="o1"/>
+											</lefts>
+											<right>
+												<ConstValue value="0"/>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/b21/27B0/685C/67781782474c"/>
+											</pragmas>
+										</Equation>
+									</data>
+									<pragmas>
+										<ed:State oid="!ed/aaa/27B0/685C/6778169c74c7"/>
+									</pragmas>
+								</State>
+								<State name="Graphical0">
+									<unless>
+										<Transition kind="restart">
+											<target>
+												<StateRef name="HiddenTextual1"/>
+											</target>
+											<condition>
+												<ConstValue value="true"/>
+											</condition>
+											<pragmas>
+												<ed:Transition oid="!ed/b04/27B0/685C/6778174e4534"/>
+											</pragmas>
+										</Transition>
+									</unless>
+									<locals>
+										<Variable name="_L1">
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="int32"/>
+													</type>
+												</NamedType>
+											</type>
+											<pragmas>
+												<ed:Variable oid="!ed/b2d/27B0/685C/6778178e4895"/>
+											</pragmas>
+										</Variable>
+									</locals>
+									<data>
+										<!-- o1 = _L1; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="o1"/>
+											</lefts>
+											<right>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="_L1"/>
+													</path>
+												</IdExpression>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/b25/27B0/685C/677817863b43"/>
+											</pragmas>
+										</Equation>
+										<!-- _L1 = 0; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="_L1"/>
+											</lefts>
+											<right>
+												<ConstValue value="0"/>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/b2c/27B0/685C/6778178e58b0"/>
+											</pragmas>
+										</Equation>
+									</data>
+									<pragmas>
+										<ed:State oid="!ed/ab2/27B0/685C/677816aaf46"/>
+									</pragmas>
+								</State>
+								<State name="HiddenTextual1">
+									<data>
+										<!-- o1 = 0; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="o1"/>
+											</lefts>
+											<right>
+												<ConstValue value="0"/>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/b47/27B0/685C/677817ba173a"/>
+											</pragmas>
+										</Equation>
+									</data>
+									<pragmas>
+										<ed:State oid="!ed/ac3/27B0/685C/677816c81d7a" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+											<diagrams>
+												<TextDiagram name="HiddenTextual1" landscape="false" format="A4 (210 297)" oid="!ed/b3c/27B0/685C/677817ad7ad5">
+													<presentationElements>
+														<FlowTE presentable="!ed/b47/27B0/685C/677817ba173a"/>
+													</presentationElements>
+												</TextDiagram>
+											</diagrams>
+										</ed:State>
+									</pragmas>
+								</State>
+							</states>
+							<pragmas>
+								<ed:StateMachine oid="!ed/a9a/27B0/685C/67781683733b"/>
+							</pragmas>
+						</StateMachine>
+						<!-- o3 = 0; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="o3"/>
+							</lefts>
+							<right>
+								<ConstValue value="0"/>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/b6a/27B0/685C/677817db7b93"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/a97/27B0/685C/6778163c706e" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Graphical" landscape="true" format="A4 (210 297)" oid="!ed/a98/27B0/685C/6778163c1ddc">
+									<presentationElements>
+										<StateMachineGE presentable="!ed/a9a/27B0/685C/67781683733b">
+											<position>
+												<Point x="503" y="503"/>
+											</position>
+											<size>
+												<Size width="22172" height="13546"/>
+											</size>
+										</StateMachineGE>
+										<StateGE display="split" presentable="!ed/a9f/27B0/685C/6778168a5cf5">
+											<position>
+												<Point x="979" y="953"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+										<StateGE display="embeddedTextual" presentable="!ed/aaa/27B0/685C/6778169c74c7">
+											<textAreas>
+												<TextArea text="o1=0;"/>
+											</textAreas>
+											<position>
+												<Point x="6376" y="5159"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+										<StateGE presentable="!ed/ab2/27B0/685C/677816aaf46">
+											<position>
+												<Point x="11139" y="9366"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+										<StateGE display="split" presentable="!ed/ac3/27B0/685C/677816c81d7a">
+											<position>
+												<Point x="16933" y="926"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+										<TransitionGE polyline="true" presentable="!ed/afb/27B0/685C/6778173f41f2">
+											<positions>
+												<Point x="5689" y="2566"/>
+												<Point x="6641" y="3413"/>
+												<Point x="7594" y="4260"/>
+												<Point x="8573" y="5159"/>
+											</positions>
+											<labelSize>
+												<Size width="1376" height="370"/>
+											</labelSize>
+											<labelPos>
+												<Point x="7250" y="2884"/>
+											</labelPos>
+											<slashPos>
+												<Point x="7832" y="2884"/>
+											</slashPos>
+										</TransitionGE>
+										<TransitionGE polyline="true" presentable="!ed/b03/27B0/685C/677817492711">
+											<positions>
+												<Point x="8652" y="8757"/>
+												<Point x="9472" y="9551"/>
+												<Point x="10292" y="10372"/>
+												<Point x="11139" y="11192"/>
+											</positions>
+											<labelSize>
+												<Size width="1376" height="370"/>
+											</labelSize>
+											<labelPos>
+												<Point x="9208" y="11192"/>
+											</labelPos>
+											<slashPos>
+												<Point x="9790" y="11192"/>
+											</slashPos>
+										</TransitionGE>
+										<TransitionGE polyline="true" presentable="!ed/b04/27B0/685C/6778174e4534">
+											<positions>
+												<Point x="15849" y="11245"/>
+												<Point x="17013" y="9022"/>
+												<Point x="18203" y="6773"/>
+												<Point x="19394" y="4524"/>
+											</positions>
+											<labelSize>
+												<Size width="1376" height="370"/>
+											</labelSize>
+											<labelPos>
+												<Point x="16034" y="7038"/>
+											</labelPos>
+											<slashPos>
+												<Point x="16616" y="7038"/>
+											</slashPos>
+										</TransitionGE>
+										<EquationGE presentable="!ed/b25/27B0/685C/677817863b43">
+											<position>
+												<Point x="14367" y="11007"/>
+											</position>
+											<size>
+												<Size width="318" height="503"/>
+											</size>
+										</EquationGE>
+										<EquationGE kind="OBJ_LIT" presentable="!ed/b2c/27B0/685C/6778178e58b0">
+											<position>
+												<Point x="12303" y="11113"/>
+											</position>
+											<size>
+												<Size width="212" height="317"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/b2c/27B0/685C/6778178e58b0" dstEquation="!ed/b25/27B0/685C/677817863b43">
+											<positions>
+												<Point x="12515" y="11271"/>
+												<Point x="13203" y="11271"/>
+												<Point x="13203" y="11271"/>
+												<Point x="14420" y="11271"/>
+											</positions>
+										</Edge>
+									</presentationElements>
+								</NetDiagram>
+								<TextDiagram name="Textual" landscape="false" format="A4 (210 297)" oid="!ed/a99/27B0/685C/6778164f1ca3">
+									<presentationElements>
+										<FlowTE presentable="!ed/b6a/27B0/685C/677817db7b93"/>
+									</presentationElements>
+								</TextDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/a93/27B0/685C/6778162aed6" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/a94/27B0/685C/6778162a1f4b" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/a95/27B0/685C/6778162a101f" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/a96/27B0/685C/6778162a77c1" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

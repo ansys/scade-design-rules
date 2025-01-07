@@ -7,6 +7,7 @@ to the ones exposed in :ref:`contribute_scade_design_rules`.
    :maxdepth: 1
 
    repository
+   metrics
    rules
    documentation
    examples

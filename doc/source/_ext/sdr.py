@@ -54,6 +54,31 @@ class Rules(nodes.General, nodes.Element):
         self.filter = filter
 
 
+class Metric(nodes.container, nodes.Element):
+    """Category node."""
+
+    pass
+
+
+def visit_metric_node(self, node):
+    """Visit a node."""
+    self.visit_container(node)
+
+
+def depart_metric_node(self, node):
+    """Start the visit of a node."""
+    self.depart_container(node)
+
+
+class Metrics(nodes.General, nodes.Element):
+    """``metrics`` directive."""
+
+    def __init__(self, filter: str):
+        # store the filter for the selected metrics
+        super().__init__('')
+        self.filter = filter
+
+
 class CategoriesDirective(Directive):
     """``categories`` directive."""
 
@@ -114,8 +139,8 @@ class RulesDirective(Directive):
         return [Rules(self.options['filter'])]
 
 
-class RuleDirective(SphinxDirective):
-    """``rule`` directive."""
+class MetricRuleDirective(SphinxDirective):
+    """Base directive for metrics and rules."""
 
     # this enables content in the directive
     has_content = True
@@ -129,24 +154,21 @@ class RuleDirective(SphinxDirective):
         'kind': unchanged_required,
     }
 
-    def run(self):
+    def run(self, prefix: str, cls: type, infos):
         """Return an instance."""
         targetid = 'sdr-%d' % self.env.new_serialno('sdr')
         targetnode = nodes.target('', '', ids=[targetid])
 
-        label_id = nodes.make_id('Rule' + self.options['class'])
+        label_id = nodes.make_id(prefix + self.options['class'])
         self.env.app.env.domaindata['std']['anonlabels'][label_id] = self.env.docname, label_id
 
-        rule_node = Rule('\n'.join(self.content), ids=[label_id])
+        rule_node = cls('\n'.join(self.content), ids=[label_id])
         self.state.nested_parse(self.content, self.content_offset, rule_node)
         if not rule_node.children:
             # no short description: stub it
             rule_node += nodes.Text(_('<TODO Description>'))
 
-        if not hasattr(self.env, 'sdr_rules'):
-            self.env.sdr_rules = []
-
-        self.env.sdr_rules.append(
+        infos.append(
             {
                 'docname': self.env.docname,
                 'lineno': self.lineno,
@@ -157,6 +179,42 @@ class RuleDirective(SphinxDirective):
         )
 
         return [targetnode, rule_node]
+
+
+class RuleDirective(MetricRuleDirective):
+    """``rule`` directive."""
+
+    def run(self):
+        """Return an instance."""
+        if not hasattr(self.env, 'sdr_rules'):
+            self.env.sdr_rules = []
+
+        return super().run('Rule', Rule, self.env.sdr_rules)
+
+
+class MetricsDirective(Directive):
+    """``metrics`` directive."""
+
+    has_content = False
+
+    option_spec = {
+        'filter': unchanged_required,
+    }
+
+    def run(self):
+        """Return an instance."""
+        return [Metrics(self.options['filter'])]
+
+
+class MetricDirective(MetricRuleDirective):
+    """``metric`` directive."""
+
+    def run(self):
+        """Return an instance."""
+        if not hasattr(self.env, 'sdr_metrics'):
+            self.env.sdr_metrics = []
+
+        return super().run('Metric', Metric, self.env.sdr_metrics)
 
 
 def purge_categories(app, env, docname):
@@ -191,6 +249,23 @@ def merge_rules(app, env, docnames, other):
 
     if hasattr(other, 'sdr_rules'):
         env.sdr_rules.extend(other.sdr_rules)
+
+
+def purge_metrics(app, env, docname):
+    """Implement env-purge-doc for rules."""
+    if not hasattr(env, 'sdr_metrics'):
+        return
+
+    env.sdr_metrics = [_ for _ in env.sdr_metrics if _['docname'] != docname]
+
+
+def merge_metrics(app, env, docnames, other):
+    """Implement env-merge-info for metrics."""
+    if not hasattr(env, 'sdr_sdr_metrics'):
+        env.sdr_sdr_metrics = []
+
+    if hasattr(other, 'sdr_metrics'):
+        env.sdr_metrics.extend(other.sdr_metrics)
 
 
 def process_category_nodes(app, doctree, fromdocname):
@@ -252,18 +327,13 @@ def process_category_nodes(app, doctree, fromdocname):
         node.replace_self(table)
 
 
-def process_rule_nodes(app, doctree, fromdocname):
+def process_nodes(app, fromdocname, content, infos):
     """
     Replace all categories nodes with a list of the collected categories.
 
     Augment each category with a back-link to the original location.
     """
-    env = app.builder.env
-
-    if not hasattr(env, 'sdr_rules'):
-        env.sdr_rules = []
-
-    for node in doctree.findall(Rules):
+    for node in content:
         labels = ['Name', 'ID', 'Ref', 'Synopsis']
 
         table = nodes.table()
@@ -285,8 +355,8 @@ def process_rule_nodes(app, doctree, fromdocname):
 
         rows = []
 
-        # rule_infos = env.sdr_rules
-        rule_infos = sorted(env.sdr_rules, key=lambda _: _['props']['class'])
+        # rule_infos = infos
+        rule_infos = sorted(infos, key=lambda _: _['props']['class'])
         for rule_info in rule_infos:
             tags = rule_info['props']['tags'].split()
             if not hasattr(node, 'filter'):
@@ -330,6 +400,34 @@ def process_rule_nodes(app, doctree, fromdocname):
         node.replace_self(table)
 
 
+def process_rule_nodes(app, doctree, fromdocname):
+    """
+    Replace all categories nodes with a list of the collected categories.
+
+    Augment each category with a back-link to the original location.
+    """
+    env = app.builder.env
+
+    if not hasattr(env, 'sdr_rules'):
+        env.sdr_rules = []
+
+    process_nodes(app, fromdocname, doctree.findall(Rules), env.sdr_rules)
+
+
+def process_metric_nodes(app, doctree, fromdocname):
+    """
+    Replace all categories nodes with a list of the collected categories.
+
+    Augment each category with a back-link to the original location.
+    """
+    env = app.builder.env
+
+    if not hasattr(env, 'sdr_metrics'):
+        env.sdr_metrics = []
+
+    process_nodes(app, fromdocname, doctree.findall(Metrics), env.sdr_metrics)
+
+
 def setup(app):
     """Declare the nodes and directives."""
     app.add_node(Categories)
@@ -346,6 +444,13 @@ def setup(app):
         latex=(visit_rule_node, depart_rule_node),
         text=(visit_rule_node, depart_rule_node),
     )
+    app.add_node(Metrics)
+    app.add_node(
+        Metric,
+        html=(visit_metric_node, depart_metric_node),
+        latex=(visit_metric_node, depart_metric_node),
+        text=(visit_metric_node, depart_metric_node),
+    )
 
     app.add_directive('category', CategoryDirective)
     app.add_directive('categories', CategoriesDirective)
@@ -357,6 +462,11 @@ def setup(app):
     app.connect('doctree-resolved', process_rule_nodes)
     app.connect('env-purge-doc', purge_rules)
     app.connect('env-merge-info', merge_rules)
+    app.add_directive('metric', MetricDirective)
+    app.add_directive('metrics', MetricsDirective)
+    app.connect('doctree-resolved', process_metric_nodes)
+    app.connect('env-purge-doc', purge_metrics)
+    app.connect('env-merge-info', merge_metrics)
 
     return {
         'version': '0.1',

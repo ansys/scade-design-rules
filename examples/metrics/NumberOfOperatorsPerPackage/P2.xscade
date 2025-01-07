@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="P2">
+			<declarations>
+				<Package name="P1">
+					<declarations>
+						<Operator kind="node" name="Operator1">
+							<pragmas>
+								<ed:Operator oid="!ed/184c/27B0/685C/677bfbc95091" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<diagrams>
+										<NetDiagram name="Operator1_1" landscape="true" format="A4 (210 297)" oid="!ed/184d/27B0/685C/677bfbc9523d"/>
+									</diagrams>
+								</ed:Operator>
+							</pragmas>
+						</Operator>
+					</declarations>
+					<pragmas>
+						<ed:Package oid="!ed/1830/27B0/685C/677bfbb95e02" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/1831/27B0/685C/677bfbb91dcf" blockKind="constants"/>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/1832/27B0/685C/677bfbb96375" blockKind="types"/>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/1833/27B0/685C/677bfbb9580b" blockKind="sensors"/>
+							</diagrams>
+						</ed:Package>
+					</pragmas>
+				</Package>
+				<Operator kind="node" name="Operator1">
+					<pragmas>
+						<ed:Operator oid="!ed/1834/27B0/685C/677bfbbf6ba2" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Operator1_1" landscape="true" format="A4 (210 297)" oid="!ed/1835/27B0/685C/677bfbbf5704"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="Operator2">
+					<pragmas>
+						<ed:Operator oid="!ed/183c/27B0/685C/677bfbc33f41" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="Operator2_1" landscape="true" format="A4 (210 297)" oid="!ed/183d/27B0/685C/677bfbc342b5"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/182c/27B0/685C/677bfb965e91" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/182d/27B0/685C/677bfb96291d" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/182e/27B0/685C/677bfb962c60" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/182f/27B0/685C/677bfb96791" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

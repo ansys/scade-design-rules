@@ -28,8 +28,7 @@ Provides a common base class for rules, with additional services.
 This class stubs the original ``Rule`` class for unit tests.
 """
 
-from enum import Enum
-from typing import List, Optional
+from typing import Dict, List, Optional
 
 import scade.model.suite as suite
 
@@ -38,12 +37,14 @@ try:
     from scade.tool.suite import _register_rule  # noqa: F401
     from scade.tool.suite.rules import Rule as _Rule
 except ImportError:
+    from .metric import Metric
 
     class _Rule:
         """Stubs ``Rule`` for units tests."""
 
         def __init__(self, *args, **kwargs):
             self.message = ''
+            self.metrics = {}
 
         def set_message(self, message: str) -> None:
             """Store the message."""
@@ -59,6 +60,25 @@ except ImportError:
             """Stub the ``add_rule_status`` method."""
             pass
 
+        def stub_metrics(self, metrics: Dict[str, Metric]):
+            """
+            Store the metric instances for the evaluation.
+
+            This method allows emulating the environment for unit tests.
+            """
+            self.metrics = metrics
+
+        def get_metric_result(self, object_: suite.Object, metric_id: str) -> int:
+            """
+            Compute the value of a metric for an object.
+
+            This method allows emulating the environment for unit tests.
+            """
+            metric = self.metrics[metric_id]
+            status = metric.on_compute(object_)
+            assert status == Metric.OK
+            return metric.result
+
         # Possible severity values
         MANDATORY = 0
         REQUIRED = 1
@@ -72,35 +92,7 @@ except ImportError:
         NO_RULE = 3
 
 
-class SCK(Enum):
-    """
-    Finer grain discrimination, mostly used for naming rules.
-
-    --> address only named objects
-    """
-
-    MODEL = (suite.Model, lambda o: True)
-    PACKAGE = (suite.Package, lambda o: not isinstance(o, suite.Model))
-    TYPE = (suite.NamedType, lambda o: not (o.is_predefined() or o.is_generic()))
-    GENERIC_TYPE = (suite.NamedType, lambda o: o.is_generic())
-    FIELD = (suite.CompositeElement, lambda o: True)
-    SENSOR = (suite.Sensor, lambda o: True)
-    CONSTANT = (suite.Constant, lambda o: isinstance(o.owner, suite.Package))
-    ENUM_VALUE = (suite.Constant, lambda o: isinstance(o.owner, suite.Enumeration))
-    PARAMETER = (suite.Constant, lambda o: isinstance(o.owner, suite.Operator))
-    OPERATOR = (suite.Operator, lambda o: True)
-    VARIABLE = (suite.LocalVariable, lambda o: o.is_local() and not o.is_internal())
-    INPUT = (suite.LocalVariable, lambda o: o.is_input())
-    HIDDEN = (suite.LocalVariable, lambda o: o.is_hidden())
-    OUTPUT = (suite.LocalVariable, lambda o: o.is_output())
-    SIGNAL = (suite.LocalVariable, lambda o: o.is_signal())
-    INTERNAL = (suite.LocalVariable, lambda o: o.is_internal())
-    DIAGRAM = (suite.Diagram, lambda o: not isinstance(o, suite.TreeDiagram))
-    EQ_SET = (suite.EquationSet, lambda o: True)
-    STATE_MACHINE = (suite.StateMachine, lambda o: True)
-    STATE = (suite.State, lambda o: True)
-    IF_BLOCK = (suite.IfBlock, lambda o: True)
-    WHEN_BLOCK = (suite.WhenBlock, lambda o: True)
+from .sck import SCK
 
 
 class Rule(_Rule):

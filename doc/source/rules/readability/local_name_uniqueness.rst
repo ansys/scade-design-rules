@@ -18,7 +18,7 @@ Description
 The names of local variables and signals shall be unique within an operator.
 
 Rationale
------------
+---------
 This ensures an unambiguous interpretation of Scade diagrams without referring to the declarations.
 
 For example, the following use cases can be misleading:
@@ -33,7 +33,7 @@ For example, the following use cases can be misleading:
   .. image:: img/local_name_uniqueness_22.png
 
 Verification
--------------
+------------
 The rule registers to the flows of a Scade model, for example local variables, and raises a violation for each flow which name is not unique in the operator.
 
 Message: ``<variable name>: Not unique name``

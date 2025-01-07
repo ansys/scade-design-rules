@@ -1,6 +1,6 @@
 User Guide
 ==========
-Ansys SCADE Design Rules is a database of rules that enforce various design practices on a model.
+Ansys SCADE Design Rules is a database of metrics and rules that enforce various design practices on a model.
 
 While it is possible to individually reference each rule to add them to a SCADE project,
 a common practice is to instantiate a selection of rules in one Python script,
@@ -34,6 +34,8 @@ This script can be saved anywhere on your file system.
 
 .. literalinclude :: resources/naming_default.py
 
+.. _ug_customization:
+
 Customization
 -------------
 The rules have default properties that can be overridden at instantiation.
@@ -52,6 +54,13 @@ Refer to the *Customization* section of their documentation for details.
 For example:
 
 .. literalinclude :: resources/naming_custom.py
+
+Rules that depend on metrics provide an additional property, usually ``metric_id``,
+to specify an alternate metric.
+
+For example:
+
+.. literalinclude :: resources/metric_custom.py
 
 Registration
 ------------

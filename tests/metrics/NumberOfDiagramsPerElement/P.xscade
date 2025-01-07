@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="P">
+			<declarations>
+				<Operator kind="node" name="O4">
+					<inputs>
+						<Variable name="action4">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/7ed/6E1F/4C8C/677810c35ffb"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<data>
+						<StateMachine name="SM1">
+							<states>
+								<State initial="true" name="State4">
+									<data>
+										<IfBlock name="IfBlock1">
+											<block>
+												<IfNode>
+													<if>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="action4"/>
+															</path>
+														</IdExpression>
+													</if>
+													<then>
+														<Action>
+															<data>
+																<WhenBlock name="WhenBlock1">
+																	<when>
+																		<ConstValue value="true"/>
+																	</when>
+																	<matches>
+																		<Match pattern="true">
+																			<pragmas>
+																				<ed:Match oid="!ed/80c/6E1F/4C8C/6778138e241b"/>
+																				<ed:Action oid="!ed/80d/6E1F/4C8C/6778138e158d" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+																					<diagrams>
+																						<NetDiagram name="AcE" landscape="true" format="A4 (210 297)" oid="!ed/825/6E1F/4C8C/677813da300"/>
+																					</diagrams>
+																				</ed:Action>
+																			</pragmas>
+																		</Match>
+																		<Match pattern="false">
+																			<pragmas>
+																				<ed:Match oid="!ed/80f/6E1F/4C8C/677813996549"/>
+																				<ed:Action oid="!ed/814/6E1F/4C8C/6778139a60a2"/>
+																			</pragmas>
+																		</Match>
+																	</matches>
+																	<pragmas>
+																		<ed:WhenBlock oid="!ed/807/6E1F/4C8C/6778138dd3a"/>
+																	</pragmas>
+																</WhenBlock>
+															</data>
+															<pragmas>
+																<ed:Action oid="!ed/7a3/6E1F/4C8C/67780f6d105d" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+																	<diagrams>
+																		<NetDiagram name="AcA" landscape="true" format="A4 (210 297)" oid="!ed/7a4/6E1F/4C8C/67780f6d26a6">
+																			<presentationElements>
+																				<WhenBlockGE presentable="!ed/807/6E1F/4C8C/6778138dd3a">
+																					<position>
+																						<Point x="1455" y="1217"/>
+																					</position>
+																					<size>
+																						<Size width="6800" height="9128"/>
+																					</size>
+																					<startPos>
+																						<Point x="450" y="582"/>
+																					</startPos>
+																				</WhenBlockGE>
+																				<WhenBranchGE labelWidth="794" presentable="!ed/80c/6E1F/4C8C/6778138e241b">
+																					<position>
+																						<Point x="1984" y="2831"/>
+																					</position>
+																				</WhenBranchGE>
+																				<ActionGE display="split" presentable="!ed/80d/6E1F/4C8C/6778138e158d">
+																					<position>
+																						<Point x="3254" y="2752"/>
+																					</position>
+																					<size>
+																						<Size width="4710" height="3598"/>
+																					</size>
+																				</ActionGE>
+																				<WhenBranchGE labelWidth="794" presentable="!ed/80f/6E1F/4C8C/677813996549">
+																					<position>
+																						<Point x="1984" y="6482"/>
+																					</position>
+																				</WhenBranchGE>
+																				<ActionGE display="embeddedTextual" presentable="!ed/814/6E1F/4C8C/6778139a60a2">
+																					<position>
+																						<Point x="3254" y="6403"/>
+																					</position>
+																					<size>
+																						<Size width="4710" height="3598"/>
+																					</size>
+																				</ActionGE>
+																			</presentationElements>
+																		</NetDiagram>
+																		<TextDiagram name="AcB" landscape="false" format="A4 (210 297)" oid="!ed/7a5/6E1F/4C8C/67780f6d2daf"/>
+																		<TextDiagram name="AcC" landscape="false" format="A4 (210 297)" oid="!ed/7a6/6E1F/4C8C/67780f6d3dd7"/>
+																		<NetDiagram name="AcD" landscape="true" format="A4 (210 297)" oid="!ed/7a7/6E1F/4C8C/67780f6d54c4"/>
+																	</diagrams>
+																</ed:Action>
+															</pragmas>
+														</Action>
+													</then>
+													<else>
+														<Action>
+															<pragmas>
+																<ed:Action oid="!ed/79e/6E1F/4C8C/67780f6d4a88"/>
+															</pragmas>
+														</Action>
+													</else>
+													<pragmas>
+														<ed:IfNode oid="!ed/79d/6E1F/4C8C/67780f6d3709"/>
+													</pragmas>
+												</IfNode>
+											</block>
+											<pragmas>
+												<ed:IfBlock oid="!ed/79c/6E1F/4C8C/67780f6d459e"/>
+											</pragmas>
+										</IfBlock>
+									</data>
+									<pragmas>
+										<ed:State oid="!ed/79b/6E1F/4C8C/67780f6d302e" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+											<diagrams>
+												<NetDiagram name="StA" landscape="true" format="A4 (210 297)" oid="!ed/7a8/6E1F/4C8C/67780f6d5440">
+													<presentationElements>
+														<IfBlockGE presentable="!ed/79c/6E1F/4C8C/67780f6d459e">
+															<position>
+																<Point x="2037" y="1773"/>
+															</position>
+															<size>
+																<Size width="6800" height="8361"/>
+															</size>
+														</IfBlockGE>
+														<ActionGE display="split" presentable="!ed/7a3/6E1F/4C8C/67780f6d105d">
+															<position>
+																<Point x="3863" y="2276"/>
+															</position>
+															<size>
+																<Size width="4710" height="3598"/>
+															</size>
+														</ActionGE>
+														<ActionGE presentable="!ed/79e/6E1F/4C8C/67780f6d4a88">
+															<position>
+																<Point x="3863" y="6139"/>
+															</position>
+															<size>
+																<Size width="4710" height="3598"/>
+															</size>
+														</ActionGE>
+														<IfNodeGE labelWidth="953" presentable="!ed/79d/6E1F/4C8C/67780f6d3709">
+															<position>
+																<Point x="2487" y="2355"/>
+															</position>
+														</IfNodeGE>
+													</presentationElements>
+												</NetDiagram>
+												<NetDiagram name="StD" landscape="true" format="A4 (210 297)" oid="!ed/7a9/6E1F/4C8C/67780f6d79b0"/>
+												<TextDiagram name="StB" landscape="false" format="A4 (210 297)" oid="!ed/7aa/6E1F/4C8C/67780f6dba9"/>
+												<TextDiagram name="StC" landscape="false" format="A4 (210 297)" oid="!ed/7ab/6E1F/4C8C/67780f6d4515"/>
+											</diagrams>
+										</ed:State>
+									</pragmas>
+								</State>
+								<State name="Text0">
+									<pragmas>
+										<ed:State oid="!ed/7b6/6E1F/4C8C/67780fd65506"/>
+									</pragmas>
+								</State>
+								<State name="Embedded0">
+									<locals>
+										<Variable name="_L1">
+											<type>
+												<NamedType>
+													<type>
+														<NullRef/>
+													</type>
+												</NamedType>
+											</type>
+											<pragmas>
+												<ed:Variable oid="!ed/7e0/6E1F/4C8C/677810266116"/>
+											</pragmas>
+										</Variable>
+									</locals>
+									<data>
+										<!-- _L1 = _null + _null; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="_L1"/>
+											</lefts>
+											<right>
+												<!-- _null + _null -->
+												<NAryOp name="1" operator="+">
+													<operands>
+														<IdExpression>
+															<path>
+																<NullRef/>
+															</path>
+														</IdExpression>
+														<IdExpression>
+															<path>
+																<NullRef/>
+															</path>
+														</IdExpression>
+													</operands>
+												</NAryOp>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/7df/6E1F/4C8C/677810264873"/>
+											</pragmas>
+										</Equation>
+									</data>
+									<pragmas>
+										<ed:State oid="!ed/7d0/6E1F/4C8C/6778100f7d93"/>
+									</pragmas>
+								</State>
+							</states>
+							<pragmas>
+								<ed:StateMachine oid="!ed/79a/6E1F/4C8C/67780f6d69c6"/>
+							</pragmas>
+						</StateMachine>
+					</data>
+					<pragmas>
+						<ed:Operator oid="!ed/799/6E1F/4C8C/67780f6d2aef" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<NetDiagram name="O4pA" landscape="true" format="A4 (210 297)" oid="!ed/7ac/6E1F/4C8C/67780f6d2836">
+									<presentationElements>
+										<StateMachineGE presentable="!ed/79a/6E1F/4C8C/67780f6d69c6">
+											<position>
+												<Point x="1535" y="794"/>
+											</position>
+											<size>
+												<Size width="18494" height="5450"/>
+											</size>
+										</StateMachineGE>
+										<StateGE display="split" presentable="!ed/79b/6E1F/4C8C/67780f6d302e">
+											<position>
+												<Point x="2646" y="1693"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+										<StateGE display="embeddedTextual" presentable="!ed/7b6/6E1F/4C8C/67780fd65506">
+											<position>
+												<Point x="8467" y="1693"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+										<StateGE presentable="!ed/7d0/6E1F/4C8C/6778100f7d93">
+											<position>
+												<Point x="14288" y="1693"/>
+											</position>
+											<size>
+												<Size width="4710" height="3598"/>
+											</size>
+										</StateGE>
+										<EquationGE presentable="!ed/7df/6E1F/4C8C/677810264873">
+											<position>
+												<Point x="15981" y="3387"/>
+											</position>
+											<size>
+												<Size width="1005" height="661"/>
+											</size>
+										</EquationGE>
+									</presentationElements>
+								</NetDiagram>
+								<NetDiagram name="O4pC" landscape="true" format="A4 (210 297)" oid="!ed/7ad/6E1F/4C8C/67780f6d7851"/>
+								<TextDiagram name="O4pB" landscape="false" format="A4 (210 297)" oid="!ed/7ae/6E1F/4C8C/67780f6d6478"/>
+								<TextDiagram name="O4pD" landscape="false" format="A4 (210 297)" oid="!ed/7af/6E1F/4C8C/67780f6d6fcc"/>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/795/6E1F/4C8C/67780f6d2de7" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/796/6E1F/4C8C/67780f6d1f6e" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/797/6E1F/4C8C/67780f6d7444" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/798/6E1F/4C8C/67780f6d67f6" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

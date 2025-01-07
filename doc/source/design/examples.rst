@@ -3,7 +3,7 @@ Examples
 
 Design
 ------
-The examples are intended to showcase easily the usage of a rule.
+The examples are intended to showcase easily the usage of a metric or rule.
 They shall be configured to refer to their corresponding rule using
 relative paths, for example:
 

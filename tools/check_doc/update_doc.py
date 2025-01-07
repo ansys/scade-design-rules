@@ -22,11 +22,11 @@
 # SOFTWARE.
 
 """
-Performs checks and updates the documentation from the rules.
+Performs checks and updates the documentation from the metrics and rules.
 
-* Checks there is one documentation file per rule and vice versa.
+* Checks there is one documentation file per metric/rule and vice versa.
 * Creates a default index file for new categories.
-* Creates a default documentation file for new rules.
+* Creates a default documentation file for new metrics and rules.
 * Updates the documentation with the rule's properties: description, etc.
 * Updates ``./src/ansys/scade/design_rules/catalog.txt``.
 """
@@ -36,6 +36,7 @@ import importlib.util
 from pathlib import Path
 import re
 import sys
+from typing import Any
 
 import jinja2
 
@@ -65,10 +66,9 @@ def create_category(dir: Path, context) -> None | Path:
     return dir
 
 
-def create_rule(file: Path, context) -> None | Path:
+def create_rst(file: Path, context, model: str) -> None | Path:
     """Create a new documentation file from a template."""
     assert environment
-    model = 'rule.rst'
     try:
         template = environment.get_template(model)
     except BaseException as e:
@@ -82,13 +82,12 @@ def create_rule(file: Path, context) -> None | Path:
     return file
 
 
-rerule = re.compile(r'..\s+rule\s*::')
 reclass = re.compile(r'(\s*:class:\s*).*')
 reid = re.compile(r'(\s*:id:\s*).*')
 
 
-def update_rule(file: Path, rule) -> bool:
-    """Update the fields class, id, label and description from a rule."""
+def update_rst(file: Path, instance, kind: str) -> bool:
+    """Update the fields class, id, label and description from a metric or rule."""
     ok = True
 
     # quick and dirty parser: not able to use parse_rst
@@ -96,7 +95,7 @@ def update_rule(file: Path, rule) -> bool:
 
     # fix common mistake with md/rst
     # escape trailing '_'
-    description = re.sub(r"(\w+)_( |$|,|')", r'\1\\_\2', rule.description)
+    description = re.sub(r"(\w+)_( |$|,|')", r'\1\\_\2', instance.description)
     description = description.split('\n')
     for i in range(1, len(description)):
         if (
@@ -113,21 +112,22 @@ def update_rule(file: Path, rule) -> bool:
     marker = None
     mode = 'idle'
     buffer = []
+    n = len(lines)
     for i, line in enumerate(lines):
-        if mode == 'rule':
+        if mode == 'metric_rule':
             m = reclass.fullmatch(line)
             if m:
-                line = m.groups()[0] + type(rule).__name__
+                line = m.groups()[0] + type(instance).__name__
             else:
                 m = reid.fullmatch(line)
                 if m:
-                    line = m.groups()[0] + rule.id
+                    line = m.groups()[0] + instance.id
                 elif line.strip() == '':
                     mode = 'rule_label'
         elif mode == 'rule_label':
             if line and line[0] != ' ':
-                # flush rule's label (TODO: compute indentation)
-                newlines.extend(['   ' + _ for _ in rule.label.split('\n')])
+                # flush label (TODO: compute indentation)
+                newlines.extend(['   ' + _ for _ in instance.label.split('\n')])
                 newlines.append('')
                 mode = 'idle'
             else:
@@ -138,9 +138,9 @@ def update_rule(file: Path, rule) -> bool:
                 # -*
                 marker = line
 
-            if line == 'Rationale' and lines[i + 1][0] == '-' or line == '.. end_description':
+            if (i < n - 1 and lines[i + 1] == '-' * len(lines[i])) or line == '.. end_description':
                 # allow using .. end_description without .. start_description
-                # flush title marker, rule's description
+                # flush title marker, description
                 newlines.append(marker)
                 newlines.extend(description)
                 newlines.append('')
@@ -160,7 +160,7 @@ def update_rule(file: Path, rule) -> bool:
                 continue
         elif mode == 'descr_area':
             if line == '.. end_description':
-                # flush rule's description
+                # flush description
                 newlines.append('')
                 newlines.extend(description)
                 newlines.append('')
@@ -172,8 +172,8 @@ def update_rule(file: Path, rule) -> bool:
             if line == 'Description' and lines[i + 1][0] == '-':
                 # buffer the lines
                 mode = 'descr'
-            elif line == '.. rule::':
-                mode = 'rule'
+            elif line == f'.. {kind}::':
+                mode = 'metric_rule'
 
         newlines.append(line)
 
@@ -182,7 +182,7 @@ def update_rule(file: Path, rule) -> bool:
         print("%s: '.. end description' not found" % file.name)
     elif mode == 'descr':
         ok = False
-        print("%s: 'Rationale' not found" % file.name)
+        print("%s: next section after 'description' not found" % file.name)
     elif mode != 'done':
         ok = False
         print('%s: parse error' % file.name)
@@ -209,15 +209,22 @@ def local_init(c, **kwargs):
         setattr(c, name, value)
 
 
-def rule_instance(module: str):
+def metric_rule_instance(module: str) -> Any:
     """Create an instance of a rule."""
     module = 'ansys.scade.design_rules.' + module
     base_name = module.split('.')[-1]
 
     m = importlib.import_module(module)
 
-    rule_class = getattr(m, 'Rule')
-    rule_class.__init__ = local_init
+    # should be either a rule or a metric
+    rule_metric_class_ = getattr(m, 'Rule', None)
+    if not rule_metric_class_:
+        rule_metric_class_ = getattr(m, 'Metric', None)
+    if not rule_metric_class_:
+        print('warning: no metric/rule found in %s' % module)
+        return None
+
+    rule_metric_class_.__init__ = local_init
 
     class_name = ''.join([_.capitalize() for _ in base_name.split('_')])
     try:
@@ -230,7 +237,7 @@ def rule_instance(module: str):
             if attr.lower() == class_name.lower():
                 class_ = value
                 break
-            elif isinstance(value, rule_class):
+            elif isinstance(value, rule_metric_class_):
                 # hope there is only one rule in the file
                 print('warning: considering %s instead of %s' % (attr, class_name))
                 class_ = value
@@ -271,6 +278,8 @@ def update_doc(root: Path) -> int:
         ]
     )
     docs = {_.name: _ for _ in root.glob(rules_dir + '*') if _.is_dir()}
+    # add the metrics directory
+    docs['metrics'] = root / 'doc/source/metrics'
     for src in srcs:
         try:
             doc = docs.pop(src.name)
@@ -280,11 +289,13 @@ def update_doc(root: Path) -> int:
         if not doc or not (doc / 'index.rst').exists():
             exit_code = 1
             name = src.name
+            # rules only
+            assert name != 'metrics'
             context = {
                 'filter': name,
                 'title': ' '.join([_.capitalize() for _ in name.split('_')]),
             }
-            doc = create_category(root / rules_dir / src.name, context)
+            doc = create_category(root / rules_dir / name, context)
         if not doc:
             continue
         rsts = {_.stem.lower(): _ for _ in doc.glob('*.rst') if _.stem.lower() != 'index'}
@@ -292,13 +303,15 @@ def update_doc(root: Path) -> int:
         for rule in rules:
             name = rule.stem
             # create an instance of the rule to get its attributes
-            instance = rule_instance('%s.%s' % (src.name, rule.stem))
+            instance = metric_rule_instance('%s.%s' % (src.name, rule.stem))
+            # metric_rule_instance could return `kind` instead of relying on some attribute
+            kind = 'rule' if hasattr(instance, 'severity') else 'metric'
             if not instance:
                 exit_code = 1
                 continue
             if name.lower() in rsts:
                 rst_file = rsts.pop(name.lower())
-                if not update_rule(rst_file, instance):
+                if not update_rst(rst_file, instance, kind):
                     exit_code = 1
             else:
                 exit_code = 1
@@ -306,14 +319,16 @@ def update_doc(root: Path) -> int:
                 # create a default rst file from the template
                 if instance:
                     tokens = name.split('_')
+                    # the attributes are common for rules and metrics
                     context = {
                         'title': ' '.join([tokens[0].capitalize()] + tokens[1:]),
                         'file': rule.name,
                         'class': type(instance).__name__,
                         'category': doc.stem,
-                        'rule': instance,
                     }
-                    create_rule(doc / rule.with_suffix('.rst').name, context)
+                    context[kind] = instance
+                    model = f'{kind}.rst'
+                    create_rst(doc / rule.with_suffix('.rst').name, context, model)
             # update the catalog
             catalog.append((instance.id, src.name, rule.stem))
         for rst in sorted(rsts.keys()):

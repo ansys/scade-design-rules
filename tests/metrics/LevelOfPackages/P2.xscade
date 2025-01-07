@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="P2">
+			<declarations>
+				<Package name="P21">
+					<declarations>
+						<Package name="P212">
+							<pragmas>
+								<ed:Package oid="!ed/8a4/6E1F/4C8C/677b9df73b04" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+									<diagrams>
+										<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/8a5/6E1F/4C8C/677b9df7c9d" blockKind="constants"/>
+										<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/8a6/6E1F/4C8C/677b9df73e10" blockKind="types"/>
+										<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/8a7/6E1F/4C8C/677b9df729b1" blockKind="sensors"/>
+									</diagrams>
+								</ed:Package>
+							</pragmas>
+						</Package>
+					</declarations>
+					<pragmas>
+						<ed:Package oid="!ed/89c/6E1F/4C8C/677b9def2ce2" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/89d/6E1F/4C8C/677b9def55c0" blockKind="constants"/>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/89e/6E1F/4C8C/677b9defdf4" blockKind="types"/>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/89f/6E1F/4C8C/677b9def219e" blockKind="sensors"/>
+							</diagrams>
+						</ed:Package>
+					</pragmas>
+				</Package>
+				<Package name="P22">
+					<pragmas>
+						<ed:Package oid="!ed/8a0/6E1F/4C8C/677b9df273b9" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<diagrams>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/8a1/6E1F/4C8C/677b9df2504e" blockKind="constants"/>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/8a2/6E1F/4C8C/677b9df2134f" blockKind="types"/>
+								<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/8a3/6E1F/4C8C/677b9df2bc0" blockKind="sensors"/>
+							</diagrams>
+						</ed:Package>
+					</pragmas>
+				</Package>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/890/6E1F/4C8C/677b9de1376e" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/891/6E1F/4C8C/677b9de12bee" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/892/6E1F/4C8C/677b9de13b2f" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/893/6E1F/4C8C/677b9de156dd" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>
