@@ -1,7 +1,7 @@
-.. index:: single: Number of predef ops in diagram
+.. index:: single: Number of predefined operators in diagram
 
-Number of predef ops in diagram
-===============================
+Number of predefined operators in diagram
+=========================================
 
 .. metric::
    :filename: number_of_predef_ops_in_diagram.py

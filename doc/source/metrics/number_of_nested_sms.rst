@@ -1,7 +1,7 @@
-.. index:: single: Number of nested sms
+.. index:: single: Number of nested state machines
 
-Number of nested sms
-====================
+Number of nested state machines
+===============================
 
 .. metric::
    :filename: number_of_nested_sms.py
