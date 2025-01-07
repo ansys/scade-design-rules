@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="97" defaultConfiguration="23">
+<Project id="1" oid_count="89" defaultConfiguration="23">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -16,7 +16,7 @@
 			<configuration>14</configuration>
 		</Prop>
 		<Prop id="17" name="@GENERATOR:GENERATOR">
-			<value>C QUAL661</value>
+			<value>C QUAL663</value>
 			<configuration>14</configuration>
 		</Prop>
 		<Prop id="18" name="@GENERATOR:USE_TYPES">
@@ -62,7 +62,7 @@
 			<configuration>23</configuration>
 		</Prop>
 		<Prop id="26" name="@GENERATOR:GENERATOR">
-			<value>C QUAL661</value>
+			<value>C QUAL663</value>
 			<configuration>23</configuration>
 		</Prop>
 		<Prop id="27" name="@GENERATOR:USE_TYPES">
@@ -148,7 +148,7 @@
 			<configuration>44</configuration>
 		</Prop>
 		<Prop id="47" name="@GENERATOR:GENERATOR">
-			<value>C QUAL661</value>
+			<value>C QUAL663</value>
 			<configuration>44</configuration>
 		</Prop>
 		<Prop id="48" name="@GENERATOR:USE_TYPES">
@@ -187,7 +187,6 @@
 			<configuration>44</configuration>
 		</Prop>
 		<Prop id="55" name="@METRICS_RULES:USER_DEF_FILES">
-			<value>..\..\..\src\ansys\scade\design_rules\structure\maximum_user_ops_in_diagram.py</value>
 			<value>..\..\..\src\ansys\scade\design_rules\metrics\number_of_user_ops_in_diagram.py</value>
 		</Prop>
 		<Prop id="56" name="@STUDIO:TOOLCONF">
@@ -203,7 +202,7 @@
 			<configuration>57</configuration>
 		</Prop>
 		<Prop id="60" name="@GENERATOR:GENERATOR">
-			<value>C QUAL661</value>
+			<value>C QUAL663</value>
 			<configuration>57</configuration>
 		</Prop>
 		<Prop id="61" name="@GENERATOR:USE_TYPES">
@@ -226,7 +225,7 @@
 			<configuration>57</configuration>
 		</Prop>
 		<Prop id="63" name="@GENERATOR:TARGET_ADAPTOR">
-			<value>T&amp;S Verifier</value>
+			<value>T&amp;S Optimizer</value>
 			<configuration>57</configuration>
 		</Prop>
 		<Prop id="64" name="@STUDIO:TOOLCONF">
@@ -262,10 +261,10 @@
 			<configuration>65</configuration>
 		</Prop>
 		<Prop id="73" name="@SCADE:DEFAULTFILE">
-			<value>MaximumUserOpsInDiagram.xscade</value>
+			<value>NumberOfUserOpsInDiagram.xscade</value>
 		</Prop>
 		<Prop id="74" name="@SCADE:SEMFILE">
-			<value>MaximumUserOpsInDiagram.err</value>
+			<value>NumberOfUserOpsInDiagram.err</value>
 		</Prop>
 		<Prop id="75" name="@SCADE:NOTEFILE">
 			<value>$(SCADE)/lib/DefaultAty.aty</value>
@@ -308,52 +307,12 @@
 			<value>57</value>
 			<value>65</value>
 		</Prop>
-		<Prop id="86" name="@STUDIO:TOOLCONF">
-			<value>DiffAnalyzer</value>
-			<value>14</value>
-			<value>23</value>
-			<value>34</value>
-			<value>39</value>
-			<value>44</value>
-			<value>54</value>
-			<value>57</value>
-			<value>65</value>
-		</Prop>
-		<Prop id="87" name="@STUDIO:TOOLCONF">
-			<value>Synchronization</value>
-			<value>14</value>
-			<value>23</value>
-			<value>34</value>
-			<value>39</value>
-			<value>44</value>
-			<value>54</value>
-			<value>57</value>
-			<value>65</value>
-		</Prop>
-		<Prop id="88" name="@STUDIO:TOOLCONF">
-			<value>Import/Export</value>
-			<value>14</value>
-			<value>23</value>
-			<value>34</value>
-			<value>39</value>
-			<value>44</value>
-			<value>54</value>
-			<value>57</value>
-			<value>65</value>
-		</Prop>
-		<Prop id="92" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>MaximumUserOpsInDiagram</value>
+		<Prop id="87" name="@METRICS_RULES:SELECTED_ROOTS">
+			<value>NumberOfUserOpsInDiagram</value>
 			<configuration>54</configuration>
 		</Prop>
-		<Prop id="93" name="@METRICS_RULES:RULES_PARAM">
-			<value>id_0074,7</value>
-			<configuration>54</configuration>
-		</Prop>
-		<Prop id="95" name="@SCADE:CHECKED">
-			<value>false</value>
-		</Prop>
-		<Prop id="97" name="@METRICS_RULES:SELECTED_RULES">
-			<value>id_0074</value>
+		<Prop id="89" name="@METRICS_RULES:SELECTED_METRICS">
+			<value>id_0132</value>
 			<configuration>54</configuration>
 		</Prop>
 	</props>
@@ -362,7 +321,7 @@
 		<Folder id="12" extensions="xscade;scade" name="Model Files">
 			<elements>
 				<Folder id="13" extensions="xscade;scade" name="Separate Files"/>
-				<FileRef id="96" persistAs="MaximumUserOpsInDiagram.xscade"/>
+				<FileRef id="86" persistAs="P.xscade"/>
 			</elements>
 		</Folder>
 	</roots>

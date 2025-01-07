@@ -26,6 +26,9 @@
 import pytest
 import scade.model.suite as suite
 
+from ansys.scade.design_rules.metrics.number_of_user_ops_in_diagram import (
+    NumberOfUserOpsInDiagram,
+)
 from ansys.scade.design_rules.structure.maximum_user_ops_in_diagram import (
     MaximumUserOpsInDiagram,
 )
@@ -53,6 +56,8 @@ class TestMaximumUserOpsInDiagram(MaximumUserOpsInDiagram):
     def __init__(self, parameter=None, **kwargs):
         self.parameter = parameter
         super().__init__(id='', parameter=self.parameter, **kwargs)
+        metric = NumberOfUserOpsInDiagram()
+        self.stub_metrics({metric.id: metric})
 
     def on_start(self, model=None, parameter=None):
         parameter = parameter if parameter else self.parameter

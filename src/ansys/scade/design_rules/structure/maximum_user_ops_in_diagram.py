@@ -50,6 +50,7 @@ class MaximumUserOpsInDiagram(Rule):
             'Maximum graphical user-operator instances within a single diagram.\n'
             "Parameter: maximum value: e.g.: '7'"
         ),
+        metric_id: str = 'id_0132',
     ):
         super().__init__(
             id=id,
@@ -61,7 +62,9 @@ class MaximumUserOpsInDiagram(Rule):
             default_param=parameter,
             types=[suite.NetDiagram],
             kinds=None,
+            metric_ids=[metric_id],
         )
+        self.metric_id = metric_id
 
     def on_start(self, model: suite.Model, parameter: str = None) -> int:
         """Get the rule's parameters."""
@@ -74,25 +77,9 @@ class MaximumUserOpsInDiagram(Rule):
 
     def on_check(self, object_: suite.Object, parameter: str = None) -> int:
         """Return the evaluation status for the input object."""
-        violated = False
-        user_ops = 0
-
-        for present_element in object_.presentation_elements:
-            if isinstance(present_element, suite.EquationGE):
-                equation = present_element.equation
-                right = equation.right
-                if isinstance(right, suite.ExprCall):
-                    # only graphical instances
-                    if right.operator and present_element.kind == 'FI_EQUATION':
-                        user_ops += 1
-
-        if user_ops > int(parameter):
-            violated = True
-
-        if violated:
-            self.set_message(
-                'Too many user operators in diagram (' + str(user_ops) + ' > ' + parameter + ')'
-            )
+        count = self.get_metric_result(object_, self.metric_id)
+        if count > int(parameter):
+            self.set_message(f'Too many user operators in diagram ({count} > {parameter})')
             return Rule.FAILED
 
         return Rule.OK

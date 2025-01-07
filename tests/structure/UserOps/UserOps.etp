@@ -188,6 +188,7 @@
 		</Prop>
 		<Prop id="55" name="@METRICS_RULES:USER_DEF_FILES">
 			<value>..\..\..\src\ansys\scade\design_rules\structure\maximum_user_ops_in_diagram.py</value>
+			<value>..\..\..\src\ansys\scade\design_rules\metrics\number_of_user_ops_in_diagram.py</value>
 		</Prop>
 		<Prop id="56" name="@STUDIO:TOOLCONF">
 			<value>Metrics and Rules Checker</value>

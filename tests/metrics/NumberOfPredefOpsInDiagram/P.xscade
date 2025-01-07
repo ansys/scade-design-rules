@@ -825,7 +825,7 @@
 					<pragmas>
 						<ed:Operator oid="!ed/acae/6E1F/4C8C/677c073f649b" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
 							<diagrams>
-								<NetDiagram name="G_1" landscape="true" format="A4 (210 297)" oid="!ed/acaf/6E1F/4C8C/677c073f304"/>
+								<NetDiagram name="G" landscape="true" format="A4 (210 297)" oid="!ed/acaf/6E1F/4C8C/677c073f304"/>
 							</diagrams>
 						</ed:Operator>
 					</pragmas>

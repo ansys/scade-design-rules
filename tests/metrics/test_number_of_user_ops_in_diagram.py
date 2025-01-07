@@ -26,8 +26,8 @@
 import pytest
 import scade.model.suite as suite
 
-from ansys.scade.design_rules.metrics.number_of_predef_ops_in_diagram import (
-    NumberOfPredefOpsInDiagram,
+from ansys.scade.design_rules.metrics.number_of_user_ops_in_diagram import (
+    NumberOfUserOpsInDiagram,
 )
 from ansys.scade.design_rules.utils.rule import Metric
 from tests.conftest import load_session
@@ -41,8 +41,8 @@ _NA = Metric.NA
 
 @pytest.fixture(scope='session')
 def session():
-    """Unique instance of the NumberOfPredefOpsInDiagram test model."""
-    model = 'NumberOfPredefOpsInDiagram'
+    """Unique instance of the NumberOfUserOpsInDiagram test model."""
+    model = 'NumberOfUserOpsInDiagram'
     pathname = f'tests/metrics/{model}/{model}.etp'
     return load_session(pathname)
 
@@ -51,7 +51,7 @@ def session():
     'path, expected',
     [
         ('P::G/G/', 0),
-        ('P::Predef/Predef/', 7),
+        ('P::User/User/', 5),
     ],
 )
 def test_number_of_predef_ops_in_diagram_nominal(session: suite.Session, path, expected):
@@ -59,7 +59,7 @@ def test_number_of_predef_ops_in_diagram_nominal(session: suite.Session, path, e
 
     diagram = get_equation_set_or_diagram_from_path(model, path)
     assert diagram
-    metric = NumberOfPredefOpsInDiagram()
+    metric = NumberOfUserOpsInDiagram()
     status = metric.on_compute(diagram)
     assert status == _OK
     result = metric.result
