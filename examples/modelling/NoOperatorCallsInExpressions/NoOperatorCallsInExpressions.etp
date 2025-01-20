@@ -352,15 +352,6 @@
 		</Prop>
 		<Prop id="122" name="@STUDIO:TOOLCONF">
 			<value>Metrics and Rules Checker</value>
-			<value>13</value>
-			<value>21</value>
-			<value>31</value>
-			<value>36</value>
-			<value>41</value>
-			<value>52</value>
-			<value>60</value>
-			<value>63</value>
-			<value>71</value>
 			<value>124</value>
 		</Prop>
 		<Prop id="123" name="@STUDIO:TOOLCONF">
@@ -376,10 +367,6 @@
 			<value>71</value>
 			<value>124</value>
 		</Prop>
-		<Prop id="125" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>NoOperatorCallsInExpressions</value>
-			<configuration>13</configuration>
-		</Prop>
 		<Prop id="126" name="@METRICS_RULES:SELECTED_ROOTS">
 			<value>NoOperatorCallsInExpressions</value>
 			<configuration>124</configuration>
@@ -390,15 +377,6 @@
 		<Prop id="128" name="@METRICS_RULES:RULES_PARAM">
 			<value>id_0060,18</value>
 			<configuration>124</configuration>
-		</Prop>
-		<Prop id="130" name="@METRICS_RULES:RULES_PARAM">
-			<value>SCADE_R001,Coverage</value>
-			<value>id_0060,18</value>
-			<configuration>13</configuration>
-		</Prop>
-		<Prop id="131" name="@METRICS_RULES:SELECTED_RULES">
-			<value>id_0060</value>
-			<configuration>13</configuration>
 		</Prop>
 		<Prop id="132" name="@METRICS_RULES:SELECTED_RULES">
 			<value>id_0060</value>

@@ -337,15 +337,6 @@
 		</Prop>
 		<Prop id="122" name="@STUDIO:TOOLCONF">
 			<value>Metrics and Rules Checker</value>
-			<value>13</value>
-			<value>21</value>
-			<value>31</value>
-			<value>36</value>
-			<value>41</value>
-			<value>52</value>
-			<value>60</value>
-			<value>63</value>
-			<value>71</value>
 			<value>124</value>
 		</Prop>
 		<Prop id="123" name="@STUDIO:TOOLCONF">
@@ -383,14 +374,6 @@
 		</Prop>
 		<Prop id="130" name="@GENERATOR:TARGET_ADAPTOR">
 			<value></value>
-			<configuration>13</configuration>
-		</Prop>
-		<Prop id="131" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>NoBoolComparison</value>
-			<configuration>13</configuration>
-		</Prop>
-		<Prop id="135" name="@METRICS_RULES:SELECTED_RULES">
-			<value>id_0054</value>
 			<configuration>13</configuration>
 		</Prop>
 		<Prop id="136" name="@METRICS_RULES:SELECTED_RULES">

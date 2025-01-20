@@ -350,18 +350,9 @@
 			<value>Metrics and Rules Checker</value>
 			<value>437</value>
 		</Prop>
-		<Prop id="433" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>MaximumOperatorsPerPackage</value>
-			<configuration>13</configuration>
-		</Prop>
 		<Prop id="434" name="@METRICS_RULES:USER_DEF_FILES">
 			<value>..\..\..\src\ansys\scade\design_rules\structure\maximum_operators_per_package.py</value>
 			<value>..\..\..\src\ansys\scade\design_rules\metrics\number_of_operators_per_package.py</value>
-		</Prop>
-		<Prop id="435" name="@METRICS_RULES:RULES_PARAM">
-			<value>SCADE_R001,Coverage</value>
-			<value>id_0071,20</value>
-			<configuration>13</configuration>
 		</Prop>
 		<Prop id="439" name="@METRICS_RULES:RULES_PARAM">
 			<value>id_0071,20</value>
@@ -394,19 +385,6 @@
 		<Prop id="446" name="@GENERATOR:TARGET_DIR">
 			<value>$(Configuration)</value>
 			<configuration>437</configuration>
-		</Prop>
-		<Prop id="447" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>MaximumOperatorsPerPackage</value>
-			<configuration>21</configuration>
-		</Prop>
-		<Prop id="448" name="@METRICS_RULES:RULES_PARAM">
-			<value>SCADE_R001,Coverage</value>
-			<value>My_Struct_R001,20</value>
-			<configuration>21</configuration>
-		</Prop>
-		<Prop id="450" name="@METRICS_RULES:SELECTED_RULES">
-			<value>id_0071</value>
-			<configuration>13</configuration>
 		</Prop>
 		<Prop id="451" name="@METRICS_RULES:SELECTED_RULES">
 			<value>id_0071</value>

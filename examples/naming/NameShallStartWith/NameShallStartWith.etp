@@ -333,32 +333,10 @@
 		</Prop>
 		<Prop id="122" name="@STUDIO:TOOLCONF">
 			<value>Metrics and Rules Checker</value>
-			<value>13</value>
-			<value>21</value>
-			<value>31</value>
-			<value>36</value>
-			<value>41</value>
-			<value>52</value>
-			<value>60</value>
-			<value>63</value>
-			<value>71</value>
 			<value>139</value>
-		</Prop>
-		<Prop id="123" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>NameShallStartWith</value>
-			<configuration>13</configuration>
 		</Prop>
 		<Prop id="124" name="@METRICS_RULES:USER_DEF_FILES">
 			<value>..\..\..\src\ansys\scade\design_rules\naming\name_shall_start_with.py</value>
-		</Prop>
-		<Prop id="125" name="@METRICS_RULES:RULES_PARAM">
-			<value>SCADE_R001,Coverage</value>
-			<value>My_Naming_R002,_</value>
-			<configuration>13</configuration>
-		</Prop>
-		<Prop id="126" name="@METRICS_RULES:SELECTED_RULES">
-			<value>My_Naming_R002</value>
-			<configuration>13</configuration>
 		</Prop>
 		<Prop id="140" name="@SCADE:DEFAULTFILE">
 			<value>NameShallStartWith.xscade</value>

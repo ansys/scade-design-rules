@@ -348,15 +348,6 @@
 		</Prop>
 		<Prop id="258" name="@STUDIO:TOOLCONF">
 			<value>Metrics and Rules Checker</value>
-			<value>13</value>
-			<value>21</value>
-			<value>31</value>
-			<value>36</value>
-			<value>41</value>
-			<value>52</value>
-			<value>60</value>
-			<value>63</value>
-			<value>71</value>
 			<value>264</value>
 		</Prop>
 		<Prop id="259" name="@STUDIO:TOOLCONF">
@@ -410,10 +401,6 @@
 		<Prop id="273" name="@GENERATOR:TARGET_DIR">
 			<value>$(Configuration)</value>
 			<configuration>264</configuration>
-		</Prop>
-		<Prop id="274" name="@METRICS_RULES:SELECTED_RULES">
-			<value>id_0022</value>
-			<configuration>13</configuration>
 		</Prop>
 		<Prop id="275" name="@METRICS_RULES:RULES_PARAM">
 			<value>id_0022,keywords.txt</value>

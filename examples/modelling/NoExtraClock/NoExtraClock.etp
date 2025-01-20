@@ -337,15 +337,6 @@
 		</Prop>
 		<Prop id="122" name="@STUDIO:TOOLCONF">
 			<value>Metrics and Rules Checker</value>
-			<value>13</value>
-			<value>21</value>
-			<value>31</value>
-			<value>36</value>
-			<value>41</value>
-			<value>52</value>
-			<value>60</value>
-			<value>63</value>
-			<value>71</value>
 			<value>133</value>
 		</Prop>
 		<Prop id="123" name="@STUDIO:TOOLCONF">
@@ -375,18 +366,6 @@
 		</Prop>
 		<Prop id="136" name="@METRICS_RULES:USER_DEF_FILES">
 			<value>..\..\..\src\ansys\scade\design_rules\modelling\no_extra_clock.py</value>
-		</Prop>
-		<Prop id="139" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>NoExtraClock</value>
-			<configuration>13</configuration>
-		</Prop>
-		<Prop id="140" name="@METRICS_RULES:RULES_PARAM">
-			<value>SCADE_R001,Coverage</value>
-			<configuration>13</configuration>
-		</Prop>
-		<Prop id="141" name="@METRICS_RULES:SELECTED_RULES">
-			<value>My_Model_R004</value>
-			<configuration>13</configuration>
 		</Prop>
 		<Prop id="143" name="@METRICS_RULES:SELECTED_RULES">
 			<value>id_0055</value>

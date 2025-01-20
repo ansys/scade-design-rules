@@ -326,15 +326,6 @@
 		</Prop>
 		<Prop id="122" name="@STUDIO:TOOLCONF">
 			<value>Metrics and Rules Checker</value>
-			<value>13</value>
-			<value>21</value>
-			<value>31</value>
-			<value>36</value>
-			<value>41</value>
-			<value>52</value>
-			<value>60</value>
-			<value>63</value>
-			<value>71</value>
 			<value>132</value>
 		</Prop>
 		<Prop id="123" name="@STUDIO:TOOLCONF">
@@ -349,19 +340,6 @@
 			<value>63</value>
 			<value>71</value>
 			<value>132</value>
-		</Prop>
-		<Prop id="125" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>ElementsWithinArea</value>
-			<configuration>13</configuration>
-		</Prop>
-		<Prop id="130" name="@METRICS_RULES:RULES_PARAM">
-			<value>SCADE_R001,Coverage</value>
-			<value>My_Read_R003,28435, 19174</value>
-			<configuration>13</configuration>
-		</Prop>
-		<Prop id="131" name="@METRICS_RULES:SELECTED_RULES">
-			<value>My_Read_R003</value>
-			<configuration>13</configuration>
 		</Prop>
 		<Prop id="135" name="@METRICS_RULES:SELECTED_ROOTS">
 			<value>ElementsWithinArea</value>
