@@ -24,7 +24,7 @@
 
 """Implements the NoOperatorCallsInExpressions rule."""
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     from os.path import abspath, dirname
     import sys
@@ -103,6 +103,6 @@ class NoOperatorCallsInExpressions(Rule):
         return str(expression.predef_opr) in self.excepted_operators
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     NoOperatorCallsInExpressions()

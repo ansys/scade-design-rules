@@ -24,7 +24,7 @@
 
 """Implements the IllegalOperationsOnConstants rule."""
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     from os.path import abspath, dirname
     import sys
@@ -153,6 +153,6 @@ class IllegalOperationsOnConstants(Rule):
         return all_inputs_are_constants
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     IllegalOperationsOnConstants()

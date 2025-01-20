@@ -24,7 +24,7 @@
 
 """Implements the NoFloats rule."""
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     from os.path import abspath, dirname
     import sys
@@ -98,6 +98,6 @@ class NoFloats(Rule):
         return False
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     NoFloats()

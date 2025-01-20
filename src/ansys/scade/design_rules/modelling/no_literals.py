@@ -24,7 +24,7 @@
 
 """Implements the NoLiterals rule."""
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     from os.path import abspath, dirname
     import sys
@@ -134,6 +134,6 @@ class NoLiterals(Rule):
         )
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     NoLiterals()

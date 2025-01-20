@@ -24,7 +24,7 @@
 
 """Implements the NoPointerBranch rule."""
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     from os.path import abspath, dirname
     import sys
@@ -111,6 +111,6 @@ class NoPointerBranch(Rule):
         return is_pointer
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     NoPointerBranch()

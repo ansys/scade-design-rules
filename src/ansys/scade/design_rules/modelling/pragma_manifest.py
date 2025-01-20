@@ -24,7 +24,7 @@
 
 """Implements the PragmaManifest rule."""
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     from os.path import abspath, dirname
     import sys
@@ -212,6 +212,6 @@ class PragmaManifest(Rule):
         self.manifests[signature] = manifest or self.manifests.setdefault(signature, False)
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     PragmaManifest()

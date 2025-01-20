@@ -24,7 +24,7 @@
 
 """Implements the NoStructTableComparisons rule."""
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     from os.path import abspath, dirname
     import sys
@@ -168,6 +168,6 @@ class NoStructTableComparisons(Rule):
         return is_array(type_) or is_structure(type_)
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     NoStructTableComparisons()

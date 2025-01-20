@@ -24,7 +24,7 @@
 
 """Implements the CheckConfiguration rule."""
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     from os.path import abspath, dirname
     import sys
@@ -99,7 +99,7 @@ class CheckConfiguration(Rule):
         # -> scade.load_project can't be used when the rules are evaluated from the IDE
         # -> scade.model.project.project.xml_project.load_project can't be used either
         #    when the rules are evaluated from the IDE (simple typo in the file but enough)
-        # the only left option consists in parsing the xml file, with xml sincel xml
+        # the only left option consists in parsing the xml file, with xml since lxml
         # can't be used in the IDE
         try:
             f = self.project_source_path.open()
@@ -167,6 +167,6 @@ class CheckConfiguration(Rule):
         return Rule.OK
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     CheckConfiguration()

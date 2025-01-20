@@ -24,7 +24,7 @@
 
 """Implements the LocalNameUniqueness rule."""
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     from os.path import abspath, dirname
     import sys
@@ -94,6 +94,6 @@ class LocalNameUniqueness(Rule):
         return status
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     LocalNameUniqueness()

@@ -24,7 +24,7 @@
 
 """Implements the NoBoolComparison rule."""
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     from os.path import abspath, dirname
     import sys
@@ -112,6 +112,6 @@ class NoBoolComparison(Rule):
         return is_predefined(leaf_type) and leaf_type.name == 'bool'
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     NoBoolComparison()
