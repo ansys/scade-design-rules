@@ -333,27 +333,10 @@
 		</Prop>
 		<Prop id="122" name="@STUDIO:TOOLCONF">
 			<value>Metrics and Rules Checker</value>
-			<value>13</value>
-			<value>21</value>
-			<value>31</value>
-			<value>36</value>
-			<value>41</value>
-			<value>52</value>
-			<value>60</value>
-			<value>63</value>
-			<value>71</value>
 			<value>127</value>
-		</Prop>
-		<Prop id="123" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>ForbiddenOperators</value>
-			<configuration>13</configuration>
 		</Prop>
 		<Prop id="124" name="@METRICS_RULES:USER_DEF_FILES">
 			<value>..\..\..\src\ansys\scade\design_rules\modelling\forbidden_operators.py</value>
-		</Prop>
-		<Prop id="125" name="@METRICS_RULES:RULES_PARAM">
-			<value>id_0023,45, 28</value>
-			<configuration>13</configuration>
 		</Prop>
 		<Prop id="129" name="@METRICS_RULES:RULES_PARAM">
 			<value>id_0023,45, 28</value>
@@ -390,10 +373,6 @@
 		<Prop id="138" name="@METRICS_RULES:SELECTED_RULES">
 			<value>id_0023</value>
 			<configuration>127</configuration>
-		</Prop>
-		<Prop id="139" name="@METRICS_RULES:SELECTED_RULES">
-			<value>id_0023</value>
-			<configuration>13</configuration>
 		</Prop>
 	</props>
 	<roots>

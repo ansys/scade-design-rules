@@ -347,15 +347,6 @@
 		</Prop>
 		<Prop id="122" name="@STUDIO:TOOLCONF">
 			<value>Metrics and Rules Checker</value>
-			<value>13</value>
-			<value>21</value>
-			<value>31</value>
-			<value>36</value>
-			<value>41</value>
-			<value>52</value>
-			<value>60</value>
-			<value>63</value>
-			<value>71</value>
 			<value>124</value>
 		</Prop>
 		<Prop id="123" name="@STUDIO:TOOLCONF">
@@ -411,10 +402,6 @@
 			<value>SCADE_M009</value>
 			<configuration>124</configuration>
 		</Prop>
-		<Prop id="132" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>LineCrossing</value>
-			<configuration>13</configuration>
-		</Prop>
 		<Prop id="136" name="@STUDIO:TOOLCONF">
 			<value>Synchronization</value>
 			<value>13</value>
@@ -434,14 +421,6 @@
 		</Prop>
 		<Prop id="138" name="@METRICS_RULES:USER_DEF_FILES">
 			<value>..\..\..\src\ansys\scade\design_rules\readability\line_crossing.py</value>
-		</Prop>
-		<Prop id="139" name="@METRICS_RULES:SELECTED_RULES">
-			<value>id_0034</value>
-			<configuration>13</configuration>
-		</Prop>
-		<Prop id="140" name="@METRICS_RULES:RULES_PARAM">
-			<value>id_0034,lines=yes</value>
-			<configuration>13</configuration>
 		</Prop>
 	</props>
 	<roots>

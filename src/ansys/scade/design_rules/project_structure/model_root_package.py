@@ -24,7 +24,7 @@
 
 """Implements the ModelRootPackage rule."""
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     from os.path import abspath, dirname
     import sys
@@ -99,6 +99,6 @@ class ModelRootPackage(Rule):
         return return_status
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     ModelRootPackage()

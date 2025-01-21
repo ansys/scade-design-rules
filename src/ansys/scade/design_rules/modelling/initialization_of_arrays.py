@@ -24,7 +24,7 @@
 
 """Implements the InitializationOfArrays rule."""
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     from os.path import abspath, dirname
     import sys
@@ -113,6 +113,6 @@ class InitializationOfArrays(Rule):
         return element.to_string()
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     InitializationOfArrays()

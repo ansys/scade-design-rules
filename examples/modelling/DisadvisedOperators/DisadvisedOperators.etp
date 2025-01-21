@@ -330,15 +330,6 @@
 		</Prop>
 		<Prop id="122" name="@STUDIO:TOOLCONF">
 			<value>Metrics and Rules Checker</value>
-			<value>13</value>
-			<value>21</value>
-			<value>31</value>
-			<value>36</value>
-			<value>41</value>
-			<value>52</value>
-			<value>60</value>
-			<value>63</value>
-			<value>71</value>
 			<value>128</value>
 		</Prop>
 		<Prop id="123" name="@STUDIO:TOOLCONF">
@@ -354,16 +345,8 @@
 			<value>71</value>
 			<value>128</value>
 		</Prop>
-		<Prop id="124" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>DisadvisedOperators</value>
-			<configuration>13</configuration>
-		</Prop>
 		<Prop id="125" name="@METRICS_RULES:USER_DEF_FILES">
 			<value>..\..\..\src\ansys\scade\design_rules\modelling\disadvised_operators.py</value>
-		</Prop>
-		<Prop id="126" name="@METRICS_RULES:RULES_PARAM">
-			<value>id_0013,46, 47, 51, 52</value>
-			<configuration>13</configuration>
 		</Prop>
 		<Prop id="130" name="@METRICS_RULES:RULES_PARAM">
 			<value>id_0013,46, 47, 51, 52</value>
@@ -400,10 +383,6 @@
 		<Prop id="139" name="@METRICS_RULES:SELECTED_RULES">
 			<value>id_0013</value>
 			<configuration>128</configuration>
-		</Prop>
-		<Prop id="140" name="@METRICS_RULES:SELECTED_RULES">
-			<value>id_0013</value>
-			<configuration>13</configuration>
 		</Prop>
 	</props>
 	<roots>

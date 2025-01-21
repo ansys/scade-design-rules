@@ -333,15 +333,6 @@
 		</Prop>
 		<Prop id="112" name="@STUDIO:TOOLCONF">
 			<value>Metrics and Rules Checker</value>
-			<value>13</value>
-			<value>21</value>
-			<value>31</value>
-			<value>36</value>
-			<value>41</value>
-			<value>52</value>
-			<value>60</value>
-			<value>63</value>
-			<value>71</value>
 			<value>120</value>
 		</Prop>
 		<Prop id="113" name="@STUDIO:TOOLCONF">
@@ -357,16 +348,8 @@
 			<value>71</value>
 			<value>120</value>
 		</Prop>
-		<Prop id="116" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>ForbiddenRealComparisons</value>
-			<configuration>13</configuration>
-		</Prop>
 		<Prop id="117" name="@METRICS_RULES:USER_DEF_FILES">
 			<value>..\..\..\src\ansys\scade\design_rules\modelling\forbidden_real_comparisons.py</value>
-		</Prop>
-		<Prop id="118" name="@METRICS_RULES:RULES_PARAM">
-			<value>SCADE_R001,Coverage</value>
-			<configuration>13</configuration>
 		</Prop>
 		<Prop id="122" name="@METRICS_RULES:RULES_PARAM">
 			<value>id_0024,20, 21, 22, 23, 24, 25</value>

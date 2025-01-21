@@ -348,29 +348,11 @@
 		</Prop>
 		<Prop id="126" name="@STUDIO:TOOLCONF">
 			<value>Metrics and Rules Checker</value>
-			<value>13</value>
-			<value>21</value>
-			<value>31</value>
-			<value>36</value>
-			<value>41</value>
-			<value>52</value>
-			<value>60</value>
-			<value>63</value>
-			<value>71</value>
 			<value>131</value>
-		</Prop>
-		<Prop id="127" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>MaximumLevelOfPackages</value>
-			<configuration>13</configuration>
 		</Prop>
 		<Prop id="128" name="@METRICS_RULES:USER_DEF_FILES">
 			<value>..\..\..\src\ansys\scade\design_rules\structure\maximum_level_of_packages.py</value>
 			<value>..\..\..\src\ansys\scade\design_rules\metrics\level_of_packages.py</value>
-		</Prop>
-		<Prop id="129" name="@METRICS_RULES:RULES_PARAM">
-			<value>id_0068,2</value>
-			<value>SCADE_R001,Coverage</value>
-			<configuration>13</configuration>
 		</Prop>
 		<Prop id="133" name="@METRICS_RULES:RULES_PARAM">
 			<value>id_0068,2</value>
@@ -407,10 +389,6 @@
 		<Prop id="141" name="@METRICS_RULES:SELECTED_RULES">
 			<value>id_0068</value>
 			<configuration>131</configuration>
-		</Prop>
-		<Prop id="142" name="@METRICS_RULES:SELECTED_RULES">
-			<value>id_0068</value>
-			<configuration>13</configuration>
 		</Prop>
 	</props>
 	<roots>

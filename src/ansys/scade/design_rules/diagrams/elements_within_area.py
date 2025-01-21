@@ -24,7 +24,7 @@
 
 """Implements the ElementsWithinArea rule."""
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     from os.path import abspath, dirname
     import sys
@@ -202,6 +202,6 @@ class ElementsWithinArea(Rule):
         return False
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     ElementsWithinArea()

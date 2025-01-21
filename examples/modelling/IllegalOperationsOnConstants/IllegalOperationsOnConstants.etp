@@ -359,28 +359,10 @@
 		</Prop>
 		<Prop id="125" name="@STUDIO:TOOLCONF">
 			<value>Test Tool</value>
-			<value>13</value>
-			<value>21</value>
-			<value>31</value>
-			<value>36</value>
-			<value>41</value>
-			<value>52</value>
-			<value>60</value>
-			<value>63</value>
-			<value>71</value>
 			<value>132</value>
-		</Prop>
-		<Prop id="126" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>IllegalOperationsOnConstants</value>
-			<configuration>13</configuration>
 		</Prop>
 		<Prop id="129" name="@METRICS_RULES:USER_DEF_FILES">
 			<value>..\..\..\src\ansys\scade\design_rules\modelling\illegal_operations_on_constants.py</value>
-		</Prop>
-		<Prop id="130" name="@METRICS_RULES:RULES_PARAM">
-			<value>SCADE_R001,Coverage</value>
-			<value>id_0028,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 20, 21, 22, 23, 24, 25, 31, 33, 40, 43, 44, 46, 47, 51, 52, 60, 63, 67, 68, 69, 70, 71, 72</value>
-			<configuration>13</configuration>
 		</Prop>
 		<Prop id="134" name="@METRICS_RULES:RULES_PARAM">
 			<value>id_0028,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 20, 21, 22, 23, 24, 25, 31, 33, 40, 43, 44, 46, 47, 51, 52, 60, 63, 67, 68, 69, 70, 71, 72</value>
@@ -434,10 +416,6 @@
 		<Prop id="144" name="@METRICS_RULES:SELECTED_RULES">
 			<value>id_0028</value>
 			<configuration>132</configuration>
-		</Prop>
-		<Prop id="145" name="@METRICS_RULES:SELECTED_RULES">
-			<value>id_0028</value>
-			<configuration>13</configuration>
 		</Prop>
 	</props>
 	<roots>

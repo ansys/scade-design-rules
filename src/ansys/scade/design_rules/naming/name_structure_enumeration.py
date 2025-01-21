@@ -24,7 +24,7 @@
 
 """Implements the NameStructureEnumeration rule."""
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     from os.path import abspath, dirname
     import sys
@@ -105,6 +105,6 @@ class NameStructureEnumeration(Rule):
         return Rule.OK
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     NameStructureEnumeration()

@@ -24,7 +24,7 @@
 
 """Implements the ConstantIfThenElse rule."""
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     from os.path import abspath, dirname
     import sys
@@ -105,6 +105,6 @@ class ConstantIfThenElse(Rule):
             return True
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
     ConstantIfThenElse()

@@ -352,15 +352,6 @@
 		</Prop>
 		<Prop id="122" name="@STUDIO:TOOLCONF">
 			<value>Metrics and Rules Checker</value>
-			<value>13</value>
-			<value>21</value>
-			<value>31</value>
-			<value>36</value>
-			<value>41</value>
-			<value>52</value>
-			<value>60</value>
-			<value>63</value>
-			<value>71</value>
 			<value>125</value>
 		</Prop>
 		<Prop id="123" name="@STUDIO:TOOLCONF">
@@ -393,18 +384,6 @@
 		</Prop>
 		<Prop id="131" name="@GENERATOR:ROOTNODE">
 			<value>TransitionActions::TransitionActions</value>
-			<configuration>13</configuration>
-		</Prop>
-		<Prop id="133" name="@METRICS_RULES:SELECTED_ROOTS">
-			<value>TransitionActions</value>
-			<configuration>13</configuration>
-		</Prop>
-		<Prop id="134" name="@METRICS_RULES:RULES_PARAM">
-			<value>SCADE_R001,Coverage</value>
-			<configuration>13</configuration>
-		</Prop>
-		<Prop id="135" name="@METRICS_RULES:SELECTED_RULES">
-			<value>My_Model_R009</value>
 			<configuration>13</configuration>
 		</Prop>
 	</props>
