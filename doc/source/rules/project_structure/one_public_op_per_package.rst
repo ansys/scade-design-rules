@@ -18,7 +18,7 @@ Description
 
 .. start_description
 
-This rule checks if the all packages only contain one public operator. All other operators shall be private.
+This rule checks that each package only contain one public operator. All other operators shall be private.
 parameter: maximum number: e.g.: '1'
 
 .. end_description
