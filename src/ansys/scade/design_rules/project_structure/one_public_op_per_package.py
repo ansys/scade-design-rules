@@ -46,7 +46,7 @@ class OnePublicOpPerPackage(Rule):
         severity=Rule.REQUIRED,
         parameter='1',
         description=(
-            'This rule checks that each package only contain one public operator. '
+            'This rule checks that each package only contains one public operator. '
             'All other operators shall be private.\n'
             "parameter: maximum number: e.g.: '1'"
         ),
