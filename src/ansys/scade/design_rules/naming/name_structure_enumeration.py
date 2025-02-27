@@ -88,7 +88,7 @@ class NameStructureEnumeration(Rule):
 
         if not corename.isupper():
             failure = True
-            text += 'Enumeration is not in capiltal letters, '
+            text += 'Enumeration is not in capital letters, '
 
         if len(corename) > 3:
             if not corename[3] == '_':

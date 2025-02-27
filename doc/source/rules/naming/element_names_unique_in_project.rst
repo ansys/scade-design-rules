@@ -18,7 +18,7 @@ Description
 
 .. start_description
 
-The name of an element shall not be used for any other element (of the same kind) in the entire project (+ libraries)
+The name of an element shall not be used for any other element (of the same kind) in the entire project (+ libraries). Default kind: constants.
 
 .. end_description
 

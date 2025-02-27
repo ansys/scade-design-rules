@@ -91,7 +91,7 @@ class ModuloDenominatorNonZeroConstant(Rule):
             try:
                 const_value = get_value_from_const(denominator)
                 if const_value == 0:
-                    message = 'Modulo has non zero denominator.'
+                    message = 'Modulo has zero as a denominator.'
                     violated = True
             except Exception:
                 violated = True
