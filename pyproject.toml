@@ -4,7 +4,7 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name="ansys-scade-design-rules"
-version="0.1.dev1"
+version="0.1.1"
 description ="Custom SCADE Suite Metrics and Checker's rules."
 readme="README.rst"
 
