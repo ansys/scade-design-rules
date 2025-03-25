@@ -1,4 +1,4 @@
-User Guide
+User guide
 ==========
 Ansys SCADE Design Rules is a database of metrics and rules that enforce various design practices on a model.
 

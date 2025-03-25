@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (C) 2021 - 2025 ANSYS, Inc. and/or its affiliates.
+# Copyright (C) 2024 - 2025 ANSYS, Inc. and/or its affiliates.
 # SPDX-License-Identifier: MIT
 #
 #
@@ -26,12 +26,13 @@
 
 if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
-    from os.path import abspath, dirname
+    from pathlib import Path
     import sys
 
-    sys.path.append(abspath(dirname(dirname(dirname(dirname(dirname(__file__)))))))
+    sys.path.append(str(Path(__file__).parent.parent.parent.parent.parent.resolve()))
 
 
+from pathlib import Path
 import re
 
 import scade.model.suite as suite
@@ -96,9 +97,9 @@ class ScadeVersion(Rule):
 
     def on_check(self, object_: suite.Object, parameter: str = None) -> int:
         """Return the evaluation status for the input object."""
-        path = object_.sao_file_name
+        path = Path(object_.sao_file_name)
         try:
-            with open(path) as f:
+            with path.open('r') as f:
                 line = f.readline()
                 if line.startswith('<?xml'):
                     line = f.readline()

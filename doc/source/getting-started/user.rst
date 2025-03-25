@@ -1,7 +1,7 @@
 Install in user mode
 ====================
 The following steps are for installing Ansys SCADE Design Rules in user mode. If you want to
-contribute to Ansys SCADE Design Rules, see :ref:`contribute_scade_design_rules` for the steps
+contribute to Ansys SCADE Design Rules, see :ref:`contribute_scade_design_rules`
 for installing in developer mode.
 
 #. Before installing Ansys SCADE Design Rules in user mode, run this command to ensure that

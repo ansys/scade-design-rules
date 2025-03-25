@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (C) 2022 - 2025 ANSYS, Inc. and/or its affiliates.
+# Copyright (C) 2024 - 2025 ANSYS, Inc. and/or its affiliates.
 # SPDX-License-Identifier: MIT
 #
 #
@@ -46,7 +46,7 @@ _NA = Rule.NA
 def session() -> suite.Session:
     # unique model for these tests
     session = load_session(
-        'tests/annotations/AnnNotesForBasicInterfaceTypes/' 'AnnNotesForBasicInterfaceTypes.etp'
+        'tests/annotations/AnnNotesForBasicInterfaceTypes/AnnNotesForBasicInterfaceTypes.etp'
     )
     return session
 

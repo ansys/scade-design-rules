@@ -36,7 +36,7 @@ source and enhance it.
    .. code:: bash
 
       # Create a virtual environment
-      python -m venv .venv
+      <path/to/SCADE/python/interpreter> -m venv .venv
 
       # Activate it in a POSIX system
       source .venv/bin/activate
@@ -86,9 +86,9 @@ to guarantee the project's integrity.
 
 The following ``tox`` commands are provided:
 
-* ``tox -e style``: Checks for coding style quality.
-* ``tox -e tests``: Checks for unit tests.
-* ``tox -e py-coverage``: Checks for unit testing and code coverage.
+* ``tox -e code-style``: Checks for coding style quality.
+* ``tox -e tests``: Checks for unit testing without code coverage.
+* ``tox -e tests-coverage``: Checks for unit testing with code coverage.
 * ``tox -e doc``: Checks for the documentation-building process.
    * ``tox -e doc-html``: Builds the HTML documentation.
    * ``tox -e doc-links``: Checks for broken links in the documentation.
@@ -107,7 +107,7 @@ Ansys SCADE Design Rules follows the PEP8 standard as outlined in
 the *PyAnsys developer's guide* and implements style checking using
 `pre-commit <https://pre-commit.com/>`_.
 
-To ensure your code meets minimum code styling standards, run these commands::
+To ensure your code meets minimum code styling standards, run the following commands::
 
   pip install pre-commit
   pre-commit run --all-files
@@ -128,6 +128,9 @@ This way, it's not possible for you to push code that fails the style checks::
   debug statements (python)................................................Passed
   check yaml...............................................................Passed
   trim trailing whitespace.................................................Passed
+  numpydoc-validation......................................................Passed
+  Validate GitHub Workflows................................................Passed
+  check pre-commit.ci config...............................................Passed
 
 Build documentation
 -------------------
@@ -149,7 +152,7 @@ However, the recommended way of checking documentation integrity is to use
 
 .. code:: bash
 
-    tox -e doc-html && your_browser_name ./doc/_build/html/index.html
+    tox -e doc-html && your_browser_name doc/_build/html/index.html
 
 Distribute
 ----------

@@ -26,10 +26,10 @@
 
 if __name__ == '__main__':  # pragma: no cover
     # metric instantiated outside of a package
-    from os.path import abspath, dirname
+    from pathlib import Path
     import sys
 
-    sys.path.append(abspath(dirname(dirname(dirname(dirname(dirname(__file__)))))))
+    sys.path.append(str(Path(__file__).parent.parent.parent.parent.parent.resolve()))
 
 import scade.model.suite as suite
 from scade.model.suite.visitors import Visit

@@ -24,8 +24,8 @@ pdf:
 	cd $(BUILDDIR)/latex && latexmk -r latexmkrc -pdf *.tex -interaction=nonstopmode || true
 	(test -f $(BUILDDIR)/latex/*.pdf && echo pdf exists) || exit 1
 
-# Customized clean due to examples gallery
+# Clean the build directory
 clean:
-	rm -rf $(BUILDDIR)/*
+	rm -rf $(BUILDDIR)
 	rm -rf $(SOURCEDIR)/examples
 	find . -type d -name "api" -exec rm -rf {} +

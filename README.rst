@@ -4,6 +4,7 @@ Ansys SCADE Design Rules
 
 .. |pyansys| image:: https://img.shields.io/badge/Py-Ansys-ffc107.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABDklEQVQ4jWNgoDfg5mD8vE7q/3bpVyskbW0sMRUwofHD7Dh5OBkZGBgW7/3W2tZpa2tLQEOyOzeEsfumlK2tbVpaGj4N6jIs1lpsDAwMJ278sveMY2BgCA0NFRISwqkhyQ1q/Nyd3zg4OBgYGNjZ2ePi4rB5loGBhZnhxTLJ/9ulv26Q4uVk1NXV/f///////69du4Zdg78lx//t0v+3S88rFISInD59GqIH2esIJ8G9O2/XVwhjzpw5EAam1xkkBJn/bJX+v1365hxxuCAfH9+3b9/+////48cPuNehNsS7cDEzMTAwMMzb+Q2u4dOnT2vWrMHu9ZtzxP9vl/69RVpCkBlZ3N7enoDXBwEAAA+YYitOilMVAAAAAElFTkSuQmCC
    :target: https://docs.pyansys.com/
+   :alt: PyAnsys
 
 .. |python| image:: https://img.shields.io/pypi/pyversions/ansys-scade-design-rules?logo=pypi
    :target: https://pypi.org/project/ansys-scade-design-rules/
@@ -48,7 +49,7 @@ Ansys SCADE, starting from 2021 R2:
 * 2023 R2 and later: Python 3.10
 
 Ansys SCADE Design Rules has two installation modes: user and developer. To install for use,
-see `Getting started <https://design-rules.scade.docs.pyansys.com/version/stable/getting_started/index.html>`_.
+see `Getting started <https://design-rules.scade.docs.pyansys.com/version/stable/getting-started/index.html>`_.
 To install for development, see `Contribute <https://design-rules.scade.docs.pyansys.com/version/stable/contributing.html>`_.
 
 Documentation and Issues
