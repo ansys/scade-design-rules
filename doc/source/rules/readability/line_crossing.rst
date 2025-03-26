@@ -1,7 +1,7 @@
 .. index:: single: No line crossing
 
 No line crossing
-================
+################
 
 .. rule::
    :filename: line_crossing.py
@@ -14,7 +14,7 @@ No line crossing
    LineCrossing
 
 Description
------------
+===========
 
 .. start_description
 
@@ -25,17 +25,17 @@ Setting the parameter to lines=no does not report edges crossing edges.
 .. end_description
 
 Rationale
----------
+=========
 <TODO>
 
 Verification
-------------
+============
 <TODO>
 
 Resolution
-----------
+==========
 <TODO>
 
 Customization
--------------
+=============
 N/A.

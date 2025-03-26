@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (C) 2023 - 2025 ANSYS, Inc. and/or its affiliates.
+# Copyright (C) 2024 - 2025 ANSYS, Inc. and/or its affiliates.
 # SPDX-License-Identifier: MIT
 #
 #
@@ -82,7 +82,11 @@ class ParameterParser(ArgumentParser):
         # side_effect with self.error
         self.messages = []
         args = shlex.split(command, posix=False)
-        ns = super().parse_args(args)
+        try:
+            ns = super().parse_args(args)
+        except TypeError as e:
+            self.messages.append(str(e))
+            ns = None
         return ns if not self.messages else None
 
     @property

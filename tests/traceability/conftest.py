@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (C) 2022 - 2025 ANSYS, Inc. and/or its affiliates.
+# Copyright (C) 2024 - 2025 ANSYS, Inc. and/or its affiliates.
 # SPDX-License-Identifier: MIT
 #
 #
@@ -47,7 +47,7 @@ def project_session_trace(request):
         AlmgrParser.XML_NS['scade_req'] = (
             'http://www.ansys.com/scade/lifecycle/almgateway/scade_req/3'
         )
-        AlmgrParser.PROJECT = f"{{{AlmgrParser.XML_NS['scade_req']}}}ReqProject"
+        AlmgrParser.PROJECT = f'{{{AlmgrParser.XML_NS["scade_req"]}}}ReqProject'
 
         trace = load(request.param)
     except BaseException:

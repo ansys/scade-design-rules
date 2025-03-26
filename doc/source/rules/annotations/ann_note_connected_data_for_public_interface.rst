@@ -1,7 +1,7 @@
 .. index:: single: Ann note connected data for public interface
 
 Ann note connected data for public interface
-============================================
+############################################
 
 .. rule::
    :filename: ann_note_connected_data_for_public_interface.py
@@ -14,7 +14,7 @@ Ann note connected data for public interface
    ConnectedData annotation note for interface
 
 Description
------------
+===========
 
 .. start_description
 
@@ -24,17 +24,17 @@ IsPrimary is set for outputs. ConnectorName = Input/Output_name + parameter
 .. end_description
 
 Rationale
----------
+=========
 <TODO>
 
 Verification
-------------
+============
 <TODO>
 
 Resolution
-----------
+==========
 <TODO>
 
 Customization
--------------
+=============
 N/A.

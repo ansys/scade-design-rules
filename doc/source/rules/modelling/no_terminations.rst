@@ -1,7 +1,7 @@
 .. index:: single: No terminations
 
 No terminations
-===============
+###############
 
 .. rule::
    :filename: no_terminations.py
@@ -14,7 +14,7 @@ No terminations
    No terminations
 
 Description
------------
+===========
 
 .. start_description
 
@@ -24,20 +24,20 @@ parameter: 'ALL': all, 'NOIT: do not report terminations at iterator outputs'
 .. end_description
 
 Rationale
----------
+=========
 This enforces compliance with a specific modeling standard by ensuring that terminators are not used in models.
 
 Verification
-------------
+============
 This rule checks all model equations for use of a terminator operator. Depending on rule parameter value, the rule fails for any terminator:
 
 * Anywhere in the model
 * Outside of an iterator higher order operator output. Iterator operators are: ``Map``, ``Mapi``, ``Fold``, ``Foldi``, ``MapFold``, ``MapFoldi``.
 
 Resolution
-----------
+==========
 Remove the offending terminator.
 
 Customization
--------------
+=============
 N/A.

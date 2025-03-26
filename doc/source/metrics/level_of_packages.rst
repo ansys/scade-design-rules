@@ -1,7 +1,7 @@
 .. index:: single: Level of packages
 
 Level of packages
-=================
+#################
 
 .. metric::
    :filename: level_of_packages.py
@@ -14,7 +14,7 @@ Level of packages
    Number of nested packages
 
 Description
------------
+===========
 
 .. start_description
 
@@ -23,12 +23,12 @@ Number of nested packages.
 .. end_description
 
 Computation
------------
+===========
 This metric computes for a package the depth of nested sub-packages.
 
 Note: a package with no sub-package has depth ``1``.
 
 
 Customization
--------------
+=============
 N/A.

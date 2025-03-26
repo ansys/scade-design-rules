@@ -1,7 +1,7 @@
 .. index:: single: Model root package
 
 Model root package
-==================
+##################
 
 .. rule::
    :filename: model_root_package.py
@@ -14,7 +14,7 @@ Model root package
    Model contains only root Package
 
 Description
------------
+===========
 
 .. start_description
 
@@ -23,17 +23,17 @@ This rule checks if the Model contains only one Package as root element and no o
 .. end_description
 
 Rationale
----------
+=========
 <TODO>
 
 Verification
-------------
+============
 <TODO>
 
 Resolution
-----------
+==========
 <TODO>
 
 Customization
--------------
+=============
 N/A.

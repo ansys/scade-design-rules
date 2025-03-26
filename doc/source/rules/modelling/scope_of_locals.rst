@@ -1,7 +1,7 @@
 .. index:: single: Local variable scope
 
 Local variable scope
-====================
+####################
 
 .. rule::
    :filename: scope_of_locals.py
@@ -14,11 +14,11 @@ Local variable scope
    Declaration scope of a local variable
 
 Description
------------
+===========
 The scope of a local variable shall be the least common scope containing all its references.
 
 Rationale
----------
+=========
 This avoids useless flow definitions and/or default directives. This also leads to better generated code and efficiency since KCG cannot always perform the optimization.
 
 In the example below, the local variable ``local`` is declared in the operator's scope although it is referenced only in ``P::Operator/IfBlock1:then:``.
@@ -26,13 +26,13 @@ In the example below, the local variable ``local`` is declared in the operator's
 .. image:: img/scope_of_locals_1.png
 
 Verification
-------------
+============
 The rule registers to the flows of a Scade model, for example local variables, and raises a violation for each flow which is not declared in the least common scope of its references.
 
 Message: ``The local variable <variable name> shall be declared in its least common scope <scope path>``.
 
 Resolution
-----------
+==========
 A local variable cannot be dragged and dropped to a new scope since the underlying editing operation is cut/paste. Proceed as follows:
 
 * Find all the references of the variable with the command Navigate/Browse/References
@@ -43,5 +43,5 @@ A local variable cannot be dragged and dropped to a new scope since the underlyi
 * Delete the old variable
 
 Customization
--------------
+=============
 N/A.

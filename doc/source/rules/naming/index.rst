@@ -1,7 +1,7 @@
 .. index:: single: Naming
 
 Naming
-======
+######
 
 .. category::
    :name: Naming

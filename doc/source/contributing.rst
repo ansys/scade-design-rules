@@ -11,7 +11,7 @@ with this guide before attempting to contribute to Ansys SCADE Design Rules.
 The following contribution information is specific to Ansys SCADE Design Rules.
 
 Install in developer mode
--------------------------
+=========================
 
 Installing Ansys SCADE Design Rules in developer mode allows you to modify the
 source and enhance it.
@@ -36,7 +36,7 @@ source and enhance it.
    .. code:: bash
 
       # Create a virtual environment
-      python -m venv .venv
+      <path/to/SCADE/python/interpreter> -m venv .venv
 
       # Activate it in a POSIX system
       source .venv/bin/activate
@@ -72,13 +72,13 @@ source and enhance it.
 
 
 Test
-----
+====
 Ansys SCADE Design Rules uses `tox`_ for testing. This tool allows you to
 automate common development tasks (similar to ``Makefile``), but it is oriented
 towards Python development.
 
 Use ``tox``
-^^^^^^^^^^^
+-----------
 
 While ``Makefile`` has rules, ``tox`` has environments. In fact, ``tox`` creates its
 own virtual environment so that anything being tested is isolated from the project
@@ -86,28 +86,28 @@ to guarantee the project's integrity.
 
 The following ``tox`` commands are provided:
 
-* ``tox -e style``: Checks for coding style quality.
-* ``tox -e tests``: Checks for unit tests.
-* ``tox -e py-coverage``: Checks for unit testing and code coverage.
+* ``tox -e code-style``: Checks for coding style quality.
+* ``tox -e tests``: Checks for unit testing without code coverage.
+* ``tox -e tests-coverage``: Checks for unit testing with code coverage.
 * ``tox -e doc``: Checks for the documentation-building process.
    * ``tox -e doc-html``: Builds the HTML documentation.
    * ``tox -e doc-links``: Checks for broken links in the documentation.
 
 Use raw testing
-^^^^^^^^^^^^^^^
+---------------
 If required, from the command line, you can call style commands like
 `black`_, `isort`_, and `flake8`_. You can also call unit testing commands like `pytest`_.
 However, running these commands does not guarantee that your project is being tested in an
 isolated environment, which is the reason why tools like ``tox`` exist.
 
 Use ``pre-commit``
-^^^^^^^^^^^^^^^^^^
+------------------
 Ansys SCADE Design Rules follows the PEP8 standard as outlined in
 `PEP 8 <https://dev.docs.pyansys.com/coding-style/pep8.html>`_ in
 the *PyAnsys developer's guide* and implements style checking using
 `pre-commit <https://pre-commit.com/>`_.
 
-To ensure your code meets minimum code styling standards, run these commands::
+To ensure your code meets minimum code styling standards, run the following commands::
 
   pip install pre-commit
   pre-commit run --all-files
@@ -128,9 +128,12 @@ This way, it's not possible for you to push code that fails the style checks::
   debug statements (python)................................................Passed
   check yaml...............................................................Passed
   trim trailing whitespace.................................................Passed
+  numpydoc-validation......................................................Passed
+  Validate GitHub Workflows................................................Passed
+  check pre-commit.ci config...............................................Passed
 
 Build documentation
--------------------
+===================
 For building documentation, you can run the usual rules provided in the
 `Sphinx`_ ``make`` file. Here are some examples:
 
@@ -149,10 +152,10 @@ However, the recommended way of checking documentation integrity is to use
 
 .. code:: bash
 
-    tox -e doc-html && your_browser_name ./doc/_build/html/index.html
+    tox -e doc-html && your_browser_name doc/_build/html/index.html
 
 Distribute
-----------
+==========
 If you would like to create either source or wheel files, start by installing
 the building requirements and then executing the build module:
 
@@ -163,7 +166,7 @@ the building requirements and then executing the build module:
     python -m twine check dist/*
 
 Post issues
------------
+===========
 
 Use the `Ansys SCADE Design Rules Issues <https://github.com/ansys/scade-design-rules/issues>`_
 page to submit questions, report bugs, and request new features. When possible, use

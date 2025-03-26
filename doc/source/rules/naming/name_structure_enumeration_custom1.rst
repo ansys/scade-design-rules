@@ -1,7 +1,7 @@
 .. index:: single: Enumeration name structure custom1
 
 Enumeration name structure custom1
-==================================
+##################################
 
 .. rule::
    :filename: name_structure_enumeration_custom1.py
@@ -14,7 +14,7 @@ Enumeration name structure custom1
    Enumeration Name Structure Custom1
 
 Description
------------
+===========
 
 .. start_description
 
@@ -28,11 +28,11 @@ The rule parameter describes the expected suffix for enumeration type names. Def
 E.g.: an enumeration value of type ``CoordinateType`` shall have its name prefixed with ``Coordinate``.
 
 Rationale
----------
+=========
 This enhances the readability of a model through homogeneous naming.
 
 Verification
-------------
+============
 The rule registers to enumeration values and raises a violation when:
 
 * The type suffix given as a rule parameter has not been excluded from the type name, before using it as a prefix for the enumeration value name
@@ -44,9 +44,9 @@ The rule registers to enumeration values and raises a violation when:
   Message: ``<name> does not start with <type_name>``
 
 Resolution
-----------
+==========
 Rename the offending enumeration value.
 
 Customization
--------------
+=============
 N/A.

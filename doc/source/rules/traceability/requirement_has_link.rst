@@ -1,7 +1,7 @@
 .. index:: single: Requirement has link
 
 Requirement has link
-====================
+####################
 
 .. rule::
    :filename: requirement_has_link.py
@@ -14,7 +14,7 @@ Requirement has link
    Requirement has traceability link
 
 Description
------------
+===========
 
 .. start_description
 
@@ -26,17 +26,17 @@ withalmgt=false: only pushed information is checked.
 .. end_description
 
 Rationale
----------
+=========
 <TODO>
 
 Verification
-------------
+============
 <TODO>
 
 Resolution
-----------
+==========
 <TODO>
 
 Customization
--------------
+=============
 N/A.

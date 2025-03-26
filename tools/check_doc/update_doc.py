@@ -138,7 +138,7 @@ def update_rst(file: Path, instance, kind: str) -> bool:
                 # -*
                 marker = line
 
-            if (i < n - 1 and lines[i + 1] == '-' * len(lines[i])) or line == '.. end_description':
+            if (i < n - 1 and lines[i + 1] == '=' * len(lines[i])) or line == '.. end_description':
                 # allow using .. end_description without .. start_description
                 # flush title marker, description
                 newlines.append(marker)
@@ -169,7 +169,7 @@ def update_rst(file: Path, instance, kind: str) -> bool:
                 continue
 
         if mode == 'idle':
-            if line == 'Description' and lines[i + 1][0] == '-':
+            if line == 'Description' and lines[i + 1][0] == '=':
                 # buffer the lines
                 mode = 'descr'
             elif line == f'.. {kind}::':

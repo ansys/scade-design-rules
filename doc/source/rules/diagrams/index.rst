@@ -1,7 +1,7 @@
 .. index:: single: Diagrams
 
 Diagrams
-========
+########
 
 .. category::
    :name: Diagrams

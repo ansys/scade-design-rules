@@ -1,7 +1,7 @@
 .. index:: single: User defined types lib
 
 User defined types lib
-======================
+######################
 
 .. rule::
    :filename: user_defined_types_lib.py
@@ -14,7 +14,7 @@ User defined types lib
    Check that user-defined complex types used in operators at top-level are located in libraries
 
 Description
------------
+===========
 
 .. start_description
 
@@ -25,11 +25,11 @@ This rule checks if user-defined complex types used in top-level operators as in
 The rule parameter is a string describing the expected domain name prefix. Default value is ``Domain``.
 
 Rationale
----------
+=========
 This enforces compliance with a specific modeling standard by ensuring that all top-level operators use types defined in library packages that follow a given naming convention.
 
 Verification
-------------
+============
 This rule checks all inputs and outputs for top-level operators, that are operators located directly in a root-level package.
 
 For each input/output that has a user-defined complex type, the rule checks that the type is defined in a separate library project.
@@ -37,9 +37,9 @@ For each input/output that has a user-defined complex type, the rule checks that
 Finally, it checks that the library project's name starts with 'Lib' + the domain name provided as a parameter, for example ``LibDomainProjectName``.
 
 Resolution
-----------
+==========
 Modify the offending input/output type or move the type definition to an authorized library project.
 
 Customization
--------------
+=============
 N/A.

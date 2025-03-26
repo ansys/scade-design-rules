@@ -1,7 +1,7 @@
 .. index:: single: Architecture CE
 
 Architecture CE
-===============
+###############
 
 .. rule::
    :filename: llr_architecture.py
@@ -13,7 +13,7 @@ Architecture CE
    'Architecture' CE
 
 Description
------------
+===========
 Architecture Contributing Elements (CE) can be only equation sets or textual diagrams.
 
 .. end_description
@@ -30,11 +30,11 @@ This rules applies to the following elements:
 * Transition
 
 Rationale
----------
+=========
 The nature ``Architecture`` is not suitable for Contributing Elements such as State or Transition.
 
 Verification
-------------
+============
 The rule registers to the states and transitions, and raises a violation
 when an element has an annotation attribute (default ``-t DesignElement -a Nature``)
 with a given value (default ``Architecture``), as specified in the rule's parameter.
@@ -44,11 +44,11 @@ Message: ``The <attribute name> of the Contributing Element can't be '<value>'``
 Note: The rule does register to the equation sets or textual diagrams since there is no verification do perform.
 
 Resolution
-----------
+==========
 Change the value of the property.
 
 Customization
--------------
+=============
 The default value of the rule's parameters ``types`` or ``kinds``
 can be overridden provided the targeted model elements can be annotated.
 

@@ -2,7 +2,7 @@
 .. _traceability:
 
 Traceability
-============
+############
 
 .. category::
    :name: Traceability
@@ -16,7 +16,7 @@ one of the consistent subsets described in the engineering note,
 which are reminded hereafter.
 
 SCADE Suite Contributing Elements (CE)
---------------------------------------
+======================================
 cf. ``ESEG-EN-072``, section 3.4
 
 *TRA_REQ_001*: The Contributing Elements are:
@@ -32,7 +32,7 @@ cf. ``ESEG-EN-072``, section 3.4
       :filter: scade_llr
 
 Only Equation Sets
-------------------
+==================
 cf. ``ESEG-EN-072``, section 3.5.1
 
 *TRA_REQ_001_2*: The Contributing Elements are:
@@ -46,7 +46,7 @@ cf. ``ESEG-EN-072``, section 3.5.1
       :filter: only_eqs
 
 Diagrams or Equation Sets
--------------------------
+=========================
 cf. ``ESEG-EN-072``, section 3.5.2
 
 *TRA_REQ_001_3*: The Contributing Elements are:

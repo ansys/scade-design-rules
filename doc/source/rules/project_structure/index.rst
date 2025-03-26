@@ -1,7 +1,7 @@
 .. index:: single: Project structure
 
 Project structure
-=================
+#################
 
 .. category::
    :name: Project Structure
