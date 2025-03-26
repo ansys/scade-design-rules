@@ -1,7 +1,7 @@
 .. index:: single: Operators
 
 Operators
-=========
+#########
 
 .. category::
    :name: Operators

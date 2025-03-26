@@ -1,7 +1,7 @@
 .. index:: single: Element names unique in project
 
 Element names unique in project
-===============================
+###############################
 
 .. rule::
    :filename: element_names_unique_in_project.py
@@ -14,7 +14,7 @@ Element names unique in project
    The name of an element shall not be used for any other element.
 
 Description
------------
+===========
 
 .. start_description
 
@@ -23,19 +23,19 @@ The name of an element shall not be used for any other element (of the same kind
 .. end_description
 
 Rationale
----------
+=========
 This enforces compliance with a specific modeling standard by ensuring that names are unique throughout the model.
 
 Verification
-------------
+============
 The rule registers to constants and raises a violation when a name is used by another constant in the model.
 
   Message: ``Element name also used here: <list_of_conflicting_constant_paths>``
 
 Resolution
-----------
+==========
 Rename the offending constants to ensure uniqueness.
 
 Customization
--------------
+=============
 N/A.

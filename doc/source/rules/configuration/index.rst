@@ -1,7 +1,7 @@
 .. index:: single: Configuration
 
 Configuration
-=============
+#############
 
 .. category::
    :name: Configuration

@@ -1,7 +1,7 @@
 .. index:: single: No anonymous type
 
 No anonymous type
-=================
+#################
 
 .. rule::
    :filename: no_anonymous_type.py
@@ -14,7 +14,7 @@ No anonymous type
    No anonymous type in the interface
 
 Description
------------
+===========
 
 .. start_description
 
@@ -26,11 +26,11 @@ The rule applies to all the root operators, or the root operators of the specifi
 The parameter allows defining the name of a configuration, with the following syntax: ``configuration=<name>`` (default value: ``configuration=``).
 
 Rationale
----------
+=========
 Ensure user controlled naming of type declarations of root operators / imported operators.
 
 Verification
-------------
+============
 The rule registers to the inputs and outputs of a Scade model, and raises a violation for each
 variable declared with an anonymous type, when the owning operator is root or is imported.
 
@@ -40,9 +40,9 @@ Message: ``The type <type definition> shall not be anonymous``.
 * The ``configuration`` parameter, when set, restricts the root operators to those specified for code generation.
 
 Resolution
-----------
+==========
 Create a type with the same definition and use it in the variable's declaration.
 
 Customization
--------------
+=============
 N/A.

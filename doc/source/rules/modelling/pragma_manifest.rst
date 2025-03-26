@@ -1,7 +1,7 @@
 .. index:: single: Pragma manifest
 
 Pragma manifest
-===============
+###############
 
 .. rule::
    :filename: pragma_manifest.py
@@ -14,7 +14,7 @@ Pragma manifest
    Pragma manifest for complex types
 
 Description
------------
+===========
 .. start_description
 
 A pragma 'manifest' shall be used for each type declaration.
@@ -26,12 +26,12 @@ The parameter allows defining the name of a configuration and the applicable dom
 ``configuration=<name>,interface=true|false`` (default value: ``configuration=,interface=false``).
 
 Rationale
----------
+=========
 Rationale: Ensure generated code stability and
 user controlled naming of type declarations of root operators / imported operators.
 
 Verification
-------------
+============
 The rule registers to the types of a Scade model, and raises a violation for each
 type whose equivalence class does not have a type with the KCG pragma ``manifest``.
 
@@ -48,9 +48,9 @@ Message: The type ``<type definition>`` has no KCG pragma "manifest" and is used
 * The ``configuration`` parameter, when set, restricts the root operators to those specified for code generation.
 
 Resolution
-----------
+==========
 Set the KCG pragma ``manifest`` to the type.
 
 Customization
--------------
+=============
 N/A.

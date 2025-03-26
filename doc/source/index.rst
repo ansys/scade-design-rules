@@ -1,5 +1,5 @@
 Ansys SCADE Design Rules
-========================
+########################
 
 .. toctree::
    :maxdepth: 2
@@ -13,7 +13,7 @@ Ansys SCADE Design Rules
    changelog
 
 Indices and tables
-==================
+##################
 
 * :ref:`genindex`
 * :ref:`search`

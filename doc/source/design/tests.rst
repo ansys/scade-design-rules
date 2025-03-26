@@ -1,5 +1,5 @@
 Tests
-=====
+#####
 
 The testing environment is based on ``pytest``. The ``./tests/utils/conftest.py``
 file provides means to load a Scade model once during a test session.

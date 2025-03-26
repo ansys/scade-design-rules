@@ -202,7 +202,8 @@ all_examples = [
     # skipping tested rule EqSetHasEqs
     # skipping tested rule EqSetNotEmpty
     ('traceability', 'HasLink', 'MetricRule'),
-    ('traceability', 'HasLinkOrPartOfEquationSet', 'MetricRule'),
+    # requires sys.version != 3.7, cf. next statement
+    # ('traceability', 'HasLinkOrPartOfEquationSet', 'MetricRule'),
     # skipping tested rule LLRArchitecture
     # skipping tested rule LLRNature
     # skipping tested rule LLRNatureEqs
@@ -213,6 +214,11 @@ all_examples = [
     ('traceability', 'RequirementHasLink', 'MetricRule'),
     ('user_defined_operators', 'SeparateFileNameOperators', 'MetricRule'),
 ]
+
+
+if sys.version_info.major == 3 and sys.version_info.minor != 7:
+    # HasLinkOrPartOfEquationSet: example files not compatible with ALMGW 2023 R1
+    all_examples.append(('traceability', 'HasLinkOrPartOfEquationSet', 'MetricRule'))
 
 
 @pytest.mark.parametrize('category, name, configuration', all_examples)
@@ -230,7 +236,9 @@ def run_example(category, name, configuration):
     path_src = root / 'examples' / category / name / (name + '.etp')
     # copy
     path_dst = dst_dir / (name + '.etp')
-    path_dst.unlink(missing_ok=True)
+    if path_dst.exists():
+        # can't' use missing_ok=True with Python 3.7
+        path_dst.unlink()
     shutil.copy(path_src, path_dst)
     # copy traceability files when present
     for ext in ['*.almgp', '*.almgr', '*.reqs']:
@@ -260,7 +268,7 @@ def run_example(category, name, configuration):
     # run the check
     exe = sys.executable
     script = root / 'tests' / 'debug.py'
-    cmd = [exe, script, path_dst, '-c', configuration, '-a', 'rules']
+    cmd = [exe, str(script), str(path_dst), '-c', configuration, '-a', 'rules']
     print(cmd)
     cp = run(cmd, capture_output=True, encoding='utf-8')
     if cp.stdout:

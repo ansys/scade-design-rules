@@ -1,7 +1,7 @@
 .. index:: single: Readability
 
 Readability
-===========
+###########
 
 .. category::
    :name: Readability

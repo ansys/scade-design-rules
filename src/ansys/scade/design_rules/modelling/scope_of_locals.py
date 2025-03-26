@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (C) 2022 - 2025 ANSYS, Inc. and/or its affiliates.
+# Copyright (C) 2024 - 2025 ANSYS, Inc. and/or its affiliates.
 # SPDX-License-Identifier: MIT
 #
 #
@@ -26,10 +26,10 @@
 
 if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
-    from os.path import abspath, dirname
+    from pathlib import Path
     import sys
 
-    sys.path.append(abspath(dirname(dirname(dirname(dirname(dirname(__file__)))))))
+    sys.path.append(str(Path(__file__).parent.parent.parent.parent.parent.resolve()))
 
 
 from typing import List
@@ -68,7 +68,7 @@ class ScopeOfLocals(Rule):
     def on_check(self, var: suite.LocalVariable, parameter: str = None) -> int:
         """Return the evaluation status for the input object."""
 
-        def get_scope_path(top: suite.DataDef, object_: suite.Object) -> List[suite.Object]:
+        def _get_scope_path(top: suite.DataDef, object_: suite.Object) -> List[suite.Object]:
             scope = object_
             owner = object_
             path = []
@@ -99,8 +99,8 @@ class ScopeOfLocals(Rule):
         # declaration scope
         top = var.owner
         # build the set of scopes for the r/w references
-        paths = [get_scope_path(top, _) for _ in var.expr_ids]
-        paths += [get_scope_path(top, _) for _ in var.definitions]
+        paths = [_get_scope_path(top, _) for _ in var.expr_ids]
+        paths += [_get_scope_path(top, _) for _ in var.definitions]
         if not paths:
             # the variable is unused
             return Rule.OK

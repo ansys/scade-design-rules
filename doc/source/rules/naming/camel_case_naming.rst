@@ -1,7 +1,7 @@
 .. index:: single: Camel case name
 
 Camel case name
-===============
+###############
 
 .. rule::
    :filename: camel_case_naming.py
@@ -14,7 +14,7 @@ Camel case name
    Camel case name
 
 Description
------------
+===========
 Each word composing a name shall start with an uppercase letter except the first one;
 The remainder of the word shall consist of lowercase letters and digits.
 
@@ -45,7 +45,7 @@ This rules applies to the following elements:
 * Signal
 
 Rationale
----------
+=========
 This enhances the readability of a model through homogeneous naming.
 
 This rule is commonly used with the rule :ref:`Pascal case name <RulePascalCaseNaming>`
@@ -55,7 +55,7 @@ It allows using the same base name for variables and types, for example ::
   function Xxx(speed : Speed)
 
 Verification
-------------
+============
 The rule registers to the specified elements of a Scade model and raises a violation when the name does not comply to the pattern.
 
 There are two dedicated messages for common mistakes:
@@ -65,11 +65,11 @@ There are two dedicated messages for common mistakes:
 * ``<name>: The name shall be composed of a sequence of words``
 
 Resolution
-----------
+==========
 Rename the model element.
 
 Customization
--------------
+=============
 The default value of the rule's parameters ``types`` or ``kinds`` can be overridden provided the targeted model elements have all a name.
 
 Refer to the documentation of the instantiation of a rule for details.

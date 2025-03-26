@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (C) 2021 - 2025 ANSYS, Inc. and/or its affiliates.
+# Copyright (C) 2024 - 2025 ANSYS, Inc. and/or its affiliates.
 # SPDX-License-Identifier: MIT
 #
 #
@@ -29,10 +29,10 @@ import scade.model.suite as suite
 
 if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
-    from os.path import abspath, dirname
+    from pathlib import Path
     import sys
 
-    sys.path.append(abspath(dirname(dirname(dirname(dirname(dirname(__file__)))))))
+    sys.path.append(str(Path(__file__).parent.parent.parent.parent.parent.resolve()))
 
 
 from ansys.scade.design_rules.utils.annotations import (

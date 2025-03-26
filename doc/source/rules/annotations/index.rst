@@ -1,7 +1,7 @@
 .. index:: single: Annotations
 
 Annotations
-===========
+###########
 
 .. category::
    :name: Annotations

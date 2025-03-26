@@ -1,7 +1,7 @@
 .. index:: single: Tracing elements
 
 Tracing elements
-================
+################
 
 .. rule::
    :filename: llr_only.py
@@ -13,7 +13,7 @@ Tracing elements
    Tracing elements must be Contributing Elements
 
 Description
------------
+===========
 The model elements tracing requirements shall be Contributing Elements (CE).
 
 .. end_description
@@ -24,22 +24,22 @@ The model elements tracing requirements shall be Contributing Elements (CE).
 * Transition
 
 Rationale
----------
+=========
 This ensures the consistency of the traceability matrices: The SCADE ALM Gateway exports only the elements defined as CE.
 
 Verification
-------------
+============
 The rule registers to the elements that can have traceability links
 and raises a violation when an element which is not CE has links to high level requirements.
 
 Message: ``the element is not a CE: it shall not trace the requirement(s) <list of requirements ids>``
 
 Resolution
-----------
+==========
 Delete the traceability links.
 
 Customization
--------------
+=============
 When the list of elements that are considered as LLR differs from the one listed in the description,
 derive a new class from ``LLROnly`` and override the function ``is_llr`` as appropriate.
 

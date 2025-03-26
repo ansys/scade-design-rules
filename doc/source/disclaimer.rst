@@ -1,5 +1,5 @@
 Disclaimer
-==========
+##########
 
 This repository contains a **catalog of examples for optional rules** that
 can be added to the **SCADE Metrics and Rules Checker** [1]_.

@@ -1,7 +1,7 @@
 .. index:: single: Packages
 
 Packages
-========
+########
 
 .. category::
    :name: Packages

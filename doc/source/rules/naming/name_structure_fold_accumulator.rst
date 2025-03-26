@@ -1,7 +1,7 @@
 .. index:: single: Accumulator inputs/outputs
 
 Accumulator inputs/outputs
-==========================
+##########################
 
 .. rule::
    :filename: name_structure_fold_accumulator.py
@@ -13,7 +13,7 @@ Accumulator inputs/outputs
    Name structure of accumulator inputs/outputs
 
 Description
------------
+===========
 For the operators iterated with fold constructs (fold, foldi, foldw, foldwi, mapfold, mapfoldi, mapfoldw, mapfoldwi):
 
 * The accumulators are defined by a name prefixed by 'acc'.
@@ -38,11 +38,11 @@ The rule's parameter has the following syntax: ``-i <regular expression> -o <reg
                         ``in``/``out`` expressions for variables which are not accumulators
 
 Rationale
----------
+=========
 This enhances the readability of a model through homogeneous naming.
 
 Verification
-------------
+============
 The rule registers to the inputs and outputs of operators and raises a violation for each element which satisfies all these conditions:
 
 1. The operator is instantiated with an iterator with accumulator (``fold``, ``foldi``, ``foldw``, ``foldwi``, ``mapfold``, ``mapfoldi``, ``mapfoldw``, ``mapfoldiw``).
@@ -58,11 +58,11 @@ which name match the regular expression ``in`` (resp. ``out``), and does not cor
 Message: ``The variable is not used as an accumulator``
 
 Resolution
-----------
+==========
 Rename the model element.
 
 Customization
--------------
+=============
 N/A.
 
 .. seealso::

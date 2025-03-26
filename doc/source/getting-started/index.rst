@@ -1,5 +1,5 @@
 Getting started
-===============
+###############
 To use Ansys SCADE Design Rules, you must have a valid license for Ansys SCADE.
 
 For information on getting a licensed copy, see the

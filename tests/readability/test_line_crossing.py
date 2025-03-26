@@ -20,7 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from typing import Set
+from typing import Set, Tuple
 
 import pytest
 import scade.model.suite as suite
@@ -45,7 +45,7 @@ def session():
 
 
 def check_expected(
-    rule: LineCrossing, objects: Set[tuple[suite.Equation, Set[tuple[suite.Object, suite.Object]]]]
+    rule: LineCrossing, objects: Set[Tuple[suite.Equation, Set[Tuple[suite.Object, suite.Object]]]]
 ):
     if not objects:
         assert not rule.violations

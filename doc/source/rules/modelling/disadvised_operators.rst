@@ -1,7 +1,7 @@
 .. index:: single: Not recommended operators
 
 Not recommended operators
-=========================
+#########################
 
 .. rule::
    :filename: disadvised_operators.py
@@ -14,7 +14,7 @@ Not recommended operators
    Not recommended operators
 
 Description
------------
+===========
 
 .. start_description
 
@@ -27,21 +27,21 @@ Available identifiers are documented in the SCADE Python API guide, under sectio
 Default parameter value is ``46, 47, 51, 52`` (Reverse, Transpose, Slice, Concatenation).
 
 Rationale
----------
+=========
 This enforces compliance with a specific modeling standard by ensuring that a given list of predefined operators is avoided in diagrams.
 
 Note: this is a lighter version of rule :ref:`Forbidden Operators <RuleForbiddenOperators>`: its severity is ``ADVISORY``.
 
 Verification
-------------
+============
 This rule checks all operator calls in a model and fails if one of the listed operators is used.
 
 Resolution
-----------
+==========
 Modify the offending operator calls as detailed in the rule failure message.
 
 Customization
--------------
+=============
 N/A.
 
 .. seealso::

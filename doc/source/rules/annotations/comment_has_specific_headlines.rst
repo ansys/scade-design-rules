@@ -1,7 +1,7 @@
 .. index:: single: Comment has specific headlines
 
 Comment has specific headlines
-==============================
+##############################
 
 .. rule::
    :filename: comment_has_specific_headlines.py
@@ -14,7 +14,7 @@ Comment has specific headlines
    The comment of an Operator shall have specific headlines.
 
 Description
------------
+===========
 
 .. start_description
 
@@ -33,18 +33,18 @@ For example when ``headline=Purpose,Algorithm``, the expected comment pattern is
   <any text>
 
 Rationale
----------
+=========
 This enforces compliance with a specific modeling standard by ensuring operators include
 a comment that start with a list of predetermined headlines.
 
 Verification
-------------
+============
 This rule checks each operator to ensure it has a comment and that the comment matches the expected pattern.
 
 Resolution
-----------
+==========
 Modify offending operator comments to comply with the expected pattern.
 
 Customization
--------------
+=============
 TODO

@@ -1,6 +1,6 @@
 .. index:: single: {{ title }}
 
-{{ title | underline('=') }}
+{{ title | underline('#') }}
 
 .. metric::
    :filename: {{ file }}
@@ -13,7 +13,7 @@
    {{ metric.label }}
 
 Description
------------
+===========
 
 .. start_description
 
@@ -22,10 +22,10 @@ Description
 .. end_description
 
 Computation
------------
+===========
 <TODO>
 
 Customization
--------------
+=============
 N/A.
 

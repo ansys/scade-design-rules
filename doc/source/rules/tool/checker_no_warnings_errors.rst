@@ -1,7 +1,7 @@
 .. index:: single: No checker warnings or errors
 
 No checker warnings or errors
-=============================
+#############################
 
 .. rule::
    :filename: checker_no_warnings_errors.py
@@ -14,7 +14,7 @@ No checker warnings or errors
    Semantic checker shall raise no errors and warnings
 
 Description
------------
+===========
 
 .. start_description
 
@@ -26,18 +26,18 @@ parameter: conf=configuration name
 Default parameter value is ``conf=KCG``.
 
 Rationale
----------
+=========
 This rule runs the SCADE semantic checker at the same time as design rules are checked.
 
 Verification
-------------
+============
 The rule launches the SCADE semantic checker on the project with the specified configuration.
 It raises a violation in case of warnings or errors.
 
 Resolution
-----------
+==========
 Fix semantic checker errors or warnings.
 
 Customization
--------------
+=============
 N/A.

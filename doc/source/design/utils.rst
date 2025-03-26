@@ -1,5 +1,5 @@
 Utilities
-=========
+#########
 
 The ``./src/ansys/scade/design_rules/utils`` directory contains Python
 components to ease the development of metrics and rules.
@@ -16,19 +16,19 @@ The following sections describe the interface of the ``Rule`` class and its serv
 The class ``Metric`` has a similar but simpler design.
 
 Stubs
------
+=====
 
 The class stubs the ``set_message`` method and stores the parameter in ``self.message``.
 This is for testing purposes.
 
 Parameter
----------
+=========
 
 The ``parse_values`` method compiles a parameter string made of comma separated fields ``<name>=<value>``.
 It returns the elements and their value as a dictionary.
 
 Kinds
------
+=====
 The new ``Rule`` class has the same interface as its top-level one plus an additional ``kinds`` parameter.
 The purpose of this parameter is to provide an alternative to the  ``types`` parameter.
 
@@ -69,7 +69,7 @@ The available kinds are defined by a class and a filter:
     WHEN_BLOCK = (suite.WhenBlock, lambda o: True)
 
 Reporting
----------
+=========
 A rule can subscribe and raise violations for any Scade model element,
 including graphical objects or expressions.
 However, these items do not have an OID and it is not possible, for example,

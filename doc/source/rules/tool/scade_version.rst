@@ -1,7 +1,7 @@
 .. index:: single: SCADE version
 
 SCADE version
-=============
+#############
 
 .. rule::
    :filename: scade_version.py
@@ -14,7 +14,7 @@ SCADE version
    Check the version of SCADE Suite models
 
 Description
------------
+===========
 
 .. start_description
 
@@ -24,17 +24,17 @@ The parameter defines the version, for example '242' for SCADE Suite 2024 R2.
 .. end_description
 
 Rationale
----------
+=========
 <TODO>
 
 Verification
-------------
+============
 <TODO>
 
 Resolution
-----------
+==========
 <TODO>
 
 Customization
--------------
+=============
 N/A.

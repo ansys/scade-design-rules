@@ -8,3 +8,4 @@
 
 * [Lars Kosmann](https://github.com/anslkosmann)
 * [Tim Puls](https://github.com/anstpuls)
+* [Abdeljelile Addi](https://github.com/aaddi06)

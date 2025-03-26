@@ -1,7 +1,7 @@
 .. index:: single: Diagram name
 
 Diagram name
-============
+############
 
 .. rule::
    :filename: name_structure_diagram.py
@@ -13,16 +13,16 @@ Diagram name
    Diagram name
 
 Description
------------
+===========
 When there are several diagrams in a scope, the name of each diagram shall be characteristic of its function.
 Otherwise the default name created by the editor shall be updated to the name of its scope.
 
 Rationale
----------
+=========
 This enhances the readability of a model.
 
 Verification
-------------
+============
 The rule registers to the diagrams of a model.
 
 * When there is a single diagram and the scope is either an operator or a state, the rule raises a violation if the names are different
@@ -41,9 +41,9 @@ The rule registers to the diagrams of a model.
     Message: ``<name>: The name shall be a description``
 
 Resolution
-----------
+==========
 Rename the diagram.
 
 Customization
--------------
+=============
 N/A.

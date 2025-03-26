@@ -1,11 +1,11 @@
 Documentation
-=============
+#############
 
 Design
-------
+======
 
 Rule
-~~~~
+----
 
 Each rule must have an associated documentation file with the following sections:
 
@@ -29,7 +29,7 @@ Each directory containing rules' documentation must have a ``index.rst`` file th
 provides a general overview and a table listing all the contained rules.
 
 Metric
-~~~~~~
+------
 
 Each metric must have an associated documentation file with the following sections:
 
@@ -46,7 +46,7 @@ The directory containing metrics' documentation must have a ``index.rst`` file t
 provides a general overview and a table listing all the contained metrics.
 
 Tools
------
+=====
 
 The ``pre-commit`` hook ``update_doc`` ensures each metric or rule is documented and consistent.
 It is based on naming rules.

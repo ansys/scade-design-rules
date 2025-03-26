@@ -1,7 +1,7 @@
 .. index:: single: Check configuration
 
 Check configuration
-===================
+###################
 
 .. rule::
    :filename: check_configuration.py
@@ -14,7 +14,7 @@ Check configuration
    Check configuration
 
 Description
------------
+===========
 
 .. start_description
 
@@ -29,7 +29,7 @@ The list of parameters is given as a comma-separated string. Parameters are:
 * ``conf_source``: name of the reference configuration.
 
 Rationale
----------
+=========
 This enforces the existence of a configuration in the current project,
 with the same properties and values as in a given reference project.
 
@@ -37,7 +37,7 @@ One use case for this is working with multiple projects that must generate the s
 (for example: generate code and cross-compile for the same embedded target).
 
 Verification
-------------
+============
 This rule opens the reference project and searches for the reference configuration.
 Once found, it inventories the reference configuration's properties and values.
 
@@ -48,9 +48,9 @@ The rule succeeds only if there are no differences between the reference configu
 Note that configuration names may be different as they are tied to two separate rule parameters.
 
 Resolution
-----------
+==========
 Modify the offending configuration to comply with that of the source project, as detailed in the rule failure message.
 
 Customization
--------------
+=============
 N/A.

@@ -1,7 +1,7 @@
 .. index:: single: Check configuration custom1
 
 Check configuration custom1
-===========================
+###########################
 
 .. rule::
    :filename: check_configuration_custom1.py
@@ -14,7 +14,7 @@ Check configuration custom1
    Check configuration
 
 Description
------------
+===========
 
 .. start_description
 
@@ -30,11 +30,11 @@ The list of parameters is given as a comma-separated string. Parameters are:
 * ``rootPackage``: name of the root package in the configuration.
 
 Rationale
----------
+=========
 This illustrates how to perform a series of arbitrary, custom checks on a configuration.
 
 Verification
-------------
+============
 This rule finds the target configuration in the current project and makes a series of custom verifications on it:
 
 #. "Skip unused model objects" parameter is unchecked
@@ -47,9 +47,9 @@ This rule finds the target configuration in the current project and makes a seri
 #. If "Global Prefix" is set, its value also prefixes the name of the root operator
 
 Resolution
-----------
+==========
 Modify the offending configuration as detailed in the rule failure message.
 
 Customization
--------------
+=============
 N/A.

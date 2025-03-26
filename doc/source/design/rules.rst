@@ -1,5 +1,5 @@
 Rules
-=====
+#####
 
 The following guidelines ensure the consistency of the repository and allow some automated verifications and tasks.
 
@@ -22,10 +22,10 @@ The following guidelines ensure the consistency of the repository and allow some
 
        if __name__ == '__main__':
           # rule instantiated outside of a package
-          from os.path import abspath, dirname
+          from pathlib import Path
           import sys
 
-          sys.path.append(abspath(dirname(dirname(dirname(dirname(dirname(__file__)))))))
+          sys.path.append(str(Path(__file__).parent.parent.parent.parent.parent.resolve()))
 
   * Provide an instantiation with default parameters at the end of the file:
 

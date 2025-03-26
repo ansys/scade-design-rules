@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (C) 2022 - 2025 ANSYS, Inc. and/or its affiliates.
+# Copyright (C) 2024 - 2025 ANSYS, Inc. and/or its affiliates.
 # SPDX-License-Identifier: MIT
 #
 #
@@ -26,10 +26,10 @@
 
 if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
-    from os.path import abspath, dirname
+    from pathlib import Path
     import sys
 
-    sys.path.append(abspath(dirname(dirname(dirname(dirname(dirname(__file__)))))))
+    sys.path.append(str(Path(__file__).parent.parent.parent.parent.parent.resolve()))
 
 import scade.model.suite as suite
 import scade.model.traceability.local_trace_model as local_trace
@@ -117,7 +117,7 @@ class RequirementHasLink(Rule):
                             if link.action == local_trace.TraceType.ADD_LINK:
                                 number_of_links += 1
                             elif link.action == local_trace.TraceType.UPDATE_LINK:
-                                # todo: needs to be checked
+                                # TODO: needs to be checked
                                 number_of_links += 1
                             elif link.action == local_trace.TraceType.REMOVE_LINK:
                                 number_of_links -= 1

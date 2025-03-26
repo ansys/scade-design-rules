@@ -1,7 +1,7 @@
 .. index:: single: Enumeration definition element order
 
 Enumeration definition element order
-====================================
+####################################
 
 .. rule::
    :filename: enum_definition_elements_order.py
@@ -14,7 +14,7 @@ Enumeration definition element order
    Enumeration definition elements order
 
 Description
------------
+===========
 
 .. start_description
 
@@ -24,17 +24,17 @@ The elements are ordered by name (``by=name``) or by value (``by=value``).
 .. end_description
 
 Rationale
----------
+=========
 Improves legibility and consistency of SCADE enumeration definitions across a model.
 
 Verification
-------------
+============
 The rule iterates over enumeration definitions and checks that their elements are correctly ordered.
 
 Resolution
-----------
+==========
 Modify the offending enumeration to reorder their elements.
 
 Customization
--------------
+=============
 N/A.

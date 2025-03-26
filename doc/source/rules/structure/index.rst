@@ -1,7 +1,7 @@
 .. index:: single: Structure
 
 Structure
-=========
+#########
 
 .. category::
    :name: Structure
