@@ -1,7 +1,7 @@
 .. index:: single: No literals
 
 No literals
-===========
+###########
 
 .. rule::
    :filename: no_literals.py
@@ -14,7 +14,7 @@ No literals
    No literals
 
 Description
------------
+===========
 
 .. start_description
 
@@ -26,13 +26,13 @@ parameter: list of exceptions separated by comma: e.g.: 'true,false'
 The rule parameter is as a comma-separated string that contains constant values that remain authorized. Default value is ``true, false``.
 
 Rationale
----------
+=========
 This enforces compliance with a specific modeling standard by ensuring that raw, literal values are not used directly in the model.
 
 The intent is to improve readability by forbidding the use of "magic numbers" and relying on named constants instead.
 
 Verification
-------------
+============
 This rule checks expressions throughout the model and fails if it finds a raw literal value. The only places where a literal is allowed are:
 
 * Constants
@@ -42,9 +42,9 @@ This rule checks expressions throughout the model and fails if it finds a raw li
 * Projection labels
 
 Resolution
-----------
+==========
 Consider refactoring the offending literal into a constant.
 
 Customization
--------------
+=============
 N/A.

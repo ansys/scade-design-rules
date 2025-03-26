@@ -1,7 +1,7 @@
 .. index:: single: Equation set not empty
 
 Equation set not empty
-======================
+######################
 
 .. rule::
    :filename: eq_set_not_empty.py
@@ -13,26 +13,26 @@ Equation set not empty
    Equation set not empty
 
 Description
------------
+===========
 An equation set shall contain at least one element.
 
 Rationale
----------
+=========
 This helps to identify the equation sets not completed or which have become empty after editing a model.
 An empty equation set does not make sense for traceability.
 
 Verification
-------------
+============
 The rule registers to the equation sets and raises a violation when an equation set does not contain any element.
 
 Message: ``equation set <name> must contain at least one element``
 
 Resolution
-----------
+==========
 Delete the equation set.
 
 Customization
--------------
+=============
 N/A.
 
 .. seealso::

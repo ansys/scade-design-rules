@@ -1,6 +1,6 @@
 .. index:: single: {{ title }}
 
-{{ title | underline('=') }}
+{{ title | underline('#') }}
 
 .. category::
    :name: {{ title }}

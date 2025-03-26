@@ -1,7 +1,7 @@
 .. index:: single: CE or diagram nature
 
 CE or diagram nature
-====================
+####################
 
 .. rule::
    :filename: llr_or_net_nature.py
@@ -13,7 +13,7 @@ CE or diagram nature
    CE must have a design annotation
 
 Description
------------
+===========
 The Contributing Elements (CE) shall have an annotation 'DesignElement' with a property 'Nature'.
 Parameter: '-t': Name of the note type: e.g.: '-t DesignElement'
 
@@ -31,7 +31,7 @@ This rules applies to the following elements:
 * Transition
 
 Rationale
----------
+=========
 The note type ``DesignElement`` is expected to be designed so that the property ``Nature``
 is taken into account when exporting the SCADE Contributing Elements (CE) through SCADE ALM Gateway.
 
@@ -39,13 +39,13 @@ is taken into account when exporting the SCADE Contributing Elements (CE) throug
 * The analysis of the traceability matrices is made easier by filtering the matrices with respect to this property.
 
 Verification
-------------
+============
 The rule registers to the CE and raises a violation when a CE does not have a note of the specified type.
 
 Message: ``the Contributing Element shall have an annotation <note type name>``
 
 Resolution
-----------
+==========
 Create the note instance.
 
 Notes:
@@ -55,7 +55,7 @@ Notes:
   accordingly to the annotation rules of the ``aty`` file.
 
 Customization
--------------
+=============
 This rule is already a customization of the rule :ref:`CE Nature <RuleLLRNature>`.
 
 Refer to the documentation of the instantiation of a rule for details.

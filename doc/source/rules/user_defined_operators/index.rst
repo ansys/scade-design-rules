@@ -1,7 +1,7 @@
 .. index:: single: User defined operators
 
 User defined operators
-======================
+######################
 
 .. category::
    :name: User Defined Operators

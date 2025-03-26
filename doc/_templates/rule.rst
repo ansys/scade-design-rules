@@ -1,6 +1,6 @@
 .. index:: single: {{ title }}
 
-{{ title | underline('=') }}
+{{ title | underline('#') }}
 
 .. rule::
    :filename: {{ file }}
@@ -13,7 +13,7 @@
    {{ rule.label }}
 
 Description
------------
+===========
 
 .. start_description
 
@@ -22,18 +22,18 @@ Description
 .. end_description
 
 Rationale
----------
+=========
 <TODO>
 
 Verification
-------------
+============
 <TODO>
 
 Resolution
-----------
+==========
 <TODO>
 
 Customization
--------------
+=============
 N/A.
 

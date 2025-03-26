@@ -1,5 +1,5 @@
 Requirements
-============
+############
 The ``ansys-scade-design-rules`` package supports only the versions of Python delivered with
 Ansys SCADE, starting from 2021 R2:
 

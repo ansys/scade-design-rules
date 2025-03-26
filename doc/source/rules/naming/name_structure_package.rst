@@ -1,7 +1,7 @@
 .. index:: single: Package name
 
 Package name
-===============
+###############
 
 .. rule::
    :filename: name_structure_package.py
@@ -13,7 +13,7 @@ Package name
    Package name
 
 Description
------------
+===========
 Package names shall be short (at most 10 characters for example).
 
 .. end_description
@@ -24,11 +24,11 @@ Otherwise, they shall comply to the Pascal case naming convention.
 The parameter defines the length limit with the following syntax: ``<length limit>`` (default value: ``10``).
 
 Rationale
----------
+=========
 This avoids too long names, either in the model or in the generated code.
 
 Verification
-------------
+============
 The rule registers to the packages and raises a violation when:
 
 * The length limit is not specified and the name is not an acronym
@@ -44,11 +44,11 @@ The rule registers to the packages and raises a violation when:
   Message: ``<name>: The name shall be composed of a sequence of words``
 
 Resolution
-----------
+==========
 Rename the model element.
 
 Customization
--------------
+=============
 N/A.
 
 .. seealso::

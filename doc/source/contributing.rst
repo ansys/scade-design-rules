@@ -11,7 +11,7 @@ with this guide before attempting to contribute to Ansys SCADE Design Rules.
 The following contribution information is specific to Ansys SCADE Design Rules.
 
 Install in developer mode
--------------------------
+=========================
 
 Installing Ansys SCADE Design Rules in developer mode allows you to modify the
 source and enhance it.
@@ -72,13 +72,13 @@ source and enhance it.
 
 
 Test
-----
+====
 Ansys SCADE Design Rules uses `tox`_ for testing. This tool allows you to
 automate common development tasks (similar to ``Makefile``), but it is oriented
 towards Python development.
 
 Use ``tox``
-^^^^^^^^^^^
+-----------
 
 While ``Makefile`` has rules, ``tox`` has environments. In fact, ``tox`` creates its
 own virtual environment so that anything being tested is isolated from the project
@@ -94,14 +94,14 @@ The following ``tox`` commands are provided:
    * ``tox -e doc-links``: Checks for broken links in the documentation.
 
 Use raw testing
-^^^^^^^^^^^^^^^
+---------------
 If required, from the command line, you can call style commands like
 `black`_, `isort`_, and `flake8`_. You can also call unit testing commands like `pytest`_.
 However, running these commands does not guarantee that your project is being tested in an
 isolated environment, which is the reason why tools like ``tox`` exist.
 
 Use ``pre-commit``
-^^^^^^^^^^^^^^^^^^
+------------------
 Ansys SCADE Design Rules follows the PEP8 standard as outlined in
 `PEP 8 <https://dev.docs.pyansys.com/coding-style/pep8.html>`_ in
 the *PyAnsys developer's guide* and implements style checking using
@@ -133,7 +133,7 @@ This way, it's not possible for you to push code that fails the style checks::
   check pre-commit.ci config...............................................Passed
 
 Build documentation
--------------------
+===================
 For building documentation, you can run the usual rules provided in the
 `Sphinx`_ ``make`` file. Here are some examples:
 
@@ -155,7 +155,7 @@ However, the recommended way of checking documentation integrity is to use
     tox -e doc-html && your_browser_name doc/_build/html/index.html
 
 Distribute
-----------
+==========
 If you would like to create either source or wheel files, start by installing
 the building requirements and then executing the build module:
 
@@ -166,7 +166,7 @@ the building requirements and then executing the build module:
     python -m twine check dist/*
 
 Post issues
------------
+===========
 
 Use the `Ansys SCADE Design Rules Issues <https://github.com/ansys/scade-design-rules/issues>`_
 page to submit questions, report bugs, and request new features. When possible, use

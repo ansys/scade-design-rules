@@ -1,7 +1,7 @@
 .. index:: single: Ann notes present and not empty
 
 Ann notes present and not empty
-===============================
+###############################
 
 .. rule::
    :filename: ann_notes_present_and_not_empty.py
@@ -14,7 +14,7 @@ Ann notes present and not empty
    AnnotationNotes present and not empty
 
 Description
------------
+===========
 
 .. start_description
 
@@ -34,20 +34,20 @@ The rule's parameter has the following syntax: ``-t <type> -n <attribute> [<attr
 
 
 Rationale
----------
+=========
 This enforces compliance with a specific modeling standard by ensuring uniform documentation of model elements through annotations.
 
 Verification
-------------
+============
 This rule checks that model entities of specified types contain annotations of specified types and attributes.
 
 It applies by default to constants and operators.
 
 Resolution
-----------
+==========
 Modify the offending operator interface element to add missing annotations, as detailed in the rule failure message.
 
 Customization
--------------
+=============
 You can override the ``kinds`` (default ``None``) or ``types`` (default ``[suite.Constant, suite.Operator]``) parameters
 when instantiating the rule to specify the objects to consider.

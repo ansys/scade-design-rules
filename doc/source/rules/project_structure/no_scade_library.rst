@@ -1,7 +1,7 @@
 .. index:: single: No SCADE library
 
 No SCADE library
-================
+################
 
 .. rule::
    :filename: no_scade_library.py
@@ -14,7 +14,7 @@ No SCADE library
    SCADE libraries shall not be used in production
 
 Description
------------
+===========
 Only SCADE libraries that are under full control of the project(configuration management, verification) shall be used.
 In particular the designer shall NOT use the SCADE product installation libraries, as they are delivered as examples.
 
@@ -25,11 +25,11 @@ with the following syntax: ``upper_levels=<number>`` (default value: ``upper_lev
 All libraries within the hierarchy from the root are considered under full control of the project.
 
 Rationale
----------
+=========
 This ensures a proper configuration management of all the models involved in the verification and code generation process.
 
 Verification
-------------
+============
 The rule registers to the model and raises a single violation, if any, listing all the libraries.
 
 The rule can't verify the used libraries *are under full control of the project*.
@@ -45,7 +45,7 @@ For example, if the value of ``upper_levels`` is ``2``, a library referenced as
 ``../../../libraries/library/library.etp`` shall raise a violation.
 
 Resolution
-----------
+==========
 1. Use of a SCADE product library:
     * Create a new library in the CM project, for example `libscade.etp`.
     * Copy the used operators from the SCADE library(ies) to the new one, with the same package structure.
@@ -54,5 +54,5 @@ Resolution
 2. External libraries: Reorganize the project structure.
 
 Customization
--------------
+=============
 N/A.

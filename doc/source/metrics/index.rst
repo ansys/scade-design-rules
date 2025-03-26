@@ -1,7 +1,7 @@
 .. index:: single: Metrics
 
 Metrics
-=======
+#######
 
 Set of metrics for Scade models
 

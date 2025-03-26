@@ -1,5 +1,5 @@
 Ansys SCADE Design Rules
-========================
+########################
 |pyansys| |python| |pypi| |GH-CI| |codecov| |MIT| |ruff| |doc|
 
 .. |pyansys| image:: https://img.shields.io/badge/Py-Ansys-ffc107.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABDklEQVQ4jWNgoDfg5mD8vE7q/3bpVyskbW0sMRUwofHD7Dh5OBkZGBgW7/3W2tZpa2tLQEOyOzeEsfumlK2tbVpaGj4N6jIs1lpsDAwMJ278sveMY2BgCA0NFRISwqkhyQ1q/Nyd3zg4OBgYGNjZ2ePi4rB5loGBhZnhxTLJ/9ulv26Q4uVk1NXV/f///////69du4Zdg78lx//t0v+3S88rFISInD59GqIH2esIJ8G9O2/XVwhjzpw5EAam1xkkBJn/bJX+v1365hxxuCAfH9+3b9/+////48cPuNehNsS7cDEzMTAwMMzb+Q2u4dOnT2vWrMHu9ZtzxP9vl/69RVpCkBlZ3N7enoDXBwEAAA+YYitOilMVAAAAAElFTkSuQmCC
@@ -35,13 +35,13 @@ Ansys SCADE Design Rules
 
 
 Overview
---------
+========
 Ansys SCADE Design Rules is a collection of rules for Ansys SCADE Suite Metrics and Checker.
 Rules are used to enforce various constraints on a model, such as consistent naming conventions
 and design methods.
 
 Requirements
-------------
+============
 The ``ansys-scade-design-rules`` package supports only the versions of Python delivered with
 Ansys SCADE, starting from 2021 R2:
 
@@ -53,7 +53,7 @@ see `Getting started <https://design-rules.scade.docs.pyansys.com/version/stable
 To install for development, see `Contribute <https://design-rules.scade.docs.pyansys.com/version/stable/contributing.html>`_.
 
 Documentation and Issues
-------------------------
+========================
 
 Documentation for the latest stable release of Ansys SCADE Design Rules is hosted at
 `Ansys SCADE Design Rules documentation <https://design-rules.scade.docs.pyansys.com/version/stable/index.html>`_.
@@ -67,7 +67,7 @@ page, you can create issues to report bugs and request new features. On the `Dis
 page on the Ansys Developer portal, you can post questions, share ideas, and get community feedback.
 
 License
-~~~~~~~
+=======
 Ansys SCADE Design Rules is licensed under the MIT license.
 
 This toolkit makes no commercial claim over Ansys whatsoever. The use of this toolkit

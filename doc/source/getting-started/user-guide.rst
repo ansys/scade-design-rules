@@ -1,5 +1,5 @@
 User guide
-==========
+##########
 Ansys SCADE Design Rules is a database of metrics and rules that enforce various design practices on a model.
 
 While it is possible to individually reference each rule to add them to a SCADE project,
@@ -10,7 +10,7 @@ This tutorial presents the basic steps to setup such a collection of rules for a
 Note that a SCADE project may use several collections of rules.
 
 Rules
------
+=====
 Browse or search the documentation for the rules you want to use.
 
 For example, consider the following naming rules:
@@ -27,7 +27,7 @@ For example, the Python module defining the rule ``CamelCaseNaming``, from the c
 is ``ansys.scade.design_rules.naming.camel_case_naming``.
 
 Instantiation
--------------
+=============
 Each rule is implemented as a Python class.
 Once the rules have been identified, create a Python script that instantiates their classes.
 This script can be saved anywhere on your file system.
@@ -37,7 +37,7 @@ This script can be saved anywhere on your file system.
 .. _ug_customization:
 
 Customization
--------------
+=============
 The rules have default properties that can be overridden at instantiation.
 The following properties are available for every rule:
 
@@ -63,7 +63,7 @@ For example:
 .. literalinclude :: resources/metric_custom.py
 
 Registration
-------------
+============
 Register the script as described in the section *Managing Project Metrics and Rules* of the SCADE Suite documentation.
 
 Note that Ansys SCADE 2024 R2 can also access rules from installed Python packages.

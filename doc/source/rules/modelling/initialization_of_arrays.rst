@@ -1,7 +1,7 @@
 .. index:: single: Initialization of arrays
 
 Initialization of arrays
-========================
+########################
 
 .. rule::
    :filename: initialization_of_arrays.py
@@ -14,7 +14,7 @@ Initialization of arrays
    Initialization of Arrays
 
 Description
------------
+===========
 
 .. start_description
 
@@ -24,7 +24,7 @@ Note: An initialization such as ' ', ' ', ' ', etc. leads to more memory usage t
 .. end_description
 
 Rationale
----------
+=========
 This rule ensures that arrays are always initialized with maximum efficiency.
 
 Initializing arrays with a ``[value, value, ...]`` notation with all-similar values generates larger model files
@@ -33,7 +33,7 @@ than using a ``value^N`` notation. On very large arrays, this may lengthen proje
 Enforcing a ``value^N`` notation ensures model file size and loading times are optimized.
 
 Verification
-------------
+============
 
 .. vale off
    avoid warning on ...
@@ -52,9 +52,9 @@ notation that uses the same value for each item.
   .. vale on
 
 Resolution
-----------
+==========
 Modify the offending array initialization to use a ``value^N`` notation.
 
 Customization
--------------
+=============
 N/A.

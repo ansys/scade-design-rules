@@ -1,7 +1,7 @@
 .. index:: single: Ann notes for named types or variables
 
 Ann notes for named types or variables
-======================================
+######################################
 
 .. rule::
    :filename: ann_notes_for_named_types_or_variables.py
@@ -14,7 +14,7 @@ Ann notes for named types or variables
    AnnotationNotes for variables with basic type
 
 Description
------------
+===========
 
 .. start_description
 
@@ -26,21 +26,21 @@ parameter: '-t': Name of the annotation note type: e.g.: '-t SDD_TopLevel'
 .. end_description
 
 Rationale
----------
+=========
 This enforces compliance with a specific modeling standard by ensuring that all named types
 or variables don't only show the *what* (the shape of the data itself), but also the *why*,
 by documenting what the data corresponds to and what real-world quantities they represent.
 
 Verification
-------------
+============
 This rule checks that all ``NamedType`` or ``Variable`` entities inside the model contain
 annotations ``Description`` and ``Constraints``. For all entities that are **not** ``bool``
 or ``char`` types, it also checks that they contain annotations ``Min_Value``, ``Max_Value`` and ``Unit_SI``.
 
 Resolution
-----------
+==========
 Modify the offending type or variable to add missing annotations, as detailed in the rule failure message.
 
 Customization
--------------
+=============
 TODO.

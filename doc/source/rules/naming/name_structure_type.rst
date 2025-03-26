@@ -1,7 +1,7 @@
 .. index:: single: Type name structure
 
 Type name structure
-===================
+###################
 
 .. rule::
    :filename: name_structure_type.py
@@ -14,7 +14,7 @@ Type name structure
    Type Name Structure
 
 Description
------------
+===========
 
 .. start_description
 
@@ -28,11 +28,11 @@ Rule parameters are given as a comma-separated list. Parameters are:
 * ``suffix``: expected type name suffix. Default value is ``_t``.
 
 Rationale
----------
+=========
 This enhances the readability of a model through homogeneous naming.
 
 Verification
-------------
+============
 The rule registers to named types and raises a violation when:
 
 * The name does not match the expected prefix
@@ -44,9 +44,9 @@ The rule registers to named types and raises a violation when:
   Message: ``Type name does not end with <suffix>``
 
 Resolution
-----------
+==========
 Rename the offending type.
 
 Customization
--------------
+=============
 N/A.

@@ -1,7 +1,7 @@
 .. index:: single: Page format
 
 Page format
-===========
+###########
 
 .. rule::
    :filename: page_format.py
@@ -14,7 +14,7 @@ Page format
    Check Page Format.
 
 Description
------------
+===========
 
 .. start_description
 
@@ -31,17 +31,17 @@ The list of parameters is given as a comma-separated string. Parameters are:
 * ``orientation``: desired page orientation. Possible values: ``Landscape``, ``Portrait``.
 
 Rationale
----------
+=========
 This enforces compliance with a specific project page format printing standard by ensuring properties comply with expectations.
 
 Verification
-------------
+============
 This rule checks the project-level page format properties and compares them to the given parameter values.
 
 Resolution
-----------
+==========
 Modify the project's page configuration to match expectations.
 
 Customization
--------------
+=============
 TODO

@@ -1,5 +1,5 @@
 Metrics
-=======
+#######
 
 The following guidelines ensure the consistency of the repository and allow some automated verifications and tasks.
 

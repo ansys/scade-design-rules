@@ -1,7 +1,7 @@
 .. index:: single: Forbidden operators
 
 Forbidden operators
-===================
+###################
 
 .. rule::
    :filename: forbidden_operators.py
@@ -14,7 +14,7 @@ Forbidden operators
    Forbidden Operators
 
 Description
------------
+===========
 
 .. start_description
 
@@ -28,7 +28,7 @@ Available identifiers are documented in the SCADE Python API guide, under sectio
 Default parameter value is ``45, 28`` (Merge, When).
 
 Rationale
----------
+=========
 This enforces compliance with a specific modeling standard by ensuring that a given list of predefined operators is avoided in diagrams.
 
 The default value of the rule parameter prevents use of the Merge and When operators, that are not intended for direct use and are hidden from toolbars by default in the SCADE editor.
@@ -36,15 +36,15 @@ The default value of the rule parameter prevents use of the Merge and When opera
 Note: this is a stronger version of rule :ref:`Disadvised Operators <RuleDisadvisedOperators>`: its severity is ``REQUIRED``.
 
 Verification
-------------
+============
 This rule checks all operator calls in a model and fails if one of the operators in the parameter list is called.
 
 Resolution
-----------
+==========
 Modify the offending operator calls as detailed in the rule failure message.
 
 Customization
--------------
+=============
 N/A.
 
 .. seealso::

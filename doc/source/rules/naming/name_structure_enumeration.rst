@@ -1,7 +1,7 @@
 .. index:: single: Enumeration name structure
 
 Enumeration name structure
-==========================
+##########################
 
 .. rule::
    :filename: name_structure_enumeration.py
@@ -14,7 +14,7 @@ Enumeration name structure
    Enumeration Name Structure
 
 Description
------------
+===========
 
 .. start_description
 
@@ -26,11 +26,11 @@ In addition a three letter abbreviation of the corresponding type shall be avail
 The rule parameter describes the desired prefix (if its ends with a ``_`` character) or suffix (if it starts with a ``_`` character). Default value is ``_e``.
 
 Rationale
----------
+=========
 This enhances the readability of a model through homogeneous naming.
 
 Verification
-------------
+============
 The rule registers to enumeration constants and raises a violation when:
 
 * The name does not start with the expected prefix
@@ -54,9 +54,9 @@ The rule registers to enumeration constants and raises a violation when:
   Message: ``Enumeration name is too short``
 
 Resolution
-----------
+==========
 Rename the offending enumeration constant.
 
 Customization
--------------
+=============
 N/A.
