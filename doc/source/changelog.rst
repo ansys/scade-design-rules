@@ -9,6 +9,45 @@ This document contains the release notes for the project.
 
 .. towncrier release notes start
 
+`0.1.2 <https://github.com/ansys/scade-design-rules/releases/tag/v0.1.2>`_ - March 26, 2025
+===========================================================================================
+
+.. tab-set::
+
+
+  .. tab-item:: Documentation
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - chore: Upgrade the repository configuration
+          - `#24 <https://github.com/ansys/scade-design-rules/pull/24>`_
+
+
+  .. tab-item:: Dependencies
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - build: Bump the dependencies group with 2 updates
+          - `#23 <https://github.com/ansys/scade-design-rules/pull/23>`_
+
+        * - build(deps): Bump the dependencies group with 3 updates
+          - `#25 <https://github.com/ansys/scade-design-rules/pull/25>`_
+
+
+  .. tab-item:: Maintenance
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - chore: Enable Python 3.12 and greater
+          - `#26 <https://github.com/ansys/scade-design-rules/pull/26>`_
+
+
 `0.1.1 <https://github.com/ansys/scade-design-rules/releases/tag/v0.1.1>`_ - 2025-02-27
 =======================================================================================
 
