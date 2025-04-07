@@ -32,13 +32,13 @@ Performs checks and updates the documentation from the metrics and rules.
 """
 
 import importlib
-import importlib.util
 from pathlib import Path
 import re
 import sys
 from typing import Any
 
-import jinja2
+from jinja2 import Environment, FileSystemLoader
+from rich import print
 
 environment = None
 
@@ -55,14 +55,13 @@ def create_category(dir: Path, context) -> None | Path:
     try:
         template = environment.get_template(model)
     except BaseException as e:
-        print(e)
+        print(f'[red]{e}[/red]')
         return None
     dir.mkdir(exist_ok=True)
     text = template.render(context)
     file = (dir / model).with_stem('index')
-    with file.open('w') as f:
-        f.write(text)
-    print('creating', file)
+    file.write_text(text)
+    print(f'[red]Creating, {file}[/red]')
     return dir
 
 
@@ -72,13 +71,12 @@ def create_rst(file: Path, context, model: str) -> None | Path:
     try:
         template = environment.get_template(model)
     except BaseException as e:
-        print(e)
+        print(f'[red]{e}[/red]')
         return None
     file.parent.mkdir(exist_ok=True)
     text = template.render(context)
-    with file.open('w') as f:
-        f.write(text)
-    print('creating', file)
+    file.write_text(text)
+    print(f'[red]Creating {file}[/red]')
     return file
 
 
@@ -107,7 +105,7 @@ def update_rst(file: Path, instance, kind: str) -> bool:
     # make the lines consistent
     description = '\n'.join(description).split('\n')
 
-    lines = file.open().read().split('\n')
+    lines = file.read_text().split('\n')
     newlines = []
     marker = None
     mode = 'idle'
@@ -179,20 +177,20 @@ def update_rst(file: Path, instance, kind: str) -> bool:
 
     if mode == 'descr_area':
         ok = False
-        print("%s: '.. end description' not found" % file.name)
+        print(f"[red]Error: '.. end description' not found for {file.name}[/red]")
     elif mode == 'descr':
         ok = False
-        print("%s: next section after 'description' not found" % file.name)
+        print(f"[red]Error: next section after 'description' not found for {file.name}[/red]")
     elif mode != 'done':
         ok = False
-        print('%s: parse error' % file.name)
+        print(f'[red]Error: parse error for {file.name}[/red]')
     else:
         # flush the file
         if newlines[-1] != '':
             # make sure the file ends with an emptyline
             newlines.append('')
         if newlines != lines:
-            print('updating', file)
+            print(f'[red]Error: Updating, {file}[/red]')
             file.open('w').write('\n'.join(newlines))
             ok = False
 
@@ -221,7 +219,7 @@ def metric_rule_instance(module: str) -> Any:
     if not rule_metric_class_:
         rule_metric_class_ = getattr(m, 'Metric', None)
     if not rule_metric_class_:
-        print('warning: no metric/rule found in %s' % module)
+        print(f'[red]Error: no metric/rule found in {module}[/red]')
         return None
 
     rule_metric_class_.__init__ = local_init
@@ -239,11 +237,11 @@ def metric_rule_instance(module: str) -> Any:
                 break
             elif isinstance(value, rule_metric_class_):
                 # hope there is only one rule in the file
-                print('warning: considering %s instead of %s' % (attr, class_name))
+                print(f'[yellow]Warning: considering {attr} instead of {class_name}[/yellow]')
                 class_ = value
                 break
         else:
-            print('%s.%s: class error' % (module, class_name))
+            print(f'[red]Class error: {module}.{class_name} class was not found[/red]')
             return None
     return class_()
 
@@ -258,14 +256,14 @@ def update_doc(root: Path) -> int:
         importlib.__import__('ansys.scade.apitools')
     except BaseException:
         exit_code = 1
-        print('apitools', 'import error')
+        print('[red]ansys.scade.apitools could not be imported[/red]')
         return exit_code
 
     # catalog of rules: (id, category, class)
     catalog: list[tuple[str, str, str]] = []
 
-    environment = jinja2.Environment(
-        loader=jinja2.FileSystemLoader(str(root / 'doc' / '_templates'))
+    environment = Environment(
+        loader=FileSystemLoader(str(root / 'doc' / '_templates'))
     )
     environment.filters['underline'] = filter_underline
 
@@ -284,26 +282,26 @@ def update_doc(root: Path) -> int:
         try:
             doc = docs.pop(src.name)
         except KeyError:
-            print('%s: no doc directory' % src.name)
+            print(f'[red]Error: no doc directory for {src.name} rule set[/red]')
             doc = None
-        if not doc or not (doc / 'index.rst').exists():
+        if doc is None or not (doc / 'index.rst').exists():
             exit_code = 1
             name = src.name
             # rules only
             assert name != 'metrics'
             context = {
                 'filter': name,
-                'title': ' '.join([_.capitalize() for _ in name.split('_')]),
+                'title': name.title().replace('_', ' '),
             }
             doc = create_category(root / rules_dir / name, context)
-        if not doc:
+        if doc is None:
             continue
         rsts = {_.stem.lower(): _ for _ in doc.glob('*.rst') if _.stem.lower() != 'index'}
         rules = sorted([_ for _ in src.glob('*.py') if _.name != '__init__.py'])
         for rule in rules:
             name = rule.stem
             # create an instance of the rule to get its attributes
-            instance = metric_rule_instance('%s.%s' % (src.name, rule.stem))
+            instance = metric_rule_instance(f'{src.name}.{rule.stem}')
             # metric_rule_instance could return `kind` instead of relying on some attribute
             kind = 'rule' if hasattr(instance, 'severity') else 'metric'
             if not instance:
@@ -315,7 +313,7 @@ def update_doc(root: Path) -> int:
                     exit_code = 1
             else:
                 exit_code = 1
-                print('%s/%s: no rst file' % (doc.name, rule.name))
+                print(f'[red]Error: no rst file found for {doc.name}/{rule.name} rule[/red]')
                 # create a default rst file from the template
                 if instance:
                     tokens = name.split('_')
@@ -333,15 +331,15 @@ def update_doc(root: Path) -> int:
             catalog.append((instance.id, src.name, rule.stem))
         for rst in sorted(rsts.keys()):
             exit_code = 1
-            print('%s/%s: no rule' % (doc.name, rsts[rst].name))
+            print(f'[red]Error: No rule found for {doc.name}/{rsts[rst].name} doc file[/red]')
 
     # write the catalog
     catalog.sort(key=lambda t: t[0])
-    path = root / 'src/ansys/scade/design_rules' / 'catalog.txt'
-    with path.open('w') as f:
-        f.write('id\tcategory\tname\n')
+    catalog_path = root / 'src/ansys/scade/design_rules' / 'catalog.txt'
+    with catalog_path.open('w') as file:
+        file.write('id\tcategory\tname\n')
         for id, category, name in catalog:
-            f.write(f'{id}\t{category}\t{name}\n')
+            file.write(f'{id}\t{category}\t{name}\n')
 
     return exit_code
 
