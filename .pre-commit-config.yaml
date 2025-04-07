@@ -94,3 +94,6 @@ repos:
     args: [./tools/check_models/check_models.py]
     always_run: true
     pass_filenames: false
+    additional_dependencies: [
+        'rich',
+    ]

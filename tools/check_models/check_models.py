@@ -26,6 +26,8 @@
 from pathlib import Path
 import sys
 
+from rich import print
+
 
 def check_models(root: Path) -> int:
     """Check there is one example per rule and vice versa."""
@@ -43,24 +45,20 @@ def check_models(root: Path) -> int:
             model = models.pop(src.name)
         except KeyError:
             exit_code = 1
-            print('%s: no examples' % src.name)
+            print(f'[red]Error: {src.name} rule set has no examples[/red]')
             continue
         examples = {_.name.lower(): _.name for _ in model.glob('*') if _.is_dir()}
         rules = sorted([_ for _ in src.glob('*.py') if _.name != '__init__.py'])
         for rule in rules:
-            name = ''.join([_.capitalize() for _ in rule.stem.split('_')])
+            name = rule.stem.replace('_', '')
             try:
-                examples.pop(name.lower())
+                examples.pop(name)
             except KeyError:
                 exit_code = 1
-                print('%s/%s: no example' % (model.name, rule.name))
+                print(f'[red]Error: {model.name}/{rule.name} rule has no example[/red]')
         for example in sorted(examples.keys()):
             # do not fail, some rules might have more than one example
-            # exit_code = 1
-            print('warning: %s/%s: no rule' % (model.name, examples[example]))
-        # for example in sorted(list(examples)):
-        #     failure = 1
-        #     print('%s/%s: no rule' % (model.name, example))
+            print(f'[yellow]Warning: {model.name}/{examples[example]} example has no rule[/yellow]')
 
     return exit_code
 
