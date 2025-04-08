@@ -66,7 +66,7 @@ class StatemachineHasDefaultState(Rule):
 
     def on_check(self, object_: suite.Object, parameter: str = None) -> int:
         """Return the evaluation status for the input object."""
-        if all((get_pragma_tool_text(_, 'kcg', 'default') is None for _ in object_.states)):
+        if all(get_pragma_tool_text(_, 'kcg', 'default') is None for _ in object_.states):
             self.set_message('State machine without default state.')
             return Rule.FAILED
         return Rule.OK

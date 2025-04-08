@@ -66,7 +66,7 @@ class EnumHasDefaultCase(Rule):
 
     def on_check(self, object_: suite.Object, parameter: str = None) -> int:
         """Return the evaluation status for the input object."""
-        if all((get_pragma_tool_text(_, 'kcg', 'default') is None for _ in object_.values)):
+        if all(get_pragma_tool_text(_, 'kcg', 'default') is None for _ in object_.values):
             self.set_message('Enumeration without default case.')
             return Rule.FAILED
         return Rule.OK
