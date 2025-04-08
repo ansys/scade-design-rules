@@ -76,14 +76,14 @@ class CheckConfigurationCustom1(Rule):
         """Get the rule's parameters."""
         d = self.parse_values(parameter)
         if d is None:
-            message = "'%s': parameter syntax error" % parameter
+            message = f"'{parameter}': parameter syntax error"
         else:
             conf = d.get('conf')
             root_package = d.get('rootPackage')
             if not conf:
-                message = "'%s': missing 'conf' value" % parameter
+                message = f"'{parameter}': missing 'conf' value"
             elif not root_package:
-                message = "'%s': missing 'rootPackage' value" % parameter
+                message = f"'{parameter}': missing 'rootPackage' value"
             else:
                 self.conf = conf
                 self.root_package = root_package
@@ -116,7 +116,7 @@ class CheckConfigurationCustom1(Rule):
             if prop_value.startswith(rootnode_start):
                 break
         else:
-            failure_messages.append('Root node does not start with: ' + rootnode_start)
+            failure_messages.append(f'Root node does not start with: {rootnode_start}')
 
         # 3 Code Integration settings
         if project.get_scalar_tool_prop_def('GENERATOR', 'TARGET_ADAPTOR', '', configuration):
@@ -132,7 +132,7 @@ class CheckConfigurationCustom1(Rule):
         user_config = '..\\..\\include\\' + object_.name + '_user_macros.h'
         value = project.get_scalar_tool_prop_def('GENERATOR', 'USER_CONFIG', '', configuration)
         if value != user_config:
-            failure_messages.append('User Config not set to: ' + user_config)
+            failure_messages.append(f'User Config not set to: {user_config}')
 
         # 6 Compiler settings
         value = project.get_scalar_tool_prop_def('SIMULATOR', 'CPU_TYPE', '', configuration)
@@ -157,7 +157,7 @@ class CheckConfigurationCustom1(Rule):
             if package.name == self.root_package:
                 root_package = package
                 break
-        if root_package is not None:
+        if root_package:
             # assumption: only one public operator which is the root operator
             for operator in root_package.operators:
                 if operator.visibility == 'Public':
@@ -165,17 +165,14 @@ class CheckConfigurationCustom1(Rule):
                     prefix_desired = (operator.name.split('_'))[-1]
         value = project.get_scalar_tool_prop_def('GENERATOR', 'GLOBALS_PREFIX', '', configuration)
         if value:
-            if number_of_public == 1:
-                if value != prefix_desired:
-                    failure_messages.append('Global Prefix not set to: ' + prefix_desired)
+            if number_of_public == 1 and value != prefix_desired:
+                    failure_messages.append(f'Global Prefix not set to: {prefix_desired}')
         else:
             failure_messages.append('Global Prefix not set')
 
         if failure_messages:
             self.set_message(
-                'Configuration not correct ('
-                + str(len(failure_messages))
-                + '): '
+                f'Configuration not correct ({len(failure_messages)}): '
                 + ', '.join(failure_messages)
             )
             return Rule.FAILED
