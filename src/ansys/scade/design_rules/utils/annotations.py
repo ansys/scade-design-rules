@@ -158,7 +158,7 @@ class AnnotationRule(Rule):
             # search for the note type
             self.note_type = get_note_type(model, self.options.note_type)
             if not self.note_type:
-                message = "'%s': unknown note type" % self.options.note_type
+                message = f"'{self.options.note_type}': unknown note type"
             else:
                 return Rule.OK
         else:

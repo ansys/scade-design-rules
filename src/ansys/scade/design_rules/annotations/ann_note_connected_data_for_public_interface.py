@@ -84,7 +84,7 @@ class AnnNoteConnectedDataForPublicInterface(Rule):
         )
         self.note_type = get_note_type(model, self.connected_data)
         if not self.note_type:
-            message = "'%s': unknown note type" % self.connected_data
+            message = f"'{self.connected_data}': unknown note type"
         else:
             parser = ParameterParser(prog='')
             parser.add_argument(
@@ -118,13 +118,14 @@ class AnnNoteConnectedDataForPublicInterface(Rule):
             assert object_.is_output()
             self._check_annotation(object_, self.out_port, True)
 
-        if len(self.violation_text_missing) > 0:
+        if self.violation_text_missing:
             self.set_message('Annotation wrong: ' + ', '.join(self.violation_text_missing))
             return Rule.FAILED
 
         return Rule.OK
 
     def _check_annotation(self, object_: suite.Object, port: str, primary: bool):
+        """Check the annotation for the given object."""
         note = get_first_note_by_type(object_, self.note_type)
         defined, connected_port = is_ann_note_value_defined_and_get_value(note, 'ConnectedPort')
         if not defined:
@@ -143,9 +144,8 @@ class AnnNoteConnectedDataForPublicInterface(Rule):
         defined, is_primary = is_ann_note_value_defined_and_get_value(note, 'IsPrimary')
         if not defined:
             self.violation_text_missing.append('IsPrimary not defined')
-        else:
-            if is_primary != primary:
-                self.violation_text_missing.append('IsPrimary not ' + str(primary))
+        elif is_primary != primary:
+            self.violation_text_missing.append('IsPrimary not ' + str(primary))
 
 
 if __name__ == '__main__':  # pragma: no cover

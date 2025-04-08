@@ -105,21 +105,22 @@ class AnnNotesPresentAndNotEmpty(AnnotationRule):
         violation_text = self._check_annotation(object_)
 
         if violation_text:
-            self.set_message('Annotation error for ' + object_.name + ': ' + violation_text)
+            self.set_message(f'Annotation error for {object_.name}: {violation_text}')
             return Rule.FAILED
         return Rule.OK
 
     def _check_annotation(self, object_: suite.Annotable) -> str:
+        """Check the annotation for the given object."""
         violations = []
         assert self.note_type
         note = get_first_note_by_type(object_, self.note_type)
         if note is None:
-            violations.append('Note missing: ' + self.note_type.name)
+            violations.append(f'Note missing: {self.note_type.name}')
         else:
             for name in self.names:
                 defined, _ = is_ann_note_value_defined_and_get_value(note, name)
                 if not defined:
-                    violations.append('Name missing: ' + name)
+                    violations.append(f'Name missing: {name}')
 
         return ', '.join(violations)
 

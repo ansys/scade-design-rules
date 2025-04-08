@@ -109,13 +109,14 @@ class AnnNotesForNamedTypesOrVariables(AnnotationRule):
 
         if violation_text_missing:
             self.set_message(
-                'Annotation missing for ' + object_.name + ': ' + ', '.join(violation_text_missing)
+                f'Annotation missing for {object_.name}: ' + ', '.join(violation_text_missing)
             )
             return Rule.FAILED
 
         return Rule.OK
 
     def _is_eligible_for_annotation(self, typed: suite.TypedObject) -> bool:
+        """Check if the given object is eligible for annotation."""
         # named types are both types and typed objects
         if isinstance(typed, suite.NamedType) and (typed.is_imported() or typed.is_generic()):
             # type itself, if it has a constraint, i.e. is numeric,
@@ -131,6 +132,7 @@ class AnnNotesForNamedTypesOrVariables(AnnotationRule):
         )
 
     def _check_annotation(self, object_: suite.Object) -> List[str]:
+        """Check the annotation for the given object."""
         violation_text_missing = []
 
         ann_note = get_first_note_by_type(object_, self.note_type)

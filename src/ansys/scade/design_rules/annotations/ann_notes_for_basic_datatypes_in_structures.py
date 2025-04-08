@@ -106,12 +106,13 @@ class AnnNotesForBasicDataTypesInStructures(AnnotationRule):
 
         if violation_text_missing:
             self.set_message(
-                'Annotation missing for ' + object_.name + ': ' + ', '.join(violation_text_missing)
+                f'Annotation missing for {object_.name}: ' + ', '.join(violation_text_missing)
             )
             return Rule.FAILED
         return Rule.OK
 
     def _check_annotation(self, object_: suite.CompositeElement, type_: suite.Type) -> List[str]:
+        """Check the annotation for the given object."""
         violation_text_missing = []
 
         ann_note = get_first_note_by_type(object_, self.note_type)

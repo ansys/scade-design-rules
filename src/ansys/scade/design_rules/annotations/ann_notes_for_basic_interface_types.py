@@ -111,7 +111,7 @@ class AnnNotesForBasicInterfaceTypes(AnnotationRule):
 
         return Rule.NA
 
-    def _check_object(self, typed: suite.TypedObject):
+    def _check_object(self, typed: suite.TypedObject):      
         # typed: context of the check, for annotations
         # must not be a table or a predefined type, that are typed objects without annotations
         assert not isinstance(typed, suite.Table)
@@ -153,6 +153,7 @@ class AnnNotesForBasicInterfaceTypes(AnnotationRule):
                 self.add_rule_status(typed, Rule.FAILED, message, '')
 
     def _check_annotation(self, object_: suite.Annotable) -> List[str]:
+        """Check the annotation for the given object."""
         violation_text_missing = []
 
         ann_note = get_first_note_by_type(object_, self.note_type)
