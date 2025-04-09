@@ -132,9 +132,11 @@ class PragmaManifest(Rule):
             # search the root operators where the type is used, as main type, in the interface
             operators = set()
             for typed in type_.typed_objects:
-                if isinstance(typed, suite.LocalVariable) and (
-                    typed.is_input() or typed.is_hidden() or typed.is_output()
-                ) and self._is_root(typed.operator):
+                if (
+                    isinstance(typed, suite.LocalVariable)
+                    and (typed.is_input() or typed.is_hidden() or typed.is_output())
+                    and self._is_root(typed.operator)
+                ):
                     operators.add(typed.operator.get_full_path().strip('/'))
             if not operators:
                 # the type is not directly involved in the signature of a root operator

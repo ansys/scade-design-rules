@@ -111,7 +111,7 @@ class AnnNotesForBasicInterfaceTypes(AnnotationRule):
 
         return Rule.NA
 
-    def _check_object(self, typed: suite.TypedObject):      
+    def _check_object(self, typed: suite.TypedObject):
         # typed: context of the check, for annotations
         # must not be a table or a predefined type, that are typed objects without annotations
         assert not isinstance(typed, suite.Table)

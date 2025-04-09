@@ -179,9 +179,7 @@ class IdenticalForProducerConsumer(AnnotationRule):
             if consumer_unit_si_defined:
                 if not producer_unit_si_defined:
                     self.violated = True
-                    self.violation_text.append(
-                        f'{self.unit_field}: {producer.name} is redefined.'
-                    )
+                    self.violation_text.append(f'{self.unit_field}: {producer.name} is redefined.')
                 elif consumer_unit_si != producer_unit_si:
                     self.violated = True
                     self.violation_text.append(
@@ -199,9 +197,7 @@ class IdenticalForProducerConsumer(AnnotationRule):
             if consumer_min_defined:
                 if not producer_min_defined:
                     self.violated = True
-                    self.violation_text.append(
-                        f'{self.min_field}: {producer.name} is redefined.'
-                    )
+                    self.violation_text.append(f'{self.min_field}: {producer.name} is redefined.')
                 elif float(consumer_min) > float(producer_min):
                     self.violated = True
                     self.violation_text.append(
@@ -219,9 +215,7 @@ class IdenticalForProducerConsumer(AnnotationRule):
             if consumer_max_defined:
                 if not producer_max_defined:
                     self.violated = True
-                    self.violation_text.append(
-                        f'{self.max_field}: {producer.name} is redefined.'
-                    )
+                    self.violation_text.append(f'{self.max_field}: {producer.name} is redefined.')
                 elif float(consumer_max) < float(producer_max):
                     self.violated = True
                     self.violation_text.append(

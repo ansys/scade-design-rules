@@ -87,7 +87,7 @@ class NoAnonymousType(Rule):
                     )
             # no error
             return Rule.OK
-        
+
         message = f"'{parameter}': parameter syntax error"
         self.set_message(message)
         scade.output(message + '\n')

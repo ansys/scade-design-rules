@@ -103,7 +103,7 @@ class PageFormat(Rule):
         if net_diagram.landscape and self.orientation != 'Landscape':
             violated = True
             failure_messages.append('Orientation is set to Landscape.')
-            
+
         if not net_diagram.landscape and self.orientation != 'Portrait':
             violated = True
             failure_messages.append('Orientation is set to Portrait.')

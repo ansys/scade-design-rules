@@ -262,9 +262,7 @@ def update_doc(root: Path) -> int:
     # catalog of rules: (id, category, class)
     catalog: list[tuple[str, str, str]] = []
 
-    environment = Environment(
-        loader=FileSystemLoader(str(root / 'doc' / '_templates'))
-    )
+    environment = Environment(loader=FileSystemLoader(str(root / 'doc' / '_templates')))
     environment.filters['underline'] = filter_underline
 
     rules_dir = 'doc/source/rules/'

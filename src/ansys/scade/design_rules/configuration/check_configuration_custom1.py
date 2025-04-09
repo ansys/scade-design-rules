@@ -166,7 +166,7 @@ class CheckConfigurationCustom1(Rule):
         value = project.get_scalar_tool_prop_def('GENERATOR', 'GLOBALS_PREFIX', '', configuration)
         if value:
             if number_of_public == 1 and value != prefix_desired:
-                    failure_messages.append(f'Global Prefix not set to: {prefix_desired}')
+                failure_messages.append(f'Global Prefix not set to: {prefix_desired}')
         else:
             failure_messages.append('Global Prefix not set')
 
