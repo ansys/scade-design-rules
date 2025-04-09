@@ -73,7 +73,7 @@ class ForbiddenOperators(Rule):
         """Return the evaluation status for the input object."""
         if str(object_.predef_opr) in self.forbidden_operators:
             container = self.get_closest_annotatable(object_)
-            error_msg = 'Forbidden operator used: ' + object_.to_string()
+            error_msg = f'Forbidden operator used: {object_.to_string()}'
             identifier = object_.to_string()
             self.add_rule_status(container, Rule.FAILED, error_msg, identifier)
 

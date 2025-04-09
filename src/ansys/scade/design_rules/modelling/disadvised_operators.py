@@ -73,8 +73,8 @@ class DisadvisedOperators(Rule):
         """Return the evaluation status for the input object."""
         if str(object_.predef_opr) in self.disadvised_operators:
             container = self.get_closest_annotatable(object_)
-            error_msg = 'Disadvised operator used: ' + object_.to_string()
             identifier = object_.to_string()
+            error_msg = f'Disadvised operator used: {identifier}'
             self.add_rule_status(container, Rule.FAILED, error_msg, identifier)
 
         return Rule.NA

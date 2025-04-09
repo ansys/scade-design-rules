@@ -90,13 +90,8 @@ class NoLastWithoutDefault(Rule):
                         break
 
         if violated:
-            self.set_message(
-                "Assignment (last 'variable -> (L)variable) found ( "
-                + right.to_string()
-                + ' -> '
-                + left_name
-                + ' )'
-            )
+            message = "Assignment (last 'variable -> (L)variable) found ( {} -> {} )"
+            self.set_message(message.format(right.to_string(), left_name))
             return Rule.FAILED
 
         return Rule.OK

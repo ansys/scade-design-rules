@@ -81,12 +81,8 @@ class ModuloDenominatorNonZeroConstant(Rule):
                             denominator = right
                 elif isinstance(reference, suite.Constant):
                     denominator = reference
-                else:
-                    pass
             elif isinstance(denominator_expr, suite.ConstValue):
                 denominator = denominator_expr
-            else:
-                pass
 
             try:
                 const_value = get_value_from_const(denominator)

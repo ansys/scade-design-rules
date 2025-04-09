@@ -67,7 +67,7 @@ class TransitionKind(Rule):
 
     def on_start(self, model: suite.Model, parameter: str = None) -> int:
         """Get the rule's parameters."""
-        if not (parameter == 'strong' or parameter == 'weak' or parameter == 'nomix'):
+        if parameter not in {'strong', 'weak', 'nomix'}:
             self.set_message('Wrong parameter: ' + parameter)
             return Rule.ERROR
 

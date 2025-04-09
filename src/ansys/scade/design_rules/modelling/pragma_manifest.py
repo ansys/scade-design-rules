@@ -95,7 +95,7 @@ class PragmaManifest(Rule):
         # the parameters are optional
         d = self.parse_values(parameter) if parameter else {}
         if d is None:
-            message = "'%s': parameter syntax error" % parameter
+            message = f"'{parameter}': parameter syntax error"
             self.set_message(message)
             scade.output(message + '\n')
             return Rule.ERROR
@@ -134,9 +134,8 @@ class PragmaManifest(Rule):
             for typed in type_.typed_objects:
                 if isinstance(typed, suite.LocalVariable) and (
                     typed.is_input() or typed.is_hidden() or typed.is_output()
-                ):
-                    if self._is_root(typed.operator):
-                        operators.add(typed.operator.get_full_path().strip('/'))
+                ) and self._is_root(typed.operator):
+                    operators.add(typed.operator.get_full_path().strip('/'))
             if not operators:
                 # the type is not directly involved in the signature of a root operator
                 return Rule.NA
@@ -147,17 +146,17 @@ class PragmaManifest(Rule):
                     continue
                 signature = self.get_signature(used)
                 if not self.manifests[signature]:
-                    self.set_message(
-                        'The type %s has no KCG pragma "manifest" and '
-                        'is used in the interface of root operators: %s'
-                        % (query.get_type_name(used), operators)
+                    message = (
+                        'The type {} has no KCG pragma "manifest" and is'
+                        ' used in the interface of root operators: {}'
                     )
+                    self.set_message(message.format(query.get_type_name(used), operators))
                     return Rule.FAILED
         else:
             signature = self.get_signature(type_)
             if not self.manifests[signature]:
                 self.set_message(
-                    'The type %s has no KCG pragma "manifest"' % query.get_type_name(type_)
+                    f'The type {query.get_type_name(type_)} has no KCG pragma "manifest"'
                 )
                 return Rule.FAILED
         return Rule.OK
@@ -180,23 +179,23 @@ class PragmaManifest(Rule):
         if not signature:
             if isinstance(type_, suite.NamedType):
                 if type_.is_imported():
-                    signature = '(%s)' % type_.name
+                    signature = '({})'.format(type_.name)
                 elif type_.is_predefined():
                     signature = self._predef_signatures[type_.name]
                 else:
                     signature = self.get_signature(type_.type)
             elif isinstance(type_, suite.Enumeration):
-                signature = '(%s)' % type_.owner.name
+                signature = '({})'.format(type_.owner.name)
             elif isinstance(type_, suite.Table):
-                signature = '%s^%d' % (self.get_signature(type_.type), type_.size)
+                signature = '{}^{:.0f}'.format(self.get_signature(type_.type), type_.size)
             elif isinstance(type_, suite.Structure):
-                elements = ['%s:%s' % (_.name, self.get_signature(_.type)) for _ in type_.elements]
-                signature = '(%s)' % ','.join(elements)
+                elements = [f'{_.name}:{self.get_signature(_.type)}' for _ in type_.elements]
+                signature = '({})'.format(','.join(elements))
             elif isinstance(type_, suite.SizedType):
                 prefix = 'u' if type_.constraint.is_unsigned() else 'i'
                 size = type_.size_expression.evaluate_expression()
                 if not size:
-                    size = '(%s)' % type_.size_expression.to_string()
+                    size = '({})'.format(type_.size_expression.to_string())
                 signature = prefix + size
             else:
                 assert type_ is None

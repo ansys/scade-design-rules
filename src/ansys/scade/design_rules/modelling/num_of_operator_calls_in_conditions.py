@@ -100,12 +100,12 @@ class NumOfOperatorCallsInConditions(Rule):
 
         d = self.parse_values(parameter)
         if d is None:
-            message = "'%s': parameter syntax error" % parameter
+            message = f"'{parameter}': parameter syntax error"
         else:
             calls = d.get('calls')
             exc = d.get('exc', '')
             if not calls:
-                message = "'%s': missing 'calls' value" % parameter
+                message = f"'{parameter}': missing 'calls' value"
             else:
                 self.number_of_calls = calls
                 self.excepted_operators = {_.strip() for _ in exc.split(';')}
@@ -136,10 +136,10 @@ class NumOfOperatorCallsInConditions(Rule):
         if violated:
             if self.incorrect:
                 self.set_message(
-                    'Non logical or comparison operators used: ' + expression.to_string()
+                    f'Non logical or comparison operators used: {expression.to_string()}'
                 )
             else:
-                self.set_message('Too many operators used: ' + expression.to_string())
+                self.set_message(f'Too many operators used: {expression.to_string()}')
             return Rule.FAILED
 
         return Rule.OK

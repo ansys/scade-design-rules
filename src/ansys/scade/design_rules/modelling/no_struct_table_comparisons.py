@@ -77,13 +77,13 @@ class NoStructTableComparisons(Rule):
 
         if comparison_found:
             container = self.get_closest_annotatable(object_)
-            error_msg = 'Comparison of structures/arrays found ( ' + object_.to_string() + ' ) '
             identifier = object_.to_string()
+            error_msg = f'Comparison of structures/arrays found ( {identifier} ) '
             self.add_rule_status(container, Rule.FAILED, error_msg, identifier)
         elif self.warning == 2:
             # 2 warnings means none of the parameters could be assesed
             container = self.get_closest_annotatable(object_)
-            error_msg = 'Check incomplete: ' + self.warning_text
+            error_msg = f'Check incomplete: {self.warning_text}'
             identifier = object_.to_string()
             self.add_rule_status(container, Rule.FAILED, error_msg, identifier)
 

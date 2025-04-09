@@ -80,20 +80,19 @@ class AllConstantsTypesAreUsed(AnnotationRule):
         if isinstance(object, suite.NamedType):
             if not object.typed_objects:
                 violated = True
-        elif isinstance(object, suite.Constant):
-            if not object.expr_ids:
-                # check for annotation note for external use mark
-                ann_note = get_first_note_by_type(object, self.note_type)
-                defined, value = is_ann_note_value_defined_and_get_value(
-                    ann_note, 'isExternallyUsed_TrueFalse'
-                )
-                violated = not defined or not value
+        elif isinstance(object, suite.Constant) and not object.expr_ids:
+            # check for annotation note for external use mark
+            ann_note = get_first_note_by_type(object, self.note_type)
+            defined, value = is_ann_note_value_defined_and_get_value(
+                ann_note, 'isExternallyUsed_TrueFalse'
+            )
+            violated = not defined or not value
         else:
-            scade.output('Rule not implemented for ' + object.__class__.__name__)
+            scade.output(f'Rule not implemented for {object.__class__.__name__}')
             Rule.ERROR
 
         if violated:
-            self.set_message(object.__class__.__name__ + ' ' + object.name + ' not used in model.')
+            self.set_message(f'{object.__class__.__name__} {object.name} not used in model.')
             return Rule.FAILED
 
         return Rule.OK

@@ -81,11 +81,7 @@ class NoFloats(Rule):
         return Rule.OK
 
     def _is_float_in_type(self, type_: suite.Type) -> bool:
-        """Return whether the type depends on float.
-
-        :param predef_type:
-        :return:
-        """
+        """Return whether the type depends on float."""
         leaf = get_leaf_type(type_)
         if is_predefined(leaf) and (leaf.name == 'float32' or leaf.name == 'float64'):
             return True

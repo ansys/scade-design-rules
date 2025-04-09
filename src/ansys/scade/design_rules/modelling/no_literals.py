@@ -101,7 +101,7 @@ class NoLiterals(Rule):
 
         violated = object_.value not in self.exceptions
         if violated:
-            error_msg = 'Literal found outside constant value (%s)' % object_.value
+            error_msg = f'Literal found outside constant value ({object_.value})'
             identifier = object_.value
             self.add_rule_status(container, Rule.FAILED, error_msg, identifier)
 

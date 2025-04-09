@@ -84,15 +84,7 @@ class InitializationOfArrays(Rule):
         if violated:
             assert ref_value
             container = self.get_closest_annotatable(object_)
-            error_msg = (
-                'Use + '
-                + ref_value
-                + '^'
-                + str(len(object_.parameters))
-                + ' instead of ['
-                + ref_value
-                + ', ...]'
-            )
+            error_msg = f'Use + {ref_value}^{len(object_.parameters)} instead of [{ref_value}, ...]'
             identifier = object_.to_string()
             self.add_rule_status(container, Rule.FAILED, error_msg, identifier)
 
