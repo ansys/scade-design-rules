@@ -73,14 +73,14 @@ class PageFormat(Rule):
         """Get the rule's parameters."""
         d = self.parse_values(parameter)
         if d is None:
-            d = "'%s': parameter syntax error" % parameter
+            d = f"'{parameter}': parameter syntax error"
         else:
             format = d.get('format')
             orientation = d.get('orientation')
             if format is None:
-                message = "'%s': missing 'format' value" % parameter
+                message = f"'{parameter}': missing 'format' value"
             elif orientation is None:
-                message = "'%s': missing 'orientation' value" % parameter
+                message = f"'{parameter}': missing 'orientation' value"
             else:
                 self.format = format
                 self.orientation = orientation
@@ -98,11 +98,12 @@ class PageFormat(Rule):
 
         if not net_diagram.format.startswith(self.format):
             violated = True
-            failure_messages.append('Format is set to ' + net_diagram.format)
+            failure_messages.append(f'Format is set to {net_diagram.format}')
 
         if net_diagram.landscape and self.orientation != 'Landscape':
             violated = True
             failure_messages.append('Orientation is set to Landscape.')
+            
         if not net_diagram.landscape and self.orientation != 'Portrait':
             violated = True
             failure_messages.append('Orientation is set to Portrait.')
