@@ -75,7 +75,7 @@ class NoAnonymousType(Rule):
         self.roots = None
         # the parameters are optional
         d = self.parse_values(parameter) if parameter else {}
-        if d:
+        if d is not None:
             name = d.get('configuration')
             if name:
                 # get the project associated to the model

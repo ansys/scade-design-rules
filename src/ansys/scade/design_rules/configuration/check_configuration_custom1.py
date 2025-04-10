@@ -157,7 +157,7 @@ class CheckConfigurationCustom1(Rule):
             if package.name == self.root_package:
                 root_package = package
                 break
-        if root_package:
+        if root_package is not None:
             # assumption: only one public operator which is the root operator
             for operator in root_package.operators:
                 if operator.visibility == 'Public':

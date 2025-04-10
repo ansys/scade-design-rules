@@ -84,7 +84,7 @@ class NoOperatorCallsInExpressions(Rule):
         if not isinstance(container, suite.Constant):
             # is expression part of an Equation
             equation = object_.equation
-            if equation:
+            if equation is not None:
                 # get graphical element
                 equation_ge = equation.equation_ge
                 # check whether object is a textual expression. OBJ_LIT most probably OBJECT_LITERAL

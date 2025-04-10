@@ -98,7 +98,7 @@ class ElementsWithinArea(Rule):
 
         # default message if syntax error
         message = f"'{parameter}': syntax error, expected 'margins= <value>; <value>'"
-        parameter = 'margins= 0; 0' if parameter is None else parameter
+        parameter = 'margins= 0; 0' if not parameter else parameter
         d = self.parse_values(parameter)
         if d:
             margins = d.get('margins')
