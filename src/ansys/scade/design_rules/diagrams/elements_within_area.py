@@ -100,7 +100,7 @@ class ElementsWithinArea(Rule):
         message = f"'{parameter}': syntax error, expected 'margins= <value>; <value>'"
         parameter = 'margins= 0; 0' if not parameter else parameter
         d = self.parse_values(parameter)
-        if d:
+        if d is not None:
             margins = d.get('margins')
             try:
                 self.x_margin, self.y_margin = (int(_) for _ in margins.split(';'))
