@@ -105,11 +105,11 @@ class NoAnonymousType(Rule):
         # check the sub types
         for type_ in variable.type.used_types:
             # if a type is anonymous, its owner swhall be a named type
-            if isinstance(type_, suite.Structure) and not isinstance(type_.owner, suite.NamedType):
-                self.set_message(
-                    f'The type {variable.type.to_string()} shall not contain anonymous structure'
-                )
-                return Rule.FAILED
+            if isinstance(type_, suite.Structure):
+                if not isinstance(type_.owner, suite.NamedType):
+                    message = 'The type {} shall not contain anonymous structure'
+                    self.set_message(message.format(variable.type.to_string()))
+                    return Rule.FAILED
             elif isinstance(type_, suite.Table):
                 # matrix accepted
                 if not isinstance(type_.owner, suite.NamedType) and not isinstance(
