@@ -86,11 +86,14 @@ class ForbiddenKeywords(Rule):
         """Get the rule's parameters."""
         path = Path(model.descriptor.model_file_name).parent / parameter
         try:
-            lines = path.open().read().split('\n')
+            file = path.open()
+            lines = file.read().split('\n')
         except BaseException as e:
             self.set_message(str(e))
             scade.output(str(e) + '\n')
             return Rule.ERROR
+        else:
+            file.close()
 
         self.keywords = {_ for _ in lines if _ and _[0] != '#'}
         return Rule.OK

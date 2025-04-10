@@ -66,14 +66,14 @@ class NameStructureType(Rule):
         """Get the rule's parameters."""
         d = self.parse_values(parameter)
         if d is None:
-            message = "'%s': parameter syntax error" % parameter
+            message = f"'{parameter}': parameter syntax error"
         else:
             prefix = d.get('prefix')
             suffix = d.get('suffix')
             if prefix is None:
-                message = "'%s': missing 'prefix' value" % parameter
+                message = f"'{parameter}': missing 'prefix' value"
             elif suffix is None:
-                message = "'%s': missing 'suffix' value" % parameter
+                message = f"'{parameter}': missing 'suffix' value"
             else:
                 self.prefix = prefix
                 self.suffix = suffix
@@ -91,11 +91,11 @@ class NameStructureType(Rule):
 
         if not name.endswith(self.suffix):
             failure = True
-            text.append('Type name does not end with ' + self.suffix)
+            text.append(f'Type name does not end with {self.suffix}')
 
         if not name.startswith(self.prefix):
             failure = True
-            text.append('Type name does not start with ' + self.prefix)
+            text.append(f'Type name does not start with {self.prefix}')
 
         if failure:
             self.set_message(', '.join(text))

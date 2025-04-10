@@ -82,7 +82,7 @@ class NameStructureDiagram(Rule):
             elif name != scope.name:
                 # TODO: As an alternative, make sure the name of the scope is
                 #       included in the name of the diagram
-                message = '%s: The name shall be the name of its scope %s' % (name, scope.name)
+                message = f'{name}: The name shall be the name of its scope {scope.name}'
                 self.set_message(message)
                 status = Rule.FAILED
             else:
@@ -94,7 +94,7 @@ class NameStructureDiagram(Rule):
             if pattern_scope.fullmatch(name):
                 # check of diagram name vs owner name
                 message = (
-                    "%s: The name derives from its scope's name instead of a description" % name
+                    f"{name}: The name derives from its scope's name instead of a description"
                 )
                 self.set_message(message)
                 status = Rule.FAILED
@@ -106,7 +106,7 @@ class NameStructureDiagram(Rule):
                     pattern_prefix = re.compile(prefix + r'\d+')
                     for diagram in scope.diagrams:
                         if diagram != object_ and pattern_prefix.fullmatch(diagram.name):
-                            message = '%s: The name shall be a description' % name
+                            message = f'{name}: The name shall be a description'
                             self.set_message(message)
                             status = Rule.FAILED
                             break

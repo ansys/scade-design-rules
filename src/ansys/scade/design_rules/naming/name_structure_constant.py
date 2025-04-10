@@ -76,12 +76,12 @@ class NameStructureConstant(Rule):
         if parameter.startswith('_'):
             if not name.endswith(parameter):
                 failure = True
-                text += 'Constant name does not end with ' + parameter + ', '
+                text += f'Constant name does not end with {parameter}, '
 
         elif parameter.endswith('_'):
             if not name.startswith(parameter):
                 failure = True
-                text += 'Constant name does not start with ' + parameter + ', '
+                text += f'Constant name does not start with {parameter}, '
 
         if not name.replace(parameter, '').isupper():
             failure = True

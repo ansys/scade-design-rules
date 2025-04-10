@@ -95,17 +95,17 @@ class CamelCaseNaming(Rule):
             # captured by is_camel_case but provide a
             # more understandable message for a frequent mistake
             status = Rule.FAILED
-            message = "%s: The name shall not contain '_'" % name
+            message = f"{name}: The name shall not contain '_'"
             self.set_message(message)
         elif not name[0].islower():
             # captured by is_camel_case but provide a
             # more understandable message for a frequent mistake
             status = Rule.FAILED
-            message = '%s: The name shall start with a lowercase letter' % name
+            message = f'{name}: The name shall start with a lowercase letter'
             self.set_message(message)
         elif not is_camel_case(name):
             status = Rule.FAILED
-            message = '%s: The name shall be composed of a sequence of words' % name
+            message = f'{name}: The name shall be composed of a sequence of words'
             self.set_message(message)
         else:
             status = Rule.OK

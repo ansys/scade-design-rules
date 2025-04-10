@@ -69,12 +69,12 @@ class NameStructurePackage(Rule):
         name = object_.name
         length = int(parameter) if parameter else 0
         if len(name) > length:
-            message = '%s: The name is longer than %d' % (name, length)
+            message = f'{name}: The name is longer than {length:.0f}'
             self.set_message(message)
             status = Rule.FAILED
         elif not is_pascal_case(name):
             status = Rule.FAILED
-            message = '%s: The name shall be composed of a sequence of words' % name
+            message = f'{name}: The name shall be composed of a sequence of words'
             self.set_message(message)
         else:
             status = Rule.OK

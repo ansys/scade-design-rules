@@ -68,7 +68,7 @@ class NameLengthOfElement(Rule):
         """Get the rule's parameters."""
         if not parameter.strip().isdecimal():
             self.set_message(
-                'Parameter for rule is not an integer or lower than zero: ' + parameter
+                f'Parameter for rule is not an integer or lower than zero: {parameter}'
             )
             return Rule.ERROR
         self.max_length = int(parameter)
@@ -103,7 +103,7 @@ class NameLengthOfElement(Rule):
             else:
                 element = object_.__class__.__name__
 
-            self.set_message(element + ' name longer than ' + parameter + ' characters')
+            self.set_message(f'{element} name longer than {parameter} characters')
             return Rule.FAILED
         return Rule.OK
 

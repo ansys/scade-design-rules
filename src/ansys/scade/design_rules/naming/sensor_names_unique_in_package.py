@@ -84,7 +84,7 @@ class SensorNamesUniqueInPackage(Rule):
                 owner = owner.owner
 
         if violated:
-            self.set_message('Variable name is also used for the sensor: ' + sensor.get_full_path())
+            self.set_message(f'Variable name is also used for the sensor: {sensor.get_full_path()}')
             return Rule.FAILED
         return Rule.OK
 

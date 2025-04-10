@@ -109,13 +109,10 @@ class NameStructureIteratorContinue(Rule):
         roles = {get_iter_role(variable, call) for call in variable.operator.expr_calls}
         lines = []
         for role in roles:
-            if role == IR.CONTINUE:
-                if not re.fullmatch(self.continue_regexp, name):
-                    failure = True
-                    lines.append(
-                        'The name does not match the continuation condition expression %s'
-                        % self.continue_regexp
-                    )
+            if role == IR.CONTINUE and not re.fullmatch(self.continue_regexp, name):
+                failure = True
+                message = 'The name does not match the continuation condition expression {}'
+                lines.append(message.format(self.continue_regexp))
 
         if failure:
             self.set_message(',\n'.join(lines))
