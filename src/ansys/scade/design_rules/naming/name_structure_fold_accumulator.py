@@ -166,9 +166,8 @@ class NameStructureFoldAccumulator(Rule):
                 m = re.fullmatch(self.out_regexp, name)
                 if not m:
                     failure = True
-                    lines.append(
-                        f'The name does not match the output accumulator expression {self.out_regexp}'
-                    )
+                    message = 'The name does not match the output accumulator expression {}'
+                    lines.append(message.format({self.out_regexp}))
                 else:
                     groups = m.groups()
                     if groups:
