@@ -161,15 +161,13 @@ class NameStructureFoldAccumulator(Rule):
                                 break
                         else:
                             failure = True
-                            lines.append(
-                                f'Matching output accumulator not found: {variable.name}'
-                            )
+                            lines.append(f'Matching output accumulator not found: {variable.name}')
             elif role == IR.ACC_OUT:
                 m = re.fullmatch(self.out_regexp, name)
                 if not m:
                     failure = True
                     lines.append(
-                      f'The name does not match the output accumulator expression {self.out_regexp}'
+                        f'The name does not match the output accumulator expression {self.out_regexp}'
                     )
                 else:
                     groups = m.groups()

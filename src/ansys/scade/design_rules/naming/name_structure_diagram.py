@@ -93,9 +93,7 @@ class NameStructureDiagram(Rule):
             pattern_scope = re.compile(scope_name + r'_?\d+')
             if pattern_scope.fullmatch(name):
                 # check of diagram name vs owner name
-                message = (
-                    f"{name}: The name derives from its scope's name instead of a description"
-                )
+                message = f"{name}: The name derives from its scope's name instead of a description"
                 self.set_message(message)
                 status = Rule.FAILED
             else:
