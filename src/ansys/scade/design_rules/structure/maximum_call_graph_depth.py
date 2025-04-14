@@ -101,7 +101,7 @@ class MaximumCallGraphDepth(Rule):
         level = len(call_graph_max)
         if level > self.depth:
             self.set_message(
-                f"Call graph depth too high ({level} > {self.depth}): {'.'.join(call_graph_max)}"
+                f'Call graph depth too high ({level} > {self.depth}): {".".join(call_graph_max)}'
             )
             return Rule.FAILED
 

@@ -316,9 +316,7 @@ class LineCrossing(Rule):
                 if isinstance(cont_action, suite.WhenBranch):
                     container_name = f'WhenBranch ({cont_action.pattern.to_string()}): '
                 else:
-                    container_name = (
-                        f'IfAction ({cont_action.if_node.expression.to_string()}): '
-                    )
+                    container_name = f'IfAction ({cont_action.if_node.expression.to_string()}): '
             else:
                 container_name = edge_container.name
                 if container_name != '':
