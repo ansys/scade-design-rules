@@ -119,7 +119,7 @@ class EnumDefinitionElementsOrder(Rule):
 
             if self.strict and len(missing_enum_values) > 0:
                 self.set_message(
-                    f'Missing Enum values. Cannot check for order: {', '.join(missing_enum_values)}'
+                    f"Missing Enum values. Cannot check for order: {', '.join(missing_enum_values)}"
                 )
                 return Rule.FAILED
 
