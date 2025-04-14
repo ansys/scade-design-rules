@@ -114,11 +114,11 @@ class LineCrossing(Rule):
         """Get the rule's parameters."""
         d = self.parse_values(parameter)
         if d is None:
-            message = "'%s': parameter syntax error" % parameter
+            message = f"'{parameter}': parameter syntax error"
         else:
             check_lines = d.get('lines')
             if check_lines is None:
-                message = "'%s': missing 'lines' value" % parameter
+                message = f"'{parameter}': missing 'lines' value"
             else:
                 self.check_lines = check_lines.lower() == 'yes'
                 return Rule.OK
@@ -314,10 +314,10 @@ class LineCrossing(Rule):
             if isinstance(edge_container, suite.Action):
                 cont_action = edge_container.owner
                 if isinstance(cont_action, suite.WhenBranch):
-                    container_name = 'WhenBranch (' + cont_action.pattern.to_string() + '): '
+                    container_name = f'WhenBranch ({cont_action.pattern.to_string()}): '
                 else:
                     container_name = (
-                        'IfAction (' + cont_action.if_node.expression.to_string() + '): '
+                        f'IfAction ({cont_action.if_node.expression.to_string()}): '
                     )
             else:
                 container_name = edge_container.name
@@ -349,8 +349,8 @@ class LineCrossing(Rule):
                             )
                         ):
                             eq = edge.src_equation.equation
-                            message = 'Edge %s outside boundaries' % name_of_edge
-                            local_id = '%s:box' % edge.left_var.get_oid()
+                            message = f'Edge {name_of_edge} outside boundaries'
+                            local_id = f'{edge.left_var.get_oid()}:box'
                             self.add_rule_status(eq, Rule.FAILED, message, local_id)
 
         for g_element in self.g_elements:
@@ -405,16 +405,15 @@ class LineCrossing(Rule):
                     eq = edge.src_equation.equation
                     if is_edge:
                         local_path = _get_edge_path(self.operator, g_element.target)
-                        local_id = '%s:%s' % (
-                            edge.left_var.get_oid(),
-                            g_element.target.left_var.get_oid(),
+                        local_id = (
+                            f'{edge.left_var.get_oid()}:{g_element.target.left_var.get_oid()}'
                         )
                     else:
                         # bugged
                         # local_path = self.operator.get_path(g_element.target)
                         local_path = get_path(self.operator, g_element.target)
-                        local_id = '%s:%s' % (edge.left_var.get_oid(), g_element.target.get_oid())
-                    message = 'Edge %s crosses %s' % (name_of_edge, local_path)
+                        local_id = f'{edge.left_var.get_oid()}:{g_element.target.get_oid()}'
+                    message = f'Edge {name_of_edge} crosses {local_path}'
                     self.add_rule_status(eq, Rule.FAILED, message, local_id)
 
         self.g_elements.append(
