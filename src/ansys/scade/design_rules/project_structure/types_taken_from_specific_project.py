@@ -89,9 +89,9 @@ class TypesTakenFromSpecificProject(Rule):
             and not type_.is_generic()
         ):
             if get_model(type_) not in self.allowed_projects:
+                message = 'Type is not taken from given projects ({}): {}'
                 self.set_message(
-                    'Type is not taken from given projects (%s): %s'
-                    % (','.join(self.allowed_names), type_.get_full_path())
+                    message.format(','.join(self.allowed_names), type_.get_full_path())
                 )
                 return Rule.FAILED
 

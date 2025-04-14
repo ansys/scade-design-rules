@@ -67,20 +67,15 @@ class RootPackageName(Rule):
         name = object.name
 
         if len(object.packages) == 0:
-            self.set_message('Model ' + name + ' contains no root Package')
+            self.set_message(f'Model {name} contains no root Package')
             return Rule.FAILED
         elif len(object.packages) > 1:
-            self.set_message('Model ' + name + ' contains more than one root Package')
+            self.set_message(f'Model {name} contains more than one root Package')
             return Rule.FAILED
         elif len(object.packages) == 1:
             if name != object.packages[0].name:
-                self.set_message(
-                    "Root Package name '"
-                    + object.packages[0].name
-                    + "' is unequal to Model name '"
-                    + name
-                    + "'"
-                )
+                message = "Root Package name '{}' is unequal to Model name '{}'"
+                self.set_message(message.format(object.packages[0].name, name))
                 return Rule.FAILED
 
         return Rule.OK

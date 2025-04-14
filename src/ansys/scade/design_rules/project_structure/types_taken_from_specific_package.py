@@ -85,11 +85,9 @@ class TypesTakenFromSpecificPackage(Rule):
             and not type_.is_generic()
         ):
             if type_.owner not in self.allowed_packages:
+                message = 'Type is not taken from given packages ({}): {}'
                 self.set_message(
-                    'Type is not taken from given packages ('
-                    + ','.join(self.allowed_names)
-                    + '): '
-                    + type_.get_full_path()
+                    message.format(','.join(self.allowed_names), type_.get_full_path())
                 )
                 return Rule.FAILED
 

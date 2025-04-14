@@ -80,7 +80,7 @@ class TypesNotTakenFromSpecificPackage(Rule):
 
         type_ = object_.type
         if type_.owner in self.forbidden_packages:
-            self.set_message('Type is taken from forbidden package: ' + type_.get_full_path())
+            self.set_message(f'Type is taken from forbidden package: {type_.get_full_path()}')
             return Rule.FAILED
 
         return Rule.OK

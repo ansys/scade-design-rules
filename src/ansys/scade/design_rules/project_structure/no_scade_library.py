@@ -76,7 +76,7 @@ class NoScadeLibrary(Rule):
         """Get the rule's parameters."""
         d = self.parse_values(parameter)
         if d is None:
-            message = "'%s': parameter syntax error" % parameter
+            message = f"'{parameter}': parameter syntax error"
         else:
             upper_levels = d.get('upper_levels')
             self.upper_levels = int(upper_levels) if upper_levels is not None else 0
@@ -108,25 +108,22 @@ class NoScadeLibrary(Rule):
         # or not absolute pathnames
         path_model = Path(object_.descriptor.model_file_name)
         for library in object_.libraries:
-            pathname = library.descriptor.model_file_name
-            path = Path(pathname)
+            path = Path(library.descriptor.model_file_name)
             try:
                 rel_path = os.path.relpath(path, path_model.parent)
-            except BaseException:
-                if path not in external_libraries:
-                    external_libraries[path] = pathname
-                continue
-            count = len([part for part in Path(rel_path).parts if part == '..'])
-            if count > self.upper_levels and path not in external_libraries:
-                external_libraries[path] = pathname
+                count = rel_path.count('..')
+                if count > self.upper_levels and path not in external_libraries:
+                    external_libraries[path] = str(path)
+            except ValueError:  # More specific exception than BaseException
+                external_libraries.setdefault(path, str(path))
 
         if external_libraries:
             status = Rule.FAILED
             message = (
-                'The model %s shall not use SCADE product libraries or libraries outside '
-                'of the CM workspace:\n%s' % (object_.name, '\n'.join(external_libraries.values()))
+                'The model {} shall not use SCADE product libraries or libraries outside '
+                'of the CM workspace:\n{}'
             )
-            self.set_message(message)
+            self.set_message(message.format(object_.name, '\n'.join(external_libraries.values())))
         else:
             status = Rule.OK
         return status
