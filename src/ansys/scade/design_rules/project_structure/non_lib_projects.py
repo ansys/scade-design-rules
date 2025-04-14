@@ -99,7 +99,7 @@ class NonLibProjects(Rule):
             not_used_at_top_level = True
             if len(object.clients) == 0:
                 not_used_at_top_level = False
-            else: # prevents unnecessary iteration when object.clients is empty
+            else:  # prevents unnecessary iteration when object.clients is empty
                 for client in object.clients:
                     if (
                         isinstance(client.owner, suite.Package)
@@ -110,9 +110,7 @@ class NonLibProjects(Rule):
                         break
 
             if not_used_at_top_level:
-                self.set_message(
-                    'Constant defined at top-level package is not used at top-level!'
-                )
+                self.set_message('Constant defined at top-level package is not used at top-level!')
                 return Rule.FAILED
 
         if (
@@ -123,7 +121,7 @@ class NonLibProjects(Rule):
             not_used_at_top_level = True
             if len(object.typed_objects) == 0:
                 not_used_at_top_level = False
-            else: # prevents unnecessary iteration when object.typed_objects is empty
+            else:  # prevents unnecessary iteration when object.typed_objects is empty
                 for obj in object.typed_objects:
                     if (
                         isinstance(obj.owner, suite.Package)
@@ -134,9 +132,7 @@ class NonLibProjects(Rule):
                         break
 
             if not_used_at_top_level:
-                self.set_message(
-                    'Type defined at top-level package is not used at top-level!'
-                )
+                self.set_message('Type defined at top-level package is not used at top-level!')
                 return Rule.FAILED
 
         return Rule.OK
