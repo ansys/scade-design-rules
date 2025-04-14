@@ -87,7 +87,7 @@ class LLRArchitecture(AnnotationRule):
                     break
             else:
                 status = Rule.ERROR
-                message = "'%s': unknown note attribute" % self.options.attribute
+                message = f"'{self.options.attribute}': unknown note attribute"
                 self.set_message(message)
                 scade.output(message + '\n')
 
@@ -111,11 +111,8 @@ class LLRArchitecture(AnnotationRule):
                     value.ann_att_definition == self.note_attribute
                     and value.to_string() == self.architecture
                 ):
-                    message = "The %s of the Contributing Element can't be '%s'" % (
-                        self.note_attribute.name,
-                        self.architecture,
-                    )
-                    self.set_message(message)
+                    message = "The {} of the Contributing Element can't be '{}'"
+                    self.set_message(message.format(self.note_attribute.name, self.architecture))
                     return Rule.FAILED
         return Rule.OK
 

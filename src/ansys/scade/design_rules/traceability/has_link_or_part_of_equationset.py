@@ -122,13 +122,13 @@ class HasLinkOrPartOfEquationSet(Rule):
 
         number_of_links = 0
         # find links in almgr file
-        for alm_document in almgr_parser.project.alm_documents:
-            for requirement in alm_document.requirements:
-                for incoming_link in requirement.incoming_links:
-                    source = incoming_link.source
-                    linked_object = model.get_object_from_oid(source.identifier)
-                    if linked_object == element:
-                        number_of_links += 1
+        number_of_links += sum(
+            1
+            for alm_document in almgr_parser.project.alm_documents
+            for requirement in alm_document.requirements
+            for incoming_link in requirement.incoming_links
+            if model.get_object_from_oid(incoming_link.source.identifier) == element
+        )
 
         # update links with almgt information
         if almgt_parser.traceability:
