@@ -88,9 +88,7 @@ class SeparateFileNameOperators(Rule):
                 self.set_message("Option 'Separate File Name' should be checked for this Operator!")
                 return Rule.FAILED
         elif object.storage_unit is not None:
-            self.set_message(
-                "Option 'Separate File Name' should be de-checked for this Operator!"
-            )
+            self.set_message("Option 'Separate File Name' should be de-checked for this Operator!")
             return Rule.FAILED
         return Rule.OK
 
