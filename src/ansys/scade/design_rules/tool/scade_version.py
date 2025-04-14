@@ -79,14 +79,12 @@ class ScadeVersion(Rule):
         ]
 
         if not parameter.isdecimal():
-            self.set_message(
-                '%s: Incorrect version. The parameter must be an integer, for example: 242'
-                % parameter
-            )
+            message = '{}: Incorrect version. The parameter must be an integer, for example: 242'
+            self.set_message(message.format(parameter))
             return Rule.ERROR
         version = int(parameter)
         if version < versions[0][0]:
-            self.set_message('%s: Versions prior to 2019 R2 (194) are not supported.' % parameter)
+            self.set_message(f'{parameter}: Versions prior to 2019 R2 (194) are not supported.')
             return Rule.ERROR
 
         # get the namespaces corresponding to the checked version
@@ -113,11 +111,11 @@ class ScadeVersion(Rule):
             # report the first storage element contained in the file
             element = next((_ for _ in object_.elements if not isinstance(_, suite.Open)), None)
             if element:
-                message = 'SCADE Version in xscade files does not match %s' % parameter
+                message = f'SCADE Version in xscade files does not match {parameter}'
                 self.add_rule_status(element, Rule.FAILED, message)
                 return Rule.NA
             # otherwise, report the storage unit itself
-            self.set_message('%s: SCADE Version does not match %s' % (path, parameter))
+            self.set_message(f'{path}: SCADE Version does not match {parameter}')
             return Rule.FAILED
 
         return Rule.OK
