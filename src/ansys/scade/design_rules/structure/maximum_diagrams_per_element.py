@@ -73,7 +73,7 @@ class MaximumDiagramsPerElement(Rule):
         """Get the rule's parameters."""
         if not parameter.isdigit():
             self.set_message(
-                'Parameter for rule is not an integer or lower than zero: ' + parameter
+                f'Parameter for rule is not an integer or lower than zero: {parameter}'
             )
             return Rule.ERROR
         return Rule.OK

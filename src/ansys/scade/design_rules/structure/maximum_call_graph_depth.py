@@ -71,17 +71,17 @@ class MaximumCallGraphDepth(Rule):
         """Get the rule's parameters."""
         d = self.parse_values(parameter)
         if d is None:
-            message = "'%s': parameter syntax error" % parameter
+            message = f"'{parameter}': parameter syntax error"
         else:
             depth = d.get('depth')
             visibility = d.get('visibility')
             if not depth:
-                message = "'%s': missing 'depth' value" % parameter
+                message = f"'{parameter}': missing 'depth' value"
             elif not visibility:
-                message = "'%s': missing 'visibility' value" % parameter
+                message = f"'{parameter}': missing 'visibility' value"
             else:
                 if not depth.isdecimal():
-                    message = "'%s' is not a number" % depth
+                    message = f"'{depth}' is not a number"
                 else:
                     self.depth = int(depth)
                     self.visibility = visibility
@@ -101,7 +101,7 @@ class MaximumCallGraphDepth(Rule):
         level = len(call_graph_max)
         if level > self.depth:
             self.set_message(
-                f'Call graph depth too high ({level} > {self.depth}): ' + '.'.join(call_graph_max)
+                f'Call graph depth too high ({level} > {self.depth}): {'.'.join(call_graph_max)}'
             )
             return Rule.FAILED
 
