@@ -103,3 +103,6 @@ rst_epilog += links_filepath.read_text(encoding='utf-8')
 
 # Directories excluded when looking for source files
 exclude_patterns = ['links.rst']
+
+# Ignore checking SCADE user manual link
+linkcheck_ignore = [r'https://ansyshelp.ansys.com/public/Views/Secured/SCADE/.+']
