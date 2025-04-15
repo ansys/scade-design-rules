@@ -95,3 +95,11 @@ if switcher_version != 'dev':
     linkcheck_ignore.append(
         f'https://github.com/ansys/scade-design-rules/releases/tag/v{__version__}'
     )
+
+# Common content for every RST file such us links
+rst_epilog = ''
+links_filepath = Path(__file__).parent.absolute() / 'links.rst'
+rst_epilog += links_filepath.read_text(encoding='utf-8')
+
+# Directories excluded when looking for source files
+exclude_patterns = ['links.rst']

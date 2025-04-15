@@ -1,7 +1,7 @@
 .. _contribute_scade_design_rules:
 
-Contribute
-##########
+General contribution guide
+##########################
 
 Overall guidance on contributing to a PyAnsys library appears in
 `Contributing <https://dev.docs.pyansys.com/how-to/contributing.html>`_
@@ -103,9 +103,8 @@ isolated environment, which is the reason why tools like ``tox`` exist.
 Use ``pre-commit``
 ------------------
 Ansys SCADE Design Rules follows the PEP8 standard as outlined in
-`PEP 8 <https://dev.docs.pyansys.com/coding-style/pep8.html>`_ in
-the *PyAnsys developer's guide* and implements style checking using
-`pre-commit <https://pre-commit.com/>`_.
+`PEP 8`_ in the *PyAnsys developer's guide* and implements style checking using
+`pre-commit`_.
 
 To ensure your code meets minimum code styling standards, run the following commands::
 
@@ -168,8 +167,8 @@ the building requirements and then executing the build module:
 Post issues
 ===========
 
-Use the `Ansys SCADE Design Rules Issues <https://github.com/ansys/scade-design-rules/issues>`_
-page to submit questions, report bugs, and request new features. When possible, use
+Use the `Ansys SCADE Design Rules Issues`_ page to submit questions,
+report bugs, and request new features. When possible, use
 these templates:
 
 * Bug, problem, error: For filing a bug report
@@ -181,15 +180,3 @@ If your issue does not fit into one of these template categories, click
 the link for opening a blank issue.
 
 To reach the project support team, email `pyansys.core@ansys.com <pyansys.core@ansys.com>`_.
-
-.. LINKS AND REFERENCES
-
-.. _tox: https://tox.wiki/en/4.12.0/
-.. _black: https://github.com/psf/black
-.. _flake8: https://flake8.pycqa.org/en/latest/
-.. _isort: https://github.com/PyCQA/isort
-.. _pip: https://pypi.org/project/pip/
-.. _pre-commit: https://pre-commit.com/
-.. _pytest: https://docs.pytest.org/en/stable/
-.. _Sphinx: https://www.sphinx-doc.org/en/master/
-.. _wheel file: https://github.com/ansys/scade-design-rules/releases
