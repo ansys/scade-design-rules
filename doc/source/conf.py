@@ -109,4 +109,6 @@ linkcheck_ignore = [
     r'https://ansyshelp.ansys.com/public/Views/Secured/SCADE/.+',
     r'https://github.com/ansys/scade-design-rules/issues',
     r'https://github.com/ansys/scade-design-rules/pull/.*',
+    r'https://github.com/ansys/scade-design-rules/releases/.*',
+    r'https://www.ansys.com/products/.*',
 ]
