@@ -105,4 +105,8 @@ rst_epilog += links_filepath.read_text(encoding='utf-8')
 exclude_patterns = ['links.rst']
 
 # Ignore checking SCADE user manual link
-linkcheck_ignore = [r'https://ansyshelp.ansys.com/public/Views/Secured/SCADE/.+']
+linkcheck_ignore = [
+    r'https://ansyshelp.ansys.com/public/Views/Secured/SCADE/.+',
+    r'https://github.com/ansys/scade-design-rules/issues',
+    r'https://github.com/ansys/scade-design-rules/pull/.*',
+]
