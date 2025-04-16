@@ -119,7 +119,7 @@ class AnnNoteConnectedDataForPublicInterface(Rule):
             self._check_annotation(object_, self.out_port, True)
 
         if self.violation_text_missing:
-            self.set_message('Annotation wrong: ' + ', '.join(self.violation_text_missing))
+            self.set_message(f'Annotation wrong: {", ".join(self.violation_text_missing)}')
             return Rule.FAILED
 
         return Rule.OK
@@ -132,7 +132,7 @@ class AnnNoteConnectedDataForPublicInterface(Rule):
             self.violation_text_missing.append('ConnectedPort not defined')
         else:
             if connected_port != port:
-                self.violation_text_missing.append('ConnectedPort not ' + port)
+                self.violation_text_missing.append(f'ConnectedPort not {port}')
         defined, connector_name = is_ann_note_value_defined_and_get_value(note, 'ConnectorName')
         if not defined:
             self.violation_text_missing.append('ConnectedName not defined')
@@ -140,12 +140,12 @@ class AnnNoteConnectedDataForPublicInterface(Rule):
             # note: if empty values are accepted for port, do not append '_' when empty
             expected_name = object_.name + '_' + port
             if connector_name != expected_name:
-                self.violation_text_missing.append('ConnectorName not ' + expected_name)
+                self.violation_text_missing.append(f'ConnectorName not {expected_name}')
         defined, is_primary = is_ann_note_value_defined_and_get_value(note, 'IsPrimary')
         if not defined:
             self.violation_text_missing.append('IsPrimary not defined')
         elif is_primary != primary:
-            self.violation_text_missing.append('IsPrimary not ' + str(primary))
+            self.violation_text_missing.append(f'IsPrimary not {primary}')
 
 
 if __name__ == '__main__':  # pragma: no cover

@@ -143,12 +143,9 @@ class AnnNotesForBasicInterfaceTypes(AnnotationRule):
             # predefined, sized, imported, or enumeration types
             violation_text_missing = self._check_annotation(typed)
             if violation_text_missing:
+                # TODO: object may not have a name
                 message = (
-                    'Annotation missing for '
-                    # TODO: object may not have a name
-                    + typed.name
-                    + ': '
-                    + ', '.join(violation_text_missing)
+                    f'Annotation missing for {typed.name}: {", ".join(violation_text_missing)}'
                 )
                 self.add_rule_status(typed, Rule.FAILED, message, '')
 

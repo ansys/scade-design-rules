@@ -109,7 +109,7 @@ class AnnNotesForNamedTypesOrVariables(AnnotationRule):
 
         if violation_text_missing:
             self.set_message(
-                f'Annotation missing for {object_.name}: ' + ', '.join(violation_text_missing)
+                f'Annotation missing for {object_.name}: {", ".join(violation_text_missing)}'
             )
             return Rule.FAILED
 

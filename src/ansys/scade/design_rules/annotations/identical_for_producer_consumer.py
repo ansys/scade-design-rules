@@ -121,7 +121,7 @@ class IdenticalForProducerConsumer(AnnotationRule):
             self._compare_annotation_notes(producer, consumer)
 
         if self.violated:
-            self.set_message('Annotation notes issues: ' + ';'.join(self.violation_text))
+            self.set_message(f'Annotation notes issues: {";".join(self.violation_text)}')
             return Rule.FAILED
         return Rule.OK
 

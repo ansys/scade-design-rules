@@ -160,11 +160,11 @@ class CheckConfiguration(Rule):
             if key in props_source:
                 source = props_source[key]
                 if value != source:
-                    fail_text = key + '(' + '.'.join(value) + ' <> ' + '.'.join(source) + ')'
+                    fail_text = f'{key}({",".join(value)} <> {",".join(source)})'
                     failure_messages.append(fail_text)
 
         if failure_messages:
-            self.set_message('Configuration not correct: ' + ', '.join(failure_messages))
+            self.set_message(f'Configuration not correct: {", ".join(failure_messages)}')
             return Rule.FAILED
         return Rule.OK
 

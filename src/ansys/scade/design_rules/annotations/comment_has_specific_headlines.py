@@ -116,7 +116,7 @@ class CommentHasSpecificHeadlines(Rule):
             messages.append('Not all headlines found.')
 
         if violation_no_text_found or violation_not_all_headlines:
-            self.set_message('Comment not correct: ' + (',').join(messages))
+            self.set_message(f'Comment not correct: {",".join(messages)}')
             return Rule.FAILED
         return Rule.OK
 

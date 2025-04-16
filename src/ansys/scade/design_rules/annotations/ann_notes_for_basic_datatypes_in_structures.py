@@ -97,7 +97,7 @@ class AnnNotesForBasicDataTypesInStructures(AnnotationRule):
         if isinstance(type_, suite.Structure):
             if not isinstance(type_.owner, suite.NamedType):
                 # anonymous structure that can't be evaluated
-                self.set_message('Anonymous structures not supported: ' + object_.name)
+                self.set_message(f'Anonymous structures not supported: {object_.name}')
                 return Rule.FAILED
             else:
                 return Rule.NA
@@ -106,7 +106,7 @@ class AnnNotesForBasicDataTypesInStructures(AnnotationRule):
 
         if violation_text_missing:
             self.set_message(
-                f'Annotation missing for {object_.name}: ' + ', '.join(violation_text_missing)
+                f'Annotation missing for {object_.name}: {", ".join(violation_text_missing)}'
             )
             return Rule.FAILED
         return Rule.OK
