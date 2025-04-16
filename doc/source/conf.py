@@ -82,12 +82,11 @@ master_doc = 'index'
 
 # TODO: remove ignore links after public release
 linkcheck_ignore = [
-    'https://github.com/ansys/scade-design-rules',
-    'https://github.com/ansys/scade-design-rules/actions/workflows/ci_cd.yml',
-    'https://pypi.org/project/ansys-scade-design-rules',
-    # The link below takes a long time to check
-    'https://www.ansys.com/products/embedded-software/ansys-scade-suite',
-    'https://www.ansys.com/*',
+    r'https://github.com/ansys/scade-design-rules.*',
+    # The links below takes a long time to check
+    r'https://www.ansys.com/.*',
+    # The link below fails during checks
+    r'https://ansyshelp.ansys.com/public/Views/Secured/SCADE/.+',
 ]
 
 
@@ -103,12 +102,3 @@ rst_epilog += links_filepath.read_text(encoding='utf-8')
 
 # Directories excluded when looking for source files
 exclude_patterns = ['links.rst']
-
-# Ignore checking SCADE user manual link
-linkcheck_ignore = [
-    r'https://ansyshelp.ansys.com/public/Views/Secured/SCADE/.+',
-    r'https://github.com/ansys/scade-design-rules/issues',
-    r'https://github.com/ansys/scade-design-rules/pull/.*',
-    r'https://github.com/ansys/scade-design-rules/releases/.*',
-    r'https://www.ansys.com/products/.*',
-]
