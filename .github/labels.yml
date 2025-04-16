@@ -26,6 +26,10 @@
   description: Anything related to an incoming release
   color: ffffff
 
+- name: examples
+  description: Examples and tutorials
+  color: 6c5271
+
 - name: testing
   description: Anything related to tests
   color: BFE4D6

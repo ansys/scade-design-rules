@@ -9,6 +9,16 @@ documentation:
           - any-glob-to-any-file: ['doc/source/**/*.rst', 'README.rst']
 
 maintenance:
+  - all:
+      - changed-files:
+          - any-glob-to-any-file: ['.github/**/*', 'pyproject.toml']
+
+examples:
+  - any:
+      - changed-files:
+          - any-glob-to-any-file: ['examples/**/*']
+
+dependencies:
   - any:
       - changed-files:
           - any-glob-to-any-file: ['pyproject.toml']
