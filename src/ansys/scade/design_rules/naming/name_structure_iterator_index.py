@@ -107,7 +107,9 @@ class NameStructureIteratorIndex(Rule):
             if role == IR.INDEX:
                 if not re.fullmatch(self.index_regexp, name):
                     failure = True
-                    lines.append(f'The name does not match the index expression {self.index_regexp}')
+                    lines.append(
+                        f'The name does not match the index expression {self.index_regexp}'
+                    )
 
         if failure:
             self.set_message(',\n'.join(lines))

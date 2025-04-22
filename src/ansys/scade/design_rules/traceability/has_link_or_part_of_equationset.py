@@ -130,7 +130,6 @@ class HasLinkOrPartOfEquationSet(Rule):
                     if linked_object == element:
                         number_of_links += 1
 
-
         # update links with almgt information
         if almgt_parser.traceability:
             for link in almgt_parser.traceability.links:
