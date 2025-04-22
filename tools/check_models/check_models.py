@@ -58,6 +58,7 @@ def check_models(root: Path) -> int:
                 print(f'[red]Error: {model.name}/{rule.name} rule has no example[/red]')
         for example in sorted(examples.keys()):
             # do not fail, some rules might have more than one example
+            # exit_code = 1
             print(f'[yellow]Warning: {model.name}/{examples[example]} example has no rule[/yellow]')
 
     return exit_code

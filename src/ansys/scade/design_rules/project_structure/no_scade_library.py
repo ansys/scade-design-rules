@@ -111,11 +111,12 @@ class NoScadeLibrary(Rule):
             path = Path(library.descriptor.model_file_name)
             try:
                 rel_path = os.path.relpath(path, path_model.parent)
-                count = rel_path.count('..')
-                if count > self.upper_levels and path not in external_libraries:
-                    external_libraries[path] = str(path)
             except ValueError:  # More specific exception than BaseException
                 external_libraries.setdefault(path, str(path))
+                continue
+            count = rel_path.count('..')
+            if count > self.upper_levels and path not in external_libraries:
+                external_libraries[path] = str(path)
 
         if external_libraries:
             status = Rule.FAILED
