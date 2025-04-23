@@ -80,11 +80,8 @@ class EqInEqSet(Rule):
                 else:
                     status = Rule.FAILED
                     kind = 'equation' if isinstance(presentable, suite.Equation) else 'branch'
-                    message = 'the %s %s shall belong to at least one equation set' % (
-                        kind,
-                        presentable.get_full_path(),
-                    )
-                    self.set_message(message)
+                    message = 'the {} {} shall belong to at least one equation set'
+                    self.set_message(message.format(kind, presentable.get_full_path()))
         return status
 
     def get_owning_state(self, object_: suite.Object) -> suite.State:

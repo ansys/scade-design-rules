@@ -88,7 +88,7 @@ class NoPointerBranch(Rule):
             # must have one use per scope
             scopes = {_.get_scope() for _ in variable.expr_ids}
             if len(scopes) != len(variable.expr_ids):
-                message = 'Illegal branch for %s' % variable.name
+                message = f'Illegal branch for {variable.name}'
                 self.set_message(message)
                 return Rule.FAILED
 

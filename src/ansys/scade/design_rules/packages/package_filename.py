@@ -68,10 +68,10 @@ class PackageFilename(Rule):
         package_name = object_.name
         if object_.storage_unit:
             package_filename = object_.storage_unit.file_ref.name
-            expected_name = model_name + '_' + package_name + '_Package.xscade'
+            expected_name = f'{model_name}_{package_name}_Package.xscade'
 
             if package_filename != expected_name:
-                self.set_message('Filename is not formatted correctly. Expected ' + expected_name)
+                self.set_message(f'Filename is not formatted correctly. Expected {expected_name}')
                 return Rule.FAILED
 
         return Rule.OK

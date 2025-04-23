@@ -88,7 +88,7 @@ class LocalNameUniqueness(Rule):
         if isinstance(object_, suite.LocalVariable) and not object_.is_internal():
             variables = self.cache_variables[object_.name]
             if len(variables) > 1:
-                message = '%s: Not unique name' % object_.name
+                message = f'{object_.name}: Not unique name'
                 self.set_message(message)
                 status = Rule.FAILED
         return status

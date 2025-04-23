@@ -68,7 +68,7 @@ class OnePublicOpPerPackage(Rule):
         """Get the rule's parameters."""
         if not parameter.isdecimal():
             self.set_message(
-                'Parameter for rule is not an integer or lower than zero: ' + parameter
+                f'Parameter for rule is not an integer or lower than zero: {parameter}'
             )
             return Rule.ERROR
 
@@ -80,7 +80,7 @@ class OnePublicOpPerPackage(Rule):
 
         if number_of_public > int(parameter):
             self.set_message(
-                'Too many public operators found: %d > %s' % (number_of_public, parameter)
+                f'Too many public operators found: {number_of_public:.0f} > {parameter}'
             )
             return Rule.FAILED
 

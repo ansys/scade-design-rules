@@ -70,7 +70,7 @@ class NoBoolComparison(Rule):
             # replace internal variables by their constants
             text = substitute_names(object_.to_string(), self.aliases)
             container = self.get_closest_annotatable(object_)
-            error_msg = 'Bool comparison found (%s)' % text
+            error_msg = f'Bool comparison found ({text})'
             identifier = object_.to_string()
             self.add_rule_status(container, Rule.FAILED, error_msg, identifier)
 
@@ -93,7 +93,7 @@ class NoBoolComparison(Rule):
                     assert len(producer.definitions) == 1
                     operand = producer.definitions[0].right
                     # replace the internal variable with its producer and store the alias
-                    self.aliases[producer.name] = '(' + operand.to_string() + ')'
+                    self.aliases[producer.name] = f'({operand.to_string()})'
 
             if isinstance(operand, suite.ConstValue):
                 if operand.kind == 'Bool':

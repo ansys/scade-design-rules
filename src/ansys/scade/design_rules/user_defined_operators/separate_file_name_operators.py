@@ -69,11 +69,11 @@ class SeparateFileNameOperators(Rule):
         """Get the rule's parameters."""
         d = self.parse_values(parameter)
         if d is None:
-            message = "'%s': parameter syntax error" % parameter
+            message = f"'{parameter}': parameter syntax error"
         else:
             type = d.get('type')
             if type is None:
-                message = "'%s': missing 'type' value" % parameter
+                message = f"'{parameter}': missing 'type' value"
             else:
                 self.type = type
                 return Rule.OK
@@ -87,12 +87,9 @@ class SeparateFileNameOperators(Rule):
             if object.storage_unit is None:
                 self.set_message("Option 'Separate File Name' should be checked for this Operator!")
                 return Rule.FAILED
-        else:
-            if object.storage_unit is not None:
-                self.set_message(
-                    "Option 'Separate File Name' should be de-checked for this Operator!"
-                )
-                return Rule.FAILED
+        elif object.storage_unit is not None:
+            self.set_message("Option 'Separate File Name' should be de-checked for this Operator!")
+            return Rule.FAILED
         return Rule.OK
 
 

@@ -72,11 +72,8 @@ class EqSetHasEqs(Rule):
         ]
         if paths:
             status = Rule.FAILED
-            message = 'equation set %s shall not contain \n\t%s' % (
-                equation_set.name,
-                '\n\t'.join(paths),
-            )
-            self.set_message(message)
+            message = 'equation set {} shall not contain \n\t{}'
+            self.set_message(message.format(equation_set.name, '\n\t'.join(paths)))
         else:
             status = Rule.OK
         return status

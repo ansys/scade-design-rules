@@ -79,7 +79,9 @@ def session() -> suite.Session:
         ('P::PublicNok/vectPoints/', _FAILED, {'P::PointNok/x', 'P::PointNok/y'}),
         ('P::PublicNok/matPoints/', _FAILED, {'P::PointNok/x', 'P::PointNok/y'}),
         ('P::PublicNok/matFloats/', _FAILED, {'P::PublicNok/matFloats/'}),
-        # TODO: oids not stable for x and c: report the error on anonymous + sub_id=<fieldname>
+        # TODO(Jean): oids not stable for x and c: report the error on
+        #             anonymous + sub_id=<fieldname>
+        # https://github.com/ansys/scade-design-rules/issues/29
         (
             'P::PublicNok/anonymous/',
             _FAILED,
@@ -97,9 +99,13 @@ def session() -> suite.Session:
                 'P::StructNok/noMin',
                 'P::StructNok/noMax',
                 'P::StructNok/noUnit',
-                # TODO: oids not stable for x: report the error on anonymous + sub_id=<fieldname>
+                # TODO(Jean): oids not stable for x: report the error on
+                #             anonymous + sub_id=<fieldname>
+                # https://github.com/ansys/scade-design-rules/issues/29
                 'P::StructNok/x',
-                # TODO: oids not stable for y: report the error on anonymous + sub_id=<fieldname>
+                # TODO(Jean): oids not stable for y: report the error on
+                #             anonymous + sub_id=<fieldname>
+                # https://github.com/ansys/scade-design-rules/issues/29
                 'P::StructNok/y',
                 'P::EnumNok/',
                 'P::ImportedNok/',

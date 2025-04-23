@@ -13,7 +13,7 @@ repos:
       - --start_year=2024
 
 - repo: https://github.com/astral-sh/ruff-pre-commit
-  rev: v0.9.10
+  rev: v0.11.5
   hooks:
     - id: ruff
       args: [--fix]
@@ -49,7 +49,7 @@ repos:
 
 # this validates our github workflow files
 - repo: https://github.com/python-jsonschema/check-jsonschema
-  rev: 0.31.3
+  rev: 0.33.0
   hooks:
     - id: check-github-workflows
 
@@ -84,13 +84,17 @@ repos:
     additional_dependencies: [
         'jinja2',
         'ansys-scade-apitools',
+        'rich',
     ]
 
   # make sure there is one model per rule and optionally vice versa
   - id: check_models
     name: check_models
-    language: system
+    language: python
     entry: python
     args: [./tools/check_models/check_models.py]
     always_run: true
     pass_filenames: false
+    additional_dependencies: [
+        'rich',
+    ]

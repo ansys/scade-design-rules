@@ -84,7 +84,7 @@ class NameShallNotStartWith(Rule):
             return Rule.OK
 
         if object.name.startswith(parameter):
-            self.set_message('Name starts with "' + parameter + '"')
+            self.set_message(f'Name starts with "{parameter}"')
             return Rule.FAILED
         return Rule.OK
 

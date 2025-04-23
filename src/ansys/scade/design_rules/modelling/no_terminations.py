@@ -115,7 +115,7 @@ class NoTerminations(Rule):
             violated = True
 
         if violated:
-            error_msg = 'Termination found at output %d' % index_pos_of_var
+            error_msg = f'Termination found at output {index_pos_of_var:.0f}'
             identifier = str(index_pos_of_var)
             self.add_rule_status(prev_eq, Rule.FAILED, error_msg, identifier)
 

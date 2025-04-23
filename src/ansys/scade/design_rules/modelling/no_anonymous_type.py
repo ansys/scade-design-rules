@@ -75,9 +75,7 @@ class NoAnonymousType(Rule):
         self.roots = None
         # the parameters are optional
         d = self.parse_values(parameter) if parameter else {}
-        if d is None:
-            message = "'%s': parameter syntax error" % parameter
-        else:
+        if d is not None:
             name = d.get('configuration')
             if name:
                 # get the project associated to the model
@@ -89,6 +87,8 @@ class NoAnonymousType(Rule):
                     )
             # no error
             return Rule.OK
+
+        message = f"'{parameter}': parameter syntax error"
         self.set_message(message)
         scade.output(message + '\n')
         return Rule.ERROR
@@ -99,20 +99,16 @@ class NoAnonymousType(Rule):
         if not self._is_root(variable.operator):
             return Rule.NA
         if not isinstance(variable.type, suite.NamedType):
-            self.set_message(
-                'The type %s shall not be anonymous'
-                % (variable.type.to_string() if variable.type else '<null>')
-            )
+            variable_type_string = variable.type.to_string() if variable.type else '<null>'
+            self.set_message(f'The type {variable_type_string} shall not be anonymous')
             return Rule.FAILED
         # check the sub types
         for type_ in variable.type.used_types:
             # if a type is anonymous, its owner swhall be a named type
             if isinstance(type_, suite.Structure):
                 if not isinstance(type_.owner, suite.NamedType):
-                    self.set_message(
-                        'The type %s shall not contain anonymous structure'
-                        % variable.type.to_string()
-                    )
+                    message = 'The type {} shall not contain anonymous structure'
+                    self.set_message(message.format(variable.type.to_string()))
                     return Rule.FAILED
             elif isinstance(type_, suite.Table):
                 # matrix accepted
@@ -120,7 +116,7 @@ class NoAnonymousType(Rule):
                     type_.owner, suite.Table
                 ):
                     self.set_message(
-                        'The type %s shall not contain anonymous array' % variable.type.to_string()
+                        f'The type {variable.type.to_string()} shall not contain anonymous array'
                     )
                     return Rule.FAILED
 

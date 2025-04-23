@@ -68,11 +68,11 @@ class CheckerNoWarningsErrors(Rule):
         """Get the rule's parameters."""
         d = self.parse_values(parameter)
         if d is None:
-            d = "'%s': parameter syntax error" % parameter
+            d = f"'{parameter}': parameter syntax error"
         else:
             configuration = d.get('conf')
             if not configuration:
-                message = "'%s': missing 'conf' value" % parameter
+                message = f"'{parameter}': missing 'conf' value"
             else:
                 self.configuration = configuration
                 return Rule.OK
@@ -92,7 +92,7 @@ class CheckerNoWarningsErrors(Rule):
         scade_home = str(get_scade_home())
         scade_path = scade_home + r'\SCADE\bin\scade.exe'
         pathname = object_.descriptor.model_file_name
-        call = '"' + scade_path + '" -check "' + pathname + '" -conf ' + self.configuration
+        call = f'"{scade_path}" -check "{pathname}" -conf {self.configuration}'
 
         # execute call
         import os

@@ -77,12 +77,11 @@ class NameStructureEnumeration(Rule):
         if parameter.startswith('_'):
             if not name.endswith(parameter):
                 failure = True
-                text += 'Enumeration name does not end with ' + parameter + ', '
+                text += f'Enumeration name does not end with {parameter}, '
 
-        elif parameter.endswith('_'):
-            if not name.startswith(parameter):
-                failure = True
-                text += 'Enumeration name does not start with ' + parameter + ', '
+        elif parameter.endswith('_') and not name.startswith(parameter):
+            failure = True
+            text += f'Enumeration name does not start with {parameter}, '
 
         corename = name.replace(parameter, '')
 

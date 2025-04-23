@@ -85,7 +85,7 @@ class LLRNature(AnnotationRule):
             status = Rule.OK
         else:
             status = Rule.FAILED
-            message = 'the Contributing Element shall have an annotation %s' % self.note_type.name
+            message = f'the Contributing Element shall have an annotation {self.note_type.name}'
             self.set_message(message)
         return status
 

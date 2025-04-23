@@ -69,7 +69,7 @@ class NameOfDefaultEnumValueShallEndWith(Rule):
         """Return the evaluation status for the input object."""
         if get_pragma_tool_text(object_, 'kcg', 'default') is not None:
             if not object_.name.endswith(parameter):
-                self.set_message('Enum value name does not end with "' + parameter + '"')
+                self.set_message(f'Enum value name does not end with "{parameter}"')
                 return Rule.FAILED
         return Rule.OK
 

@@ -72,7 +72,7 @@ class LLROnly(Rule):
         ids = ', '.join(self.get_requirement_ids(traceable))
         if not self.is_llr(traceable) and ids:
             status = Rule.FAILED
-            message = 'the element is not a CE: it shall not trace the requirement(s) %s' % ids
+            message = f'the element is not a CE: it shall not trace the requirement(s) {ids}'
             self.set_message(message)
         else:
             status = Rule.OK

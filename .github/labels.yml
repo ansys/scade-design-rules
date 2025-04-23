@@ -2,10 +2,6 @@
   description: Something isn't working
   color: d42a34
 
-- name: dependencies
-  description: Related with project dependencies
-  color: ffc0cb
-
 - name: documentation
   description: Improvements or additions to documentation
   color: 0677ba
@@ -25,6 +21,10 @@
 - name: release
   description: Anything related to an incoming release
   color: ffffff
+
+- name: examples
+  description: Examples and tutorials
+  color: 6c5271
 
 - name: testing
   description: Anything related to tests

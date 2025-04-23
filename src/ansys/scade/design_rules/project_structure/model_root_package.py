@@ -69,30 +69,30 @@ class ModelRootPackage(Rule):
         return_message = []
 
         if len(object.packages) == 0:
-            return_message.append('Model ' + name + ' contains no root Package')
+            return_message.append(f'Model {name} contains no root Package')
             return_status = Rule.FAILED
         elif len(object.packages) > 1:
-            return_message.append('Model ' + name + ' contains more than one root Package')
+            return_message.append(f'Model {name} contains more than one root Package')
             return_status = Rule.FAILED
 
         if len(object.operators) > 0:
-            return_message.append('Model ' + name + ' contains Operators at model-level')
+            return_message.append(f'Model {name} contains Operators at model-level')
             return_status = Rule.FAILED
 
         if len(object.sensors) > 0:
-            return_message.append('Model ' + name + ' contains Sensors at model-level')
+            return_message.append(f'Model {name} contains Sensors at model-level')
             return_status = Rule.FAILED
 
         if len(object.named_types) > 0:
-            return_message.append('Model ' + name + ' contains Types at model-level')
+            return_message.append(f'Model {name} contains Types at model-level')
             return_status = Rule.FAILED
 
         if len(object.constants) > 0:
-            return_message.append('Model ' + name + ' contains Constants at model-level')
+            return_message.append(f'Model {name} contains Constants at model-level')
             return_status = Rule.FAILED
 
         if return_status == Rule.FAILED:
-            return_message.append('Model ' + name + ' shall contain only one root Package!')
+            return_message.append(f'Model {name} shall contain only one root Package!')
 
         separator = '; '
         self.set_message(separator.join(return_message))

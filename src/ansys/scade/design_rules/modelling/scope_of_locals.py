@@ -129,11 +129,8 @@ class ScopeOfLocals(Rule):
             status = Rule.OK
         else:
             status = Rule.FAILED
-            message = 'the local variable %s shall be declared in its least common scope %s' % (
-                var.name,
-                lcs.get_full_path(),
-            )
-            self.set_message(message)
+            message = 'the local variable {} shall be declared in its least common scope {}'
+            self.set_message(message.format(var.name, lcs.get_full_path()))
         return status
 
 

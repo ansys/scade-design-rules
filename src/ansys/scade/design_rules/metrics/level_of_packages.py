@@ -59,11 +59,11 @@ class LevelOfPackages(Metric):
         """Compute the metric for the input object."""
         result = self._max_level(package)
         self.set_result_metric(result)
-
         return Metric.OK
 
     def _max_level(self, package: suite.Package) -> int:
-        level = max((self._max_level(_) for _ in package.packages)) if package.packages else 0
+        """Recursively compute the level of packages."""
+        level = max(self._max_level(_) for _ in package.packages) if package.packages else 0
         return level + 1
 
 

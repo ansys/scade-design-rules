@@ -103,20 +103,20 @@ class CommentHasSpecificHeadlines(Rule):
                 number_of_headlines_found += 1
                 if number_of_headlines_found >= 2:
                     violation_no_text_found = True
-                    messages.append('No comment for ' + found_headlines[-2])
+                    messages.append(f'No comment for {found_headlines[-2]}')
             if textline_found:
                 number_of_headlines_found = 0
 
         if number_of_headlines_found >= 1:
             violation_no_text_found = True
-            messages.append('No comment for ' + found_headlines[-1])
+            messages.append(f'No comment for {found_headlines[-1]}')
 
         if set(found_headlines) != set(self.headlines):
             violation_not_all_headlines = True
             messages.append('Not all headlines found.')
 
         if violation_no_text_found or violation_not_all_headlines:
-            self.set_message('Comment not correct: ' + (',').join(messages))
+            self.set_message(f'Comment not correct: {",".join(messages)}')
             return Rule.FAILED
         return Rule.OK
 

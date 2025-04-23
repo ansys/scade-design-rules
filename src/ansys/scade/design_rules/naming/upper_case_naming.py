@@ -83,7 +83,7 @@ class UpperCaseNaming(Rule):
 
         if not self.pattern.fullmatch(name):
             status = Rule.FAILED
-            message = '%s: The name shall be composed of a sequence of uppercase words' % name
+            message = f'{name}: The name shall be composed of a sequence of uppercase words'
             self.set_message(message)
         else:
             status = Rule.OK

@@ -83,47 +83,57 @@ class NonLibProjects(Rule):
         if self.model_is_library:
             return Rule.OK
 
-        if isinstance(object, suite.Package):
-            if isinstance(object.owner, suite.Model):
-                if len(object.operators) > 1:
-                    self.set_message('More than one top-level operator in project!')
-                    return Rule.FAILED
+        if (
+            isinstance(object, suite.Package)
+            and isinstance(object.owner, suite.Model)
+            and len(object.operators) > 1
+        ):
+            self.set_message('More than one top-level operator in project!')
+            return Rule.FAILED
 
-        if isinstance(object, suite.Constant):
-            if isinstance(object.owner, suite.Package):
-                if isinstance(object.owner.owner, suite.Model):
-                    not_used_at_top_level = True
-                    if len(object.clients) == 0:
+        if (
+            isinstance(object, suite.Constant)
+            and isinstance(object.owner, suite.Package)
+            and isinstance(object.owner.owner, suite.Model)
+        ):
+            not_used_at_top_level = True
+            if len(object.clients) == 0:
+                not_used_at_top_level = False
+            else:  # prevents unnecessary iteration when object.clients is empty
+                for client in object.clients:
+                    if (
+                        isinstance(client.owner, suite.Package)
+                        and isinstance(client.owner.owner, suite.Model)
+                        and client.owner.owner.owner is None
+                    ):
                         not_used_at_top_level = False
-                    for client in object.clients:
-                        if isinstance(client.owner, suite.Package):
-                            if isinstance(client.owner.owner, suite.Model):
-                                if client.owner.owner.owner is None:
-                                    not_used_at_top_level = False
-                                    break
-                    if not_used_at_top_level:
-                        self.set_message(
-                            'Constant defined at top-level package is not used at top-level!'
-                        )
-                        return Rule.FAILED
+                        break
 
-        if isinstance(object, suite.NamedType):
-            if isinstance(object.owner, suite.Package):
-                if isinstance(object.owner.owner, suite.Model):
-                    not_used_at_top_level = True
-                    if len(object.typed_objects) == 0:
+            if not_used_at_top_level:
+                self.set_message('Constant defined at top-level package is not used at top-level!')
+                return Rule.FAILED
+
+        if (
+            isinstance(object, suite.NamedType)
+            and isinstance(object.owner, suite.Package)
+            and isinstance(object.owner.owner, suite.Model)
+        ):
+            not_used_at_top_level = True
+            if len(object.typed_objects) == 0:
+                not_used_at_top_level = False
+            else:  # prevents unnecessary iteration when object.typed_objects is empty
+                for obj in object.typed_objects:
+                    if (
+                        isinstance(obj.owner, suite.Package)
+                        and isinstance(obj.owner.owner, suite.Model)
+                        and obj.owner.owner.owner is None
+                    ):
                         not_used_at_top_level = False
-                    for obj in object.typed_objects:
-                        if isinstance(obj.owner, suite.Package):
-                            if isinstance(obj.owner.owner, suite.Model):
-                                if obj.owner.owner.owner is None:
-                                    not_used_at_top_level = False
-                                    break
-                    if not_used_at_top_level:
-                        self.set_message(
-                            'Type defined at top-level package is not used at top-level!'
-                        )
-                        return Rule.FAILED
+                        break
+
+            if not_used_at_top_level:
+                self.set_message('Type defined at top-level package is not used at top-level!')
+                return Rule.FAILED
 
         return Rule.OK
 

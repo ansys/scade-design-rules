@@ -67,7 +67,7 @@ class MaximumLevelOfPackages(Rule):
         """Get the rule's parameters."""
         if not parameter.isdecimal():
             self.set_message(
-                'Parameter for rule is not an integer or lower than zero: ' + parameter
+                f'Parameter for rule is not an integer or lower than zero: {parameter}'
             )
             return Rule.ERROR
 

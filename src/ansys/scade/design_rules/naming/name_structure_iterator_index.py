@@ -108,7 +108,7 @@ class NameStructureIteratorIndex(Rule):
                 if not re.fullmatch(self.index_regexp, name):
                     failure = True
                     lines.append(
-                        'The name does not match the index expression %s' % self.index_regexp
+                        f'The name does not match the index expression {self.index_regexp}'
                     )
 
         if failure:

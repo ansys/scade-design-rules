@@ -68,10 +68,9 @@ class EnumTypeNamePrefix(Rule):
         prefix = re.sub(
             parameter + '$', '', enum_name
         )  # remove parameter string from end of the name+
-        # scade.output(object.name + "\n")
         if not object.name.startswith(prefix):
             self.set_message(
-                'Enumeration literal does not start with ' + prefix + '(Value of ' + enum_name + ')'
+                f'Enumeration literal does not start with {prefix}(Value of {enum_name})'
             )
             return Rule.FAILED
 

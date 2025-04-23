@@ -76,7 +76,8 @@ class TransitionActions(Rule):
 
         if violated:
             found_elements = found_elements[:-2]
-            self.set_message('Illegal action found at transition (%s)' % ', '.join(found_elements))
+            message = 'Illegal action found at transition ({})'.format(', '.join(found_elements))
+            self.set_message(message)
             return Rule.FAILED
 
         return Rule.OK

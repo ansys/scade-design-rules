@@ -66,7 +66,7 @@ class EqSetNotEmpty(Rule):
             status = Rule.OK
         else:
             status = Rule.FAILED
-            message = 'equation set %s must contain at least one element' % equation_set.name
+            message = f'equation set {equation_set.name} must contain at least one element'
             self.set_message(message)
         return status
 

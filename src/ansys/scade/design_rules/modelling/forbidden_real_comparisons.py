@@ -141,7 +141,7 @@ class ForbiddenRealComparisons(Rule):
         self.comp_operators = {int(_) for _ in parameter.split(',') if _} if parameter else set()
         # float types for Scade 6.4 or 6.6
         self.floats = set()
-        for name in 'float', 'float32', 'float64':
+        for name in ('float', 'float32', 'float64'):
             type_ = model.session.find_predefined_type(name)
             if type_:
                 self.floats.add(type_)
@@ -162,7 +162,7 @@ class ForbiddenRealComparisons(Rule):
                 # return Rule.ERROR
                 Rule.OK
             elif real_found:
-                self.set_message('Real comparison in ' + object.to_string() + ', ')
+                self.set_message(f'Real comparison in {object.to_string()}, ')
                 return Rule.FAILED
 
         return Rule.OK

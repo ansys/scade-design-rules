@@ -75,10 +75,10 @@ class NameStructureEnumerationCustom1(Rule):
         enum_base_name = enumeration_type.name.rstrip(parameter)
 
         if name.startswith(enumeration_type.name):
-            self.set_message(name + ' starts with full type name ' + enumeration_type.name)
+            self.set_message(f'{name} starts with full type name {enumeration_type.name}')
             return Rule.FAILED
         elif not name.startswith(enum_base_name):
-            self.set_message(name + ' does not start with ' + enum_base_name)
+            self.set_message(f'{name} does not start with {enum_base_name}')
             return Rule.FAILED
         return Rule.OK
 

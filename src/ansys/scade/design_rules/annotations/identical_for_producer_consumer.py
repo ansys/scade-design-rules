@@ -121,11 +121,12 @@ class IdenticalForProducerConsumer(AnnotationRule):
             self._compare_annotation_notes(producer, consumer)
 
         if self.violated:
-            self.set_message('Annotation notes issues: ' + ';'.join(self.violation_text))
+            self.set_message(f'Annotation notes issues: {";".join(self.violation_text)}')
             return Rule.FAILED
         return Rule.OK
 
     def _get_producers(self, consumer: suite.LocalVariable) -> Set[suite.LocalVariable]:
+        """Return the producers of the consumer."""
         producers = set()
         # analyze the equations in which the consumer is produced
         for prev_eq in consumer.definitions:
@@ -161,6 +162,7 @@ class IdenticalForProducerConsumer(AnnotationRule):
     def _compare_annotation_notes(
         self, producer: suite.LocalVariable, consumer: suite.LocalVariable
     ):
+        """Compare the annotation notes of producer and consumer."""
         self.violated = False
 
         ann_note_consumer = get_first_note_by_type(consumer, self.note_type)
@@ -177,15 +179,12 @@ class IdenticalForProducerConsumer(AnnotationRule):
             if consumer_unit_si_defined:
                 if not producer_unit_si_defined:
                     self.violated = True
+                    self.violation_text.append(f'{self.unit_field}: {producer.name} is redefined.')
+                elif consumer_unit_si != producer_unit_si:
+                    self.violated = True
                     self.violation_text.append(
-                        '%s: %s is redefined.' % (self.unit_field, producer.name)
+                        f'{self.unit_field}: {consumer.name} != {producer.name}.'
                     )
-                else:
-                    if consumer_unit_si != producer_unit_si:
-                        self.violated = True
-                        self.violation_text.append(
-                            '%s: %s != %s.' % (self.unit_field, consumer.name, producer.name)
-                        )
 
         # Range check min
         if self.min_field:
@@ -198,15 +197,12 @@ class IdenticalForProducerConsumer(AnnotationRule):
             if consumer_min_defined:
                 if not producer_min_defined:
                     self.violated = True
+                    self.violation_text.append(f'{self.min_field}: {producer.name} is redefined.')
+                elif float(consumer_min) > float(producer_min):
+                    self.violated = True
                     self.violation_text.append(
-                        '%s: %s is redefined.' % (self.min_field, producer.name)
+                        f'{self.min_field}: {consumer.name} > {producer.name}.'
                     )
-                else:
-                    if float(consumer_min) > float(producer_min):
-                        self.violated = True
-                        self.violation_text.append(
-                            '%s: %s > %s.' % (self.min_field, consumer.name, producer.name)
-                        )
 
         # Range check max
         if self.max_field:
@@ -219,15 +215,12 @@ class IdenticalForProducerConsumer(AnnotationRule):
             if consumer_max_defined:
                 if not producer_max_defined:
                     self.violated = True
+                    self.violation_text.append(f'{self.max_field}: {producer.name} is redefined.')
+                elif float(consumer_max) < float(producer_max):
+                    self.violated = True
                     self.violation_text.append(
-                        '%s: %s is redefined.' % (self.max_field, producer.name)
+                        f'{self.max_field}: {consumer.name} < {producer.name}.'
                     )
-                else:
-                    if float(consumer_max) < float(producer_max):
-                        self.violated = True
-                        self.violation_text.append(
-                            '%s: %s < %s.' % (self.max_field, consumer.name, producer.name)
-                        )
 
 
 if __name__ == '__main__':  # pragma: no cover

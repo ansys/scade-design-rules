@@ -75,7 +75,7 @@ class ElementNamesUniqueInProject(Rule):
         paths = [_.get_full_path() for _ in constants if _ != object_]
 
         if paths:
-            self.set_message('Element name also used here: ' + ', '.join(paths))
+            self.set_message('Element name also used here: {}'.format(', '.join(paths)))
             return Rule.FAILED
         return Rule.OK
 

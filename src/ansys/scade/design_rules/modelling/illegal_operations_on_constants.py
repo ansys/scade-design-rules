@@ -76,7 +76,7 @@ class IllegalOperationsOnConstants(Rule):
             return Rule.OK
         except ValueError:
             pass
-        message = "'%s': syntax error" % parameter
+        message = f"'{parameter}': syntax error"
         print(message)
         return Rule.ERROR
 
@@ -107,7 +107,7 @@ class IllegalOperationsOnConstants(Rule):
             if self.found_elements:
                 # replace internal variables by their constants
                 elements = [substitute_names(_, self.aliases) for _ in self.found_elements]
-                message = 'Illegal operation on Constant found (%s)' % ', '.join(elements)
+                message = 'Illegal operation on Constant found ({})'.format(', '.join(elements))
                 self.set_message(message)
                 return Rule.FAILED
 
@@ -136,7 +136,7 @@ class IllegalOperationsOnConstants(Rule):
                     assert len(producer.definitions) == 1
                     operand = producer.definitions[0].right
                     # replace the internal variable with its producer and store the alias
-                    self.aliases[producer.name] = '(' + operand.to_string() + ')'
+                    self.aliases[producer.name] = f'({operand.to_string()})'
 
             if isinstance(operand, suite.ExprId):
                 if not isinstance(operand.reference, suite.Constant):

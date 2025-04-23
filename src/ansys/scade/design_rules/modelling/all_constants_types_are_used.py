@@ -89,11 +89,11 @@ class AllConstantsTypesAreUsed(AnnotationRule):
                 )
                 violated = not defined or not value
         else:
-            scade.output('Rule not implemented for ' + object.__class__.__name__)
+            scade.output(f'Rule not implemented for {object.__class__.__name__}')
             Rule.ERROR
 
         if violated:
-            self.set_message(object.__class__.__name__ + ' ' + object.name + ' not used in model.')
+            self.set_message(f'{object.__class__.__name__} {object.name} not used in model.')
             return Rule.FAILED
 
         return Rule.OK

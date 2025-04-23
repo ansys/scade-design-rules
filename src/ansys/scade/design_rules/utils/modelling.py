@@ -274,7 +274,7 @@ def get_full_path_ex(object_: suite.Object) -> str:
     """
     # a few objects do not have a path
     if isinstance(object_, suite.CompositeElement):
-        return '%s%s' % (object_.owner.get_full_path(), object_.name)
+        return f'{object_.owner.get_full_path()}{object_.name}'
     # default
     return object_.get_full_path()
 

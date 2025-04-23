@@ -75,11 +75,11 @@ class RequirementHasLink(Rule):
         """Get the rule's parameters."""
         d = self.parse_values(parameter)
         if d is None:
-            message = "'%s': parameter syntax error" % parameter
+            message = f"'{parameter}': parameter syntax error"
         else:
             withalmgt = d.get('withalmgt')
             if not withalmgt:
-                message = "'%s': missing 'withalmgt' value" % parameter
+                message = f"'{parameter}': missing 'withalmgt' value"
             else:
                 self.withalmgt = withalmgt == 'true'
                 return Rule.OK
@@ -117,7 +117,8 @@ class RequirementHasLink(Rule):
                             if link.action == local_trace.TraceType.ADD_LINK:
                                 number_of_links += 1
                             elif link.action == local_trace.TraceType.UPDATE_LINK:
-                                # TODO: needs to be checked
+                                # TODO(Jean): needs to be checked
+                                # https://github.com/ansys/scade-design-rules/issues/29
                                 number_of_links += 1
                             elif link.action == local_trace.TraceType.REMOVE_LINK:
                                 number_of_links -= 1
@@ -128,11 +129,11 @@ class RequirementHasLink(Rule):
                     linked = True
 
                 if not linked:
-                    non_linked_reqs.append(alm_document.name + '.' + requirement.name)
+                    non_linked_reqs.append(f'{alm_document.name}.{requirement.name}')
                     violated = True
 
         if violated:
-            self.set_message('Not all Requirements have a link: ' + ','.join(non_linked_reqs))
+            self.set_message(f'Not all Requirements have a link: {",".join(non_linked_reqs)}')
             return Rule.FAILED
         return Rule.OK
 

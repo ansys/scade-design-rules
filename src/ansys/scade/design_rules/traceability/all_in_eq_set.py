@@ -81,11 +81,8 @@ class AllInEqSet(Rule):
                 status = Rule.OK
             else:
                 status = Rule.FAILED
-                message = (
-                    'the element %s shall belong to at least one equation set'
-                    % presentable.get_full_path()
-                )
-                self.set_message(message)
+                message = 'the element {} shall belong to at least one equation set'
+                self.set_message(message.format(presentable.get_full_path()))
         return status
 
 

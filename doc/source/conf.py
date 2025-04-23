@@ -80,14 +80,14 @@ source_suffix = '.rst'
 # The master toctree document.
 master_doc = 'index'
 
-# TODO: remove ignore links after public release
+# TODO(Jean): remove ignore links after public release
+# https://github.com/ansys/scade-design-rules/issues/29
 linkcheck_ignore = [
-    'https://github.com/ansys/scade-design-rules',
-    'https://github.com/ansys/scade-design-rules/actions/workflows/ci_cd.yml',
-    'https://pypi.org/project/ansys-scade-design-rules',
-    # The link below takes a long time to check
-    'https://www.ansys.com/products/embedded-software/ansys-scade-suite',
-    'https://www.ansys.com/*',
+    r'https://github.com/ansys/scade-design-rules.*',
+    # The links below takes a long time to check
+    r'https://www.ansys.com/.*',
+    # The link below fails during checks
+    r'https://ansyshelp.ansys.com/public/Views/Secured/SCADE/.+',
 ]
 
 
@@ -95,3 +95,11 @@ if switcher_version != 'dev':
     linkcheck_ignore.append(
         f'https://github.com/ansys/scade-design-rules/releases/tag/v{__version__}'
     )
+
+# Common content for every RST file such us links
+rst_epilog = ''
+links_filepath = Path(__file__).parent.absolute() / 'links.rst'
+rst_epilog += links_filepath.read_text(encoding='utf-8')
+
+# Directories excluded when looking for source files
+exclude_patterns = ['links.rst']

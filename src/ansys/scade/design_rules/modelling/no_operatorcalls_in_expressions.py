@@ -88,12 +88,11 @@ class NoOperatorCallsInExpressions(Rule):
                 # get graphical element
                 equation_ge = equation.equation_ge
                 # check whether object is a textual expression. OBJ_LIT most probably OBJECT_LITERAL
-                if equation_ge.kind == 'OBJ_LIT':
-                    if not self._is_expression_valid(object_):
-                        violated = True
+                if equation_ge.kind == 'OBJ_LIT' and not self._is_expression_valid(object_):
+                    violated = True
 
         if violated:
-            error_msg = 'Textual expression not in line with given format: ' + object_.to_string()
+            error_msg = f'Textual expression not in line with given format: {object_.to_string()}'
             identifier = object_.to_string()
             self.add_rule_status(container, Rule.FAILED, error_msg, identifier)
 

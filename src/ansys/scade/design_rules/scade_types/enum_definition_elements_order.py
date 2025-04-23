@@ -84,14 +84,14 @@ class EnumDefinitionElementsOrder(Rule):
 
         d = self.parse_values(parameter)
         if d is None:
-            message = "'%s': parameter syntax error" % parameter
+            message = f"'{parameter}': parameter syntax error"
         else:
             order = d.get('order')
             by = d.get('by')
             if not order:
-                message = "'%s': missing 'order' value" % parameter
+                message = f"'{parameter}': missing 'order' value"
             elif not by:
-                message = "'%s': missing 'by' value" % parameter
+                message = f"'{parameter}': missing 'by' value"
             else:
                 self.order = order
                 self.by = by
@@ -119,7 +119,7 @@ class EnumDefinitionElementsOrder(Rule):
 
             if self.strict and len(missing_enum_values) > 0:
                 self.set_message(
-                    'Missing Enum values. Cannot check for order: ' + ', '.join(missing_enum_values)
+                    f'Missing Enum values. Cannot check for order: {", ".join(missing_enum_values)}'
                 )
                 return Rule.FAILED
 

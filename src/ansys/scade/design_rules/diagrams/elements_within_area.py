@@ -97,7 +97,7 @@ class ElementsWithinArea(Rule):
         self.wrong_formats = set()
 
         # default message if syntax error
-        message = "'%s': syntax error, expected 'margins= <value>; <value>'" % parameter
+        message = f"'{parameter}': syntax error, expected 'margins= <value>; <value>'"
         parameter = 'margins= 0; 0' if not parameter else parameter
         d = self.parse_values(parameter)
         if d is not None:
@@ -124,7 +124,7 @@ class ElementsWithinArea(Rule):
                 # cache the diagram and not the format to report
                 # the error once per diagram
                 self.wrong_formats.add(diagram)
-                self.set_message('Format ' + self.format + ' not supported')
+                self.set_message(f'Format {self.format} not supported')
                 return Rule.FAILED
             else:
                 return Rule.NA
@@ -140,7 +140,7 @@ class ElementsWithinArea(Rule):
                     if self.is_link_outside_area(edge.points):
                         # do not use logical shortcut to report all findings
                         status = False
-                        items.add('edge %s' % edge.left_var.name)
+                        items.add(f'edge {edge.left_var.name}')
         else:
             assert isinstance(pe, suite.TransitionGE)
             if self.is_box_outside_area(pe.label_pos, pe.label_size):
@@ -153,7 +153,7 @@ class ElementsWithinArea(Rule):
         if not status:
             message = 'Element outside area'
             if items:
-                message += ' (%s)' % ', '.join(sorted(items))
+                message += ' ({})'.format(', '.join(sorted(items)))
 
             self.set_message(message)
             return Rule.FAILED

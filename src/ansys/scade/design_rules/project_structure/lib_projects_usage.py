@@ -69,12 +69,12 @@ class LibProjectsUsage(Rule):
         return_message = []
         for library in object.libraries:
             if not library.name.startswith(parameter):
-                return_message.append('Included Project ' + library.name + ' is no Library project')
+                return_message.append(f'Included Project {library.name} is no Library project')
                 return_status = Rule.FAILED
 
         if return_status == Rule.FAILED:
             return_message.append(
-                "Library Projects shall contain the prefix '" + parameter + "' in their name!"
+                f"Library Projects shall contain the prefix '{parameter}' in their name!"
             )
 
         separator = '; '

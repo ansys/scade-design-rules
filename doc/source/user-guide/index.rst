@@ -1,7 +1,5 @@
 User guide
 ##########
-Ansys SCADE Design Rules is a database of metrics and rules that enforce various design practices on a model.
-
 While it is possible to individually reference each rule to add them to a SCADE project,
 a common practice is to instantiate a selection of rules in one Python script,
 and then register that script to the project.
@@ -32,7 +30,7 @@ Each rule is implemented as a Python class.
 Once the rules have been identified, create a Python script that instantiates their classes.
 This script can be saved anywhere on your file system.
 
-.. literalinclude :: resources/naming_default.py
+.. literalinclude:: resources/naming_default.py
 
 .. _ug_customization:
 
@@ -53,14 +51,14 @@ Refer to the *Customization* section of their documentation for details.
 
 For example:
 
-.. literalinclude :: resources/naming_custom.py
+.. literalinclude:: resources/naming_custom.py
 
 Rules that depend on metrics provide an additional property, usually ``metric_id``,
 to specify an alternate metric.
 
 For example:
 
-.. literalinclude :: resources/metric_custom.py
+.. literalinclude:: resources/metric_custom.py
 
 Registration
 ============

@@ -68,17 +68,17 @@ class CheckConfiguration(Rule):
         """Get the rule's parameters."""
         d = self.parse_values(parameter)
         if d is None:
-            message = "'%s': parameter syntax error" % parameter
+            message = f"'{parameter}': parameter syntax error"
         else:
             conf = d.get('conf')
             project = d.get('project')
             conf_source = d.get('conf_source')
             if not conf:
-                message = "'%s': missing 'conf' value" % parameter
+                message = f"'{parameter}': missing 'conf' value"
             elif not project:
-                message = "'%s': missing 'project' value" % parameter
+                message = f"'{parameter}': missing 'project' value"
             elif not conf_source:
-                message = "'%s': missing 'conf_source' value" % parameter
+                message = f"'{parameter}': missing 'conf_source' value"
             else:
                 self.conf = conf
                 # make the path relative to the project
@@ -106,8 +106,10 @@ class CheckConfiguration(Rule):
         except IOError as e:
             self.set_message(str(e))
             return Rule.FAILED
+        else:
+            _tree = ElementTree.parse(f)
+            f.close()
 
-        _tree = ElementTree.parse(f)
         root = _tree.getroot()
 
         # find configuration ID of given source configuration
@@ -158,11 +160,11 @@ class CheckConfiguration(Rule):
             if key in props_source:
                 source = props_source[key]
                 if value != source:
-                    fail_text = key + '(' + '.'.join(value) + ' <> ' + '.'.join(source) + ')'
+                    fail_text = f'{key}({",".join(value)} <> {",".join(source)})'
                     failure_messages.append(fail_text)
 
-        if len(failure_messages) > 0:
-            self.set_message('Configuration not correct: ' + ', '.join(failure_messages))
+        if failure_messages:
+            self.set_message(f'Configuration not correct: {", ".join(failure_messages)}')
             return Rule.FAILED
         return Rule.OK
 

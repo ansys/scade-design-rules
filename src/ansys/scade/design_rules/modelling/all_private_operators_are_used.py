@@ -64,9 +64,8 @@ class AllPrivateOperatorsAreUsed(Rule):
         """Return the evaluation status for the input object."""
         violated = False
 
-        if not is_visible(object_):
-            if len(object_.expr_calls) == 0:
-                violated = True
+        if not is_visible(object_) and len(object_.expr_calls) == 0:
+            violated = True
 
         if violated:
             self.set_message('Private operator not used in package.')
