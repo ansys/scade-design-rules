@@ -100,7 +100,8 @@ class NoScadeLibrary(Rule):
                     continue
                 if '$(SCADE)' in pathname:
                     external_libraries[Path(file.pathname)] = pathname
-                # TODO: this check can be optional
+                # TODO (Jean): this check can be optional
+                # https://github.com/ansys/scade-design-rules/issues/29
                 # elif (Path(pathname).is_absolute()):
                 #     external_libraries.append(pathname)
 

@@ -88,7 +88,8 @@ class CamelCaseNaming(Rule):
             return Rule.NA
 
         # accept names suffixed by underscore when it is a keyword
-        # TODO: allow the user to specify an additional list of keywords?
+        # TODO(Jean): allow the user to specify an additional list of keywords?
+        # https://github.com/ansys/scade-design-rules/issues/29
         if name[-1] == '_' and is_scade_keyword(name[:-1]):
             name = name[:-1]
         if '_' in name:

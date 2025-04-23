@@ -117,7 +117,8 @@ class RequirementHasLink(Rule):
                             if link.action == local_trace.TraceType.ADD_LINK:
                                 number_of_links += 1
                             elif link.action == local_trace.TraceType.UPDATE_LINK:
-                                # TODO: needs to be checked
+                                # TODO(Jean): needs to be checked
+                                # https://github.com/ansys/scade-design-rules/issues/29
                                 number_of_links += 1
                             elif link.action == local_trace.TraceType.REMOVE_LINK:
                                 number_of_links -= 1

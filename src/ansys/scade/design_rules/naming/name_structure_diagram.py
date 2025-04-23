@@ -76,12 +76,14 @@ class NameStructureDiagram(Rule):
         scope_name = '' if isinstance(scope, suite.Action) else scope.name
         if len(scope.diagrams) == 1:
             if not scope_name:
-                # TODO: one may want top compare the name with the one
-                #       we get from get_full_path
+                # TODO(Jean): one may want top compare the name with the one
+                #             we get from get_full_path
+                # https://github.com/ansys/scade-design-rules/issues/29
                 status = Rule.NA
             elif name != scope.name:
-                # TODO: As an alternative, make sure the name of the scope is
-                #       included in the name of the diagram
+                # TODO(Jean): As an alternative, make sure the name of the scope is
+                #             included in the name of the diagram
+                # https://github.com/ansys/scade-design-rules/issues/29
                 message = f'{name}: The name shall be the name of its scope {scope.name}'
                 self.set_message(message)
                 status = Rule.FAILED

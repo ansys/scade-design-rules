@@ -80,7 +80,8 @@ source_suffix = '.rst'
 # The master toctree document.
 master_doc = 'index'
 
-# TODO: remove ignore links after public release
+# TODO(Jean): remove ignore links after public release
+# https://github.com/ansys/scade-design-rules/issues/29
 linkcheck_ignore = [
     r'https://github.com/ansys/scade-design-rules.*',
     # The links below takes a long time to check

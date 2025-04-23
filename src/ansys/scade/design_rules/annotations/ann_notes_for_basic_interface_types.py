@@ -143,7 +143,8 @@ class AnnNotesForBasicInterfaceTypes(AnnotationRule):
             # predefined, sized, imported, or enumeration types
             violation_text_missing = self._check_annotation(typed)
             if violation_text_missing:
-                # TODO: object may not have a name
+                # TODO(Jean): object may not have a name
+                # https://github.com/ansys/scade-design-rules/issues/29
                 message = (
                     f'Annotation missing for {typed.name}: {", ".join(violation_text_missing)}'
                 )
