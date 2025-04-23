@@ -334,7 +334,7 @@ def update_doc(root: Path) -> int:
     # write the catalog
     catalog.sort(key=lambda t: t[0])
     catalog_path = root / 'src/ansys/scade/design_rules' / 'catalog.txt'
-    with catalog_path.open('w') as file:
+    with catalog_path.open('w', encoding="utf-8") as file:
         file.write('id\tcategory\tname\n')
         for id, category, name in catalog:
             file.write(f'{id}\t{category}\t{name}\n')
