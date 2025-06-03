@@ -37,6 +37,12 @@ Ansys SCADE Design Rules is a database of metrics and rules that enforce various
 
       Learn how to contribute to Ansys SCADE Design Rules.
 
+   .. grid-item-card:: :material-regular:`download;1.25em` Examples
+      :link: examples
+      :link-type: doc
+
+      Download the example assets (latest version)
+
    .. grid-item-card:: :material-regular:`update;1.25em` Changelog
       :link: changelog
       :link-type: doc
@@ -72,6 +78,7 @@ Ansys SCADE Design Rules is a database of metrics and rules that enforce various
    metrics/index
    rules/index
    contributing/index
+   examples
    changelog
 
 Indices and tables
