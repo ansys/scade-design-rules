@@ -18,7 +18,7 @@ Description
 
 .. start_description
 
-Check if an element has a specific annotation note type attached to it. In addition it is checked that the given field elements are present and not empty.
+Check if an element has a specific annotation note type attached to it. In addition, it is checked that the given field elements are present and not empty.
 parameter: '-t': Name of the annotation note type: e.g.: '-t AnnType'
 '-n': Names of annotation note elements: e.g.: -n AT1_Field1 AT1_Field2 AT1_Field3
 

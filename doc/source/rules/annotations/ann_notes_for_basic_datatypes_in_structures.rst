@@ -34,7 +34,8 @@ If not Booleans
 * Max_Value:
 * Unit(SI):
 
-parameter: '-t': Name of the annotation note type: e.g.: '-t SDD_TopLevel'
+parameter: 
+* '-t': Name of the annotation note type (e.g.: '-t SDD_TopLevel')
 
 .. end_description
 
@@ -43,7 +44,7 @@ parameter: '-t': Name of the annotation note type: e.g.: '-t SDD_TopLevel'
 Rationale
 =========
 This enforces compliance with a specific modeling standard by ensuring that all structure fields
-don't only show the *what* (the shape of the data itself), but also the *why*, by documenting what
+do not only show the *what* (the shape of the data itself), but also the *why*, by documenting what
 the data corresponds to and what real-world quantities they represent.
 
 Verification

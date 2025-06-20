@@ -2,7 +2,7 @@ User guide
 ##########
 While it is possible to individually reference each rule to add them to a SCADE project,
 a common practice is to instantiate a selection of rules in one Python script,
-and then register that script to the project.
+and then register that script with the project.
 
 This tutorial presents the basic steps to setup such a collection of rules for a SCADE Suite project.
 Note that a SCADE project may use several collections of rules.
@@ -46,7 +46,7 @@ The following properties are available for every rule:
 * description
 
 Refer to the section *Rule Class Methods* of the SCADE Suite documentation for details.
-Some rules allows overriding other properties, such as ``types`` or ``parameter``.
+Some rules allow overriding other properties, such as ``types`` or ``parameter``.
 Refer to the *Customization* section of their documentation for details.
 
 For example:
