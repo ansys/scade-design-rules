@@ -9,4 +9,4 @@ To download the zipped examples of the latest version, click the button below.
       :color: primary
       :outline:
 
-      :material-regular:`download;2em;sd-text-primary` Examples assets v-{{ version }}
+      :material-regular:`download;2em;sd-text-primary` Examples assets for version {{ version }}
