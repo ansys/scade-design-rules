@@ -77,12 +77,12 @@ class NoLastWithoutDefault(Rule):
                 return Rule.OK
 
             # find left (shall only be 1) in rights of other equations.
-            assert len(object_.lefts) == 1
+            # assert len(object_.lefts) == 1
             left = object_.lefts[0]
             for expr_id in left.expr_ids:
                 next_equation = expr_id.owner
                 if next_equation:
-                    assert len(next_equation.lefts) == 1
+                    # assert len(next_equation.lefts) == 1
                     next_left = next_equation.lefts[0]
                     if next_left == right.reference:
                         left_name = next_left.name

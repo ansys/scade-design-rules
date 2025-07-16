@@ -116,7 +116,7 @@ class AnnNoteConnectedDataForPublicInterface(Rule):
         if object_.is_input():
             self._check_annotation(object_, self.in_port, False)
         else:
-            assert object_.is_output()
+            # assert object_.is_output()
             self._check_annotation(object_, self.out_port, True)
 
         if self.violation_text_missing:

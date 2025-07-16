@@ -98,7 +98,7 @@ class CheckConfigurationCustom1(Rule):
         """Return the evaluation status for the input object."""
         failure_messages = []
 
-        assert isinstance(object_, suite.Model)
+        assert isinstance(object_, suite.Model)  # nosec B101  # addresses linter
         project = object_.project
         # check if object (model) is the main project and not a library model
         if not project:

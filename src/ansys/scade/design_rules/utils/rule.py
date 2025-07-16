@@ -79,7 +79,7 @@ except ImportError:
             """
             metric = self.metrics[metric_id]
             status = metric.on_compute(object_)
-            assert status == Metric.OK
+            assert status == Metric.OK  # nosec B101  # used for unit tests
             return metric.result
 
         # Possible severity values

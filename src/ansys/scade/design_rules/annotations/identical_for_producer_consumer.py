@@ -91,7 +91,7 @@ class IdenticalForProducerConsumer(AnnotationRule):
         if consumer.is_output():
             producers.update(self._get_producers(consumer))
         else:
-            assert consumer.is_input() or consumer.is_hidden()
+            # assert consumer.is_input() or consumer.is_hidden()
             # get operator in which the inputs and hiddens are defined
             operator = consumer.operator
             # create a combined list of all inputs and hiddens.

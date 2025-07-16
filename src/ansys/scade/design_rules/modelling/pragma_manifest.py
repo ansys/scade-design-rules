@@ -200,7 +200,7 @@ class PragmaManifest(Rule):
                     size = '({})'.format(type_.size_expression.to_string())
                 signature = prefix + size
             else:
-                assert type_ is None
+                # assert type_ is None
                 signature = '()'
             self.signatures[type_] = signature
 

@@ -93,7 +93,7 @@ class UserDefinedTypesLib(Rule):
         type_ = object_.type
         if is_array(type_) or is_structure(type_):
             model = get_model(object_.type)
-            assert model
+            assert model is not None  # nosec B101  # addresses linter
             if model.name == model_name:
                 message = (
                     get_type_name(type_) + ' is user-defined complex type at top-level. '

@@ -150,11 +150,11 @@ class ForbiddenRealComparisons(Rule):
 
         return Rule.OK
 
-    def on_check(self, object: suite.Object, parameter: str = '') -> int:
+    def on_check(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
-        assert isinstance(object, suite.ExprCall)
-        if object.predef_opr in self.comp_operators:
-            real_found, error = self.handle_expressions(object.parameters)
+        assert isinstance(object_, suite.ExprCall)  # nosec B101  # addresses linter
+        if object_.predef_opr in self.comp_operators:
+            real_found, error = self.handle_expressions(object_.parameters)
 
             if error:
                 # ERROR leads to a fatal error, not correctly reported
@@ -162,7 +162,7 @@ class ForbiddenRealComparisons(Rule):
                 # return Rule.ERROR
                 Rule.OK
             elif real_found:
-                self.set_message(f'Real comparison in {object.to_string()}, ')
+                self.set_message(f'Real comparison in {object_.to_string()}, ')
                 return Rule.FAILED
 
         return Rule.OK
@@ -190,14 +190,14 @@ class ForbiddenRealComparisons(Rule):
             return self.get_type_mask(expr.reference.type) if expr.reference else None
         elif isinstance(expr, suite.ExprType):
             # ExprType can't be an operand of a comparison
-            # shall not be called
-            assert False
+            # must not be called
+            pass  # pragma: no cover
         elif isinstance(expr, suite.ExprText):
             # syntax error
-            # shall not be called
-            assert False
+            # must not be called
+            pass  # pragma: no cover
 
-        assert isinstance(expr, suite.ExprCall)
+        assert isinstance(expr, suite.ExprCall)  # nosec B101  # addresses linter
         if expr.operator:
             # must be a function, check the type ouf the first output
             outputs = expr.operator.outputs
@@ -235,10 +235,10 @@ class ForbiddenRealComparisons(Rule):
             # type of the first 'then' or 'case' parameter
             return self.get_expression_mask(expr.parameters[1].parameters[0])
         elif code == SC_ECK_SEQ_EXPR:
-            # shall not happen
-            assert False
+            # must not happen
+            raise AssertionError('internal error: SEQ_EXPR')  # pragma: no cover
         elif code in {SC_ECK_NUMERIC_CAST, SC_ECK_MAKE}:
-            assert isinstance(expr.parameters[1], suite.ExprType)
+            assert isinstance(expr.parameters[1], suite.ExprType)  # nosec B101  # addresses linter
             return self.get_type_mask(expr.parameters[1].reference)
         elif code == SC_ECK_BLD_STRUCT:
             fields = {_.label.name: self.get_expression_mask(_) for _ in parameters}

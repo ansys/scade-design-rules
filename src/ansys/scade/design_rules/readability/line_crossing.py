@@ -187,7 +187,7 @@ class LineCrossing(Rule):
                 equation = diagram_object.equation
                 element_type = None
                 name = ''
-                assert equation is not None
+                assert equation is not None  # nosec B101  # addresses linter
                 element_type = equation.right
                 name = element_type.to_string()
                 self.add_element(
@@ -296,7 +296,7 @@ class LineCrossing(Rule):
         source_type = None
         destination_type = None
         not_i_source = edge.src_equation.equation
-        assert isinstance(not_i_source, suite.Equation)
+        assert isinstance(not_i_source, suite.Equation)  # nosec B101  # addresses linter
         source_type = not_i_source.right
         not_i_destination = edge.dst_equation.equation
         if isinstance(not_i_destination, suite.Equation):

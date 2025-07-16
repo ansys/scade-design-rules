@@ -81,8 +81,8 @@ class LLRArchitecture(AnnotationRule):
         """Get the rule's parameters."""
         status = super().on_start(model, parameter)
         if status == Rule.OK:
-            assert self.note_type
-            assert self.options
+            assert self.note_type is not None  # nosec B101  # addresses linter
+            assert self.options is not None  # nosec B101  # addresses linter
             self.architecture = self.options.value
             for note_attribute in self.note_type.ann_att_definitions:
                 if note_attribute.name == self.options.attribute:

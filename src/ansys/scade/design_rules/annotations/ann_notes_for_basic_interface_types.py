@@ -92,7 +92,7 @@ class AnnNotesForBasicInterfaceTypes(AnnotationRule):
 
         result = super().on_start(model, parameter)
         if result == Rule.OK:
-            assert self.options
+            assert self.options is not None  # nosec B101  # addresses linter
             self.public = self.options.public
             # cache for checked named types of fields
             self.checked_typed = set()
@@ -114,8 +114,8 @@ class AnnNotesForBasicInterfaceTypes(AnnotationRule):
     def _check_object(self, typed: suite.TypedObject):
         # typed: context of the check, for annotations
         # must not be a table or a predefined type, that are typed objects without annotations
-        assert not isinstance(typed, suite.Table)
-        assert not isinstance(typed, suite.NamedType) or not typed.is_predefined()
+        # assert not isinstance(typed, suite.Table)
+        # assert not isinstance(typed, suite.NamedType) or not typed.is_predefined()
 
         # use a cache to avoid duplicated analysis
         if typed in self.checked_typed:

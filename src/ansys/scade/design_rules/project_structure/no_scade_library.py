@@ -89,7 +89,7 @@ class NoScadeLibrary(Rule):
 
     def on_check_ex(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
-        assert isinstance(object_, suite.Model)
+        assert isinstance(object_, suite.Model)  # nosec B101  # addresses linter
         external_libraries = {}
         if object_.project:
             # $(SCADE) can be tested only for the main model's libraries

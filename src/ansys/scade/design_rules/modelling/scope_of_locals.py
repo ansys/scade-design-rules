@@ -84,7 +84,7 @@ class ScopeOfLocals(Rule):
                         main = owner.main_transition
                         if main.transition_kind == 'Strong':
                             # the scope of a strong transition is its state's scope
-                            assert isinstance(owner.owner, suite.State)
+                            assert isinstance(owner.owner, suite.State)  # nosec B101  # addresses linter
                             owner = owner.owner.owner
 
                 scope = owner
@@ -106,7 +106,7 @@ class ScopeOfLocals(Rule):
             return Rule.OK
 
         # each path shall start with top
-        assert {_[0] for _ in paths} == {top}
+        # assert {_[0] for _ in paths} == {top}
         # get the least common scope containing all the scopes
         # get an arbitrary element as the reference
         ref = paths.pop()

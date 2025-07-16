@@ -87,8 +87,8 @@ class AnnNotesForNamedTypesOrVariables(AnnotationRule):
         """Return the evaluation status for the input object."""
         violation_text_missing = []
 
-        # the registered objects are typed
-        assert isinstance(object_, suite.TypedObject)
+        # the registered objects are typed objects
+        assert isinstance(object_, suite.TypedObject)  # nosec B101  # addresses linter
         if self._is_eligible_for_annotation(object_):
             # named type or local variable
             violation_text_missing = self._check_annotation(object_)

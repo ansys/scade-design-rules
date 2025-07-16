@@ -101,7 +101,7 @@ class IllegalOperationsOnConstants(Rule):
 
             if self._search_through_expr_calls_const(expression):
                 # the entire expression is constant
-                assert not self.found_elements
+                # assert not self.found_elements
                 self.found_elements.append(expression.to_string())
 
             if self.found_elements:
@@ -133,7 +133,7 @@ class IllegalOperationsOnConstants(Rule):
                 producer = operand.reference
                 if isinstance(producer, suite.LocalVariable) and producer.is_internal():
                     # must be only one and only one definition
-                    assert len(producer.definitions) == 1
+                    # assert len(producer.definitions) == 1
                     operand = producer.definitions[0].right
                     # replace the internal variable with its producer and store the alias
                     self.aliases[producer.name] = f'({operand.to_string()})'

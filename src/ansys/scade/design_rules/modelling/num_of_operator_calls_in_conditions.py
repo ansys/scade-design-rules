@@ -126,7 +126,7 @@ class NumOfOperatorCallsInConditions(Rule):
         if isinstance(object_, suite.IfNode):
             expression = object_.expression
         else:
-            assert isinstance(object_, suite.Transition)
+            assert isinstance(object_, suite.Transition)  # nosec B101  # addresses linter
             expression = object_.condition
 
         self._check_number_of_calls(expression)

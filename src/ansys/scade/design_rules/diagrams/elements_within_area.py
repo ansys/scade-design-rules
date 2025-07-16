@@ -142,7 +142,7 @@ class ElementsWithinArea(Rule):
                         status = False
                         items.add(f'edge {edge.left_var.name}')
         else:
-            assert isinstance(pe, suite.TransitionGE)
+            assert isinstance(pe, suite.TransitionGE)  # nosec B101  # addresses linter
             if self.is_box_outside_area(pe.label_pos, pe.label_size):
                 status = False
                 items.add('label')

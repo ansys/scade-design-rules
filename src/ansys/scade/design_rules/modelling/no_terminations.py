@@ -91,7 +91,7 @@ class NoTerminations(Rule):
         violated = False
         prev_eq = prev_eqs[0]
         index_pos_of_var = prev_eq.lefts.index(local_var_connecting_it_and_termination)
-        assert index_pos_of_var == local_var_connecting_it_and_termination.left_range
+        # assert index_pos_of_var == local_var_connecting_it_and_termination.left_range
         right = prev_eq.right
         if parameter == 'NOIT' and isinstance(right, suite.ExprCall):
             # ignore 'exit index' and 'exit condition' outputs

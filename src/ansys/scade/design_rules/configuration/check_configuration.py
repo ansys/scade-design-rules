@@ -92,7 +92,7 @@ class CheckConfiguration(Rule):
 
     def on_check(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
-        assert isinstance(object_, suite.Model)
+        assert isinstance(object_, suite.Model)  # nosec B101  # addresses linter
         project = object_.project
         configuration = project.find_configuration(self.conf)
         # load source project: nightmare

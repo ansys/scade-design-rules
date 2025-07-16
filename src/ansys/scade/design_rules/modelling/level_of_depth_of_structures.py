@@ -77,7 +77,7 @@ class LevelOfDepthOfStructures(Rule):
 
     def on_check(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
-        assert isinstance(object_, suite.Structure)
+        assert isinstance(object_, suite.Structure)  # nosec B101  # addresses linter
         depth = self.get_depth(object_)
 
         if depth > int(parameter):
