@@ -84,7 +84,7 @@ class AnnNotesForBasicInterfaceTypes(AnnotationRule):
             numeric_fields if numeric_fields else ['Min_Value', 'Max_Value', 'Unit_SI']
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         # minimal level of backward compatibility
         parameter = parameter.replace(',visibility=Public', ' --public')
@@ -102,7 +102,7 @@ class AnnNotesForBasicInterfaceTypes(AnnotationRule):
         """Declare arguments in addition to the note type."""
         parser.add_argument('--public', help='Public interfaces only', action='store_true')
 
-    def on_check_ex(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check_ex(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         # take care of sensors, should they be added later in the checked elements (kinds)
         declaration = object_.owner if isinstance(object_, suite.LocalVariable) else object_

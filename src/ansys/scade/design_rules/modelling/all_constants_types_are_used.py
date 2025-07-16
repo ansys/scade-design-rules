@@ -73,7 +73,7 @@ class AllConstantsTypesAreUsed(AnnotationRule):
             kinds=None,
         )
 
-    def on_check(self, object: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         violated = False
 
@@ -89,7 +89,8 @@ class AllConstantsTypesAreUsed(AnnotationRule):
                 )
                 violated = not defined or not value
         else:
-            scade.output(f'Rule not implemented for {object.__class__.__name__}')
+            # scade is a CPython module defined dynamically
+            scade.output(f'Rule not implemented for {object.__class__.__name__}')  # type: ignore
             Rule.ERROR
 
         if violated:

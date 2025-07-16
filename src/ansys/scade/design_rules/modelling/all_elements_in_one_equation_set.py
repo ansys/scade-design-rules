@@ -59,7 +59,7 @@ class AllElementsInOneEquationSet(Rule):
             kinds=None,
         )
 
-    def on_check(self, object: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         if not object.equation_sets:
             self.set_message('This element is not part of any equation set.')

@@ -62,7 +62,7 @@ class RootPackageName(Rule):
             kinds=None,
         )
 
-    def on_check(self, object: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         name = object.name
 

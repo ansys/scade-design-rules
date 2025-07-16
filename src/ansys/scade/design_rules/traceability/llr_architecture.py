@@ -32,8 +32,11 @@ if __name__ == '__main__':  # pragma: no cover
     sys.path.append(str(Path(__file__).parent.parent.parent.parent.parent.resolve()))
 
 
+from typing import Optional
+
 import scade
 import scade.model.suite as suite
+import scade.model.suite.annotation as annot
 
 from ansys.scade.design_rules.utils.annotations import (
     AnnotationRule,
@@ -70,8 +73,8 @@ class LLRArchitecture(AnnotationRule):
             **kwargs,
         )
 
-        self.note_type = None
-        self.note_attribute = None
+        self.note_type: Optional[annot.AnnNoteType] = None
+        self.note_attribute: Optional[annot.AnnAttDefinition] = None
         self.architecture = None
 
     def on_start(self, model: suite.Model, parameter: str) -> int:
@@ -89,7 +92,8 @@ class LLRArchitecture(AnnotationRule):
                 status = Rule.ERROR
                 message = f"'{self.options.attribute}': unknown note attribute"
                 self.set_message(message)
-                scade.output(message + '\n')
+                # scade is a CPython module defined dynamically
+                scade.output(message + '\n')  # type: ignore
 
         return status
 
@@ -102,8 +106,10 @@ class LLRArchitecture(AnnotationRule):
             '-v', '--value', metavar='<value>', help='value for architecture', required=True
         )
 
-    def on_check(self, annotable: suite.Annotable, parameter: str = None) -> int:
+    def on_check(self, annotable: suite.Annotable, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
+        assert self.note_type is not None  # nosec B101  # addresses linter
+        assert self.note_attribute is not None  # nosec B101  # addresses linter
         note = get_first_note_by_type(annotable, self.note_type)
         if note:
             for value in note.ann_att_values:

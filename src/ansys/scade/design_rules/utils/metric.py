@@ -34,8 +34,11 @@ import scade.model.suite as suite
 
 try:
     # ignore F401: _register_metric made available for metrics, not used here
-    from scade.tool.suite import _register_metric  # noqa: F401
-    from scade.tool.suite.metrics import Metric as _Metric
+    # _register_metric is defined dynamically: ignore linter warning
+    from scade.tool.suite import _register_metric  # noqa: F401  # type: ignore
+
+    # _Metric defined hereafter is a stub, and thus can't match Metric
+    from scade.tool.suite.metrics import Metric as _Metric  # type: ignore
 except ImportError:
 
     class _Metric:

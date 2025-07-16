@@ -60,7 +60,7 @@ class EqSetNotEmpty(Rule):
             **kwargs,
         )
 
-    def on_check(self, equation_set: suite.EquationSet, parameter: str = None) -> int:
+    def on_check(self, equation_set: suite.EquationSet, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         if len(equation_set.presentables) > 0:
             status = Rule.OK

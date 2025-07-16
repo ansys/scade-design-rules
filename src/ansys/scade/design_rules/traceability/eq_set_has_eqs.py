@@ -63,7 +63,7 @@ class EqSetHasEqs(Rule):
             **kwargs,
         )
 
-    def on_check(self, equation_set: suite.EquationSet, parameter: str = None) -> int:
+    def on_check(self, equation_set: suite.EquationSet, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         paths = [
             presentable.get_full_path()

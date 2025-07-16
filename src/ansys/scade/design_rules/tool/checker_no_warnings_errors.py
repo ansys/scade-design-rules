@@ -64,7 +64,7 @@ class CheckerNoWarningsErrors(Rule):
             kinds=[SCK.MODEL],
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         d = self.parse_values(parameter)
         if d is None:
@@ -80,7 +80,7 @@ class CheckerNoWarningsErrors(Rule):
         self.set_message(message)
         return Rule.ERROR
 
-    def on_check_ex(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check_ex(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         violated = False
 
@@ -105,6 +105,7 @@ class CheckerNoWarningsErrors(Rule):
         import re
 
         x = re.search(r'^Checker ends with (\d) error.*(\d) warning', outputs[0])
+        assert x is not None  # nosec B101  # addresses linter
         errors = x.groups()[0]
         warnings = x.groups()[1]
 

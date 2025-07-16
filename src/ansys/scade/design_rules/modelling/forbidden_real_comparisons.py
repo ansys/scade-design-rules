@@ -24,7 +24,7 @@
 
 """Implements the ForbiddenRealComparisons rule."""
 
-from typing import Tuple
+from typing import Dict, Optional, Set, Tuple
 
 if __name__ == '__main__':  # pragma: no cover
     # rule instantiated outside of a package
@@ -75,7 +75,7 @@ class Mask:
 
     def is_float(self) -> bool:
         """Return whether the type is float."""
-        return self._is_float
+        return self._is_float is True
 
 
 class Scalar(Mask):
@@ -128,11 +128,11 @@ class ForbiddenRealComparisons(Rule):
         # comparison operators specified in the rule's parameters
         self.comp_operators = set()
         # predefined float types
-        self.floats = None
+        self.floats: Set[suite.Type] = set()
         # cache for type abstractions
-        self.masks = {}
+        self.masks: Dict[Optional[suite.Type], Optional[Mask]] = {}
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Cache the predefined types and get the parameters."""
         if not parameter:
             self.set_message('No parameter given, rule cannot be checked.')
@@ -150,7 +150,7 @@ class ForbiddenRealComparisons(Rule):
 
         return Rule.OK
 
-    def on_check(self, object: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         assert isinstance(object, suite.ExprCall)
         if object.predef_opr in self.comp_operators:
@@ -173,11 +173,13 @@ class ForbiddenRealComparisons(Rule):
         error = False
         for expr in expressions:
             mask = self.get_expression_mask(expr)
-            error |= mask is None
-            result |= not error and mask.is_float()
+            if mask is None:
+                error = True
+            else:
+                result |= not error and mask.is_float()
         return result, error
 
-    def get_expression_mask(self, expr: suite.Expression):
+    def get_expression_mask(self, expr: suite.Expression) -> Optional[Mask]:
         """Return the type mask for expr."""
         default = Scalar(is_float=False)
         if isinstance(expr, suite.ConstValue):
@@ -257,7 +259,7 @@ class ForbiddenRealComparisons(Rule):
         else:
             return self.get_expression_mask(parameters[0])
 
-    def get_type_mask(self, type_: suite.Type) -> Mask:
+    def get_type_mask(self, type_: suite.Type) -> Optional[Mask]:
         """Return the mask of a type."""
         while isinstance(type_, suite.NamedType):
             if type_.is_predefined() or type_.is_generic():

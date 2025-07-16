@@ -64,12 +64,12 @@ class DisadvisedOperators(Rule):
             kinds=None,
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         self.disadvised_operators = [_.strip() for _ in parameter.split(',')]
         return Rule.OK
 
-    def on_check(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         if str(object_.predef_opr) in self.disadvised_operators:
             container = self.get_closest_annotatable(object_)

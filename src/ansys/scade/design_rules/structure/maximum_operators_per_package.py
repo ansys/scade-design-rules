@@ -63,7 +63,7 @@ class MaximumOperatorsPerPackage(Rule):
         )
         self.metric_id = metric_id
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         if not parameter.isdigit():
             self.set_message(
@@ -73,7 +73,7 @@ class MaximumOperatorsPerPackage(Rule):
 
         return Rule.OK
 
-    def on_check(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         count = self.get_metric_result(object_, self.metric_id)
         if count > int(parameter):

@@ -59,12 +59,12 @@ class SensorNamesUniqueInPackage(Rule):
             kinds=None,
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Cache all sensors."""
         self.sensors = {_.name: _ for _ in model.all_sensors}
         return Rule.OK
 
-    def on_check(self, object: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         violated = False
 
@@ -84,6 +84,7 @@ class SensorNamesUniqueInPackage(Rule):
                 owner = owner.owner
 
         if violated:
+            assert sensor is not None  # nosec B101  # addresses linter
             self.set_message(f'Variable name is also used for the sensor: {sensor.get_full_path()}')
             return Rule.FAILED
         return Rule.OK

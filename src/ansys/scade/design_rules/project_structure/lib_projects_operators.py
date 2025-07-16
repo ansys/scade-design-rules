@@ -63,7 +63,7 @@ class LibProjectsOperators(Rule):
             kinds=None,
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         if not model.name.startswith(parameter):
             self.set_message('Model is no Library project!')
@@ -71,7 +71,7 @@ class LibProjectsOperators(Rule):
 
         return Rule.OK
 
-    def on_check(self, object: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         if isinstance(object.owner, suite.Model):
             self.set_message('Library Project contains Operator at top-level!')

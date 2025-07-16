@@ -62,7 +62,7 @@ class EnumTypeNamePrefix(Rule):
             kinds=[SCK.ENUM_VALUE],
         )
 
-    def on_check_ex(self, object: suite.Object, parameter: str = None) -> int:
+    def on_check_ex(self, object: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         enum_name = object.owner.owner.name  # the owner is the NamedType for this enum
         prefix = re.sub(

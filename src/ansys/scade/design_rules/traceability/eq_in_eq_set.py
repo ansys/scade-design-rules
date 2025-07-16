@@ -32,6 +32,8 @@ if __name__ == '__main__':  # pragma: no cover
     sys.path.append(str(Path(__file__).parent.parent.parent.parent.parent.resolve()))
 
 
+from typing import Optional
+
 import scade.model.suite as suite
 
 from ansys.scade.design_rules.utils.rule import Rule
@@ -65,10 +67,10 @@ class EqInEqSet(Rule):
             **kwargs,
         )
 
-    def on_check(self, presentable: suite.Presentable, parameter: str = None) -> int:
+    def on_check(self, presentable: suite.Presentable, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         state = self.get_owning_state(presentable)
-        if state and not state.diagrams:
+        if state is not None and not state.diagrams:
             status = Rule.OK
         else:
             pe = presentable.presentation_element
@@ -84,7 +86,7 @@ class EqInEqSet(Rule):
                     self.set_message(message.format(kind, presentable.get_full_path()))
         return status
 
-    def get_owning_state(self, object_: suite.Object) -> suite.State:
+    def get_owning_state(self, object_: suite.Object) -> Optional[suite.State]:
         """Return the state owning the item, directly or not, if any."""
         owner = object_.owner
         while not isinstance(owner, suite.Operator):

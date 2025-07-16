@@ -69,7 +69,7 @@ class NameStructureDiagram(Rule):
             **kwargs,
         )
 
-    def on_check_ex(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check_ex(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         name = object_.name
         scope = object_.owner

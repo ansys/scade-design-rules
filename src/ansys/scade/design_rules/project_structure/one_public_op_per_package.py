@@ -64,7 +64,7 @@ class OnePublicOpPerPackage(Rule):
             kinds=None,
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         if not parameter.isdecimal():
             self.set_message(
@@ -74,7 +74,7 @@ class OnePublicOpPerPackage(Rule):
 
         return Rule.OK
 
-    def on_check(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         number_of_public = len([_ for _ in object_.operators if _.visibility == 'Public'])
 

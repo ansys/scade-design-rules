@@ -45,7 +45,7 @@ def session():
     return load_session(pathname)
 
 
-def format_test_data(data: list) -> tuple:
+def format_test_data(data: list) -> list:
     """Add an id to each data, assuming the first element is a Scade path."""
     return [pytest.param(*_, id=_[0].strip('/:=').split('/')[-1]) for _ in data]
 

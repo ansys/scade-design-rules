@@ -68,7 +68,7 @@ class IllegalOperationsOnConstants(Rule):
             kinds=None,
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         self.check_operators = parameter.split(',')
         try:
@@ -80,7 +80,7 @@ class IllegalOperationsOnConstants(Rule):
         print(message)
         return Rule.ERROR
 
-    def on_check(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         expression = None
         if isinstance(object_, suite.Equation):

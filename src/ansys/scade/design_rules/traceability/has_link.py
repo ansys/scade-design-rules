@@ -65,7 +65,7 @@ class HasLink(Rule):
             kinds=kinds,
         )
 
-    def on_check_ex(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check_ex(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         # protect against kinds that are not applicable for this rule
         if not isinstance(object_, suite.Traceable):

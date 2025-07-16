@@ -62,7 +62,7 @@ class NoStructTableComparisons(Rule):
             kinds=None,
         )
 
-    def on_check(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         comparison_found = False
         self.warning = 0

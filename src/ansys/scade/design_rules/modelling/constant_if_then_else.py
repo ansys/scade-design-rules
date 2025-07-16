@@ -64,7 +64,7 @@ class ConstantIfThenElse(Rule):
             kinds=None,
         )
 
-    def on_check(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         call = access.accessor(object_)
         if isinstance(call, access.IfThenElseOp):

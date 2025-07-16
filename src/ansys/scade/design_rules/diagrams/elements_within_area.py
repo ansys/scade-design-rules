@@ -92,7 +92,7 @@ class ElementsWithinArea(Rule):
             'LEGAL': [21590, 35560],
         }
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Reset the caches and parse the parameters."""
         self.wrong_formats = set()
 
@@ -101,7 +101,7 @@ class ElementsWithinArea(Rule):
         parameter = 'margins= 0; 0' if not parameter else parameter
         d = self.parse_values(parameter)
         if d is not None:
-            margins = d.get('margins')
+            margins = d.get('margins', '')
             try:
                 self.x_margin, self.y_margin = (int(_) for _ in margins.split(';'))
                 return Rule.OK
@@ -111,7 +111,7 @@ class ElementsWithinArea(Rule):
         self.set_message(message)
         return Rule.ERROR
 
-    def on_check(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         pe = object_.presentation_element
         if not pe or not isinstance(pe.diagram, suite.NetDiagram):

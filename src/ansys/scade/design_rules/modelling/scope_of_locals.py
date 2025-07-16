@@ -65,7 +65,7 @@ class ScopeOfLocals(Rule):
             **kwargs,
         )
 
-    def on_check(self, var: suite.LocalVariable, parameter: str = None) -> int:
+    def on_check(self, var: suite.LocalVariable, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
 
         def _get_scope_path(top: suite.DataDef, object_: suite.Object) -> List[suite.Object]:
@@ -117,12 +117,12 @@ class ScopeOfLocals(Rule):
             for path in paths:
                 if not path or path.pop(0) != scope:
                     # found a difference
-                    # lsc can't None since all paths start with top
-                    assert lcs
                     done = True
                     break
             else:
                 lcs = scope
+        # lcs can't be None since all paths start with top
+        assert lcs is not None  # nosec B101  # addresses linter
 
         if lcs == top:
             # nothing to declare

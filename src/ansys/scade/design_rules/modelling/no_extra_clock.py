@@ -60,7 +60,7 @@ class NoExtraClock(Rule):
             kinds=None,
         )
 
-    def on_check(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         if object_.when or object_.clock:
             self.set_message('Extra Clock found')

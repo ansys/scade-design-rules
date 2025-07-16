@@ -64,7 +64,7 @@ class NameLengthOfElement(Rule):
             kinds=None,
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         if not parameter.strip().isdecimal():
             self.set_message(
@@ -75,7 +75,7 @@ class NameLengthOfElement(Rule):
 
         return Rule.OK
 
-    def on_check(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         try:
             name = object_.name

@@ -34,8 +34,11 @@ import scade.model.suite as suite
 
 try:
     # ignore F401: _register_rule made available for rules, not used here
-    from scade.tool.suite import _register_rule  # noqa: F401
-    from scade.tool.suite.rules import Rule as _Rule
+    # _register_rule is defined dynamically: ignore linter warning
+    from scade.tool.suite import _register_rule  # noqa: F401  # type: ignore
+
+    # _Rule defined hereafter is a stub, and thus can't match Rule
+    from scade.tool.suite.rules import Rule as _Rule  # type: ignore
 except ImportError:
     from .metric import Metric
 
@@ -55,7 +58,7 @@ except ImportError:
             object_: suite.Object,
             status: int,
             message: str,
-            local_id: str = None,
+            local_id: str = '',
         ) -> None:
             """Stub the ``add_rule_status`` method."""
             pass
@@ -177,14 +180,14 @@ class Rule(_Rule):
             return self.get_closest_annotatable(object_.owner)
         return object_
 
-    def on_check(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object_: suite.Object, parameter: str = '') -> int:
         """Apply the rule to the input if it is compatible with the registered kinds."""
         if self.accept_kind(object_):
             return self.on_check_ex(object_, parameter)
         else:
             return Rule.NA
 
-    def on_check_ex(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check_ex(self, object_: suite.Object, parameter: str = '') -> int:
         """Apply the rule to the input object."""
         # must not be called if on_check is redefined
         return Rule.ERROR

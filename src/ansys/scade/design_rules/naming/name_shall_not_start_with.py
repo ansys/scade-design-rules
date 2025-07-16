@@ -78,7 +78,7 @@ class NameShallNotStartWith(Rule):
             kinds=None,
         )
 
-    def on_check(self, object: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         if isinstance(object, suite.Variable) and object.is_internal():
             return Rule.OK

@@ -83,7 +83,7 @@ class AnnNotesForNamedTypesOrVariables(AnnotationRule):
             numeric_fields if numeric_fields else ['Min_Value', 'Max_Value', 'Unit_SI']
         )
 
-    def on_check_ex(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check_ex(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         violation_text_missing = []
 

@@ -62,7 +62,7 @@ class PackageFilename(Rule):
             kinds=[SCK.PACKAGE],
         )
 
-    def on_check_ex(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check_ex(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         model_name = object_.defined_in.model.name
         package_name = object_.name

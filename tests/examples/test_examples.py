@@ -85,7 +85,8 @@ def list_test_cases():
             print('    # skipping tested rule %s' % path.stem)
             continue
         category = path.parent.parent.stem
-        project = scade.load_project(str(path))
+        # scade is a CPython module defined dynamically
+        project = scade.load_project(str(path))  # type: ignore
         assert project
         # find the tool Metrics and Rules Checker
         for prop in project.props:

@@ -145,7 +145,7 @@ def is_ann_note_value_defined_and_get_value(
 class AnnotationRule(Rule):
     """Abstraction for rules that have a note type as parameter."""
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the note type parameter."""
         # backward compatibility
         parameter = parameter.replace('notetype=', '-t ') if parameter else ''
@@ -165,7 +165,8 @@ class AnnotationRule(Rule):
             message = parser.message
 
         self.set_message(message)
-        scade.output(message + '\n')
+        # scade is a CPython module defined dynamically
+        scade.output(message + '\n')  # type: ignore
         return Rule.ERROR
 
     def add_arguments(self, parser: ArgumentParser):

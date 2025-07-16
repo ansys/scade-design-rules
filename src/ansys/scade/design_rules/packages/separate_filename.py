@@ -61,7 +61,7 @@ class SeparateFilename(Rule):
             kinds=[SCK.PACKAGE],
         )
 
-    def on_check_ex(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check_ex(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         if object_.storage_unit is None:
             self.set_message('Separate File Name is not checked')

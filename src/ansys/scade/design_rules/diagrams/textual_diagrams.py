@@ -63,7 +63,7 @@ class TextualDiagrams(Rule):
             kinds=None,
         )
 
-    def on_check(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         if isinstance(object_, suite.TextDiagram):
             self.set_message('Project should not contain Textual Diagrams.')

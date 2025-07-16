@@ -77,7 +77,7 @@ class AnnNotesPresentAndNotEmpty(AnnotationRule):
             kinds=kinds,
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         # minimal level of backward compatibility
         parameter = parameter.replace(',notes=', ' -n ').replace(';', ' ')
@@ -95,7 +95,7 @@ class AnnNotesPresentAndNotEmpty(AnnotationRule):
             '-n', '--names', help=help, nargs='+', required=True, metavar='<attribute>'
         )
 
-    def on_check_ex(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check_ex(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         # make sure object_ is annotatable since the selected types
         # can be customized

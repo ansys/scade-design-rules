@@ -67,7 +67,7 @@ class MaximumCallGraphDepth(Rule):
             kinds=None,
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         d = self.parse_values(parameter)
         if d is None:
@@ -88,10 +88,11 @@ class MaximumCallGraphDepth(Rule):
                     return Rule.OK
 
         self.set_message(message)
-        scade.output(message + '\n')
+        # scade is a CPython module defined dynamically
+        scade.output(message + '\n')  # type: ignore
         return Rule.ERROR
 
-    def on_check(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         if self.visibility == 'Public':
             if object_.visibility != 'Public':

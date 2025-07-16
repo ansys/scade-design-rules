@@ -80,7 +80,7 @@ class IdenticalForProducerConsumer(AnnotationRule):
         self.max_field = max_field
         self.unit_field = unit_field
 
-    def on_check_ex(self, object: suite.Object, parameter: str = None) -> int:
+    def on_check_ex(self, object: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         self.violated = False
         self.violation_text = []

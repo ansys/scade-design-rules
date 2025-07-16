@@ -47,15 +47,15 @@ def session():
 class TestNoPointerBranch(NoPointerBranch):
     __test__ = False
 
-    def __init__(self, parameter=None, **kwargs):
+    def __init__(self, parameter='', **kwargs):
         self.parameter = parameter
         super().__init__(id='', parameter=self.parameter, **kwargs)
 
-    def on_start(self, model=None, parameter=None):
+    def on_start(self, model, parameter=''):
         parameter = parameter if parameter else self.parameter
         return super().on_start(model=model, parameter=parameter)
 
-    def on_check(self, object, parameter=None):
+    def on_check(self, object, parameter=''):
         parameter = parameter if parameter else self.parameter
         return super().on_check(object, parameter=parameter)
 
@@ -98,9 +98,11 @@ def test_no_pointer_branch(session: suite.Session, test_case):
         ('--type *Ptr', _OK),
     ],
 )
-def test_no_pointer_branch_robustness(test_case):
+def test_no_pointer_branch_robustness(session: suite.Session, test_case):
     parameter, expected_status = test_case
+    model = session.model
+
     rule = TestNoPointerBranch(parameter=parameter)
-    status = rule.on_start()
+    status = rule.on_start(model)
     print(rule.message)
     assert status == expected_status

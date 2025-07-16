@@ -65,7 +65,7 @@ class TransitionKind(Rule):
             kinds=None,
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         if parameter not in {'strong', 'weak', 'nomix'}:
             self.set_message('Wrong parameter: ' + parameter)
@@ -73,7 +73,7 @@ class TransitionKind(Rule):
 
         return Rule.OK
 
-    def on_check(self, object: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         violated = False
 

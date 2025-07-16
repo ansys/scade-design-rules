@@ -65,7 +65,7 @@ class SeparateFileNameOperators(Rule):
             kinds=None,
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         d = self.parse_values(parameter)
         if d is None:
@@ -81,7 +81,7 @@ class SeparateFileNameOperators(Rule):
         self.set_message(message)
         return Rule.ERROR
 
-    def on_check(self, object: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         if self.type == 'checked':
             if object.storage_unit is None:

@@ -77,7 +77,7 @@ class EnumDefinitionElementsOrder(Rule):
             kinds=None,
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         # whether all enumeration values must have a kcg pragma value
         self.strict = False
@@ -100,7 +100,7 @@ class EnumDefinitionElementsOrder(Rule):
         self.set_message(message)
         return Rule.ERROR
 
-    def on_check(self, object: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         if self.by == 'name':
             values = [_.name for _ in object.values]

@@ -69,7 +69,7 @@ class NoAnonymousType(Rule):
         )
         self.roots = None
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         # restore the default values
         self.roots = None
@@ -90,10 +90,11 @@ class NoAnonymousType(Rule):
 
         message = f"'{parameter}': parameter syntax error"
         self.set_message(message)
-        scade.output(message + '\n')
+        # scade is a CPython module defined dynamically
+        scade.output(message + '\n')  # type: ignore
         return Rule.ERROR
 
-    def on_check_ex(self, variable: suite.LocalVariable, parameter: str = None) -> int:
+    def on_check_ex(self, variable: suite.LocalVariable, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         # local variable must be an io
         if not self._is_root(variable.operator):
