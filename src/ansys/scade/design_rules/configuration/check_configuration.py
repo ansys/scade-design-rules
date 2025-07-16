@@ -33,8 +33,8 @@ if __name__ == '__main__':  # pragma: no cover
 
 
 from pathlib import Path
-from xml.etree import ElementTree
 
+from defusedxml import ElementTree
 import scade.model.suite as suite
 
 from ansys.scade.design_rules.utils.rule import Rule

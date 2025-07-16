@@ -17,6 +17,7 @@ dependencies=[
     "importlib-metadata >= 1.0; python_version < '3.8'",
     "importlib-metadata >= 4.0; python_version >= '3.8'",
     "ansys-scade-apitools >= 0.5",
+    "defusedxml",
 ]
 classifiers=[
     "Development Status :: 4 - Beta",
