@@ -62,7 +62,7 @@ class NoStructTableComparisons(Rule):
             kinds=None,
         )
 
-    def on_check(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         comparison_found = False
         self.warning = 0
@@ -115,7 +115,7 @@ class NoStructTableComparisons(Rule):
                         # fall through: the output is the operator's output
                         pass
                 # default: regular calls or fold[i] iterations
-                assert len(operator.outputs) == 1
+                # assert len(operator.outputs) == 1
                 return self._is_type_struct_or_array(operator.outputs[0].type)
             else:
                 code = Eck(operand.predef_opr)

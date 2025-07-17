@@ -70,7 +70,7 @@ class NameStructureIteratorIndex(Rule):
             default_param=parameter,
             **kwargs,
         )
-        self.index_regexp = None
+        self.index_regexp = ''
 
     def on_start(self, model: suite.Model, parameter: str) -> int:
         """Get the rule's parameters."""
@@ -85,10 +85,11 @@ class NameStructureIteratorIndex(Rule):
             return Rule.OK
 
         self.set_message(message)
-        scade.output(message + '\n')
+        # scade is a CPython module defined dynamically
+        scade.output(message + '\n')  # type: ignore
         return Rule.ERROR
 
-    def on_check_ex(self, variable: suite.LocalVariable, parameter: str = None) -> int:
+    def on_check_ex(self, variable: suite.LocalVariable, parameter: str = '') -> int:
         """
         Return the evaluation status for the input object.
 

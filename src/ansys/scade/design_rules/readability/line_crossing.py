@@ -110,7 +110,7 @@ class LineCrossing(Rule):
         # list of already found elements. new elements are checked against this list
         self.g_elements = []
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         d = self.parse_values(parameter)
         if d is None:
@@ -126,7 +126,7 @@ class LineCrossing(Rule):
         self.set_message(message)
         return Rule.ERROR
 
-    def on_check(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         # list of already found elements. new elements are checked against this list
         self.g_elements = []
@@ -187,7 +187,7 @@ class LineCrossing(Rule):
                 equation = diagram_object.equation
                 element_type = None
                 name = ''
-                assert equation is not None
+                assert equation is not None  # nosec B101  # addresses linter
                 element_type = equation.right
                 name = element_type.to_string()
                 self.add_element(
@@ -296,7 +296,7 @@ class LineCrossing(Rule):
         source_type = None
         destination_type = None
         not_i_source = edge.src_equation.equation
-        assert isinstance(not_i_source, suite.Equation)
+        assert isinstance(not_i_source, suite.Equation)  # nosec B101  # addresses linter
         source_type = not_i_source.right
         not_i_destination = edge.dst_equation.equation
         if isinstance(not_i_destination, suite.Equation):

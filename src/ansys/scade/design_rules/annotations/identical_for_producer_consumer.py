@@ -80,7 +80,7 @@ class IdenticalForProducerConsumer(AnnotationRule):
         self.max_field = max_field
         self.unit_field = unit_field
 
-    def on_check_ex(self, object: suite.Object, parameter: str = None) -> int:
+    def on_check_ex(self, object: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         self.violated = False
         self.violation_text = []
@@ -91,7 +91,7 @@ class IdenticalForProducerConsumer(AnnotationRule):
         if consumer.is_output():
             producers.update(self._get_producers(consumer))
         else:
-            assert consumer.is_input() or consumer.is_hidden()
+            # assert consumer.is_input() or consumer.is_hidden()
             # get operator in which the inputs and hiddens are defined
             operator = consumer.operator
             # create a combined list of all inputs and hiddens.

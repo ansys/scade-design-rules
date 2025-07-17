@@ -65,14 +65,14 @@ class TypesTakenFromSpecificPackage(Rule):
             kinds=[SCK.INPUT, SCK.HIDDEN, SCK.OUTPUT, SCK.SENSOR],
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         self.allowed_packages = []
         self.allowed_names = {_.strip() for _ in parameter.split(',')}
         self.allowed_packages = {_ for _ in model.all_packages if _.name in self.allowed_names}
         return Rule.OK
 
-    def on_check_ex(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check_ex(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         # if I/O, verify the owning operator is public
         if isinstance(object_.owner, suite.Operator) and not is_visible(object_.owner):

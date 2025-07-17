@@ -61,7 +61,7 @@ class NoBoolComparison(Rule):
             kinds=None,
         )
 
-    def on_check(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         # resolution of internal_variables
         self.aliases = {}
@@ -90,7 +90,7 @@ class NoBoolComparison(Rule):
                 producer = operand.reference
                 if isinstance(producer, suite.LocalVariable) and producer.is_internal():
                     # must be only one and only one definition
-                    assert len(producer.definitions) == 1
+                    # assert len(producer.definitions) == 1
                     operand = producer.definitions[0].right
                     # replace the internal variable with its producer and store the alias
                     self.aliases[producer.name] = f'({operand.to_string()})'

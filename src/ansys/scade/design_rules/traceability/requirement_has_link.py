@@ -71,7 +71,7 @@ class RequirementHasLink(Rule):
             kinds=None,
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         d = self.parse_values(parameter)
         if d is None:
@@ -87,7 +87,7 @@ class RequirementHasLink(Rule):
         self.set_message(message)
         return Rule.ERROR
 
-    def on_check(self, object: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         violated = False
 
@@ -106,6 +106,7 @@ class RequirementHasLink(Rule):
         almgt_parser.parse(path)
 
         non_linked_reqs = []
+        assert almgr_parser.project is not None  # nosec B101  # addresses linter
         for alm_document in almgr_parser.project.alm_documents:
             for requirement in alm_document.requirements:
                 number_of_links = len(requirement.incoming_links)

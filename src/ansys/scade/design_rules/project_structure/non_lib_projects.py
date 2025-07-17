@@ -65,7 +65,7 @@ class NonLibProjects(Rule):
             kinds=None,
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         if model.name.startswith(parameter):
             self.set_message(
@@ -78,7 +78,7 @@ class NonLibProjects(Rule):
 
         return Rule.OK
 
-    def on_check(self, object: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         if self.model_is_library:
             return Rule.OK

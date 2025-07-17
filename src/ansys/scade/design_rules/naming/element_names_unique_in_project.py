@@ -62,14 +62,14 @@ class ElementNamesUniqueInProject(Rule):
             kinds=[SCK.CONSTANT],
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Cache the constants."""
         self.constants = {}
         for constant in model.all_constants:
             self.constants.setdefault(constant.name, []).append(constant)
         return Rule.OK
 
-    def on_check_ex(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check_ex(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         constants = self.constants[object_.name]
         paths = [_.get_full_path() for _ in constants if _ != object_]

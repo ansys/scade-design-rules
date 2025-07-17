@@ -67,12 +67,12 @@ class CommentHasSpecificHeadlines(Rule):
             kinds=None,
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         self.headlines = [_.strip() for _ in parameter.split(',')]
         return Rule.OK
 
-    def on_check_ex(self, object: suite.Object, parameter: str = None) -> int:
+    def on_check_ex(self, object: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         violation_no_text_found = False
         violation_not_all_headlines = False

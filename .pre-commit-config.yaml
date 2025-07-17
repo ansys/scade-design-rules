@@ -85,6 +85,7 @@ repos:
         'jinja2',
         'ansys-scade-apitools',
         'rich',
+        'defusedxml',
     ]
 
   # make sure there is one model per rule and optionally vice versa

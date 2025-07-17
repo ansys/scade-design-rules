@@ -64,14 +64,14 @@ class InitializationOfArrays(Rule):
             kinds=None,
         )
 
-    def on_check(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         violated = False
         ref_value = None
 
         # 41 = SC_ECK_BLD_VECTOR
         if object_.predef_opr == 41:
-            assert object_.parameters
+            # assert object_.parameters
             ref_value = self.get_expr_value(object_.parameters[0])
             for parameter in object_.parameters[1:]:
                 value = self.get_expr_value(parameter)
@@ -82,7 +82,7 @@ class InitializationOfArrays(Rule):
                 violated = True
 
         if violated:
-            assert ref_value
+            assert ref_value is not None  # nosec B101  # addresses linter
             container = self.get_closest_annotatable(object_)
             error_msg = f'Use + {ref_value}^{len(object_.parameters)} instead of [{ref_value}, ...]'
             identifier = object_.to_string()

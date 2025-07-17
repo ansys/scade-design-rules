@@ -81,8 +81,8 @@ class NameStructureFoldAccumulator(Rule):
             default_param=parameter,
             **kwargs,
         )
-        self.in_regexp = None
-        self.out_regexp = None
+        self.in_regexp = ''
+        self.out_regexp = ''
         self.strict = False
 
     def on_start(self, model: suite.Model, parameter: str) -> int:
@@ -120,10 +120,11 @@ class NameStructureFoldAccumulator(Rule):
             return Rule.OK
 
         self.set_message(message)
-        scade.output(message + '\n')
+        # scade is a CPython module defined dynamically
+        scade.output(message + '\n')  # type: ignore
         return Rule.ERROR
 
-    def on_check_ex(self, variable: suite.LocalVariable, parameter: str = None) -> int:
+    def on_check_ex(self, variable: suite.LocalVariable, parameter: str = '') -> int:
         """
         Return the evaluation status for the input object.
 

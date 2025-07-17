@@ -31,6 +31,9 @@ if __name__ == '__main__':  # pragma: no cover
 
     sys.path.append(str(Path(__file__).parent.parent.parent.parent.parent.resolve()))
 
+import re
+import subprocess  # nosec B404  # used to call scade.exe -check
+
 import scade.model.suite as suite
 
 from ansys.scade.apitools.info.install import get_scade_home
@@ -64,7 +67,7 @@ class CheckerNoWarningsErrors(Rule):
             kinds=[SCK.MODEL],
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         d = self.parse_values(parameter)
         if d is None:
@@ -80,7 +83,7 @@ class CheckerNoWarningsErrors(Rule):
         self.set_message(message)
         return Rule.ERROR
 
-    def on_check_ex(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check_ex(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         violated = False
 
@@ -92,19 +95,15 @@ class CheckerNoWarningsErrors(Rule):
         scade_home = str(get_scade_home())
         scade_path = scade_home + r'\SCADE\bin\scade.exe'
         pathname = object_.descriptor.model_file_name
-        call = f'"{scade_path}" -check "{pathname}" -conf {self.configuration}'
+        command = [scade_path, '-check', pathname, '-conf', self.configuration]
 
         # execute call
-        import os
-
-        stream = os.popen(call)
-        output = stream.read()
-        outputs = output.split('\n')
+        cp = subprocess.run(command, capture_output=True)  # nosec B603  # inputs checked
+        outputs = cp.stdout.decode('utf8').split('\n')
 
         # parse result string for errors and warnings
-        import re
-
         x = re.search(r'^Checker ends with (\d) error.*(\d) warning', outputs[0])
+        assert x is not None  # nosec B101  # addresses linter
         errors = x.groups()[0]
         warnings = x.groups()[1]
 

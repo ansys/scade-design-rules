@@ -88,7 +88,7 @@ class PragmaManifest(Rule):
         )
         self.roots = None
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         # restore the default values
         self.roots = None
@@ -97,7 +97,8 @@ class PragmaManifest(Rule):
         if d is None:
             message = f"'{parameter}': parameter syntax error"
             self.set_message(message)
-            scade.output(message + '\n')
+            # scade is a CPython module defined dynamically
+            scade.output(message + '\n')  # type: ignore
             return Rule.ERROR
         name = d.get('configuration')
         self.interface = d.get('interface', 'false') == 'true'
@@ -123,7 +124,7 @@ class PragmaManifest(Rule):
         # no error
         return Rule.OK
 
-    def on_check_ex(self, type_: suite.NamedType, parameter: str = None) -> int:
+    def on_check_ex(self, type_: suite.NamedType, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         if not (query.is_structure(type_) or query.is_array(type_)):
             # the pragma manifest is not required for imported or scalar types
@@ -199,7 +200,7 @@ class PragmaManifest(Rule):
                     size = '({})'.format(type_.size_expression.to_string())
                 signature = prefix + size
             else:
-                assert type_ is None
+                # assert type_ is None
                 signature = '()'
             self.signatures[type_] = signature
 

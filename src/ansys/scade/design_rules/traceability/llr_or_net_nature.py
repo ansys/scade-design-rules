@@ -58,7 +58,7 @@ class LLROrNetNature(LLRNature):
             ]
         super().__init__(id=id, types=types, **kwargs)
 
-    def on_check(self, annotable: suite.Annotable, parameter: str = None) -> int:
+    def on_check(self, annotable: suite.Annotable, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         if not isinstance(annotable, suite.NetDiagram) or not annotable.equation_sets:
             status = super().on_check(annotable, parameter)

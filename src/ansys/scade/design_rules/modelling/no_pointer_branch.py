@@ -33,6 +33,7 @@ if __name__ == '__main__':  # pragma: no cover
 
 
 import re
+from typing import Dict, Optional
 
 import scade.model.suite as suite
 
@@ -64,11 +65,11 @@ class NoPointerBranch(Rule):
             default_param=parameter,
             **kwargs,
         )
-        self.types_regexp = None
+        self.types_regexp = ''
         # cache for pointer types
-        self.cache_types = {}
+        self.cache_types: Dict[suite.Type, Optional[bool]] = {}
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         # minimal level of backward compatibility
         parameter = parameter.replace('types=', '-t ') if parameter else ''
@@ -82,7 +83,7 @@ class NoPointerBranch(Rule):
         self.types_regexp = options.type
         return Rule.OK
 
-    def on_check(self, variable: suite.LocalVariable, parameter: str = None) -> int:
+    def on_check(self, variable: suite.LocalVariable, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         if self.is_pointer_type(variable.type):
             # must have one use per scope
@@ -101,13 +102,14 @@ class NoPointerBranch(Rule):
             if isinstance(t, suite.Table):
                 is_pointer = self.is_pointer_type(t.type)
             elif isinstance(t, suite.Structure):
-                for e in t.elements:
-                    is_pointer = is_pointer or self.is_pointer_type(e.type)
+                is_pointer = any(self.is_pointer_type(e.type) for e in t.elements)
             elif isinstance(t, suite.NamedType):
-                is_pointer = re.fullmatch(self.types_regexp, t.name) or self.is_pointer_type(t.type)
+                is_pointer = re.fullmatch(
+                    self.types_regexp, t.name
+                ) is not None or self.is_pointer_type(t.type)
             else:
                 is_pointer = False
-                self.cache_types[t] = is_pointer
+        self.cache_types[t] = is_pointer
         return is_pointer
 
 

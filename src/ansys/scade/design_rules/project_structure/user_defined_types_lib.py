@@ -68,7 +68,7 @@ class UserDefinedTypesLib(Rule):
             kinds=[SCK.INPUT, SCK.HIDDEN, SCK.OUTPUT],
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         if model.name.startswith('Lib'):
             self.set_message(
@@ -79,7 +79,7 @@ class UserDefinedTypesLib(Rule):
 
         return Rule.OK
 
-    def on_check_ex(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check_ex(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         message = ''
         return_status = Rule.OK
@@ -93,7 +93,7 @@ class UserDefinedTypesLib(Rule):
         type_ = object_.type
         if is_array(type_) or is_structure(type_):
             model = get_model(object_.type)
-            assert model
+            assert model is not None  # nosec B101  # addresses linter
             if model.name == model_name:
                 message = (
                     get_type_name(type_) + ' is user-defined complex type at top-level. '

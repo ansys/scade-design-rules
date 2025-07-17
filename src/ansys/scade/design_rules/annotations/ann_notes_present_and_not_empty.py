@@ -77,13 +77,13 @@ class AnnNotesPresentAndNotEmpty(AnnotationRule):
             kinds=kinds,
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         # minimal level of backward compatibility
         parameter = parameter.replace(',notes=', ' -n ').replace(';', ' ')
         status = super().on_start(model, parameter)
         if status == Rule.OK:
-            assert self.options
+            assert self.options is not None  # nosec B101  # addresses linter
             self.names = self.options.names
 
         return status
@@ -95,7 +95,7 @@ class AnnNotesPresentAndNotEmpty(AnnotationRule):
             '-n', '--names', help=help, nargs='+', required=True, metavar='<attribute>'
         )
 
-    def on_check_ex(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check_ex(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         # make sure object_ is annotatable since the selected types
         # can be customized
@@ -112,7 +112,7 @@ class AnnNotesPresentAndNotEmpty(AnnotationRule):
     def _check_annotation(self, object_: suite.Annotable) -> str:
         """Check the annotation for the given object."""
         violations = []
-        assert self.note_type
+        assert self.note_type is not None  # nosec B101  # addresses linter
         note = get_first_note_by_type(object_, self.note_type)
         if note is None:
             violations.append(f'Note missing: {self.note_type.name}')

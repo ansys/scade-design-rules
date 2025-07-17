@@ -78,8 +78,9 @@ class LLRNature(AnnotationRule):
         parameter = parameter.replace('note=', '-t ') if parameter else ''
         return super().on_start(model, parameter)
 
-    def on_check(self, annotable: suite.Annotable, parameter: str = None) -> int:
+    def on_check(self, annotable: suite.Annotable, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
+        assert self.note_type is not None  # nosec B101  # addresses linter
         note = get_first_note_by_type(annotable, self.note_type)
         if note:
             status = Rule.OK

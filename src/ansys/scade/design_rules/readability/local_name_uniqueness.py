@@ -75,13 +75,13 @@ class LocalNameUniqueness(Rule):
         )
         self.cache_variables = {}
 
-    def before_checking_subtree(self, object_: suite.Object, parameter: str = None) -> int:
+    def before_checking_subtree(self, object_: suite.Object, parameter: str = '') -> int:
         """Cache all the local variables when object_ is an operator."""
         if isinstance(object_, suite.Operator):
             self.cache_variables = _GatherLocalVariables(object_).variables
         return Rule.OK
 
-    def on_check(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         # default
         status = Rule.OK

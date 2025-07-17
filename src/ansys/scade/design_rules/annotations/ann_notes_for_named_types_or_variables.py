@@ -83,12 +83,12 @@ class AnnNotesForNamedTypesOrVariables(AnnotationRule):
             numeric_fields if numeric_fields else ['Min_Value', 'Max_Value', 'Unit_SI']
         )
 
-    def on_check_ex(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check_ex(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         violation_text_missing = []
 
-        # the registered objects are typed
-        assert isinstance(object_, suite.TypedObject)
+        # the registered objects are typed objects
+        assert isinstance(object_, suite.TypedObject)  # nosec B101  # addresses linter
         if self._is_eligible_for_annotation(object_):
             # named type or local variable
             violation_text_missing = self._check_annotation(object_)

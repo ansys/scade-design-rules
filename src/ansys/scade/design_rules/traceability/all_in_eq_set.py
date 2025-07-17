@@ -71,7 +71,7 @@ class AllInEqSet(Rule):
             **kwargs,
         )
 
-    def on_check(self, presentable: suite.Presentable, parameter: str = None) -> int:
+    def on_check(self, presentable: suite.Presentable, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         pe = presentable.presentation_element
         if not pe or isinstance(pe.diagram, suite.TextDiagram):

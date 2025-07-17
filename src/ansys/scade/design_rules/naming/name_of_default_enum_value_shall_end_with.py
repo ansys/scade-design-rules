@@ -65,7 +65,7 @@ class NameOfDefaultEnumValueShallEndWith(Rule):
             kinds=[SCK.ENUM_VALUE],
         )
 
-    def on_check_ex(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check_ex(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         if get_pragma_tool_text(object_, 'kcg', 'default') is not None:
             if not object_.name.endswith(parameter):

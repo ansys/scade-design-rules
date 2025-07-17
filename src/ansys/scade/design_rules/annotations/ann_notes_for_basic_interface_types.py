@@ -84,7 +84,7 @@ class AnnNotesForBasicInterfaceTypes(AnnotationRule):
             numeric_fields if numeric_fields else ['Min_Value', 'Max_Value', 'Unit_SI']
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         # minimal level of backward compatibility
         parameter = parameter.replace(',visibility=Public', ' --public')
@@ -92,7 +92,7 @@ class AnnNotesForBasicInterfaceTypes(AnnotationRule):
 
         result = super().on_start(model, parameter)
         if result == Rule.OK:
-            assert self.options
+            assert self.options is not None  # nosec B101  # addresses linter
             self.public = self.options.public
             # cache for checked named types of fields
             self.checked_typed = set()
@@ -102,7 +102,7 @@ class AnnNotesForBasicInterfaceTypes(AnnotationRule):
         """Declare arguments in addition to the note type."""
         parser.add_argument('--public', help='Public interfaces only', action='store_true')
 
-    def on_check_ex(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check_ex(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         # take care of sensors, should they be added later in the checked elements (kinds)
         declaration = object_.owner if isinstance(object_, suite.LocalVariable) else object_
@@ -114,8 +114,8 @@ class AnnNotesForBasicInterfaceTypes(AnnotationRule):
     def _check_object(self, typed: suite.TypedObject):
         # typed: context of the check, for annotations
         # must not be a table or a predefined type, that are typed objects without annotations
-        assert not isinstance(typed, suite.Table)
-        assert not isinstance(typed, suite.NamedType) or not typed.is_predefined()
+        # assert not isinstance(typed, suite.Table)
+        # assert not isinstance(typed, suite.NamedType) or not typed.is_predefined()
 
         # use a cache to avoid duplicated analysis
         if typed in self.checked_typed:

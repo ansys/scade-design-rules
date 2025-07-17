@@ -63,7 +63,7 @@ class LLROnly(Rule):
             **kwargs,
         )
 
-    def on_check(self, traceable: suite.Object, parameter: str = None) -> int:
+    def on_check(self, traceable: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         if not isinstance(traceable, suite.Traceable):
             print('not traceable item', str(traceable))

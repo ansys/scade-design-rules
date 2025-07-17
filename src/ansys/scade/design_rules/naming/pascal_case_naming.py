@@ -78,7 +78,7 @@ class PascalCaseNaming(Rule):
             **kwargs,
         )
 
-    def on_check_ex(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check_ex(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         # since types and kinds can be overridden, make sure the object has a name
         try:

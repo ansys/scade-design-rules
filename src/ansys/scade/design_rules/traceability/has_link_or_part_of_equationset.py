@@ -68,7 +68,7 @@ class HasLinkOrPartOfEquationSet(Rule):
             kinds=kinds,
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Load the traceability data."""
         # traceability dictionaries for each model/library
         self.almgr_dict = {}
@@ -94,7 +94,7 @@ class HasLinkOrPartOfEquationSet(Rule):
 
         return Rule.OK
 
-    def on_check_ex(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check_ex(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         # protect against kinds that are not applicable for this rule
         if not isinstance(object_, suite.Traceable):

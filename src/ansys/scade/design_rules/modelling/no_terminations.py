@@ -64,7 +64,7 @@ class NoTerminations(Rule):
             kinds=None,
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         if parameter not in ['ALL', 'NOIT']:
             self.set_message('Wrong parameter')
@@ -72,7 +72,7 @@ class NoTerminations(Rule):
 
         return Rule.OK
 
-    def on_check(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         if len(object_.lefts) != 1 or object_.lefts[0].name != '_':
             # not a terminator
@@ -91,7 +91,7 @@ class NoTerminations(Rule):
         violated = False
         prev_eq = prev_eqs[0]
         index_pos_of_var = prev_eq.lefts.index(local_var_connecting_it_and_termination)
-        assert index_pos_of_var == local_var_connecting_it_and_termination.left_range
+        # assert index_pos_of_var == local_var_connecting_it_and_termination.left_range
         right = prev_eq.right
         if parameter == 'NOIT' and isinstance(right, suite.ExprCall):
             # ignore 'exit index' and 'exit condition' outputs

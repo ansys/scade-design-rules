@@ -82,7 +82,7 @@ class ForbiddenKeywords(Rule):
             kinds=None,
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         path = Path(model.descriptor.model_file_name).parent / parameter
         try:
@@ -90,7 +90,8 @@ class ForbiddenKeywords(Rule):
             lines = file.read().split('\n')
         except BaseException as e:
             self.set_message(str(e))
-            scade.output(str(e) + '\n')
+            # scade is a CPython module defined dynamically
+            scade.output(str(e) + '\n')  # type: ignore
             return Rule.ERROR
         else:
             file.close()
@@ -98,7 +99,7 @@ class ForbiddenKeywords(Rule):
         self.keywords = {_ for _ in lines if _ and _[0] != '#'}
         return Rule.OK
 
-    def on_check(self, object: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         # types can be redefined: protect against wrong input
         try:

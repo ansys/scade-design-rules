@@ -55,7 +55,7 @@ class EqInEqSetOrNet(EqInEqSet):
     ):
         super().__init__(id=id, description=description, **kwargs)
 
-    def on_check(self, presentable: suite.Presentable, parameter: str = None) -> int:
+    def on_check(self, presentable: suite.Presentable, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         pe = presentable.presentation_element
         if pe and isinstance(pe.diagram, suite.NetDiagram) and not pe.diagram.equation_sets:

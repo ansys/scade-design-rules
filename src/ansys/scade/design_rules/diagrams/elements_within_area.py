@@ -92,7 +92,7 @@ class ElementsWithinArea(Rule):
             'LEGAL': [21590, 35560],
         }
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Reset the caches and parse the parameters."""
         self.wrong_formats = set()
 
@@ -101,7 +101,7 @@ class ElementsWithinArea(Rule):
         parameter = 'margins= 0; 0' if not parameter else parameter
         d = self.parse_values(parameter)
         if d is not None:
-            margins = d.get('margins')
+            margins = d.get('margins', '')
             try:
                 self.x_margin, self.y_margin = (int(_) for _ in margins.split(';'))
                 return Rule.OK
@@ -111,7 +111,7 @@ class ElementsWithinArea(Rule):
         self.set_message(message)
         return Rule.ERROR
 
-    def on_check(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
         pe = object_.presentation_element
         if not pe or not isinstance(pe.diagram, suite.NetDiagram):
@@ -142,7 +142,7 @@ class ElementsWithinArea(Rule):
                         status = False
                         items.add(f'edge {edge.left_var.name}')
         else:
-            assert isinstance(pe, suite.TransitionGE)
+            assert isinstance(pe, suite.TransitionGE)  # nosec B101  # addresses linter
             if self.is_box_outside_area(pe.label_pos, pe.label_size):
                 status = False
                 items.add('label')

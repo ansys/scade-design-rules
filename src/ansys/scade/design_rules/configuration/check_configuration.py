@@ -33,8 +33,8 @@ if __name__ == '__main__':  # pragma: no cover
 
 
 from pathlib import Path
-from xml.etree import ElementTree
 
+from defusedxml import ElementTree
 import scade.model.suite as suite
 
 from ansys.scade.design_rules.utils.rule import Rule
@@ -64,7 +64,7 @@ class CheckConfiguration(Rule):
             kinds=None,
         )
 
-    def on_start(self, model: suite.Model, parameter: str = None) -> int:
+    def on_start(self, model: suite.Model, parameter: str = '') -> int:
         """Get the rule's parameters."""
         d = self.parse_values(parameter)
         if d is None:
@@ -90,9 +90,9 @@ class CheckConfiguration(Rule):
         self.set_message(message)
         return Rule.ERROR
 
-    def on_check(self, object_: suite.Object, parameter: str = None) -> int:
+    def on_check(self, object_: suite.Object, parameter: str = '') -> int:
         """Return the evaluation status for the input object."""
-        assert isinstance(object_, suite.Model)
+        assert isinstance(object_, suite.Model)  # nosec B101  # addresses linter
         project = object_.project
         configuration = project.find_configuration(self.conf)
         # load source project: nightmare
