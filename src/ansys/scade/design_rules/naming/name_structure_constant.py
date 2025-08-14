@@ -47,8 +47,8 @@ class NameStructureConstant(Rule):
         severity=Rule.REQUIRED,
         parameter='_c',
         description=(
-            'Constant shall be in capitals letters and start/end with specific '
-            'character _c, c_, Const_'
+            'Constant shall be in uppercase letters and start or end with specific '
+            'character _c, c_, Const_.'
         ),
         label='Constant Name Structure',
     ):

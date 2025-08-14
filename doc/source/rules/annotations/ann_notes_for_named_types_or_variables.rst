@@ -18,12 +18,14 @@ Description
 
 .. start_description
 
-If a variable has a NumericType, then the numeric type shall have an annotation with the SI-Units, resolution, etc.
-If the variable has a basic type, the variable itself shall have the annotation.
-If both are defined, then raise a warning.
+If a variable has a NumericType then the numeric type shall have an annotation with the SI-Units, resolution, etc.
+If the variable has a basic type the variable itself shall have the annotation.
+If both are defined then raise a warning.
 
-parameter: 
+parameter:
+
 * '-t': Name of the annotation note type (e.g.: '-t SDD_TopLevel')
+
 
 .. end_description
 

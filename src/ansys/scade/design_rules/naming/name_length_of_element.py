@@ -47,7 +47,7 @@ class NameLengthOfElement(Rule):
         severity=Rule.REQUIRED,
         parameter='32',
         types=None,
-        description="Detect elements with a name length of more than 'parameter-value'",
+        description="Detect elements with a name length of more than 'parameter-value'.",
         label='Name length too long',
     ):
         if not types:

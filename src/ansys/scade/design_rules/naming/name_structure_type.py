@@ -48,7 +48,7 @@ class NameStructureType(Rule):
         label='Type Name Structure',
         severity=Rule.REQUIRED,
         parameter='prefix=,suffix=_t',
-        description=('Type shall start/end with specific characters _t, t_, Type_'),
+        description=('Type shall start/end with specific characters _t, t_, Type_.'),
     ):
         super().__init__(
             id=id,

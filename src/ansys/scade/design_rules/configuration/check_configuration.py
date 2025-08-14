@@ -49,7 +49,7 @@ class CheckConfiguration(Rule):
         category='configuration',
         severity=Rule.MANDATORY,
         parameter='conf=KCG,project=check.etp,conf_source=KCG',
-        description='Check given configuration against existing project.',
+        description='Check the given configuration against an existing project.',
         label='Check configuration',
     ):
         super().__init__(

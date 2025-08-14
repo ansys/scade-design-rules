@@ -48,7 +48,7 @@ class LLRNature(AnnotationRule):
         description=(
             "The Contributing Elements (CE) shall have an annotation 'DesignElement' "
             "with a property 'Nature'.\n"
-            "Parameter: '-t': Name of the note type: e.g.: '-t DesignElement'"
+            "Parameter: '-t': Name of the note type (e.g.: '-t DesignElement')"
         ),
         category='Traceability',
         severity=Rule.ADVISORY,

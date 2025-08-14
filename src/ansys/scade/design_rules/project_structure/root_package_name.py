@@ -47,7 +47,7 @@ class RootPackageName(Rule):
         severity=Rule.REQUIRED,
         description=(
             'This rule checks if the root Package has the same name as the Model '
-            'in which it resides'
+            'in which it resides.'
         ),
     ):
         super().__init__(

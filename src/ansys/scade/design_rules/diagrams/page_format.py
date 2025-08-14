@@ -46,7 +46,7 @@ class PageFormat(Rule):
         category='Diagrams',
         severity=Rule.REQUIRED,
         parameter='format=A4,orientation=Landscape',
-        label='Check Page Format.',
+        label='Check page format.',
         types=None,
         description=(
             'This rule checks if the page format is set properly.\n'

@@ -19,7 +19,7 @@ Description
 .. start_description
 
 Only named types shall be used in root operator / imported operator interfaces. Anonymous types (example int^3) shall be avoided.
-The rule applies to all the root operators, or the root operators of the specified configuration.
+The rule applies to all the root operators, or to the root operators of the specified configuration.
 
 .. end_description
 

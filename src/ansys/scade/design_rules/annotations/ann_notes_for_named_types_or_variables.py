@@ -59,8 +59,9 @@ class AnnNotesForNamedTypesOrVariables(AnnotationRule):
             'If a variable has a NumericType then the numeric type shall have an annotation '
             'with the SI-Units, resolution, etc.\n'
             'If the variable has a basic type the variable itself shall have the annotation.\n'
-            'If both are defined then raise a warning.\n'
-            "parameter: '-t': Name of the annotation note type: e.g.: '-t SDD_TopLevel'"
+            'If both are defined then raise a warning.\n\n'
+            'parameter:\n'
+            "* '-t': Name of the annotation note type (e.g.: '-t SDD_TopLevel')\n"
         ),
         label='AnnotationNotes for variables with basic type',
         # ease customization

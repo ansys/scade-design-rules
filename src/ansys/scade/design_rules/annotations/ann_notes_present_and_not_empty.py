@@ -56,10 +56,11 @@ class AnnNotesPresentAndNotEmpty(AnnotationRule):
         kinds=None,
         description=(
             'Check if an element has a specific annotation note type attached to it. '
-            'In addition it is checked that the given field elements are present and not empty.\n'
-            "parameter: '-t': Name of the annotation note type: e.g.: '-t AnnType'\n"
-            "'-n': Names of annotation note elements: "
-            'e.g.: -n AT1_Field1 AT1_Field2 AT1_Field3'
+            'In addition it is checked that the given field elements are present and not empty.\n\n'
+            'parameter:\n'
+            "* '-t': Name of the annotation note type (e.g.: '-t AnnType')\n"
+            "* '-n': Names of annotation note elements "
+            '(e.g.: -n AT1_Field1 AT1_Field2 AT1_Field3)'
         ),
         label='AnnotationNotes present and not empty',
     ):

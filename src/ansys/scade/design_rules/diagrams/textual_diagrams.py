@@ -47,7 +47,7 @@ class TextualDiagrams(Rule):
         severity=Rule.ADVISORY,
         label='Textual Diagrams should not be used.',
         types=None,
-        description=('This rule checks if Textual Diagrams are used in the project'),
+        description=('This rule checks if Textual Diagrams are used in the project.'),
     ):
         if not types:
             types = [suite.TextDiagram, suite.State, suite.Action]

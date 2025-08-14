@@ -20,7 +20,10 @@ Description
 
 The annotation notes for producer and consumer shall be identical if they both exist.
 If only the consumer has a note raise a 'redefine' warning.
-parameter: '-t': Name of the annotation note type
+
+parameter:
+
+* '-t': Name of the annotation note type
 
 .. end_description
 

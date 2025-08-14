@@ -19,7 +19,7 @@ Description
 .. start_description
 
 Maximum graphical primitive operator instances within a diagram. This metric also includes textual equations.
-Parameter: maximum value: e.g.: '15'
+Parameter: maximum value (e.g.: '15')
 
 .. end_description
 

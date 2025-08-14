@@ -47,7 +47,7 @@ class ModelRootPackage(Rule):
         severity=Rule.REQUIRED,
         description=(
             'This rule checks if the Model contains only one Package as root element '
-            'and no other elements at this level'
+            'and no other elements at this level.'
         ),
     ):
         super().__init__(

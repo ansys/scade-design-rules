@@ -47,7 +47,7 @@ class CamelCaseNaming(Rule):
         label='Camel case name',
         description=(
             'Each word composing a name shall start with an uppercase '
-            'letter except the first one;\n'
+            'letter except the first one.\n'
             'The remainder of the word shall consist of lowercase letters and digits.'
         ),
         category='Naming',

@@ -49,7 +49,7 @@ class MaximumDiagramsPerElement(Rule):
         types=None,
         description=(
             'Maximum diagrams defining an operator, a state, or an action.\n'
-            "Parameter: maximum value: e.g.: '7'"
+            "Parameter: maximum value (e.g.: '7')"
         ),
         metric_id: str = 'id_0126',
     ):

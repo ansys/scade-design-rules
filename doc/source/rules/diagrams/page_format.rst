@@ -11,7 +11,7 @@ Page format
    :kind: specific
    :tags: diagrams
 
-   Check Page Format.
+   Check page format.
 
 Description
 ===========

@@ -18,7 +18,7 @@ Description
 
 .. start_description
 
-Boolean values should not be compared to the constants TRUE or FALSE
+Boolean values should not be compared to the constants TRUE or FALSE.
 
 .. end_description
 

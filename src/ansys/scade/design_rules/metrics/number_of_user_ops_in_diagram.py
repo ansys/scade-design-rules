@@ -43,7 +43,7 @@ class NumberOfUserOpsInDiagram(Metric):
         self,
         id='id_0132',
         category='Counters',
-        label='Number of user-operators in diagram',
+        label='Number of user-operators in a diagram',
         description='Number of graphical user-operator instances within a diagram.',
     ):
         super().__init__(

@@ -58,7 +58,7 @@ class NameStructureFoldAccumulator(Rule):
             '* The input and output names of the accumulators match.\n'
             '\n'
             'The parameter allows specifying a regular expression for input and output names.\n'
-            "For example: '-i acc(.*)In -o acc(.*)Out'. The parenthesis identifies the common "
+            "For example: '-i acc(.*)In -o acc(.*)Out'. The parentheses identify the common "
             'part of both names that must match.\n'
             '\n'
             'When strict is set, the rules verifies the names are not used for variables '

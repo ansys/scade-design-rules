@@ -48,7 +48,7 @@ class NoAnonymousType(Rule):
         description=(
             'Only named types shall be used in root operator / imported operator '
             'interfaces. Anonymous types (example int^3) shall be avoided.\n'
-            'The rule applies to all the root operators, or the root operators '
+            'The rule applies to all the root operators, or to the root operators '
             'of the specified configuration.'
         ),
         category='Modelling',

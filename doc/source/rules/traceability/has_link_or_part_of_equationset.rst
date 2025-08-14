@@ -18,7 +18,7 @@ Description
 
 .. start_description
 
-This rule checks if the elements have traceability links via the ALM Gateway or is part of an Equation Set
+This rule checks if the elements have traceability links via the ALM Gateway or is part of an Equation Set.
 
 .. end_description
 

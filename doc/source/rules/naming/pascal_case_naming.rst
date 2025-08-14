@@ -15,7 +15,7 @@ Pascal case name
 
 Description
 ===========
-Each word composing a name shall start with an uppercase letter;
+Each word composing a name shall start with an uppercase letter.
 The remainder of the word shall consist of lowercase letters and digits.
 
 .. end_description

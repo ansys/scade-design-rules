@@ -19,7 +19,7 @@ Description
 .. start_description
 
 Operator calls with only constant inputs shall not be used for the operators in parameter.
-This rule does not apply for Constants and not for Types
+This rule does not apply for Constants and not for Types.
 
 .. end_description
 

@@ -53,9 +53,9 @@ class RequirementHasLink(Rule):
         parameter='withalmgt=true',
         description=(
             'This rule checks if all requirements in the requirement window are linked.\n'
-            "parameter: 'withalmgt=' true or false: e.g.: withalmgt=true\n"
-            'withalmgt=true: local links are taken into account.\n'
-            'withalmgt=false: only pushed information is checked.'
+            "parameter: 'withalmgt=' true or false (e.g.: withalmgt=true)\n"
+            '* if withalmgt=true, local links are taken into account.\n'
+            '* if withalmgt=false, only pushed information is checked.'
         ),
         label='Requirement has traceability link',
     ):

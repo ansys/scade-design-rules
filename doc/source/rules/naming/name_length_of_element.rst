@@ -18,7 +18,7 @@ Description
 
 .. start_description
 
-Detect elements with a name length of more than 'parameter-value'
+Detect elements with a name length of more than 'parameter-value'.
 
 .. end_description
 

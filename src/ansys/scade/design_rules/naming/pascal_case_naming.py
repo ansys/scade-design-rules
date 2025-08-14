@@ -46,7 +46,7 @@ class PascalCaseNaming(Rule):
         id='id_0078',
         label='Pascal case name',
         description=(
-            'Each word composing a name shall start with an uppercase letter;\n'
+            'Each word composing a name shall start with an uppercase letter.\n'
             'The remainder of the word shall consist of lowercase letters and digits.'
         ),
         category='Naming',

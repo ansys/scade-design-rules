@@ -26,7 +26,7 @@ parameter: comma separated list of headlines, for example: Purpose, Algorithm
 The list of expected headlines is given as a comma-separated string.
 The operator comment is expected to start with one line per headline, starting with the headline name and a column.
 
-For example when ``headline=Purpose,Algorithm``, the expected comment pattern is::
+For example, when ``headline=Purpose,Algorithm``, the expected comment pattern is::
 
   Purpose: <any text>
   Algorithm: <any text>

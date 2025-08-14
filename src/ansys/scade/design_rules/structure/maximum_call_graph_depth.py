@@ -51,7 +51,8 @@ class MaximumCallGraphDepth(Rule):
         description=(
             "Maximum depth of the call graph shall not exceed 'parameter'.\n"
             'Check is performed on only public or all operators. '
-            'Parameter: depth=:maximum value, visibility=Public,ALL e.g.: depth=7,visibility=Public'
+            'Parameter: depth=:maximum value, visibility=Public,ALL '
+            '(e.g.: depth=7,visibility=Public)'
         ),
         label='Maximum call graph depth',
     ):

@@ -47,7 +47,7 @@ class TransitionKind(Rule):
         severity=Rule.REQUIRED,
         parameter='nomix',
         description=(
-            'Check that all transitions of a state machine are of the same kind, '
+            'This rule checks that all transitions of a state machine are of the same kind, '
             'are all strong or are all weak transitions.\n'
             "parameter: strong, weak, nomix: e.g.: 'nomix'"
         ),

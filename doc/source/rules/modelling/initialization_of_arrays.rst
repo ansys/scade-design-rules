@@ -18,7 +18,7 @@ Description
 
 .. start_description
 
-If all elements of an array are identical the initialization shall be done like this: value ^size
+If all elements of an array are identical, the initialization shall be done like this: value ^size
 Note: An initialization such as ' ', ' ', ' ', etc. leads to more memory usage than ' ' ^n.
 
 .. end_description

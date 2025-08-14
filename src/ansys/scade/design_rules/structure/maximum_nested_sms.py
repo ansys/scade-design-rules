@@ -48,7 +48,7 @@ class MaximumNestedSMs(Rule):
         label='Maximum nested SMs',
         description=(
             'Maximum hierarchical levels of nested state machines.\n'
-            "Parameter: maximum value: e.g.: '5'"
+            "Parameter: maximum value (e.g.: '5')"
         ),
         metric_id: str = 'id_0129',
     ):

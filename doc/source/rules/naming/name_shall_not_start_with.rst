@@ -18,7 +18,7 @@ Description
 
 .. start_description
 
-Name shall not start with 'parameter-value'
+Name shall not start with 'parameter-value'.
 
 .. end_description
 

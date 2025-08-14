@@ -15,7 +15,7 @@ CE or diagram nature
 Description
 ===========
 The Contributing Elements (CE) shall have an annotation 'DesignElement' with a property 'Nature'.
-Parameter: '-t': Name of the note type: e.g.: '-t DesignElement'
+Parameter: '-t': Name of the note type (e.g.: '-t DesignElement')
 
 .. end_description
 

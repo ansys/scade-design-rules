@@ -19,8 +19,11 @@ Description
 .. start_description
 
 All constants and types are used at least once.
-For constants it is also checked if the annotation note 'only external use' is set.
-parameter: '-t': Name of the annotation note type
+For constants, it is also checked if the annotation note 'only external use' is set.
+parameter:
+
+* '-t': Name of the annotation note type
+
 
 .. end_description
 

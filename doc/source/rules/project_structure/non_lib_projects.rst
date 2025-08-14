@@ -18,7 +18,7 @@ Description
 
 .. start_description
 
-This rule checks if all non-top-level operators, types, and constants of Non-'Lib' projects are located in other packages nested within the root package
+This rule checks if all non-top-level operators, types, and constants of Non-'Lib' projects are located in other packages nested within the root package.
 
 .. end_description
 

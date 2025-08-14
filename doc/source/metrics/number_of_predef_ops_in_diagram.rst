@@ -11,7 +11,7 @@ Number of predefined operators in diagram
    :kind: specific
    :tags: metrics
 
-   Number of predefined operators in diagram
+   Number of predefined operators in a diagram
 
 Description
 ===========

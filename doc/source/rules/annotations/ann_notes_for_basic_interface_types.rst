@@ -21,8 +21,9 @@ Description
 All basic types used inside an operator interface shall have an annotation with the SI-Units, resolution, etc.
 NamedTypes are checked recursively.
 
-parameters: 
-* '-t': Name of the annotation note type (e.g.: '-t SDD_TopLevel') 
+parameters:
+
+* '-t': Name of the annotation note type
 * '--public ': Public interfaces only (e.g.: '-t SDD_TopLevel --public')
 
 .. end_description

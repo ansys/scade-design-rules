@@ -19,7 +19,7 @@ Description
 .. start_description
 
 Maximum graphical user-operator instances within a single diagram.
-Parameter: maximum value: e.g.: '7'
+Parameter: maximum value (e.g.: '7')
 
 .. end_description
 

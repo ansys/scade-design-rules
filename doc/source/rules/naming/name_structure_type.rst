@@ -18,11 +18,12 @@ Description
 
 .. start_description
 
-Type shall start/end with specific characters _t, t\_, Type\_
+Type shall start/end with specific characters _t, t\_, Type_.
 
 .. end_description
 
-Rule parameters are given as a comma-separated list. Parameters are:
+Rule parameters are given as a comma-separated list.
+Parameters are:
 
 * ``prefix``: expected type name prefix. Default value is empty (no prefix).
 * ``suffix``: expected type name suffix. Default value is ``_t``.

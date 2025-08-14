@@ -18,7 +18,7 @@ Description
 
 .. start_description
 
-Check that all transitions of a state machine are of the same kind, are all strong or are all weak transitions.
+This rule checks that all transitions of a state machine are of the same kind, are all strong or are all weak transitions.
 parameter: strong, weak, nomix: e.g.: 'nomix'
 
 .. end_description

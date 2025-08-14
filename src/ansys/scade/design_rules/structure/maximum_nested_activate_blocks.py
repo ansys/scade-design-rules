@@ -49,7 +49,7 @@ class MaximumNestedActivateBlocks(Rule):
         description=(
             'Maximum hierarchical levels of conditional blocks '
             "('If Block', 'When Block').\n"
-            "Parameter: maximum value: e.g.: '7'"
+            "Parameter: maximum value (e.g.: '7')"
         ),
         metric_id: str = 'id_0128',
     ):

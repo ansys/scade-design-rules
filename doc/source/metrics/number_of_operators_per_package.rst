@@ -25,8 +25,8 @@ Number of operators per package.
 Computation
 ===========
 This metric counts the number of operators in a package.
-The count of operators defined at the model is associated to
-a virtual package named as the model without the suffix ``::``.
+The number of operators defined in the model is associated to
+a virtual package named like the model without the suffix ``::``.
 
 Customization
 =============

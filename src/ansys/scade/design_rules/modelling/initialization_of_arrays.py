@@ -45,7 +45,7 @@ class InitializationOfArrays(Rule):
         category='Modelling',
         severity=Rule.REQUIRED,
         description=(
-            'If all elements of an array are identical the initialization shall be '
+            'If all elements of an array are identical, the initialization shall be '
             'done like this: value ^size\n'
             "Note: An initialization such as ' ', ' ', ' ', etc. "
             "leads to more memory usage than ' ' ^n."

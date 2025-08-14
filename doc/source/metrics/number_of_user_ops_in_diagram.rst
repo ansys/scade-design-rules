@@ -11,7 +11,7 @@ Number of user operators in diagram
    :kind: specific
    :tags: metrics
 
-   Number of user-operators in diagram
+   Number of user-operators in a diagram
 
 Description
 ===========
