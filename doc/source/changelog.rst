@@ -9,6 +9,61 @@ This document contains the release notes for the project.
 
 .. towncrier release notes start
 
+`0.2.0 <https://github.com/ansys/scade-design-rules/releases/tag/v0.2.0>`_ - August 27, 2025
+============================================================================================
+
+.. tab-set::
+
+
+  .. tab-item:: Added
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - feat: technical review
+          - `#28 <https://github.com/ansys/scade-design-rules/pull/28>`_
+
+        * - feat: add download button to docs
+          - `#31 <https://github.com/ansys/scade-design-rules/pull/31>`_
+
+
+  .. tab-item:: Documentation
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - chore: update CHANGELOG for v0.1.1
+          - `#22 <https://github.com/ansys/scade-design-rules/pull/22>`_
+
+        * - chore: update CHANGELOG for v0.1.2
+          - `#27 <https://github.com/ansys/scade-design-rules/pull/27>`_
+
+
+  .. tab-item:: Test
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Fix: enhance robustness
+          - `#33 <https://github.com/ansys/scade-design-rules/pull/33>`_
+
+
+  .. tab-item:: Miscellaneous
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Ci: bump ansys/actions from 9 to 10 in the actions group
+          - `#32 <https://github.com/ansys/scade-design-rules/pull/32>`_
+
+        * - Docs: doc review
+          - `#34 <https://github.com/ansys/scade-design-rules/pull/34>`_
+
+
 `0.1.2 <https://github.com/ansys/scade-design-rules/releases/tag/v0.1.2>`_ - March 26, 2025
 ===========================================================================================
 
