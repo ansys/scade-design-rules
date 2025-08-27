@@ -18,7 +18,7 @@ Description
 
 .. start_description
 
-Constant shall be in uppercase letters and start or end with specific character _c, c\_, Const_.
+Constant shall be in uppercase letters and start or end with specific character _c, c\_, Const\_.
 
 .. end_description
 

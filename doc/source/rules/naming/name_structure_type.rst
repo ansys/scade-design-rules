@@ -18,7 +18,7 @@ Description
 
 .. start_description
 
-Type shall start/end with specific characters _t, t\_, Type_.
+Type shall start/end with specific characters _t, t\_, Type\_.
 
 .. end_description
 
