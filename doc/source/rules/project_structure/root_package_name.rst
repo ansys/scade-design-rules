@@ -18,7 +18,7 @@ Description
 
 .. start_description
 
-This rule checks if the root Package has the same name as the Model in which it resides
+This rule checks if the root Package has the same name as the Model in which it resides.
 
 .. end_description
 

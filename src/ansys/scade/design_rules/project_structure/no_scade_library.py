@@ -51,7 +51,7 @@ class NoScadeLibrary(Rule):
         description=(
             'Only SCADE libraries that are under full control of the project'
             '(configuration management, verification) shall be used.\n'
-            'In particular the designer shall NOT use the SCADE product installation libraries, '
+            'In particular, the designer shall NOT use the SCADE product installation libraries, '
             'as they are delivered as examples.'
         ),
         category='Project Structure',

@@ -18,7 +18,7 @@ Description
 
 .. start_description
 
-This rule checks if library Projects (prefixed with Lib) does not contain top-level Operators
+This rule checks if library Projects (prefixed with Lib) does not contain top-level Operators.
 
 .. end_description
 

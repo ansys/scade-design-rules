@@ -9,7 +9,7 @@ Traceability
 
    Set of rules related to the traceability of Scade models.
 
-This section gathers the rules related to the traceability.
+This section gathers the rules related to traceability.
 Most of them are documented in *ESEG-EN-072 SCADE Traceability*.
 Although each rule can be used separately, it is advised to consider
 one of the consistent subsets described in the engineering note,

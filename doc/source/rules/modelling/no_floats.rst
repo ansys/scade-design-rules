@@ -18,7 +18,7 @@ Description
 
 .. start_description
 
-Floats shall NOT be used
+Floats shall NOT be used.
 
 .. end_description
 

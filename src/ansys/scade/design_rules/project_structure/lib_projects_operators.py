@@ -47,7 +47,7 @@ class LibProjectsOperators(Rule):
         parameter='Lib',
         description=(
             'This rule checks if library Projects (prefixed with Lib) does not contain '
-            'top-level Operators'
+            'top-level Operators.'
         ),
         label='Library Projects shall not contain top-level Operators',
     ):

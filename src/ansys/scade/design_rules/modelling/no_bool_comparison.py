@@ -46,7 +46,7 @@ class NoBoolComparison(Rule):
         id='id_0054',
         category='Modelling',
         severity=Rule.MANDATORY,
-        description='Boolean values should not be compared to the constants TRUE or FALSE',
+        description='Boolean values should not be compared to the constants TRUE or FALSE.',
         label='No boolean comparison',
     ):
         super().__init__(

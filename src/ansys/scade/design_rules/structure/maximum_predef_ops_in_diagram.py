@@ -49,7 +49,7 @@ class MaximumPredefOpsInDiagram(Rule):
         description=(
             'Maximum graphical primitive operator instances within a diagram. '
             'This metric also includes textual equations.\n'
-            "Parameter: maximum value: e.g.: '15'"
+            "Parameter: maximum value (e.g.: '15')"
         ),
         metric_id: str = 'id_0131',
     ):

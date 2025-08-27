@@ -19,7 +19,7 @@ Description
 .. start_description
 
 Maximum diagrams defining an operator, a state, or an action.
-Parameter: maximum value: e.g.: '7'
+Parameter: maximum value (e.g.: '7')
 
 .. end_description
 

@@ -18,7 +18,7 @@ Description
 
 .. start_description
 
-Check given configuration against existing project.
+Check the given configuration against an existing project.
 
 .. end_description
 

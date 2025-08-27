@@ -275,3 +275,4 @@ TestResults/
 *.sln
 *.pyproj
 *_metrics.xml
+/Shell310.bat

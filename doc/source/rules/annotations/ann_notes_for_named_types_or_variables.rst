@@ -21,14 +21,18 @@ Description
 If a variable has a NumericType then the numeric type shall have an annotation with the SI-Units, resolution, etc.
 If the variable has a basic type the variable itself shall have the annotation.
 If both are defined then raise a warning.
-parameter: '-t': Name of the annotation note type: e.g.: '-t SDD_TopLevel'
+
+parameter:
+
+* '-t': Name of the annotation note type (e.g.: '-t SDD_TopLevel')
+
 
 .. end_description
 
 Rationale
 =========
 This enforces compliance with a specific modeling standard by ensuring that all named types
-or variables don't only show the *what* (the shape of the data itself), but also the *why*,
+or variables do not only show the *what* (the shape of the data itself), but also the *why*,
 by documenting what the data corresponds to and what real-world quantities they represent.
 
 Verification

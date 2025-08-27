@@ -46,7 +46,7 @@ class NoFloats(Rule):
         id='id_0056',
         category='Modelling',
         severity=Rule.MANDATORY,
-        description='Floats shall NOT be used',
+        description='Floats shall NOT be used.',
         label='No floats',
     ):
         super().__init__(

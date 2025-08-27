@@ -15,7 +15,7 @@ Diagram name
 Description
 ===========
 When there are several diagrams in a scope, the name of each diagram shall be characteristic of its function.
-Otherwise the default name created by the editor shall be updated to the name of its scope.
+Otherwise, the default name created by the editor shall be updated to the name of its scope.
 
 Rationale
 =========

@@ -48,7 +48,7 @@ class MaximumUserOpsInDiagram(Rule):
         label='Maximum user operators in diagram',
         description=(
             'Maximum graphical user-operator instances within a single diagram.\n'
-            "Parameter: maximum value: e.g.: '7'"
+            "Parameter: maximum value (e.g.: '7')"
         ),
         metric_id: str = 'id_0132',
     ):

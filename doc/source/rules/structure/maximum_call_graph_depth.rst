@@ -19,7 +19,7 @@ Description
 .. start_description
 
 Maximum depth of the call graph shall not exceed 'parameter'.
-Check is performed on only public or all operators. Parameter: depth=:maximum value, visibility=Public,ALL e.g.: depth=7,visibility=Public
+Check is performed on only public or all operators. Parameter: depth=:maximum value, visibility=Public,ALL (e.g.: depth=7,visibility=Public)
 
 .. end_description
 

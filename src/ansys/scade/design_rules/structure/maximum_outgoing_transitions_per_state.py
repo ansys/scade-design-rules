@@ -47,7 +47,7 @@ class MaximumOutgoingTransitionsPerState(Rule):
         parameter='7',
         label='Maximum outgoing transitions per state',
         description=(
-            "Maximum outgoing transitions per state.\nParameter: maximum value: e.g.: '7'"
+            "Maximum outgoing transitions per state.\nParameter: maximum value (e.g.: '7')"
         ),
         metric_id: str = 'id_0125',
     ):

@@ -18,9 +18,8 @@ Description
 
 .. start_description
 
-Check given configuration for these settings:
-parameter: 'conf=' Name of configuration: e.g.: conf=KCG
-'rootPackage=' Name of root package: e.g.: rootPackage=package1
+Check the given configuration using specific parameters.
+
 
 .. end_description
 
@@ -28,6 +27,10 @@ The list of parameters is given as a comma-separated string. Parameters are:
 
 * ``conf``: name of the configuration to check.
 * ``rootPackage``: name of the root package in the configuration.
+
+            "parameters:\n"
+            "* 'conf=' Name of the configuration (e.g.: 'conf=KCG')\n"
+            "* 'rootPackage=' Name of the root package (e.g.: 'rootPackage=package1')"
 
 Rationale
 =========

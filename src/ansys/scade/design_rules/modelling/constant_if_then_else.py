@@ -48,7 +48,7 @@ class ConstantIfThenElse(Rule):
         severity=Rule.ADVISORY,
         description=(
             "This rule checks if predefined Operators 'if..then..else' have constant "
-            'boolean inputs on the left inputs'
+            'boolean inputs on the left inputs.'
         ),
         label='This operator should not be used with constant inputs of boolean type',
     ):

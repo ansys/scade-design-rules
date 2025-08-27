@@ -19,7 +19,7 @@ Description
 .. start_description
 
 Maximum hierarchical levels of nested state machines.
-Parameter: maximum value: e.g.: '5'
+Parameter: maximum value (e.g.: '5')
 
 .. end_description
 

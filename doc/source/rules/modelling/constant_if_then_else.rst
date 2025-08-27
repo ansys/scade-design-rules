@@ -18,7 +18,7 @@ Description
 
 .. start_description
 
-This rule checks if predefined Operators 'if..then..else' have constant boolean inputs on the left inputs
+This rule checks if predefined Operators 'if..then..else' have constant boolean inputs on the left inputs.
 
 .. end_description
 
@@ -29,7 +29,7 @@ The intent is to promote direct use of a boolean expression instead of feeding i
 
 Verification
 ============
-This rule checks all ``if..then..else`` calls throughout the model and verifies recursively whether either of their inputs is a raw boolean value.
+This rule checks all ``if..then..else`` calls throughout the model and verifies recursively whether any of their inputs is a raw boolean value.
 
 Resolution
 ==========

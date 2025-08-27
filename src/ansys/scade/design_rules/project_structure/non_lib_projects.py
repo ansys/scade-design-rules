@@ -47,7 +47,7 @@ class NonLibProjects(Rule):
         parameter='Lib',
         description=(
             "This rule checks if all non-top-level operators, types, and constants of Non-'Lib' "
-            'projects are located in other packages nested within the root package'
+            'projects are located in other packages nested within the root package.'
         ),
         label=(
             'Projects shall contain only one top-level Operator and its used Types and Constants'

@@ -18,7 +18,7 @@ Description
 
 .. start_description
 
-Name of enumeration values with the default pragma shall end with 'parameter'
+Name of enumeration values with the default pragma shall end with 'parameter'.
 parameter: starting string, for example: 'enumvalue_DEFAULT'
 
 .. end_description

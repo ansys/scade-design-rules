@@ -48,7 +48,7 @@ class NameShallNotStartWith(Rule):
         parameter='_',
         label='Name shall not start with',
         types=None,
-        description="Name shall not start with 'parameter-value'",
+        description="Name shall not start with 'parameter-value'.",
     ):
         if not types:
             types = [

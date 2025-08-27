@@ -19,7 +19,7 @@ Description
 .. start_description
 
 Maximum outgoing transitions per state.
-Parameter: maximum value: e.g.: '7'
+Parameter: maximum value (e.g.: '7')
 
 .. end_description
 

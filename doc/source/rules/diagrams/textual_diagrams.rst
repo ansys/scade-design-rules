@@ -18,7 +18,7 @@ Description
 
 .. start_description
 
-This rule checks if Textual Diagrams are used in the project
+This rule checks if Textual Diagrams are used in the project.
 
 .. end_description
 

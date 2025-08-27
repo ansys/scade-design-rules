@@ -20,14 +20,18 @@ Description
 
 All basic types used inside an operator interface shall have an annotation with the SI-Units, resolution, etc.
 NamedTypes are checked recursively.
-parameter: '-t': Name of the annotation note type, '--public ': Public interfaces only :e.g.: '-t SDD_TopLevel --public'
+
+parameters:
+
+* '-t': Name of the annotation note type
+* '--public ': Public interfaces only (e.g.: '-t SDD_TopLevel --public')
 
 .. end_description
 
 Rationale
 =========
 This enforces compliance with a specific modeling standard by ensuring that all
-operator interface fields don't only show the *what* (the shape of the data itself),
+operator interface fields do not only show the *what* (the shape of the data itself),
 but also the *why*, by documenting what the data corresponds to
 and what real-world quantities they represent.
 

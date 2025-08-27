@@ -53,11 +53,7 @@ class CheckConfigurationCustom1(Rule):
         category='configuration',
         severity=Rule.MANDATORY,
         parameter='conf=KCG,rootPackage=package1',
-        description=(
-            'Check given configuration for these settings:\n'
-            "parameter: 'conf=' Name of configuration: e.g.: conf=KCG\n"
-            "'rootPackage=' Name of root package: e.g.: rootPackage=package1"
-        ),
+        description=('Check the given configuration using specific parameters.\n'),
         label='Check configuration',
     ):
         super().__init__(

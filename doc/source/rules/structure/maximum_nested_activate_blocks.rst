@@ -19,7 +19,7 @@ Description
 .. start_description
 
 Maximum hierarchical levels of conditional blocks ('If Block', 'When Block').
-Parameter: maximum value: e.g.: '7'
+Parameter: maximum value (e.g.: '7')
 
 .. end_description
 

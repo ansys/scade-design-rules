@@ -56,8 +56,9 @@ class IdenticalForProducerConsumer(AnnotationRule):
         description=(
             'The annotation notes for producer and consumer shall be identical '
             'if they both exist.\n'
-            "If only the consumer has a note raise a 'redefine' warning.\n"
-            "parameter: '-t': Name of the annotation note type"
+            "If only the consumer has a note raise a 'redefine' warning.\n\n"
+            'parameter:\n'
+            "* '-t': Name of the annotation note type"
         ),
         label='Identical annotations for producer and consumer',
         # ease customization

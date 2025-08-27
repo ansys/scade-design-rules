@@ -54,9 +54,10 @@ class AllConstantsTypesAreUsed(AnnotationRule):
         label='All constants and types are used at least once',
         types=None,
         description=(
-            'All constants and types are used at least once.\nFor constants it is also checked '
+            'All constants and types are used at least once.\nFor constants, it is also checked '
             "if the annotation note 'only external use' is set.\n"
-            "parameter: '-t': Name of the annotation note type"
+            'parameter:\n'
+            "* '-t': Name of the annotation note type\n"
         ),
     ):
         if not types:

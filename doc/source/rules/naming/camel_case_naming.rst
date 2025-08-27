@@ -15,7 +15,7 @@ Camel case name
 
 Description
 ===========
-Each word composing a name shall start with an uppercase letter except the first one;
+Each word composing a name shall start with an uppercase letter except the first one.
 The remainder of the word shall consist of lowercase letters and digits.
 
 .. end_description

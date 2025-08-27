@@ -31,7 +31,7 @@ This rule eases discovery of such items early in the modeling process.
 
 Verification
 ============
-This rule checks that all model operators that have "Private" visibility have at least one expression calling them.
+This rule checks that all model operators with "Private" visibility have at least one expression calling them.
 
 Resolution
 ==========

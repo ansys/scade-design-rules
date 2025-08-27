@@ -45,7 +45,7 @@ class ElementsWithinArea(Rule):
         self,
         id='id_0015',
         description=('All elements shall be within the page format (A4, A3).'),
-        label='Elements within area',
+        label='Elements within area.',
         category='Diagrams',
         parameter='margins=0; 0',
         severity=Rule.REQUIRED,

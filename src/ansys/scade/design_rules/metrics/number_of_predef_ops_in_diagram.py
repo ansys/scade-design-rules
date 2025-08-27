@@ -43,7 +43,7 @@ class NumberOfPredefOpsInDiagram(Metric):
         self,
         id='id_0131',
         category='Counters',
-        label='Number of predefined operators in diagram',
+        label='Number of predefined operators in a diagram',
         description='Number of graphical primitive operator instances within a diagram.',
     ):
         super().__init__(

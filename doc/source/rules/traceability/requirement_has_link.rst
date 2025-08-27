@@ -19,9 +19,10 @@ Description
 .. start_description
 
 This rule checks if all requirements in the requirement window are linked.
-parameter: 'withalmgt=' true or false: e.g.: withalmgt=true
-withalmgt=true: local links are taken into account.
-withalmgt=false: only pushed information is checked.
+parameter: 'withalmgt=' true or false (e.g.: withalmgt=true)
+
+* if withalmgt=true, local links are taken into account.
+* if withalmgt=false, only pushed information is checked.
 
 .. end_description
 

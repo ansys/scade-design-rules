@@ -93,7 +93,7 @@ def update_rst(file: Path, instance, kind: str) -> bool:
 
     # fix common mistake with md/rst
     # escape trailing '_'
-    description = re.sub(r"(\w+)_( |$|,|')", r'\1\\_\2', instance.description)
+    description = re.sub(r"(\w+)_( |$|,|'|\.)", r'\1\\_\2', instance.description)
     description = description.split('\n')
     for i in range(1, len(description)):
         if (

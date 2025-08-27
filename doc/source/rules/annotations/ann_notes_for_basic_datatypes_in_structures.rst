@@ -23,18 +23,21 @@ Description
 
 .. start_description
 
-Sub-element of structure definitions for component I/O and TPCs that has basic datatypes shall be described with below information in its notes field
+Each sub-element within structure definitions used for component I/O and TPCs that includes basic data types must be documented in the notes field with the following information:
 
 * Description:
 * Constraints:
 
-If not Booleans
+If not Boolean or Char types:
 
 * Min_Value:
 * Max_Value:
 * Unit(SI):
 
-parameter: '-t': Name of the annotation note type: e.g.: '-t SDD_TopLevel'
+parameter:
+
+* '-t': Name of the annotation note type (e.g.: '-t SDD_TopLevel')
+
 
 .. end_description
 
@@ -43,7 +46,7 @@ parameter: '-t': Name of the annotation note type: e.g.: '-t SDD_TopLevel'
 Rationale
 =========
 This enforces compliance with a specific modeling standard by ensuring that all structure fields
-don't only show the *what* (the shape of the data itself), but also the *why*, by documenting what
+do not only show the *what* (the shape of the data itself), but also the *why*, by documenting what
 the data corresponds to and what real-world quantities they represent.
 
 Verification
