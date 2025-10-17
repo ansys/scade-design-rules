@@ -44,7 +44,7 @@ class ElementsWithinArea(Rule):
     def __init__(
         self,
         id='id_0015',
-        description=('All elements shall be within the page format (A4, A3).'),
+        description=('All elements shall be within the diagram format (A4, A3...).'),
         label='Elements within area.',
         category='Diagrams',
         parameter='margins=0; 0',
