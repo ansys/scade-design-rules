@@ -25,16 +25,24 @@ using their code, with the following syntax: ``<code> [, <code>]*``
 
 The codes are defined in the user documentation:
 
-########    ====
-Operator    Code
-########    ====
-<           20
-<=          21
->           22
->=          23
-=           24
-<>          25
-########    ====
+.. list-table::
+   :header-rows: 1
+
+   * - **Operator**
+     - **Code**
+   * - ``<``
+     - 20
+   * - ``<=``
+     - 21
+   * - ``>``
+     - 22
+   * - ``>=``
+     - 23
+   * - ``=``
+     - 24
+   * - ``<>``
+     - 25
+
 
 Rationale
 =========
