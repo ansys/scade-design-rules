@@ -26,7 +26,7 @@ permissions: {}
 jobs:
 
   sc:
-    uses: ansys/scade-actions/.github/workflows/scade-ext-workflow.yml@v3
+    uses: ansys/scade-actions/.github/workflows/scade-ext-workflow.yml@feat/sphinx-opts
     permissions:
       attestations: write # needed for build-wheelhouse and build-library jobs
       contents: write # needed for update-changelog, doc-deploy-pr, release, doc-deploy-dev, and doc-deploy-stable jobs
@@ -38,12 +38,12 @@ jobs:
       library-name: "ansys-scade-design-rules"
       repository-name: "ansys/scade-design-rules"
       is-public: true
-      # documentation build fails: try with 3.10
-      # main-python-version: '3.12'
-      main-python-version: '3.10'
+      main-python-version: '3.12'
       # strategies
       build-wheelhouse-versions: "['3.10']"
       python-tests-versions: "['3.10']"
+      # doc-build: prevent sphinx exception
+      sphinx-opts: "-j 1"
     secrets:
       PYANSYS_CI_BOT_TOKEN: ${{ secrets.PYANSYS_CI_BOT_TOKEN }}
       PYANSYS_CI_BOT_USERNAME: ${{ secrets.PYANSYS_CI_BOT_USERNAME }}
