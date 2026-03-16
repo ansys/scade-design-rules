@@ -37,10 +37,10 @@ jobs:
       library-name: "ansys-scade-design-rules"
       repository-name: "ansys/scade-design-rules"
       is-public: true
-      # strategies
-      build-wheelhouse-versions: "['3.10']"
       python-tests-versions: "['3.10']"
       main-python-version: '3.14'
+      # 3.7 can't be built anymore
+      build-wheelhouse-versions: "['3.10', '3.12']"
       # doc-build: prevent sphinx exception
       sphinx-opts: "-j 1"
     secrets:
