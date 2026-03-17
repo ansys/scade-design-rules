@@ -13,7 +13,6 @@ on:
   workflow_dispatch:
 
 env:
-  MAIN_PYTHON_VERSION: '3.12'
   DOCUMENTATION_CNAME: 'design-rules.scade.docs.pyansys.com'
   LIBRARY_NAME: 'ansys-scade-design-rules'
 
@@ -38,10 +37,10 @@ jobs:
       library-name: "ansys-scade-design-rules"
       repository-name: "ansys/scade-design-rules"
       is-public: true
-      main-python-version: '3.12'
-      # strategies
-      build-wheelhouse-versions: "['3.10']"
-      python-tests-versions: "['3.10']"
+      main-python-version: '3.14'
+      # 3.7 can't be built anymore
+      build-wheelhouse-versions: "['3.10', '3.12']"
+      scade-tests-versions: "['23.1', '25.2', '26.1']"
       # doc-build: prevent sphinx exception
       sphinx-opts: "-j 1"
     secrets:
