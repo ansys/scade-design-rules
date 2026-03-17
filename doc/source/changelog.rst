@@ -9,6 +9,70 @@ This document contains the release notes for the project.
 
 .. towncrier release notes start
 
+`0.3.0 <https://github.com/ansys/scade-design-rules/releases/tag/v0.3.0>`_ - March 17, 2026
+===========================================================================================
+
+.. tab-set::
+
+
+  .. tab-item:: Documentation
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Update \`\`CONTRIBUTORS.md\`\` with the latest contributors
+          - `#48 <https://github.com/ansys/scade-design-rules/pull/48>`_
+
+
+  .. tab-item:: Dependencies
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Bump the dependencies group across 1 directory with 4 updates
+          - `#47 <https://github.com/ansys/scade-design-rules/pull/47>`_
+
+
+  .. tab-item:: Maintenance
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Chore: Update license headers
+          - `#44 <https://github.com/ansys/scade-design-rules/pull/44>`_
+
+        * - Reuse ansys/scade-actions reusable workflow
+          - `#45 <https://github.com/ansys/scade-design-rules/pull/45>`_
+
+        * - Bump actions/download-artifact from 6.0.0 to 7.0.0 in the actions group
+          - `#46 <https://github.com/ansys/scade-design-rules/pull/46>`_
+
+        * - Bump Python and SCADE versions
+          - `#49 <https://github.com/ansys/scade-design-rules/pull/49>`_
+
+
+  .. tab-item:: Miscellaneous
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Chore: update CHANGELOG for v0.2.0
+          - `#35 <https://github.com/ansys/scade-design-rules/pull/35>`_
+
+        * - Ci: bump the actions group with 2 updates
+          - `#36 <https://github.com/ansys/scade-design-rules/pull/36>`_
+
+        * - Build(deps): bump build from 1.2.2.post1 to 1.3.0 in the dependencies group
+          - `#37 <https://github.com/ansys/scade-design-rules/pull/37>`_
+
+        * - Ci: bump the actions group across 1 directory with 5 updates
+          - `#41 <https://github.com/ansys/scade-design-rules/pull/41>`_
+
+
 `0.2.0 <https://github.com/ansys/scade-design-rules/releases/tag/v0.2.0>`_ - August 27, 2025
 ============================================================================================
 
