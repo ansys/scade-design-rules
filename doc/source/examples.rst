@@ -1,12 +1,12 @@
 Examples
 ========
 
-To download the zipped examples of the latest version, click the button below.
+   .. only:: builder_html
 
-.. jinja:: assets_versions
+      To download the zipped examples of the latest version, click the button below.
 
-   .. button-link:: https://design-rules.scade.docs.pyansys.com/version/{{ version }}/_static/examples.zip
-      :color: primary
-      :outline:
+      :download:`Examples assets </_download/examples.zip>`
 
-      :material-regular:`download;2em;sd-text-primary` Examples assets for version {{ version }}
+   .. only:: builder_pdf
+
+      The examples are not available in ``pdf`` format.
