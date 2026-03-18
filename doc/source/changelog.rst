@@ -9,6 +9,22 @@ This document contains the release notes for the project.
 
 .. towncrier release notes start
 
+`0.3.1 <https://github.com/ansys/scade-design-rules/releases/tag/v0.3.1>`_ - March 18, 2026
+===========================================================================================
+
+.. tab-set::
+
+
+  .. tab-item:: Maintenance
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Restore license information
+          - `#51 <https://github.com/ansys/scade-design-rules/pull/51>`_
+
+
 `0.3.0 <https://github.com/ansys/scade-design-rules/releases/tag/v0.3.0>`_ - March 17, 2026
 ===========================================================================================
 
