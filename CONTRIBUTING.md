@@ -1,4 +1,13 @@
-# Contributing
+# Contribute
+
+Overall guidance on contributing to a PyAnsys library appears in the
+[Contributing] topic in the *PyAnsys developer's guide*. Ensure that you
+are thoroughly familiar with this guide before attempting to contribute to
+Ansys SCADE Design Rules.
+
+[Contributing]: https://dev.docs.pyansys.com/how-to/contributing.html
+
+<!-- Begin content specific to your library here. -->
 
 We absolutely welcome any code contributions and we hope that this
 guide will facilitate an understanding of the Ansys SCADE Design Rules code
