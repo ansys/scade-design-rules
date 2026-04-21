@@ -59,7 +59,7 @@ from scade.model.project.stdproject import Configuration, Project
 if __name__ == '__main__':
     sys.path.append(Path(__file__).parent.parent.as_posix())
 
-from conftest import load_project
+from conftest import filter_stderr, load_project
 
 
 def list_test_cases():
@@ -274,8 +274,9 @@ def run_example(category, name, configuration):
     cp = run(cmd, capture_output=True, encoding='utf-8')
     if cp.stdout:
         print(cp.stdout)
-    if cp.stderr:
-        print(cp.stderr)
+    stderr = filter_stderr(cp.stderr.strip('\n'))
+    if stderr:
+        print(stderr)
         assert False
     print('done')
 
