@@ -31,6 +31,7 @@ import ansys.scade.apitools  # noqa: F401
 
 # isort: split
 
+import pytest
 import scade
 import scade.model.project.stdproject as std
 import scade.model.suite as suite
@@ -75,3 +76,28 @@ def filter_stderr(stderr: str) -> str:
     else:
         text = stderr
     return text
+
+
+# on-the-fly models with traceability (2023 R1 and later)
+@pytest.fixture(scope='session')
+def project_session_trace(request):
+    # default
+    # load request.param
+    project = load_project(request.param)
+    session = load_session(request.param)
+    # load traceability
+    try:
+        from scade.model.traceability.traceability import AlmgrParser, load
+
+        # quick and dirty/ugly/smart hack:
+        # the almgr files used for the tests are compatible for the considered versions of SCADE
+        # so let's hack the API so that they can be loaded either with 2023 R1 or 2023 R2
+        AlmgrParser.XML_NS['scade_req'] = (
+            'http://www.ansys.com/scade/lifecycle/almgateway/scade_req/3'
+        )
+        AlmgrParser.PROJECT = f'{{{AlmgrParser.XML_NS["scade_req"]}}}ReqProject'
+
+        trace = load(request.param)
+    except BaseException:
+        trace = None
+    return (project, session, trace)
