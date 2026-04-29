@@ -1,5 +1,8 @@
 [build-system]
-requires = ["flit_core >=3.2,<4"]
+requires = [
+    "flit_core >=3.9,<3.12; python_version < '3.8'",
+    "flit_core >=3.12,<4; python_version >= '3.8'",
+]
 build-backend = "flit_core.buildapi"
 
 [project]
@@ -36,9 +39,9 @@ build = [
     "twine==6.2.0"
 ]
 tests = [
-    "pytest >= 8.3.4; python_version >= '3.8'",
+    "pytest >= 9.0.1; python_version >= '3.8'",
     "pytest <= 7.4.4; python_version < '3.8'",
-    "pytest-cov >= 6.0.0; python_version >= '3.8'",
+    "pytest-cov == 7.0.0; python_version >= '3.8'",
     "pytest-cov <= 4.1.0; python_version < '3.8'",
 ]
 doc = [
@@ -60,9 +63,6 @@ doc = [
     "sphinxnotes-strike==1.2.1; python_version <= '3.10'",
 ]
 
-[tool.flit.module]
-name = "ansys.scade.design_rules"
-
 [project.urls]
 source = "https://github.com/ansys/scade-design-rules"
 issues = "https://github.com/ansys/scade-design-rules/issues"
@@ -71,9 +71,16 @@ documentation = "https://design-rules.scade.docs.pyansys.com"
 releases = "https://github.com/ansys/scade-design-rules/releases"
 homepage = "https://www.ansys.com/products/embedded-software/ansys-scade-suite"
 
+[tool.flit.module]
+name = "ansys.scade.design_rules"
+
 [tool.ruff]
 line-length = 100
 fix = true
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
 
 [tool.ruff.lint]
 select = [
@@ -85,10 +92,7 @@ select = [
     "PTH",  # flake8-use-pathlib, https://docs.astral.sh/ruff/rules/#flake8-use-pathlib-pth
     "TD",   # flake8-todos, https://docs.astral.sh/ruff/rules/#flake8-todos-td
 ]
-
-[tool.ruff.format]
-quote-style = "single"
-indent-style = "space"
+ignore = []
 
 [tool.ruff.lint.isort]
 combine-as-imports = true
@@ -103,9 +107,13 @@ convention = "numpy"
 
 [tool.coverage.run]
 source = ["ansys.scade.design_rules"]
+patch = ["subprocess"]
 
 [tool.coverage.report]
 show_missing = true
+exclude_also = [
+    "@(abc\\.)?abstractmethod",
+]
 
 [tool.pytest.ini_options]
 testpaths = "tests"
@@ -142,13 +150,13 @@ title_format = "`{version} <https://github.com/ansys/scade-design-rules/releases
 issue_format = "`#{issue} <https://github.com/ansys/scade-design-rules/pull/{issue}>`_"
 
 [[tool.towncrier.type]]
-directory = "added"
-name = "Added"
+directory = "breaking"
+name = "Breaking"
 showcontent = true
 
 [[tool.towncrier.type]]
-directory = "changed"
-name = "Changed"
+directory = "added"
+name = "Added"
 showcontent = true
 
 [[tool.towncrier.type]]
@@ -159,11 +167,6 @@ showcontent = true
 [[tool.towncrier.type]]
 directory = "documentation"
 name = "Documentation"
-showcontent = true
-
-[[tool.towncrier.type]]
-directory = "test"
-name = "Test"
 showcontent = true
 
 [[tool.towncrier.type]]
@@ -180,3 +183,17 @@ showcontent = true
 directory = "miscellaneous"
 name = "Miscellaneous"
 showcontent = true
+
+[[tool.towncrier.type]]
+directory = "test"
+name = "Test"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "changed"
+name = "Changed"
+showcontent = true
+
+[tool.codespell]
+ignore-words-list = ["synopsys"]
+

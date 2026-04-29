@@ -84,11 +84,11 @@ source_suffix = '.rst'
 # The master toctree document.
 master_doc = 'index'
 
-# TODO(Jean): remove ignore links after public release
-# https://github.com/ansys/scade-design-rules/issues/29
+linkcheck_exclude_documents = ['changelog']
 linkcheck_ignore = [
-    r'https://github.com/ansys/scade-design-rules.*',
     # The links below takes a long time to check
+    'https://github.com/ansys/pre-commit-hooks/.*',
+    'https://ansyshelp.ansys.com/*',
     r'https://www.ansys.com/.*',
     # The link below fails during checks
     r'https://ansyshelp.ansys.com/public/Views/Secured/SCADE/.+',
